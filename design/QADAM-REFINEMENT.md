@@ -18,12 +18,12 @@ Selected direction: Qadam, the independent Google Material-inspired template.
 - Reset clears both lesson completion and partial steps. The hero continues to the next unfinished lesson.
 - Dialog focus returns to its opener.
 
-## Validation and limitation
+## Validation
 
 `node --check` passed for the updated scripts. `node verify-lesson-model.cjs` passed malformed-storage, partial-progress, completion gating, duplicate-completion, serialization, and reset checks. Local assets, anchors, ARIA references, unique IDs, CSS brace balance, and script order were checked.
 
-Browser inspection was blocked by the browser tool's URL security policy in this turn. The block was not bypassed. This revision has **not** received a new rendered desktop/mobile check; the 2026-10-10 screenshots and layout audit describe the earlier revision. Open `06-material.html` from the running local gallery to review the current design.
+The initial local browser inspection was blocked by the browser tool's URL security policy. After the user authorized publication, the live GitHub Pages revision received a rendered check on 2026-10-11 at 1440px desktop and 390px mobile widths. Search, saved-course filtering, dark mode, partial-step persistence after reload, completion gating, progress updates, and reset were verified through the interface. The mobile page had no horizontal document overflow and the browser reported no console errors. `previews/06.png` now shows the refined published design.
 
 Sources: `src/material.css`, `src/extra.js`, `src/lesson-model.js`, `extra_templates.py`. Regenerate with `python build_templates.py`.
 
-Forms and lessons remain local demonstrations; no publication or backend deployment was performed.
+All nine templates are published at https://azizbeksafarov.github.io/design/. Forms and lessons remain browser-local demonstrations without a backend.
