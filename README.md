@@ -4,7 +4,7 @@ Asosiy manzil: https://azizbeksafarov.github.io/
 
 Bu GitHub Pages bosh sahifasi loyihalar uchun katalog vazifasini bajaradi.
 
-Hozirgi loyiha:
+Hozirgi loyihalar:
 
 - [Ustoz AI](https://azizbeksafarov.github.io/ustoz/)
 - [Ustoz AI — AI uchun to‘liq kontekst](https://azizbeksafarov.github.io/ustoz/ai.md)
@@ -16,3 +16,8 @@ Hozirgi loyiha:
 3. `count` dagi loyiha sonini yangilang va o‘zgarishlarni `main` tarmog‘iga yuboring.
 
 Bu repozitoriy `ustoz` repozitoriysidan mustaqil. Bosh sahifa o‘zgarishi `/ustoz/` materiallarini o‘zgartirmaydi.
+
+- [Dizaynlar galereyasi — 9 variant](https://azizbeksafarov.github.io/design/)
+- [Qadam / Google Material uslubi](https://azizbeksafarov.github.io/design/06-material.html)
+
+Dizaynlarning generatorlari va JS/CSS manbalari `design/` ichida. `design/build_templates.py` generatorini ishga tushirib, natijalarni `main` tarmog‘iga yuboring.
