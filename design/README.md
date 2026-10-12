@@ -1,6 +1,6 @@
 # Dizayn shablonlari — mahalliy tanlash galereyasi
 
-Barcha 9 variant GitHub Pages’da: https://azizbeksafarov.github.io/design/
+Barcha 10 variant GitHub Pages’da: https://azizbeksafarov.github.io/design/
 
 Google uslubidagi Qadam: https://azizbeksafarov.github.io/design/06-material.html
 
@@ -16,7 +16,9 @@ Google uslubidagi Qadam: https://azizbeksafarov.github.io/design/06-material.htm
 8. Spark — Space Grotesk + DM Sans, kreativ portfolio
 9. Open City — JetBrains Mono + DM Sans, xizmat katalogi
 
-`index.html` galereyani ochadi. Barcha sahifalar oddiy HTML/CSS/JavaScript, tashqi kutubxona yoki CDN ishlatmaydi. Qo‘shimcha shriftlar `assets/fonts` ichida mahalliy WOFF2 fayllar sifatida litsenziyalari bilan saqlangan. Illyustratsiyalar SVG yoki CSS ko‘rinishida fayllarga kiritilgan.
+10. Bloom · Material Design 3 — `material-expressive/dist/index.html` mavjud bo‘lsa galereyaga qo‘shiladi.
+
+`index.html` galereyani ochadi. 01–09 sahifalar oddiy HTML/CSS/JavaScript; Bloom React, Motion va rasmiy Material Web komponentlari bilan yig‘ilgan mustaqil static build. Runtime CDN ishlatilmaydi. Qo‘shimcha shriftlar mahalliy fayllar sifatida litsenziyalari bilan saqlangan. Illyustratsiyalar SVG yoki CSS ko‘rinishida yaratilgan.
 
 Formalar demo: ma’lumot serverga yuborilmaydi. Savat, Qadam kurslari/progressi/temasi va Spark rang tanlovi shu brauzerda saqlanadi; to‘lov yo‘q. Forma ma’lumotlari saqlanmaydi. Dashboard raqamlari va CSV yozuvlari demo. Barcha statistikalar, narxlar va fikrlar namunaviy.
 

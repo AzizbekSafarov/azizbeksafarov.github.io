@@ -78,6 +78,10 @@ for item in additional_templates:
     templates.append({key:value for key,value in item.items() if key not in ('style','body','extra')})
 (ROOT/'extra.js').write_text(EXTRA_JS,encoding='utf-8')
 (ROOT/'lesson-model.js').write_text((ROOT/'src'/'lesson-model.js').read_text(encoding='utf-8'),encoding='utf-8')
+for metadata_path in sorted(ROOT.glob('*/template.json')):
+    standalone = json.loads(metadata_path.read_text(encoding='utf-8'))
+    if (ROOT / standalone['file']).is_file():
+        templates.append(standalone)
 (ROOT/'templates.json').write_text(json.dumps(templates,ensure_ascii=False,indent=2),encoding='utf-8')
 
 gallery_css='''*{box-sizing:border-box}body{margin:0;background:#f4f6f9;color:#1d2a41;font:16px/1.6 system-ui,sans-serif}a{text-decoration:none;color:inherit}a:focus-visible{outline:3px solid #245de4;outline-offset:5px}.wrap{width:min(1240px,calc(100% - 48px));margin:auto}.top{padding:24px 0;border-bottom:1px solid #dde4ee;display:flex;justify-content:space-between;gap:20px;font-size:13px}.top a{font-weight:750}.top span{color:#53647c}.intro{padding:55px 0 36px}.eyebrow{font-size:11px;letter-spacing:2px;color:#285ad5;font-weight:750}h1{font-size:clamp(35px,4.8vw,59px);line-height:1.12;letter-spacing:-1.7px;margin:12px 0 20px}.intro p{color:#53647c;max-width:750px;font-size:16px}.note{padding:15px 20px;border:1px solid #d6e1f6;border-radius:10px;background:#ecf2ff;font-size:13px;color:#355079}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;padding:30px 0 50px}.template{background:#fff;border:1px solid #dde4ee;border-radius:16px;overflow:hidden}.preview{display:block;height:300px;position:relative;background:#e8edf7;overflow:hidden}.preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}.fallback{height:100%;display:flex;align-items:center;justify-content:center;font-size:60px;font-weight:800}.preview-number{position:absolute;bottom:14px;left:15px;background:#ffffffed;border:1px solid #dde4ee;padding:3px 10px;border-radius:5px;font-size:11px;color:#27334b}.content{padding:25px}.category{font-size:11px;color:#596b84}.content h2{font-size:28px;margin:5px 0 12px;letter-spacing:-.8px}.content p{font-size:14px;color:#53647c;margin:0 0 16px;min-height:45px}.feature{font-size:12px;border-top:1px solid #e5eaf2;padding-top:15px;color:#4c617c}.use{font-size:12px;color:#596b84;margin:9px 0 20px}.button{display:inline-flex;align-items:center;gap:23px;padding:11px 18px;background:#21334e;color:#fff;border-radius:8px;font-size:13px;font-weight:650}.button:hover{background:#245de4}.footer{border-top:1px solid #dde4ee;padding:25px 0;color:#596b84;font-size:13px}@media(max-width:700px){.wrap{width:calc(100% - 32px)}.grid{grid-template-columns:1fr;gap:22px}.preview{height:230px}.intro{padding-top:35px}.content{padding:22px}.top span{font-size:11px}.content p{min-height:0}}'''
@@ -85,13 +89,14 @@ gallery_css += '[hidden]{display:none!important}.grid{grid-template-columns:repe
 
 gallery=f'''<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dizayn shablonlari — tanlash galereyasi</title><style>{gallery_css}</style></head><body><a class="skip" href="#gallery-main">Asosiy mazmunga o‘tish</a><div class="wrap"><header class="top"><a href="/">← Azizbek / Design Lab</a><span>Mahalliy namuna · 5 yo‘nalish</span></header><main id="gallery-main"><section class="intro"><span class="eyebrow">USTOZ AI / VEB-SAYT TANLOVI</span><h1>Qaysi uslubni tanlaymiz?</h1><p>Besh xil dizayn, besh xil xarakter. Namuna sahifasini ochib, kompyuter va telefonda ko‘rinishini hamda ishlaydigan elementlarini sinab ko‘ring.</p><div class="note">9 ta jonli namuna. Har bir dizaynni ochib, tugmalarini va mobil ko‘rinishini sinab ko‘ring. Yoqqan raqamingizni yoki kerakli tuzatishni chatga yozing.</div></section><section class="grid" aria-label="Dizayn variantlari">'''
 for item in templates:
-    gallery+=f'''<article class="template"><a class="preview" href="{item['file']}" aria-label="{item['id']} {item['name']} namunasini ochish"><img src="previews/{item['id']}.png" alt="{item['name']} dizaynining ko‘rinishi" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="fallback" style="background:{item['background']};color:{item['color']}" hidden>{item['name']}</div><span class="preview-number">{item['id']} / {item['category']}</span></a><div class="content"><span class="category">VARIANT {item['id']}</span><h2>{item['name']}</h2><p>{item['summary']}</p><div class="feature">{item['features']}</div><div class="use">Mos mavzular: {item['use']}</div><a class="button" href="{item['file']}">Jonli namunani ochish <span aria-hidden="true">↗</span></a></div></article>'''
+    preview_path = item.get('preview', 'previews/' + item['id'] + '.png')
+    gallery+=f'''<article class="template"><a class="preview" href="{item['file']}" aria-label="{item['id']} {item['name']} namunasini ochish"><img src="{preview_path}" alt="{item['name']} dizaynining ko‘rinishi" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="fallback" style="background:{item['background']};color:{item['color']}" hidden>{item['name']}</div><span class="preview-number">{item['id']} / {item['category']}</span></a><div class="content"><span class="category">VARIANT {item['id']}</span><h2>{item['name']}</h2><p>{item['summary']}</p><div class="feature">{item['features']}</div><div class="use">Mos mavzular: {item['use']}</div><a class="button" href="{item['file']}">Jonli namunani ochish <span aria-hidden="true">↗</span></a></div></article>'''
 gallery+='''</section></main><footer class="footer">Barcha statistika, narxlar, mijozlar va fikrlar namuna uchun berilgan. Haqiqiy topshiriqda mazmun moslashtiriladi.</footer></div></body></html>'''
-gallery=gallery.replace('Mahalliy namuna · 5 yo‘nalish',f'Mahalliy namuna · {len(templates)} yo‘nalish').replace('Besh xil dizayn, besh xil xarakter.','To‘qqiz xil dizayn, turli shriftlar va ranglar.')
+gallery=gallery.replace('Mahalliy namuna · 5 yo‘nalish',f'Mahalliy namuna · {len(templates)} yo‘nalish').replace('Besh xil dizayn, besh xil xarakter.',f'{len(templates)} xil dizayn, turli shriftlar va ranglar.').replace('9 ta jonli namuna.',f'{len(templates)} ta jonli namuna.')
 (ROOT/'index.html').write_text(gallery,encoding='utf-8')
 (ROOT/'README.md').write_text('''# Dizayn shablonlari — mahalliy tanlash galereyasi
 
-Barcha 9 variant GitHub Pages’da: https://azizbeksafarov.github.io/design/
+Barcha 10 variant GitHub Pages’da: https://azizbeksafarov.github.io/design/
 
 Google uslubidagi Qadam: https://azizbeksafarov.github.io/design/06-material.html
 
@@ -107,7 +112,9 @@ Google uslubidagi Qadam: https://azizbeksafarov.github.io/design/06-material.htm
 8. Spark — Space Grotesk + DM Sans, kreativ portfolio
 9. Open City — JetBrains Mono + DM Sans, xizmat katalogi
 
-`index.html` galereyani ochadi. Barcha sahifalar oddiy HTML/CSS/JavaScript, tashqi kutubxona yoki CDN ishlatmaydi. Qo‘shimcha shriftlar `assets/fonts` ichida mahalliy WOFF2 fayllar sifatida litsenziyalari bilan saqlangan. Illyustratsiyalar SVG yoki CSS ko‘rinishida fayllarga kiritilgan.
+10. Bloom · Material Design 3 — `material-expressive/dist/index.html` mavjud bo‘lsa galereyaga qo‘shiladi.
+
+`index.html` galereyani ochadi. 01–09 sahifalar oddiy HTML/CSS/JavaScript; Bloom React, Motion va rasmiy Material Web komponentlari bilan yig‘ilgan mustaqil static build. Runtime CDN ishlatilmaydi. Qo‘shimcha shriftlar mahalliy fayllar sifatida litsenziyalari bilan saqlangan. Illyustratsiyalar SVG yoki CSS ko‘rinishida yaratilgan.
 
 Formalar demo: ma’lumot serverga yuborilmaydi. Savat, Qadam kurslari/progressi/temasi va Spark rang tanlovi shu brauzerda saqlanadi; to‘lov yo‘q. Forma ma’lumotlari saqlanmaydi. Dashboard raqamlari va CSV yozuvlari demo. Barcha statistikalar, narxlar va fikrlar namunaviy.
 
@@ -120,3 +127,4 @@ Material varianti mustaqil dizayn namunasi, Google mahsuloti emas. Ilhom manbala
 Tanlovda oldindan tayyorlangan shablon yoki koddan foydalanish uchun joydagi amaldagi reglament tekshiriladi.
 ''',encoding='utf-8')
 print(f'Created {len(templates)} templates and local gallery in', ROOT)
+

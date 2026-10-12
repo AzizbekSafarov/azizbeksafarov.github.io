@@ -17,7 +17,8 @@ Hozirgi loyihalar:
 
 Bu repozitoriy `ustoz` repozitoriysidan mustaqil. Bosh sahifa o‘zgarishi `/ustoz/` materiallarini o‘zgartirmaydi.
 
-- [Dizaynlar galereyasi — 9 variant](https://azizbeksafarov.github.io/design/)
+- [Dizaynlar galereyasi — 10 variant](https://azizbeksafarov.github.io/design/)
+- [Bloom / Material Design 3](https://azizbeksafarov.github.io/design/material-expressive/dist/)
 - [Qadam / Google Material uslubi](https://azizbeksafarov.github.io/design/06-material.html)
 
 Dizaynlarning generatorlari va JS/CSS manbalari `design/` ichida. `design/build_templates.py` generatorini ishga tushirib, natijalarni `main` tarmog‘iga yuboring.

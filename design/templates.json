@@ -112,5 +112,21 @@
       "jetbrains-mono",
       "dm-sans"
     ]
+  },
+  {
+    "id": "10",
+    "name": "Bloom · Material Design 3",
+    "file": "material-expressive/dist/index.html",
+    "category": "Google / Material Design 3",
+    "color": "#65558f",
+    "background": "#e9ddff",
+    "summary": "Rasmiy Material Web komponentlari, Material Symbols va dinamik rang tizimi. Ishlaydigan loyiha maydoni.",
+    "features": "Rasmiy M3 komponentlari · dinamik rang · native ripple · formalar · checklist · light/dark · motion",
+    "use": "Loyiha maydoni, yoshlar platformasi, ta’lim, ijod va shaxsiy kabinet",
+    "fonts": [
+      "google-sans-flex",
+      "roboto"
+    ],
+    "preview": "previews/10.jpg"
   }
 ]
