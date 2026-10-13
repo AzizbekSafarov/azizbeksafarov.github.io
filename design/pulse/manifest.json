@@ -7,25 +7,28 @@
   "context_url": "https://azizbeksafarov.github.io/design/pulse/",
   "ai_url": "https://azizbeksafarov.github.io/design/pulse/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/pulse/source.zip",
-  "archive_sha256": "8b74fcb5268b6114a5aadf0ff5135bb9d00eb4565165285826df4cbfdde112b4",
-  "archive_bytes": 389293,
+  "archive_sha256": "0fff3aad7bb98cbbf2702e41e2c46d8d0a0bf68de8cebd4cced7403db5de0b0a",
+  "archive_bytes": 389554,
   "entry": "05-pulseboard.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "05-pulseboard.html",
       "url": "https://azizbeksafarov.github.io/design/pulse/files/05-pulseboard.html.txt",
-      "sha256": "37986944467ce4b677a3165f94f246ee2ef5d0d722a3c4585ec56ef9bc8aa1dc"
+      "sha256": "37986944467ce4b677a3165f94f246ee2ef5d0d722a3c4585ec56ef9bc8aa1dc",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/pulse/files/05-pulseboard.html.txt"
     },
     {
       "path": "shared.css",
       "url": "https://azizbeksafarov.github.io/design/pulse/files/shared.css.txt",
-      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/pulse/files/shared.css.txt"
     },
     {
       "path": "shared.js",
       "url": "https://azizbeksafarov.github.io/design/pulse/files/shared.js.txt",
-      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/pulse/files/shared.js.txt"
     }
   ],
   "files": [
@@ -36,8 +39,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7520,
-      "sha256": "dad87b4b9ac71926c5690f8febe0b4f95de64ba16a3dac070aae942fd1788877"
+      "bytes": 8645,
+      "sha256": "87b4602dca344466d0f95f9f437d4c9ce12060f83d9cde17489ba8e9d31d7b46"
     },
     {
       "path": "CHECKLIST.md",
@@ -305,5 +308,7 @@
       "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/pulse/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/pulse/source.zip"
 }

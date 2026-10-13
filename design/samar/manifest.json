@@ -7,25 +7,28 @@
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "76145733d75f6e51d0f28ac32a0cccf7da4eff875f20181d1191ec00ae288944",
-  "archive_bytes": 389231,
+  "archive_sha256": "a9da43dbdd0adbe09634e192082b84c873d8bbe78f835a44608c1ef2347656ac",
+  "archive_bytes": 389491,
   "entry": "02-samar.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "02-samar.html",
       "url": "https://azizbeksafarov.github.io/design/samar/files/02-samar.html.txt",
-      "sha256": "1883800be364d9dae8d9d3fb91730e5f1c1555be70517308e5eb2a5df5250a2e"
+      "sha256": "1883800be364d9dae8d9d3fb91730e5f1c1555be70517308e5eb2a5df5250a2e",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/02-samar.html.txt"
     },
     {
       "path": "shared.css",
       "url": "https://azizbeksafarov.github.io/design/samar/files/shared.css.txt",
-      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/shared.css.txt"
     },
     {
       "path": "shared.js",
       "url": "https://azizbeksafarov.github.io/design/samar/files/shared.js.txt",
-      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/shared.js.txt"
     }
   ],
   "files": [
@@ -36,8 +39,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7447,
-      "sha256": "6f607abbec41a30c4690864ee0b928665ae192300d5f17451ad07bbf8fc26d2d"
+      "bytes": 8572,
+      "sha256": "75b9eb6d60f820927c7a3327d9d6f62245347457e84e0892294f001ced23c48d"
     },
     {
       "path": "CHECKLIST.md",
@@ -305,5 +308,7 @@
       "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/source.zip"
 }

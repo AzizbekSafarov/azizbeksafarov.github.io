@@ -7,45 +7,52 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "c20a80fa1e9fb476e9db86de32f5c014519ccd3ac230ad125f30e22f95693bd8",
-  "archive_bytes": 963078,
+  "archive_sha256": "723eaa5211abc4a152c5c9b6fa8c182eb2bd8fd739c999798eb085aceb77e45a",
+  "archive_bytes": 963349,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
     {
       "path": "src/main.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
-      "sha256": "0673e7d1068074935c064985627b1dda2bd7b356056f32020e79cb8bd5c708a2"
+      "sha256": "0673e7d1068074935c064985627b1dda2bd7b356056f32020e79cb8bd5c708a2",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt"
     },
     {
       "path": "src/style.css",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/style.css.txt",
-      "sha256": "10df8944a8c55ea9c2db30d4e7d2ed2b7b8bcc9373ddf434d94fd0bf3ccd69ad"
+      "sha256": "10df8944a8c55ea9c2db30d4e7d2ed2b7b8bcc9373ddf434d94fd0bf3ccd69ad",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/style.css.txt"
     },
     {
       "path": "src/model.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/model.js.txt",
-      "sha256": "19e1433f59a00f6c4bdea0d2d9200187374695b7aead261f7358a87542877177"
+      "sha256": "19e1433f59a00f6c4bdea0d2d9200187374695b7aead261f7358a87542877177",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.js.txt"
     },
     {
       "path": "src/model.test.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/model.test.js.txt",
-      "sha256": "41ef22f8c6f22ea554c8e8733de9c3e5ee136ab498ec227d6f274a39103be19f"
+      "sha256": "41ef22f8c6f22ea554c8e8733de9c3e5ee136ab498ec227d6f274a39103be19f",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.test.js.txt"
     },
     {
       "path": "package.json",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/package.json.txt",
-      "sha256": "75493151c7685d63785f2af59342592729aeae08b27cacfc87a0da8b0d3f3efb"
+      "sha256": "75493151c7685d63785f2af59342592729aeae08b27cacfc87a0da8b0d3f3efb",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package.json.txt"
     },
     {
       "path": "vite.config.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/vite.config.js.txt",
-      "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968"
+      "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/vite.config.js.txt"
     },
     {
       "path": "download_symbols.py",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/download_symbols.py.txt",
-      "sha256": "c59463f55d95c7092d5ebd609d61d7ebddaec1769c5eaea4731d11dc2411634f"
+      "sha256": "c59463f55d95c7092d5ebd609d61d7ebddaec1769c5eaea4731d11dc2411634f",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/download_symbols.py.txt"
     }
   ],
   "files": [
@@ -56,8 +63,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 9030,
-      "sha256": "de0cf6228f926c45f4dbc90a2972e1a26742db3ff2bb32a49306518100dcbeda"
+      "bytes": 10339,
+      "sha256": "cb5ed5b92ef27b4585e508129d3281b75e2a88141541fe66a14b3027b2450aaf"
     },
     {
       "path": "CHECKLIST.md",
@@ -355,5 +362,7 @@
       "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/material-expressive/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/material-expressive/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/source.zip"
 }

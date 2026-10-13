@@ -13,6 +13,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
+RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
 DATE = '2026-10-13'
 SLUGS = {'01':'kasblab','02':'samar','03':'orbit','04':'forma','05':'pulse','06':'qadam','07':'lola','08':'spark','09':'city','10':'bloom'}
 LOOKS = {
@@ -90,7 +91,7 @@ def render_md(md):
     return '\n'.join(output)
 
 def prompt(t):
-    return f"{SITE}/design/{t['slug']}/\nShu sahifadagi AI yo‘riqnomasini va {t['name']} kodini o‘qi. Ustoz AI tanlovi uchun birga ishlaymiz.\nBilet: [ekspert bergan topshiriq]\nQolgan vaqt: [haqiqiy vaqt]\nUslubni saqla, mazmun va funksiyalarni biletga moslashtir. Xatolarni tekshirib tuzat va qayta sina. Ishni HANDOFF.md ga yoz. Men bilan o‘zbekcha gaplash."
+    return f"{SITE}/design/{t['slug']}/\nShu sahifadagi AI yo‘riqnomasini va {t['name']} kodini o‘qi. Sahifa o‘qilmasa, to‘g‘ridan-to‘g‘ri AI matni: {RAW}/design/{t['slug']}/ai.md\nUstoz AI tanlovi uchun birga ishlaymiz.\nBilet: [ekspert bergan topshiriq]\nQolgan vaqt: [haqiqiy vaqt]\nUslubni saqla, mazmun va funksiyalarni biletga moslashtir. Xatolarni tekshirib tuzat va qayta sina. Ishni HANDOFF.md ga yoz. Men bilan o‘zbekcha gaplash."
 
 def rules(t):
     return f"""# AI project rules — {t['name']}
@@ -115,7 +116,7 @@ def ai_brief(t):
       '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: four existing model tests.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
       if bloom else f"- `{t['file']}`: selected page; its custom styles are inline.\n- `shared.css`, `shared.js`: shared layout, dialogs/forms, filters, cart/dashboard interactions.\n- `extra.js`, `lesson-model.js`: Qadam/Spark and additional interactions, where referenced.\n- `assets/fonts/`: local fonts and licenses.\n- `src/shared.js`, `src/extra.js`, `src/lesson-model.js`, `src/material.css`: library source.\n- `build_templates.py`, `extra_templates.py`: original generators; rerunning them overwrites generated edits."
     )
-    source_map += '\n\nFaqat kerakli faylni o‘qish uchun:\n'+'\n'.join(f'- [{name}]({SITE}/design/{t["slug"]}/files/{name}.txt)' for name in code_names(t,{}))
+    source_map += '\n\nFaqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):\n'+'\n'.join(f'- [{name}]({RAW}/design/{t["slug"]}/files/{name}.txt)' for name in code_names(t,{}))
     technical=(
       "React 19 + Vite 7 + Motion + `@material/web` 2.5 + Material Color Utilities. Use the lockfile (`npm ci`). Keep official Material buttons, chip-set/filter chips, outlined fields/selects, radios, checkboxes, dialogs and ripples. React custom-element change events currently use lowercase `onchange`; verify the installed control API rather than substituting native events by guesswork. Tokens come from SchemeTonalSpot with matched on-color roles. The three-step model and its category validation must change together when the ticket needs a different structure. Icons use a local subset: adding a new symbol requires updating `download_symbols.py` and rebuilding the font when network is available; otherwise use an existing supported icon. Unsupported icon names can render as text."
       if bloom else "Plain HTML/CSS/JavaScript; npm installation is not needed. Preserve the files referenced by the selected HTML, including fonts and model scripts. For the timed competition, edit the isolated HTML/runtime files directly. To maintain the original gallery instead, change generator/source files and regenerate deliberately, then run `python design/build_handoff.py` in the publishing repository."
@@ -132,6 +133,10 @@ def ai_brief(t):
     return f"""# {t['name']} — tanlovda yangi AI uchun boshlash
 
 Snapshot: {DATE}; source fingerprint: `{t['fingerprint'][:16]}`. Readable page: {SITE}/design/{t['slug']}/
+
+## O‘qish vositasi uchun zaxira
+
+GitHub Pages brauzerda ishlashi, lekin ayrim AI veb-o‘qish vositalarida ochilmasligi mumkin. [Ushbu AI matnining GitHub nusxasi]({RAW}/design/{t['slug']}/ai.md), [o‘qiladigan source]({RAW}/design/{t['slug']}/source.md) va [kod ZIP]({RAW}/design/{t['slug']}/source.zip) bir xil paketdir. `.io` havolalari o‘qilmasa, ushbu raw nusxalar va quyidagi alohida fayllardan foydalan. [Qisqa tanlov konteksti raw]({RAW}/design/handoff/competition.md); [to‘liq tanlov tadqiqoti raw](https://raw.githubusercontent.com/AzizbekSafarov/ustoz/main/ai.md). Matn yoki ZIP chatga berilgan bo‘lsa, yana internetdan hammasini yuklash shart emas.
 
 ## 1. Vazifa va ustuvorlik
 
@@ -293,7 +298,7 @@ def page_shell(title,content,css='../handoff/styles.css',description='Tanlov uch
 def template_page(t,brief):
     image=t.get('preview',f"previews/{t['id']}.png")
     name=escape(t['name']);url=f"{SITE}/design/{t['slug']}/"
-    config=json.dumps({'name':t['name'],'url':url},ensure_ascii=False).replace('<','\\u003c')
+    config=json.dumps({'name':t['name'],'url':url,'raw_url':f'{RAW}/design/{t["slug"]}/ai.md'},ensure_ascii=False).replace('<','\\u003c')
     content=f'''<section class="hero"><div><p class="eyebrow">TANLOV / YANGI AI UCHUN TAYYOR</p><h1>{name}</h1><p class="lead">{escape(t['summary'])}</p><p class="address">/design/{t['slug']}/</p><div class="actions"><a class="button" href="../{escape(t['file'])}">Jonli namunani ochish ↗</a><a href="source.zip" download>Kod paketini olish ↓</a></div><div class="resource-links"><a href="ai.md">AI uchun qisqa matn</a><a href="source.html">Kodni o‘qish</a><a href="manifest.json">Paket tarkibi</a></div><p class="small">Uslub: {escape(t['look'])}</p></div><figure class="preview"><a href="../{escape(t['file'])}" aria-label="{name} jonli namunasini ochish"><img src="../{escape(image)}" alt="{name} dizaynining ko‘rinishi"></a><figcaption>Jonli demo alohida ochiladi. AI konteksti ushbu sahifada JavaScript ishlamasdan ham mavjud.</figcaption></figure></section>
 <section class="panel" aria-labelledby="prompt-title"><h2 id="prompt-title">AIga yuboriladigan tayyor matn</h2><p class="small">Biletni kiriting, matnni nusxalang va yangi AI chatiga joylang. Maydonlar hech qayerga yuborilmaydi.</p><div class="prompt-fields"><div class="field"><label for="topic">Ekspert bergan topshiriq</label><textarea id="topic" rows="3" maxlength="12000" placeholder="Mavzu, foydalanuvchi va majburiy funksiyalar…"></textarea></div><div class="field"><label for="time">Qolgan haqiqiy vaqt</label><input id="time" maxlength="100" placeholder="Masalan: 90 daqiqa"></div></div><div class="field"><label for="prompt">Yuboriladigan matn</label><textarea id="prompt" rows="8" readonly>{escape(prompt(t))}</textarea></div><div class="actions"><button class="button secondary" id="copy-prompt" type="button">Matnni nusxalash</button><span id="copy-status" role="status" aria-live="polite"></span></div><noscript><p>JavaScript o‘chiq: tayyor matnni belgilang va nusxalang.</p></noscript></section>
 <p class="quiet">Faqat havola AIga doimiy xotira yoki fayl tahrirlash imkoniyatini bermaydi. Internetni o‘qiy oladigan AI uchun shu manzil yetarli boshlash nuqtasi. O‘qiy olmasa, AI matnini yoki ZIPni chatga bering. Yangi topshiriq va joydagi reglament ustuvor.</p>
@@ -301,6 +306,7 @@ def template_page(t,brief):
 <details><summary>Tanlov konteksti va manbalar maqomi</summary><article class="content">{render_md(read(ROOT/'handoff/competition.md'))}</article></details>
 <section class="panel"><h2>Keyingi AI bilan davom ettirish</h2><p>ZIP ichidagi <code>CURRENT-TASK.md</code> ga bilet va vaqtni, <code>HANDOFF.md</code> ga bajarilgan ish, haqiqiy sinov va keyingi amalni yozdiring. Sessiya almashsa, shu ikki faylni yangi AIga bering.</p><div class="actions"><a href="../kit.zip" download>Barcha 10 dizayn + tanlov matnlari ↓</a><a href="../handoff/competition.md">Qisqa tanlov konteksti</a></div></section>
 <script type="application/json" id="prompt-config">{config}</script><script src="../handoff/prompt.js" defer></script>'''
+    content=content.replace('<a href="ai.md">AI uchun qisqa matn</a>',f'<a href="ai.md">AI uchun qisqa matn</a><a href="{RAW}/design/{t["slug"]}/ai.md">AI o‘qiy olmasa: GitHub matni</a>',1)
     return page_shell(t['name']+' — tanlov uchun AI paketi',content,extra=f'<link rel="canonical" href="{url}"><link rel="alternate" type="text/markdown" href="ai.md" title="AI brief">')
 
 def decorate_gallery(templates):
@@ -372,6 +378,9 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         files.update({k:v.encode() for k,v in extras.items()})
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
         manifest={'schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
+        manifest['ai_fallback_url']=f'{RAW}/design/{t["slug"]}/ai.md'
+        manifest['archive_fallback_url']=f'{RAW}/design/{t["slug"]}/source.zip'
+        for entry in manifest['readable_source_files']:entry['fallback_url']=f'{RAW}/design/{t["slug"]}/files/{entry["path"]}.txt'
         write(folder/'manifest.json',json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
         catalog.append({**original,'slug':t['slug'],'context_url':manifest['context_url'],'ai_url':manifest['ai_url'],'source_url':manifest['archive_url'],'source_text_url':f'{SITE}/design/{t["slug"]}/source.md','manifest_url':f'{SITE}/design/{t["slug"]}/manifest.json','source_fingerprint':t['fingerprint'],'archive_bytes':len(archive)})
         alias(ROOT.parent/'dezayn'/t['slug'],t)

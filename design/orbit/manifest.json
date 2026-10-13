@@ -7,25 +7,28 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbit/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbit/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbit/source.zip",
-  "archive_sha256": "f61410d4c9d22799a055450228a1f2ef6f96f176bf83e9024f4c1acbdd223c82",
-  "archive_bytes": 389212,
+  "archive_sha256": "9457244aa3ac4e02a311ea122bd8cf26e224c140ee28e82b5d4ee9c8db95dc0c",
+  "archive_bytes": 389473,
   "entry": "03-orbit.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "03-orbit.html",
       "url": "https://azizbeksafarov.github.io/design/orbit/files/03-orbit.html.txt",
-      "sha256": "fb2958ef819893822e90e8ca7ae6fe084d955d3302c54c8a499d1bc4ca962e47"
+      "sha256": "fb2958ef819893822e90e8ca7ae6fe084d955d3302c54c8a499d1bc4ca962e47",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbit/files/03-orbit.html.txt"
     },
     {
       "path": "shared.css",
       "url": "https://azizbeksafarov.github.io/design/orbit/files/shared.css.txt",
-      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbit/files/shared.css.txt"
     },
     {
       "path": "shared.js",
       "url": "https://azizbeksafarov.github.io/design/orbit/files/shared.js.txt",
-      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbit/files/shared.js.txt"
     }
   ],
   "files": [
@@ -36,8 +39,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7413,
-      "sha256": "c23707bd458f924bd336f728a58cffbfba4a22bf3b808866cc26fe4f5fa60aa4"
+      "bytes": 8538,
+      "sha256": "da8fd3787b6f4c7c849e1122152fd7761709dc0827e9a8bd3526c7f00d95158e"
     },
     {
       "path": "CHECKLIST.md",
@@ -305,5 +308,7 @@
       "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbit/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbit/source.zip"
 }

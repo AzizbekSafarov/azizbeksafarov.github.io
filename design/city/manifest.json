@@ -7,30 +7,34 @@
   "context_url": "https://azizbeksafarov.github.io/design/city/",
   "ai_url": "https://azizbeksafarov.github.io/design/city/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/city/source.zip",
-  "archive_sha256": "bac4817378e10f88de37b5108590cfd1b7031f979efd38f6d8f5e228ad6decbd",
-  "archive_bytes": 389288,
+  "archive_sha256": "6bbeb67066567945f5321367524d318c8ee43a5f461ecfd41014294ef56a7c20",
+  "archive_bytes": 389548,
   "entry": "09-open-city.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "09-open-city.html",
       "url": "https://azizbeksafarov.github.io/design/city/files/09-open-city.html.txt",
-      "sha256": "714851df3c45d2cd56daea098ed26416ff74da03258cd55f1eb13ad0555287bf"
+      "sha256": "714851df3c45d2cd56daea098ed26416ff74da03258cd55f1eb13ad0555287bf",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/city/files/09-open-city.html.txt"
     },
     {
       "path": "shared.css",
       "url": "https://azizbeksafarov.github.io/design/city/files/shared.css.txt",
-      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/city/files/shared.css.txt"
     },
     {
       "path": "shared.js",
       "url": "https://azizbeksafarov.github.io/design/city/files/shared.js.txt",
-      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/city/files/shared.js.txt"
     },
     {
       "path": "extra.js",
       "url": "https://azizbeksafarov.github.io/design/city/files/extra.js.txt",
-      "sha256": "9dd473eb1d0cda580023a6f30b45656bf0ec2a9a517a2320a31faff015f1ba95"
+      "sha256": "9dd473eb1d0cda580023a6f30b45656bf0ec2a9a517a2320a31faff015f1ba95",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/city/files/extra.js.txt"
     }
   ],
   "files": [
@@ -41,8 +45,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7554,
-      "sha256": "6e9924c4db961adea13407957f02630b2e328ac7c360483d674e7cce85eab283"
+      "bytes": 8722,
+      "sha256": "6fe82b795041b27cf8d892b0ae43353484e60f5517b793ce44060193e6148a1d"
     },
     {
       "path": "CHECKLIST.md",
@@ -310,5 +314,7 @@
       "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/city/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/city/source.zip"
 }

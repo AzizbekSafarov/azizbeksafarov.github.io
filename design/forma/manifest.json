@@ -7,25 +7,28 @@
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "4209e24d739583fda5e958873f75dd2aaa553203fb4336b4321fd354d44953b2",
-  "archive_bytes": 389270,
+  "archive_sha256": "7feab6cb20ab681692da788536e3c30d79cb64dbafdc8c62131da66b9ca5dd78",
+  "archive_bytes": 389532,
   "entry": "04-forma.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "04-forma.html",
       "url": "https://azizbeksafarov.github.io/design/forma/files/04-forma.html.txt",
-      "sha256": "74f5f1223c77a16576dbafd0b450848ea0b6290ddc8d80e8622b1d9c58f00e0e"
+      "sha256": "74f5f1223c77a16576dbafd0b450848ea0b6290ddc8d80e8622b1d9c58f00e0e",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/04-forma.html.txt"
     },
     {
       "path": "shared.css",
       "url": "https://azizbeksafarov.github.io/design/forma/files/shared.css.txt",
-      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/shared.css.txt"
     },
     {
       "path": "shared.js",
       "url": "https://azizbeksafarov.github.io/design/forma/files/shared.js.txt",
-      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/shared.js.txt"
     }
   ],
   "files": [
@@ -36,8 +39,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7486,
-      "sha256": "7fd65356277c9c30bfb356dc198faa4f8cad079236d663c8812ed85e1994c5da"
+      "bytes": 8611,
+      "sha256": "721f73fcdf1846d3f58f5d3ff0c4d9877056221f864b5857de7ef2f66a672849"
     },
     {
       "path": "CHECKLIST.md",
@@ -305,5 +308,7 @@
       "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/source.zip"
 }

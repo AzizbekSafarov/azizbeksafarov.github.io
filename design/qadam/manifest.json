@@ -7,35 +7,40 @@
   "context_url": "https://azizbeksafarov.github.io/design/qadam/",
   "ai_url": "https://azizbeksafarov.github.io/design/qadam/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/qadam/source.zip",
-  "archive_sha256": "6b794f9ae81c77637d304003f6d13c649dfe14ed51e57915b8197c06b39d8551",
-  "archive_bytes": 389499,
+  "archive_sha256": "80d494ac2c76b664c093d305c980bd28e4d70fa9535deb76ae5365f418185790",
+  "archive_bytes": 389763,
   "entry": "06-material.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "06-material.html",
       "url": "https://azizbeksafarov.github.io/design/qadam/files/06-material.html.txt",
-      "sha256": "e3f3798c01dc56878eabf600d3b14d0783f52276caf85a8ec2ca540ab0fa4cef"
+      "sha256": "e3f3798c01dc56878eabf600d3b14d0783f52276caf85a8ec2ca540ab0fa4cef",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/06-material.html.txt"
     },
     {
       "path": "shared.css",
       "url": "https://azizbeksafarov.github.io/design/qadam/files/shared.css.txt",
-      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/shared.css.txt"
     },
     {
       "path": "shared.js",
       "url": "https://azizbeksafarov.github.io/design/qadam/files/shared.js.txt",
-      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/shared.js.txt"
     },
     {
       "path": "extra.js",
       "url": "https://azizbeksafarov.github.io/design/qadam/files/extra.js.txt",
-      "sha256": "9dd473eb1d0cda580023a6f30b45656bf0ec2a9a517a2320a31faff015f1ba95"
+      "sha256": "9dd473eb1d0cda580023a6f30b45656bf0ec2a9a517a2320a31faff015f1ba95",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/extra.js.txt"
     },
     {
       "path": "lesson-model.js",
       "url": "https://azizbeksafarov.github.io/design/qadam/files/lesson-model.js.txt",
-      "sha256": "d0d305965d10a7c531a42aa65fe3a98df7698c1bba12e65f815ff14b20ea4857"
+      "sha256": "d0d305965d10a7c531a42aa65fe3a98df7698c1bba12e65f815ff14b20ea4857",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/lesson-model.js.txt"
     }
   ],
   "files": [
@@ -46,8 +51,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7836,
-      "sha256": "d77ae623fe06b3ac939dbdefc940b914c46a122186987abfefae4670745fc994"
+      "bytes": 9053,
+      "sha256": "a26da7680faa786a82f2eb3c598d3aff5a942531f7b72a67def69f4cc5923aa1"
     },
     {
       "path": "CHECKLIST.md",
@@ -315,5 +320,7 @@
       "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/source.zip"
 }

@@ -7,25 +7,28 @@
   "context_url": "https://azizbeksafarov.github.io/design/kasblab/",
   "ai_url": "https://azizbeksafarov.github.io/design/kasblab/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/kasblab/source.zip",
-  "archive_sha256": "088a16ff39380b84d8353bdc73a57edecab0d16d1afba4d8f13d91dcdbacadaa",
-  "archive_bytes": 389244,
+  "archive_sha256": "bccefee8d3e6b35c95c4878fc5c6e5fbc481c1c39e164d58df257f781c686783",
+  "archive_bytes": 389503,
   "entry": "01-kasblab.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "01-kasblab.html",
       "url": "https://azizbeksafarov.github.io/design/kasblab/files/01-kasblab.html.txt",
-      "sha256": "af624c9b849a9bd825fa82b1ce75491b3fe8dbea61d93d4ec9886d8b19363a54"
+      "sha256": "af624c9b849a9bd825fa82b1ce75491b3fe8dbea61d93d4ec9886d8b19363a54",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/kasblab/files/01-kasblab.html.txt"
     },
     {
       "path": "shared.css",
       "url": "https://azizbeksafarov.github.io/design/kasblab/files/shared.css.txt",
-      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/kasblab/files/shared.css.txt"
     },
     {
       "path": "shared.js",
       "url": "https://azizbeksafarov.github.io/design/kasblab/files/shared.js.txt",
-      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/kasblab/files/shared.js.txt"
     }
   ],
   "files": [
@@ -36,8 +39,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7479,
-      "sha256": "9c1ca14aa9a7e65c8e727c60849fbaafabc0aa796e7f2504823d9393c81e1563"
+      "bytes": 8610,
+      "sha256": "b20c16691f00d948f87c536f8e782010c6880734227920e350606ff65518f9c1"
     },
     {
       "path": "CHECKLIST.md",
@@ -305,5 +308,7 @@
       "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
     }
   ],
-  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/kasblab/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/kasblab/source.zip"
 }

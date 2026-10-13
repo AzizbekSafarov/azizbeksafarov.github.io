@@ -19,6 +19,7 @@ The full competition research snapshot is dated 2026-10-09; it is not a current 
 - A 320 px viewport had content/scroll widths both 305 px; a 1440 px viewport had both 1425 px. The 15 px difference is the browser scrollbar.
 - The full AI brief is static HTML; the read-only prompt has a no-JavaScript copy fallback. It does not depend on the prompt builder to expose context.
 - The copied test topic was cleared and the reusable placeholder prompt restored. Page console had no error entries.
+- The AI web-reader tool could not open the Pages HTML URL, while a direct raw GitHub AI brief and an individual source file were readable. The prompt and briefs therefore include raw GitHub fallbacks for context, source and ZIP download. Browser availability alone is not treated as proof that every AI fetcher can read the Pages URL.
 
 ## Scope
 

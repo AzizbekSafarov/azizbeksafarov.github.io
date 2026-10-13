@@ -6,6 +6,8 @@ Esda qoladigan tanlangan dizayn sahifasi: `/design/bloom/`, `/design/qadam/`, `/
 
 Har route statik HTML’da to‘liq boshlang‘ich yo‘riqnomani beradi: yangi AIga JavaScript kerak emas. `ai.md` — ixcham kontekst; `source.md`/`source.html` — minified bo‘lmagan tahrirlanadigan kod; `source.zip` — to‘liq source, build, local font va agent fayllari; `manifest.json` — SHA-256 va haqiqiy fayl tarkibi. `catalog.json` barcha route’larni beradi.
 
+Ba’zi AI veb-o‘qish vositalari Pages sahifasini ocholmasligi sinovda aniqlandi. Shu sabab tayyor prompt, qisqa brief va manifestda `raw.githubusercontent.com` zaxira manbalari ham bor. AI uchun alohida source fayllari shu to‘g‘ridan-to‘g‘ri matn manbasiga bog‘langan. ZIP va qo‘lda nusxalash yo‘li ham mavjud.
+
 ## Foydalanish
 
 1. Tanlangan dizaynning URLini AIga bering. Bilet va haqiqiy qolgan vaqtni yozing.

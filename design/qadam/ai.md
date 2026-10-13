@@ -2,6 +2,10 @@
 
 Snapshot: 2026-10-13; source fingerprint: `70f11a47cd22b4fb`. Readable page: https://azizbeksafarov.github.io/design/qadam/
 
+## O‘qish vositasi uchun zaxira
+
+GitHub Pages brauzerda ishlashi, lekin ayrim AI veb-o‘qish vositalarida ochilmasligi mumkin. [Ushbu AI matnining GitHub nusxasi](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/ai.md), [o‘qiladigan source](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/source.md) va [kod ZIP](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/source.zip) bir xil paketdir. `.io` havolalari o‘qilmasa, ushbu raw nusxalar va quyidagi alohida fayllardan foydalan. [Qisqa tanlov konteksti raw](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/handoff/competition.md); [to‘liq tanlov tadqiqoti raw](https://raw.githubusercontent.com/AzizbekSafarov/ustoz/main/ai.md). Matn yoki ZIP chatga berilgan bo‘lsa, yana internetdan hammasini yuklash shart emas.
+
 ## 1. Vazifa va ustuvorlik
 
 Azizbek Safarov bilan Ustoz AI “Eng yaxshi veb-sayt” tanlovi uchun ishlaysan. O‘zbekcha muloqot qil. Hozirgi bilet, qolgan vaqt va joydagi reglament bu tayyorgarlik nusxasidan ustuvor. Bilet mavjud bo‘lsa, ishni davom ettir; yo‘q bo‘lsa, aynan bilet va haqiqiy vaqtni bitta qisqa savolda so‘ra. Mavzuni yoki rasmiy muddatni uydirma. Foydalanuvchi ushbu dizaynni tanlagan: uslubini saqla, sample mazmun va amallarni vazifaga mazmunli moslashtir.
@@ -40,12 +44,12 @@ Source archive va matn bir snapshotdan yaratilgan. ZIPni ochgach `AGENTS.md`, `A
 - `src/shared.js`, `src/extra.js`, `src/lesson-model.js`, `src/material.css`: library source.
 - `build_templates.py`, `extra_templates.py`: original generators; rerunning them overwrites generated edits.
 
-Faqat kerakli faylni o‘qish uchun:
-- [06-material.html](https://azizbeksafarov.github.io/design/qadam/files/06-material.html.txt)
-- [shared.css](https://azizbeksafarov.github.io/design/qadam/files/shared.css.txt)
-- [shared.js](https://azizbeksafarov.github.io/design/qadam/files/shared.js.txt)
-- [extra.js](https://azizbeksafarov.github.io/design/qadam/files/extra.js.txt)
-- [lesson-model.js](https://azizbeksafarov.github.io/design/qadam/files/lesson-model.js.txt)
+Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
+- [06-material.html](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/06-material.html.txt)
+- [shared.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/shared.css.txt)
+- [shared.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/shared.js.txt)
+- [extra.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/extra.js.txt)
+- [lesson-model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/qadam/files/lesson-model.js.txt)
 
 Plain HTML/CSS/JavaScript; npm installation is not needed. Preserve the files referenced by the selected HTML, including fonts and model scripts. For the timed competition, edit the isolated HTML/runtime files directly. To maintain the original gallery instead, change generator/source files and regenerate deliberately, then run `python design/build_handoff.py` in the publishing repository.
 
