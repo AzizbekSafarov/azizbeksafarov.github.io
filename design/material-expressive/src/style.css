@@ -88,5 +88,6 @@ body{font-size:16px;line-height:24px}
 .sample-primary{background:var(--md-sys-color-primary)}
 .sample-surface{background:var(--md-sys-color-surface)}
 .sample-panel{background:var(--md-sys-color-surface-container)}
+.palette-modal [slot=content]{padding-bottom:8px}.palette-modal .palette-samples{margin-bottom:0}
 @media(max-width:460px){.palette-options{grid-template-columns:1fr;gap:8px}.palette-option{min-height:68px}.palette-option>.palette-name{font-size:16px;line-height:24px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}

@@ -1,6 +1,6 @@
 # Bloom M3 verification — 2026-10-13
 
-Production build and all four model tests pass. Tests cover persisted data validation, combined filters and completion, project creation, and Uzbek keyboard/typographic apostrophe equivalence. The main script is 194.53 kB gzip; Vite reports a large-bundle advisory, with successful compilation. The final browser check returned no console error entries.
+Production build and all four model tests pass. Tests cover persisted data validation, combined filters and completion, project creation, and Uzbek keyboard/typographic apostrophe equivalence. The main script is 194.55 kB gzip; Vite reports a large-bundle advisory, with successful compilation. The final browser check returned no console error entries.
 
 ## Functional and interaction checks
 
@@ -13,7 +13,7 @@ Production build and all four model tests pass. Tests cover persisted data valid
 
 ## Responsive and theme checks
 
-Browser checks at 320, 768, 1024 and 1440 px found no horizontal overflow. At 320 px, every palette control is reachable. Desktop navigation uses an 80 px rail; mobile navigation uses an 80 px bar plus safe-area spacing.
+Browser checks at 320, 768, 1024 and 1440 px found no horizontal overflow. At 320 px, every palette control is reachable. At 422 × 610 px, the palette uses Material dialog's separate actions slot: the confirmation button remains visible while the content scrolls, and clicking it closes the dialog. Desktop navigation uses an 80 px rail; mobile navigation uses an 80 px bar plus safe-area spacing.
 
 The latest dark terracotta palette was visually verified at 320 px: all four choices, explanatory samples and the completion button are visible, labels align left, and text and controls remain distinguishable. The earlier 2026-10-11 verification also covered a 390 px dark workspace.
 
