@@ -293,6 +293,7 @@ def code_text(t,files):
     return text
 
 def page_shell(title,content,css='../handoff/styles.css',description='Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi',extra=''):
+    css += '?v='+digest((ROOT/'handoff/styles.css').read_bytes())[:12]
     return f'<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{escape(description)}"><title>{escape(title)}</title><link rel="stylesheet" href="{css}">{extra}</head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="../start/">← AI boshlash markazi</a><a href="../">Barcha jonli dizaynlar</a></nav></header><main id="main" class="wrap">{content}</main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · {DATE}</div></footer></body></html>'
 
 def template_page(t,brief):
@@ -306,6 +307,7 @@ def template_page(t,brief):
 <details><summary>Tanlov konteksti va manbalar maqomi</summary><article class="content">{render_md(read(ROOT/'handoff/competition.md'))}</article></details>
 <section class="panel"><h2>Keyingi AI bilan davom ettirish</h2><p>ZIP ichidagi <code>CURRENT-TASK.md</code> ga bilet va vaqtni, <code>HANDOFF.md</code> ga bajarilgan ish, haqiqiy sinov va keyingi amalni yozdiring. Sessiya almashsa, shu ikki faylni yangi AIga bering.</p><div class="actions"><a href="../kit.zip" download>Barcha 10 dizayn + tanlov matnlari ↓</a><a href="../handoff/competition.md">Qisqa tanlov konteksti</a></div></section>
 <script type="application/json" id="prompt-config">{config}</script><script src="../handoff/prompt.js" defer></script>'''
+    content=content.replace('<script src="../handoff/prompt.js" defer></script>',f'<script src="../handoff/prompt.js?v={digest((ROOT/"handoff/prompt.js").read_bytes())[:12]}" defer></script>',1)
     content=content.replace('<a href="ai.md">AI uchun qisqa matn</a>',f'<a href="ai.md">AI uchun qisqa matn</a><a href="{RAW}/design/{t["slug"]}/ai.md">AI o‘qiy olmasa: GitHub matni</a>',1)
     return page_shell(t['name']+' — tanlov uchun AI paketi',content,extra=f'<link rel="canonical" href="{url}"><link rel="alternate" type="text/markdown" href="ai.md" title="AI brief">')
 
