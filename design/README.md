@@ -2,6 +2,8 @@
 
 Barcha 10 variant GitHub Pages’da: https://azizbeksafarov.github.io/design/
 
+Tanlovda yangi AI bilan boshlash: https://azizbeksafarov.github.io/design/start/ . Bloom uchun qisqa manzil: https://azizbeksafarov.github.io/design/bloom/ . Kod, AI konteksti, tekshiruv va sessiyani davom ettirish paketi haqida `HANDOFF-README.md` ni o‘qing. Source o‘zgargach `build_handoff.py` va `verify_handoff.py` ham bajariladi.
+
 Google uslubidagi Qadam: https://azizbeksafarov.github.io/design/06-material.html
 
 ## Variantlar

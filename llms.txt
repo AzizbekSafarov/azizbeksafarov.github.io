@@ -1,0 +1,8 @@
+# Azizbek Safarov: Ustoz AI competition and design starters
+
+- [Choose a design](https://azizbeksafarov.github.io/design/ai.md): ten short routes; load only the selected design.
+- [Bloom M3 starter](https://azizbeksafarov.github.io/design/bloom/ai.md): context, editable source, visual contract, checks and handoff.
+- [Competition brief](https://azizbeksafarov.github.io/design/handoff/competition.md): dated evidence and uncertain rules.
+- [Full research](https://azizbeksafarov.github.io/ustoz/ai.md): collected local and official-web information.
+
+The user’s actual ticket and current instructions take priority. These are preparation resources, not an automatic agent or a guarantee of correctness.

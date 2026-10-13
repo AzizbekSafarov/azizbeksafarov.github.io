@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-13",
+  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "name": "Forma",
+  "slug": "forma",
+  "context_url": "https://azizbeksafarov.github.io/design/forma/",
+  "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
+  "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
+  "archive_sha256": "4209e24d739583fda5e958873f75dd2aaa553203fb4336b4321fd354d44953b2",
+  "archive_bytes": 389270,
+  "entry": "04-forma.html",
+  "serve_root": "site",
+  "readable_source_files": [
+    {
+      "path": "04-forma.html",
+      "url": "https://azizbeksafarov.github.io/design/forma/files/04-forma.html.txt",
+      "sha256": "74f5f1223c77a16576dbafd0b450848ea0b6290ddc8d80e8622b1d9c58f00e0e"
+    },
+    {
+      "path": "shared.css",
+      "url": "https://azizbeksafarov.github.io/design/forma/files/shared.css.txt",
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+    },
+    {
+      "path": "shared.js",
+      "url": "https://azizbeksafarov.github.io/design/forma/files/shared.js.txt",
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+    }
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2111,
+      "sha256": "b4970939c64b01220b1be2d21c4493d36b30bddce2dd4cd1806df67479578a09"
+    },
+    {
+      "path": "AI-BRIEF.md",
+      "bytes": 7486,
+      "sha256": "7fd65356277c9c30bfb356dc198faa4f8cad079236d663c8812ed85e1994c5da"
+    },
+    {
+      "path": "CHECKLIST.md",
+      "bytes": 1129,
+      "sha256": "c6142f2703d67356eb353d2cffc7a0334a40ef1fee547004d3512f67762c5c86"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "COMPETITION.md",
+      "bytes": 3751,
+      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+    },
+    {
+      "path": "CURRENT-TASK.md",
+      "bytes": 315,
+      "sha256": "6aef27412f9f75877094e02a02deb74ca3d168f5504cd4647db36bc84ac4990e"
+    },
+    {
+      "path": "GEMINI.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 1068,
+      "sha256": "242e80c2f198af247bdf35a61c45f565b4422145de0eb866b562f280ccd5b9b5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1362,
+      "sha256": "8c8d7be4d0e94fdbc554b680117b1df2989b04d41419e33997d442bf28bc5f15"
+    },
+    {
+      "path": "kit.json",
+      "bytes": 207,
+      "sha256": "8ffd2372435b8d96e9bf0339eefdf02a8ba9b58256087494faa2089366a89e8c"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 2054,
+      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+    },
+    {
+      "path": "site/01-kasblab.html",
+      "bytes": 9888,
+      "sha256": "af624c9b849a9bd825fa82b1ce75491b3fe8dbea61d93d4ec9886d8b19363a54"
+    },
+    {
+      "path": "site/02-samar.html",
+      "bytes": 9942,
+      "sha256": "1883800be364d9dae8d9d3fb91730e5f1c1555be70517308e5eb2a5df5250a2e"
+    },
+    {
+      "path": "site/03-orbit.html",
+      "bytes": 8304,
+      "sha256": "fb2958ef819893822e90e8ca7ae6fe084d955d3302c54c8a499d1bc4ca962e47"
+    },
+    {
+      "path": "site/04-forma.html",
+      "bytes": 11882,
+      "sha256": "74f5f1223c77a16576dbafd0b450848ea0b6290ddc8d80e8622b1d9c58f00e0e"
+    },
+    {
+      "path": "site/05-pulseboard.html",
+      "bytes": 11557,
+      "sha256": "37986944467ce4b677a3165f94f246ee2ef5d0d722a3c4585ec56ef9bc8aa1dc"
+    },
+    {
+      "path": "site/06-material.html",
+      "bytes": 35056,
+      "sha256": "e3f3798c01dc56878eabf600d3b14d0783f52276caf85a8ec2ca540ab0fa4cef"
+    },
+    {
+      "path": "site/07-lola.html",
+      "bytes": 10158,
+      "sha256": "b5de16d88edf8adfadd6aac6f84fd6c984017d73e228f5f05894ffdae5742437"
+    },
+    {
+      "path": "site/08-spark.html",
+      "bytes": 10621,
+      "sha256": "feb9853ae43b36842bc1721759c2269bbf1bc9be6e840df6a525800e2d51ef4b"
+    },
+    {
+      "path": "site/09-open-city.html",
+      "bytes": 9767,
+      "sha256": "714851df3c45d2cd56daea098ed26416ff74da03258cd55f1eb13ad0555287bf"
+    },
+    {
+      "path": "site/DESIGN-NOTES.md",
+      "bytes": 6191,
+      "sha256": "51573557c0f245e988d8d339c1dece6870f1ae8c871fb6186633841ada1fdb18"
+    },
+    {
+      "path": "site/QA-REPORT.md",
+      "bytes": 4425,
+      "sha256": "e01339b2b0ef361c8b8da9005709d3c2484cd94fca71db917004bf88d9d0428a"
+    },
+    {
+      "path": "site/QADAM-REFINEMENT.md",
+      "bytes": 2483,
+      "sha256": "d8e8c0e58d303eb8ba272d4d58971c4c9dfa38732fe55016042550f4bf2ee696"
+    },
+    {
+      "path": "site/assets/fonts/OFL.txt",
+      "bytes": 4397,
+      "sha256": "831b6e041705873c3e6efb18c4c96202bc41c8be42a456d3d26c47abf14816d0"
+    },
+    {
+      "path": "site/assets/fonts/dm-sans-OFL.txt",
+      "bytes": 4389,
+      "sha256": "2af94f4fb533be8fa23282eb33e08ca311ddf47c2f32777e2040b282deeec65c"
+    },
+    {
+      "path": "site/assets/fonts/dm-sans-latin-ext.woff2",
+      "bytes": 18228,
+      "sha256": "a5d38fe99f930275684999b462c7123faa063d9e44e73b4b241723d884aa0f49"
+    },
+    {
+      "path": "site/assets/fonts/dm-sans-latin.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "path": "site/assets/fonts/dm-sans.css",
+      "bytes": 723,
+      "sha256": "fa82245975bfa7415dddbe559a8c9c7413646432f07d1267aefd5b73d806979b"
+    },
+    {
+      "path": "site/assets/fonts/fraunces-OFL.txt",
+      "bytes": 4391,
+      "sha256": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b"
+    },
+    {
+      "path": "site/assets/fonts/fraunces-latin-ext.woff2",
+      "bytes": 33584,
+      "sha256": "a21ecfbf41fbc393e24ef9b7e38532a27e8da5e0a074aa7d66802d1b5ccec2f0"
+    },
+    {
+      "path": "site/assets/fonts/fraunces-latin.woff2",
+      "bytes": 36620,
+      "sha256": "7f9d191d999336d3b9790afa72e1358e50a13b06d4f289341e92a311967a80f9"
+    },
+    {
+      "path": "site/assets/fonts/fraunces.css",
+      "bytes": 727,
+      "sha256": "66cfbe7a53a0be022d17bbb5430b84e633c0260c02b3fa4524f9d6578bb19c94"
+    },
+    {
+      "path": "site/assets/fonts/google-sans-flex-latin-ext.woff2",
+      "bytes": 18788,
+      "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
+    },
+    {
+      "path": "site/assets/fonts/google-sans-flex-latin.woff2",
+      "bytes": 36096,
+      "sha256": "c59d5c0ad9ea76de9598d7041a53fd0b0ca2e0b2e73f22dd1374934f9354c3b3"
+    },
+    {
+      "path": "site/assets/fonts/google-sans-flex.css",
+      "bytes": 803,
+      "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185"
+    },
+    {
+      "path": "site/assets/fonts/jetbrains-mono-OFL.txt",
+      "bytes": 4399,
+      "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d"
+    },
+    {
+      "path": "site/assets/fonts/jetbrains-mono-latin-ext.woff2",
+      "bytes": 11624,
+      "sha256": "db5ff4db83e580426280e9337a58dc57d3a83784a1b03ad80914651594441d52"
+    },
+    {
+      "path": "site/assets/fonts/jetbrains-mono-latin.woff2",
+      "bytes": 31432,
+      "sha256": "83c005d49d8a6a50474c73a5a36ac0468076e9c4a29da7bdb14995d80560a5be"
+    },
+    {
+      "path": "site/assets/fonts/jetbrains-mono.css",
+      "bytes": 751,
+      "sha256": "7b71ca3ba9b92fc98d759eee182d1ba5db6ed635989905a9edbe67af48abbc4c"
+    },
+    {
+      "path": "site/assets/fonts/space-grotesk-OFL.txt",
+      "bytes": 4402,
+      "sha256": "c6dec685825f73b18c20926fddc65e8315642e12986f15db0699170940a09efc"
+    },
+    {
+      "path": "site/assets/fonts/space-grotesk-latin-ext.woff2",
+      "bytes": 18940,
+      "sha256": "952dddb45d2f96f71cbf3b7f510b24379afc3c89ea02fcf89d377b45d62c0166"
+    },
+    {
+      "path": "site/assets/fonts/space-grotesk-latin.woff2",
+      "bytes": 22288,
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d"
+    },
+    {
+      "path": "site/assets/fonts/space-grotesk.css",
+      "bytes": 747,
+      "sha256": "5a75be5b77b9918cf775039a9f5423b04f1464d657e896411ca11b65e1810b10"
+    },
+    {
+      "path": "site/build_templates.py",
+      "bytes": 60622,
+      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+    },
+    {
+      "path": "site/extra.js",
+      "bytes": 11857,
+      "sha256": "9dd473eb1d0cda580023a6f30b45656bf0ec2a9a517a2320a31faff015f1ba95"
+    },
+    {
+      "path": "site/extra_templates.py",
+      "bytes": 39367,
+      "sha256": "445fe484d523bb51ab91572026d09bafb7aea3ca1093efbb9c319de2e466be82"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 823,
+      "sha256": "d7f4a5b3c3dd26f7c2e18803523d3d21e35936faaad90b6d02e4429dae2c308a"
+    },
+    {
+      "path": "site/lesson-model.js",
+      "bytes": 808,
+      "sha256": "d0d305965d10a7c531a42aa65fe3a98df7698c1bba12e65f815ff14b20ea4857"
+    },
+    {
+      "path": "site/shared.css",
+      "bytes": 7270,
+      "sha256": "97c09ee20799aaf4deb406a99a1f14da48dd11a7ab3f2c3ebc867ec80eea48fe"
+    },
+    {
+      "path": "site/shared.js",
+      "bytes": 11906,
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+    },
+    {
+      "path": "site/src/extra.js",
+      "bytes": 11857,
+      "sha256": "9dd473eb1d0cda580023a6f30b45656bf0ec2a9a517a2320a31faff015f1ba95"
+    },
+    {
+      "path": "site/src/lesson-model.js",
+      "bytes": 808,
+      "sha256": "d0d305965d10a7c531a42aa65fe3a98df7698c1bba12e65f815ff14b20ea4857"
+    },
+    {
+      "path": "site/src/material.css",
+      "bytes": 13319,
+      "sha256": "bd66a4bc5f9fa4abc8a200e911c0d511921e374c7200213a6458f8e9692ab47a"
+    },
+    {
+      "path": "site/src/shared.js",
+      "bytes": 11906,
+      "sha256": "f15e387aba234559af905af4e0e7f745d86f5db5abc41ce3668dbcbabe113081"
+    },
+    {
+      "path": "site/verify-lesson-model.cjs",
+      "bytes": 1346,
+      "sha256": "6fa60deee435f06943f100f78f46af99eaa0cae46675db7b6f80f1b961880ffc"
+    }
+  ],
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/QA-REPORT.md"
+}

@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-13",
+  "source_fingerprint": "639ecb5a0932b26a482c4dd4881c5044ea35553c342000320dc292d841427871",
+  "name": "Bloom · Material Design 3",
+  "slug": "bloom",
+  "context_url": "https://azizbeksafarov.github.io/design/bloom/",
+  "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
+  "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
+  "archive_sha256": "c20a80fa1e9fb476e9db86de32f5c014519ccd3ac230ad125f30e22f95693bd8",
+  "archive_bytes": 963078,
+  "entry": "index.html",
+  "serve_root": "site/dist",
+  "readable_source_files": [
+    {
+      "path": "src/main.jsx",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
+      "sha256": "0673e7d1068074935c064985627b1dda2bd7b356056f32020e79cb8bd5c708a2"
+    },
+    {
+      "path": "src/style.css",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/style.css.txt",
+      "sha256": "10df8944a8c55ea9c2db30d4e7d2ed2b7b8bcc9373ddf434d94fd0bf3ccd69ad"
+    },
+    {
+      "path": "src/model.js",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/model.js.txt",
+      "sha256": "19e1433f59a00f6c4bdea0d2d9200187374695b7aead261f7358a87542877177"
+    },
+    {
+      "path": "src/model.test.js",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/model.test.js.txt",
+      "sha256": "41ef22f8c6f22ea554c8e8733de9c3e5ee136ab498ec227d6f274a39103be19f"
+    },
+    {
+      "path": "package.json",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/package.json.txt",
+      "sha256": "75493151c7685d63785f2af59342592729aeae08b27cacfc87a0da8b0d3f3efb"
+    },
+    {
+      "path": "vite.config.js",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/vite.config.js.txt",
+      "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968"
+    },
+    {
+      "path": "download_symbols.py",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/download_symbols.py.txt",
+      "sha256": "c59463f55d95c7092d5ebd609d61d7ebddaec1769c5eaea4731d11dc2411634f"
+    }
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2249,
+      "sha256": "dbd738bd838e8080ee341309f2defa37c220119836c66a83d23183e5cfb0feb2"
+    },
+    {
+      "path": "AI-BRIEF.md",
+      "bytes": 9030,
+      "sha256": "de0cf6228f926c45f4dbc90a2972e1a26742db3ff2bb32a49306518100dcbeda"
+    },
+    {
+      "path": "CHECKLIST.md",
+      "bytes": 1499,
+      "sha256": "94ec35d106ac7fb1234c12344a79fc5a7046e51ad35db3905ca58935a18a81f6"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "COMPETITION.md",
+      "bytes": 3751,
+      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+    },
+    {
+      "path": "CURRENT-TASK.md",
+      "bytes": 336,
+      "sha256": "e7c2338dd0e352eb0105ed0621b27ac81053cd0582ae98dd6a834f4f24174ff0"
+    },
+    {
+      "path": "GEMINI.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 1089,
+      "sha256": "dcc243187976c5f55677e8c198ce341f59ad3626465dfc4f8ceae7497b7ca6d1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1360,
+      "sha256": "1da115c9cec9c6ba0e926d9575413493227c926e31f2867277f6f13a6c630d56"
+    },
+    {
+      "path": "kit.json",
+      "bytes": 230,
+      "sha256": "78153a5614c6ae4dc126a6afa409a6e17baa4f0f0df51bcb11b0660a8ead57f3"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 2054,
+      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+    },
+    {
+      "path": "site/.gitignore",
+      "bytes": 32,
+      "sha256": "2b1a931b71c8b66d000d3f986b58981ea700b7f3e50a086f5d244bb579c6470e"
+    },
+    {
+      "path": "site/AGENTS.md",
+      "bytes": 1740,
+      "sha256": "54b2436b96053f8f61117369311bc8fb80778e8ad106f38de29175b0eead2a54"
+    },
+    {
+      "path": "site/QA-REPORT.md",
+      "bytes": 2778,
+      "sha256": "d7c9b3b536217757d89109160542e5f1599411ca21607114a63f44453537a855"
+    },
+    {
+      "path": "site/README.md",
+      "bytes": 4225,
+      "sha256": "01998f69ceaf1f3e55c72c38903ae196f7512aae680d063f6905258bbdf63bb8"
+    },
+    {
+      "path": "site/dist/Material-Color-Utilities-LICENSE.txt",
+      "bytes": 10755,
+      "sha256": "8ded460ad5bd3ab9082eaa2f7502cc9bb621eaff87cecc55d823f21758707cea"
+    },
+    {
+      "path": "site/dist/Material-Web-LICENSE.txt",
+      "bytes": 11348,
+      "sha256": "295cdb4364b782931c914f5ca8c47fac87c732fa7e448b788a47aa5b25728212"
+    },
+    {
+      "path": "site/dist/assets/google-sans-flex-latin-ClIaqtr9.woff2",
+      "bytes": 36096,
+      "sha256": "c59d5c0ad9ea76de9598d7041a53fd0b0ca2e0b2e73f22dd1374934f9354c3b3"
+    },
+    {
+      "path": "site/dist/assets/google-sans-flex-latin-ext-Cbkfhtox.woff2",
+      "bytes": 18788,
+      "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
+    },
+    {
+      "path": "site/dist/assets/index-D1Rt40jH.css",
+      "bytes": 34454,
+      "sha256": "ef817f5c4c7660fe4ccc1d139244e21ffa78b2ebdf369c7e8e92dc9c77f8b2c1"
+    },
+    {
+      "path": "site/dist/assets/index-DnV60z8K.js",
+      "bytes": 738971,
+      "sha256": "da882248c70cba41b9dac45100ebc0033e90a1d980d94b62b98a81a1ba0536a4"
+    },
+    {
+      "path": "site/dist/assets/material-symbols-CopIADRp.woff2",
+      "bytes": 5276,
+      "sha256": "af5fce5f2c25e18748fa7061a6e11bef03f2d388785cfd5740d81015382488f5"
+    },
+    {
+      "path": "site/dist/assets/roboto-400-BKwBj7lc.ttf",
+      "bytes": 123720,
+      "sha256": "dece7c71bbe61710787f0839c722c65e87355dd2eb4a823e6b5488121ff81e4b"
+    },
+    {
+      "path": "site/dist/assets/roboto-500-DOzs_FK3.ttf",
+      "bytes": 123904,
+      "sha256": "4d984240cefb093a74300bcae4b5dbd49f700e0af501eaaa079c56aa64142d2f"
+    },
+    {
+      "path": "site/dist/assets/roboto-600-BcXEj6v_.ttf",
+      "bytes": 124288,
+      "sha256": "f478ba88b0292e685e487901dfbb1401457d32d6ebee4030cdfd5698235bffa8"
+    },
+    {
+      "path": "site/dist/bloom.svg",
+      "bytes": 356,
+      "sha256": "b35b0ca499608b995d454cfa533ae250cc4f7d7af3e28f908eae71979d5673eb"
+    },
+    {
+      "path": "site/dist/fonts/Material-Symbols-LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "site/dist/fonts/OFL.txt",
+      "bytes": 4397,
+      "sha256": "831b6e041705873c3e6efb18c4c96202bc41c8be42a456d3d26c47abf14816d0"
+    },
+    {
+      "path": "site/dist/fonts/Roboto-OFL.txt",
+      "bytes": 4394,
+      "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
+    },
+    {
+      "path": "site/dist/fonts/google-sans-flex-latin-ext.woff2",
+      "bytes": 18788,
+      "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
+    },
+    {
+      "path": "site/dist/fonts/google-sans-flex-latin.woff2",
+      "bytes": 36096,
+      "sha256": "c59d5c0ad9ea76de9598d7041a53fd0b0ca2e0b2e73f22dd1374934f9354c3b3"
+    },
+    {
+      "path": "site/dist/fonts/google-sans-flex.css",
+      "bytes": 803,
+      "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185"
+    },
+    {
+      "path": "site/dist/index.html",
+      "bytes": 469,
+      "sha256": "f1f5b79698a1914f59badb3993c460a0f9358381c3891ddb440509d332a3be1b"
+    },
+    {
+      "path": "site/download_symbols.py",
+      "bytes": 1153,
+      "sha256": "c59463f55d95c7092d5ebd609d61d7ebddaec1769c5eaea4731d11dc2411634f"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 368,
+      "sha256": "79abd14e43911916acb48432e7d215db93ede2b74f56927cad5b181f45daaeb8"
+    },
+    {
+      "path": "site/package-lock.json",
+      "bytes": 42624,
+      "sha256": "c9946fb346bf51cebea0424fbeb8ea06411a75bc5c9cf163c22b535f63bdabda"
+    },
+    {
+      "path": "site/package.json",
+      "bytes": 463,
+      "sha256": "75493151c7685d63785f2af59342592729aeae08b27cacfc87a0da8b0d3f3efb"
+    },
+    {
+      "path": "site/public/Material-Color-Utilities-LICENSE.txt",
+      "bytes": 10755,
+      "sha256": "8ded460ad5bd3ab9082eaa2f7502cc9bb621eaff87cecc55d823f21758707cea"
+    },
+    {
+      "path": "site/public/Material-Web-LICENSE.txt",
+      "bytes": 11348,
+      "sha256": "295cdb4364b782931c914f5ca8c47fac87c732fa7e448b788a47aa5b25728212"
+    },
+    {
+      "path": "site/public/bloom.svg",
+      "bytes": 356,
+      "sha256": "b35b0ca499608b995d454cfa533ae250cc4f7d7af3e28f908eae71979d5673eb"
+    },
+    {
+      "path": "site/public/fonts/Material-Symbols-LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "site/public/fonts/OFL.txt",
+      "bytes": 4397,
+      "sha256": "831b6e041705873c3e6efb18c4c96202bc41c8be42a456d3d26c47abf14816d0"
+    },
+    {
+      "path": "site/public/fonts/Roboto-OFL.txt",
+      "bytes": 4394,
+      "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
+    },
+    {
+      "path": "site/public/fonts/google-sans-flex-latin-ext.woff2",
+      "bytes": 18788,
+      "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
+    },
+    {
+      "path": "site/public/fonts/google-sans-flex-latin.woff2",
+      "bytes": 36096,
+      "sha256": "c59d5c0ad9ea76de9598d7041a53fd0b0ca2e0b2e73f22dd1374934f9354c3b3"
+    },
+    {
+      "path": "site/public/fonts/google-sans-flex.css",
+      "bytes": 803,
+      "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185"
+    },
+    {
+      "path": "site/src/fonts/Roboto-OFL.txt",
+      "bytes": 4394,
+      "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
+    },
+    {
+      "path": "site/src/fonts/google-sans-flex-latin-ext.woff2",
+      "bytes": 18788,
+      "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
+    },
+    {
+      "path": "site/src/fonts/google-sans-flex-latin.woff2",
+      "bytes": 36096,
+      "sha256": "c59d5c0ad9ea76de9598d7041a53fd0b0ca2e0b2e73f22dd1374934f9354c3b3"
+    },
+    {
+      "path": "site/src/fonts/google-sans-flex.css",
+      "bytes": 803,
+      "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185"
+    },
+    {
+      "path": "site/src/fonts/material-symbols.css",
+      "bytes": 550,
+      "sha256": "e89e154fda3e5bf138736536982f005ac8dfb1587600f56fc9072023efed7142"
+    },
+    {
+      "path": "site/src/fonts/material-symbols.woff2",
+      "bytes": 5276,
+      "sha256": "af5fce5f2c25e18748fa7061a6e11bef03f2d388785cfd5740d81015382488f5"
+    },
+    {
+      "path": "site/src/fonts/roboto-400.ttf",
+      "bytes": 123720,
+      "sha256": "dece7c71bbe61710787f0839c722c65e87355dd2eb4a823e6b5488121ff81e4b"
+    },
+    {
+      "path": "site/src/fonts/roboto-500.ttf",
+      "bytes": 123904,
+      "sha256": "4d984240cefb093a74300bcae4b5dbd49f700e0af501eaaa079c56aa64142d2f"
+    },
+    {
+      "path": "site/src/fonts/roboto-600.ttf",
+      "bytes": 124288,
+      "sha256": "f478ba88b0292e685e487901dfbb1401457d32d6ebee4030cdfd5698235bffa8"
+    },
+    {
+      "path": "site/src/fonts/roboto.css",
+      "bytes": 532,
+      "sha256": "1090450825f6d43ed242c687dba63c6f59fad9d19ea29f7c4351d93d9a21422d"
+    },
+    {
+      "path": "site/src/main.jsx",
+      "bytes": 24876,
+      "sha256": "0673e7d1068074935c064985627b1dda2bd7b356056f32020e79cb8bd5c708a2"
+    },
+    {
+      "path": "site/src/model.js",
+      "bytes": 3441,
+      "sha256": "19e1433f59a00f6c4bdea0d2d9200187374695b7aead261f7358a87542877177"
+    },
+    {
+      "path": "site/src/model.test.js",
+      "bytes": 1445,
+      "sha256": "41ef22f8c6f22ea554c8e8733de9c3e5ee136ab498ec227d6f274a39103be19f"
+    },
+    {
+      "path": "site/src/style.css",
+      "bytes": 33458,
+      "sha256": "10df8944a8c55ea9c2db30d4e7d2ed2b7b8bcc9373ddf434d94fd0bf3ccd69ad"
+    },
+    {
+      "path": "site/vite.config.js",
+      "bytes": 77,
+      "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968"
+    }
+  ],
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/material-expressive/QA-REPORT.md"
+}
