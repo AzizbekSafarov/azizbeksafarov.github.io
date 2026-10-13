@@ -1,13 +1,14 @@
 # Bloom · Material Design 3
 
-An independent, functioning project workspace using Google's official Material Web components and Material Color Utilities. The requested reference is the Material Design 3 design system, rather than a clone of Google Drive or the material.io website.
+An independent project workspace using Google's official Material Web components and Material Color Utilities. Its reference is the Material Design 3 design system. Updated 2026-10-13.
 
 ## Implementation
 
-- `@material/web`: filled/tonal/outlined/text buttons, FAB, icon buttons, filter chips, outlined text fields, checkboxes, linear progress, dialogs and ripples.
+- `@material/web`: filled/tonal/outlined/text buttons, FAB, icon buttons, chip set and filter chips, outlined text fields and selects, checkboxes, radios, linear progress, dialogs and ripples.
 - `@material/material-color-utilities`: a Tonal Spot scheme generated from four selectable source colors. Material color roles, including surface levels and their foregrounds, are shared by custom surfaces and official components. Light/dark schemes and source color persist.
-- Locally hosted Material Symbols Rounded; Google Sans Flex for brand typography and Roboto for plain text. Standard M3 display, headline, title, body and label sizes guide the hierarchy.
-- Custom navigation rail and cards follow M3 indicator, shape and surface roles; these are not claimed to be official web components.
+- Locally hosted official Material Symbols Rounded WOFF2 with a variable `FILL` axis; Google Sans Flex for brand typography and Roboto for plain text. M3 type roles guide the hierarchy.
+- Custom 80 px desktop rail, 80 px mobile navigation with safe-area spacing, cards and segmented view controls use shared M3 roles. Cards show a permanent open arrow; the selected view shows a check.
+- A neutral hero keeps the primary action distinct. Palette choices have radio controls and explicit selection borders; passive labeled color samples explain the resulting roles.
 - Motion for React handles navigation selection and card filtering/reflow. Material Web supplies control state layers, ripples, checkbox/progress transitions and native dialog animation/focus behavior.
 - Custom motion follows reduced-motion preferences; Material dialogs use their quick mode when reduced motion is requested.
 
@@ -18,11 +19,15 @@ npm ci
 npm run dev
 ```
 
-The current local preview serves the production `dist/` directory at http://127.0.0.1:8767/ using a Python HTTP server. After edits, run `npm run build`. Run `npm run test` for model checks. All runtime fonts, icons, scripts and CSS are local; there is no runtime CDN dependency. `dist/` supports ordinary static hosting and subdirectories.
+After edits, run `npm run build`; `npm run preview` serves the production build. Run `npm run test` for four model checks, including Uzbek apostrophe normalization. All runtime fonts, icons, scripts and CSS are local; there is no runtime CDN dependency. `dist/` supports ordinary static hosting and subdirectories.
+
+Deployment target: [GitHub Pages gallery variant 10](https://azizbeksafarov.github.io/design/material-expressive/dist/). Publish the rebuilt `dist/` and updated source documentation through the homepage repository. See `QA-REPORT.md` for the current verified scope.
 
 ## Working flows
 
-Create projects, choose their category, combine search and category filters, switch between cards and rows, save projects, toggle checklist steps, sort, and change the source color or light/dark preference. Projects persist in this browser. Invalid stored data falls back to valid sample projects; storage failures display a warning. Profiles and starter projects are illustrative. There is no backend or account sync.
+Create projects, choose their category, combine search and category filters, switch between cards and rows, save projects, toggle checklist steps, sort, and change the source color or light/dark preference. Repeated clicks keep the active category selected; successful creation clears the next form and field edits clear its validation error. Saving uses the same bookmark symbol throughout, with focus recovery when filtering removes a card.
+
+Projects persist in this browser. Invalid stored data falls back to valid sample projects; storage failures display a warning. Profiles and starter projects are illustrative. There is no backend or account sync.
 
 ## References and licenses
 
@@ -33,4 +38,4 @@ Create projects, choose their category, combine search and category filters, swi
 - [Material Symbols](https://developers.google.com/fonts/docs/material_symbols): official icon family.
 - [Motion layout animations](https://motion.dev/docs/react-layout-animations): custom card reflow.
 
-Font and component licenses are included under `public/` and `src/fonts/`. Bloom is independently branded and is not an official Google product. `template.json` registers it as variant 10 in the parent local gallery.
+Font and component licenses are included under `public/` and `src/fonts/`. Bloom is independently branded and is not an official Google product. `template.json` registers it as variant 10 in the parent gallery.

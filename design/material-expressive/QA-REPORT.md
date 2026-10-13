@@ -1,33 +1,24 @@
-# Bloom M3 verification — 2026-10-11
+# Bloom M3 verification — 2026-10-13
 
-Production build and all three model tests pass. The latest implementation uses registered Material Web custom elements with their shadow roots; local browser verification confirmed this, rather than relying on visual approximation.
+Production build and all four model tests pass. Tests cover persisted data validation, combined filters and completion, project creation, and Uzbek keyboard/typographic apostrophe equivalence. The main script is 194.53 kB gzip; Vite reports a large-bundle advisory, with successful compilation. The final browser check returned no console error entries.
 
-## Functional verification
+## Functional and interaction checks
 
-- Filled buttons open the official Material dialog. Its title field receives autofocus.
-- Blank submission shows the outlined field error state. Valid title, description and category create a project. Created projects survive a rebuild/reload.
-- Material checkboxes update the checklist count and completed feedback. The AI sample's last test checkbox was restored to unchecked. Existing user changes to the preparation project were preserved.
-- Escape closes the native Material dialog. Navigation and subsequent controls work after dismissal.
-- Material filter chips combine with search: technology + AI returns one project. A no-match query shows the empty state and its reset action works.
-- List/card controls change layouts.
-- Switching the source color from purple to blue changes primary from #65558f to #435e91 and surface to #f9f9ff. Purple was restored. Theme preferences persist.
-- A 320 px form and 390 px dark workspace were visually inspected. The narrow form scrolls its content and wraps actions.
-- Official state animations/ripples and Motion card/navigation transitions remain enabled; reduced-motion custom behavior is implemented without changing the operating-system preference.
+- Registered Material Web controls provide buttons, dialogs, checkboxes, chip set, outlined selects and palette radios. Local official Material Symbols WOFF2 supports variable `FILL` for selected icons.
+- Clicking an already selected category keeps it selected. Search and category filters combine; sorting and project category use official selects.
+- Invalid creation shows a field error; editing clears the error. Successful creation saves the project and clears the next form.
+- Cards and details use a consistent bookmark icon. When a filtered card disappears, focus falls back to the project heading; dialog dismissal restores the opener where available.
+- Palette label clicks, ArrowRight and Space select a single color and update the theme. Choices have explicit radio and border states, and passive labeled samples show color roles.
+- Neutral hero surfaces distinguish the primary button from its panel. Cards have a permanent open arrow; segmented view controls show the active choice with a check.
 
-## Responsive verification
+## Responsive and theme checks
 
-| Requested width | Content width | Horizontal scroll width | Grid columns |
-|---|---:|---:|---:|
-| 320 | 305 | 305 | 1 |
-| 390 | 375 | 375 | 1 |
-| 768 | 753 | 753 | 2 |
-| 1024 | 1009 | 1009 | 3 |
-| 1440 | 1425 | 1425 | 3 |
+Browser checks at 320, 768, 1024 and 1440 px found no horizontal overflow. At 320 px, every palette control is reachable. Desktop navigation uses an 80 px rail; mobile navigation uses an 80 px bar plus safe-area spacing.
 
-The browser reserves 15 px for the scrollbar. Screenshots are local JPEG captures. Material Web host dialogs have display: contents; their visible native dialog is inside the shadow root, so a zero host box is not a layout failure.
+The latest dark terracotta palette was visually verified at 320 px: all four choices, explanatory samples and the completion button are visible, labels align left, and text and controls remain distinguishable. The earlier 2026-10-11 verification also covered a 390 px dark workspace.
 
-## Scope
+## Scope and deployment
 
-The reference is the M3 design system. Navigation rail, cards and hero surfaces are custom layouts using shared M3 roles; controls listed in README are official Material Web components. No claim is made to reproduce Google Drive, the material.io website, or all recent M3 Expressive additions. Storage is browser-local. Build reports a large-bundle advisory, but compilation succeeds; the main script is about 178 kB gzip. This revision remains local.
+Custom navigation, cards, hero and segmented controls use shared M3 roles; the controls listed in README use official Material Web components. This is an independent M3 implementation with browser-local storage. It does not claim complete M3 Expressive coverage. Reduced-motion behavior remains implemented for custom motion and Material dialogs.
 
-Final browser checks: no console error entries; all seven project cover heights are 156 px on desktop; 320 px and 1440 px content widths match their horizontal scroll widths after the final typography and header changes.
+Deployment target: `https://azizbeksafarov.github.io/design/material-expressive/dist/`, registered as gallery variant 10. This report records local verification before publishing the current revision; it does not confirm a completed deployment.
