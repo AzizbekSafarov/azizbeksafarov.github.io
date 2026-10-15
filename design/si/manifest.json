@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "f2c6067c032e15aae43d0e520ca1de57da90aeebee8fce7e455575858eb83fe0",
-  "archive_bytes": 178500,
+  "archive_sha256": "c170fd5bb6ba393e617c0f873ca2aaea05b484d708c1e4f093630b3f23d79d2f",
+  "archive_bytes": 178628,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -75,8 +75,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 11011,
-      "sha256": "3fd2e067d68994d9c5dfd68b0fcebea8b8a2f54977587ac5f8d76d9ca04c1e85"
+      "bytes": 10997,
+      "sha256": "d10c9a01d46e6b4248929f208ccb56947859d76ad85c88bd9385f903a9f3aa27"
     },
     {
       "path": "CHECKLIST.md",
@@ -100,8 +100,8 @@
     },
     {
       "path": "DESIGN-STANDARD.md",
-      "bytes": 5065,
-      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
+      "bytes": 5371,
+      "sha256": "6ba25df3b845aa7f1e71a1f16e501dce796011922e7db0cdce9424e3e3daa5d6"
     },
     {
       "path": "GEMINI.md",

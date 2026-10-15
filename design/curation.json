@@ -1,15 +1,22 @@
 {
   "date": "2026-10-15",
-  "featured": ["11", "10"],
-  "archived": {
-    "01": "Umumiy ko‘k landing, isbotsiz ijtimoiy dalillar va maket ichidagi maket. Ta’limga xos haqiqiy mazmun yetishmaydi.",
-    "02": "Krem/yashil tipografiya va mahalliy xarakter yaxshi. Takroriy ark rasmlari, tekshirilmagan reytinglar va sayohat tafsilotlari qayta ishlanishi kerak.",
-    "03": "Qora/laym agentlik qolipi va atom bezagi ustun. Portfolio o‘rnida yozuvli posterlar, haqiqiy loyiha tafsilotlari yo‘q.",
-    "04": "Savat funksiyasi foydali, lekin sodda mahsulot chizmalari va kam tafsilot do‘konni maket darajasida qoldirgan.",
-    "05": "Umumiy metrika kataklari, sonli vertikal shkalasiz grafik va sayoz demo jadval. Ma’lumotning talqini yetishmaydi.",
-    "06": "Vazifasi Bloom bilan takrorlanadi. Material’ga taqlid qilgan custom komponentlar va dekorativ bloklar kuchsizroq.",
-    "07": "Iliq shrift va ranglar bor. Gul bezagi, matnli posterlar va umumiy ariza haqiqiy mahorat darsi mazmunini bosa olmaydi.",
-    "08": "Laym/pushti va asterisk qolipi, mazmunsiz portfolio hamda dalilsiz raqamlar. Palitra almashtirish mazmun muammosini hal qilmaydi.",
-    "09": "Dekorativ xarita va xizmatlar sonidagi nomuvofiqlik. Har bir xizmatga xos natija o‘rnida bitta umumiy forma."
-  }
+  "featured": [
+    "11",
+    "10",
+    "02",
+    "04"
+  ],
+  "rebuilt": [
+    "02",
+    "04"
+  ],
+  "removed": [
+    "01",
+    "03",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09"
+  ]
 }

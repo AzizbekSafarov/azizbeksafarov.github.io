@@ -15,34 +15,34 @@ ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
 DATE = '2026-10-15'
-SLUGS = {'01':'kasblab','02':'samar','03':'orbit','04':'forma','05':'pulse','06':'qadam','07':'lola','08':'spark','09':'city','10':'bloom','11':'si'}
-LOOKS = {
- '01':'Oq va sokin ta’lim mahsuloti; ko‘k aksent, tizim sans-serif, katta sarlavha, kurs kartalari.',
- '02':'Krem fon, yashil aksent, Georgia serif sarlavhalari va me’moriy kompozitsiya; iliq tahririy uslub.',
- '03':'To‘q fon, laym aksent, yirik sans-serif va geometrik illyustratsiya; jasur texnologik uslub.',
- '04':'Oq/sokin sirt, ko‘kimtir aksent, Georgia va sans-serif; mahsulotga urg‘u beradigan premium katalog.',
- '05':'Och boshqaruv paneli, ko‘k aksent, yon navigatsiya, ko‘rsatkichlar, grafik va qidiriladigan jadval.',
- '06':'Mahalliy Google Sans Flex, tonal ko‘k/yashil/shaftoli, rail, katta pill tugmalar va kurs progressi. M3’dan ilhomlangan custom HTML; Bloom bilan bir xil texnologiya emas.',
- '07':'Fraunces serif + DM Sans; terrakota, krem va och yashil; ijodiy studiya va mahorat darsi kompozitsiyasi.',
- '08':'Space Grotesk + DM Sans; laym/moviy/pushti, yirik geometrik tipografika, portfolio va uch rang palitrasi.',
- '09':'JetBrains Mono + DM Sans; to‘q sariq aksent, oq/yashil sirt, chizma xarita va tartibli xizmat katalogi.',
- '10':'Foydalanuvchi ma’qullagan mustaqil Material Design 3. Neutral sirtlar, aniq primary CTA, 80 px rail/mobile bar, tonal kartalar, Google Sans Flex + Roboto, official Material Symbols va haqiqiy state/ripple animatsiyasi.'
-}
-LOOKS['11']='SI.gov vizual uslubidagi mustaqil Yuksal · SI: O‘zbekiston palitrasi: moviy #0099b5, oq #ffffff, yashil #1eb53a; oq #ffffff asosiy fon; to‘q teal #062c35 matn, moviy kursiv. #ce1126 faqat bayroqning ikki ingichka hoshiyasida; mahalliy Instrument Serif/Sans; canvas SI zarrachalari, katta tahririy sarlavhalar, dumaloq menyu, yon nuqta navigatsiyasi va och kartalar. Rasmiy davlat xizmati emas.'
-FLOWS = {
- '01':['Mobil menyu → bo‘limga o‘tish.','Kurs yoki maslahat tanlash → to‘g‘ri nomli ariza → bo‘sh/noto‘g‘ri qiymat → demo natija.'],
- '02':['Mobil menyu va sahifa bo‘limlari.','Sayohat tanlash → shu sayohat nomi bilan bron arizasi → validatsiya → demo natija.'],
- '03':['Portfolio kategoriyasini tanlash → mos kartalar.','Loyiha arizasi → validatsiya/natija; mobil menyu.'],
- '04':['Kategoriya → mahsulot → savat → miqdor o‘zgartirish → to‘g‘ri jami → olib tashlash.','Savatni qayta yuklash; bo‘sh savat; mobil menyu.'],
- '05':['7/30 kunlik davr → ko‘rsatkich va grafikning izchil o‘zgarishi.','Jadval qidiruvi → natija/bo‘sh holat → aynan filtrlangan CSV; mobil jadvalning ichki scrolli.'],
- '06':['Qidiruv + kategoriya + saqlanganlar filtri birgalikda.','Bookmark → saqlanganlar; darsning uch qadami → bir marta yakunlash → progress.','Progressni qayta boshlash, tema va saqlanish; dialog Escape/fokus.'],
- '07':['Mahorat darsi tanlash → tegishli nomli ariza → validatsiya/natija.','Mobil menyu; asosiy CTA.'],
- '08':['Uch rang palitrasi → tanlangan belgi va reload.','Portfolio filtri, loyiha arizasi va mobil menyu.'],
- '09':['Xizmat kategoriyasi → mos xizmatlar.','Xizmat tanlash → murojaat oynasi → validatsiya/natija; mobil menyu.'],
- '10':['Yangi loyiha → bo‘sh forma xatosi → haqiqiy yozishda xato yo‘qolishi → muvaffaqiyat → keyingi forma toza.','Qidiruv + kategoriya + saralash + saqlangan/bajarilgan bo‘limlar; takror bosilgan chip tanlangan qoladi.','Karta/ro‘yxat, bookmark, detail uch checkbox → progress → reload.','Palitra label/ArrowRight/Space → bitta radio; light/dark; qisqa oynada Tayyor doim ko‘rinadi.','Escape → opener; filtrdan yo‘qolgan karta uchun fokus loyiha sarlavhasiga qaytadi.']
-}
-
-FLOWS['11']=['SI → Super Intelligence hover / mobil tap, kursor itarishi va click to‘lqini. Scroll: ring → helix → towers → ring → broadcast → scatter → flag. Pause/reduced-motion va statik SI fallback.','Dumaloq menyu → bo‘lim; Escape → ochgan tugmaga fokus qaytishi.','Kategoriya → 4/2/1/1 kartalar; aniq tanlangan holat.','Detail → reja qo‘shish/olish → hisob → reload → ikkinchi tab sinxronlashuvi → matn yuklash; bo‘sh rejada yuklash o‘chiq.','320 px dialog, uzun sarlavha va yopish/saqlash amallari; lokal shrift va resurslar.']
+SLUGS = {'02': 'samar', '04': 'forma', '10': 'bloom', '11': 'si'}
+LOOKS = {'02': 'Krem/yashil, mahalliy Instrument Serif/Sans, haqiqiy Samarqand suratlari, rasmiy manbalar, 3 manzil va tartiblanadigan '
+       'kun rejasi.',
+ '04': 'Oq/krem, oliva, Instrument Serif/Sans, haqiqiy suratli 3 buyum, detail va savat; narx/xususiyatlar aniq demo.',
+ '10': 'Foydalanuvchi ma’qullagan mustaqil Material Design 3. Neutral sirtlar, aniq primary CTA, 80 px rail/mobile bar, tonal '
+       'kartalar, Google Sans Flex + Roboto, official Material Symbols va haqiqiy state/ripple animatsiyasi.',
+ '11': 'SI.gov vizual uslubidagi mustaqil Yuksal · SI: O‘zbekiston palitrasi: moviy #0099b5, oq #ffffff, yashil #1eb53a; oq '
+       '#ffffff asosiy fon; to‘q teal #062c35 matn, moviy kursiv. #ce1126 faqat bayroqning ikki ingichka hoshiyasida; mahalliy '
+       'Instrument Serif/Sans; canvas SI zarrachalari, katta tahririy sarlavhalar, dumaloq menyu, yon nuqta navigatsiyasi va och '
+       'kartalar. Rasmiy davlat xizmati emas.'}
+FLOWS = {'02': ['Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus.',
+        'Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.',
+        'Bo‘sh reja → o‘chiq download; tanlangan reja → manbali TXT; tun yarmidan o‘tish.'],
+ '04': ['Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi.',
+        'Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.',
+        'Reload / ikkinchi tab → bir xil savat; tanlovni TXT yuklash; demo maqomi.'],
+ '10': ['Yangi loyiha → bo‘sh forma xatosi → haqiqiy yozishda xato yo‘qolishi → muvaffaqiyat → keyingi forma toza.',
+        'Qidiruv + kategoriya + saralash + saqlangan/bajarilgan bo‘limlar; takror bosilgan chip tanlangan qoladi.',
+        'Karta/ro‘yxat, bookmark, detail uch checkbox → progress → reload.',
+        'Palitra label/ArrowRight/Space → bitta radio; light/dark; qisqa oynada Tayyor doim ko‘rinadi.',
+        'Escape → opener; filtrdan yo‘qolgan karta uchun fokus loyiha sarlavhasiga qaytadi.'],
+ '11': ['SI → Super Intelligence hover / mobil tap, kursor itarishi va click to‘lqini. Scroll: ring → helix → towers → ring → '
+        'broadcast → scatter → flag. Pause/reduced-motion va statik SI fallback.',
+        'Dumaloq menyu → bo‘lim; Escape → ochgan tugmaga fokus qaytishi.',
+        'Kategoriya → 4/2/1/1 kartalar; aniq tanlangan holat.',
+        'Detail → reja qo‘shish/olish → hisob → reload → ikkinchi tab sinxronlashuvi → matn yuklash; bo‘sh rejada yuklash '
+        'o‘chiq.',
+        '320 px dialog, uzun sarlavha va yopish/saqlash amallari; lokal shrift va resurslar.']}
 
 def read(path):
     return path.read_text(encoding='utf-8-sig')
@@ -113,6 +113,9 @@ Map ticket requirements to user actions and concrete checks. Verify the primary 
 """
 
 def ai_brief(t):
+    if t['id'] in ('02','04'):
+        from refined_handoff import brief
+        return brief(t,SITE,RAW,DATE)
     bloom=t['id']=='10'
     folder='design/material-expressive' if bloom else 'design/si-site' if t['id']=='11' else 'design'
     source_map=(
@@ -131,7 +134,7 @@ def ai_brief(t):
     )
     regression=(
       "Keep the neutral hero and unmistakable primary CTA. Metadata/passive panels stay quiet. Palette options need labels, one selected radio and visible boundaries; role samples are not buttons. Palette confirmation stays in the dialog actions slot. Bookmark icon is consistent and uses the real variable FILL font. Selected chip must not deselect on a second click. Form edits clear validation; successful creation resets the next form. If a saved card disappears, restore focus to a connected opener or project heading. Mobile list still exposes saving; segmented view includes a selected check. Uzbek apostrophes normalize in search. Do not undo these fixes during adaptation."
-      if bloom else "Keep visible button states, labels, dialog Escape/focus and responsive navigation. A shared-script change can affect other pages: check the selected page's flows and the directly related shared behavior. Keep Qadam lesson progress idempotent and persisted, Forma totals derived from quantity, and Pulseboard CSV consistent with its active query."
+      if bloom else "Keep visible button states, labels, dialog Escape/focus and responsive navigation. A shared-script change can affect other pages: check the selected page's flows and the directly related shared behavior. Keep persisted state validated and all derived totals consistent with the active model."
     )
     if t['id']=='11':
         technical='Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas butun sahifaga fixed; 1800 desktop / 1500 mobile nuqta, DPR 2, requestAnimationFrame va delta-time spring. SI → Super Intelligence: desktop serpentine text, mobile rotating lettering circle. Pointer repulsion radius 120 px; click expanding wave; spring .045 va damping .84. Scroll shakllarni almashtiradi, zarracha identity/velocity saqlanadi. Hidden tab/pause’da to‘xtaydi; faqat hero offscreen bo‘lgani uchun to‘xtatma. `MOTION.md` ni o‘qi. OS reduced-motion va statik SI fallback saqlansin.'
@@ -162,7 +165,7 @@ Ishtirokchi bergan ma’lumot: Urgut → Samarqand viloyat bosqichi, 2026-yil 13
 
 {t['look']}
 
-Asosiy amallar: {t['features']}. Mos sohalar: {t['use']}. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom/Qadam progressi, saqlash va temalar; Forma savati; Spark palitrasi shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
+Asosiy amallar: {t['features']}. Mos sohalar: {t['use']}. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom progressi/tema, Yuksal va Samar rejasi, Forma savati shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
 
 ## 4. Haqiqiy kodni olish
 
@@ -262,13 +265,13 @@ def zip_bytes(files):
             z.writestr(info,data)
     return buffer.getvalue()
 
-def offline_gallery(templates):
-    links=''.join(f'<li><a href="{escape(t["file"])}">{escape(t["name"])}</a></li>' for t in templates if t['id'] not in ('10','11'))
-    return '<!doctype html><html lang="uz"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mahalliy dizaynlar</title><body style="font:18px/1.7 system-ui;max-width:800px;margin:40px auto;padding:20px"><h1>Mahalliy HTML dizaynlar</h1><ul>'+links+'</ul><p><a href="'+SITE+'/design/bloom/">Bloom — alohida React paketi (internet havolasi)</a></p></body></html>'
-
 def source_files(t,templates):
     files={}
-    if t['id']=='11':
+    if t['id'] in ('02','04'):
+        base=ROOT/('samar-site' if t['id']=='02' else 'forma-site')
+        for path in sorted(base.rglob('*')):
+            if path.is_file() and '__pycache__' not in path.parts:files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
+    elif t['id']=='11':
         base=ROOT/'si-site'
         for path in sorted(base.rglob('*')):
             if path.is_file() and '__pycache__' not in path.parts:files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
@@ -279,25 +282,12 @@ def source_files(t,templates):
         for folder in ['src','public','dist']:
             for path in sorted((base/folder).rglob('*')):
                 if path.is_file():files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
-    else:
-        for name in [x['file'] for x in templates if x['id'] not in ('10','11')]+['shared.css','shared.js','extra.js','lesson-model.js','verify-lesson-model.cjs','build_templates.py','extra_templates.py','QA-REPORT.md','DESIGN-NOTES.md','QADAM-REFINEMENT.md']:
-            archived=ROOT/'archive/legacy'/(name+'.txt')
-            files['site/'+name]=(archived if archived.exists() else ROOT/name).read_bytes()
-        for folder in ['src','assets/fonts']:
-            for path in sorted((ROOT/folder).rglob('*')):
-                if path.is_file():files['site/'+path.relative_to(ROOT).as_posix()]=path.read_bytes()
-        files['site/index.html']=offline_gallery(templates).encode()
     return {path:portable_bytes(path,data) for path,data in files.items()}
 
 def code_names(t,files):
     if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','package.json','vite.config.js','download_symbols.py']
     if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','uzbekistan.svg','brand-icon.svg']
-    else:
-        names=[t['file'],'shared.css','shared.js']
-        archived=ROOT/'archive/legacy'/(t['file']+'.txt')
-        html=files['site/'+t['file']].decode('utf-8-sig') if files else read(archived if archived.exists() else ROOT/t['file'])
-        names += [x for x in ['extra.js','lesson-model.js'] if f'src="{x}"' in html]
-        return names
+    return ['index.html','style.css','app.js','model.js','model.test.mjs','CREDITS.md','package.json']
 
 def code_text(t,files):
     names=code_names(t,files)
@@ -323,7 +313,7 @@ def template_page(t,brief):
 <details><summary>Tanlov konteksti va manbalar maqomi</summary><article class="content">{render_md(read(ROOT/'handoff/competition.md'))}</article></details>
 <section class="panel"><h2>Keyingi AI bilan davom ettirish</h2><p>ZIP ichidagi <code>CURRENT-TASK.md</code> ga bilet va vaqtni, <code>HANDOFF.md</code> ga bajarilgan ish, haqiqiy sinov va keyingi amalni yozdiring. Sessiya almashsa, shu ikki faylni yangi AIga bering.</p><div class="actions"><a href="../kit.zip" download>Barcha 10 dizayn + tanlov matnlari ↓</a><a href="../handoff/competition.md">Qisqa tanlov konteksti</a></div></section>
 <script type="application/json" id="prompt-config">{config}</script><script src="../handoff/prompt.js" defer></script>'''
-    content=content.replace('Barcha 10 dizayn','Tanlangan 2 dizayn')
+    content=content.replace('Barcha 10 dizayn','Tanlangan 4 dizayn')
     if t.get('archived'):
         content='<aside class="quiet"><strong>Tarixiy arxiv.</strong> Bu variant faol tavsiyadan chiqarilgan. '+escape(t['archived'])+' <a href="/design/">Bloom yoki Yuksalni tanlang →</a></aside>'+content
     content=content.replace('<script src="../handoff/prompt.js" defer></script>',f'<script src="../handoff/prompt.js?v={digest((ROOT/"handoff/prompt.js").read_bytes())[:12]}" defer></script>',1)
@@ -342,7 +332,7 @@ def build():
     if {t['id'] for t in templates}!=set(SLUGS):raise ValueError('Template metadata and SLUGS must agree')
     archives={};catalog=[]
     for original in templates:
-        t={**original,'slug':SLUGS[original['id']],'look':LOOKS[original['id']],'flows':FLOWS[original['id']],'archived':policy['archived'].get(original['id'])}
+        t={**original,'slug':SLUGS[original['id']],'look':LOOKS[original['id']],'flows':FLOWS[original['id']],'archived':policy.get('archived',{}).get(original['id'])}
         files=source_files(t,templates)
         t['fingerprint']=digest(''.join(path+':'+digest(data)+'\n' for path,data in sorted(files.items())).encode())
         brief=ai_brief(t);folder=ROOT/t['slug']
@@ -353,7 +343,7 @@ def build():
         write(folder/'source.html',page_shell(t['name']+' — source',f'<h1>{escape(t["name"])} — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content">{render_md(code_text(t,files))}</article>'))
         write(folder/'index.html',template_page(t,brief))
         current='# Hozirgi tanlov topshirig‘i\n\n- Biletning aynan matni: hali berilmagan.\n- Foydalanuvchi va maqsad: biletdan olinadi.\n- Majburiy funksiyalar: biletdan olinadi.\n- Amaliy ish uchun haqiqiy qolgan vaqt: hali kiritilmagan.\n- Joydagi vosita/internet/shablon talablari: tasdiqlanganini yozing.\n- Tanlangan dizayn: '+t['name']+'\n'
-        kit={'schema_version':1,'name':t['name'],'slug':t['slug'],'serve_root':'site/dist' if t['id']=='10' else 'site','entry':'index.html' if t['id'] in ('10','11') else t['file'],'source_fingerprint':t['fingerprint']}
+        kit={'schema_version':1,'name':t['name'],'slug':t['slug'],'serve_root':'site/dist' if t['id']=='10' else 'site','entry':'index.html','source_fingerprint':t['fingerprint']}
         intro=f"""# {t['name']} — portable competition starter
 
 ## Boshlash
@@ -384,12 +374,14 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
 """
         extras={'README.md':intro,'AGENTS.md':rules(t),'CLAUDE.md':'# Project context\n\nRead AGENTS.md in this directory, then AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before editing. User task and actual competition rules take priority. Communicate in Uzbek.\n','AI-BRIEF.md':brief,'CURRENT-TASK.md':current,'HANDOFF.md':handoff(t),'CHECKLIST.md':checklist(t),'COMPETITION.md':read(ROOT/'handoff/competition.md'),'kit.json':json.dumps(kit,ensure_ascii=False,indent=2),'serve.mjs':read(ROOT/'handoff/serve.mjs')}
         if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node --test site/model.test.mjs site/motion.test.mjs`. Read AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before adapting.\n'
+        if t['id'] in ('02','04'):extras['README.md']=read(ROOT/('samar-site' if t['id']=='02' else 'forma-site')/'README.md')+'\n\nAt ZIP root run node serve.mjs. Editable files are site/. Read AGENTS.md and AI-BRIEF.md.\n'
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md')
         extras['AGENTS.md']+='\nRead DESIGN-STANDARD.md for the quality bar. Do not reproduce generic blocks, invented proof or decorative interactions that displace the task.\n'
         files.update({k:v.encode() for k,v in extras.items()})
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
         manifest={'schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
+        if t['id'] in ('02','04'):manifest['baseline_qa_url']=f'{SITE}/design/'+('samar-site' if t['id']=='02' else 'forma-site')+'/QA-REPORT.md'
         if t['id']=='11':manifest['baseline_qa_url']=f'{SITE}/design/si-site/QA-REPORT.md'
         manifest['ai_fallback_url']=f'{RAW}/design/{t["slug"]}/ai.md'
         manifest['archive_fallback_url']=f'{RAW}/design/{t["slug"]}/source.zip'
@@ -397,16 +389,13 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         write(folder/'manifest.json',json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
         catalog.append({**original,'slug':t['slug'],'context_url':manifest['context_url'],'ai_url':manifest['ai_url'],'source_url':manifest['archive_url'],'source_text_url':f'{SITE}/design/{t["slug"]}/source.md','manifest_url':f'{SITE}/design/{t["slug"]}/manifest.json','source_fingerprint':t['fingerprint'],'archive_bytes':len(archive)})
         alias(ROOT.parent/'dezayn'/t['slug'],t)
-    for slug,target in [('pulseboard','pulse'),('open-city','city')]:alias(ROOT/slug,{'slug':target,'name':target,'summary':'Tanlov uchun dizayn va AI yo‘riqnomasi'})
     alias(ROOT.parent/'bloom',{'slug':'bloom','name':'Bloom','summary':'Material Design 3: tanlov uchun AI konteksti va kod'})
     write(ROOT.parent/'dezayn/index.html','<!doctype html><html lang="uz"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/design/start/"><title>Dizaynlar</title><h1>Dizaynlar</h1><a href="/design/start/">Barcha dizayn va AI paketlari</a></html>')
-    archived=[{**t,'status':'archived','reason':policy['archived'][t['id']]} for t in catalog if t['id'] in policy['archived']]
-    write(ROOT/'archive/catalog.json',json.dumps({'schema_version':2,'snapshot_date':DATE,'templates':archived},ensure_ascii=False,indent=2)+'\n')
     catalog=[next({**t,'status':'featured'} for t in catalog if t['id']==id) for id in policy['featured']]
     archives={name:data for name,data in archives.items() if name.split('/')[0] in {t['slug'] for t in catalog}}
     write(ROOT/'catalog.json',json.dumps({'schema_version':2,'snapshot_date':DATE,'templates':catalog},ensure_ascii=False,indent=2)+'\n')
     links='\n'.join(f"- [{t['name']}]({t['context_url']}) — /design/{t['slug']}/; {t['summary']}" for t in catalog)
-    root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Faol dizaynlar: {len(catalog)}. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Markaziy kontekst]({SITE}/ai.md)\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n\nOldingi 01–09 variantlar tarixiy arxiv. Ularni faol starter deb tavsiya etma. Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
+    root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Faol dizaynlar: {len(catalog)}. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Markaziy kontekst]({SITE}/ai.md)\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n\nFoydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
     write(ROOT/'ai.md',root_brief)
     archives['START-HERE.md']=root_brief.encode();archives['COMPETITION.md']=read(ROOT/'handoff/competition.md').encode()
     full=ROOT/'handoff/competition-full.md'
@@ -418,9 +407,9 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     archive_links=''.join(f'<li><strong>{escape(t["name"])}</strong> — <a href="{t["slug"]}/ai.md">AI matni</a> · <a href="{t["slug"]}/source.zip">Kod ZIP</a></li>' for t in catalog)
     archives['index.html']=('<!doctype html><html lang="uz"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tanlov starterlari — offline</title><body style="font:17px/1.7 system-ui;max-width:900px;margin:30px auto;padding:20px"><h1>Tanlov starterlari</h1><p>Tanlangan kod ZIPini alohida papkaga oching. AIga AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md va HANDOFF.md ni o‘qiting. ZIP ildizida <code>node serve.mjs</code> tayyor namunani ochadi.</p><ul>'+archive_links+'</ul><p><a href="COMPETITION.md">Qisqa tanlov konteksti</a> · <a href="competition/FULL-CONTEXT.md">Barcha yig‘ilgan tanlov matnlari</a></p><p>Yakuniy bilet va reglament ustuvor. Runtime preview npm o‘rnatmasdan ishlaydi; Bloom source buildi uchun o‘rnatilgan/cache’dagi paketlar yoki internet kerak.</p></body></html>').encode()
     (ROOT/'kit.zip').write_bytes(zip_bytes(archives))
-    write(ROOT.parent/'llms.txt',f'# Azizbek Safarov: open competition headquarters\n\n- [Start here]({SITE}/ai.md): central context and two curated designs.\n- [Yuksal starter]({SITE}/design/si/ai.md): editorial motion website.\n- [Bloom M3 starter]({SITE}/design/bloom/ai.md): functional project workspace.\n- [Competition brief]({SITE}/design/handoff/competition.md): dated evidence and uncertain rules.\n- [Full research]({SITE}/ustoz/ai.md): collected local and official-web information.\n- [Quality standard]({SITE}/design/DESIGN-STANDARD.md).\n\nTemplates 01–09 are archived, not supported recommendations. The user’s actual ticket and current instructions take priority. These resources do not guarantee autonomous execution or correctness.\n')
+    write(ROOT.parent/'llms.txt',f'# Azizbek Safarov: open competition headquarters\n\n- [Start here]({SITE}/ai.md): central context and four curated designs.\n- [Yuksal starter]({SITE}/design/si/ai.md): editorial motion website.\n- [Bloom M3 starter]({SITE}/design/bloom/ai.md): functional project workspace.\n- [Samar starter]({SITE}/design/samar/ai.md): itinerary and verified destination sources.\n- [Forma starter]({SITE}/design/forma/ai.md): concept catalog and cart.\n- [Competition brief]({SITE}/design/handoff/competition.md): dated evidence and uncertain rules.\n- [Full research]({SITE}/ustoz/ai.md): collected local and official-web information.\n- [Quality standard]({SITE}/design/DESIGN-STANDARD.md).\n\nThe user’s actual ticket and current instructions take priority. These resources do not guarantee autonomous execution or correctness.\n')
     from build_hq import build as build_hq
     build_hq(catalog)
-    print(f'Built {len(catalog)} featured + {len(archived)} archived AI routes; curated offline kit ({(ROOT/"kit.zip").stat().st_size:,} bytes).')
+    print(f'Built {len(catalog)} active AI routes; curated offline kit ({(ROOT/"kit.zip").stat().st_size:,} bytes).')
 
 if __name__=='__main__':build()

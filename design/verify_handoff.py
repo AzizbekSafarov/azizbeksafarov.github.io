@@ -46,10 +46,11 @@ def check_runtime(z,root):
 
 def verify():
     catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))['templates']
-    archived=json.loads((ROOT/'archive/catalog.json').read_text(encoding='utf-8'))['templates']
+    archived=[]
     policy=json.loads((ROOT/'curation.json').read_text(encoding='utf-8'))
     assert [t['id'] for t in catalog]==policy['featured']
-    assert {t['id'] for t in archived}==set(policy['archived'])
+    assert not (ROOT/'archive').exists()
+    for slug in ('kasblab','orbit','pulse','qadam','lola','spark','city','pulseboard','open-city'):assert not (ROOT/slug).exists(),slug
     expected=len(json.loads((ROOT/'templates.json').read_text(encoding='utf-8')))
     assert len(catalog)+len(archived)==expected and len({t['slug'] for t in catalog+archived})==expected
     for template in catalog+archived:
@@ -76,16 +77,16 @@ def verify():
         for name in ('index.html','source.html'):check_links(folder/name)
         check_links(SITE_ROOT/'dezayn'/template['slug']/'index.html')
     check_links(ROOT/'start/index.html');check_links(ROOT/'index.html')
-    check_links(SITE_ROOT/'index.html');check_links(ROOT/'archive/index.html');check_links(ROOT/'standart/index.html')
+    check_links(SITE_ROOT/'index.html');check_links(ROOT/'standart/index.html')
     with zipfile.ZipFile(ROOT/'kit.zip') as z:
         assert z.testzip() is None
         assert 'competition/FULL-CONTEXT.md' in z.namelist()
         for template in catalog:assert z.read(template['slug']+'/source.zip')==(ROOT/template['slug']/'source.zip').read_bytes()
         for template in archived:assert template['slug']+'/source.zip' not in z.namelist()
-    for path in ('index.html','design/archive/index.html','design/standart/index.html'):
+    for path in ('index.html','design/standart/index.html'):
         # /ustoz/ is a separate Pages repository, not a missing local route.
         html=(SITE_ROOT/path).read_text(encoding='utf-8')
         for template in archived:assert f'href="/design/{template["file"]}"' not in html
-    print(f'PASS: {len(catalog)} featured + {len(archived)} archived briefs, SHA-256 manifests, portable assets; curated kit excludes retired templates and includes complete competition text.')
+    print(f'PASS: {len(catalog)} active briefs, SHA-256 manifests, portable assets; curated kit excludes retired templates and includes complete competition text.')
 
 if __name__=='__main__':verify()

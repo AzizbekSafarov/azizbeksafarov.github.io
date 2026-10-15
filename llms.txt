@@ -1,10 +1,12 @@
 # Azizbek Safarov: open competition headquarters
 
-- [Start here](https://azizbeksafarov.github.io/ai.md): central context and two curated designs.
+- [Start here](https://azizbeksafarov.github.io/ai.md): central context and four curated designs.
 - [Yuksal starter](https://azizbeksafarov.github.io/design/si/ai.md): editorial motion website.
 - [Bloom M3 starter](https://azizbeksafarov.github.io/design/bloom/ai.md): functional project workspace.
+- [Samar starter](https://azizbeksafarov.github.io/design/samar/ai.md): itinerary and verified destination sources.
+- [Forma starter](https://azizbeksafarov.github.io/design/forma/ai.md): concept catalog and cart.
 - [Competition brief](https://azizbeksafarov.github.io/design/handoff/competition.md): dated evidence and uncertain rules.
 - [Full research](https://azizbeksafarov.github.io/ustoz/ai.md): collected local and official-web information.
 - [Quality standard](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md).
 
-Templates 01–09 are archived, not supported recommendations. The user’s actual ticket and current instructions take priority. These resources do not guarantee autonomous execution or correctness.
+The user’s actual ticket and current instructions take priority. These resources do not guarantee autonomous execution or correctness.

@@ -1,0 +1,4 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {normalize,change,total,exportCart} from './model.js';
+test('persisted cart rejects fake IDs, strings, fractions and negative quantities',()=>{assert.deepEqual(normalize({rattan:2,luma:'3',terra:-1,fake:9}),{rattan:2});assert.deepEqual(normalize({rattan:99,terra:1.5}),{rattan:20});});
+test('derived totals survive repeated add, quantity changes and removal',()=>{let c=change({},'rattan',2);c=change(c,'terra',1);assert.equal(total(c),2760000);c=change(c,'rattan',-1);assert.equal(total(c),1470000);c=change(c,'terra',-20);assert.equal(total(c),1290000);assert.equal(total(change(c,'fake',5)),1290000);});
+test('quantity is bounded and export accurately labels the sample list',()=>{assert.deepEqual(change({luma:20},'luma',1),{luma:20});assert.deepEqual(change({luma:1},'luma',-1),{});assert.match(exportCart({terra:2}),/Terra vaza × 2/);assert.match(exportCart({terra:2}),/Namuna narxlari/);});

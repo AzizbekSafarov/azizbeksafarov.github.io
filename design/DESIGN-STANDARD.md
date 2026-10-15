@@ -36,6 +36,10 @@ Yuksal: SI.gov’dan o‘rganilgan tahririy masshtab va interaktiv zarrachalar m
 
 Bloom: Google Material Design 3, rasmiy Material Web komponentlari va dinamik rang rollari. Ko‘rinishdan tashqari holatlar va amallar bir tizimda ishlashi kerak. [Material Design 3](https://m3.material.io/).
 
+Samar: haqiqiy Samarqand manzillari va suratlar, rasmiy manba, mustaqil kun rejasi. Vaqtlar taklif sifatida belgilangan; bron yoki tarif uydirilmaydi.
+
+Forma: haqiqiy suratlar, o‘lcham/material tafsiloti, kategoriya va miqdordan hisoblanadigan savat. Konsept katalogdagi narx/xususiyatlar ochiq namuna; to‘lov tugmasi o‘rnida haqiqiy matn eksporti.
+
 ## Qabul qilish tartibi
 
 - Talabni foydalanuvchi amaliga aylantir, keyin tekshiruv bilan bog‘la.
@@ -50,4 +54,4 @@ Tezlik uchun asosiy maqsadlar: LCP 2.5 soniyagacha, INP 200 ms gacha, CLS 0.1 ga
 
 ## Kuratsiya qarori
 
-Faol: Bloom va Yuksal. 01–09: tarixiy arxiv. Har bir sabab [curation.json](https://azizbeksafarov.github.io/design/curation.json) va [arxiv qaydi](https://azizbeksafarov.github.io/design/archive/)da. Shunchaki bir rangni almashtirish ularni yangi tavsiya darajasiga chiqarmaydi; haqiqiy mazmun, mos vizual va to‘liq foydalanuvchi oqimi kerak.
+Faol: Bloom, Yuksal, qayta ishlangan Samar va Forma. Qolgan yetti eski variant joriy sayt va kod paketlaridan olib tashlandi. Samar — haqiqiy manzillar va kun rejasiga, Forma — suratli konsept katalog va aniq savat hisobiga qayta qurildi. Har biri biletga moslashtirilganda yana tekshiriladi.

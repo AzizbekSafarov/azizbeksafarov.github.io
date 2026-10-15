@@ -1,116 +1,34 @@
 [
   {
-    "id": "01",
-    "name": "KasbLab",
-    "file": "01-kasblab.html",
-    "category": "Ta’lim / platforma",
-    "color": "#275bea",
-    "background": "#edf2ff",
-    "summary": "Oq fon, katta sarlavha, ko‘k aksent va kurs kartalari. Toza, ishonchli mahsulot dizayni.",
-    "features": "Kurs tanlash · ariza formasi · mobil menyu",
-    "use": "Ta’lim, kasb, yoshlar, AI va xizmat platformalari"
-  },
-  {
     "id": "02",
     "name": "Samar",
-    "file": "02-samar.html",
+    "file": "samar-site/index.html",
     "category": "Turizm / madaniyat",
     "color": "#2c5c46",
     "background": "#e6ede2",
-    "summary": "Issiq krem fon, serif sarlavhalar, yashil aksent va Samarqand me’moriy illyustratsiyasi.",
-    "features": "Sayohat kartalari · bron arizasi · mobil menyu",
-    "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar"
-  },
-  {
-    "id": "03",
-    "name": "Orbit",
-    "file": "03-orbit.html",
-    "category": "Texnologiya / agentlik",
-    "color": "#c0f26c",
-    "background": "#101411",
-    "summary": "Qora fon, yirik tipografika, yashil aksent va geometrik kompozitsiya. Kuchli vizual taassurot.",
-    "features": "Portfolio filtri · loyiha arizasi · mobil menyu",
-    "use": "Startap, AI, texnologiya, agentlik va portfolio"
+    "summary": "Krem/yashil, mahalliy Instrument Serif/Sans, haqiqiy Samarqand suratlari, rasmiy manbalar, 3 manzil va tartiblanadigan kun rejasi.",
+    "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
+    "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
+    "preview": "previews/02.png",
+    "fonts": [
+      "instrument-sans",
+      "instrument-serif"
+    ]
   },
   {
     "id": "04",
     "name": "Forma",
-    "file": "04-forma.html",
-    "category": "Internet-do‘kon",
+    "file": "forma-site/index.html",
+    "category": "Interyer / konsept katalog",
     "color": "#254f70",
     "background": "#eaf0f4",
-    "summary": "Sokin ranglar, mahsulot illyustratsiyalari va tartibli katalog. Premium do‘kon ko‘rinishi.",
-    "features": "Kategoriya filtri · savat · narx hisoblash · o‘chirish",
-    "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar"
-  },
-  {
-    "id": "05",
-    "name": "Pulseboard",
-    "file": "05-pulseboard.html",
-    "category": "Boshqaruv / dashboard",
-    "color": "#4a61d8",
-    "background": "#edf0ff",
-    "summary": "Yon menyu, ko‘rsatkichlar, grafik va buyurtmalar jadvali. Ko‘p ma’lumot uchun qulay interfeys.",
-    "features": "Jadval qidiruvi · davr tanlash · CSV hisobot",
-    "use": "Monitoring, statistika, biznes, buyurtmalar va boshqaruv"
-  },
-  {
-    "id": "06",
-    "name": "Qadam · Material",
-    "file": "06-material.html",
-    "category": "Yangi Google / Material 3",
-    "color": "#0b57d0",
-    "background": "#dfeaff",
-    "summary": "Google Sans Flex, tonal ranglar, yumaloq kartalar va katta pill tugmalar. Hozirgi Google dizayn yo‘nalishidan ilhomlangan.",
-    "features": "Qidiruv · kurs filtri · saqlash · dars progressi · yorug‘/qorong‘i rejim",
-    "use": "Ta’lim, shaxsiy kabinet, xizmatlar va zamonaviy ilovalar",
+    "summary": "Oq/krem, oliva, Instrument Serif/Sans, haqiqiy suratli 3 buyum, detail va savat; narx/xususiyatlar aniq demo.",
+    "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
+    "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
+    "preview": "previews/04.png",
     "fonts": [
-      "google-sans-flex"
-    ]
-  },
-  {
-    "id": "07",
-    "name": "Lola",
-    "file": "07-lola.html",
-    "category": "Serif / ijodiy studiya",
-    "color": "#c44828",
-    "background": "#fff0e3",
-    "summary": "Fraunces serif va DM Sans juftligi. Tiniq terrakota, krem va och yashil; iliq, esda qoladigan kompozitsiya.",
-    "features": "Mahorat darsi tanlash · ariza · bosilish holatli tugmalar",
-    "use": "Madaniyat, hunarmandchilik, ijod, ta’lim va tadbirlar",
-    "fonts": [
-      "fraunces",
-      "dm-sans"
-    ]
-  },
-  {
-    "id": "08",
-    "name": "Spark",
-    "file": "08-spark.html",
-    "category": "Geometrik / kreativ",
-    "color": "#677707",
-    "background": "#d9ef3f",
-    "summary": "Space Grotesk va DM Sans. Laym, moviy va pushti aksentlar; katta tipografika va jonli rang tanlash.",
-    "features": "3 rang palitrasi · portfolio filtri · ariza · bosiladigan pill tugmalar",
-    "use": "Startap, agentlik, yoshlar, brending va portfolio",
-    "fonts": [
-      "space-grotesk",
-      "dm-sans"
-    ]
-  },
-  {
-    "id": "09",
-    "name": "Open City",
-    "file": "09-open-city.html",
-    "category": "Monospace / xizmatlar",
-    "color": "#c84c20",
-    "background": "#dcebe7",
-    "summary": "JetBrains Mono va DM Sans. Tiniq to‘q sariq, oq va yashil; texnik xarakterli, tartibli xizmat katalogi.",
-    "features": "Xizmat filtri · murojaat formasi · bosilish holatli tugmalar",
-    "use": "Shahar, yoshlar, xizmat portali, texnologiya va ijtimoiy loyihalar",
-    "fonts": [
-      "jetbrains-mono",
-      "dm-sans"
+      "instrument-sans",
+      "instrument-serif"
     ]
   },
   {

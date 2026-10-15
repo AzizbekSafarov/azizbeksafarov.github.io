@@ -13,7 +13,7 @@ function updatePrompt() {
   const slug = starter.elements.design.value;
   const topic = starter.elements.topic.value.trim() || '[ekspert bergan bilet]';
   const time = starter.elements.time.value.trim() || '[haqiqiy qolgan vaqt]';
-  const name = slug === 'si' ? 'Yuksal · SI' : 'Bloom · Material Design 3';
+  const name = {si:'Yuksal · SI',bloom:'Bloom · Material Design 3',samar:'Samar',forma:'Forma'}[slug];
   promptField.value = `https://azizbeksafarov.github.io/design/${slug}/\nUstoz AI tanlovi uchun ${name} dizaynini tanladim. Shu manzildagi AI yo‘riqnomasi va haqiqiy source kodni o‘qi.\nSahifa o‘qilmasa: https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/${slug}/ai.md\nBilet: ${topic}\nQolgan vaqt: ${time}\nHozirgi topshiriq va joydagi reglament ustuvor. Uslubni saqlab mazmun va funksiyalarni biletga moslashtir. Avval asosiy foydalanuvchi oqimini ishlat. Mobil, klaviatura, xato/bo‘sh/natija holatlarini tekshir. Topilgan xatoni takrorla, sababini tuzat va qayta sina. Demo natijani haqiqiy backend deb ko‘rsatma. CURRENT-TASK.md va HANDOFF.md ga vazifa, o‘zgarish, haqiqiy sinov va qolgan ishni yoz. Men bilan o‘zbekcha gaplash.`;
   document.getElementById('selected-kit').href = `/design/${slug}/source.zip`;
   document.getElementById('selected-brief').href = `/design/${slug}/ai.md`;

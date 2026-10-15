@@ -24,7 +24,7 @@
       "source_text_url": "https://azizbeksafarov.github.io/design/si/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/si/manifest.json",
       "source_fingerprint": "4c2f7bdcb31e33fd9516d7e6c3eab7a6346af87744ee95d3e143391457bae9fa",
-      "archive_bytes": 178500,
+      "archive_bytes": 178628,
       "status": "featured"
     },
     {
@@ -49,7 +49,57 @@
       "source_text_url": "https://azizbeksafarov.github.io/design/bloom/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/bloom/manifest.json",
       "source_fingerprint": "639ecb5a0932b26a482c4dd4881c5044ea35553c342000320dc292d841427871",
-      "archive_bytes": 966047,
+      "archive_bytes": 966175,
+      "status": "featured"
+    },
+    {
+      "id": "02",
+      "name": "Samar",
+      "file": "samar-site/index.html",
+      "category": "Turizm / madaniyat",
+      "color": "#2c5c46",
+      "background": "#e6ede2",
+      "summary": "Krem/yashil, mahalliy Instrument Serif/Sans, haqiqiy Samarqand suratlari, rasmiy manbalar, 3 manzil va tartiblanadigan kun rejasi.",
+      "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
+      "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
+      "preview": "previews/02.png",
+      "fonts": [
+        "instrument-sans",
+        "instrument-serif"
+      ],
+      "slug": "samar",
+      "context_url": "https://azizbeksafarov.github.io/design/samar/",
+      "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
+      "source_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
+      "source_text_url": "https://azizbeksafarov.github.io/design/samar/source.md",
+      "manifest_url": "https://azizbeksafarov.github.io/design/samar/manifest.json",
+      "source_fingerprint": "ade25bb6c0a00f997bff905c9ba6c60439a0bfc7df74dedb281cbf954165a7a8",
+      "archive_bytes": 1376879,
+      "status": "featured"
+    },
+    {
+      "id": "04",
+      "name": "Forma",
+      "file": "forma-site/index.html",
+      "category": "Interyer / konsept katalog",
+      "color": "#254f70",
+      "background": "#eaf0f4",
+      "summary": "Oq/krem, oliva, Instrument Serif/Sans, haqiqiy suratli 3 buyum, detail va savat; narx/xususiyatlar aniq demo.",
+      "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
+      "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
+      "preview": "previews/04.png",
+      "fonts": [
+        "instrument-sans",
+        "instrument-serif"
+      ],
+      "slug": "forma",
+      "context_url": "https://azizbeksafarov.github.io/design/forma/",
+      "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
+      "source_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
+      "source_text_url": "https://azizbeksafarov.github.io/design/forma/source.md",
+      "manifest_url": "https://azizbeksafarov.github.io/design/forma/manifest.json",
+      "source_fingerprint": "05f9e0afda8c89da820118e6345b6fe62b6ac42111dd616291873ef7cade75ef",
+      "archive_bytes": 479805,
       "status": "featured"
     }
   ]
