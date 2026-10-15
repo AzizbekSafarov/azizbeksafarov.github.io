@@ -2,6 +2,31 @@
 // Independently implemented from observed SI.gov interaction and timing.
 export const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export const seeded=n=>{const v=Math.sin(n*127.1+311.7)*43758.5453;return v-Math.floor(v);};
+export const FLAG_COLORS=['#ffffff','#0099b5','#1eb53a','#ce1126'];
+export const FLAG_STARS=Object.freeze([3,4,5].flatMap((count,row)=>Array.from({length:count},(_,col)=>Object.freeze({x:87-(count-1-col)*12,y:8+row*12,row}))));
+const flagCache=new Map();
+export function uzbekFlagPoints(count){
+ if(flagCache.has(count))return flagCache.get(count);
+ const points=[],lineCount=Math.round(count*.10/2),moonCount=Math.round(count*.11),starCount=18,backgroundCount=count-lineCount*2-moonCount-starCount*12;
+ const cols=Math.ceil(Math.sqrt(backgroundCount*2)),rows=Math.ceil(backgroundCount/cols);
+ for(let i=0;i<backgroundCount;i++){
+  const x=(i%cols+.5)/cols*250,y=(Math.floor(i/cols)+.5)/rows*125;
+  points.push({x,y,color:y<40?1:y<42.5?3:y<82.5?0:y<85?3:2,feature:'field'});
+ }
+ for(const y of [41.25,83.75])for(let i=0;i<lineCount;i++)points.push({x:(i+.5)/lineCount*250,y,color:3,feature:'separator'});
+ // Sample the crescent's white area rather than painting a blue disc on top.
+ let attempt=0;while(points.length<backgroundCount+lineCount*2+moonCount){
+  const x=20+seeded(attempt+601)*30,y=5+seeded(attempt+1601)*30;attempt++;
+  if(Math.hypot(x-35,y-20)<=15&&Math.hypot(x-40.5,y-20)>15)points.push({x,y,color:0,feature:'crescent'});
+ }
+ FLAG_STARS.forEach((star,index)=>{
+  for(let i=0;i<starCount;i++){
+   const edge=i%10,angle=-Math.PI/2+edge*Math.PI/5,radius=edge%2?1.15:3,fill=i>=10?.52:1;
+   points.push({x:star.x+Math.cos(angle)*radius*fill,y:star.y+Math.sin(angle)*radius*fill,color:0,feature:'star',star:index,row:star.row});
+  }
+ });
+ flagCache.set(count,points);return points;
+}
 export function advanceParticle(p,target,pointer,waves,dt=1){
  const steps=Math.max(1,Math.ceil(dt)),step=dt/steps;
  for(let j=0;j<steps;j++){
@@ -36,8 +61,9 @@ export function shapeTarget(kind,i,count,time,box,pointer={nx:0,ny:0}){
   return{x:cx+Math.cos(a)*radius,y:cy+box.h*.06+Math.sin(a)*radius*(box.w<700?1:.62),alpha:.85*(1-t),color:ring%3===0?1:2,size:1.2+.8*(1-t)};
  }
  if(kind==='flag'){
-  const stripe=i%13,col=Math.floor(i/13)/Math.ceil(count/13),star=col<.4&&stripe<7,white=star&&Math.floor(i/13)%3===0&&stripe%2===0;
-  return{x:box.x+col*box.w,y:box.y+box.h*.08+stripe/12*box.h*.8+Math.sin(col*7-time*2.4)*box.h*.05*(col+.15)+Math.sin(col*3-time*1.1)*box.h*.02,alpha:star?white?1:.55:.9,color:star?white?0:2:stripe%2?0:1,size:1.6};
+  const p=uzbekFlagPoints(count)[i],w=Math.min(box.w*.96,box.h*1.68),h=w/2,u=p.x/250;
+  const wave=Math.sin(u*7-time*2.4)*h*.05*(u+.15)+Math.sin(u*3-time*1.1)*h*.02;
+  return{x:box.x+(box.w-w)/2+u*w,y:box.y+(box.h-h)/2+p.y/125*h+wave,alpha:1,color:p.color,size:p.feature==='star'?1.05:1.4};
  }
  return{x:box.x+(seeded(i+51)*box.w+8*time*(seeded(i+5)+.2))%(box.w+20)-10,y:box.y+seeded(i+71)*box.h+8*Math.sin(time*.5+seeded(i+5)*9),alpha:.08+.28*seeded(i+5),size:1+seeded(i+5)};
 }
@@ -61,7 +87,7 @@ export class ParticleField{
  resize(){
   this.width=innerWidth;this.height=innerHeight;const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(this.width*dpr);this.canvas.height=Math.round(this.height*dpr);this.ctx.setTransform(dpr,0,0,dpr,0,0);
   const count=this.width<700?1500:1800;
-  if(this.particles.length!==count)this.particles=Array.from({length:count},(_,i)=>({x:seeded(i+7)*this.width,y:seeded(i+47)*this.height,vx:0,vy:0,color:seeded(i+17)<.08?1:seeded(i+37)<.12?2:0}));
+  if(this.particles.length!==count)this.particles=Array.from({length:count},(_,i)=>({x:seeded(i+7)*this.width,y:seeded(i+47)*this.height,vx:0,vy:0,color:seeded(i+17)<.35?1:seeded(i+37)<.4?2:0}));
   this.cache.clear();this.syncScene(true);if(this.paused||this.reduced)this.snap();this.paint();this.start();
  }
  onPointer(e){
@@ -93,6 +119,7 @@ export class ParticleField{
   const changed=signature!==this.signature;
   this.scene=scene;this.box=box;this.mode=mode;this.targetName=target;
   this.light=Boolean(section.closest('.section-cream,.section-light'));
+  this.canvas.dataset.surface=this.light?'light':'dark';
   const footer=document.querySelector('.site-footer').getBoundingClientRect();this.opacity=clamp((footer.top-this.height*.25)/(this.height*.5),0,1);
   if(scene==='hero'&&heroBox.bottom<0)this.opacity=0;
   if(changed||force){
@@ -144,11 +171,11 @@ export class ParticleField{
  snap(){if(!this.targets&&['text','snake','circle'].includes(this.mode))return;for(let i=0;i<this.particles.length;i++){const t=this.target(i),p=this.particles[i];p.x=t.x;p.y=t.y;p.vx=p.vy=0;}}
  paint(dt=0){
   if(!this.ctx||!this.particles.length)return;const c=this.ctx;c.clearRect(0,0,this.width,this.height);
-  const palette=this.light?['#0a103d','#ff3347','#526fae']:['#f5f6fa','#ff3347','#8fb4ff'];
+  const palette=this.mode==='flag'?FLAG_COLORS:this.light?['#062c35','#007c92','#168a43','#ce1126']:FLAG_COLORS;
   for(let i=0;i<this.particles.length;i++){
    const p=this.particles[i],t=this.target(i);if(dt)advanceParticle(p,t,this.pointer,this.waves,dt);
    const speed=clamp(Math.hypot(p.vx,p.vy)/7,0,1),size=t.size*(this.width<700?1.1:1.35)+speed*2;
-   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[speed>.35?1:t.color??p.color];c.fillRect(p.x-size/2,p.y-size/2,size,size);
+   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[this.mode==='flag'?t.color:speed>.35?1:t.color??p.color];c.fillRect(p.x-size/2,p.y-size/2,size,size);
   }c.globalAlpha=1;
  }
  tick=now=>{

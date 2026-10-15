@@ -1,6 +1,6 @@
 # Yuksal · SI verification — 2026-10-15
 
-Seven tests pass: persisted-plan sanitization, reversible known-ID toggling, exported content/order, spring convergence, pointer/click repulsion, long-frame integration, and finite animated geometry for all seven procedural shapes at 1500/1800 particles. Application and motion modules pass syntax validation.
+Eight tests pass: persisted-plan sanitization, reversible known-ID toggling, exported content/order, spring convergence, pointer/click repulsion, long-frame integration, finite animated geometry for all seven procedural shapes at 1500/1800 particles, and Uzbekistan flag identity. The flag test checks the three bands, two red separators, crescent, 12 stars in 3/4/5 rows, and matching SVG fallback. Application and motion modules pass syntax validation.
 
 Browser checks completed on the local site:
 
@@ -18,4 +18,6 @@ Reduced-motion support, hidden-tab suspension and canvas fallback are implemente
 
 The gallery, handoff manifests and portable archives are checked separately by `design/verify_handoff.py`; deployment status is verified after publication rather than assumed here.
 
-Independent static demo inspired by SI.gov's navy/cream/red palette, Instrument Serif/Sans contrast, particle typography and circular menu. No personal information is submitted. The plan is browser-local.
+Uzbekistan palette revision: blue #0099b5, white #ffffff, green #1eb53a, deep teal surfaces #062c35; red #ce1126 is reserved for flag separators. The former US 13-stripe target has been replaced. Flag colors are preserved during particle motion. A 390 px browser view shows the waving flag with its crescent and 12 stars; no console errors were recorded. The mobile menu still navigates to the plan. The revised palette has no horizontal overflow at 320/390/1440 px; the hero morph still activates. Primary cyan buttons use the deeper foreground role after checking small-label contrast.
+
+Independent demo inspired by SI.gov's motion mechanics, Instrument Serif/Sans contrast and circular menu, with Uzbekistan branding requested by the user. No personal information is submitted. The plan is browser-local.

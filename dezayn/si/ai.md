@@ -1,6 +1,6 @@
 # Yuksal · SI — tanlovda yangi AI uchun boshlash
 
-Snapshot: 2026-10-15; source fingerprint: `c92a788c7eee3d57`. Readable page: https://azizbeksafarov.github.io/design/si/
+Snapshot: 2026-10-15; source fingerprint: `74be970506f56f47`. Readable page: https://azizbeksafarov.github.io/design/si/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -20,9 +20,9 @@ Ishtirokchi bergan ma’lumot: Urgut → Samarqand viloyat bosqichi, 2026-yil 13
 
 ## 3. Tanlangan dizayn
 
-SI.gov vizual uslubidagi mustaqil Yuksal · SI: navy #0a103d, krem #f5f1dd, qizil #ff354f va moviy kursiv; mahalliy Instrument Serif/Sans; canvas SI zarrachalari, katta tahririy sarlavhalar, dumaloq menyu, yon nuqta navigatsiyasi va och kartalar. Rasmiy davlat xizmati emas.
+SI.gov vizual uslubidagi mustaqil Yuksal · SI: O‘zbekiston palitrasi: moviy #0099b5, oq #ffffff, yashil #1eb53a; to‘q teal #062c35 fon, moviy kursiv. #ce1126 faqat bayroqning ikki ingichka hoshiyasida; mahalliy Instrument Serif/Sans; canvas SI zarrachalari, katta tahririy sarlavhalar, dumaloq menyu, yon nuqta navigatsiyasi va och kartalar. Rasmiy davlat xizmati emas.
 
-Asosiy amallar: SI ↔ Super Intelligence · kursor va click fizikasi · scroll morph · spiral / shar / signal · filtr · shaxsiy reja. Mos sohalar: AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom/Qadam progressi, saqlash va temalar; Forma savati; Spark palitrasi shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
+Asosiy amallar: O‘zbekiston palitrasi · 12 yulduzli bayroq · SI ↔ Super Intelligence · kursor / click fizikasi · scroll morph · shaxsiy reja. Mos sohalar: AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom/Qadam progressi, saqlash va temalar; Forma savati; Spark palitrasi shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
 
 ## 4. Haqiqiy kodni olish
 
@@ -38,7 +38,7 @@ Source archive va matn bir snapshotdan yaratilgan. ZIPni ochgach `AGENTS.md`, `A
 ## 5. Fayl xaritasi va ishga tushirish
 
 - `index.html`: bo‘lim, kartalar, o‘zbekcha matn va dialoglar.
-- `style.css`: navy/krem/qizil dizayn va responsive holatlar.
+- `style.css`: O‘zbekiston moviy/oq/yashil palitrasi, to‘q teal sirtlar va responsive holatlar.
 - `app.js`: menyu, filtr, reja, yuklash va harakat sozlamalari.
 - `motion.js`: yagona persistent spring particle field; hover/tap morph, kursor, click to‘lqini va scroll shakllari.
 - `motion.test.mjs`: fizik barqarorlik, kursor, to‘lqin va harakatlanuvchi shakllar.
@@ -56,6 +56,7 @@ Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [motion.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.test.mjs.txt)
 - [model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.js.txt)
 - [model.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.test.mjs.txt)
+- [uzbekistan.svg](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/uzbekistan.svg.txt)
 
 Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas butun sahifaga fixed; 1800 desktop / 1500 mobile nuqta, DPR 2, requestAnimationFrame va delta-time spring. SI → Super Intelligence: desktop serpentine text, mobile rotating lettering circle. Pointer repulsion radius 120 px; click expanding wave; spring .045 va damping .84. Scroll shakllarni almashtiradi, zarracha identity/velocity saqlanadi. Hidden tab/pause’da to‘xtaydi; faqat hero offscreen bo‘lgani uchun to‘xtatma. `MOTION.md` ni o‘qi. OS reduced-motion va statik SI fallback saqlansin.
 
@@ -78,7 +79,7 @@ node --test model.test.mjs motion.test.mjs
 
 ## 7. Saqlanishi kerak bo‘lgan tuzatishlar
 
-Navy/krem sirtlar, aniq qizil CTA, serif-kursiv/sans farqi va outline holatlar saqlansin. Animatsiya matn/tugmani to‘smasin; mobilga majburiy scroll-snap qo‘shilmasin. Pause canvas hamda orbni to‘xtatsin. Plan faqat known unique IDlarni oladi; boshqa storage tozalanmaydi. Detail action footer va Escape/fokus qaytishi saqlansin. Hisob/eksport tanlangan yo‘nalishlarga mos bo‘lsin.
+O‘zbekiston palitrasi, moviy CTA, oq/yashil sirtlar, serif-kursiv/sans farqi va outline holatlar saqlansin. USA bayrog‘iga qaytarma: 3 tasma, 2 ingichka qizil hoshiya, oq yarim oy va 3/4/5 qatorda jami 12 yulduz. Bayroq harakatida ranglari tezlik sabab o‘zgarmasin. Animatsiya matn/tugmani to‘smasin; mobilga majburiy scroll-snap qo‘shilmasin. Pause canvas hamda orbni to‘xtatsin. Plan faqat known unique IDlarni oladi; boshqa storage tozalanmaydi. Detail action footer va Escape/fokus qaytishi saqlansin. Hisob/eksport tanlangan yo‘nalishlarga mos bo‘lsin.
 
 ## 8. Qabul sinovlari
 

@@ -12,7 +12,7 @@
 - [Spark](https://azizbeksafarov.github.io/design/spark/) — /design/spark/; Space Grotesk va DM Sans. Laym, moviy va pushti aksentlar; katta tipografika va jonli rang tanlash.
 - [Open City](https://azizbeksafarov.github.io/design/city/) — /design/city/; JetBrains Mono va DM Sans. Tiniq to‘q sariq, oq va yashil; texnik xarakterli, tartibli xizmat katalogi.
 - [Bloom · Material Design 3](https://azizbeksafarov.github.io/design/bloom/) — /design/bloom/; Rasmiy Material Web komponentlari, Material Symbols va dinamik rang tizimi. Ishlaydigan loyiha maydoni.
-- [Yuksal · SI](https://azizbeksafarov.github.io/design/si/) — /design/si/; To‘q ko‘k fon, nafis serif, kursiv aksentlar va harakatlanuvchi qizil zarrachalar. SI.gov vizual uslubidan ilhomlangan mustaqil portal.
+- [Yuksal · SI](https://azizbeksafarov.github.io/design/si/) — /design/si/; O‘zbekistonning moviy, oq va yashil ranglari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, nafis serif va jonli shakl almashishi.
 
 - [Qisqa tanlov konteksti](https://azizbeksafarov.github.io/design/handoff/competition.md)
 - [Barcha yig‘ilgan tanlov ma’lumoti](https://azizbeksafarov.github.io/ustoz/ai.md)

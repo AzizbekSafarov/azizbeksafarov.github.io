@@ -1,4 +1,4 @@
-import {ParticleField} from './motion.js';
+import {ParticleField} from './motion.js?v=3';
 import {initiatives,validPlan,togglePlan,planText} from './model.js';
 
 const $=selector=>document.querySelector(selector);

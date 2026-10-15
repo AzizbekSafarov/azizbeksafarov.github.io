@@ -217,10 +217,10 @@
       "name": "Yuksal · SI",
       "file": "si-site/index.html",
       "category": "SI.gov / kinematik portal",
-      "color": "#ff354f",
-      "background": "#0a103d",
-      "summary": "To‘q ko‘k fon, nafis serif, kursiv aksentlar va harakatlanuvchi qizil zarrachalar. SI.gov vizual uslubidan ilhomlangan mustaqil portal.",
-      "features": "SI ↔ Super Intelligence · kursor va click fizikasi · scroll morph · spiral / shar / signal · filtr · shaxsiy reja",
+      "color": "#0099b5",
+      "background": "#062c35",
+      "summary": "O‘zbekistonning moviy, oq va yashil ranglari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, nafis serif va jonli shakl almashishi.",
+      "features": "O‘zbekiston palitrasi · 12 yulduzli bayroq · SI ↔ Super Intelligence · kursor / click fizikasi · scroll morph · shaxsiy reja",
       "use": "AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari",
       "fonts": [
         "instrument-sans",
@@ -233,8 +233,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/si/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/si/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/si/manifest.json",
-      "source_fingerprint": "c92a788c7eee3d5714266bc4a706ad9596f5dba2ad403c6b094145c6aeaf9498",
-      "archive_bytes": 155113
+      "source_fingerprint": "74be970506f56f47a68cc8d8a2a9fc9238ee3bf7bbfa4203f03495ff3356acda",
+      "archive_bytes": 158398
     }
   ]
 }

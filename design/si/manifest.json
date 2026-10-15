@@ -1,45 +1,45 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-15",
-  "source_fingerprint": "c92a788c7eee3d5714266bc4a706ad9596f5dba2ad403c6b094145c6aeaf9498",
+  "source_fingerprint": "74be970506f56f47a68cc8d8a2a9fc9238ee3bf7bbfa4203f03495ff3356acda",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "10588bb8c4410595b850040ab4b1e679bfaf6e55edfd779b86a5a3f4c231a638",
-  "archive_bytes": 155113,
+  "archive_sha256": "9ec42fd8be6a05ece2e8f2e675ff00cbe03a4ef00ce6e544ee89f53a14893901",
+  "archive_bytes": 158398,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "b3a50f7bdb83fbab4d1c674ca64c5158ad0456921ba341973cb2e696781555af",
+      "sha256": "d24f737c16c224c43987dc692abfa27913ec6ebf954542d2b5e848f8f0bdd0f5",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/si/files/style.css.txt",
-      "sha256": "9469729973a4621461503a14f83958927bbadf1e8e026ccf67022b7ec456f4c5",
+      "sha256": "2c5326fcf288be05d1cf6200aa3b99e963c54b5358e38fea41f6501a6cfa9ce9",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt"
     },
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/app.js.txt",
-      "sha256": "47a8d24428a29490d664dc929081b6cd2f78c102d12b73251a9e1b45b53d97ba",
+      "sha256": "3e16e33d96528d62c8120f94114c2a776a9eafa70fd5c9421218f1643d61a637",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/app.js.txt"
     },
     {
       "path": "motion.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/motion.js.txt",
-      "sha256": "67d417294da40c5af26a67d768e44f1e5691478cdbaa32bb23dd375317c42c89",
+      "sha256": "80606658effce755831ef835b50ed2e610f51566fb1a6cf6c4ba5ebc1c7e7be9",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.js.txt"
     },
     {
       "path": "motion.test.mjs",
       "url": "https://azizbeksafarov.github.io/design/si/files/motion.test.mjs.txt",
-      "sha256": "2063bb91dd3a1186dcab267622538b635bfd5a7af629940cd0e9b52836bf6f71",
+      "sha256": "2ba5b8ed6a449a018b0fca64f68da4a31cb4e0470809f6626b5e0aaa3f76112d",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.test.mjs.txt"
     },
     {
@@ -53,18 +53,24 @@
       "url": "https://azizbeksafarov.github.io/design/si/files/model.test.mjs.txt",
       "sha256": "77de79a2ee9357d8a8be253a80260588470a89678daba0ae3c0d5faf6f9c4763",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.test.mjs.txt"
+    },
+    {
+      "path": "uzbekistan.svg",
+      "url": "https://azizbeksafarov.github.io/design/si/files/uzbekistan.svg.txt",
+      "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/uzbekistan.svg.txt"
     }
   ],
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2289,
-      "sha256": "0a6e8040b0190afc3e865e61d1c8ea97c64adadef10992d1806f61ac052ba8c9"
+      "bytes": 2389,
+      "sha256": "0b9844b6fc85701fd71b9b9bdb4358de7803c63c13e4a9128263715b33bbf197"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 10139,
-      "sha256": "fa8c59ec9f15c2873851647dc5e012d62a6422357fb3ba578cb2e24a88b6e4fb"
+      "bytes": 10606,
+      "sha256": "3726036913ad05d49dbeb158bb52ab20b8a3ec2d2d53678901d68dc31a6ac9fa"
     },
     {
       "path": "CHECKLIST.md",
@@ -94,17 +100,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1072,
-      "sha256": "755ba9335b3c62f96b2fb2d501ee8e941331331bbcb0115dff4055217caf0690"
+      "sha256": "982f1b9d6f60dbf9f68d554cce5fed0c9d0ab59a47731e7142ea40195e6047c5"
     },
     {
       "path": "README.md",
-      "bytes": 2768,
-      "sha256": "80320937b3d0f3b4238a64e9470629190f09bc1381b015424f0341d49c425efe"
+      "bytes": 3039,
+      "sha256": "92a25f480b3c56644b85370631b00f91b22e9fa071b73097a3209287134d6947"
     },
     {
       "path": "kit.json",
       "bytes": 208,
-      "sha256": "adcc6983104e30bedac5c23e496b25034589a345b6c18bfc1767e5cf24279775"
+      "sha256": "f7b501cd8b41480b02159127df6fa96f9afad8b57a30706aead537a9d79496cf"
     },
     {
       "path": "serve.mjs",
@@ -113,23 +119,23 @@
     },
     {
       "path": "site/MOTION.md",
-      "bytes": 3167,
-      "sha256": "04a37415346be0944d7ff00a2735678465ad158b85832a321d6bacfed657b309"
+      "bytes": 3920,
+      "sha256": "ee1d22bc67b155dfcd0c2a251601ce258b9afba4050fa03fee36f846db4a3605"
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 2600,
-      "sha256": "365c02c7de258ca41a83583a4ffea7f4c25ad9da654323024d24687086acd583"
+      "bytes": 3348,
+      "sha256": "280905b325cb35766c26a2ccdfc995309dbe0a35d5331e56cc83da793b6b8ccc"
     },
     {
       "path": "site/README.md",
-      "bytes": 2501,
-      "sha256": "28069907cbdf448762301701a8011b051b1341053a1fd13844567d1958516ef2"
+      "bytes": 2772,
+      "sha256": "8bb43db2029977f00b9d51519d84245e9a3e1b792eea53fe72182a67c0f33439"
     },
     {
       "path": "site/app.js",
-      "bytes": 6775,
-      "sha256": "47a8d24428a29490d664dc929081b6cd2f78c102d12b73251a9e1b45b53d97ba"
+      "bytes": 6779,
+      "sha256": "3e16e33d96528d62c8120f94114c2a776a9eafa70fd5c9421218f1643d61a637"
     },
     {
       "path": "site/download_fonts.py",
@@ -183,13 +189,13 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 13440,
-      "sha256": "b3a50f7bdb83fbab4d1c674ca64c5158ad0456921ba341973cb2e696781555af"
+      "bytes": 13562,
+      "sha256": "d24f737c16c224c43987dc692abfa27913ec6ebf954542d2b5e848f8f0bdd0f5"
     },
     {
       "path": "site/mark.svg",
-      "bytes": 206,
-      "sha256": "2ee17870b9f142d5b843496907ba2dccbd2443a33f1ee3a00495e1b5fd4ef478"
+      "bytes": 998,
+      "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35"
     },
     {
       "path": "site/model.js",
@@ -203,13 +209,13 @@
     },
     {
       "path": "site/motion.js",
-      "bytes": 13916,
-      "sha256": "67d417294da40c5af26a67d768e44f1e5691478cdbaa32bb23dd375317c42c89"
+      "bytes": 15558,
+      "sha256": "80606658effce755831ef835b50ed2e610f51566fb1a6cf6c4ba5ebc1c7e7be9"
     },
     {
       "path": "site/motion.test.mjs",
-      "bytes": 1701,
-      "sha256": "2063bb91dd3a1186dcab267622538b635bfd5a7af629940cd0e9b52836bf6f71"
+      "bytes": 2849,
+      "sha256": "2ba5b8ed6a449a018b0fca64f68da4a31cb4e0470809f6626b5e0aaa3f76112d"
     },
     {
       "path": "site/package.json",
@@ -218,13 +224,18 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 25587,
-      "sha256": "9469729973a4621461503a14f83958927bbadf1e8e026ccf67022b7ec456f4c5"
+      "bytes": 26411,
+      "sha256": "2c5326fcf288be05d1cf6200aa3b99e963c54b5358e38fea41f6501a6cfa9ce9"
     },
     {
       "path": "site/template.json",
-      "bytes": 639,
-      "sha256": "362901fa74474564ec53a036dd8b88ce849c3fa44f6d73d437a8f4f92da586a3"
+      "bytes": 669,
+      "sha256": "02f972f9d7194477405dbe981c811b715d28308370753a77be84a9dd1f47bb08"
+    },
+    {
+      "path": "site/uzbekistan.svg",
+      "bytes": 998,
+      "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/si-site/QA-REPORT.md",
