@@ -46,3 +46,12 @@ Reproduced three failures before changing the implementation: phone design choic
 
 Layout reference: https://m3.material.io/foundations/layout/canonical-examples/overview
 Form labels and feedback reference: https://www.w3.org/WAI/tutorials/forms/labels/
+
+## Root shape language — 2026-10-15
+
+User clarified that the repeated geometry concerned the .io root, not the demonstration sites. Retained the palette, font family and task layout. Replaced boxed search, filled filter chips, rounded row cards, equal button containers and mock browser chrome with distinct shapes for each role. The asymmetric preview backplate is separate from its unmasked screenshot. Its caption now identifies a site view rather than implying an embedded live page.
+
+- Current 15-case responsive check: list, detail and empty result at 1400/1024/768/390/320. Overflow and broken populated images were 0 throughout; see QA-HQ-SHAPES.json.
+- Phone actions measure 52px high. Savdo filter → Forma → starter preserves Forma. Existing six library model tests pass.
+- Independent desktop/mobile screenshot critique confirmed visible geometry changes, differentiated actions and no blocking collisions/readability problems.
+- Role distinction follows Carbon's continuity/contrast guidance: https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/guidelines

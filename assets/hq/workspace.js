@@ -20,7 +20,7 @@ if(payload){
   $('#selected-use').textContent=item.use;$('#selected-features').textContent=item.features;
   $('#selected-image').src=item.image;$('#selected-image').alt=item.name+' sahifasining ko‘rinishi';
   for(const id of ['selected-demo','preview-link','preview-expand'])$('#'+id).href=item.demo;
-  $('#preview-link').setAttribute('aria-label',item.name+' saytini ochish');$('#preview-address').textContent=item.name+' · Jonli namuna';
+  $('#preview-link').setAttribute('aria-label',item.name+' saytini ochish');$('#preview-address').textContent=item.name+' · Sayt ko‘rinishi';
   $('#selected-context').href=item.context;$('#selected-download').href=item.zip;$('#selected-size').textContent=item.size+' KB';
   document.querySelectorAll('a[href^="/design/start/"]').forEach(a=>{a.href='/design/start/?design='+encodeURIComponent(item.slug);});
   $('#download-status').textContent='';

@@ -15,6 +15,8 @@ Telefonda avval namunalar ro‘yxati, tanlangach alohida tafsilot ochiladi. URLd
 
 HQ: `design/workspace_hq.py`, `assets/hq/workspace.css`, `workspace.js`, `library-model.mjs`. `design/hq_v2.py` yordamchi sahifa mazmunini va markaziy kontekstni hosil qiladi; yakuniy HTMLni workspace generatori yozadi. Barcha shriftlar lokal.
 
+Bosh sahifaning shakl tizimi `assets/hq/geometry.css`da, faqat `body[data-page="library"]`ga qo‘llanadi: ochiq qidiruv chizig‘i, tagchiziqli tablar, yon belgili namuna qatorlari, alohida asosiy/ikkinchi amal shakllari va asimmetrik namuna foni. Rasmlar maska bilan kesilmaydi. Ranglar va shrift oilasi workspace.cssdan olinadi.
+
 ```text
 python design/build_hq.py
 node --test assets/hq/library-model.test.mjs

@@ -1,0 +1,92 @@
+[
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?view=list",
+    "width": 1400
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?design=bloom",
+    "width": 1400
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?q=zzznothing",
+    "width": 1400
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?view=list",
+    "width": 1024
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?design=bloom",
+    "width": 1024
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?q=zzznothing",
+    "width": 1024
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?view=list",
+    "width": 768
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?design=bloom",
+    "width": 768
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?q=zzznothing",
+    "width": 768
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?view=list",
+    "width": 390
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?design=bloom",
+    "width": 390
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?q=zzznothing",
+    "width": 390
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?view=list",
+    "width": 320
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?design=bloom",
+    "width": 320
+  },
+  {
+    "broken": 0,
+    "overflow": 0,
+    "path": "/?q=zzznothing",
+    "width": 320
+  }
+]
