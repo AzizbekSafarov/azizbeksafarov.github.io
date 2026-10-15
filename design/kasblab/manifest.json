@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/kasblab/",
   "ai_url": "https://azizbeksafarov.github.io/design/kasblab/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/kasblab/source.zip",
-  "archive_sha256": "6f820bb6e04e1d5ec8de920c2af3c9f32f8ccb923f519ecbed7a571b2059fd12",
-  "archive_bytes": 389708,
+  "archive_sha256": "a25b97e24a9ce916b3f50961be1e486a6009e207e83444386e53d5e697573e7a",
+  "archive_bytes": 392455,
   "entry": "01-kasblab.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -34,13 +34,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2106,
-      "sha256": "2723c7b675ffbb9c0852848e7eaaf11973b304093ffc4b2c4a0ead52cca36d74"
+      "bytes": 2251,
+      "sha256": "9562010458009508c7cbcf305d5ba8b7d9bb379fba028968da4d626268b421a4"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8610,
-      "sha256": "c2c108eda589610813360845d6aceeef495f5d673a8e9bded0c56ef063a258cc"
+      "bytes": 8724,
+      "sha256": "d9f49ee5dd2229ad26a401203fa0843e8df5d9f02270099c71d437b7f60e6eb1"
     },
     {
       "path": "CHECKLIST.md",
@@ -61,6 +61,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 317,
       "sha256": "de8e81bb4a35ea939a7a70aaab9ff8ede864b06860f8db251eb3d8e918186a81"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

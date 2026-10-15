@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "72e8182adc81e2c64992878f050569a6584348ddd6f804f480396ec57e3cf38f",
-  "archive_bytes": 389736,
+  "archive_sha256": "374fbdf937c9863f4684cb8dd4379e3a2ed282cde5e35f17fac9cc3b4c90fbd8",
+  "archive_bytes": 392485,
   "entry": "04-forma.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -34,13 +34,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2111,
-      "sha256": "b4970939c64b01220b1be2d21c4493d36b30bddce2dd4cd1806df67479578a09"
+      "bytes": 2256,
+      "sha256": "1a51366c7c57ac7dc8beef4b7c57781d4a81ec5ab442609325042efcd0864fea"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8611,
-      "sha256": "9554917952273159fd70f49b64e11d173c37d30e9deee6cc5c656c8dac2e697a"
+      "bytes": 8725,
+      "sha256": "da2056eadeef27d0796b93f53e474837abb5fd788579cd9e8a9233497e1dd4ec"
     },
     {
       "path": "CHECKLIST.md",
@@ -61,6 +61,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 315,
       "sha256": "6aef27412f9f75877094e02a02deb74ca3d168f5504cd4647db36bc84ac4990e"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

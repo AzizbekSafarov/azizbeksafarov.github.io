@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/pulse/",
   "ai_url": "https://azizbeksafarov.github.io/design/pulse/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/pulse/source.zip",
-  "archive_sha256": "1bd2cc732e047e987ae4ce61071489a9a018d56061d1df6d6f5ffadf3b8960cc",
-  "archive_bytes": 389760,
+  "archive_sha256": "d48264a3e752271b0ca6902aa83570851f508efcc12d5ddd4862c45ee51f8b07",
+  "archive_bytes": 392506,
   "entry": "05-pulseboard.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -34,13 +34,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2116,
-      "sha256": "6a9eaa829e743b74d956b2cc584ef7d8e679c9e61007f634a863698614d42525"
+      "bytes": 2261,
+      "sha256": "cbc0e8568c43e3d80ef0d45b3d1f896f6e1057161fda9004071db11e14c89125"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8645,
-      "sha256": "1482627f6d2aa26a6c548c566aca8b51a1425cf5c2675e00fa10a5b8c45b80dc"
+      "bytes": 8759,
+      "sha256": "34b4df77384fda86d6f3b8fab3b5db62ea917424963111d397202a2c501ed37d"
     },
     {
       "path": "CHECKLIST.md",
@@ -61,6 +61,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 320,
       "sha256": "a7a7157f2d8d74938c186b67b39a88b603482473e67282bec0107b0a64f0f727"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

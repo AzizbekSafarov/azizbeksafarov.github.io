@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "ed6d5c61cc928ac2eeca89f99d96c3d9d757a2beab03bc8466bca544fec7104e",
-  "archive_bytes": 963350,
+  "archive_sha256": "b83b991e4fa776b69e3fa15d9efb599beab3460cf16360d2b66545d255bb8127",
+  "archive_bytes": 966047,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -58,8 +58,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2249,
-      "sha256": "dbd738bd838e8080ee341309f2defa37c220119836c66a83d23183e5cfb0feb2"
+      "bytes": 2394,
+      "sha256": "b2c7065e7f9215124b4fb2b43ce98cf7016b6cfbe08ac3dde0c64b6d0f3fca02"
     },
     {
       "path": "AI-BRIEF.md",
@@ -85,6 +85,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 336,
       "sha256": "e7c2338dd0e352eb0105ed0621b27ac81053cd0582ae98dd6a834f4f24174ff0"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

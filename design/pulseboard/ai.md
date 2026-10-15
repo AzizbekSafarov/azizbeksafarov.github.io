@@ -1,3 +1,7 @@
+# TARIXIY ARXIV — faol starter sifatida tavsiya etilmaydi
+
+Yangi ish: https://azizbeksafarov.github.io/design/
+
 # Pulseboard — tanlovda yangi AI uchun boshlash
 
 Snapshot: 2026-10-15; source fingerprint: `87b40c0d4e072778`. Readable page: https://azizbeksafarov.github.io/design/pulse/

@@ -281,7 +281,8 @@ def source_files(t,templates):
                 if path.is_file():files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
     else:
         for name in [x['file'] for x in templates if x['id'] not in ('10','11')]+['shared.css','shared.js','extra.js','lesson-model.js','verify-lesson-model.cjs','build_templates.py','extra_templates.py','QA-REPORT.md','DESIGN-NOTES.md','QADAM-REFINEMENT.md']:
-            files['site/'+name]=(ROOT/name).read_bytes()
+            archived=ROOT/'archive/legacy'/(name+'.txt')
+            files['site/'+name]=(archived if archived.exists() else ROOT/name).read_bytes()
         for folder in ['src','assets/fonts']:
             for path in sorted((ROOT/folder).rglob('*')):
                 if path.is_file():files['site/'+path.relative_to(ROOT).as_posix()]=path.read_bytes()
@@ -293,7 +294,8 @@ def code_names(t,files):
     if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','uzbekistan.svg','brand-icon.svg']
     else:
         names=[t['file'],'shared.css','shared.js']
-        html=files['site/'+t['file']].decode('utf-8-sig') if files else read(ROOT/t['file'])
+        archived=ROOT/'archive/legacy'/(t['file']+'.txt')
+        html=files['site/'+t['file']].decode('utf-8-sig') if files else read(archived if archived.exists() else ROOT/t['file'])
         names += [x for x in ['extra.js','lesson-model.js'] if f'src="{x}"' in html]
         return names
 
@@ -307,10 +309,11 @@ def code_text(t,files):
 
 def page_shell(title,content,css='../handoff/styles.css',description='Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi',extra=''):
     css += '?v='+digest((ROOT/'handoff/styles.css').read_bytes())[:12]
-    return f'<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{escape(description)}"><title>{escape(title)}</title><link rel="stylesheet" href="{css}">{extra}</head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="../start/">← AI boshlash markazi</a><a href="../">Barcha jonli dizaynlar</a></nav></header><main id="main" class="wrap">{content}</main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · {DATE}</div></footer></body></html>'
+    return f'<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{escape(description)}"><title>{escape(title)}</title><link rel="icon" href="/assets/hq/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="{css}">{extra}</head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="/">← Bosh qarorgoh</a><a href="/design/start/">AI bilan boshlash</a><a href="/design/">Tanlangan dizaynlar</a></nav></header><main id="main" class="wrap">{content}</main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · {DATE}</div></footer></body></html>'
 
 def template_page(t,brief):
     image=t.get('preview',f"previews/{t['id']}.png")
+    image+='?v='+digest((ROOT/image).read_bytes())[:10]
     name=escape(t['name']);url=f"{SITE}/design/{t['slug']}/"
     config=json.dumps({'name':t['name'],'url':url,'raw_url':f'{RAW}/design/{t["slug"]}/ai.md'},ensure_ascii=False).replace('<','\\u003c')
     content=f'''<section class="hero"><div><p class="eyebrow">TANLOV / YANGI AI UCHUN TAYYOR</p><h1>{name}</h1><p class="lead">{escape(t['summary'])}</p><p class="address">/design/{t['slug']}/</p><div class="actions"><a class="button" href="../{escape(t['file'])}">Jonli namunani ochish ↗</a><a href="source.zip" download>Kod paketini olish ↓</a></div><div class="resource-links"><a href="ai.md">AI uchun qisqa matn</a><a href="source.html">Kodni o‘qish</a><a href="manifest.json">Paket tarkibi</a></div><p class="small">Uslub: {escape(t['look'])}</p></div><figure class="preview"><a href="../{escape(t['file'])}" aria-label="{name} jonli namunasini ochish"><img src="../{escape(image)}" alt="{name} dizaynining ko‘rinishi"></a><figcaption>Jonli demo alohida ochiladi. AI konteksti ushbu sahifada JavaScript ishlamasdan ham mavjud.</figcaption></figure></section>
@@ -320,30 +323,12 @@ def template_page(t,brief):
 <details><summary>Tanlov konteksti va manbalar maqomi</summary><article class="content">{render_md(read(ROOT/'handoff/competition.md'))}</article></details>
 <section class="panel"><h2>Keyingi AI bilan davom ettirish</h2><p>ZIP ichidagi <code>CURRENT-TASK.md</code> ga bilet va vaqtni, <code>HANDOFF.md</code> ga bajarilgan ish, haqiqiy sinov va keyingi amalni yozdiring. Sessiya almashsa, shu ikki faylni yangi AIga bering.</p><div class="actions"><a href="../kit.zip" download>Barcha 10 dizayn + tanlov matnlari ↓</a><a href="../handoff/competition.md">Qisqa tanlov konteksti</a></div></section>
 <script type="application/json" id="prompt-config">{config}</script><script src="../handoff/prompt.js" defer></script>'''
-    content=content.replace('Barcha 10 dizayn',f'Barcha {len(SLUGS)} dizayn')
+    content=content.replace('Barcha 10 dizayn','Tanlangan 2 dizayn')
+    if t.get('archived'):
+        content='<aside class="quiet"><strong>Tarixiy arxiv.</strong> Bu variant faol tavsiyadan chiqarilgan. '+escape(t['archived'])+' <a href="/design/">Bloom yoki Yuksalni tanlang →</a></aside>'+content
     content=content.replace('<script src="../handoff/prompt.js" defer></script>',f'<script src="../handoff/prompt.js?v={digest((ROOT/"handoff/prompt.js").read_bytes())[:12]}" defer></script>',1)
     content=content.replace('<a href="ai.md">AI uchun qisqa matn</a>',f'<a href="ai.md">AI uchun qisqa matn</a><a href="{RAW}/design/{t["slug"]}/ai.md">AI o‘qiy olmasa: GitHub matni</a>',1)
     return page_shell(t['name']+' — tanlov uchun AI paketi',content,extra=f'<link rel="canonical" href="{url}"><link rel="alternate" type="text/markdown" href="ai.md" title="AI brief">')
-
-def decorate_gallery(templates):
-    path=ROOT/'index.html';html=read(path)
-    if '/* AI handoff links */' not in html:
-        html=html.replace('</style>','/* AI handoff links */.ai-link{display:inline-flex;align-items:center;min-height:44px;color:#245de4;text-decoration:underline;text-underline-offset:4px;font-size:14px;margin-top:12px}.handoff-intro{display:block;margin-top:12px;font-size:14px;font-weight:650}</style>',1)
-    for t in templates:
-        needle=f'<a class="button" href="{t["file"]}">Jonli namunani ochish <span aria-hidden="true">↗</span></a>'
-        if needle not in html:
-            card=f'<article class="template"><a class="preview" href="{escape(t["file"])}" aria-label="{escape(t["id"]+" "+t["name"])} namunasini ochish"><img src="{escape(t.get("preview","previews/"+t["id"]+".png"))}" alt="{escape(t["name"])} dizaynining ko‘rinishi"><span class="preview-number">{escape(t["id"]+" / "+t["category"])}</span></a><div class="content"><span class="category">VARIANT {escape(t["id"])}</span><h2>{escape(t["name"])}</h2><p>{escape(t["summary"])}</p><div class="feature">{escape(t["features"])}</div><div class="use">Mos mavzular: {escape(t["use"])}</div>{needle}</div></article>'
-            html=html.replace('</section></main>',card+'</section></main>',1)
-        addition=f'<a class="ai-link" href="{t["slug"]}/">AI bilan moslashtirish →</a>'
-        if addition not in html:
-            if needle not in html:raise ValueError('Missing gallery entry '+t['id'])
-            html=html.replace(needle,needle+addition,1)
-    intro='<a class="handoff-intro" href="start/">Tanlovda yangi AI bilan ishlash: qisqa havolalar va kod paketlari →</a>'
-    if intro not in html:html=html.replace('</div></section><section class="grid"',intro+'</div></section><section class="grid"',1)
-    html=re.sub(r'Mahalliy namuna · \d+ yo‘nalish',f'Mahalliy namuna · {len(templates)} yo‘nalish',html)
-    html=re.sub(r'\d+ xil dizayn, turli',f'{len(templates)} xil dizayn, turli',html)
-    html=re.sub(r'\d+ ta jonli namuna',f'{len(templates)} ta jonli namuna',html)
-    write(path,html)
 
 def alias(path,t):
     url=f'{SITE}/design/{t["slug"]}/'
@@ -353,13 +338,15 @@ def alias(path,t):
 
 def build():
     templates=json.loads(read(ROOT/'templates.json'))
+    policy=json.loads(read(ROOT/'curation.json'))
     if {t['id'] for t in templates}!=set(SLUGS):raise ValueError('Template metadata and SLUGS must agree')
     archives={};catalog=[]
     for original in templates:
-        t={**original,'slug':SLUGS[original['id']],'look':LOOKS[original['id']],'flows':FLOWS[original['id']]}
+        t={**original,'slug':SLUGS[original['id']],'look':LOOKS[original['id']],'flows':FLOWS[original['id']],'archived':policy['archived'].get(original['id'])}
         files=source_files(t,templates)
         t['fingerprint']=digest(''.join(path+':'+digest(data)+'\n' for path,data in sorted(files.items())).encode())
         brief=ai_brief(t);folder=ROOT/t['slug']
+        if t['archived']:brief='# TARIXIY ARXIV — faol starter sifatida tavsiya etilmaydi\n\nYangi ish: '+SITE+'/design/\n\n'+brief
         for name in code_names(t,files):
             target=folder/'files'/f'{name}.txt';target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(files['site/'+name])
         write(folder/'ai.md',brief);write(folder/'source.md',code_text(t,files))
@@ -398,6 +385,8 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         extras={'README.md':intro,'AGENTS.md':rules(t),'CLAUDE.md':'# Project context\n\nRead AGENTS.md in this directory, then AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before editing. User task and actual competition rules take priority. Communicate in Uzbek.\n','AI-BRIEF.md':brief,'CURRENT-TASK.md':current,'HANDOFF.md':handoff(t),'CHECKLIST.md':checklist(t),'COMPETITION.md':read(ROOT/'handoff/competition.md'),'kit.json':json.dumps(kit,ensure_ascii=False,indent=2),'serve.mjs':read(ROOT/'handoff/serve.mjs')}
         if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node --test site/model.test.mjs site/motion.test.mjs`. Read AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before adapting.\n'
         extras['GEMINI.md']=extras['CLAUDE.md']
+        extras['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md')
+        extras['AGENTS.md']+='\nRead DESIGN-STANDARD.md for the quality bar. Do not reproduce generic blocks, invented proof or decorative interactions that displace the task.\n'
         files.update({k:v.encode() for k,v in extras.items()})
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
         manifest={'schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
@@ -411,13 +400,14 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     for slug,target in [('pulseboard','pulse'),('open-city','city')]:alias(ROOT/slug,{'slug':target,'name':target,'summary':'Tanlov uchun dizayn va AI yo‘riqnomasi'})
     alias(ROOT.parent/'bloom',{'slug':'bloom','name':'Bloom','summary':'Material Design 3: tanlov uchun AI konteksti va kod'})
     write(ROOT.parent/'dezayn/index.html','<!doctype html><html lang="uz"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/design/start/"><title>Dizaynlar</title><h1>Dizaynlar</h1><a href="/design/start/">Barcha dizayn va AI paketlari</a></html>')
-    write(ROOT/'catalog.json',json.dumps({'schema_version':1,'snapshot_date':DATE,'templates':catalog},ensure_ascii=False,indent=2)+'\n')
+    archived=[{**t,'status':'archived','reason':policy['archived'][t['id']]} for t in catalog if t['id'] in policy['archived']]
+    write(ROOT/'archive/catalog.json',json.dumps({'schema_version':2,'snapshot_date':DATE,'templates':archived},ensure_ascii=False,indent=2)+'\n')
+    catalog=[next({**t,'status':'featured'} for t in catalog if t['id']==id) for id in policy['featured']]
+    archives={name:data for name,data in archives.items() if name.split('/')[0] in {t['slug'] for t in catalog}}
+    write(ROOT/'catalog.json',json.dumps({'schema_version':2,'snapshot_date':DATE,'templates':catalog},ensure_ascii=False,indent=2)+'\n')
     links='\n'.join(f"- [{t['name']}]({t['context_url']}) — /design/{t['slug']}/; {t['summary']}" for t in catalog)
-    root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Avval tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi; barcha {len(SLUGS)} manbani birga kontekstga yuklama. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Barcha {len(SLUGS)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable katalog]({SITE}/design/catalog.json)\n\nFoydalanuvchi bilet, vaqt va joydagi talabni beradi. AI shu dizayn uslubini saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link internet/fayl/brauzer vositalari bo‘lgan AI uchun boshlash nuqtasi; doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
+    root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Faol dizaynlar: {len(catalog)}. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Markaziy kontekst]({SITE}/ai.md)\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n\nOldingi 01–09 variantlar tarixiy arxiv. Ularni faol starter deb tavsiya etma. Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
     write(ROOT/'ai.md',root_brief)
-    cards=''.join(f'<article class="card"><p class="eyebrow">{escape(t["category"])}</p><h2>{escape(t["name"])}</h2><p>{escape(t["summary"])}</p><p><code>/design/{t["slug"]}/</code></p><div class="actions"><a class="button secondary" href="../{t["slug"]}/">AI bilan boshlash →</a><a href="../{t["file"]}">Jonli namuna ↗</a></div></article>' for t in catalog)
-    start=f'<p class="eyebrow">USTOZ AI / TANLOV UCHUN</p><h1>Yangi AI. Tayyor boshlash nuqtasi.</h1><p class="lead">Dizaynni tanlang, bilet va vaqtni yozing, tayyor matnni yangi AIga yuboring. Har bir paketda haqiqiy kod, oldingi tuzatishlar va davom ettirish fayllari bor.</p><div class="actions"><a class="button" href="../bloom/">Bloom bilan boshlash →</a><a href="../kit.zip" download>Barcha dizayn va kontekstni olish ↓</a><a href="../ai.md">AI uchun katalog</a></div><p class="quiet">Tanlov kuni berilgan bilet va reglament ustuvor. Yangi AI saytni o‘qiy olmasa, qisqa matnni nusxalang yoki kod ZIPini bering.</p><section class="grid" aria-label="AI uchun dizayn paketlari">{cards}</section><details><summary>AI ishni qanday davom ettiradi?</summary><article class="content">{render_md(root_brief)}</article></details>'
-    write(ROOT/'start/index.html',page_shell('Tanlov — AI boshlash markazi',start))
     archives['START-HERE.md']=root_brief.encode();archives['COMPETITION.md']=read(ROOT/'handoff/competition.md').encode()
     full=ROOT/'handoff/competition-full.md'
     if full.exists():archives['competition/FULL-CONTEXT.md']=portable_bytes('competition/FULL-CONTEXT.md',full.read_bytes())
@@ -428,8 +418,9 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     archive_links=''.join(f'<li><strong>{escape(t["name"])}</strong> — <a href="{t["slug"]}/ai.md">AI matni</a> · <a href="{t["slug"]}/source.zip">Kod ZIP</a></li>' for t in catalog)
     archives['index.html']=('<!doctype html><html lang="uz"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tanlov starterlari — offline</title><body style="font:17px/1.7 system-ui;max-width:900px;margin:30px auto;padding:20px"><h1>Tanlov starterlari</h1><p>Tanlangan kod ZIPini alohida papkaga oching. AIga AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md va HANDOFF.md ni o‘qiting. ZIP ildizida <code>node serve.mjs</code> tayyor namunani ochadi.</p><ul>'+archive_links+'</ul><p><a href="COMPETITION.md">Qisqa tanlov konteksti</a> · <a href="competition/FULL-CONTEXT.md">Barcha yig‘ilgan tanlov matnlari</a></p><p>Yakuniy bilet va reglament ustuvor. Runtime preview npm o‘rnatmasdan ishlaydi; Bloom source buildi uchun o‘rnatilgan/cache’dagi paketlar yoki internet kerak.</p></body></html>').encode()
     (ROOT/'kit.zip').write_bytes(zip_bytes(archives))
-    write(ROOT.parent/'llms.txt',f'# Azizbek Safarov: Ustoz AI competition and design starters\n\n- [Choose a design]({SITE}/design/ai.md): {len(SLUGS)} short routes; load only the selected design.\n- [Bloom M3 starter]({SITE}/design/bloom/ai.md): context, editable source, visual contract, checks and handoff.\n- [Competition brief]({SITE}/design/handoff/competition.md): dated evidence and uncertain rules.\n- [Full research]({SITE}/ustoz/ai.md): collected local and official-web information.\n\nThe user’s actual ticket and current instructions take priority. These are preparation resources, not an automatic agent or a guarantee of correctness.\n')
-    decorate_gallery(catalog)
-    print(f'Built {len(catalog)} AI routes, source archives and offline kit ({(ROOT/"kit.zip").stat().st_size:,} bytes).')
+    write(ROOT.parent/'llms.txt',f'# Azizbek Safarov: open competition headquarters\n\n- [Start here]({SITE}/ai.md): central context and two curated designs.\n- [Yuksal starter]({SITE}/design/si/ai.md): editorial motion website.\n- [Bloom M3 starter]({SITE}/design/bloom/ai.md): functional project workspace.\n- [Competition brief]({SITE}/design/handoff/competition.md): dated evidence and uncertain rules.\n- [Full research]({SITE}/ustoz/ai.md): collected local and official-web information.\n- [Quality standard]({SITE}/design/DESIGN-STANDARD.md).\n\nTemplates 01–09 are archived, not supported recommendations. The user’s actual ticket and current instructions take priority. These resources do not guarantee autonomous execution or correctness.\n')
+    from build_hq import build as build_hq
+    build_hq(catalog)
+    print(f'Built {len(catalog)} featured + {len(archived)} archived AI routes; curated offline kit ({(ROOT/"kit.zip").stat().st_size:,} bytes).')
 
 if __name__=='__main__':build()

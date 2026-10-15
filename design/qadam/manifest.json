@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/qadam/",
   "ai_url": "https://azizbeksafarov.github.io/design/qadam/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/qadam/source.zip",
-  "archive_sha256": "b38ba3087881c67ff4cfe353ee50b26c2652c0764fe82a56093a826315c8827a",
-  "archive_bytes": 389968,
+  "archive_sha256": "51780f731b946cc0512f510a3b930c45cbee8655d753fc6975fc417af7cb05b2",
+  "archive_bytes": 392717,
   "entry": "06-material.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -46,13 +46,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2193,
-      "sha256": "8188d6b0e5ca5cb2ae57c5281ebdde31db99ec670168bac66151778ea3b97858"
+      "bytes": 2338,
+      "sha256": "607d666bb9db88413993cf8d077a823613d58153b8ab60ecc1bf8e9adfe95a2e"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 9053,
-      "sha256": "f749a4b91ebc44d908a26610c2b35e03bbc83128b1a722fa8050102df20e54a7"
+      "bytes": 9167,
+      "sha256": "5b1acc3cca74751dd15040fb67adb9e675eb971febe7b51eed787a12ee341723"
     },
     {
       "path": "CHECKLIST.md",
@@ -73,6 +73,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 327,
       "sha256": "e15668ba0f8d6ec4d9b299c8336212ba9aca42b6d41b550138d5c312bbbfff7d"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

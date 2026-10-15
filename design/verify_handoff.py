@@ -21,6 +21,7 @@ def check_links(path):
     for tag,key,value in parser.refs:
         parts=urlsplit(value)
         if parts.scheme or parts.netloc or not parts.path:continue
+        if parts.path.startswith('/ustoz/'):continue # Separate, independently deployed research repo.
         target=(SITE_ROOT/unquote(parts.path).lstrip('/')) if parts.path.startswith('/') else path.parent/unquote(parts.path)
         if target.is_dir():target=target/'index.html'
         assert target.is_file(),f'{path.relative_to(SITE_ROOT)}: broken {value}'
@@ -45,9 +46,13 @@ def check_runtime(z,root):
 
 def verify():
     catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))['templates']
+    archived=json.loads((ROOT/'archive/catalog.json').read_text(encoding='utf-8'))['templates']
+    policy=json.loads((ROOT/'curation.json').read_text(encoding='utf-8'))
+    assert [t['id'] for t in catalog]==policy['featured']
+    assert {t['id'] for t in archived}==set(policy['archived'])
     expected=len(json.loads((ROOT/'templates.json').read_text(encoding='utf-8')))
-    assert len(catalog)==expected and len({t['slug'] for t in catalog})==expected
-    for template in catalog:
+    assert len(catalog)+len(archived)==expected and len({t['slug'] for t in catalog+archived})==expected
+    for template in catalog+archived:
         folder=ROOT/template['slug'];manifest=json.loads((folder/'manifest.json').read_text(encoding='utf-8'));archive=(folder/'source.zip').read_bytes()
         assert sha256(archive).hexdigest()==manifest['archive_sha256']
         assert len(archive)==manifest['archive_bytes']
@@ -71,10 +76,16 @@ def verify():
         for name in ('index.html','source.html'):check_links(folder/name)
         check_links(SITE_ROOT/'dezayn'/template['slug']/'index.html')
     check_links(ROOT/'start/index.html');check_links(ROOT/'index.html')
+    check_links(SITE_ROOT/'index.html');check_links(ROOT/'archive/index.html');check_links(ROOT/'standart/index.html')
     with zipfile.ZipFile(ROOT/'kit.zip') as z:
         assert z.testzip() is None
         assert 'competition/FULL-CONTEXT.md' in z.namelist()
         for template in catalog:assert z.read(template['slug']+'/source.zip')==(ROOT/template['slug']/'source.zip').read_bytes()
-    print(f'PASS: {expected} focused AI briefs, links, SHA-256 manifests, archives, portable runtime resources and complete offline text context.')
+        for template in archived:assert template['slug']+'/source.zip' not in z.namelist()
+    for path in ('index.html','design/archive/index.html','design/standart/index.html'):
+        # /ustoz/ is a separate Pages repository, not a missing local route.
+        html=(SITE_ROOT/path).read_text(encoding='utf-8')
+        for template in archived:assert f'href="/design/{template["file"]}"' not in html
+    print(f'PASS: {len(catalog)} featured + {len(archived)} archived briefs, SHA-256 manifests, portable assets; curated kit excludes retired templates and includes complete competition text.')
 
 if __name__=='__main__':verify()

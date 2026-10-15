@@ -1,31 +1,33 @@
-# Azizbek Safarov — bosh sahifa
+# Azizbek Safarov — ochiq ish maydoni
 
-Asosiy manzil: https://azizbeksafarov.github.io/
+Public headquarters: https://azizbeksafarov.github.io/
 
-Bu GitHub Pages bosh sahifasi loyihalar uchun katalog vazifasini bajaradi.
+- `/design/`: curated gallery — Yuksal and Bloom.
+- `/design/start/`: task/time input and copyable prompt for a new AI; no submission/storage.
+- `/ai.md`: central context and continuation instructions.
+- `/design/si/`, `/design/bloom/`: short briefs, real code, ZIP and integrity manifests.
+- `/design/kit.zip`: two selected starters and complete collected competition text.
+- `/design/standart/`: research-backed quality criteria.
+- `/design/archive/`: reasons for retiring 01–09; old demo routes show retirement pages.
+- `/ustoz/`: separate research repository’s Pages site. These documents are preserved.
 
-Hozirgi loyihalar:
+## Edit and regenerate
 
-- [Ustoz AI](https://azizbeksafarov.github.io/ustoz/)
-- [Ustoz AI — AI uchun to‘liq kontekst](https://azizbeksafarov.github.io/ustoz/ai.md)
+`assets/hq/site.css` and `site.js` implement the shared headquarters. `design/build_hq.py` renders root, gallery, AI start, archive and standards. `design/curation.json` is the source of featured/retired decisions. `design/templates.json` retains historical metadata.
 
-## Yangi loyiha qo‘shish
+```text
+python design/build_handoff.py
+python design/verify_handoff.py
+node --check assets/hq/site.js
+python -m http.server 8770 --bind 127.0.0.1
+```
 
-1. Yangi loyiha repozitoriysida GitHub Pages'ni yoqing. Masalan, `yangi-loyiha` repozitoriysi `/yangi-loyiha/` manzilida ochiladi.
-2. `index.html` ichidagi `project` kartasidan nusxa olib, nom, tavsif va havolalarni yangilang.
-3. `count` dagi loyiha sonini yangilang va o‘zgarishlarni `main` tarmog‘iga yuboring.
+The handoff builder calls the headquarters builder. On an initial migration run `python design/build_hq.py` first to preserve original HTML as `.html.txt` source snapshots in `design/archive/legacy/`. Do not rerun the retired `build_templates.py` generator to edit current pages; legacy HTML belongs in the archive. Source packages read preserved HTML, not retirement pages.
 
-Bu repozitoriy `ustoz` repozitoriysidan mustaqil. Bosh sahifa o‘zgarishi `/ustoz/` materiallarini o‘zgartirmaydi.
+Bloom source is `design/material-expressive/src/`; its AGENTS.md applies. Build/test before regenerating handoffs. Yuksal source is `design/si-site/`; preserve white main background, brand favicon and Uzbekistan content flag.
 
-- [Dizaynlar galereyasi — 11 variant](https://azizbeksafarov.github.io/design/)
-- [Yuksal · SI — SI.gov uslubidagi jonli namuna](https://azizbeksafarov.github.io/design/si-site/)
-- [Yuksal · SI — AI konteksti va kod](https://azizbeksafarov.github.io/design/si/)
-- [Bloom / Material Design 3](https://azizbeksafarov.github.io/design/material-expressive/dist/)
-- [Bloom — yangi AI uchun tanlov paketi](https://azizbeksafarov.github.io/design/bloom/)
-- [Barcha dizaynlar — AI boshlash markazi](https://azizbeksafarov.github.io/design/start/)
-- [11 starter va to‘liq tanlov matnlari ZIP](https://azizbeksafarov.github.io/design/kit.zip)
-- [Qadam / Google Material uslubi](https://azizbeksafarov.github.io/design/06-material.html)
+The curated kit excludes retired source packages. Their separate historical packages are marked and recoverable. No credentials or private account configuration belong in this public repository.
 
-Dizaynlarning generatorlari va JS/CSS manbalari `design/` ichida. `design/build_templates.py` generatorini ishga tushirib, natijalarni `main` tarmog‘iga yuboring.
+## Publication
 
-Source/build o‘zgarishidan keyin `python design/build_handoff.py` va `python design/verify_handoff.py` bilan AI paketlarini yangilang. Tafsilotlar: `design/HANDOFF-README.md`. `/design/<nom>/` context+code entry; `/dezayn/<nom>/` shu manzilga yo‘naltiradi.
+GitHub Pages publishes `main` at repository root. `.nojekyll` is intentional. After pushing, verify Pages success and the public UI; a successful push alone is not a deployment check.

@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "abdcdb64303db078db5532362d02eb9b92bfb4107618e5727d94b2812614b122",
-  "archive_bytes": 389695,
+  "archive_sha256": "42c793d4b0b2eaf72d87b7583b97dc1e67e78afb343ecee3dc06ee8d21eac715",
+  "archive_bytes": 392442,
   "entry": "02-samar.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -34,13 +34,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2108,
-      "sha256": "883ada6a995df1cfc9353589c651d7cfccd70cc87187b5de0279ff3b14ee6d31"
+      "bytes": 2253,
+      "sha256": "1ea7eadae128b05eeaa1e627fb23dcfcb3ce4a0e5cd1f1f2e502c55bb6c6ee53"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8572,
-      "sha256": "54bb89af687b8ee1883f85bc4339b5ffdd4a365715be69d03b534048afe2ff29"
+      "bytes": 8686,
+      "sha256": "cfa7a187cbb0fd53792376065f5e04a068641e060f10d1411df0ab3297d2b4c4"
     },
     {
       "path": "CHECKLIST.md",
@@ -61,6 +61,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 315,
       "sha256": "8f3b9d5538314a55a1854d0100a3f23fcf4779e4793232a309b38ea6f96f3e25"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

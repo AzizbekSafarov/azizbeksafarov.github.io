@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/spark/",
   "ai_url": "https://azizbeksafarov.github.io/design/spark/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/spark/source.zip",
-  "archive_sha256": "9e852275156a712a12628b8f3dff46af522066cd5c22fe944fefd4fe3f0acd07",
-  "archive_bytes": 389693,
+  "archive_sha256": "bcb438e970773915048dfcfb5d714e0702e09bd424d1e2497cf9764c2759929a",
+  "archive_bytes": 392438,
   "entry": "08-spark.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -40,13 +40,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2113,
-      "sha256": "9cee665197c3f50cdfd8da5bf5c7cabfcdffab3e8b222a80dfc5255bde5eb14d"
+      "bytes": 2258,
+      "sha256": "dcb4ca0d1ffb00e33524b328baffe9cfbefefb1626c0e7fca307a5c2e5d17a64"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8697,
-      "sha256": "0dc1d15d2d029ad99a0b90ace3eb0022cf23746949fd156b6c31368e435f31ce"
+      "bytes": 8811,
+      "sha256": "3df506355ea7f973ce2c117122246c072ee1c4381c1a317eb1faee10f19a5407"
     },
     {
       "path": "CHECKLIST.md",
@@ -67,6 +67,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 315,
       "sha256": "77ed4e6ed321138b76f0ba6370a32e5341788333085d44c827fb8fbe1508f3bc"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

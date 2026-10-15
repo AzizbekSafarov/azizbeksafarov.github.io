@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/lola/",
   "ai_url": "https://azizbeksafarov.github.io/design/lola/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/lola/source.zip",
-  "archive_sha256": "7b1f27690c51a925d0558da5bad1b3b04cb085160fe04f65d19cf097a027573f",
-  "archive_bytes": 389685,
+  "archive_sha256": "52b90e8bcd5641f2d194510583e3b472419a9acbb346ee036b5290df193c21c4",
+  "archive_bytes": 392434,
   "entry": "07-lola.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -40,13 +40,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2111,
-      "sha256": "b586821a0c9bc797c2b15225678f7d484deaea348435c4dbfc1c472caabeb504"
+      "bytes": 2256,
+      "sha256": "5eae89f122751b1be9bb8f3bc09c8871fa02f42b9661bf8aa2a205e8159e40b0"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8667,
-      "sha256": "ca205b2017df5ca267d32784b0ee511dc06570a7016cddd4f8ffbf1196d10aa1"
+      "bytes": 8781,
+      "sha256": "f6e55535731c4017b651318155a8bfaac428c19fc25913fe397fba260df78d6c"
     },
     {
       "path": "CHECKLIST.md",
@@ -67,6 +67,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 314,
       "sha256": "dc0f517e09a7ab2e4c2a91e8e928dcc7c8e6ce6cdad851eb08e6d27d90d7830d"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",

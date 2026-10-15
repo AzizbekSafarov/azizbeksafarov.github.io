@@ -1,8 +1,10 @@
-# Azizbek Safarov: Ustoz AI competition and design starters
+# Azizbek Safarov: open competition headquarters
 
-- [Choose a design](https://azizbeksafarov.github.io/design/ai.md): 11 short routes; load only the selected design.
-- [Bloom M3 starter](https://azizbeksafarov.github.io/design/bloom/ai.md): context, editable source, visual contract, checks and handoff.
+- [Start here](https://azizbeksafarov.github.io/ai.md): central context and two curated designs.
+- [Yuksal starter](https://azizbeksafarov.github.io/design/si/ai.md): editorial motion website.
+- [Bloom M3 starter](https://azizbeksafarov.github.io/design/bloom/ai.md): functional project workspace.
 - [Competition brief](https://azizbeksafarov.github.io/design/handoff/competition.md): dated evidence and uncertain rules.
 - [Full research](https://azizbeksafarov.github.io/ustoz/ai.md): collected local and official-web information.
+- [Quality standard](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md).
 
-The user’s actual ticket and current instructions take priority. These are preparation resources, not an automatic agent or a guarantee of correctness.
+Templates 01–09 are archived, not supported recommendations. The user’s actual ticket and current instructions take priority. These resources do not guarantee autonomous execution or correctness.

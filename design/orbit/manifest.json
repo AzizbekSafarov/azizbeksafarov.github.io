@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbit/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbit/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbit/source.zip",
-  "archive_sha256": "187117840bf4cdf00afe8430e56db3fedcce73247fd2da1e347c07819ba5d3d6",
-  "archive_bytes": 389678,
+  "archive_sha256": "5fa567da07f00c939037ef8785958ecf19f4e148a43e1156be7f4727728ff245",
+  "archive_bytes": 392424,
   "entry": "03-orbit.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -34,13 +34,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2102,
-      "sha256": "ce48df14ae89dbc59e4fc391dafab5baec20712279939176b58ad3e053245558"
+      "bytes": 2247,
+      "sha256": "acedf23b7e90226cba4cf8e49e9f5006ff07741d5e307accaee1aa30ad9e2b72"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8538,
-      "sha256": "c564de4827a056f07e7f39bee433f01ba4266174a98825a17c807a6251d15339"
+      "bytes": 8652,
+      "sha256": "bedb3632febd3c28c2f65ae3a4c49e58af49a1e7c4113c0c1bf242795262be0d"
     },
     {
       "path": "CHECKLIST.md",
@@ -61,6 +61,11 @@
       "path": "CURRENT-TASK.md",
       "bytes": 315,
       "sha256": "88dd1b3b54dbc355776416bab39060b22a66d54651de773d08282fa76d52d31a"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 5065,
+      "sha256": "71059589deb4c6d708d835521e2389c2e0f847683261e83e2d71faeb89868e35"
     },
     {
       "path": "GEMINI.md",
