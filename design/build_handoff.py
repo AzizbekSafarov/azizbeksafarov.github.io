@@ -42,7 +42,7 @@ FLOWS = {
  '10':['Yangi loyiha → bo‘sh forma xatosi → haqiqiy yozishda xato yo‘qolishi → muvaffaqiyat → keyingi forma toza.','Qidiruv + kategoriya + saralash + saqlangan/bajarilgan bo‘limlar; takror bosilgan chip tanlangan qoladi.','Karta/ro‘yxat, bookmark, detail uch checkbox → progress → reload.','Palitra label/ArrowRight/Space → bitta radio; light/dark; qisqa oynada Tayyor doim ko‘rinadi.','Escape → opener; filtrdan yo‘qolgan karta uchun fokus loyiha sarlavhasiga qaytadi.']
 }
 
-FLOWS['11']=['SI → Super Intelligence hover / mobil tap, kursor itarishi va click to‘lqini. Scroll: ring → helix → towers → ring → broadcast → scatter → flag. Pause/reduced-motion va statik SI fallback.','Dumaloq menyu → bo‘lim; Escape → ochgan tugmaga fokus qaytishi.','Kategoriya → 4/2/1/1 kartalar; aniq tanlangan holat.','Detail → reja qo‘shish/olish → hisob → reload → matn yuklash; bo‘sh rejada yuklash o‘chiq.','320 px dialog, uzun sarlavha va yopish/saqlash amallari; lokal shrift va resurslar.']
+FLOWS['11']=['SI → Super Intelligence hover / mobil tap, kursor itarishi va click to‘lqini. Scroll: ring → helix → towers → ring → broadcast → scatter → flag. Pause/reduced-motion va statik SI fallback.','Dumaloq menyu → bo‘lim; Escape → ochgan tugmaga fokus qaytishi.','Kategoriya → 4/2/1/1 kartalar; aniq tanlangan holat.','Detail → reja qo‘shish/olish → hisob → reload → ikkinchi tab sinxronlashuvi → matn yuklash; bo‘sh rejada yuklash o‘chiq.','320 px dialog, uzun sarlavha va yopish/saqlash amallari; lokal shrift va resurslar.']
 
 def read(path):
     return path.read_text(encoding='utf-8-sig')
@@ -136,7 +136,7 @@ def ai_brief(t):
     if t['id']=='11':
         technical='Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas butun sahifaga fixed; 1800 desktop / 1500 mobile nuqta, DPR 2, requestAnimationFrame va delta-time spring. SI → Super Intelligence: desktop serpentine text, mobile rotating lettering circle. Pointer repulsion radius 120 px; click expanding wave; spring .045 va damping .84. Scroll shakllarni almashtiradi, zarracha identity/velocity saqlanadi. Hidden tab/pause’da to‘xtaydi; faqat hero offscreen bo‘lgani uchun to‘xtatma. `MOTION.md` ni o‘qi. OS reduced-motion va statik SI fallback saqlansin.'
         commands='node serve.mjs\n# ZIPdagi site/ ichida alohida terminal:\ncd site\nnode --test model.test.mjs motion.test.mjs'
-        regression='Oq asosiy fon (foydalanuvchi talabi), O‘zbekiston palitrasi, moviy CTA, oq/yashil sirtlar, serif-kursiv/sans farqi va outline holatlar saqlansin. USA bayrog‘iga qaytarma: 3 tasma, 2 ingichka qizil hoshiya, oq yarim oy va 3/4/5 qatorda jami 12 yulduz. Bayroq harakatida ranglari tezlik sabab o‘zgarmasin. Animatsiya matn/tugmani to‘smasin; mobilga majburiy scroll-snap qo‘shilmasin. Pause canvas hamda orbni to‘xtatsin. Plan faqat known unique IDlarni oladi; boshqa storage tozalanmaydi. Detail action footer va Escape/fokus qaytishi saqlansin. Hisob/eksport tanlangan yo‘nalishlarga mos bo‘lsin.'
+        regression='Oq asosiy fon (foydalanuvchi talabi), O‘zbekiston palitrasi, moviy CTA, oq/yashil sirtlar, serif-kursiv/sans farqi va outline holatlar saqlansin. USA bayrog‘iga qaytarma: 3 tasma, 2 ingichka qizil hoshiya, oq yarim oy va 3/4/5 qatorda jami 12 yulduz. Bayroq harakatida ranglari tezlik sabab o‘zgarmasin. Animatsiya matn/tugmani to‘smasin; mobilga majburiy scroll-snap qo‘shilmasin. Pause canvas hamda orbni to‘xtatsin. Favicon brand-icon.svg/PNG Yuksal belgisi; bayroqni favicon qilma. Plan faqat known unique IDlarni oladi; storage event orqali tablar sinxronlashadi, har o‘zgartirish oldidan eng yangi reja o‘qiladi; boshqa storage tozalanmaydi. Detail action footer va Escape/fokus qaytishi saqlansin. Hisob/eksport tanlangan yo‘nalishlarga mos bo‘lsin.'
     flows='\n'.join('- '+x for x in t['flows'])
     return f"""# {t['name']} — tanlovda yangi AI uchun boshlash
 
@@ -290,7 +290,7 @@ def source_files(t,templates):
 
 def code_names(t,files):
     if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','package.json','vite.config.js','download_symbols.py']
-    if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','uzbekistan.svg']
+    if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','uzbekistan.svg','brand-icon.svg']
     else:
         names=[t['file'],'shared.css','shared.js']
         html=files['site/'+t['file']].decode('utf-8-sig') if files else read(ROOT/t['file'])

@@ -1,6 +1,6 @@
 # Yuksal · SI verification — 2026-10-15
 
-Eight tests pass: persisted-plan sanitization, reversible known-ID toggling, exported content/order, spring convergence, pointer/click repulsion, long-frame integration, finite animated geometry for all seven procedural shapes at 1500/1800 particles, and Uzbekistan flag identity. The flag test checks the three bands, two red separators, crescent, 12 stars in 3/4/5 rows, and matching SVG fallback. Application and motion modules pass syntax validation.
+Nine tests pass: persisted-plan sanitization, reversible known-ID toggling, exported content/order, spring convergence, pointer/click repulsion, long-frame integration, finite animated geometry for all seven procedural shapes at 1500/1800 particles, Uzbekistan flag identity, and safe parsing of malformed/external storage values. The flag test checks the three bands, two red separators, crescent, 12 stars in 3/4/5 rows, and matching SVG fallback. Application and motion modules pass syntax validation.
 
 Browser checks completed on the local site:
 
@@ -23,3 +23,12 @@ Uzbekistan palette revision: blue #0099b5, white #ffffff, green #1eb53a, deep te
 Independent demo inspired by SI.gov's motion mechanics, Instrument Serif/Sans contrast and circular menu, with Uzbekistan branding requested by the user. No personal information is submitted. The plan is browser-local.
 
 Latest user revision: the main background is now pure white (#ffffff), with deep teal text and blue/green accents. Hero, vision, signal, plan, menu and footer share the white surface. Canvas brightness roles follow computed CSS; white flag particles have a fine neutral outline on pale surfaces. Hero particle bounds are capped above the copy block to avoid crossing the description. Desktop computed styles confirm white body/hero and dark text. The 390 px plan view shows the outlined flag on white; 320 and 390 px have no horizontal overflow and no console errors were recorded.
+
+
+Favicon and interaction audit:
+
+- Replaced flag favicon with a Yuksal asterisk at a new SVG URL, with 32 px PNG and 180 px Apple touch fallbacks. Legacy mark.svg now carries the same brand, while uzbekistan.svg remains page content.
+- Reproduced stale cross-tab state before the fix: primary plan 1/4, second tab 0/4. After the fix, adding produced 2/4 in both and removing produced 1/4 in both. Edits read the latest stored plan; removal remains idempotent. Broken JSON safely becomes a valid empty plan.
+- Downloaded the remaining laboratory plan through the real browser download flow and read the file back: correct title, description and three steps. The temporary anchor is now connected to the document and its Blob URL has a longer release window.
+- At actual 320×568 viewport, scrolling the menu kept the close button visible (top 22 px). Filter → two learning results → detail → save → Escape restored the card opener; count became 2/4 and console errors were empty.
+- Initialize visibility from document.hidden and wait for active fonts before measuring particle masks. Touch pointer type is retained from pointerdown for click-event compatibility. Explicit Continue now enables motion when the OS originally requested static display; physical touch and OS preference switching were not device-tested.

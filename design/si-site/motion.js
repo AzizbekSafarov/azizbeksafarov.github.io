@@ -70,18 +70,20 @@ export function shapeTarget(kind,i,count,time,box,pointer={nx:0,ny:0}){
 
 export class ParticleField{
  constructor(canvas,{paused=false,reduced=false}={}){
-  this.canvas=canvas;this.ctx=canvas.getContext('2d');this.paused=paused;this.reduced=reduced;this.frame=0;this.time=0;this.last=0;this.waves=[];this.cache=new Map();this.particles=[];this.pointer={x:-10000,y:-10000,nx:0,ny:0};this.expanded=false;this.mode='text';this.targetName='SI';this.box={x:0,y:0,w:1,h:1};this.visible=true;this.motionStart=0;
+  this.canvas=canvas;this.ctx=canvas.getContext('2d');this.paused=paused;this.reduced=reduced;this.frame=0;this.time=0;this.last=0;this.waves=[];this.cache=new Map();this.particles=[];this.pointer={x:-10000,y:-10000,nx:0,ny:0};this.expanded=false;this.mode='text';this.targetName='SI';this.box={x:0,y:0,w:1,h:1};this.visible=!document.hidden;this.motionStart=0;
  }
  async init(){
   if(!this.ctx)throw new Error('Canvas unavailable');
-  await document.fonts.load('400 200px "Instrument Serif"');this.resize();
+  await document.fonts.load('400 200px "Instrument Serif"');await document.fonts.ready;this.resize();
   window.addEventListener('pointermove',e=>this.onPointer(e),{passive:true});
   document.addEventListener('pointerleave',()=>{this.pointer.x=this.pointer.y=-10000;});
   window.addEventListener('pointerdown',e=>{if(this.paused||this.reduced||e.target.closest('a,input,button:not(.art-toggle),dialog'))return;this.waves.push({x:e.clientX,y:e.clientY,radius:0});},{passive:true});
   window.addEventListener('scroll',()=>{this.syncScene();if(this.paused)this.paint();},{passive:true});
   let timer;window.addEventListener('resize',()=>{clearTimeout(timer);timer=setTimeout(()=>this.resize(),120);});
   document.addEventListener('visibilitychange',()=>{this.visible=!document.hidden;if(this.visible)this.start();else this.stop();});
-  document.querySelector('.art-toggle').addEventListener('click',e=>{if(e.pointerType==='touch'||e.detail===0)this.setExpanded(!this.expanded);});
+  const art=document.querySelector('.art-toggle');let lastPointerType;
+  art.addEventListener('pointerdown',event=>{lastPointerType=event.pointerType;});
+  art.addEventListener('click',event=>{if(lastPointerType==='touch'||event.pointerType==='touch'||event.detail===0)this.setExpanded(!this.expanded);lastPointerType=null;});
   this.canvas.classList.add('ready');document.querySelector('.hero-art').classList.add('ready');this.paint();this.start();return this;
  }
  resize(){

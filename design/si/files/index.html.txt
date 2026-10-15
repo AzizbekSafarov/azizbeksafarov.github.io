@@ -6,10 +6,12 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Yuksal — sun’iy intellekt, bilim va yoshlar tashabbuslari uchun mustaqil interaktiv dizayn namunasi.">
   <title>Yuksal · SI — kelajakni birga yaratamiz</title>
-  <link rel="icon" href="mark.svg?v=4" type="image/svg+xml">
+  <link rel="icon" href="brand-icon.svg?v=1" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon-32.png?v=1" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1" sizes="180x180">
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="style.css?v=5">
-  <script type="module" src="app.js?v=4"></script>
+  <link rel="stylesheet" href="style.css?v=6">
+  <script type="module" src="app.js?v=6"></script>
 </head>
 <body>
 <a class="skip" href="#main">Asosiy mazmunga o‘tish</a>

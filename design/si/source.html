@@ -1,5 +1,5 @@
 <!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi"><title>Yuksal · SI — source</title><link rel="stylesheet" href="../handoff/styles.css?v=4c4f7e30df37"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="../start/">← AI boshlash markazi</a><a href="../">Barcha jonli dizaynlar</a></nav></header><main id="main" class="wrap"><h1>Yuksal · SI — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content"><h2>Yuksal · SI — editable source snapshot</h2>
-<p>Source fingerprint: <code>eab9332a9b5f9b2ecb810789935aeb50cfc3c9aaf3fcf1941281df47a7c032fb</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
+<p>Source fingerprint: <code>4c2f7bdcb31e33fd9516d7e6c3eab7a6346af87744ee95d3e143391457bae9fa</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
 <h3>site/index.html</h3>
 <pre><code>&lt;!doctype html&gt;
 &lt;html lang=&quot;uz&quot;&gt;
@@ -9,10 +9,12 @@
   &lt;meta name=&quot;theme-color&quot; content=&quot;#ffffff&quot;&gt;
   &lt;meta name=&quot;description&quot; content=&quot;Yuksal — sun’iy intellekt, bilim va yoshlar tashabbuslari uchun mustaqil interaktiv dizayn namunasi.&quot;&gt;
   &lt;title&gt;Yuksal · SI — kelajakni birga yaratamiz&lt;/title&gt;
-  &lt;link rel=&quot;icon&quot; href=&quot;mark.svg?v=4&quot; type=&quot;image/svg+xml&quot;&gt;
+  &lt;link rel=&quot;icon&quot; href=&quot;brand-icon.svg?v=1&quot; type=&quot;image/svg+xml&quot;&gt;
+  &lt;link rel=&quot;alternate icon&quot; href=&quot;favicon-32.png?v=1&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot;&gt;
+  &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;apple-touch-icon.png?v=1&quot; sizes=&quot;180x180&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;fonts/fonts.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css?v=5&quot;&gt;
-  &lt;script type=&quot;module&quot; src=&quot;app.js?v=4&quot;&gt;&lt;/script&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css?v=6&quot;&gt;
+  &lt;script type=&quot;module&quot; src=&quot;app.js?v=6&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;a class=&quot;skip&quot; href=&quot;#main&quot;&gt;Asosiy mazmunga o‘tish&lt;/a&gt;
@@ -84,15 +86,18 @@ em{color:var(--blue)}.hero-aside&gt;p,.hero-edition,.art-coordinate,.vision-bott
 .menu-dialog{background:#ffffff;color:var(--navy)}.menu-body nav a:hover{color:var(--blue)}.close:hover{background:#0099b512}
 .section-nav{color:var(--navy)}.menu-orb{box-shadow:0 8px 30px #0099b526}
 .footer-bottom{color:var(--muted)}.storage-warning{color:#8d4b00}
+.menu-dialog{overflow-y:auto;overscroll-behavior:contain}.menu-heading{position:sticky;top:0;z-index:5;background:#ffffff}
+@media(prefers-reduced-motion:reduce){body:not(.motion-paused) .orb-ring{animation:orb-spin 36s linear infinite!important}}
 </code></pre>
 <h3>site/app.js</h3>
-<pre><code>import {ParticleField} from &#x27;./motion.js?v=4&#x27;;
-import {initiatives,validPlan,togglePlan,planText} from &#x27;./model.js&#x27;;
+<pre><code>import {ParticleField} from &#x27;./motion.js?v=6&#x27;;
+import {initiatives,parsePlan,togglePlan,planText} from &#x27;./model.js?v=2&#x27;;
 
 const $=selector=&gt;document.querySelector(selector);
 const key=&#x27;ustoz.yuksal.plan.v1&#x27;;
 let plan=[];let currentId=null;let opener=null;let toastTimer;
-try{plan=validPlan(JSON.parse(localStorage.getItem(key)));}catch{}
+function readCurrentPlan(){try{plan=parsePlan(localStorage.getItem(key));}catch{$(&#x27;#storage-warning&#x27;).hidden=false;}}
+readCurrentPlan();
 function notify(message){clearTimeout(toastTimer);$(&#x27;#feedback&#x27;).textContent=message;$(&#x27;#feedback&#x27;).hidden=false;toastTimer=setTimeout(()=&gt;{$(&#x27;#feedback&#x27;).hidden=true;},3200);}
 function persist(){try{localStorage.setItem(key,JSON.stringify(plan));$(&#x27;#storage-warning&#x27;).hidden=true;}catch{$(&#x27;#storage-warning&#x27;).hidden=false;}}
 function syncSave(){const chosen=plan.includes(currentId);$(&#x27;#save-initiative&#x27;).replaceChildren(document.createTextNode(chosen?&#x27;Rejadan olish &#x27;:&#x27;Rejaga qo‘shish &#x27;));const icon=document.createElement(&#x27;span&#x27;);icon.setAttribute(&#x27;aria-hidden&#x27;,&#x27;true&#x27;);icon.textContent=chosen?&#x27;−&#x27;:&#x27;+&#x27;;$(&#x27;#save-initiative&#x27;).append(icon);$(&#x27;#save-initiative&#x27;).setAttribute(&#x27;aria-pressed&#x27;,String(chosen));}
@@ -100,16 +105,17 @@ function renderPlan(){
  const container=$(&#x27;#plan-items&#x27;);container.replaceChildren();
  $(&#x27;#plan-count&#x27;).textContent=`${plan.length} / ${initiatives.length}`;$(&#x27;#download-plan&#x27;).disabled=plan.length===0;
  if(!plan.length){const p=document.createElement(&#x27;p&#x27;);p.className=&#x27;plan-empty&#x27;;p.append(document.createTextNode(&#x27;Hozircha rejangiz bo‘sh.&#x27;),document.createElement(&#x27;br&#x27;),document.createTextNode(&#x27;Bir tashabbusni oching va rejangizga qo‘shing.&#x27;));container.append(p);}
- for(const id of plan){const item=initiatives.find(entry=&gt;entry.id===id);const row=document.createElement(&#x27;article&#x27;);row.className=&#x27;plan-item&#x27;;const h=document.createElement(&#x27;h3&#x27;);h.textContent=item.title;const p=document.createElement(&#x27;p&#x27;);p.textContent=item.category+&#x27; · 3 ta amaliy qadam&#x27;;const remove=document.createElement(&#x27;button&#x27;);remove.type=&#x27;button&#x27;;remove.textContent=&#x27;×&#x27;;remove.setAttribute(&#x27;aria-label&#x27;,item.title+&#x27;: rejadan olish&#x27;);remove.addEventListener(&#x27;click&#x27;,()=&gt;{plan=togglePlan(plan,id);persist();renderPlan();$(&#x27;#download-plan&#x27;).focus({preventScroll:true});if(!plan.length)$(&#x27;#reja .text-link&#x27;).focus({preventScroll:true});notify(&#x27;Yo‘nalish rejadan olindi.&#x27;);});row.append(h,p,remove);container.append(row);}
+ for(const id of plan){const item=initiatives.find(entry=&gt;entry.id===id);const row=document.createElement(&#x27;article&#x27;);row.className=&#x27;plan-item&#x27;;const h=document.createElement(&#x27;h3&#x27;);h.textContent=item.title;const p=document.createElement(&#x27;p&#x27;);p.textContent=item.category+&#x27; · 3 ta amaliy qadam&#x27;;const remove=document.createElement(&#x27;button&#x27;);remove.type=&#x27;button&#x27;;remove.textContent=&#x27;×&#x27;;remove.setAttribute(&#x27;aria-label&#x27;,item.title+&#x27;: rejadan olish&#x27;);remove.addEventListener(&#x27;click&#x27;,()=&gt;{readCurrentPlan();plan=plan.filter(value=&gt;value!==id);persist();renderPlan();$(&#x27;#download-plan&#x27;).focus({preventScroll:true});if(!plan.length)$(&#x27;#reja .text-link&#x27;).focus({preventScroll:true});notify(&#x27;Yo‘nalish rejadan olindi.&#x27;);});row.append(h,p,remove);container.append(row);}
  if(currentId)syncSave();
 }
 renderPlan();
+window.addEventListener(&#x27;storage&#x27;,event=&gt;{if(event.key!==key&amp;&amp;event.key!==null)return;const restoreFocus=document.activeElement?.closest(&#x27;#plan-items button&#x27;);plan=parsePlan(event.newValue);renderPlan();if(restoreFocus&amp;&amp;!restoreFocus.isConnected)(plan.length?$(&#x27;#download-plan&#x27;):$(&#x27;#reja .text-link&#x27;)).focus({preventScroll:true});});
 const detail=$(&#x27;#initiative-dialog&#x27;),menu=$(&#x27;#site-menu&#x27;);
 document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(button=&gt;button.addEventListener(&#x27;click&#x27;,()=&gt;{
  const item=initiatives.find(entry=&gt;entry.id===button.dataset.open);if(!item)return;
  currentId=item.id;opener=button;$(&#x27;#detail-title&#x27;).textContent=item.title;$(&#x27;#detail-category&#x27;).textContent=item.category+&#x27; / MUSTAQIL MASHQ&#x27;;$(&#x27;#detail-description&#x27;).textContent=item.description;$(&#x27;#detail-steps&#x27;).replaceChildren(...item.steps.map(step=&gt;{const li=document.createElement(&#x27;li&#x27;);li.textContent=step;return li;}));syncSave();detail.showModal();
 }));
-$(&#x27;#save-initiative&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{const adding=!plan.includes(currentId);plan=togglePlan(plan,currentId);persist();renderPlan();notify(adding?&#x27;Yo‘nalish shaxsiy rejangizga qo‘shildi.&#x27;:&#x27;Yo‘nalish rejadan olindi.&#x27;);});
+$(&#x27;#save-initiative&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{readCurrentPlan();const adding=!plan.includes(currentId);plan=togglePlan(plan,currentId);persist();renderPlan();notify(adding?&#x27;Yo‘nalish shaxsiy rejangizga qo‘shildi.&#x27;:&#x27;Yo‘nalish rejadan olindi.&#x27;);});
 $(&#x27;#menu-open&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;menu.showModal());
 document.querySelectorAll(&#x27;[data-close]&#x27;).forEach(button=&gt;button.addEventListener(&#x27;click&#x27;,()=&gt;button.closest(&#x27;dialog&#x27;).close()));
 for(const dialog of [detail,menu]){
@@ -121,7 +127,7 @@ document.querySelectorAll(&#x27;[data-filter]&#x27;).forEach(button=&gt;button.a
  document.querySelectorAll(&#x27;[data-filter]&#x27;).forEach(item=&gt;item.setAttribute(&#x27;aria-pressed&#x27;,String(item===button)));
  let count=0;document.querySelectorAll(&#x27;.initiative-card&#x27;).forEach(card=&gt;{card.hidden=button.dataset.filter!==&#x27;all&#x27;&amp;&amp;card.dataset.category!==button.dataset.filter;if(!card.hidden)count++;});$(&#x27;#results&#x27;).textContent=`${count} ta tashabbus`;
 }));
-$(&#x27;#download-plan&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{if(!plan.length)return;const blob=new Blob([&#x27;\ufeff&#x27;+planText(plan)],{type:&#x27;text/plain;charset=utf-8&#x27;});const url=URL.createObjectURL(blob);const link=document.createElement(&#x27;a&#x27;);link.href=url;link.download=&#x27;yuksal-rejam.txt&#x27;;link.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000);notify(&#x27;Reja matn fayli sifatida tayyorlandi.&#x27;);});
+$(&#x27;#download-plan&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{readCurrentPlan();renderPlan();if(!plan.length)return;const blob=new Blob([&#x27;\ufeff&#x27;+planText(plan)],{type:&#x27;text/plain;charset=utf-8&#x27;});const url=URL.createObjectURL(blob);const link=document.createElement(&#x27;a&#x27;);link.href=url;link.download=&#x27;yuksal-rejam.txt&#x27;;document.body.append(link);link.click();link.remove();setTimeout(()=&gt;URL.revokeObjectURL(url),10000);notify(&#x27;Reja matn fayli sifatida tayyorlandi.&#x27;);});
 
 const reduce=matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;);
 let paused=reduce.matches;
@@ -136,7 +142,7 @@ if(&#x27;IntersectionObserver&#x27; in window){
 
 const field=new ParticleField($(&#x27;#particles&#x27;),{paused,reduced:reduce.matches});
 field.init().catch(()=&gt;{$(&#x27;.hero-art&#x27;).classList.remove(&#x27;ready&#x27;);$(&#x27;#particles&#x27;).classList.remove(&#x27;ready&#x27;);});
-motionButton.addEventListener(&#x27;click&#x27;,()=&gt;{paused=!paused;motionLabel();field.setPaused(paused,reduce.matches);});
+motionButton.addEventListener(&#x27;click&#x27;,()=&gt;{paused=!paused;motionLabel();field.setPaused(paused,false);});
 reduce.addEventListener(&#x27;change&#x27;,event=&gt;{paused=event.matches;motionLabel();document.documentElement.classList.toggle(&#x27;js-motion&#x27;,!event.matches);field.setPaused(paused,event.matches);});
 </code></pre>
 <h3>site/motion.js</h3>
@@ -212,18 +218,20 @@ export function shapeTarget(kind,i,count,time,box,pointer={nx:0,ny:0}){
 
 export class ParticleField{
  constructor(canvas,{paused=false,reduced=false}={}){
-  this.canvas=canvas;this.ctx=canvas.getContext(&#x27;2d&#x27;);this.paused=paused;this.reduced=reduced;this.frame=0;this.time=0;this.last=0;this.waves=[];this.cache=new Map();this.particles=[];this.pointer={x:-10000,y:-10000,nx:0,ny:0};this.expanded=false;this.mode=&#x27;text&#x27;;this.targetName=&#x27;SI&#x27;;this.box={x:0,y:0,w:1,h:1};this.visible=true;this.motionStart=0;
+  this.canvas=canvas;this.ctx=canvas.getContext(&#x27;2d&#x27;);this.paused=paused;this.reduced=reduced;this.frame=0;this.time=0;this.last=0;this.waves=[];this.cache=new Map();this.particles=[];this.pointer={x:-10000,y:-10000,nx:0,ny:0};this.expanded=false;this.mode=&#x27;text&#x27;;this.targetName=&#x27;SI&#x27;;this.box={x:0,y:0,w:1,h:1};this.visible=!document.hidden;this.motionStart=0;
  }
  async init(){
   if(!this.ctx)throw new Error(&#x27;Canvas unavailable&#x27;);
-  await document.fonts.load(&#x27;400 200px &quot;Instrument Serif&quot;&#x27;);this.resize();
+  await document.fonts.load(&#x27;400 200px &quot;Instrument Serif&quot;&#x27;);await document.fonts.ready;this.resize();
   window.addEventListener(&#x27;pointermove&#x27;,e=&gt;this.onPointer(e),{passive:true});
   document.addEventListener(&#x27;pointerleave&#x27;,()=&gt;{this.pointer.x=this.pointer.y=-10000;});
   window.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{if(this.paused||this.reduced||e.target.closest(&#x27;a,input,button:not(.art-toggle),dialog&#x27;))return;this.waves.push({x:e.clientX,y:e.clientY,radius:0});},{passive:true});
   window.addEventListener(&#x27;scroll&#x27;,()=&gt;{this.syncScene();if(this.paused)this.paint();},{passive:true});
   let timer;window.addEventListener(&#x27;resize&#x27;,()=&gt;{clearTimeout(timer);timer=setTimeout(()=&gt;this.resize(),120);});
   document.addEventListener(&#x27;visibilitychange&#x27;,()=&gt;{this.visible=!document.hidden;if(this.visible)this.start();else this.stop();});
-  document.querySelector(&#x27;.art-toggle&#x27;).addEventListener(&#x27;click&#x27;,e=&gt;{if(e.pointerType===&#x27;touch&#x27;||e.detail===0)this.setExpanded(!this.expanded);});
+  const art=document.querySelector(&#x27;.art-toggle&#x27;);let lastPointerType;
+  art.addEventListener(&#x27;pointerdown&#x27;,event=&gt;{lastPointerType=event.pointerType;});
+  art.addEventListener(&#x27;click&#x27;,event=&gt;{if(lastPointerType===&#x27;touch&#x27;||event.pointerType===&#x27;touch&#x27;||event.detail===0)this.setExpanded(!this.expanded);lastPointerType=null;});
   this.canvas.classList.add(&#x27;ready&#x27;);document.querySelector(&#x27;.hero-art&#x27;).classList.add(&#x27;ready&#x27;);this.paint();this.start();return this;
  }
  resize(){
@@ -394,6 +402,7 @@ test(&#x27;every procedural shape remains finite and animated on mobile and desk
  {id:&#x27;ilm&#x27;,title:&#x27;Ilmga ochiq eshik&#x27;,category:&#x27;O‘rganish&#x27;,description:&#x27;Savol, taxmin va dalil orasidagi farqni amalda ko‘ring. Kichik tajriba ham katta qiziqishning boshlanishi bo‘lishi mumkin.&#x27;,steps:[&#x27;Tekshirish mumkin bo‘lgan savol va taxminni yozing.&#x27;,&#x27;Kichik tajriba yoki ishonchli ochiq ma’lumot bilan tekshiring.&#x27;,&#x27;Natija, cheklov va xulosani bitta sahifada tushuntiring.&#x27;]}
 ];
 export function validPlan(value){return Array.isArray(value)?[...new Set(value.filter(id=&gt;initiatives.some(item=&gt;item.id===id)))]:[];}
+export function parsePlan(raw){try{return validPlan(JSON.parse(raw));}catch{return [];}}
 export function togglePlan(value,id){const plan=validPlan(value);if(!initiatives.some(item=&gt;item.id===id))return plan;return plan.includes(id)?plan.filter(item=&gt;item!==id):[...plan,id];}
 export function planText(value){const items=validPlan(value).map(id=&gt;initiatives.find(item=&gt;item.id===id));return [&#x27;YUKSAL · SHAXSIY REJA&#x27;,&#x27;Mustaqil mashq yo‘nalishlari. Haqiqiy ro‘yxatdan o‘tish emas.&#x27;,&#x27;&#x27;,...items.flatMap((item,index)=&gt;[`${index+1}. ${item.title}`,item.description,...item.steps.map((step,i)=&gt;`   ${i+1}) ${step}`),&#x27;&#x27;])].join(&#x27;\n&#x27;);}
 </code></pre>
@@ -403,11 +412,15 @@ import {test} from &#x27;node:test&#x27;;
 import assert from &#x27;node:assert/strict&#x27;;
 // The browser module is portable without package.json or an npm install.
 const source=await readFile(new URL(&#x27;./model.js&#x27;,import.meta.url),&#x27;utf8&#x27;);
-const {validPlan,togglePlan,planText}=await import(&#x27;data:text/javascript;base64,&#x27;+Buffer.from(source).toString(&#x27;base64&#x27;));
+const {validPlan,parsePlan,togglePlan,planText}=await import(&#x27;data:text/javascript;base64,&#x27;+Buffer.from(source).toString(&#x27;base64&#x27;));
 test(&#x27;persisted plans reject invalid input, unknown IDs and duplicates&#x27;,()=&gt;{assert.deepEqual(validPlan(null),[]);assert.deepEqual(validPlan([&#x27;savod&#x27;,&#x27;bad&#x27;,{},&#x27;savod&#x27;,&#x27;ilm&#x27;]),[&#x27;savod&#x27;,&#x27;ilm&#x27;]);});
+test(&#x27;storage reads tolerate broken JSON and sanitize external updates&#x27;,()=&gt;{for(const raw of [null,&#x27;&#x27;,&#x27;{&#x27;,&#x27;null&#x27;,&#x27;{}&#x27;,&#x27;42&#x27;,&#x27;&quot;savod&quot;&#x27;])assert.deepEqual(parsePlan(raw),[]);assert.deepEqual(parsePlan(&#x27;[&quot;savod&quot;,&quot;bad&quot;,&quot;savod&quot;,&quot;ilm&quot;]&#x27;),[&#x27;savod&#x27;,&#x27;ilm&#x27;]);});
 test(&#x27;toggling is reversible and never introduces unknown choices&#x27;,()=&gt;{assert.deepEqual(togglePlan([&#x27;savod&#x27;],&#x27;lab&#x27;),[&#x27;savod&#x27;,&#x27;lab&#x27;]);assert.deepEqual(togglePlan([&#x27;savod&#x27;,&#x27;lab&#x27;],&#x27;savod&#x27;),[&#x27;lab&#x27;]);assert.deepEqual(togglePlan([&#x27;savod&#x27;],&#x27;bad&#x27;),[&#x27;savod&#x27;]);});
 test(&#x27;download content follows selected order and contains actual exercise steps&#x27;,()=&gt;{const text=planText([&#x27;lab&#x27;,&#x27;ilm&#x27;]);assert.ok(text.indexOf(&#x27;G‘oyalar laboratoriyasi&#x27;)&lt;text.indexOf(&#x27;Ilmga ochiq eshik&#x27;));assert.ok(text.includes(&#x27;Bitta foydalanuvchida sinang&#x27;));assert.ok(!text.includes(&#x27;SI savodxonligi&#x27;));assert.ok(!text.includes(&#x27;undefined&#x27;));});
 </code></pre>
 <h3>site/uzbekistan.svg</h3>
 <pre><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 250 125&quot;&gt;&lt;title&gt;O‘zbekiston bayrog‘i&lt;/title&gt;&lt;defs&gt;&lt;path id=&quot;star&quot; d=&quot;M0-3 .67-.93 2.85-.93 1.08.35 1.76 2.43 0 1.15-1.76 2.43-1.08.35-2.85-.93-.67-.93Z&quot;/&gt;&lt;mask id=&quot;crescent&quot;&gt;&lt;circle cx=&quot;35&quot; cy=&quot;20&quot; r=&quot;15&quot; fill=&quot;white&quot;/&gt;&lt;circle cx=&quot;40.5&quot; cy=&quot;20&quot; r=&quot;15&quot; fill=&quot;black&quot;/&gt;&lt;/mask&gt;&lt;/defs&gt;&lt;path fill=&quot;#0099b5&quot; d=&quot;M0 0h250v40H0z&quot;/&gt;&lt;path fill=&quot;#ce1126&quot; d=&quot;M0 40h250v45H0z&quot;/&gt;&lt;path fill=&quot;#ffffff&quot; d=&quot;M0 42.5h250v40H0z&quot;/&gt;&lt;path fill=&quot;#1eb53a&quot; d=&quot;M0 85h250v40H0z&quot;/&gt;&lt;circle cx=&quot;35&quot; cy=&quot;20&quot; r=&quot;15&quot; fill=&quot;#ffffff&quot; mask=&quot;url(#crescent)&quot;/&gt;&lt;g fill=&quot;#ffffff&quot;&gt;&lt;use href=&quot;#star&quot; x=&quot;63&quot; y=&quot;8&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;75&quot; y=&quot;8&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;87&quot; y=&quot;8&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;51&quot; y=&quot;20&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;63&quot; y=&quot;20&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;75&quot; y=&quot;20&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;87&quot; y=&quot;20&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;39&quot; y=&quot;32&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;51&quot; y=&quot;32&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;63&quot; y=&quot;32&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;75&quot; y=&quot;32&quot;/&gt;&lt;use href=&quot;#star&quot; x=&quot;87&quot; y=&quot;32&quot;/&gt;&lt;/g&gt;&lt;/svg&gt;
+</code></pre>
+<h3>site/brand-icon.svg</h3>
+<pre><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot;&gt;&lt;title&gt;Yuksal&lt;/title&gt;&lt;rect x=&quot;1&quot; y=&quot;1&quot; width=&quot;62&quot; height=&quot;62&quot; rx=&quot;16&quot; fill=&quot;#ffffff&quot; stroke=&quot;#c4e3e6&quot; stroke-width=&quot;2&quot;/&gt;&lt;path d=&quot;M32 12v40M12 32h40M18 18l28 28M18 46l28-28&quot; fill=&quot;none&quot; stroke=&quot;#0099b5&quot; stroke-width=&quot;7&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;circle cx=&quot;32&quot; cy=&quot;32&quot; r=&quot;7&quot; fill=&quot;#1eb53a&quot;/&gt;&lt;/svg&gt;
 </code></pre></article></main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · 2026-10-15</div></footer></body></html>

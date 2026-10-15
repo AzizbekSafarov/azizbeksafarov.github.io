@@ -46,3 +46,7 @@ Do not restore the US 13-stripe field or red/white/blue branding when adjusting 
 ## White surface — latest user requirement
 
 The main background must stay pure white, including hero, vision, signal, plan, menu and footer. Preserve dark readable text and blue/green accents. Surface brightness is read from computed CSS, rather than assuming the legacy `section-dark` class means a dark background. White flag particles get a thin neutral outline on pale backgrounds so the white band, crescent and stars remain visible. Do not restore the deep teal page background.
+
+## Interaction repairs
+
+Wait for all active fonts before measuring text masks; initialize visibility from `document.hidden`. Touch toggling remembers `pointerdown.pointerType` because older click MouseEvents may not expose pointerType. Initial OS reduced motion remains respected; pressing the explicit Continue control enables the field even under that preference. Physical touch and OS preference switching require device-level verification. Site icons must remain the Yuksal asterisk; the national flag is content, not the favicon.

@@ -5,5 +5,6 @@ export const initiatives=[
  {id:'ilm',title:'Ilmga ochiq eshik',category:'O‘rganish',description:'Savol, taxmin va dalil orasidagi farqni amalda ko‘ring. Kichik tajriba ham katta qiziqishning boshlanishi bo‘lishi mumkin.',steps:['Tekshirish mumkin bo‘lgan savol va taxminni yozing.','Kichik tajriba yoki ishonchli ochiq ma’lumot bilan tekshiring.','Natija, cheklov va xulosani bitta sahifada tushuntiring.']}
 ];
 export function validPlan(value){return Array.isArray(value)?[...new Set(value.filter(id=>initiatives.some(item=>item.id===id)))]:[];}
+export function parsePlan(raw){try{return validPlan(JSON.parse(raw));}catch{return [];}}
 export function togglePlan(value,id){const plan=validPlan(value);if(!initiatives.some(item=>item.id===id))return plan;return plan.includes(id)?plan.filter(item=>item!==id):[...plan,id];}
 export function planText(value){const items=validPlan(value).map(id=>initiatives.find(item=>item.id===id));return ['YUKSAL · SHAXSIY REJA','Mustaqil mashq yo‘nalishlari. Haqiqiy ro‘yxatdan o‘tish emas.','',...items.flatMap((item,index)=>[`${index+1}. ${item.title}`,item.description,...item.steps.map((step,i)=>`   ${i+1}) ${step}`),''])].join('\n');}

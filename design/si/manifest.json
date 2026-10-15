@@ -1,39 +1,39 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-15",
-  "source_fingerprint": "eab9332a9b5f9b2ecb810789935aeb50cfc3c9aaf3fcf1941281df47a7c032fb",
+  "source_fingerprint": "4c2f7bdcb31e33fd9516d7e6c3eab7a6346af87744ee95d3e143391457bae9fa",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "103527209ddd4d965240f2a99869c7ffa6625e567fa13b5b4074c49651e4fd21",
-  "archive_bytes": 159343,
+  "archive_sha256": "eab07d2f04a4f6f35dd59360c4c6612378e7b0bf2f79305e71aab8d3dc0c4ffd",
+  "archive_bytes": 175800,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "ca3b658e3043412c15d05ac8d1a956e58342a15adde74ce6a8435c4e518ff578",
+      "sha256": "b5c81a331cc10efa439fd9ac4097f64a16e5dfd076b5cf0ecc8229daccbb97a5",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/si/files/style.css.txt",
-      "sha256": "4de204f67b86dfc588ebf6bd0b55777d4d578367a399f4e1a87ac64b4eb97051",
+      "sha256": "7297c9d6be161f9d1492eca2ac9df4f8a0adbb9ffd647a1704ee35c8d680c1f0",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt"
     },
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/app.js.txt",
-      "sha256": "5f1f22ef88c701740ef3fd4b00c3cce0326a285d63919d393b6e3ad72f2b0e04",
+      "sha256": "e08eac6f1a99f3018f36175915a2f7c80d5c8b9d0c4ef2f643818841d3f4be9d",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/app.js.txt"
     },
     {
       "path": "motion.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/motion.js.txt",
-      "sha256": "5ed80083f3b208af1ef7dd98a9c7c6e12d197201cfb39804c70e064a0f5a4e4c",
+      "sha256": "95243ed0a663d97795b1c6f5c8fc7715a5527eec61f8da35516d15373776ddd3",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.js.txt"
     },
     {
@@ -45,13 +45,13 @@
     {
       "path": "model.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/model.js.txt",
-      "sha256": "37c4d78d40c224b95a97c9d7274bb9535d224ec4433130640993cf27b362f758",
+      "sha256": "fb1043ff34db59b015f2c09c8e23e4e3192755001d911b875069d6eff8e6ed1b",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.js.txt"
     },
     {
       "path": "model.test.mjs",
       "url": "https://azizbeksafarov.github.io/design/si/files/model.test.mjs.txt",
-      "sha256": "77de79a2ee9357d8a8be253a80260588470a89678daba0ae3c0d5faf6f9c4763",
+      "sha256": "489559fd28055716f4f756b59098a5d33383fbb46fea2cca36e0b6c2c07a0201",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.test.mjs.txt"
     },
     {
@@ -59,6 +59,12 @@
       "url": "https://azizbeksafarov.github.io/design/si/files/uzbekistan.svg.txt",
       "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/uzbekistan.svg.txt"
+    },
+    {
+      "path": "brand-icon.svg",
+      "url": "https://azizbeksafarov.github.io/design/si/files/brand-icon.svg.txt",
+      "sha256": "4c59b0beca2e8c2fbf20a0d18d089ad6aea02febb5aaba2fe7852c3354af8425",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/brand-icon.svg.txt"
     }
   ],
   "files": [
@@ -69,13 +75,13 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 10680,
-      "sha256": "9de067e9029361af3702f405942a8ada5b91da8457cb886c4f7d1f1fafce0ed6"
+      "bytes": 11011,
+      "sha256": "3fd2e067d68994d9c5dfd68b0fcebea8b8a2f54977587ac5f8d76d9ca04c1e85"
     },
     {
       "path": "CHECKLIST.md",
-      "bytes": 1522,
-      "sha256": "2c54d7d8b1d6895aba9adfa35c1a9152834d12111a7d0dcd4707b7f436358661"
+      "bytes": 1554,
+      "sha256": "6eaa3efe2e35622e3ccf6603368fe717bf0ca0b30e7da030eb98a3c01e95d39b"
     },
     {
       "path": "CLAUDE.md",
@@ -100,17 +106,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1072,
-      "sha256": "d0ddb40cfae05c82a7cbbd2b9d35d3a7fd1e9dca518242ea491e214094a2a0a5"
+      "sha256": "cf7668b899a8ffb8da59fdbc66130f6fb86439bd756574d43c10177df182f637"
     },
     {
       "path": "README.md",
-      "bytes": 3114,
-      "sha256": "267f7be8b7aa7cab98582a7d666ac36470399cd3615065bfe0769972578c9dd6"
+      "bytes": 3514,
+      "sha256": "ea216300ef177cc6586ff6a9f99d13304967554c3a1dd1c77575423250dd862b"
     },
     {
       "path": "kit.json",
       "bytes": 208,
-      "sha256": "95f54c7921f116c01929733617b9d2e181f468e502f8bc948e9a146409b85bd1"
+      "sha256": "b0dd6dd1a54f99175581867ceb814dcaf0cdee44f9919e3c554cd52847b67ea7"
     },
     {
       "path": "serve.mjs",
@@ -119,28 +125,43 @@
     },
     {
       "path": "site/MOTION.md",
-      "bytes": 4439,
-      "sha256": "69324d9d2f85e27618eefa15649a5268f407bab278eaa4c8fff695abc244367c"
+      "bytes": 4975,
+      "sha256": "15047a788c27093ea02feebe33848700211dd5f35503c7fc87cd1a33660c7079"
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 3931,
-      "sha256": "0b2200bdcf26f46efd5937ca8ee1f8444794e489daf4b7a75983cccef4dfa8d2"
+      "bytes": 5305,
+      "sha256": "423c0e87800476eb39d6d5a5a9ba24bf9155f8f9329c0d784d75267595a29a62"
     },
     {
       "path": "site/README.md",
-      "bytes": 2847,
-      "sha256": "0f340dc886cb0b01af9910a0f066326b54aead0fe55a6c420d2f746996c20c6e"
+      "bytes": 3247,
+      "sha256": "591842be99912356e36e33f2366d299a7ce01d72cc6f116715cb0aa80c189930"
     },
     {
       "path": "site/app.js",
-      "bytes": 6779,
-      "sha256": "5f1f22ef88c701740ef3fd4b00c3cce0326a285d63919d393b6e3ad72f2b0e04"
+      "bytes": 7298,
+      "sha256": "e08eac6f1a99f3018f36175915a2f7c80d5c8b9d0c4ef2f643818841d3f4be9d"
+    },
+    {
+      "path": "site/apple-touch-icon.png",
+      "bytes": 12228,
+      "sha256": "cb4e0dc2c25dab101d23397811f670489851775f522e4abaae4be5fc93e74549"
+    },
+    {
+      "path": "site/brand-icon.svg",
+      "bytes": 356,
+      "sha256": "4c59b0beca2e8c2fbf20a0d18d089ad6aea02febb5aaba2fe7852c3354af8425"
     },
     {
       "path": "site/download_fonts.py",
       "bytes": 1113,
       "sha256": "bd4c5162cb8538bd6bbdbc313cfc1f0bccd887c93c6d8df0dedfb9c89192b2ef"
+    },
+    {
+      "path": "site/favicon-32.png",
+      "bytes": 1998,
+      "sha256": "d454904e679a64cf23e9715dcab77faf1241c86c33e2b4cad69b1e3d7959af1d"
     },
     {
       "path": "site/fonts/fonts.css",
@@ -189,28 +210,28 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 13562,
-      "sha256": "ca3b658e3043412c15d05ac8d1a956e58342a15adde74ce6a8435c4e518ff578"
+      "bytes": 13735,
+      "sha256": "b5c81a331cc10efa439fd9ac4097f64a16e5dfd076b5cf0ecc8229daccbb97a5"
     },
     {
       "path": "site/mark.svg",
-      "bytes": 998,
-      "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35"
+      "bytes": 356,
+      "sha256": "4c59b0beca2e8c2fbf20a0d18d089ad6aea02febb5aaba2fe7852c3354af8425"
     },
     {
       "path": "site/model.js",
-      "bytes": 2298,
-      "sha256": "37c4d78d40c224b95a97c9d7274bb9535d224ec4433130640993cf27b362f758"
+      "bytes": 2387,
+      "sha256": "fb1043ff34db59b015f2c09c8e23e4e3192755001d911b875069d6eff8e6ed1b"
     },
     {
       "path": "site/model.test.mjs",
-      "bytes": 1194,
-      "sha256": "77de79a2ee9357d8a8be253a80260588470a89678daba0ae3c0d5faf6f9c4763"
+      "bytes": 1456,
+      "sha256": "489559fd28055716f4f756b59098a5d33383fbb46fea2cca36e0b6c2c07a0201"
     },
     {
       "path": "site/motion.js",
-      "bytes": 15895,
-      "sha256": "5ed80083f3b208af1ef7dd98a9c7c6e12d197201cfb39804c70e064a0f5a4e4c"
+      "bytes": 16114,
+      "sha256": "95243ed0a663d97795b1c6f5c8fc7715a5527eec61f8da35516d15373776ddd3"
     },
     {
       "path": "site/motion.test.mjs",
@@ -224,8 +245,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 27524,
-      "sha256": "4de204f67b86dfc588ebf6bd0b55777d4d578367a399f4e1a87ac64b4eb97051"
+      "bytes": 27771,
+      "sha256": "7297c9d6be161f9d1492eca2ac9df4f8a0adbb9ffd647a1704ee35c8d680c1f0"
     },
     {
       "path": "site/template.json",

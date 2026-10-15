@@ -37,3 +37,5 @@ em{color:var(--blue)}.hero-aside>p,.hero-edition,.art-coordinate,.vision-bottom>
 .menu-dialog{background:#ffffff;color:var(--navy)}.menu-body nav a:hover{color:var(--blue)}.close:hover{background:#0099b512}
 .section-nav{color:var(--navy)}.menu-orb{box-shadow:0 8px 30px #0099b526}
 .footer-bottom{color:var(--muted)}.storage-warning{color:#8d4b00}
+.menu-dialog{overflow-y:auto;overscroll-behavior:contain}.menu-heading{position:sticky;top:0;z-index:5;background:#ffffff}
+@media(prefers-reduced-motion:reduce){body:not(.motion-paused) .orb-ring{animation:orb-spin 36s linear infinite!important}}
