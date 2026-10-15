@@ -63,3 +63,11 @@ Applied the supplied graphite AI control image as a colour reference to the root
 - 15 list/detail/empty cases at 1400/1024/768/390/320 had document overflow 0; recorded in QA-HQ-COLOUR.json.
 - A rendered text-colour pass caught two inherited light-theme defects: mobile return label and keyboard skip link. Both now have explicit high-contrast colours. This pass is not a full accessibility certification.
 - Desktop/mobile screenshots independently reviewed: reference colour mood recognizable; no blocking readability issue or excessive glow identified.
+
+## Revolving spectral edge — 2026-10-15
+
+User requested continuous rotation and verified GitHub publication. Registered angle animates the primary action's conic border and a separate blurred halo together over six seconds. The opaque button and text remain stationary; reduced-motion CSS leaves the edge static.
+
+- Actual browser samples: border and halo both moved from 250.98deg to 292.996deg. CSS animation name aurora-orbit; no JavaScript animation loop.
+- 320/390/1024px document overflow 0; primary action remains 52px high. Independent desktop/mobile screenshot critique found no blocking layout/readability or glow issues.
+- Publication success must be confirmed separately against the deployed commit; local animation checks alone do not confirm Pages delivery.

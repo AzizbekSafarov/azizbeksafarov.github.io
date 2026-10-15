@@ -1,5 +1,11 @@
 /* Colour reference: the user's graphite control with a soft spectral edge.
    Geometry and demo screenshots retain their existing shapes and colours. */
+@property --aurora-angle{
+ syntax:"<angle>";
+ initial-value:225deg;
+ inherits:false;
+}
+@keyframes aurora-orbit{from{--aurora-angle:225deg}to{--aurora-angle:585deg}}
 body[data-page="library"]{
  --paper:#111216;
  --ink:#efedf3;
@@ -36,15 +42,40 @@ body[data-page="library"] .design-row[aria-pressed="true"]::before{background:li
 body[data-page="library"] .design-row[aria-pressed="true"] .row-check{background:#dbe4ff;color:#171922}
 body[data-page="library"] .row-check{color:#a9afc0}
 body[data-page="library"] #selected-summary{color:#bdc0cc}
+body[data-page="library"] .aurora-action{
+ --spectral:conic-gradient(from var(--aurora-angle),#f08cad,#ff886e,#f2c67d,#a6cda2,#ada4ed,#97b8ff,#b09ae9,#f08cad);
+ position:relative;
+ isolation:isolate;
+ display:inline-flex;
+ flex:0 1 auto;
+ min-width:0;
+ border-radius:4px 30px 30px 30px;
+ animation:aurora-orbit 6s linear infinite;
+}
+body[data-page="library"] .aurora-action::before{
+ content:"";
+ position:absolute;
+ z-index:-1;
+ inset:-2px;
+ border-radius:inherit;
+ background:var(--spectral);
+ filter:blur(8px);
+ opacity:.45;
+ pointer-events:none;
+ transition:opacity .2s;
+}
+body[data-page="library"] .aurora-action:hover::before{opacity:.65}
 body[data-page="library"] #selected-demo{
+ min-height:52px;
+ font-size:13px;
  border:1.5px solid transparent;
  background:linear-gradient(#111216,#111216) padding-box,var(--spectral) border-box;
  color:#f4f1f7;
- box-shadow:-4px 0 16px #ff95772e,4px 0 17px #a9b2ff42;
+ box-shadow:none;
 }
 body[data-page="library"] #selected-demo:hover{
  background:linear-gradient(#1d1f26,#1d1f26) padding-box,var(--spectral) border-box;
- box-shadow:-4px 0 19px #ff957745,4px 0 21px #a9b2ff55;
+ box-shadow:none;
 }
 body[data-page="library"] #selected-demo>span{background:#292c36;color:#f4f1f7}
 body[data-page="library"] #selected-start{color:#d4d8e5}
@@ -65,3 +96,6 @@ body[data-page="library"] .nav-toggle{background:#1c1e26;border-color:#5f6575;co
 body[data-page="library"] a:focus-visible,
 body[data-page="library"] button:focus-visible,
 body[data-page="library"] summary:focus-visible{outline-color:#b3c9ff}
+@media(prefers-reduced-motion:reduce){
+ body[data-page="library"] .aurora-action{animation:none}
+}

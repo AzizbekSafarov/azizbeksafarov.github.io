@@ -30,3 +30,5 @@ python -m http.server 8770 --bind 127.0.0.1
 Faqat HQ o‘zgarsa build_hq yetadi. Source yoki DESIGN-STANDARD o‘zgarsa build_handoff barcha manifest/ZIPni yangilaydi. Bloomning o‘z AGENTS.md qoidalariga rioya qiling; minified distni patch qilmang. Yuksalning oq foni va brend faviconi saqlanadi.
 
 GitHub Pages main/rootdan nashr qiladi. Pushdan keyin deployment, ochiq HTML va muhim UI amallari tekshirilsin. Eski QA keyingi tahrirlar uchun dalil emas. HQ tekshiruvlari: `design/QA-HQ-FLOWS.json`, `design/QA-HQ-WORKSPACE.json`, `design/HQ-QA.md`.
+
+Asosiy tugmadagi rang va nur birgalikda 6 soniyada to‘liq aylanadi. Buning uchun aurora.cssdagi `--aurora-angle` ro‘yxatdan o‘tgan CSS xususiyati ishlatiladi. Tugma matni va shakli aylanmaydi. `prefers-reduced-motion` yoqilganida rangli chegara harakatsiz qoladi.
