@@ -1,6 +1,6 @@
 # Samar — tanlovda yangi AI uchun boshlash
 
-Snapshot: 2026-10-13; source fingerprint: `70f11a47cd22b4fb`. Readable page: https://azizbeksafarov.github.io/design/samar/
+Snapshot: 2026-10-15; source fingerprint: `87b40c0d4e072778`. Readable page: https://azizbeksafarov.github.io/design/samar/
 
 ## O‘qish vositasi uchun zaxira
 

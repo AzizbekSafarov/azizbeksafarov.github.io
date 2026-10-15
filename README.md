@@ -17,11 +17,13 @@ Hozirgi loyihalar:
 
 Bu repozitoriy `ustoz` repozitoriysidan mustaqil. Bosh sahifa o‘zgarishi `/ustoz/` materiallarini o‘zgartirmaydi.
 
-- [Dizaynlar galereyasi — 10 variant](https://azizbeksafarov.github.io/design/)
+- [Dizaynlar galereyasi — 11 variant](https://azizbeksafarov.github.io/design/)
+- [Yuksal · SI — SI.gov uslubidagi jonli namuna](https://azizbeksafarov.github.io/design/si-site/)
+- [Yuksal · SI — AI konteksti va kod](https://azizbeksafarov.github.io/design/si/)
 - [Bloom / Material Design 3](https://azizbeksafarov.github.io/design/material-expressive/dist/)
 - [Bloom — yangi AI uchun tanlov paketi](https://azizbeksafarov.github.io/design/bloom/)
 - [Barcha dizaynlar — AI boshlash markazi](https://azizbeksafarov.github.io/design/start/)
-- [10 starter va to‘liq tanlov matnlari ZIP](https://azizbeksafarov.github.io/design/kit.zip)
+- [11 starter va to‘liq tanlov matnlari ZIP](https://azizbeksafarov.github.io/design/kit.zip)
 - [Qadam / Google Material uslubi](https://azizbeksafarov.github.io/design/06-material.html)
 
 Dizaynlarning generatorlari va JS/CSS manbalari `design/` ichida. `design/build_templates.py` generatorini ishga tushirib, natijalarni `main` tarmog‘iga yuboring.

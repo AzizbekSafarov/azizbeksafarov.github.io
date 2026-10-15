@@ -45,7 +45,8 @@ def check_runtime(z,root):
 
 def verify():
     catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))['templates']
-    assert len(catalog)==10 and len({t['slug'] for t in catalog})==10
+    expected=len(json.loads((ROOT/'templates.json').read_text(encoding='utf-8')))
+    assert len(catalog)==expected and len({t['slug'] for t in catalog})==expected
     for template in catalog:
         folder=ROOT/template['slug'];manifest=json.loads((folder/'manifest.json').read_text(encoding='utf-8'));archive=(folder/'source.zip').read_bytes()
         assert sha256(archive).hexdigest()==manifest['archive_sha256']
@@ -74,6 +75,6 @@ def verify():
         assert z.testzip() is None
         assert 'competition/FULL-CONTEXT.md' in z.namelist()
         for template in catalog:assert z.read(template['slug']+'/source.zip')==(ROOT/template['slug']/'source.zip').read_bytes()
-    print('PASS: 10 focused AI briefs, links, SHA-256 manifests, archives, portable runtime resources and complete offline text context.')
+    print(f'PASS: {expected} focused AI briefs, links, SHA-256 manifests, archives, portable runtime resources and complete offline text context.')
 
 if __name__=='__main__':verify()

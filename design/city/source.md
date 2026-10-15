@@ -1,6 +1,6 @@
 # Open City — editable source snapshot
 
-Source fingerprint: `70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/09-open-city.html
 

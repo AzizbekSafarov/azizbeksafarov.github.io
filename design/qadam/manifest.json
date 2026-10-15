@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-13",
-  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e",
   "name": "Qadam · Material",
   "slug": "qadam",
   "context_url": "https://azizbeksafarov.github.io/design/qadam/",
   "ai_url": "https://azizbeksafarov.github.io/design/qadam/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/qadam/source.zip",
-  "archive_sha256": "80d494ac2c76b664c093d305c980bd28e4d70fa9535deb76ae5365f418185790",
-  "archive_bytes": 389763,
+  "archive_sha256": "b38ba3087881c67ff4cfe353ee50b26c2652c0764fe82a56093a826315c8827a",
+  "archive_bytes": 389968,
   "entry": "06-material.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -52,7 +52,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 9053,
-      "sha256": "a26da7680faa786a82f2eb3c598d3aff5a942531f7b72a67def69f4cc5923aa1"
+      "sha256": "f749a4b91ebc44d908a26610c2b35e03bbc83128b1a722fa8050102df20e54a7"
     },
     {
       "path": "CHECKLIST.md",
@@ -82,7 +82,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1080,
-      "sha256": "449a202728bd0c9591e111b584ac6a3482cec6be84205bce4bf34b176047aba6"
+      "sha256": "b7b156f2cad8adb87f79c24dc7b06338e9b3ea27d37769c801655c19952c31f0"
     },
     {
       "path": "README.md",
@@ -92,7 +92,7 @@
     {
       "path": "kit.json",
       "bytes": 222,
-      "sha256": "9e85495feb7c4b237452eb2539c3c9f213054e65b732ee2770ddc0b7dab4effb"
+      "sha256": "fd52306665afeddb7531dafb66265f2e4156a80b9884d2a4e3d569f231c49742"
     },
     {
       "path": "serve.mjs",
@@ -261,8 +261,8 @@
     },
     {
       "path": "site/build_templates.py",
-      "bytes": 60622,
-      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+      "bytes": 61200,
+      "sha256": "0101826c69f3335b7b2d4bb242d19df9134fef21301eb15833c3b3d615e7e13f"
     },
     {
       "path": "site/extra.js",

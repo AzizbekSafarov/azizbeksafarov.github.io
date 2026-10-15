@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-13",
-  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e",
   "name": "KasbLab",
   "slug": "kasblab",
   "context_url": "https://azizbeksafarov.github.io/design/kasblab/",
   "ai_url": "https://azizbeksafarov.github.io/design/kasblab/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/kasblab/source.zip",
-  "archive_sha256": "bccefee8d3e6b35c95c4878fc5c6e5fbc481c1c39e164d58df257f781c686783",
-  "archive_bytes": 389503,
+  "archive_sha256": "6f820bb6e04e1d5ec8de920c2af3c9f32f8ccb923f519ecbed7a571b2059fd12",
+  "archive_bytes": 389708,
   "entry": "01-kasblab.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -40,7 +40,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8610,
-      "sha256": "b20c16691f00d948f87c536f8e782010c6880734227920e350606ff65518f9c1"
+      "sha256": "c2c108eda589610813360845d6aceeef495f5d673a8e9bded0c56ef063a258cc"
     },
     {
       "path": "CHECKLIST.md",
@@ -70,7 +70,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1072,
-      "sha256": "fff9e4e2317dfdcf8dd752b73e88bf513d058cc1f991749a94fd5ec8e0858139"
+      "sha256": "ff07b3b235f05eb7e728de7601f72e0ec1744f0903699e875456a534d68906f7"
     },
     {
       "path": "README.md",
@@ -80,7 +80,7 @@
     {
       "path": "kit.json",
       "bytes": 213,
-      "sha256": "e03c807c11644a17389506cbba2963fd2ff71d4108d3875484c9659aa460eab9"
+      "sha256": "489c4340cb9d7f74d27830485ae2fb1d1b5afec1bfcb09aa302c288da42827de"
     },
     {
       "path": "serve.mjs",
@@ -249,8 +249,8 @@
     },
     {
       "path": "site/build_templates.py",
-      "bytes": 60622,
-      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+      "bytes": 61200,
+      "sha256": "0101826c69f3335b7b2d4bb242d19df9134fef21301eb15833c3b3d615e7e13f"
     },
     {
       "path": "site/extra.js",

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-13",
-  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e",
   "name": "Orbit",
   "slug": "orbit",
   "context_url": "https://azizbeksafarov.github.io/design/orbit/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbit/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbit/source.zip",
-  "archive_sha256": "9457244aa3ac4e02a311ea122bd8cf26e224c140ee28e82b5d4ee9c8db95dc0c",
-  "archive_bytes": 389473,
+  "archive_sha256": "187117840bf4cdf00afe8430e56db3fedcce73247fd2da1e347c07819ba5d3d6",
+  "archive_bytes": 389678,
   "entry": "03-orbit.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -40,7 +40,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8538,
-      "sha256": "da8fd3787b6f4c7c849e1122152fd7761709dc0827e9a8bd3526c7f00d95158e"
+      "sha256": "c564de4827a056f07e7f39bee433f01ba4266174a98825a17c807a6251d15339"
     },
     {
       "path": "CHECKLIST.md",
@@ -70,7 +70,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "63c1a0bddfbb0e7a27a7ff5490ed3cdc2e2664a4e6ce0e187580be46557bced6"
+      "sha256": "ff4346dccf6c3c8a0d303d7bb873a97234acf6941856e21f5fe0643cc14e8357"
     },
     {
       "path": "README.md",
@@ -80,7 +80,7 @@
     {
       "path": "kit.json",
       "bytes": 207,
-      "sha256": "3fd9c36a0096b19314e3c434b34d547866faec20c2ea259f39db1ed5a3ba82c0"
+      "sha256": "f05218e56c7c683931b7a09128424c216144632c5eeb3b35b3574c7b8ecaa3ee"
     },
     {
       "path": "serve.mjs",
@@ -249,8 +249,8 @@
     },
     {
       "path": "site/build_templates.py",
-      "bytes": 60622,
-      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+      "bytes": 61200,
+      "sha256": "0101826c69f3335b7b2d4bb242d19df9134fef21301eb15833c3b3d615e7e13f"
     },
     {
       "path": "site/extra.js",

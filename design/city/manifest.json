@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-13",
-  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e",
   "name": "Open City",
   "slug": "city",
   "context_url": "https://azizbeksafarov.github.io/design/city/",
   "ai_url": "https://azizbeksafarov.github.io/design/city/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/city/source.zip",
-  "archive_sha256": "6bbeb67066567945f5321367524d318c8ee43a5f461ecfd41014294ef56a7c20",
-  "archive_bytes": 389548,
+  "archive_sha256": "16b032d568d47d23a52ca968a271634692bf5a2c3bf581c11e95f5486ddcbda8",
+  "archive_bytes": 389753,
   "entry": "09-open-city.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -46,7 +46,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8722,
-      "sha256": "6fe82b795041b27cf8d892b0ae43353484e60f5517b793ce44060193e6148a1d"
+      "sha256": "bae7c157a0b61f0dfb6ba920152c11b26fab5e1bd0060ddee5317a149e44f0d8"
     },
     {
       "path": "CHECKLIST.md",
@@ -76,7 +76,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1071,
-      "sha256": "8856d9bbc61d35fbce1f2635cd1839fea2d2b5b661e2723a6dcdfc18d68f31a9"
+      "sha256": "aead78909cd59e25c4fecdf93618dec29a1064280a8509eaa5ae94b93c1101a9"
     },
     {
       "path": "README.md",
@@ -86,7 +86,7 @@
     {
       "path": "kit.json",
       "bytes": 214,
-      "sha256": "65a143d674793345104c472a75edea1cbdb4620e90af1fa4eca114bbee576809"
+      "sha256": "991f147770ce6e6e08cc296b217d40f037102eef02011db8d39d4b3f4efe1d38"
     },
     {
       "path": "serve.mjs",
@@ -255,8 +255,8 @@
     },
     {
       "path": "site/build_templates.py",
-      "bytes": 60622,
-      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+      "bytes": 61200,
+      "sha256": "0101826c69f3335b7b2d4bb242d19df9134fef21301eb15833c3b3d615e7e13f"
     },
     {
       "path": "site/extra.js",

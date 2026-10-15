@@ -1,6 +1,6 @@
 # Dizayn shablonlari — mahalliy tanlash galereyasi
 
-Barcha 10 variant GitHub Pages’da: https://azizbeksafarov.github.io/design/
+Barcha 11 variant GitHub Pages’da: https://azizbeksafarov.github.io/design/
 
 Tanlovda yangi AI bilan boshlash: https://azizbeksafarov.github.io/design/start/ . Bloom uchun qisqa manzil: https://azizbeksafarov.github.io/design/bloom/ . Kod, AI konteksti, tekshiruv va sessiyani davom ettirish paketi haqida `HANDOFF-README.md` ni o‘qing. Source o‘zgargach `build_handoff.py` va `verify_handoff.py` ham bajariladi.
 
@@ -19,6 +19,8 @@ Google uslubidagi Qadam: https://azizbeksafarov.github.io/design/06-material.htm
 9. Open City — JetBrains Mono + DM Sans, xizmat katalogi
 
 10. Bloom · Material Design 3 — `material-expressive/dist/index.html` mavjud bo‘lsa galereyaga qo‘shiladi.
+
+11. Yuksal · SI — SI.gov uslubidagi mustaqil portal: [jonli namuna](https://azizbeksafarov.github.io/design/si-site/), [AI konteksti va kod](https://azizbeksafarov.github.io/design/si/). Source `si-site/` ichida; npm shart emas. Instrument Serif/Sans, zarrachali canvas, dumaloq menyu, filtr va saqlanadigan reja.
 
 `index.html` galereyani ochadi. 01–09 sahifalar oddiy HTML/CSS/JavaScript; Bloom React, Motion va rasmiy Material Web komponentlari bilan yig‘ilgan mustaqil static build. Runtime CDN ishlatilmaydi. Qo‘shimcha shriftlar mahalliy fayllar sifatida litsenziyalari bilan saqlangan. Illyustratsiyalar SVG yoki CSS ko‘rinishida yaratilgan.
 

@@ -126,5 +126,12 @@ Material varianti mustaqil dizayn namunasi, Google mahsuloti emas. Ilhom manbala
 
 Tanlovda oldindan tayyorlangan shablon yoki koddan foydalanish uchun joydagi amaldagi reglament tekshiriladi.
 ''',encoding='utf-8')
+readme_path=ROOT/'README.md'
+readme=readme_path.read_text(encoding='utf-8').replace('Barcha 10 variant',f'Barcha {len(templates)} variant')
+readme+='\n11. Yuksal · SI — SI.gov vizual uslubidagi mustaqil portal; `si-site/` ichida.\n\nAI boshlash markazi: https://azizbeksafarov.github.io/design/start/ . Source o‘zgargach `build_handoff.py` va `verify_handoff.py` bajariladi. Tafsilotlar: `HANDOFF-README.md`.\n'
+readme_path.write_text(readme,encoding='utf-8')
+if (ROOT/'build_handoff.py').is_file():
+    from build_handoff import build as build_handoff
+    build_handoff()
 print(f'Created {len(templates)} templates and local gallery in', ROOT)
 

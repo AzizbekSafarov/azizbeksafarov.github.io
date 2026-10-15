@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-13",
-  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e",
   "name": "Lola",
   "slug": "lola",
   "context_url": "https://azizbeksafarov.github.io/design/lola/",
   "ai_url": "https://azizbeksafarov.github.io/design/lola/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/lola/source.zip",
-  "archive_sha256": "30b6d91ac8702a255d1404be65b7c9c54f1850b8f463925be4317881940967d2",
-  "archive_bytes": 389482,
+  "archive_sha256": "7b1f27690c51a925d0558da5bad1b3b04cb085160fe04f65d19cf097a027573f",
+  "archive_bytes": 389685,
   "entry": "07-lola.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -46,7 +46,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8667,
-      "sha256": "76abba21e3c188fa17bc1af6494941bc17b65f419acbc4916c887eb8cc414583"
+      "sha256": "ca205b2017df5ca267d32784b0ee511dc06570a7016cddd4f8ffbf1196d10aa1"
     },
     {
       "path": "CHECKLIST.md",
@@ -76,7 +76,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1066,
-      "sha256": "42df2b5c6474fc2030402d5ad3d653eb865dadffd442b47e82346355cbe22d24"
+      "sha256": "ffe5df824461c67da5d9eea037afa2e60330cfc0287220b785c65a1e45538f6f"
     },
     {
       "path": "README.md",
@@ -86,7 +86,7 @@
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "3b35b38807a070627749bc9c67dac5df9d163b8d6681266747e99638bc5318a2"
+      "sha256": "b2d812e64afc45752edf49f22302c95fe167975befcdea91f02a501a2154e67f"
     },
     {
       "path": "serve.mjs",
@@ -255,8 +255,8 @@
     },
     {
       "path": "site/build_templates.py",
-      "bytes": 60622,
-      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+      "bytes": 61200,
+      "sha256": "0101826c69f3335b7b2d4bb242d19df9134fef21301eb15833c3b3d615e7e13f"
     },
     {
       "path": "site/extra.js",

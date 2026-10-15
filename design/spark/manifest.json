@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-13",
-  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e",
   "name": "Spark",
   "slug": "spark",
   "context_url": "https://azizbeksafarov.github.io/design/spark/",
   "ai_url": "https://azizbeksafarov.github.io/design/spark/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/spark/source.zip",
-  "archive_sha256": "16d29a6ae3f7227256013669fa5728e74c12918eb8948ae10e165e5d57eb60e5",
-  "archive_bytes": 389488,
+  "archive_sha256": "9e852275156a712a12628b8f3dff46af522066cd5c22fe944fefd4fe3f0acd07",
+  "archive_bytes": 389693,
   "entry": "08-spark.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -46,7 +46,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8697,
-      "sha256": "1cc6380045ce9dc0621cd7488a7be0a2c8b93d9d0afcdc95c00e32107ce8d47d"
+      "sha256": "0dc1d15d2d029ad99a0b90ace3eb0022cf23746949fd156b6c31368e435f31ce"
     },
     {
       "path": "CHECKLIST.md",
@@ -76,7 +76,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "c981807f15549e879f1d2462e5833e7ecf10921d60da5612b090f48e6d72d839"
+      "sha256": "f32651088910876e9a41148c2495336d1eefc456139f962eb467f79ae5ca423f"
     },
     {
       "path": "README.md",
@@ -86,7 +86,7 @@
     {
       "path": "kit.json",
       "bytes": 207,
-      "sha256": "e27cbd2d45fe41d3083c02bc33ad83601fa390d4ebe2a28121925fd20a14f190"
+      "sha256": "b3421fc05fd8bc10277e33f0f0dec49304549333f03767c749ae868ede836943"
     },
     {
       "path": "serve.mjs",
@@ -255,8 +255,8 @@
     },
     {
       "path": "site/build_templates.py",
-      "bytes": 60622,
-      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+      "bytes": 61200,
+      "sha256": "0101826c69f3335b7b2d4bb242d19df9134fef21301eb15833c3b3d615e7e13f"
     },
     {
       "path": "site/extra.js",

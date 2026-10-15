@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-13",
-  "source_fingerprint": "70f11a47cd22b4fbe71d169edf9bee2cd9869bed6b9eb09937bd3b4a6ac56968",
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "87b40c0d4e072778f4080056e6064a85f045dce45355ca2eeac377a5a034b46e",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "7feab6cb20ab681692da788536e3c30d79cb64dbafdc8c62131da66b9ca5dd78",
-  "archive_bytes": 389532,
+  "archive_sha256": "72e8182adc81e2c64992878f050569a6584348ddd6f804f480396ec57e3cf38f",
+  "archive_bytes": 389736,
   "entry": "04-forma.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -40,7 +40,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8611,
-      "sha256": "721f73fcdf1846d3f58f5d3ff0c4d9877056221f864b5857de7ef2f66a672849"
+      "sha256": "9554917952273159fd70f49b64e11d173c37d30e9deee6cc5c656c8dac2e697a"
     },
     {
       "path": "CHECKLIST.md",
@@ -70,7 +70,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "242e80c2f198af247bdf35a61c45f565b4422145de0eb866b562f280ccd5b9b5"
+      "sha256": "2f5c174e83685b1ba5ac748e4871280bae1c8bfd3819149c6cae8dee48ffead2"
     },
     {
       "path": "README.md",
@@ -80,7 +80,7 @@
     {
       "path": "kit.json",
       "bytes": 207,
-      "sha256": "8ffd2372435b8d96e9bf0339eefdf02a8ba9b58256087494faa2089366a89e8c"
+      "sha256": "fe92a003437f40c7d72d68dc6d8cf362bd357bd4815ef0149464a3ce3c9c51ac"
     },
     {
       "path": "serve.mjs",
@@ -249,8 +249,8 @@
     },
     {
       "path": "site/build_templates.py",
-      "bytes": 60622,
-      "sha256": "612b52bcde90b54ef174e7fe0333b764b490054b7f27323a10a3ff6f580eb871"
+      "bytes": 61200,
+      "sha256": "0101826c69f3335b7b2d4bb242d19df9134fef21301eb15833c3b3d615e7e13f"
     },
     {
       "path": "site/extra.js",
