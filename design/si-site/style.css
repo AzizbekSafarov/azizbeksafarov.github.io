@@ -26,3 +26,13 @@
 .flag-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .6s}body:has(.particle-field.ready) .flag-fallback{opacity:0}.plan .motion-stage{position:relative}.flag-caption{font-size:9px;letter-spacing:.14em;color:var(--muted);margin-top:14px}.art-lab{background:var(--green)}.science-glyph>span,.step-symbol{color:var(--green)}
 .button.primary,.menu-orb{color:var(--navy-deep)}
 .section-nav{mix-blend-mode:normal;color:var(--blue)}.section-nav a[aria-current]:after{background:var(--green);border-color:var(--green)}body:has(.particle-field[data-surface=light]) .section-nav{color:var(--navy)}body:has(.particle-field[data-surface=light]) .section-nav a[aria-current]:after{background:#168a43;border-color:#168a43}
+
+/* White is the main page surface; national colors remain accents. */
+:root{color-scheme:light;--blue:#007c92;--muted:#49676e;--line:#062c3526}
+body,.section-dark{background:#ffffff;color:var(--navy);color-scheme:light}
+em{color:var(--blue)}.hero-aside>p,.hero-edition,.art-coordinate,.vision-bottom>p,.vision-note>span,.plan-intro,.scroll-cue{color:var(--muted)}.scroll-cue span{color:var(--navy)}
+.vision,.site-footer{border-color:var(--line)}.plan-panel{background:#f0f8f7;border-color:#aacdce}.plan-item button{border-color:#688f9766}.plan-item button:hover{background:#0099b51a;border-color:var(--accent)}
+.button.pale{background:var(--accent);color:var(--navy-deep)}.button.pale:hover:not(:disabled){background:#45cadd}
+.motion-control{background:#ffffffeb;color:var(--navy);border-color:#062c3540}.motion-control:hover{background:#edf7f8}
+.menu-dialog{background:#ffffff;color:var(--navy)}.menu-body nav a:hover{color:var(--blue)}.close:hover{background:#0099b512}
+.section-nav{color:var(--navy)}.menu-orb{box-shadow:0 8px 30px #0099b526}

@@ -218,8 +218,8 @@
       "file": "si-site/index.html",
       "category": "SI.gov / kinematik portal",
       "color": "#0099b5",
-      "background": "#062c35",
-      "summary": "O‘zbekistonning moviy, oq va yashil ranglari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, nafis serif va jonli shakl almashishi.",
+      "background": "#ffffff",
+      "summary": "Oq asosiy fon, O‘zbekistonning moviy va yashil aksentlari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, serif va jonli shakl almashishi.",
       "features": "O‘zbekiston palitrasi · 12 yulduzli bayroq · SI ↔ Super Intelligence · kursor / click fizikasi · scroll morph · shaxsiy reja",
       "use": "AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari",
       "fonts": [
@@ -233,8 +233,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/si/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/si/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/si/manifest.json",
-      "source_fingerprint": "74be970506f56f47a68cc8d8a2a9fc9238ee3bf7bbfa4203f03495ff3356acda",
-      "archive_bytes": 158398
+      "source_fingerprint": "e2acda8836ba81f5be46ea2074a418b361a24bdf0100add711e7505ad448bdce",
+      "archive_bytes": 159327
     }
   ]
 }

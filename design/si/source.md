@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `74be970506f56f47a68cc8d8a2a9fc9238ee3bf7bbfa4203f03495ff3356acda`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `e2acda8836ba81f5be46ea2074a418b361a24bdf0100add711e7505ad448bdce`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 
@@ -10,13 +10,13 @@ Source fingerprint: `74be970506f56f47a68cc8d8a2a9fc9238ee3bf7bbfa4203f03495ff335
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#062c35">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Yuksal — sun’iy intellekt, bilim va yoshlar tashabbuslari uchun mustaqil interaktiv dizayn namunasi.">
   <title>Yuksal · SI — kelajakni birga yaratamiz</title>
-  <link rel="icon" href="mark.svg?v=3" type="image/svg+xml">
+  <link rel="icon" href="mark.svg?v=4" type="image/svg+xml">
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="style.css?v=3">
-  <script type="module" src="app.js?v=3"></script>
+  <link rel="stylesheet" href="style.css?v=4">
+  <script type="module" src="app.js?v=4"></script>
 </head>
 <body>
 <a class="skip" href="#main">Asosiy mazmunga o‘tish</a>
@@ -82,12 +82,22 @@ Source fingerprint: `74be970506f56f47a68cc8d8a2a9fc9238ee3bf7bbfa4203f03495ff335
 .button.primary,.menu-orb{color:var(--navy-deep)}
 .section-nav{mix-blend-mode:normal;color:var(--blue)}.section-nav a[aria-current]:after{background:var(--green);border-color:var(--green)}body:has(.particle-field[data-surface=light]) .section-nav{color:var(--navy)}body:has(.particle-field[data-surface=light]) .section-nav a[aria-current]:after{background:#168a43;border-color:#168a43}
 
+/* White is the main page surface; national colors remain accents. */
+:root{color-scheme:light;--blue:#007c92;--muted:#49676e;--line:#062c3526}
+body,.section-dark{background:#ffffff;color:var(--navy);color-scheme:light}
+em{color:var(--blue)}.hero-aside>p,.hero-edition,.art-coordinate,.vision-bottom>p,.vision-note>span,.plan-intro,.scroll-cue{color:var(--muted)}.scroll-cue span{color:var(--navy)}
+.vision,.site-footer{border-color:var(--line)}.plan-panel{background:#f0f8f7;border-color:#aacdce}.plan-item button{border-color:#688f9766}.plan-item button:hover{background:#0099b51a;border-color:var(--accent)}
+.button.pale{background:var(--accent);color:var(--navy-deep)}.button.pale:hover:not(:disabled){background:#45cadd}
+.motion-control{background:#ffffffeb;color:var(--navy);border-color:#062c3540}.motion-control:hover{background:#edf7f8}
+.menu-dialog{background:#ffffff;color:var(--navy)}.menu-body nav a:hover{color:var(--blue)}.close:hover{background:#0099b512}
+.section-nav{color:var(--navy)}.menu-orb{box-shadow:0 8px 30px #0099b526}
+
 ```
 
 ## site/app.js
 
 ```javascript
-import {ParticleField} from './motion.js?v=3';
+import {ParticleField} from './motion.js?v=4';
 import {initiatives,validPlan,togglePlan,planText} from './model.js';
 
 const $=selector=>document.querySelector(selector);
@@ -253,9 +263,9 @@ export class ParticleField{
   let section=candidates.at(-1)||hero;let mode=section.dataset.motion||'text',scene=section===hero?'hero':section.id||mode;
   let box;
   if(scene==='hero'){
-   const heading=document.querySelector('.hero h1').getBoundingClientRect().top+scrollY;
+   const heading=document.querySelector('.hero-copy').getBoundingClientRect().top+scrollY;
    mode=this.expanded?(this.width<900?'circle':'snake'):'text';
-   box=this.width>=900?(this.expanded?{x:this.width*.04,y:72,w:this.width*.92,h:Math.max(this.height*.3,heading-72)}:{x:this.width*.04,y:this.height*.1,w:this.width*.92,h:this.height*.6}):{x:this.width*.02,y:64,w:this.width*.96,h:Math.max(this.height*.25,heading-82)};
+   box=this.width>=900?(this.expanded?{x:this.width*.04,y:72,w:this.width*.92,h:Math.max(120,heading-90)}:{x:this.width*.04,y:this.height*.1,w:this.width*.92,h:Math.max(120,Math.min(this.height*.6,heading-18-this.height*.1))}):{x:this.width*.02,y:64,w:this.width*.96,h:Math.max(this.height*.25,heading-82)};
   }else{
    const b=section.querySelector('.motion-stage')?.getBoundingClientRect();
    box=this.width>=900&&scene!=='reja'?{x:this.width*.52,y:this.height*.14,w:this.width*.42,h:this.height*.72}:b?{x:b.left,y:b.top,w:b.width,h:b.height}:{x:this.width*.08,y:this.height*.1,w:this.width*.84,h:this.height*.5};
@@ -265,7 +275,8 @@ export class ParticleField{
   const signature=[mode,scene,target,Math.round(box.x),Math.round(box.y),Math.round(box.w),Math.round(box.h)].join('|');
   const changed=signature!==this.signature;
   this.scene=scene;this.box=box;this.mode=mode;this.targetName=target;
-  this.light=Boolean(section.closest('.section-cream,.section-light'));
+  const surface=section.closest('section')||hero,channels=getComputedStyle(surface).backgroundColor.match(/[\d.]+/g)?.slice(0,3).map(Number);
+  this.light=!channels||channels[0]*.2126+channels[1]*.7152+channels[2]*.0722>150;
   this.canvas.dataset.surface=this.light?'light':'dark';
   const footer=document.querySelector('.site-footer').getBoundingClientRect();this.opacity=clamp((footer.top-this.height*.25)/(this.height*.5),0,1);
   if(scene==='hero'&&heroBox.bottom<0)this.opacity=0;
@@ -322,7 +333,9 @@ export class ParticleField{
   for(let i=0;i<this.particles.length;i++){
    const p=this.particles[i],t=this.target(i);if(dt)advanceParticle(p,t,this.pointer,this.waves,dt);
    const speed=clamp(Math.hypot(p.vx,p.vy)/7,0,1),size=t.size*(this.width<700?1.1:1.35)+speed*2;
-   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[this.mode==='flag'?t.color:speed>.35?1:t.color??p.color];c.fillRect(p.x-size/2,p.y-size/2,size,size);
+   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[this.mode==='flag'?t.color:speed>.35?1:t.color??p.color];
+   if(this.mode==='flag'&&this.light&&t.color===0){c.strokeStyle='#59757d';c.lineWidth=.45;c.strokeRect(p.x-size/2,p.y-size/2,size,size);}
+   c.fillRect(p.x-size/2,p.y-size/2,size,size);
   }c.globalAlpha=1;
  }
  tick=now=>{

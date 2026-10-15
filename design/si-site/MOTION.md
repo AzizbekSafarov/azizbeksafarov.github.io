@@ -4,7 +4,7 @@ The previous red jittering SI was insufficient. Preserve the reference's actual 
 
 ## Persistent field
 
-One fixed viewport canvas, 1800 particles on desktop / 1500 below 700 px, DPR capped at 2. Particles retain identity, position and velocity while targets change. The palette is Uzbekistan blue #0099b5, white #ffffff and green #1eb53a on deep teal #062c35. Moving particles turn blue and grow; flag particles retain their assigned national colors even while moving. Light surfaces use dark teal instead of the white particle role for contrast. Red #ce1126 is reserved for the flag’s two narrow separators.
+One fixed viewport canvas, 1800 particles on desktop / 1500 below 700 px, DPR capped at 2. Particles retain identity, position and velocity while targets change. The palette is Uzbekistan blue #0099b5, white #ffffff and green #1eb53a on a white #ffffff page with deep teal #062c35 text. Moving particles turn blue and grow; flag particles retain their assigned national colors even while moving. Light surfaces use dark teal instead of the white particle role for contrast. Red #ce1126 is reserved for the flag’s two narrow separators.
 
 Spring attraction .045, velocity damping .84 at 60 Hz; long frames are substepped. Pointer repels within 120 px. Pointer-down on decorative space sends a circular shockwave out at 16 px per 60 Hz frame; interactive controls keep their normal behavior. Pointer position also rotates the sphere. Hidden document and explicit pause cancel the animation frame; returning starts one loop.
 
@@ -42,3 +42,7 @@ Run `node --test model.test.mjs motion.test.mjs`. Browser checks must also verif
 ## Uzbekistan identity — user requirement
 
 Do not restore the US 13-stripe field or red/white/blue branding when adjusting reference motion. `FLAG_STARS`, `uzbekFlagPoints` and `uzbekistan.svg` share the 12-star composition. The flag keeps a 2:1 cloth aspect ratio before its wave deformation. The SVG is the static failure fallback; the live canvas renders the cloth, separators, crescent and all stars as particles. Identity reference: https://gov.uz/oz/narpay/news/view/103093 .
+
+## White surface — latest user requirement
+
+The main background must stay pure white, including hero, vision, signal, plan, menu and footer. Preserve dark readable text and blue/green accents. Surface brightness is read from computed CSS, rather than assuming the legacy `section-dark` class means a dark background. White flag particles get a thin neutral outline on pale backgrounds so the white band, crescent and stars remain visible. Do not restore the deep teal page background.

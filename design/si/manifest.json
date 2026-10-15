@@ -1,39 +1,39 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-15",
-  "source_fingerprint": "74be970506f56f47a68cc8d8a2a9fc9238ee3bf7bbfa4203f03495ff3356acda",
+  "source_fingerprint": "e2acda8836ba81f5be46ea2074a418b361a24bdf0100add711e7505ad448bdce",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "9ec42fd8be6a05ece2e8f2e675ff00cbe03a4ef00ce6e544ee89f53a14893901",
-  "archive_bytes": 158398,
+  "archive_sha256": "e13c995fd83be764b9391d7f167b75d52d55ff84ae7c50e8db533a10f44d7ee6",
+  "archive_bytes": 159327,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "d24f737c16c224c43987dc692abfa27913ec6ebf954542d2b5e848f8f0bdd0f5",
+      "sha256": "aa9a2dd25b9365c0b1b5523b921befc21ae9f72845131852cc054cd0de92e511",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/si/files/style.css.txt",
-      "sha256": "2c5326fcf288be05d1cf6200aa3b99e963c54b5358e38fea41f6501a6cfa9ce9",
+      "sha256": "8f99077902783f055ff83abaf5c9c6efee30721a5768426c39876a116c04b80d",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt"
     },
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/app.js.txt",
-      "sha256": "3e16e33d96528d62c8120f94114c2a776a9eafa70fd5c9421218f1643d61a637",
+      "sha256": "5f1f22ef88c701740ef3fd4b00c3cce0326a285d63919d393b6e3ad72f2b0e04",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/app.js.txt"
     },
     {
       "path": "motion.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/motion.js.txt",
-      "sha256": "80606658effce755831ef835b50ed2e610f51566fb1a6cf6c4ba5ebc1c7e7be9",
+      "sha256": "5ed80083f3b208af1ef7dd98a9c7c6e12d197201cfb39804c70e064a0f5a4e4c",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.js.txt"
     },
     {
@@ -64,13 +64,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2389,
-      "sha256": "0b9844b6fc85701fd71b9b9bdb4358de7803c63c13e4a9128263715b33bbf197"
+      "bytes": 2413,
+      "sha256": "4aa34e76ba39f3181a26789ba5e003addd95934f0a15491604dbf146626f7707"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 10606,
-      "sha256": "3726036913ad05d49dbeb158bb52ab20b8a3ec2d2d53678901d68dc31a6ac9fa"
+      "bytes": 10680,
+      "sha256": "4736aab23872acf36d112a28e9848e5569d1322703588cba20997b92266b14f7"
     },
     {
       "path": "CHECKLIST.md",
@@ -100,17 +100,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1072,
-      "sha256": "982f1b9d6f60dbf9f68d554cce5fed0c9d0ab59a47731e7142ea40195e6047c5"
+      "sha256": "bb90b47966dcc18588c734490c276be53b9f70023ed1697467468902669db5ef"
     },
     {
       "path": "README.md",
-      "bytes": 3039,
-      "sha256": "92a25f480b3c56644b85370631b00f91b22e9fa071b73097a3209287134d6947"
+      "bytes": 3114,
+      "sha256": "267f7be8b7aa7cab98582a7d666ac36470399cd3615065bfe0769972578c9dd6"
     },
     {
       "path": "kit.json",
       "bytes": 208,
-      "sha256": "f7b501cd8b41480b02159127df6fa96f9afad8b57a30706aead537a9d79496cf"
+      "sha256": "ae09dd39b69ab99567a5aadca161c15e94559f185c174c93eae5f24f40df237b"
     },
     {
       "path": "serve.mjs",
@@ -119,23 +119,23 @@
     },
     {
       "path": "site/MOTION.md",
-      "bytes": 3920,
-      "sha256": "ee1d22bc67b155dfcd0c2a251601ce258b9afba4050fa03fee36f846db4a3605"
+      "bytes": 4439,
+      "sha256": "69324d9d2f85e27618eefa15649a5268f407bab278eaa4c8fff695abc244367c"
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 3348,
-      "sha256": "280905b325cb35766c26a2ccdfc995309dbe0a35d5331e56cc83da793b6b8ccc"
+      "bytes": 3931,
+      "sha256": "0b2200bdcf26f46efd5937ca8ee1f8444794e489daf4b7a75983cccef4dfa8d2"
     },
     {
       "path": "site/README.md",
-      "bytes": 2772,
-      "sha256": "8bb43db2029977f00b9d51519d84245e9a3e1b792eea53fe72182a67c0f33439"
+      "bytes": 2847,
+      "sha256": "0f340dc886cb0b01af9910a0f066326b54aead0fe55a6c420d2f746996c20c6e"
     },
     {
       "path": "site/app.js",
       "bytes": 6779,
-      "sha256": "3e16e33d96528d62c8120f94114c2a776a9eafa70fd5c9421218f1643d61a637"
+      "sha256": "5f1f22ef88c701740ef3fd4b00c3cce0326a285d63919d393b6e3ad72f2b0e04"
     },
     {
       "path": "site/download_fonts.py",
@@ -190,7 +190,7 @@
     {
       "path": "site/index.html",
       "bytes": 13562,
-      "sha256": "d24f737c16c224c43987dc692abfa27913ec6ebf954542d2b5e848f8f0bdd0f5"
+      "sha256": "aa9a2dd25b9365c0b1b5523b921befc21ae9f72845131852cc054cd0de92e511"
     },
     {
       "path": "site/mark.svg",
@@ -209,8 +209,8 @@
     },
     {
       "path": "site/motion.js",
-      "bytes": 15558,
-      "sha256": "80606658effce755831ef835b50ed2e610f51566fb1a6cf6c4ba5ebc1c7e7be9"
+      "bytes": 15895,
+      "sha256": "5ed80083f3b208af1ef7dd98a9c7c6e12d197201cfb39804c70e064a0f5a4e4c"
     },
     {
       "path": "site/motion.test.mjs",
@@ -224,13 +224,13 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 26411,
-      "sha256": "2c5326fcf288be05d1cf6200aa3b99e963c54b5358e38fea41f6501a6cfa9ce9"
+      "bytes": 27458,
+      "sha256": "8f99077902783f055ff83abaf5c9c6efee30721a5768426c39876a116c04b80d"
     },
     {
       "path": "site/template.json",
-      "bytes": 669,
-      "sha256": "02f972f9d7194477405dbe981c811b715d28308370753a77be84a9dd1f47bb08"
+      "bytes": 676,
+      "sha256": "8df2c1e7b01280dcdc6d7ceeb32c250b3389a19279a2befcc07217eb4d6bc890"
     },
     {
       "path": "site/uzbekistan.svg",

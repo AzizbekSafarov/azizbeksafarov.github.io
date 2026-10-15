@@ -106,9 +106,9 @@ export class ParticleField{
   let section=candidates.at(-1)||hero;let mode=section.dataset.motion||'text',scene=section===hero?'hero':section.id||mode;
   let box;
   if(scene==='hero'){
-   const heading=document.querySelector('.hero h1').getBoundingClientRect().top+scrollY;
+   const heading=document.querySelector('.hero-copy').getBoundingClientRect().top+scrollY;
    mode=this.expanded?(this.width<900?'circle':'snake'):'text';
-   box=this.width>=900?(this.expanded?{x:this.width*.04,y:72,w:this.width*.92,h:Math.max(this.height*.3,heading-72)}:{x:this.width*.04,y:this.height*.1,w:this.width*.92,h:this.height*.6}):{x:this.width*.02,y:64,w:this.width*.96,h:Math.max(this.height*.25,heading-82)};
+   box=this.width>=900?(this.expanded?{x:this.width*.04,y:72,w:this.width*.92,h:Math.max(120,heading-90)}:{x:this.width*.04,y:this.height*.1,w:this.width*.92,h:Math.max(120,Math.min(this.height*.6,heading-18-this.height*.1))}):{x:this.width*.02,y:64,w:this.width*.96,h:Math.max(this.height*.25,heading-82)};
   }else{
    const b=section.querySelector('.motion-stage')?.getBoundingClientRect();
    box=this.width>=900&&scene!=='reja'?{x:this.width*.52,y:this.height*.14,w:this.width*.42,h:this.height*.72}:b?{x:b.left,y:b.top,w:b.width,h:b.height}:{x:this.width*.08,y:this.height*.1,w:this.width*.84,h:this.height*.5};
@@ -118,7 +118,8 @@ export class ParticleField{
   const signature=[mode,scene,target,Math.round(box.x),Math.round(box.y),Math.round(box.w),Math.round(box.h)].join('|');
   const changed=signature!==this.signature;
   this.scene=scene;this.box=box;this.mode=mode;this.targetName=target;
-  this.light=Boolean(section.closest('.section-cream,.section-light'));
+  const surface=section.closest('section')||hero,channels=getComputedStyle(surface).backgroundColor.match(/[\d.]+/g)?.slice(0,3).map(Number);
+  this.light=!channels||channels[0]*.2126+channels[1]*.7152+channels[2]*.0722>150;
   this.canvas.dataset.surface=this.light?'light':'dark';
   const footer=document.querySelector('.site-footer').getBoundingClientRect();this.opacity=clamp((footer.top-this.height*.25)/(this.height*.5),0,1);
   if(scene==='hero'&&heroBox.bottom<0)this.opacity=0;
@@ -175,7 +176,9 @@ export class ParticleField{
   for(let i=0;i<this.particles.length;i++){
    const p=this.particles[i],t=this.target(i);if(dt)advanceParticle(p,t,this.pointer,this.waves,dt);
    const speed=clamp(Math.hypot(p.vx,p.vy)/7,0,1),size=t.size*(this.width<700?1.1:1.35)+speed*2;
-   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[this.mode==='flag'?t.color:speed>.35?1:t.color??p.color];c.fillRect(p.x-size/2,p.y-size/2,size,size);
+   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[this.mode==='flag'?t.color:speed>.35?1:t.color??p.color];
+   if(this.mode==='flag'&&this.light&&t.color===0){c.strokeStyle='#59757d';c.lineWidth=.45;c.strokeRect(p.x-size/2,p.y-size/2,size,size);}
+   c.fillRect(p.x-size/2,p.y-size/2,size,size);
   }c.globalAlpha=1;
  }
  tick=now=>{

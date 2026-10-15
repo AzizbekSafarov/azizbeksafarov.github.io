@@ -1,6 +1,6 @@
 # Yuksal · SI
 
-Independent Uzbek initiative portal inspired by https://www.si.gov/, inspected on 2026-10-15. Original Uzbek content, canvas/CSS artwork and interactions. The flag and interface use Uzbekistan blue/white/green with a crescent and 12 stars; motion mechanics follow the reference while this branding is the user’s chosen adaptation. No political text or videos were copied. No government affiliation is claimed.
+Independent Uzbek initiative portal inspired by https://www.si.gov/, inspected on 2026-10-15. Original Uzbek content, canvas/CSS artwork and interactions. The page has a pure white main background with dark readable text. The flag and interface accents use Uzbekistan blue/white/green with a crescent and 12 stars; motion mechanics follow the reference while this branding is the user’s chosen adaptation. No political text or videos were copied. No government affiliation is claimed.
 
 ## Run and test
 
