@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `e2acda8836ba81f5be46ea2074a418b361a24bdf0100add711e7505ad448bdce`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `eab9332a9b5f9b2ecb810789935aeb50cfc3c9aaf3fcf1941281df47a7c032fb`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 
@@ -15,7 +15,7 @@ Source fingerprint: `e2acda8836ba81f5be46ea2074a418b361a24bdf0100add711e7505ad44
   <title>Yuksal · SI — kelajakni birga yaratamiz</title>
   <link rel="icon" href="mark.svg?v=4" type="image/svg+xml">
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
   <script type="module" src="app.js?v=4"></script>
 </head>
 <body>
@@ -91,6 +91,7 @@ em{color:var(--blue)}.hero-aside>p,.hero-edition,.art-coordinate,.vision-bottom>
 .motion-control{background:#ffffffeb;color:var(--navy);border-color:#062c3540}.motion-control:hover{background:#edf7f8}
 .menu-dialog{background:#ffffff;color:var(--navy)}.menu-body nav a:hover{color:var(--blue)}.close:hover{background:#0099b512}
 .section-nav{color:var(--navy)}.menu-orb{box-shadow:0 8px 30px #0099b526}
+.footer-bottom{color:var(--muted)}.storage-warning{color:#8d4b00}
 
 ```
 

@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-15",
-  "source_fingerprint": "e2acda8836ba81f5be46ea2074a418b361a24bdf0100add711e7505ad448bdce",
+  "source_fingerprint": "eab9332a9b5f9b2ecb810789935aeb50cfc3c9aaf3fcf1941281df47a7c032fb",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "e13c995fd83be764b9391d7f167b75d52d55ff84ae7c50e8db533a10f44d7ee6",
-  "archive_bytes": 159327,
+  "archive_sha256": "103527209ddd4d965240f2a99869c7ffa6625e567fa13b5b4074c49651e4fd21",
+  "archive_bytes": 159343,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "aa9a2dd25b9365c0b1b5523b921befc21ae9f72845131852cc054cd0de92e511",
+      "sha256": "ca3b658e3043412c15d05ac8d1a956e58342a15adde74ce6a8435c4e518ff578",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/si/files/style.css.txt",
-      "sha256": "8f99077902783f055ff83abaf5c9c6efee30721a5768426c39876a116c04b80d",
+      "sha256": "4de204f67b86dfc588ebf6bd0b55777d4d578367a399f4e1a87ac64b4eb97051",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt"
     },
     {
@@ -70,7 +70,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 10680,
-      "sha256": "4736aab23872acf36d112a28e9848e5569d1322703588cba20997b92266b14f7"
+      "sha256": "9de067e9029361af3702f405942a8ada5b91da8457cb886c4f7d1f1fafce0ed6"
     },
     {
       "path": "CHECKLIST.md",
@@ -100,7 +100,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1072,
-      "sha256": "bb90b47966dcc18588c734490c276be53b9f70023ed1697467468902669db5ef"
+      "sha256": "d0ddb40cfae05c82a7cbbd2b9d35d3a7fd1e9dca518242ea491e214094a2a0a5"
     },
     {
       "path": "README.md",
@@ -110,7 +110,7 @@
     {
       "path": "kit.json",
       "bytes": 208,
-      "sha256": "ae09dd39b69ab99567a5aadca161c15e94559f185c174c93eae5f24f40df237b"
+      "sha256": "95f54c7921f116c01929733617b9d2e181f468e502f8bc948e9a146409b85bd1"
     },
     {
       "path": "serve.mjs",
@@ -190,7 +190,7 @@
     {
       "path": "site/index.html",
       "bytes": 13562,
-      "sha256": "aa9a2dd25b9365c0b1b5523b921befc21ae9f72845131852cc054cd0de92e511"
+      "sha256": "ca3b658e3043412c15d05ac8d1a956e58342a15adde74ce6a8435c4e518ff578"
     },
     {
       "path": "site/mark.svg",
@@ -224,8 +224,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 27458,
-      "sha256": "8f99077902783f055ff83abaf5c9c6efee30721a5768426c39876a116c04b80d"
+      "bytes": 27524,
+      "sha256": "4de204f67b86dfc588ebf6bd0b55777d4d578367a399f4e1a87ac64b4eb97051"
     },
     {
       "path": "site/template.json",

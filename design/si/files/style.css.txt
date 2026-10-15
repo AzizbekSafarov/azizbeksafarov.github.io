@@ -36,3 +36,4 @@ em{color:var(--blue)}.hero-aside>p,.hero-edition,.art-coordinate,.vision-bottom>
 .motion-control{background:#ffffffeb;color:var(--navy);border-color:#062c3540}.motion-control:hover{background:#edf7f8}
 .menu-dialog{background:#ffffff;color:var(--navy)}.menu-body nav a:hover{color:var(--blue)}.close:hover{background:#0099b512}
 .section-nav{color:var(--navy)}.menu-orb{box-shadow:0 8px 30px #0099b526}
+.footer-bottom{color:var(--muted)}.storage-warning{color:#8d4b00}
