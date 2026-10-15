@@ -32,3 +32,17 @@ Replaced the public root/gallery composition with a master/detail library and pe
 - Independent visual critique applied: readable control typography; description before actions; clear AI and ZIP labels; phone return-search; short preview title. Subsequent critique found no blocking readability/spacing issues. Screenshots can require an additional capture after async image decoding; DOM image completion was separately checked.
 
 These checks do not claim exhaustive accessibility certification, production backend functionality or zero future bugs.
+
+## HQ flow corrections — 2026-10-15
+
+Reproduced three failures before changing the implementation: phone design choices started 1218px below the viewport top; choosing Bloom then opening the starter silently selected Orbita; empty ticket/time fields still produced a successful clipboard message.
+
+- Phone layout now starts with the list (366px at 390×844), then opens the selected detail with an explicit return control. Compact navigation supports Escape and focus return. Desktop retains both panes.
+- Design choice is passed to the starter; exact ticket and time were verified in the copied prompt. Blank and whitespace-only input instead exposes associated inline errors and focuses the first missing field.
+- Search, category, selection and phone view are encoded in the URL. Reload, browser Back, empty/reset and unknown parameters were exercised.
+- Current browser sweep: 40 page/viewport cases, widths 1400/1024/768/390/320, including detail and no-result states. Every case had document overflow 0 and broken populated images 0. See QA-HQ-FLOWS.json.
+- Six library model tests pass; all nine handoff packages and hashes pass verification. Console warning/error snapshot was empty.
+- Independent screenshot review found no blocking collisions or readability issues. Applied its spacing and shorter action-label refinements. Final phone buttons both measure 48px high, action padding 12px, overflow 0.
+
+Layout reference: https://m3.material.io/foundations/layout/canonical-examples/overview
+Form labels and feedback reference: https://www.w3.org/WAI/tutorials/forms/labels/

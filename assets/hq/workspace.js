@@ -1,12 +1,19 @@
-import {matching,selectedItem} from './library-model.mjs?v=1';
-const payload=document.getElementById('library-data');
+import {matching,readLibraryState,writeLibraryState} from './library-model.mjs?v=2';
+const $=selector=>document.querySelector(selector);
+const navToggle=$('#nav-toggle'),sidebar=$('.workspace-sidebar');
+if(navToggle){
+ document.documentElement.classList.add('workspace-ready');navToggle.hidden=false;
+ const closeMenu=()=>{navToggle.setAttribute('aria-expanded','false');sidebar.classList.remove('nav-open');};
+ navToggle.addEventListener('click',()=>{const open=navToggle.getAttribute('aria-expanded')!=='true';navToggle.setAttribute('aria-expanded',String(open));sidebar.classList.toggle('nav-open',open);});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&sidebar.classList.contains('nav-open')){closeMenu();navToggle.focus();}});
+ sidebar.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeMenu));
+}
+const payload=$('#library-data');
 if(payload){
- const items=JSON.parse(payload.textContent),$=s=>document.querySelector(s);
- const rows=[...document.querySelectorAll('[data-template]')],groups=[...document.querySelectorAll('[data-group]')];
- const query=$('#design-search'),panel=$('#selected-design'),empty=$('#search-empty');
- let group='all',current=selectedItem(items,new URL(location.href).searchParams.get('design'));
- function show(item,announce=false){
-  current=item;
+ const items=JSON.parse(payload.textContent),rows=[...document.querySelectorAll('[data-template]')],groups=[...document.querySelectorAll('[data-group]')];
+ const query=$('#design-search'),library=$('#designs'),panel=$('#selected-design'),empty=$('#search-empty');
+ let state=readLibraryState(items,location.search);
+ function show(item){
   rows.forEach(row=>{const on=row.dataset.template===item?.slug;row.setAttribute('aria-pressed',String(on));row.querySelector('.row-check').textContent=on?'✓':'→';});
   if(!item)return;
   $('#selected-name').textContent=item.name;$('#selected-category').textContent=item.category;$('#selected-summary').textContent=item.summary;
@@ -15,32 +22,37 @@ if(payload){
   for(const id of ['selected-demo','preview-link','preview-expand'])$('#'+id).href=item.demo;
   $('#preview-link').setAttribute('aria-label',item.name+' saytini ochish');$('#preview-address').textContent=item.name+' · Jonli namuna';
   $('#selected-context').href=item.context;$('#selected-download').href=item.zip;$('#selected-size').textContent=item.size+' KB';
-  $('#download-status').textContent='';if(announce)$('#selection-status').textContent=item.name+' tanlandi. Saytni ochish yoki AI bilan ishlash amalini tanlang.';
+  document.querySelectorAll('a[href^="/design/start/"]').forEach(a=>{a.href='/design/start/?design='+encodeURIComponent(item.slug);});
+  $('#download-status').textContent='';
  }
  function render(){
-  const found=matching(items,query.value,group),slugs=new Set(found.map(t=>t.slug));
+  state.found=matching(items,state.query,state.group);const slugs=new Set(state.found.map(t=>t.slug));
+  state.selected=state.found.find(t=>t.slug===state.selected?.slug)||state.found[0]||null;
   rows.forEach(row=>{row.hidden=!slugs.has(row.dataset.template);});
-  $('#design-count').textContent=found.length+' ta dizayn';
-  $('.design-index').hidden=!found.length;panel.hidden=!found.length;empty.hidden=!!found.length;
-  if(found.length){
-   const before=current?.slug;show(slugs.has(current?.slug)?current:found[0]);
-   if(current.slug!==before){const url=new URL(location.href);url.searchParams.set('design',current.slug);history.replaceState({design:current.slug},'',url);}
-  }
-  groups.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.group===group)));
+  query.value=state.query;$('#design-count').textContent=state.found.length+' ta dizayn';
+  $('.design-index').hidden=!state.found.length;panel.hidden=!state.found.length;empty.hidden=!!state.found.length;
+  if(!state.found.length)state.view='list';
+  library.dataset.view=state.view;
+  groups.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.group===state.group)));
+  show(state.selected);
  }
- rows.forEach(row=>row.addEventListener('click',()=>{
-  const item=selectedItem(items,row.dataset.template);show(item,true);
-  const url=new URL(location.href);url.searchParams.set('design',item.slug);history.pushState({design:item.slug},'',url);
+ function remember(push=false){const url=writeLibraryState(location.href,state);if(url.href!==location.href)history[push?'pushState':'replaceState'](null,'',url);}
+ function choose(slug){
+  const item=state.found.find(t=>t.slug===slug);if(!item)return;
+  state.selected=item;state.view='detail';render();remember(true);
+  $('#selection-status').textContent=item.name+' tanlandi. Saytni oching yoki shu dizayn bilan boshlang.';
   if(matchMedia('(max-width:700px)').matches){panel.scrollIntoView({behavior:'auto',block:'start'});$('#selected-name').focus({preventScroll:true});}
- }));
- query.addEventListener('input',render);
- groups.forEach(b=>b.addEventListener('click',()=>{group=b.dataset.group;render();}));
- $('#clear-search').addEventListener('click',()=>{query.value='';group='all';render();query.focus();});
- window.addEventListener('popstate',()=>{query.value='';group='all';current=selectedItem(items,new URL(location.href).searchParams.get('design'));render();});
- document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){event.preventDefault();query.focus();}});
- show(current);render();
+ }
+ rows.forEach(row=>row.addEventListener('click',()=>choose(row.dataset.template)));
+ query.addEventListener('input',()=>{state.query=query.value;state.view='list';render();remember();});
+ groups.forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;state.view='list';render();remember(true);}));
+ $('#clear-search').addEventListener('click',()=>{state.query='';state.group='all';state.view='list';render();remember(true);query.focus();});
+ $('#back-to-list').addEventListener('click',()=>{state.view='list';render();remember(true);const row=rows.find(r=>r.dataset.template===state.selected?.slug);row?.focus();});
+ window.addEventListener('popstate',()=>{state=readLibraryState(items,location.search);render();});
+ document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){event.preventDefault();state.view='list';render();remember();query.focus();}});
+ render();
 }
 document.querySelectorAll('[data-download]').forEach(a=>a.addEventListener('click',()=>{
- const status=a.closest('#selected-design')?document.getElementById('download-status'):document.getElementById('global-download-status');
+ const status=a.closest('#selected-design')?$('#download-status'):$('#global-download-status');
  if(status)status.textContent='Fayl yuklash brauzerga topshirildi. Yuklamalar bo‘limini tekshiring.';
 }));
