@@ -55,3 +55,11 @@ User clarified that the repeated geometry concerned the .io root, not the demons
 - Phone actions measure 52px high. Savdo filter → Forma → starter preserves Forma. Existing six library model tests pass.
 - Independent desktop/mobile screenshot critique confirmed visible geometry changes, differentiated actions and no blocking collisions/readability problems.
 - Role distinction follows Carbon's continuity/contrast guidance: https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/guidelines
+
+## User colour reference — 2026-10-15
+
+Applied the supplied graphite AI control image as a colour reference to the root/gallery: graphite surfaces, off-white text, warm/cool spectral edge and localized glow on the primary action. Geometry and demonstration screenshots unchanged. Colour overrides are scoped to library pages.
+
+- 15 list/detail/empty cases at 1400/1024/768/390/320 had document overflow 0; recorded in QA-HQ-COLOUR.json.
+- A rendered text-colour pass caught two inherited light-theme defects: mobile return label and keyboard skip link. Both now have explicit high-contrast colours. This pass is not a full accessibility certification.
+- Desktop/mobile screenshots independently reviewed: reference colour mood recognizable; no blocking readability issue or excessive glow identified.

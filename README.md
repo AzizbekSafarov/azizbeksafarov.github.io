@@ -17,6 +17,8 @@ HQ: `design/workspace_hq.py`, `assets/hq/workspace.css`, `workspace.js`, `librar
 
 Bosh sahifaning shakl tizimi `assets/hq/geometry.css`da, faqat `body[data-page="library"]`ga qo‘llanadi: ochiq qidiruv chizig‘i, tagchiziqli tablar, yon belgili namuna qatorlari, alohida asosiy/ikkinchi amal shakllari va asimmetrik namuna foni. Rasmlar maska bilan kesilmaydi. Ranglar va shrift oilasi workspace.cssdan olinadi.
 
+Kutubxonaning grafit rang mavzusi `assets/hq/aurora.css`da: foydalanuvchi bergan AI tugmasi rasmini rang namunasi qilib, asosiy amalda iliq pushti/sariq va sovuq ko‘k/binafsha chegara, yumshoq nur hamda och matn ishlatilgan. Shu fayl kutubxona uchun workspace.css ranglarini almashtiradi; shakllar geometry.cssda qoladi. Demo saytlarning ranglari alohida saqlanadi.
+
 ```text
 python design/build_hq.py
 node --test assets/hq/library-model.test.mjs

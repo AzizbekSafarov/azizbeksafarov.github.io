@@ -1,0 +1,67 @@
+/* Colour reference: the user's graphite control with a soft spectral edge.
+   Geometry and demo screenshots retain their existing shapes and colours. */
+body[data-page="library"]{
+ --paper:#111216;
+ --ink:#efedf3;
+ --muted:#afb0bb;
+ --line:#34363e;
+ --active:#202229;
+ --orange:#a8c2ff;
+ --spectral:conic-gradient(from 225deg,#f08cad,#ff886e,#f2c67d,#a6cda2,#ada4ed,#97b8ff,#b09ae9,#f08cad);
+ color-scheme:dark;
+ background:var(--paper);
+ color:var(--ink);
+}
+body[data-page="library"] .workspace-sidebar{background:#15161b}
+body[data-page="library"] .skip{background:#efedf3;color:#111216}
+body[data-page="library"] .mobile-back{color:#c9d2ed}
+body[data-page="library"] .brand-symbol>span{color:#f297b0}
+body[data-page="library"] .workspace-nav a>span,
+body[data-page="library"] .note-symbol{color:#aeb2c2}
+body[data-page="library"] .workspace-nav a[aria-current]>span{color:var(--ink)}
+body[data-page="library"] .workspace-top>a,
+body[data-page="library"] .sidebar-note a,
+body[data-page="library"] .workspace-footer>a,
+body[data-page="library"] .return-search{color:#c9d2ed}
+body[data-page="library"] .workspace-footer{color:var(--muted)}
+body[data-page="library"] .search{border-bottom-color:#707481}
+body[data-page="library"] .search:focus-within{border-bottom-color:#acc3ff}
+body[data-page="library"] .search-icon{color:#d9dce7;background:#252730}
+body[data-page="library"] .search input::placeholder{color:#a5a7b3;opacity:1}
+body[data-page="library"] .search kbd{color:#a5a7b3}
+body[data-page="library"] .library-filters button:hover{border-bottom-color:#acb8d5;color:var(--ink)}
+body[data-page="library"] .library-filters button[aria-pressed="true"]{border-bottom-color:#b7caff}
+body[data-page="library"] .design-row[aria-pressed="true"]{background:#202229}
+body[data-page="library"] .design-row[aria-pressed="true"]::before{background:linear-gradient(#ffc18e,#ed9ebf,#9dbbff)}
+body[data-page="library"] .design-row[aria-pressed="true"] .row-check{background:#dbe4ff;color:#171922}
+body[data-page="library"] .row-check{color:#a9afc0}
+body[data-page="library"] #selected-summary{color:#bdc0cc}
+body[data-page="library"] #selected-demo{
+ border:1.5px solid transparent;
+ background:linear-gradient(#111216,#111216) padding-box,var(--spectral) border-box;
+ color:#f4f1f7;
+ box-shadow:-4px 0 16px #ff95772e,4px 0 17px #a9b2ff42;
+}
+body[data-page="library"] #selected-demo:hover{
+ background:linear-gradient(#1d1f26,#1d1f26) padding-box,var(--spectral) border-box;
+ box-shadow:-4px 0 19px #ff957745,4px 0 21px #a9b2ff55;
+}
+body[data-page="library"] #selected-demo>span{background:#292c36;color:#f4f1f7}
+body[data-page="library"] #selected-start{color:#d4d8e5}
+body[data-page="library"] #selected-start>span{background:#191b22;border-color:#737a8f;color:#e3e9ff}
+body[data-page="library"] #selected-start:hover>span{background:#2b3040}
+body[data-page="library"] .selected-resources{color:#c6ccdd}
+body[data-page="library"] .preview-browser::before{background:#1c1e26}
+body[data-page="library"] #preview-address{color:#b8bdcf}
+body[data-page="library"] .preview-bar>a{background:#111216;border-color:#626a80;color:#e6eaff}
+body[data-page="library"] .selected-image-link{box-shadow:0 12px 25px #0004}
+body[data-page="library"] .use-details,
+body[data-page="library"] .use-details summary{color:#b7bfd3}
+body[data-page="library"] .offline-link:hover{background:#202229;border-color:var(--line)}
+body[data-page="library"] .no-results>.button{background:transparent;border-color:#7f8ba7;color:#e1e7f6}
+body[data-page="library"] #download-status:not(:empty),
+body[data-page="library"] #global-download-status{color:#a6dab5}
+body[data-page="library"] .nav-toggle{background:#1c1e26;border-color:#5f6575;color:#dce1ef}
+body[data-page="library"] a:focus-visible,
+body[data-page="library"] button:focus-visible,
+body[data-page="library"] summary:focus-visible{outline-color:#b3c9ff}
