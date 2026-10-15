@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "cbff7dec5d4d50c644f030a14d1b017f2f96284774a0d6bc17dddccaa432bccb",
-  "archive_bytes": 518649,
+  "archive_sha256": "4c47666fc86ae6b049612a2f2961cd5969a90a0c4418c8da2f14ad99c9527cec",
+  "archive_bytes": 518698,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -88,8 +88,8 @@
     },
     {
       "path": "DESIGN-STANDARD.md",
-      "bytes": 7308,
-      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
+      "bytes": 7444,
+      "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6"
     },
     {
       "path": "GEMINI.md",

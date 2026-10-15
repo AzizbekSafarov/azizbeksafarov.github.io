@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "4984af6ff1cd8d75c3116c2a30ebe91ed7b702d476cc00c16d8ff799afc9af2f",
-  "archive_bytes": 1467674,
+  "archive_sha256": "33f50a28fad9265a83720bfbe79ba13f61a26771d708e817e5032711c36db0e6",
+  "archive_bytes": 1467723,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -88,8 +88,8 @@
     },
     {
       "path": "DESIGN-STANDARD.md",
-      "bytes": 7308,
-      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
+      "bytes": 7444,
+      "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6"
     },
     {
       "path": "GEMINI.md",

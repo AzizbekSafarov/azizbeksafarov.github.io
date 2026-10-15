@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "994a93da7f76e568c53f9b6160fbca91e6e197fa181df44df382124b95605be2",
-  "archive_bytes": 1729479,
+  "archive_sha256": "53f10f9fa7076890c01864397061b4e1b4d8c1131cfad097476037d34ff4fb3a",
+  "archive_bytes": 1729528,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -88,8 +88,8 @@
     },
     {
       "path": "DESIGN-STANDARD.md",
-      "bytes": 7308,
-      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
+      "bytes": 7444,
+      "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6"
     },
     {
       "path": "GEMINI.md",

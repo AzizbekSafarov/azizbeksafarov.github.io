@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "d6377d8cc19c1dfdf7353d60649cdbb67550b3063670d498ae58fcf54e5d36fc",
-  "archive_bytes": 260271,
+  "archive_sha256": "24463914ef7ca02764d1b8457e04ec2c97bf160ef7647f0c859ce395562c521f",
+  "archive_bytes": 260320,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -88,8 +88,8 @@
     },
     {
       "path": "DESIGN-STANDARD.md",
-      "bytes": 7308,
-      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
+      "bytes": 7444,
+      "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6"
     },
     {
       "path": "GEMINI.md",

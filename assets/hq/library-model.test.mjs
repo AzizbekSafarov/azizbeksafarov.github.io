@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {matching,selectedItem} from './library-model.mjs';
+const items=[{slug:'bloom',name:'Bloom',group:'app',category:'Material 3',use:'Loyiha ish maydoni',summary:'Loyihalar'},{slug:'ziyo',name:'Ziyo',group:'app',category:'Ta’lim',use:'Kurs',summary:'Dars'},{slug:'nashr',name:'Nashr',group:'story',category:'Gazeta',use:'O‘qish',summary:'Maqola'}];
+test('query matches Uzbek apostrophe variants and multiple terms',()=>{assert.deepEqual(matching(items,"ta'lim").map(t=>t.slug),['ziyo']);assert.deepEqual(matching(items,'material loyiha').map(t=>t.slug),['bloom']);assert.deepEqual(matching(items,' OQISH ').map(t=>t.slug),['nashr']);});
+test('category and search work together without losing catalog data',()=>{assert.equal(matching(items,'','app').length,2);assert.equal(matching(items,'gazeta','app').length,0);assert.equal(matching(items,'missing').length,0);assert.equal(items.length,3);});
+test('shared URL only selects known designs and empty results are explicit',()=>{assert.equal(selectedItem(items,'nashr').slug,'nashr');assert.equal(selectedItem(items,'javascript:alert(1)').slug,'bloom');assert.equal(selectedItem([],'bloom'),null);});

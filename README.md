@@ -2,24 +2,25 @@
 
 https://azizbeksafarov.github.io/
 
-Faol dizaynlar: Yuksal, Bloom, Samar va Forma. Samar/Forma to‘liq qayta ishlangan; qolgan yetti eski namuna, paket va aliaslar joriy loyihadan o‘chirilgan. Arxiv sahifasi yo‘q.
+To‘qqiz faol dizayn: Bloom, Yuksal, Orbita, Nashr, Hisob, Ziyo, Meros, Samar va Forma. Bosh sahifa — yon navigatsiya, qidirish/filtr, namunalar ro‘yxati va tanlangan dizayn uchun preview + aniq amallar. Tanlash holati URLda saqlanadi.
 
-- /design/ — faol galereya
-- /design/start/ — bilet, vaqt, dizayn va tayyor AI prompt
-- /ai.md — markaziy kontekst
-- /design/kit.zip — to‘rtta starter + to‘liq yig‘ilgan tanlov matnlari
-- /design/standart/ — sifat mezonlari
-- /ustoz/ — mustaqil research repozitoriysi, o‘zgartirilmaydi
+- `/` va `/design/` — dizayn kutubxonasi.
+- `/ai/` — brauzerda o‘qiladigan AI konteksti; `/ai.md` — asl matn.
+- `/design/start/` — bilet/vaqt/dizayndan aniq AI topshirig‘i.
+- `/design/kit.zip` — to‘qqiz kod paketi va tanlov konteksti.
+- `/design/standart/` — sifat mezonlari.
+- `/ustoz/` — alohida research Pages repozitoriysi.
 
-HQ: assets/hq/site.css, site.js, design/build_hq.py. Samar/Forma: design/samar-site/, design/forma-site/, ularning HTML/CSS generatori design/build_refined.py. Har bir starter mustaqil preview va manba kreditlariga ega.
+HQ: `design/workspace_hq.py`, `assets/hq/workspace.css`, `workspace.js`, `library-model.mjs`. `design/hq_v2.py` yordamchi sahifa mazmunini va markaziy kontekstni hosil qiladi; yakuniy HTMLni workspace generatori yozadi. Barcha shriftlar lokal.
 
 ```text
-python design/build_refined.py
+python design/build_hq.py
+node --test assets/hq/library-model.test.mjs
 python design/build_handoff.py
 python design/verify_handoff.py
 python -m http.server 8770 --bind 127.0.0.1
 ```
 
-Bloom uchun o‘z AGENTS.md fayli amal qiladi; minified distni patch qilmang. Yuksalning oq foni, brand faviconi va O‘zbekiston kontent bayrog‘i saqlanadi. Source/build yangilangach handoff paketlarini qayta yarating.
+Faqat HQ o‘zgarsa build_hq yetadi. Source yoki DESIGN-STANDARD o‘zgarsa build_handoff barcha manifest/ZIPni yangilaydi. Bloomning o‘z AGENTS.md qoidalariga rioya qiling; minified distni patch qilmang. Yuksalning oq foni va brend faviconi saqlanadi.
 
-GitHub Pages main rootdan nashr qiladi. Pushdan so‘ng deployment va ochiq UI tekshirilsin. Account, parol va maxfiy konfiguratsiya ommaviy repozitoriyga kiritilmaydi.
+GitHub Pages main/rootdan nashr qiladi. Pushdan keyin deployment, ochiq HTML va muhim UI amallari tekshirilsin. Eski QA keyingi tahrirlar uchun dalil emas. HQ tekshiruvlari: `design/QA-HQ-WORKSPACE.json`, `design/HQ-QA.md`.

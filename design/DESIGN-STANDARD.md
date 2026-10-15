@@ -30,7 +30,7 @@ Tipografiya, cheklangan rang rollari, iyerarxiya va gridning izchilligi vizual s
 
 ## Bizning vizual yo‘nalishlarimiz
 
-Bosh qarorgoh: DM Sans + IBM Plex Mono, oq/kobalt, uch yo‘lli ishga kirish paneli, qidiriladigan 9 dizaynli kutubxona. Serif tahririy demo uslubidan alohida. Preview — haqiqiy brauzer screenshot; son — haqiqiy katalog miqdori.
+Bosh qarorgoh: DM Sans, oqish fon va aniq rang rollari; yon navigatsiya, qidirish/filtr, namunalar ro‘yxati va tanlangan dizaynning katta ko‘rinishi. Ta’rif va haqiqiy amallar previewdan oldin. AI konteksti /ai/ o‘qiladigan sahifada; /ai.md mashina uchun saqlanadi. Tanlash holati URLda. Preview — haqiqiy brauzer screenshot; son — haqiqiy katalog miqdori.
 
 Kelley Gordon grid, izchil shrift rollari, maqsadli rang va mazmun tashuvchi tasvirlarni bir tizimda ko‘rishni tavsiya qiladi. Bitta rasm yoki shrift har joyga takrorlansa, turli vazifalar ham bir qolipga o‘xshab qoladi. [NNGroup: Good Visual Design, Explained](https://www.nngroup.com/articles/good-visual-design/).
 
