@@ -1,6 +1,6 @@
 # Forma — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-15; source fingerprint `05f9e0afda8c89da`.
+Snapshot: 2026-10-15; source fingerprint `5dff9a5901c21aee`.
 Entry: https://azizbeksafarov.github.io/design/forma/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -15,7 +15,7 @@ Ishtirokchi xabari: Urgutdan Samarqand viloyat bosqichi, 2026-10-13. Video trans
 
 ## Tanlangan dizayn va haqiqiy kod
 
-Forma: oq/krem fon, oliva aksent, mahalliy Instrument Serif/Sans, haqiqiy Unsplash fotosuratlari, katta mahsulot kompozitsiyasi va sokin katalog. model.js: uch known mahsulot, integer 1–20 miqdor, narxlar, material/o‘lcham namunasi va jami/eksport. app.js: kategoriya, detail, savat drawer, qo‘shish/miqdor/olish, saqlash va download. Narx, material va o‘lchamlar namunaviy; suratdagi buyumning tekshirilgan spetsifikatsiyasi yoki savdo taklifi emas. To‘lov/buyurtma yuborilmaydi.
+Forma: oq/qora va terrakota, DM Sans geometrik yozuv, mahsulotning vertikal katta fotosurati, BUYUM/MAKON/HAYOT kompozitsiyasi va aniq katalog. model.js: uch known mahsulot, integer 1–20 miqdor, narxlar, material/o‘lcham namunasi va jami/eksport. app.js: kategoriya, detail, savat drawer, qo‘shish/miqdor/olish, saqlash va download. Narx/material/o‘lcham namunaviy; suratdagi buyumning tekshirilgan spetsifikatsiyasi emas. To‘lov/buyurtma yuborilmaydi.
 
 Bu eski arxiv maketi emas: qayta ishlangan mustaqil starter. Bloom/Yuksalni ko‘chirish bilan almashtirma. Har bir rang, shrift roli va tugma holatini saqla; mazmun/model/funksiyalarni biletga moslashtir.
 

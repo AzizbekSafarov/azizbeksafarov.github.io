@@ -7,8 +7,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "c170fd5bb6ba393e617c0f873ca2aaea05b484d708c1e4f093630b3f23d79d2f",
-  "archive_bytes": 178628,
+  "archive_sha256": "59cb3ea8ff1d1bfdf021fb0e5ff1ef531ac33b179880ac35e97c87b244efb7fe",
+  "archive_bytes": 179495,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -100,8 +100,8 @@
     },
     {
       "path": "DESIGN-STANDARD.md",
-      "bytes": 5371,
-      "sha256": "6ba25df3b845aa7f1e71a1f16e501dce796011922e7db0cdce9424e3e3daa5d6"
+      "bytes": 7308,
+      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
     },
     {
       "path": "GEMINI.md",

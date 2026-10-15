@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "5c1d22fed73cf59987ebfd3e940bba146ec736272feba48f7b2afcda5d5c4ea2",
+  "name": "Ziyo",
+  "slug": "ziyo",
+  "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
+  "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
+  "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
+  "archive_sha256": "d6377d8cc19c1dfdf7353d60649cdbb67550b3063670d498ae58fcf54e5d36fc",
+  "archive_bytes": 260271,
+  "entry": "index.html",
+  "serve_root": "site",
+  "readable_source_files": [
+    {
+      "path": "index.html",
+      "url": "https://azizbeksafarov.github.io/design/ziyo/files/index.html.txt",
+      "sha256": "9c1541bb3707bd0d8f8601147c3cda16d13a1eefe0a742cf76ab3340791f2bbc",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/index.html.txt"
+    },
+    {
+      "path": "style.css",
+      "url": "https://azizbeksafarov.github.io/design/ziyo/files/style.css.txt",
+      "sha256": "a4af3a6ef8d714157d0177a14e67c5d677d766b3e324af9de42d4f53afadd38d",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/style.css.txt"
+    },
+    {
+      "path": "app.js",
+      "url": "https://azizbeksafarov.github.io/design/ziyo/files/app.js.txt",
+      "sha256": "7dcdb6a8befa07b310f93acaa42ad36562c6db58dcd4853a468ef546217eea31",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/app.js.txt"
+    },
+    {
+      "path": "model.js",
+      "url": "https://azizbeksafarov.github.io/design/ziyo/files/model.js.txt",
+      "sha256": "3419133037bdafbc2e30aba60bbc6124016546c1a7b011a41fefcddb06f94a9d",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/model.js.txt"
+    },
+    {
+      "path": "model.test.mjs",
+      "url": "https://azizbeksafarov.github.io/design/ziyo/files/model.test.mjs.txt",
+      "sha256": "5ab991854d9bc47a7a4d2155b3a2ca9380292a26a1ef8d4c0808c91e686db5c1",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/model.test.mjs.txt"
+    },
+    {
+      "path": "CREDITS.md",
+      "url": "https://azizbeksafarov.github.io/design/ziyo/files/CREDITS.md.txt",
+      "sha256": "16b5660939adc39738594760f8554d461f60b157f250503e2e3167b1c560becb",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/CREDITS.md.txt"
+    },
+    {
+      "path": "package.json",
+      "url": "https://azizbeksafarov.github.io/design/ziyo/files/package.json.txt",
+      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/package.json.txt"
+    }
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2316,
+      "sha256": "646e2a4e7c7b88ff164e22153e92e9c332eb7799a6e1f02aa5aaf1bb40f29ef1"
+    },
+    {
+      "path": "AI-BRIEF.md",
+      "bytes": 4926,
+      "sha256": "aca6c56ad0a996f16a10123fbc0cd4a539b0cda481588b27406116a53c70e8f8"
+    },
+    {
+      "path": "CHECKLIST.md",
+      "bytes": 1056,
+      "sha256": "7fe76f5095a179b451daa45c1d8d81d2786f1803e40dbe758687b126ef2af104"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "COMPETITION.md",
+      "bytes": 3751,
+      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+    },
+    {
+      "path": "CURRENT-TASK.md",
+      "bytes": 314,
+      "sha256": "c409ba5150b0832df785586426f6ec88fb53cca79e176b0a44b3fc4c8218e1d4"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 7308,
+      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
+    },
+    {
+      "path": "GEMINI.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 1066,
+      "sha256": "007f9d071e7d0cb3f777019a8b460f475d3c20dff70e4d86adbf876a448d7a03"
+    },
+    {
+      "path": "README.md",
+      "bytes": 725,
+      "sha256": "529b164306df91da7949491097f9f4125656bd618b1f6af09e7a67daa399984e"
+    },
+    {
+      "path": "kit.json",
+      "bytes": 202,
+      "sha256": "2b6cb293a73eeae43aea461ad19f4f5d80d8b6cfbbfcf85ca184375e7f3645b6"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 2054,
+      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+    },
+    {
+      "path": "site/CREDITS.md",
+      "bytes": 416,
+      "sha256": "16b5660939adc39738594760f8554d461f60b157f250503e2e3167b1c560becb"
+    },
+    {
+      "path": "site/QA-REPORT.md",
+      "bytes": 2291,
+      "sha256": "bc62fbc03e6df8fc3686d06f8af3022e42955738adcdf7cbf1220c0dea2ca761"
+    },
+    {
+      "path": "site/README.md",
+      "bytes": 633,
+      "sha256": "a92a242d1bf0145f85a458df682699790abbf011e57ac317aabaf2e178bbcedf"
+    },
+    {
+      "path": "site/app.js",
+      "bytes": 3492,
+      "sha256": "7dcdb6a8befa07b310f93acaa42ad36562c6db58dcd4853a468ef546217eea31"
+    },
+    {
+      "path": "site/fonts/mono-OFL.txt",
+      "bytes": 4363,
+      "sha256": "37784b44044a4ffd9256702b7c0982c37e5c8887ba90c6dca0479aea93dc898d"
+    },
+    {
+      "path": "site/fonts/mono.ttf",
+      "bytes": 135580,
+      "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46"
+    },
+    {
+      "path": "site/fonts/sans-OFL.txt",
+      "bytes": 4389,
+      "sha256": "2af94f4fb533be8fa23282eb33e08ca311ddf47c2f32777e2040b282deeec65c"
+    },
+    {
+      "path": "site/fonts/sans.ttf",
+      "bytes": 240164,
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+      "path": "site/fonts/space-OFL.txt",
+      "bytes": 4402,
+      "sha256": "c6dec685825f73b18c20926fddc65e8315642e12986f15db0699170940a09efc"
+    },
+    {
+      "path": "site/fonts/space.ttf",
+      "bytes": 136676,
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 3039,
+      "sha256": "9c1541bb3707bd0d8f8601147c3cda16d13a1eefe0a742cf76ab3340791f2bbc"
+    },
+    {
+      "path": "site/mark.svg",
+      "bytes": 203,
+      "sha256": "001f971ec12c845f9c352555e2d47c6e6c54f3b8b6ff6b102ef99ffa298d598c"
+    },
+    {
+      "path": "site/model.js",
+      "bytes": 2548,
+      "sha256": "3419133037bdafbc2e30aba60bbc6124016546c1a7b011a41fefcddb06f94a9d"
+    },
+    {
+      "path": "site/model.test.mjs",
+      "bytes": 563,
+      "sha256": "5ab991854d9bc47a7a4d2155b3a2ca9380292a26a1ef8d4c0808c91e686db5c1"
+    },
+    {
+      "path": "site/package.json",
+      "bytes": 81,
+      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36"
+    },
+    {
+      "path": "site/style.css",
+      "bytes": 8281,
+      "sha256": "a4af3a6ef8d714157d0177a14e67c5d677d766b3e324af9de42d4f53afadd38d"
+    }
+  ],
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/ziyo-site/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/source.zip"
+}

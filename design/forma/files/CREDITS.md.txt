@@ -9,3 +9,6 @@ Photos are locally bundled, resized and JPEG-compressed. Source images are free 
 No order, payment, stock, warranty or delivery integration exists. Cart data is browser-local; exported list is informational.
 
 Instrument Sans and Instrument Serif: SIL OFL, license files in fonts/.
+
+
+Typography update: local DM Sans from https://github.com/google/fonts . SIL OFL licenses in fonts/.

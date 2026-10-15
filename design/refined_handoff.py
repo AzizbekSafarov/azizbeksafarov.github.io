@@ -2,9 +2,9 @@
 def brief(t,site,raw,date):
  slug=t['slug'];name=t['name'];folder='samar-site' if t['id']=='02' else 'forma-site'
  specific=(
- 'Samar: krem fon, to‘q yashil rollar, mahalliy Instrument Serif/Sans, haqiqiy Samarqand fotosuratlari va tahririy sayohat kompozitsiyasi. model.js: uch manzil, known IDlar, boshlash vaqti, 20 daqiqa shartli transfer, tun yarmidan o‘tish va eksport. app.js: manzil qo‘shish/olish/tartiblash, detail dialog, download va browser-local saqlash. Tarif, ochilish vaqti yoki bronni uydirma. Har manzilning rasmiy manbasi bor; tashrif vaqti taxminiy taklif.'
+ 'Samar: oq/moviy shahar qo‘llanmasi. Barlow Condensed masthead + DM Sans, ulkan SAMARQAND yozuvi, katta panorama va gorizontal manzil qatorlari. To‘q ko‘k reja bo‘limi. Krem serif landingga aylantirma. model.js: uch manzil, known IDlar, boshlash vaqti, 20 daqiqa shartli transfer, tun yarmidan o‘tish va eksport. app.js: qo‘shish/olish/tartiblash, detail va browser-local saqlash. Tarif, ochilish vaqti yoki bronni uydirma. Rasmiy manbalar bor; tashrif vaqti taklif.'
  if t['id']=='02' else
- 'Forma: oq/krem fon, oliva aksent, mahalliy Instrument Serif/Sans, haqiqiy Unsplash fotosuratlari, katta mahsulot kompozitsiyasi va sokin katalog. model.js: uch known mahsulot, integer 1–20 miqdor, narxlar, material/o‘lcham namunasi va jami/eksport. app.js: kategoriya, detail, savat drawer, qo‘shish/miqdor/olish, saqlash va download. Narx, material va o‘lchamlar namunaviy; suratdagi buyumning tekshirilgan spetsifikatsiyasi yoki savdo taklifi emas. To‘lov/buyurtma yuborilmaydi.'
+ 'Forma: oq/qora va terrakota, DM Sans geometrik yozuv, mahsulotning vertikal katta fotosurati, BUYUM/MAKON/HAYOT kompozitsiyasi va aniq katalog. model.js: uch known mahsulot, integer 1–20 miqdor, narxlar, material/o‘lcham namunasi va jami/eksport. app.js: kategoriya, detail, savat drawer, qo‘shish/miqdor/olish, saqlash va download. Narx/material/o‘lcham namunaviy; suratdagi buyumning tekshirilgan spetsifikatsiyasi emas. To‘lov/buyurtma yuborilmaydi.'
  )
  files=['index.html','style.css','app.js','model.js','model.test.mjs','CREDITS.md','package.json']
  flows='\n'.join('- '+s for s in t['flows'])

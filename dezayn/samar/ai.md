@@ -1,6 +1,6 @@
 # Samar — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-15; source fingerprint `ade25bb6c0a00f99`.
+Snapshot: 2026-10-15; source fingerprint `107d2d9ada13907a`.
 Entry: https://azizbeksafarov.github.io/design/samar/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -15,7 +15,7 @@ Ishtirokchi xabari: Urgutdan Samarqand viloyat bosqichi, 2026-10-13. Video trans
 
 ## Tanlangan dizayn va haqiqiy kod
 
-Samar: krem fon, to‘q yashil rollar, mahalliy Instrument Serif/Sans, haqiqiy Samarqand fotosuratlari va tahririy sayohat kompozitsiyasi. model.js: uch manzil, known IDlar, boshlash vaqti, 20 daqiqa shartli transfer, tun yarmidan o‘tish va eksport. app.js: manzil qo‘shish/olish/tartiblash, detail dialog, download va browser-local saqlash. Tarif, ochilish vaqti yoki bronni uydirma. Har manzilning rasmiy manbasi bor; tashrif vaqti taxminiy taklif.
+Samar: oq/moviy shahar qo‘llanmasi. Barlow Condensed masthead + DM Sans, ulkan SAMARQAND yozuvi, katta panorama va gorizontal manzil qatorlari. To‘q ko‘k reja bo‘limi. Krem serif landingga aylantirma. model.js: uch manzil, known IDlar, boshlash vaqti, 20 daqiqa shartli transfer, tun yarmidan o‘tish va eksport. app.js: qo‘shish/olish/tartiblash, detail va browser-local saqlash. Tarif, ochilish vaqti yoki bronni uydirma. Rasmiy manbalar bor; tashrif vaqti taklif.
 
 Bu eski arxiv maketi emas: qayta ishlangan mustaqil starter. Bloom/Yuksalni ko‘chirish bilan almashtirma. Har bir rang, shrift roli va tugma holatini saqla; mazmun/model/funksiyalarni biletga moslashtir.
 

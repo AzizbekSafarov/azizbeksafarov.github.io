@@ -4,15 +4,15 @@
     "name": "Samar",
     "file": "samar-site/index.html",
     "category": "Turizm / madaniyat",
-    "color": "#2c5c46",
-    "background": "#e6ede2",
-    "summary": "Krem/yashil, mahalliy Instrument Serif/Sans, haqiqiy Samarqand suratlari, rasmiy manbalar, 3 manzil va tartiblanadigan kun rejasi.",
+    "color": "#005ea8",
+    "background": "#ffffff",
+    "summary": "Moviy shahar qo‘llanmasi, Barlow Condensed masthead, katta panorama va tartiblanadigan kun rejasi.",
     "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
     "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
     "preview": "previews/02.png",
     "fonts": [
-      "instrument-sans",
-      "instrument-serif"
+      "barlow-condensed",
+      "dm-sans"
     ]
   },
   {
@@ -20,15 +20,14 @@
     "name": "Forma",
     "file": "forma-site/index.html",
     "category": "Interyer / konsept katalog",
-    "color": "#254f70",
-    "background": "#eaf0f4",
-    "summary": "Oq/krem, oliva, Instrument Serif/Sans, haqiqiy suratli 3 buyum, detail va savat; narx/xususiyatlar aniq demo.",
+    "color": "#aa3f2b",
+    "background": "#ecded5",
+    "summary": "Geometrik mahsulot katalogi, DM Sans, oq/qora va terrakota, yirik fotosuratlar, savat va aniq jami.",
     "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
     "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
     "preview": "previews/04.png",
     "fonts": [
-      "instrument-sans",
-      "instrument-serif"
+      "dm-sans"
     ]
   },
   {
@@ -62,5 +61,85 @@
       "instrument-serif"
     ],
     "preview": "previews/11.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Orbita",
+    "category": "Ilm-fan / kosmik atlas",
+    "color": "#ff6b35",
+    "background": "#101217",
+    "summary": "Qora observatoriya, orbital chizma, texnik metadata va keng grotesk. Uch missiyani o‘rganish va kuzatuv ro‘yxati.",
+    "use": "Ilm-fan, texnologiya, tadqiqot va ekspeditsiya",
+    "fonts": [
+      "space-grotesk",
+      "ibm-plex-mono"
+    ],
+    "file": "orbita-site/index.html",
+    "preview": "previews/12.png",
+    "features": "Missiya tanlash → chizma va ma’lumot yangilanishi → kuzatuvga qo‘shish → saqlanish → TXT eksport"
+  },
+  {
+    "id": "13",
+    "name": "Nashr",
+    "category": "Tahririyat / raqamli gazeta",
+    "color": "#b12b20",
+    "background": "#f5f3eb",
+    "summary": "Gazeta mastheadi, Newsreader, ingichka chiziqlar va ustunli tahririyat. Maqola o‘qish, bo‘lim va saqlanganlar.",
+    "use": "Yangilik, jurnal, madaniyat va bilim portali",
+    "fonts": [
+      "newsreader",
+      "dm-sans"
+    ],
+    "file": "nashr-site/index.html",
+    "preview": "previews/13.png",
+    "features": "Bo‘lim filtri → maqola o‘qish → saqlash → saqlanganlar → qayta ochish"
+  },
+  {
+    "id": "14",
+    "name": "Hisob",
+    "category": "Ma’lumot / tahlil paneli",
+    "color": "#174cea",
+    "background": "#edf1f6",
+    "summary": "Ixcham sidebar, aniq sonlar, davrga bog‘langan grafik va saralanadigan jadval. CSV eksporti.",
+    "use": "Monitoring, statistika, loyiha va biznes tahlili",
+    "fonts": [
+      "ibm-plex-mono",
+      "dm-sans"
+    ],
+    "file": "hisob-site/index.html",
+    "preview": "previews/14.png",
+    "features": "7/30 kun → grafik/jami/jadval mosligi → qidiruv → saralash → ko‘rinayotgan qatorlar CSV eksporti"
+  },
+  {
+    "id": "15",
+    "name": "Ziyo",
+    "category": "Ta’lim / interaktiv dars",
+    "color": "#263ab3",
+    "background": "#f4d663",
+    "summary": "Sariq dars muqovasi, ko‘k geometrik diagramma, modul navigatsiyasi va tekshiriladigan mini-test.",
+    "use": "Ta’lim, kasb, kurs va ko‘nikmalar",
+    "fonts": [
+      "space-grotesk",
+      "dm-sans"
+    ],
+    "file": "ziyo-site/index.html",
+    "preview": "previews/15.png",
+    "features": "Modul tanlash → mazmun → javob → xato/to‘g‘ri izoh → progress → reload"
+  },
+  {
+    "id": "16",
+    "name": "Meros",
+    "category": "Madaniyat / raqamli muzey",
+    "color": "#592443",
+    "background": "#e8dedd",
+    "summary": "Muzey afishasi, keskin masshtab, katta fotografiya va ochiq ekspozitsiya. Asar tafsiloti va shaxsiy kolleksiya.",
+    "use": "Muzey, arxiv, me’morchilik va ko‘rgazma",
+    "fonts": [
+      "barlow-condensed",
+      "newsreader"
+    ],
+    "file": "meros-site/index.html",
+    "preview": "previews/16.png",
+    "features": "Ekspozitsiya filtri → asar tafsiloti/manbasi → kolleksiyaga olish → saqlanganlar → TXT eksport"
   }
 ]

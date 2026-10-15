@@ -13,7 +13,7 @@ function updatePrompt() {
   const slug = starter.elements.design.value;
   const topic = starter.elements.topic.value.trim() || '[ekspert bergan bilet]';
   const time = starter.elements.time.value.trim() || '[haqiqiy qolgan vaqt]';
-  const name = {si:'Yuksal · SI',bloom:'Bloom · Material Design 3',samar:'Samar',forma:'Forma'}[slug];
+  const name = starter.elements.design.selectedOptions[0].textContent;
   promptField.value = `https://azizbeksafarov.github.io/design/${slug}/\nUstoz AI tanlovi uchun ${name} dizaynini tanladim. Shu manzildagi AI yo‘riqnomasi va haqiqiy source kodni o‘qi.\nSahifa o‘qilmasa: https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/${slug}/ai.md\nBilet: ${topic}\nQolgan vaqt: ${time}\nHozirgi topshiriq va joydagi reglament ustuvor. Uslubni saqlab mazmun va funksiyalarni biletga moslashtir. Avval asosiy foydalanuvchi oqimini ishlat. Mobil, klaviatura, xato/bo‘sh/natija holatlarini tekshir. Topilgan xatoni takrorla, sababini tuzat va qayta sina. Demo natijani haqiqiy backend deb ko‘rsatma. CURRENT-TASK.md va HANDOFF.md ga vazifa, o‘zgarish, haqiqiy sinov va qolgan ishni yoz. Men bilan o‘zbekcha gaplash.`;
   document.getElementById('selected-kit').href = `/design/${slug}/source.zip`;
   document.getElementById('selected-brief').href = `/design/${slug}/ai.md`;
@@ -44,4 +44,12 @@ document.addEventListener('keydown', event => {
     const menu = document.querySelector('.mobile-menu[open]');
     if (menu) { menu.open = false; menu.querySelector('summary').focus(); }
   }
+});
+
+const search = document.getElementById('design-search');
+if (search) search.addEventListener('input', () => {
+  const query=search.value.trim().toLocaleLowerCase();let count=0;
+  document.querySelectorAll('.work').forEach(work=>{work.hidden=!work.dataset.search.includes(query);if(!work.hidden)count++;});
+  document.getElementById('design-count').textContent=count+' ta dizayn';
+  document.getElementById('search-empty').hidden=count!==0;
 });

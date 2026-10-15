@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "469ee9c6b90c9bcd8dfe3b18b11eed3d8425b2745036102ef39d6642865914b0",
+  "name": "Nashr",
+  "slug": "nashr",
+  "context_url": "https://azizbeksafarov.github.io/design/nashr/",
+  "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
+  "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
+  "archive_sha256": "a2f171d173939e6658485d0b2464c0a3e3403c1bde5ad0b54ced61f43c428469",
+  "archive_bytes": 1273683,
+  "entry": "index.html",
+  "serve_root": "site",
+  "readable_source_files": [
+    {
+      "path": "index.html",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/index.html.txt",
+      "sha256": "a28ebb235acdcb5191652013afdcfc4381c54633de6059ff70c2bf02090b31d2",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/index.html.txt"
+    },
+    {
+      "path": "style.css",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/style.css.txt",
+      "sha256": "d0d2656a673e254e14fbf1ccda339babb292013b67081583ef3e46d8c16ab80d",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/style.css.txt"
+    },
+    {
+      "path": "app.js",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/app.js.txt",
+      "sha256": "ea3351205cc5ef1ea9622e635dd2e6ea4ce0dd203c9cfb9d4f47e5927919c414",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/app.js.txt"
+    },
+    {
+      "path": "model.js",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/model.js.txt",
+      "sha256": "3d46a94337bc6e90b889613422627c0d053b374008541a8266650f679d405cc6",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/model.js.txt"
+    },
+    {
+      "path": "model.test.mjs",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/model.test.mjs.txt",
+      "sha256": "fa023f1b2d2cb1f6ada29e377f9a87da697e5e6d0d2388df3f1126f8c02ac950",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/model.test.mjs.txt"
+    },
+    {
+      "path": "CREDITS.md",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/CREDITS.md.txt",
+      "sha256": "486f0ebfc2edb49041e72635645f1985dca65f4dfe53574e2fb40daeeade2c6c",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/CREDITS.md.txt"
+    },
+    {
+      "path": "package.json",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/package.json.txt",
+      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/package.json.txt"
+    }
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2322,
+      "sha256": "6ca8b42b9e49bcb9944f02cd5136389258f98f5e10ad7362b38c2fb6b8b8dd5e"
+    },
+    {
+      "path": "AI-BRIEF.md",
+      "bytes": 4941,
+      "sha256": "f9c1982a649f6b930fd196e70ba768e6f858ae19407e649d85e3604b8e923552"
+    },
+    {
+      "path": "CHECKLIST.md",
+      "bytes": 1054,
+      "sha256": "60ffbe87869a9a46d1003ff59d3987be29fc405ce76ae53b378d7c0be3906ba7"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "COMPETITION.md",
+      "bytes": 3751,
+      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+    },
+    {
+      "path": "CURRENT-TASK.md",
+      "bytes": 315,
+      "sha256": "421113d6933735d508d375af8a55cf961d1ecef03c20153c1405b9b87803325b"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 7308,
+      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
+    },
+    {
+      "path": "GEMINI.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 1068,
+      "sha256": "001d32db52c285def75167443049b106e3febf3087f673eb0e134a5c3d8dd990"
+    },
+    {
+      "path": "README.md",
+      "bytes": 728,
+      "sha256": "15067969d8277c0724eb4899e78463c23ab44bee6ec7e1b59c05239563c6043f"
+    },
+    {
+      "path": "kit.json",
+      "bytes": 204,
+      "sha256": "29ca0a549949031eb681b8b75f3149156a01ab943f5cd418e1486e941914d64c"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 2054,
+      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+    },
+    {
+      "path": "site/CREDITS.md",
+      "bytes": 780,
+      "sha256": "486f0ebfc2edb49041e72635645f1985dca65f4dfe53574e2fb40daeeade2c6c"
+    },
+    {
+      "path": "site/QA-REPORT.md",
+      "bytes": 2291,
+      "sha256": "bc62fbc03e6df8fc3686d06f8af3022e42955738adcdf7cbf1220c0dea2ca761"
+    },
+    {
+      "path": "site/README.md",
+      "bytes": 636,
+      "sha256": "75848cfccd32fa757bc94d177e20aed1351c712f207c602b8a3eab6fe8037027"
+    },
+    {
+      "path": "site/app.js",
+      "bytes": 3500,
+      "sha256": "ea3351205cc5ef1ea9622e635dd2e6ea4ce0dd203c9cfb9d4f47e5927919c414"
+    },
+    {
+      "path": "site/fonts/news-OFL.txt",
+      "bytes": 4394,
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8"
+    },
+    {
+      "path": "site/fonts/news.ttf",
+      "bytes": 451664,
+      "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+    },
+    {
+      "path": "site/fonts/sans-OFL.txt",
+      "bytes": 4389,
+      "sha256": "2af94f4fb533be8fa23282eb33e08ca311ddf47c2f32777e2040b282deeec65c"
+    },
+    {
+      "path": "site/fonts/sans.ttf",
+      "bytes": 240164,
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+      "path": "site/images/craft.jpg",
+      "bytes": 643681,
+      "sha256": "af4b7c26aa0554acd8a1a26e57c9da52a7a2a95de205c513d3ac33b873d04d44"
+    },
+    {
+      "path": "site/images/reading.jpg",
+      "bytes": 228399,
+      "sha256": "a15e569e165f3fcffb37d112a1ee84101e29c33dce78ae3058bec27aa54ee51f"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 2773,
+      "sha256": "a28ebb235acdcb5191652013afdcfc4381c54633de6059ff70c2bf02090b31d2"
+    },
+    {
+      "path": "site/mark.svg",
+      "bytes": 203,
+      "sha256": "b3a32830e508bbfac5cd93fb4fc1ca25066ac75d3cdad55d90cac4aa9cfda8df"
+    },
+    {
+      "path": "site/model.js",
+      "bytes": 2827,
+      "sha256": "3d46a94337bc6e90b889613422627c0d053b374008541a8266650f679d405cc6"
+    },
+    {
+      "path": "site/model.test.mjs",
+      "bytes": 480,
+      "sha256": "fa023f1b2d2cb1f6ada29e377f9a87da697e5e6d0d2388df3f1126f8c02ac950"
+    },
+    {
+      "path": "site/package.json",
+      "bytes": 81,
+      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36"
+    },
+    {
+      "path": "site/style.css",
+      "bytes": 7934,
+      "sha256": "d0d2656a673e254e14fbf1ccda339babb292013b67081583ef3e46d8c16ab80d"
+    }
+  ],
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/nashr-site/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/source.zip"
+}

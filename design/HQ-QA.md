@@ -1,21 +1,18 @@
-# Rebuilt templates verification
+# QA — independent design collection
 
-2026-10-15. Scope: Samar/Forma rebuilds, removal of seven old designs, four-starter HQ integration.
+2026-10-15. Verification applies to this snapshot, not future ticket adaptations.
 
-## Removed
+- Actual browser inspection: HQ, gallery, starter and seven rebuilt/new sites. Desktop 1400; 1024, 768, 390, 320 responsive sweep (50 page/viewport combinations). No document horizontal overflow; Hisob table has intentional internal scrolling. No broken populated image sources.
+- Orbita: Webb selection updates content and schematic, watchlist add, reload persistence, downloaded TXT. ISS motion supports pause; static mission diagrams identified. No live telemetry.
+- Nashr: article dialog, save, saved-only view; after DOM refresh close restores opener focus. Original sample copy and separate licensed reading/craft photos.
+- Hisob: 7/30-period model, totals/series consistency, vertical scale, Samarqand search, CSV download with filtered row; no-result state disables export.
+- Ziyo: wrong answer retains 0/3; correct answer yields 1/3 and survives reload; all three correct yields 3/3; final next control hidden.
+- Meros: detail category, article dialog, save/close/Escape focus, index resets filters and reaches intended work, TXT download.
+- Samar/Forma: existing six model tests preserved; new hero/detail triggers verified. Existing storage keys preserved; Forma object name corrected to match photograph.
+- HQ: nine options, search match/empty, selected Ziyo prompt includes exact ticket/time and matching source URL, clipboard success.
+- Console error/warn snapshot after these interactions: none.
+- Independent screenshot critique performed, fixes applied: photo differentiation, lead headline hierarchy, exhibition index, product labeling, graph scale and caption readability.
 
-KasbLab, Orbit, Pulseboard, Qadam, Lola, Spark and Open City: demo HTML, AI/source ZIP folders, aliases, previews, shared retired generators/runtime and archive snapshots removed from current tree. Archive page removed. Samar/Forma old code exports replaced, not bundled alongside rebuilds. Existing Yuksal and Bloom runtime code unchanged.
+Models are tested with node --test. Handoff verifier checks manifest hashes, source ZIP integrity, internal runtime assets and competition context. Fonts/photos bundled locally with licenses. No account, real booking/payment, official statistics or full accessibility/performance certification claimed.
 
-## Actual checks
-
-- New model tests: 3 Samar + 3 Forma passed (invalid persisted data, ordered schedule/transfer gaps, overnight export, cart totals/removal/cap).
-- Four-starter handoff verifier: source hashes, ZIP inventories, runtime asset references, readable briefs, links and complete collected competition text passed.
-- Browser: seven affected public pages at 320/390/768/1024/1280: document scrollWidth minus clientWidth =0 in all35 cases. Additional populated320 overnight plan and cart drawer also measured0.
-- Samar: three selections, start23:30, reorder, correct235-minute estimate and next-day clocks; remove/empty, disabled download, TXT download, reload persistence and second-tab synchronization passed. Detail Escape returns focus to opener. Mobile hash navigation closes menu.
-- Forma: category shows correct product, detail -> add -> focus, 2chairs+1lamp=3,000,000; removeLamp=2,580,000; cap20 disables allAdd/increase paths; empty state, actual TXT download, reload and second-tab synchronization passed. Added item gets visible button feedback.
-- Independent judge found and verified corrections for lamp crop, truthful cap feedback, mobile menu and narrow populated-plan controls. Final image capture checked for lazy-loading artifacts.
-- Meaningful motion: image hover zoom, native-dialog entrance, side drawer entrance and plan row position continuity; reduced-motion path retained. No production personal data used in tests.
-
-## Limits
-
-No real booking, order, stock, payment or form delivery integration. Sample durations, prices and dimensions are labeled. No field Web Vitals or full accessibility/security certification claimed. Storage-denied fallback exists but was not forced in this browser.
+Final verification: 16 model tests PASS; handoff manifests and 9 source ZIP packages PASS. Nashr two-tab storage sync: both visible counts 2. Graph preview captured after entrance stroke-dashoffset reached 0px. Final 50-case sweep recorded in design/QA-BREAKPOINTS.json.

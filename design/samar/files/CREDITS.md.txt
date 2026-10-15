@@ -16,3 +16,6 @@ Destination facts checked on 2026-10-15 against Uzbekistan Travel:
 Visit durations and 20-minute transfer gaps are planning suggestions, not official schedules. No current opening hours or ticket prices are asserted. This is an independent demo, not an official tourism service.
 
 Instrument Sans / Instrument Serif are locally bundled under SIL OFL; license files are in fonts/.
+
+
+Typography update: local DM Sans and Barlow Condensed from https://github.com/google/fonts . SIL OFL licenses in fonts/.

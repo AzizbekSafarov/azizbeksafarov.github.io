@@ -1,0 +1,137 @@
+# Orbita — editable source snapshot
+
+Source fingerprint: `6426e4c3588637946df9aa0d669c878898be8136b480e4d18f1b8b88a15e2ada`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+
+## site/index.html
+
+```html
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Qora observatoriya, orbital chizma, texnik metadata va keng grotesk. Uch missiyani o‘rganish va kuzatuv ro‘yxati."><meta name="theme-color" content="#101217"><title>Orbita — Ilm-fan / kosmik atlas</title><link rel="icon" href="mark.svg"><link rel="preload" href="fonts/space.ttf" as="font" type="font/ttf" crossorigin><script>document.documentElement.classList.add('font-loading')</script><link rel="stylesheet" href="style.css?v=ef7fc2fd73"><script type="module" src="app.js?v=8dc02942e9"></script></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="orb-header wrap"><a class="orb-logo" href="#main">◎ ORBITA</a><nav aria-label="Asosiy navigatsiya"><a href="#missions">Atlas</a><a href="#watchlist">Kuzatuv <span id="saved-count">0</span></a><a href="../">Barcha dizaynlar ↗</a></nav></header><main id="main"><section class="orb-stage wrap"><div class="orb-copy"><p class="eyebrow">KOSMOSNI O‘RGANISH / INTERAKTIV ATLAS</p><h1>Bizdan<br>uzoqroqda.</h1><p>Yaqin orbitadan Quyosh tizimi chegaralarigacha. Uch missiya, uch xil savol. Kashfiyotni tanlang.</p><a class="btn" href="#missions">Missiyalarni ko‘rish <span>↓</span></a><span class="orb-caption">CHIZMA — MASSHTABGA MOS EMAS</span></div><div class="orbit-display"><svg viewBox="0 0 700 620" role="img" aria-labelledby="orbit-title"><title id="orbit-title">Tanlangan missiyaning shartli orbital chizmasi</title><defs><radialGradient id="planet"><stop stop-color="#487ba8"/><stop offset=".7" stop-color="#183a57"/><stop offset="1" stop-color="#090e16"/></radialGradient></defs><g class="orbit-grid" fill="none" stroke="#444b57"><circle cx="350" cy="310" r="250"/><circle cx="350" cy="310" r="180"/><path d="M0 310H700M350 0V620" stroke-dasharray="3 8"/><ellipse cx="350" cy="310" rx="290" ry="105" transform="rotate(-32 350 310)"/></g><circle cx="350" cy="310" r="122" fill="url(#planet)"/><g stroke="#91b4cc" fill="none" opacity=".35"><ellipse cx="350" cy="310" rx="55" ry="122"/><ellipse cx="350" cy="310" rx="95" ry="122"/><ellipse cx="350" cy="310" rx="122" ry="40"/></g><g id="satellite"><circle cx="540" cy="150" r="7" fill="#ff6b35"/><circle cx="540" cy="150" r="18" fill="none" stroke="#ff6b35"/><path d="M557 150H620" stroke="#ff6b35"/><text x="575" y="136" fill="#fff" font-size="13">01 / ISS</text></g><text x="42" y="580" fill="#b2bac6" font-size="12">ORBITAL VIEW / ILLUSTRATION</text></svg><div class="orbit-readout"><span id="mission-code">01 / YER ORBITASI</span><button id="motion-toggle" class="btn" aria-pressed="false">Harakatni to‘xtatish Ⅱ</button></div></div></section><section id="missions" class="missions wrap"><div class="orb-section-title"><p class="eyebrow">MISSIYA REGISTRI</p><p>01—03 / Ma’lumot uchun missiyani tanlang</p></div><div class="mission-layout"><div class="mission-tabs" role="group" aria-label="Missiya tanlash"><button data-mission="iss" aria-pressed="true"><span>01 / YER</span><strong>Xalqaro kosmik stansiya</strong><span>Yaqin orbitadagi laboratoriya ↗</span></button><button data-mission="webb" aria-pressed="false"><span>02 / KOINOT</span><strong>James Webb</strong><span>Infraqizil koinotga qarash ↗</span></button><button data-mission="voyager" aria-pressed="false"><span>03 / YULDUZLARARO</span><strong>Voyager 1</strong><span>Quyosh tizimidan tashqarida ↗</span></button></div><article class="mission-story" aria-live="polite"><p class="eyebrow" id="mission-tag"></p><h2 id="mission-title"></h2><p id="mission-text"></p><dl id="mission-facts"></dl><div class="mission-actions"><button class="btn" id="mission-save" aria-pressed="false">Kuzatuvga qo‘shish +</button><a id="mission-source" href="https://www.nasa.gov/">NASA manbasi ↗</a></div></article></div></section><section id="watchlist" class="watch wrap"><div><p class="eyebrow">SHAXSIY ATLAS</p><h2>Kuzatuv ro‘yxatingiz.</h2><p id="watch-empty">Hali missiya tanlanmagan.</p><ul id="watch-items"></ul></div><button id="export" class="btn" disabled>Ro‘yxatni yuklash ↓</button></section><p id="status" class="live wrap" role="status"></p></main><footer class="demo-footer wrap"><p>Mustaqil ilmiy atlas namunasi. Chizma shartli; jonli telemetriya emas. Missiya tavsiflari NASA manbalariga tayangan.</p><nav aria-label="Qo‘shimcha havolalar"><a href="../">Dizaynlar ↗</a><a href="../orbita/">AI konteksti ↗</a><a href="CREDITS.md">Manbalar ↗</a></nav></footer></body></html>
+```
+
+## site/style.css
+
+```css
+@font-face{font-family:Sans;src:url('fonts/sans.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:Space;src:url('fonts/space.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:Mono;src:url('fonts/mono.ttf') format('truetype');font-weight:400;font-display:swap}
+*{box-sizing:border-box}body{margin:0;-webkit-font-smoothing:antialiased}a{color:inherit}button,input,select{font:inherit;color:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--focus,#cb5228);outline-offset:4px}[hidden]{display:none!important}img,svg{max-width:100%;display:block}h1,h2,h3,p,figure{margin:0}a{text-decoration:none}.skip{position:fixed;left:12px;top:-100px;z-index:99;background:#fff;color:#111;padding:12px}.skip:focus{top:12px}.wrap{width:min(1400px,calc(100% - 80px));margin:auto}.eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase}.muted{color:var(--muted)}.btn{min-height:46px;padding:11px 20px;border:1px solid currentColor;background:transparent;display:inline-flex;gap:24px;align-items:center;justify-content:space-between;line-height:1.4}.btn:hover{background:var(--hover);color:var(--hover-ink,inherit)}.btn:active{transform:translateY(2px)}.btn[aria-pressed=true]{background:var(--active);color:var(--active-ink);border-color:var(--active)}.live{min-height:26px;margin-block:16px;font-size:13px}.demo-footer{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-block:30px;border-top:1px solid var(--line);font:12px/1.6 Arial,sans-serif}.demo-footer p{max-width:530px}.demo-footer nav{display:flex;gap:24px;flex-wrap:wrap}.demo-footer a{min-height:40px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}dialog{width:min(780px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;padding:32px;border:1px solid var(--line);color:inherit;background:var(--modal,#fff)}dialog::backdrop{background:#0009}dialog[open]{animation:enter .24s ease-out}.dialog-top{display:flex;align-items:start;justify-content:space-between;gap:20px;margin-bottom:24px}.dialog-top h2{font-size:32px;line-height:1.1}.close{width:44px;height:44px;flex:0 0 44px;border:1px solid currentColor;background:transparent;font-size:26px}.reader p{margin-bottom:20px;line-height:1.7}.reader img{width:100%;max-height:330px;object-fit:cover;margin-bottom:24px}.filter-bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.filter-bar button{border:1px solid var(--line);min-height:44px;padding:10px 16px;background:transparent}.filter-bar button[aria-pressed=true]{background:var(--active);color:var(--active-ink);border-color:var(--active)}.empty{padding:35px 0;font-size:18px}.font-loading h1{visibility:hidden;animation:font-show 0s 2.5s forwards}@keyframes font-show{to{visibility:visible}}@keyframes enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@media(max-width:800px){.wrap{width:calc(100% - 40px)}}@media(max-width:440px){.wrap{width:calc(100% - 32px)}dialog{padding:22px}.dialog-top h2{font-size:28px}.btn{gap:14px;padding-inline:16px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.font-loading h1{visibility:visible}}
+:root{--line:#333b48;--muted:#a7b1c0;--hover:#ff6b35;--hover-ink:#101217;--active:#ff6b35;--active-ink:#101217;color-scheme:dark;scroll-behavior:smooth}body{font:16px/1.6 Sans,Arial,sans-serif;background:#101217;color:#f2f4f7}.eyebrow,.orb-caption,.orbit-readout,.orb-section-title,.mission-tabs button>span,.mission-story dt{font-family:Mono,monospace;font-size:11px}.orb-header{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-block:26px;border-bottom:1px solid var(--line)}.orb-logo{font:600 23px Space,sans-serif;letter-spacing:.12em}.orb-header nav{display:flex;gap:30px;font-size:13px}.orb-header nav a{padding-block:10px}.orb-header nav span{color:#ff6b35}.orb-stage{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:20px;padding-top:30px}.orb-copy h1{font:500 clamp(64px,7vw,110px)/.98 Space,sans-serif;letter-spacing:-.065em;margin:25px 0}.orb-copy>p:not(.eyebrow){color:var(--muted);max-width:360px;font-size:17px}.orb-copy .btn{margin-top:30px;background:#ff6b35;color:#101217;border-color:#ff6b35}.orb-caption{display:block;color:#939dad;margin-top:35px}.orbit-display svg{width:100%;height:auto}.orbit-readout{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid var(--line);padding-top:15px}.orbit-readout .btn{font-size:10px;min-height:40px;padding:8px 12px}.orb-section-title{display:flex;justify-content:space-between;gap:20px;padding:24px 0;border-block:1px solid var(--line);color:var(--muted)}.missions{margin-top:55px}.mission-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px}.mission-tabs{display:flex;flex-direction:column}.mission-tabs button{padding:25px 28px;text-align:left;border:0;border-bottom:1px solid var(--line);border-left:3px solid transparent;background:transparent;color:inherit}.mission-tabs button strong{display:block;font:400 30px/1.15 Space,sans-serif;margin:12px 0}.mission-tabs button>span{color:var(--muted)}.mission-tabs button[aria-pressed=true]{border-left-color:#ff6b35;background:#1b2029}.mission-tabs button:hover{background:#1f2631}.mission-story{padding-block:35px}.mission-story>.eyebrow{color:#ff6b35}.mission-story h2{font:500 42px/1.1 Space,sans-serif;letter-spacing:-.04em;margin:16px 0}.mission-story>p:not(.eyebrow){color:var(--muted);max-width:520px}.mission-story dl{display:flex;flex-wrap:wrap;gap:32px;margin:26px 0}.mission-story dt{color:var(--muted)}.mission-story dd{margin:6px 0;font-size:20px}.mission-actions{display:flex;flex-wrap:wrap;align-items:center;gap:25px}.mission-actions a{font-size:13px;text-decoration:underline;text-underline-offset:5px}.watch{border-top:1px solid var(--line);margin-top:50px;padding-block:40px;display:flex;justify-content:space-between;gap:25px;align-items:start}.watch h2{font:400 34px Space,sans-serif;margin:15px 0}.watch p,.watch li{color:var(--muted)}#satellite{transform-origin:350px 310px;animation:orbit 32s linear infinite}.paused #satellite{animation-play-state:paused}@keyframes orbit{to{transform:rotate(360deg)}}@media(max-width:900px){.orb-stage{grid-template-columns:1fr 1fr}.orb-copy h1{font-size:72px}.mission-layout{gap:30px}.orb-header nav{gap:16px}}@media(max-width:650px){.orb-header{align-items:start}.orb-logo{font-size:19px}.orb-header nav{flex-direction:column;gap:0;font-size:11px}.orb-header nav a{padding:5px 0}.orb-stage{grid-template-columns:1fr}.orb-copy{padding-top:25px}.orb-copy h1{font-size:76px}.orb-caption{margin-top:24px}.orbit-display{margin-top:10px}.mission-layout{grid-template-columns:1fr;gap:0}.orb-section-title{flex-direction:column;gap:6px}.mission-tabs button strong{font-size:26px}.mission-story h2{font-size:36px}.watch{flex-direction:column}.missions{margin-top:40px}}
+@media(max-width:650px){.orb-copy h1{font-size:clamp(49px,16vw,76px);letter-spacing:-.045em}}.orb-caption,.orb-section-title,.orbit-readout{font-size:12px;color:#bcc5d3}.orb-copy h1{letter-spacing:-.045em}.orbit-display[data-mission=webb] #satellite,.orbit-display[data-mission=voyager] #satellite{animation:none}.orbit-display>svg>circle{transition:r .5s ease-out}.orb-stage{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}.orbit-display,.orb-copy{min-width:0}.orbit-display svg{width:100%;height:auto}.orb-header nav{flex-wrap:wrap}@media(max-width:650px){.orb-stage{grid-template-columns:minmax(0,1fr)}}
+```
+
+## site/app.js
+
+```javascript
+import {data,normalize} from './model.js?v=e2364eb354';
+const SLUG='orbita';
+document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const storageKey=SLUG+'-state-v1';let memory=[],persistent=true;
+function read(){if(!persistent)return memory;try{return normalize(JSON.parse(localStorage.getItem(storageKey)));}catch{return [];}}
+function commit(ids){memory=normalize(ids);try{localStorage.setItem(storageKey,JSON.stringify(memory));}catch{persistent=false;$('#status').textContent='Saqlash cheklangan. Hozirgi tabdagi tanlov saqlanadi; kerak bo‘lsa faylga oling.';}return memory;}
+function toggle(id){const ids=read();return commit(ids.includes(id)?ids.filter(x=>x!==id):[...ids,id]);}
+function download(name,text,type='text/plain;charset=utf-8'){const url=URL.createObjectURL(new Blob(['\ufeff'+text],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
+let opener,openedId;function openDialog(button){opener=button;openedId=button.dataset.read;$('#reader').showModal();}$$('[data-close]').forEach(b=>b.addEventListener('click',()=>$('#reader').close()));$('#reader')?.addEventListener('close',()=>{const target=opener?.isConnected?opener:document.querySelector('[data-read="'+openedId+'"]')||$('#saved-toggle');target?.focus();});
+window.addEventListener('storage',e=>{if(e.key===storageKey||e.key===null){render();if($('#reader')?.open&&typeof syncSave==='function')syncSave();}});
+let selected='iss';
+function render(){const p=data.find(p=>p.id===selected),ids=read();$$('[data-mission]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mission===selected)));$('#mission-title').textContent=p.name;$('#mission-tag').textContent=p.tag;$('#mission-text').textContent=p.text;$('#mission-facts').innerHTML=p.facts.map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('');$('#mission-source').href=p.source;$('#mission-code').textContent=p.tag;const on=ids.includes(selected);$('#mission-save').setAttribute('aria-pressed',on);$('#mission-save').textContent=on?'✓ Kuzatuvda':'Kuzatuvga qo‘shish +';$('#saved-count').textContent=ids.length;$('#watch-empty').hidden=!!ids.length;$('#watch-items').innerHTML=ids.map(id=>`<li>${data.find(p=>p.id===id).name}</li>`).join('');$('#export').disabled=!ids.length;$('#satellite text').textContent=p.id.toUpperCase();const mode={iss:{x:540,y:150,r:122},webb:{x:580,y:310,r:75},voyager:{x:600,y:85,r:40}}[p.id];$('#orbit-title').textContent=p.name+' — shartli chizma, masshtabga mos emas';$('.orbit-display').dataset.mission=p.id;$('#motion-toggle').disabled=p.id!=='iss';$('#motion-toggle').textContent=p.id!=='iss'?'Bu chizma statik':document.body.classList.contains('paused')?'Harakatni davom ettirish ▶':'Harakatni to‘xtatish Ⅱ';$$('#satellite circle').forEach(c=>{c.setAttribute('cx',mode.x);c.setAttribute('cy',mode.y);});$('#satellite path').setAttribute('d',`M${mode.x+18} ${mode.y}h50`);$('#satellite text').setAttribute('x',mode.x+20);$('#satellite text').setAttribute('y',mode.y-18);$('.orbit-display>svg>circle').setAttribute('r',mode.r);}
+$$('[data-mission]').forEach(b=>b.addEventListener('click',()=>{selected=b.dataset.mission;render();}));$('#mission-save').addEventListener('click',()=>{toggle(selected);render();});$('#export').addEventListener('click',()=>download('orbita-atlas.txt','ORBITA — kuzatuv ro‘yxati\n'+read().map(id=>{const p=data.find(p=>p.id===id);return p.name+'\n'+p.source;}).join('\n\n')));$('#motion-toggle').addEventListener('click',e=>{const paused=document.body.classList.toggle('paused');e.currentTarget.setAttribute('aria-pressed',paused);e.currentTarget.textContent=paused?'Harakatni davom ettirish ▶':'Harakatni to‘xtatish Ⅱ';});document.addEventListener('visibilitychange',()=>{document.querySelector('#satellite').style.animationPlayState=document.hidden||document.body.classList.contains('paused')?'paused':'';});render();
+
+```
+
+## site/model.js
+
+```javascript
+export const data=[
+  {
+    "id": "iss",
+    "name": "Xalqaro kosmik stansiya",
+    "tag": "YER ORBITASI",
+    "text": "Yer atrofida aylanadigan xalqaro laboratoriya. Mikrogravitatsiya sharoitidagi tadqiqotlar insonning kosmosda yashashi va ishlashini o‘rganadi.",
+    "facts": [
+      [
+        "MUHIT",
+        "Mikrogravitatsiya"
+      ],
+      [
+        "YO‘NALISH",
+        "Inson va ilm-fan"
+      ]
+    ],
+    "source": "https://www.nasa.gov/international-space-station/"
+  },
+  {
+    "id": "webb",
+    "name": "James Webb",
+    "tag": "INFRAQIZIL ASTRONOMIYA",
+    "text": "Webb infraqizil nurlanishni kuzatadi. Dastlabki galaktikalar, yulduzlar paydo bo‘lishi va ekzosayyoralar atmosferasi uning tadqiqot yo‘nalishlari orasida.",
+    "facts": [
+      [
+        "KUZATUV",
+        "Infraqizil"
+      ],
+      [
+        "NUQTA",
+        "Quyosh–Yer L2 atrofi"
+      ]
+    ],
+    "source": "https://science.nasa.gov/mission/webb/"
+  },
+  {
+    "id": "voyager",
+    "name": "Voyager 1",
+    "tag": "YULDUZLARARO FAZO",
+    "text": "1977-yilda uchirilgan apparat tashqi sayyoralarni o‘rgandi va keyinchalik yulduzlararo fazoga yetib bordi. Bu atlas jonli telemetriya bermaydi.",
+    "facts": [
+      [
+        "UCHIRILGAN",
+        "1977"
+      ],
+      [
+        "TADQIQOT",
+        "Yulduzlararo muhit"
+      ]
+    ],
+    "source": "https://science.nasa.gov/mission/voyager/"
+  }
+];
+export function normalize(value){return Array.isArray(value)?[...new Set(value.filter(id=>data.some(p=>p.id===id)))]:[];}
+
+```
+
+## site/model.test.mjs
+
+```javascript
+import {data,normalize} from './model.js';
+import test from 'node:test';import assert from 'node:assert/strict';
+test('storage accepts only known unique IDs',()=>{assert.deepEqual(normalize([data[0].id,'<script>',data[0].id,null]),[data[0].id]);assert.deepEqual(normalize({}),[]);});
+test('curated content IDs and sources are complete',()=>{assert.equal(new Set(data.map(p=>p.id)).size,data.length);for(const p of data){assert.ok(p.name.length>3);assert.ok(p.source.startsWith('https://'));}});
+
+```
+
+## site/CREDITS.md
+
+```javascript
+# Orbita — credits
+
+Original implementation and sample copy created for this library. Not affiliated with reference organizations.
+
+Visual contract: Space Grotesk + IBM Plex Mono. Qora, oq, signal-to‘q sariq. Asosiy sahna: katta orbital SVG; gorizontal missiya registri. Marketing kartalari va krem serif hero bilan almashtirma.
+
+Fonts from https://github.com/google/fonts under bundled SIL OFL licenses. No remote runtime assets.
+
+Factual summaries paraphrased from NASA:
+- https://www.nasa.gov/international-space-station/
+- https://science.nasa.gov/mission/webb/
+- https://science.nasa.gov/mission/voyager/
+Orbital illustration is original, schematic and not to scale. No NASA imagery or logos used.
+
+```
+
+## site/package.json
+
+```json
+{"private":true,"type":"module","scripts":{"test":"node --test model.test.mjs"}}
+
+```
+

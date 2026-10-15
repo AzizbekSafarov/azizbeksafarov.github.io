@@ -1,16 +1,7 @@
-# Tanlov uchun to‘rtta faol starter
+# Tanlov dizaynlarini davom ettirish
 
-Markaz: https://azizbeksafarov.github.io/ . Galereya: /design/ . AI boshlash: /design/start/ .
+Faol: Orbita, Nashr, Hisob, Ziyo, Meros, Samar, Forma, Bloom, Yuksal. /design/ — jonli katalog; /design/start/ — bilet va vaqtdan AI matni. /ai.md — markaziy kontekst. Har bir /design/{slug}/ — AI brief, source.zip, source.md va SHA-256 manifest.
 
-- /design/si/ — Yuksal, tahririy motion sayt.
-- /design/bloom/ — rasmiy Material 3 ish maydoni.
-- /design/samar/ — qayta ishlangan sayohat rejalashtirgichi.
-- /design/forma/ — qayta ishlangan suratli konsept katalog.
+ZIP root: node serve.mjs; source site/ ichida. Npm kerak emas; Bloom source buildi alohida. AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md, HANDOFF.md tartibida o‘qing. Bilet va joydagi reglament ustuvor.
 
-Har sahifada ai.md, source.md/html, source.zip va SHA-256 manifest bor. ZIP ichida AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md, HANDOFF.md, CHECKLIST.md va DESIGN-STANDARD.md mavjud. Bilet va haqiqiy vaqt ustuvor; link xotira yoki vosita kafolati emas.
-
-Samar/Forma: plain ES modules, local fonts/images, npm o‘rnatmasdan preview. Bloom source build uchun npm paketlari kerak; oldindan yig‘ilgan dist tayyor. Yuksal ham oddiy HTML/CSS/JS. Barcha kitlarda node serve.mjs yoki README’dagi Python fallback bor.
-
-Source o‘zgargach: python design/build_handoff.py; python design/verify_handoff.py. Samar/Forma HTML/CSS generatori build_refined.py; original libraryda shuni tahrirlab, runtime o‘zgarishlarini ongli regenerate qiling. Tanlovdagi alohida ZIPni to‘g‘ridan-to‘g‘ri tahrirlash mumkin.
-
-Kit faqat shu to‘rtta starter va oldin yig‘ilgan to‘liq tanlov matnini oladi. Asl PDFlar /ustoz/sources/ da, alohida repozitoriyda. Yetti eski dizayn, ularning alias/paket/generatorlari va arxiv sahifasi olib tashlangan.
+Kutubxonani yangilash: build_collection.py yangi beshlik; build_refined.py Samar/Forma; hq_v2.py bosh qarorgoh; build_handoff.py barcha paket va sahifalarni yig‘adi. verify_handoff.py hash, ichki yo‘l va resurslarni tekshiradi. Previews haqiqiy brauzer screenshotlari; QA faqat yozilgan tekshiruvga tegishli.

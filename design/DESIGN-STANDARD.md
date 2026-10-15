@@ -30,15 +30,27 @@ Tipografiya, cheklangan rang rollari, iyerarxiya va gridning izchilligi vizual s
 
 ## Bizning vizual yo‘nalishlarimiz
 
-Bosh qarorgoh: oq asos, to‘q yashil matn va amal rangi, Instrument Sans + Instrument Serif, ochiq tahririy grid. Suratlar — haqiqiy demo ko‘rinishlari. Uydirma faoliyat raqamlari va dekorativ metrikalar yo‘q. Portalning asosiy vazifasi — kerakli ishga tez kirish.
+Bosh qarorgoh: DM Sans + IBM Plex Mono, oq/kobalt, uch yo‘lli ishga kirish paneli, qidiriladigan 9 dizaynli kutubxona. Serif tahririy demo uslubidan alohida. Preview — haqiqiy brauzer screenshot; son — haqiqiy katalog miqdori.
+
+Kelley Gordon grid, izchil shrift rollari, maqsadli rang va mazmun tashuvchi tasvirlarni bir tizimda ko‘rishni tavsiya qiladi. Bitta rasm yoki shrift har joyga takrorlansa, turli vazifalar ham bir qolipga o‘xshab qoladi. [NNGroup: Good Visual Design, Explained](https://www.nngroup.com/articles/good-visual-design/).
+
+Anthropic’ning frontend design yo‘riqnomasi koddan oldin maqsad, auditoriya va aniq estetik yo‘nalishni belgilaydi; generic tizim shriftlari, purple-gradient va bir xil komponentlar bilan cheklanmaslikni tavsiya qiladi. Bu biror shriftni universal taqiqlash emas. [Official frontend design plugin](https://claude.com/marketplace/plugins/frontend-design).
+
+Mustaqil screenshot tanqidi yaratuvchining o‘z taxminini tekshiradi. Natijani faqat kod yoki nazorat ro‘yxatidan baholamaymiz. [Anthropic: Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps).
+
+- Orbita: Space Grotesk + IBM Plex Mono, qora ilmiy atlas, orbital sahna, missiya registri va shaxsiy kuzatuv. NASA sahifalari mazmun manbasi, rasmiy affiliasiya emas.
+- Nashr: Newsreader + DM Sans, gazeta mastheadi, bosh maqola sarlavhasi suratdan oldin, ko‘p ustunli tahririyat. Sayohat suratlari o‘rniga o‘qish/hunar fotosuratlari.
+- Hisob: DM Sans + mono qiymatlar, zich sidebar, magnitude shkalali grafik, davr va saralash. Sonlar aniq demo.
+- Ziyo: sariq/ko‘k dars muqovasi, qatlam diagrammasi va dars muhiti. Progress faqat tekshirilgan to‘g‘ri javob bilan oshadi.
+- Meros: Barlow Condensed afisha + Newsreader sharh, olxo‘ri/pushti, ekspozitsiya indeksi va katta me’moriy lavha. Sayr rejalashtirgichi emas, mustaqil fotografik ko‘rgazma.
 
 Yuksal: SI.gov’dan o‘rganilgan tahririy masshtab va interaktiv zarrachalar mexanikasi. Mustaqil Yuksal brendi, oq fon, O‘zbekiston palitrasi; davlat portali sifatida ko‘rsatilmaydi. SI.gov’ni kim yaratgani haqida tasdiqlanmagan da’vo qilmaymiz. [SI.gov original sayt](https://www.si.gov/).
 
 Bloom: Google Material Design 3, rasmiy Material Web komponentlari va dinamik rang rollari. Ko‘rinishdan tashqari holatlar va amallar bir tizimda ishlashi kerak. [Material Design 3](https://m3.material.io/).
 
-Samar: haqiqiy Samarqand manzillari va suratlar, rasmiy manba, mustaqil kun rejasi. Vaqtlar taklif sifatida belgilangan; bron yoki tarif uydirilmaydi.
+Samar: Barlow Condensed shahar mastheadi, DM Sans, oq/moviy, panorama va gorizontal manzil qatorlari. Haqiqiy Samarqand manzillari, rasmiy manba va kun rejasi. Vaqtlar taklif; bron yoki tarif uydirilmaydi.
 
-Forma: haqiqiy suratlar, o‘lcham/material tafsiloti, kategoriya va miqdordan hisoblanadigan savat. Konsept katalogdagi narx/xususiyatlar ochiq namuna; to‘lov tugmasi o‘rnida haqiqiy matn eksporti.
+Forma: DM Sans geometrik katalog, oq/qora va terrakota, katta vertikal mahsulot tasviri. Muuto’da mahsulotning kompozitsiyadagi yetakchiligi o‘rganildi, brend yoki kod ko‘chirilmadi. Suratga mos to‘qima stul nomi, tafsilot, kategoriya va miqdordan hisoblanadigan savat. Narx/xususiyatlar namuna; haqiqiy matn eksporti bor.
 
 ## Qabul qilish tartibi
 
@@ -54,4 +66,4 @@ Tezlik uchun asosiy maqsadlar: LCP 2.5 soniyagacha, INP 200 ms gacha, CLS 0.1 ga
 
 ## Kuratsiya qarori
 
-Faol: Bloom, Yuksal, qayta ishlangan Samar va Forma. Qolgan yetti eski variant joriy sayt va kod paketlaridan olib tashlandi. Samar — haqiqiy manzillar va kun rejasiga, Forma — suratli konsept katalog va aniq savat hisobiga qayta qurildi. Har biri biletga moslashtirilganda yana tekshiriladi.
+Faol: Orbita, Nashr, Hisob, Ziyo, Meros, Samar, Forma, Bloom, Yuksal. Yetti eski variant olib tashlangan holatda qoladi. Har bir starter mustaqil original implementatsiya; professional studiya tomonidan yaratilgan yoki tasdiqlangan deb da’vo qilinmaydi. SI.gov muallifini tasdiqlovchi ishonchli kredit topilmadi. Har biri biletga moslashtirilganda yana tekshiriladi.

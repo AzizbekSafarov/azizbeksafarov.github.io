@@ -1,5 +1,5 @@
 document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
-import {products,normalize,change,total,money,exportCart} from './model.js?v=11fd7b4f21';
+import {products,normalize,change,total,money,exportCart} from './model.js?v=878bdb00f7';
 const $=s=>document.querySelector(s),key='forma-cart-v2';let cart=normalize(null),category='all',opener,selected;
 let storageUsable=true;
 function read(){if(!storageUsable)return normalize(cart);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{return normalize(null);}}

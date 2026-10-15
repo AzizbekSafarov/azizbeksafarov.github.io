@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-15",
+  "source_fingerprint": "c9c27359b42cc4726cd4224da960acba4217eb592104748fa540189dffb6cbbd",
+  "name": "Meros",
+  "slug": "meros",
+  "context_url": "https://azizbeksafarov.github.io/design/meros/",
+  "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
+  "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
+  "archive_sha256": "994a93da7f76e568c53f9b6160fbca91e6e197fa181df44df382124b95605be2",
+  "archive_bytes": 1729479,
+  "entry": "index.html",
+  "serve_root": "site",
+  "readable_source_files": [
+    {
+      "path": "index.html",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/index.html.txt",
+      "sha256": "d6ba8051a3e716d73485d10227892f8a062bc51885a0e87b8138867194357264",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/index.html.txt"
+    },
+    {
+      "path": "style.css",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/style.css.txt",
+      "sha256": "7872da1052fac62f7591847af84258c7e624cdd38f742c2dd2c5683fa6bd127b",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/style.css.txt"
+    },
+    {
+      "path": "app.js",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/app.js.txt",
+      "sha256": "fb012b5dfc13d685bc3e80a255c939f3a07b2fcf5a8fd3adf62b71cbbad3afc5",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/app.js.txt"
+    },
+    {
+      "path": "model.js",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/model.js.txt",
+      "sha256": "5ef9ac47c94eae76d772be4310fcc3ab477219d514bbcd991434ff1824290aa7",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/model.js.txt"
+    },
+    {
+      "path": "model.test.mjs",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/model.test.mjs.txt",
+      "sha256": "f1a74346f65e47dff57697f45a68481e6921a8ea7b075afe99e94279cd40c312",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/model.test.mjs.txt"
+    },
+    {
+      "path": "CREDITS.md",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/CREDITS.md.txt",
+      "sha256": "15cfe62a8456dcac0877877956f150c7054a7e9b23e24ad90a0245018ed3431b",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/CREDITS.md.txt"
+    },
+    {
+      "path": "package.json",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/package.json.txt",
+      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/package.json.txt"
+    }
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 2335,
+      "sha256": "6010a5d91bfdca324cd19ed3126d4d39edaf1dc27f58edac59345faac533e051"
+    },
+    {
+      "path": "AI-BRIEF.md",
+      "bytes": 4975,
+      "sha256": "2bcf2dd38097067a0b3fda63f5ec09f14d4bbda2ae622c0d40ff41e1721d661f"
+    },
+    {
+      "path": "CHECKLIST.md",
+      "bytes": 1075,
+      "sha256": "fed96b753f79c9e42f56bb9b69fa093261d7c7f1b2132c738033853e723cc46e"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "COMPETITION.md",
+      "bytes": 3751,
+      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+    },
+    {
+      "path": "CURRENT-TASK.md",
+      "bytes": 315,
+      "sha256": "b94db161487ec39ed17c2ff693ded6e35d6d9d14e1dbbb7b118c874faf38f581"
+    },
+    {
+      "path": "DESIGN-STANDARD.md",
+      "bytes": 7308,
+      "sha256": "102fd6d841af25aa64415720c5f485f67b48931640f692449621d003fe2f6100"
+    },
+    {
+      "path": "GEMINI.md",
+      "bytes": 194,
+      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 1068,
+      "sha256": "36e80a36a338b2186e792b2c03ac4ea4fa999fae42b27f43dd5b6b5f6af5a8ea"
+    },
+    {
+      "path": "README.md",
+      "bytes": 762,
+      "sha256": "1caa3f5f844a90762c61b924d326684ab618a7ab88a1cd1f9687fbbd209be9a5"
+    },
+    {
+      "path": "kit.json",
+      "bytes": 204,
+      "sha256": "19d29bc6d64004a691277c298594296d62030cc01f46ac7b930dcaf048fc18ef"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 2054,
+      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+    },
+    {
+      "path": "site/CREDITS.md",
+      "bytes": 1995,
+      "sha256": "15cfe62a8456dcac0877877956f150c7054a7e9b23e24ad90a0245018ed3431b"
+    },
+    {
+      "path": "site/QA-REPORT.md",
+      "bytes": 2291,
+      "sha256": "bc62fbc03e6df8fc3686d06f8af3022e42955738adcdf7cbf1220c0dea2ca761"
+    },
+    {
+      "path": "site/README.md",
+      "bytes": 670,
+      "sha256": "0b152cc80c9600cb390b4cacab1d1ecb8f25230515c36f675752f3f850e9bde9"
+    },
+    {
+      "path": "site/app.js",
+      "bytes": 4173,
+      "sha256": "fb012b5dfc13d685bc3e80a255c939f3a07b2fcf5a8fd3adf62b71cbbad3afc5"
+    },
+    {
+      "path": "site/fonts/display-OFL.txt",
+      "bytes": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "path": "site/fonts/display.ttf",
+      "bytes": 102480,
+      "sha256": "583cec5da3b84bc4dc7c9c72e2a565c94d34e431518b19d7e250b7830ad5f996"
+    },
+    {
+      "path": "site/fonts/news-OFL.txt",
+      "bytes": 4394,
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8"
+    },
+    {
+      "path": "site/fonts/news.ttf",
+      "bytes": 451664,
+      "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+    },
+    {
+      "path": "site/fonts/sans-OFL.txt",
+      "bytes": 4389,
+      "sha256": "2af94f4fb533be8fa23282eb33e08ca311ddf47c2f32777e2040b282deeec65c"
+    },
+    {
+      "path": "site/fonts/sans.ttf",
+      "bytes": 240164,
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+      "path": "site/images/guri-amir.jpg",
+      "bytes": 486380,
+      "sha256": "36a90ce6c119b0eed3b3a1cd1a1fe0e63e6fe2039679f28cb7b366a92495025d"
+    },
+    {
+      "path": "site/images/registan.jpg",
+      "bytes": 391455,
+      "sha256": "444aa20e19ecd6390c372609642e29038bf66fe3f65dd7c3c6e0f69a79e62237"
+    },
+    {
+      "path": "site/images/shohi-zinda.jpg",
+      "bytes": 394822,
+      "sha256": "da105838e989232ca3916f8a1a9ac1773c62b138e5879fdd2a66692a7ae400cd"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 3423,
+      "sha256": "d6ba8051a3e716d73485d10227892f8a062bc51885a0e87b8138867194357264"
+    },
+    {
+      "path": "site/mark.svg",
+      "bytes": 203,
+      "sha256": "cc56ae3aa50194cc9c1958865bdc2b236165af9193522a272cf4941caf920be4"
+    },
+    {
+      "path": "site/model.js",
+      "bytes": 1432,
+      "sha256": "5ef9ac47c94eae76d772be4310fcc3ab477219d514bbcd991434ff1824290aa7"
+    },
+    {
+      "path": "site/model.test.mjs",
+      "bytes": 495,
+      "sha256": "f1a74346f65e47dff57697f45a68481e6921a8ea7b075afe99e94279cd40c312"
+    },
+    {
+      "path": "site/package.json",
+      "bytes": 81,
+      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36"
+    },
+    {
+      "path": "site/style.css",
+      "bytes": 8897,
+      "sha256": "7872da1052fac62f7591847af84258c7e624cdd38f742c2dd2c5683fa6bd127b"
+    }
+  ],
+  "baseline_qa_url": "https://azizbeksafarov.github.io/design/meros-site/QA-REPORT.md",
+  "ai_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/ai.md",
+  "archive_fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/source.zip"
+}

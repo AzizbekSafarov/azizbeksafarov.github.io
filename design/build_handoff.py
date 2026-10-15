@@ -47,6 +47,14 @@ FLOWS = {'02': ['Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus.
 def read(path):
     return path.read_text(encoding='utf-8-sig')
 
+from build_collection import SPECS
+for spec in SPECS:
+    SLUGS[spec['id']]=spec['slug']
+    LOOKS[spec['id']]=spec['look']
+    FLOWS[spec['id']]=[spec['flow']]
+LOOKS['02']='Oq/moviy shahar qo‘llanmasi, Barlow Condensed + DM Sans, ulkan SAMARQAND masthead, panoramali surat, gorizontal manzil qatorlari, to‘q ko‘k kun rejasi.'
+LOOKS['04']='DM Sans geometrik katalog, oq/qora va terrakota, mahsulotning katta vertikal fotosurati, BUYUM/MAKON/HAYOT kompozitsiyasi, alohida savat drawer.'
+
 def write(path,text):
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(text,encoding='utf-8',newline='\n')
@@ -113,6 +121,9 @@ Map ticket requirements to user actions and concrete checks. Verify the primary 
 """
 
 def ai_brief(t):
+    if t['id'] in {s['id'] for s in SPECS}:
+        from build_collection import brief
+        return brief(t,SITE,RAW,DATE)
     if t['id'] in ('02','04'):
         from refined_handoff import brief
         return brief(t,SITE,RAW,DATE)
@@ -267,8 +278,8 @@ def zip_bytes(files):
 
 def source_files(t,templates):
     files={}
-    if t['id'] in ('02','04'):
-        base=ROOT/('samar-site' if t['id']=='02' else 'forma-site')
+    if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:
+        base=ROOT/(t['slug']+'-site')
         for path in sorted(base.rglob('*')):
             if path.is_file() and '__pycache__' not in path.parts:files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
     elif t['id']=='11':
@@ -374,14 +385,14 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
 """
         extras={'README.md':intro,'AGENTS.md':rules(t),'CLAUDE.md':'# Project context\n\nRead AGENTS.md in this directory, then AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before editing. User task and actual competition rules take priority. Communicate in Uzbek.\n','AI-BRIEF.md':brief,'CURRENT-TASK.md':current,'HANDOFF.md':handoff(t),'CHECKLIST.md':checklist(t),'COMPETITION.md':read(ROOT/'handoff/competition.md'),'kit.json':json.dumps(kit,ensure_ascii=False,indent=2),'serve.mjs':read(ROOT/'handoff/serve.mjs')}
         if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node --test site/model.test.mjs site/motion.test.mjs`. Read AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before adapting.\n'
-        if t['id'] in ('02','04'):extras['README.md']=read(ROOT/('samar-site' if t['id']=='02' else 'forma-site')/'README.md')+'\n\nAt ZIP root run node serve.mjs. Editable files are site/. Read AGENTS.md and AI-BRIEF.md.\n'
+        if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:extras['README.md']=read(ROOT/(t['slug']+'-site')/'README.md')+'\n\nAt ZIP root run node serve.mjs. Editable files are site/. Read AGENTS.md and AI-BRIEF.md.\n'
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md')
         extras['AGENTS.md']+='\nRead DESIGN-STANDARD.md for the quality bar. Do not reproduce generic blocks, invented proof or decorative interactions that displace the task.\n'
         files.update({k:v.encode() for k,v in extras.items()})
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
         manifest={'schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
-        if t['id'] in ('02','04'):manifest['baseline_qa_url']=f'{SITE}/design/'+('samar-site' if t['id']=='02' else 'forma-site')+'/QA-REPORT.md'
+        if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:manifest['baseline_qa_url']=f'{SITE}/design/'+t['slug']+'-site/QA-REPORT.md'
         if t['id']=='11':manifest['baseline_qa_url']=f'{SITE}/design/si-site/QA-REPORT.md'
         manifest['ai_fallback_url']=f'{RAW}/design/{t["slug"]}/ai.md'
         manifest['archive_fallback_url']=f'{RAW}/design/{t["slug"]}/source.zip'
@@ -407,7 +418,7 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     archive_links=''.join(f'<li><strong>{escape(t["name"])}</strong> — <a href="{t["slug"]}/ai.md">AI matni</a> · <a href="{t["slug"]}/source.zip">Kod ZIP</a></li>' for t in catalog)
     archives['index.html']=('<!doctype html><html lang="uz"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tanlov starterlari — offline</title><body style="font:17px/1.7 system-ui;max-width:900px;margin:30px auto;padding:20px"><h1>Tanlov starterlari</h1><p>Tanlangan kod ZIPini alohida papkaga oching. AIga AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md va HANDOFF.md ni o‘qiting. ZIP ildizida <code>node serve.mjs</code> tayyor namunani ochadi.</p><ul>'+archive_links+'</ul><p><a href="COMPETITION.md">Qisqa tanlov konteksti</a> · <a href="competition/FULL-CONTEXT.md">Barcha yig‘ilgan tanlov matnlari</a></p><p>Yakuniy bilet va reglament ustuvor. Runtime preview npm o‘rnatmasdan ishlaydi; Bloom source buildi uchun o‘rnatilgan/cache’dagi paketlar yoki internet kerak.</p></body></html>').encode()
     (ROOT/'kit.zip').write_bytes(zip_bytes(archives))
-    write(ROOT.parent/'llms.txt',f'# Azizbek Safarov: open competition headquarters\n\n- [Start here]({SITE}/ai.md): central context and four curated designs.\n- [Yuksal starter]({SITE}/design/si/ai.md): editorial motion website.\n- [Bloom M3 starter]({SITE}/design/bloom/ai.md): functional project workspace.\n- [Samar starter]({SITE}/design/samar/ai.md): itinerary and verified destination sources.\n- [Forma starter]({SITE}/design/forma/ai.md): concept catalog and cart.\n- [Competition brief]({SITE}/design/handoff/competition.md): dated evidence and uncertain rules.\n- [Full research]({SITE}/ustoz/ai.md): collected local and official-web information.\n- [Quality standard]({SITE}/design/DESIGN-STANDARD.md).\n\nThe user’s actual ticket and current instructions take priority. These resources do not guarantee autonomous execution or correctness.\n')
+    write(ROOT.parent/'llms.txt', '# Azizbek: open competition headquarters\n\n- [Central AI context]('+SITE+'/ai.md)\n'+''.join('- ['+t['name']+']('+SITE+'/design/'+t['slug']+'/ai.md): '+t['summary']+'\n' for t in catalog)+'\n- [Full competition research]('+SITE+'/ustoz/ai.md)\n- [Quality standard]('+SITE+'/design/DESIGN-STANDARD.md)\n\nUser ticket, time and on-site rules take priority. These resources do not guarantee tools or autonomous execution.\n')
     from build_hq import build as build_hq
     build_hq(catalog)
     print(f'Built {len(catalog)} active AI routes; curated offline kit ({(ROOT/"kit.zip").stat().st_size:,} bytes).')
