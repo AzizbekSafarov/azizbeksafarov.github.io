@@ -1,6 +1,6 @@
 # Yuksal · SI — tanlovda yangi AI uchun boshlash
 
-Snapshot: 2026-10-15; source fingerprint: `43021b6f31c9867a`. Readable page: https://azizbeksafarov.github.io/design/si/
+Snapshot: 2026-10-15; source fingerprint: `c92a788c7eee3d57`. Readable page: https://azizbeksafarov.github.io/design/si/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -22,7 +22,7 @@ Ishtirokchi bergan ma’lumot: Urgut → Samarqand viloyat bosqichi, 2026-yil 13
 
 SI.gov vizual uslubidagi mustaqil Yuksal · SI: navy #0a103d, krem #f5f1dd, qizil #ff354f va moviy kursiv; mahalliy Instrument Serif/Sans; canvas SI zarrachalari, katta tahririy sarlavhalar, dumaloq menyu, yon nuqta navigatsiyasi va och kartalar. Rasmiy davlat xizmati emas.
 
-Asosiy amallar: Zarrachali animatsiya · dumaloq menyu · bo‘lim navigatsiyasi · filtr · shaxsiy reja · light/dark sirtlar. Mos sohalar: AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom/Qadam progressi, saqlash va temalar; Forma savati; Spark palitrasi shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
+Asosiy amallar: SI ↔ Super Intelligence · kursor va click fizikasi · scroll morph · spiral / shar / signal · filtr · shaxsiy reja. Mos sohalar: AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom/Qadam progressi, saqlash va temalar; Forma savati; Spark palitrasi shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
 
 ## 4. Haqiqiy kodni olish
 
@@ -39,7 +39,10 @@ Source archive va matn bir snapshotdan yaratilgan. ZIPni ochgach `AGENTS.md`, `A
 
 - `index.html`: bo‘lim, kartalar, o‘zbekcha matn va dialoglar.
 - `style.css`: navy/krem/qizil dizayn va responsive holatlar.
-- `app.js`: canvas, menyu, filtr, reja va yuklash.
+- `app.js`: menyu, filtr, reja, yuklash va harakat sozlamalari.
+- `motion.js`: yagona persistent spring particle field; hover/tap morph, kursor, click to‘lqini va scroll shakllari.
+- `motion.test.mjs`: fizik barqarorlik, kursor, to‘lqin va harakatlanuvchi shakllar.
+- `MOTION.md`: originaldan tekshirilgan animatsiya kontrakti.
 - `model.js`: ID, mazmun, uch qadam va reja validatsiyasi.
 - `model.test.mjs`: saqlanish, toggle va eksport testlari.
 - `fonts/`: mahalliy Instrument shriftlar va OFL.
@@ -49,10 +52,12 @@ Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [index.html](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt)
 - [style.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt)
 - [app.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/app.js.txt)
+- [motion.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.js.txt)
+- [motion.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.test.mjs.txt)
 - [model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.js.txt)
 - [model.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.test.mjs.txt)
 
-Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas dekorativ, DPR 2 va ~30 FPS; offscreen/hidden tab/pause’da to‘xtaydi. OS reduced-motion va statik SI fallback saqlansin.
+Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas butun sahifaga fixed; 1800 desktop / 1500 mobile nuqta, DPR 2, requestAnimationFrame va delta-time spring. SI → Super Intelligence: desktop serpentine text, mobile rotating lettering circle. Pointer repulsion radius 120 px; click expanding wave; spring .045 va damping .84. Scroll shakllarni almashtiradi, zarracha identity/velocity saqlanadi. Hidden tab/pause’da to‘xtaydi; faqat hero offscreen bo‘lgani uchun to‘xtatma. `MOTION.md` ni o‘qi. OS reduced-motion va statik SI fallback saqlansin.
 
 Oldindan yig‘ilgan nusxa uchun npm yoki internet shart emas: ZIP ildizida `node serve.mjs`, so‘ng http://127.0.0.1:8080/ . Node bo‘lmasa README’dagi Python usulini ishlat. Bloom source tahriri uchun npm paketlari o‘rnatilgan/cache’da bo‘lishi yoki internet kerak.
 
@@ -60,7 +65,7 @@ Oldindan yig‘ilgan nusxa uchun npm yoki internet shart emas: ZIP ildizida `nod
 node serve.mjs
 # ZIPdagi site/ ichida alohida terminal:
 cd site
-node model.test.mjs
+node --test model.test.mjs motion.test.mjs
 ```
 
 ## 6. Moslashtirish va xatoni o‘zi tuzatish tartibi
@@ -79,7 +84,7 @@ Navy/krem sirtlar, aniq qizil CTA, serif-kursiv/sans farqi va outline holatlar s
 
 Quyidagi baseline amallarni yangi bilet oqimiga moslab tekshir. Eski QA bugungi o‘zgarishlarning isboti emas.
 
-- Canvas SI, pause/resume, reduced-motion va statik yozuv fallback.
+- SI → Super Intelligence hover / mobil tap, kursor itarishi va click to‘lqini. Scroll: ring → helix → towers → ring → broadcast → scatter → flag. Pause/reduced-motion va statik SI fallback.
 - Dumaloq menyu → bo‘lim; Escape → ochgan tugmaga fokus qaytishi.
 - Kategoriya → 4/2/1/1 kartalar; aniq tanlangan holat.
 - Detail → reja qo‘shish/olish → hisob → reload → matn yuklash; bo‘sh rejada yuklash o‘chiq.

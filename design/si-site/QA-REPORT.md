@@ -1,18 +1,20 @@
 # Yuksal · SI verification — 2026-10-15
 
-Three model tests pass: persisted-plan sanitization, reversible known-ID toggling and exported content/order. The application module also passes JavaScript syntax validation.
+Seven tests pass: persisted-plan sanitization, reversible known-ID toggling, exported content/order, spring convergence, pointer/click repulsion, long-frame integration, and finite animated geometry for all seven procedural shapes at 1500/1800 particles. Application and motion modules pass syntax validation.
 
 Browser checks completed on the local site:
 
-- Canvas initializes with the bundled fonts. Pause/resume changes its accessible label and pressed state.
+- Canvas initializes with bundled fonts. The same persistent field changes from SI to desktop serpentine Super Intelligence on hover, and to rotating circular lettering at a 390 px viewport via the accessible hero control. Keyboard Enter toggles it back.
+- Scroll targets were observed in the browser: orbital sphere, helix, towers, sphere, expanding broadcast rings, drifting scatter and waving banner. Pale-background contrast was corrected for nested step chapters.
+- Pause/resume changes its accessible label and pressed state. Two screenshots taken separately while paused were byte-identical, verifying visible motion actually freezes.
 - Circular menu opens, navigation closes it, and Escape restores keyboard focus.
 - Learning filter returns two initiatives; creation filter returns one.
 - Initiative detail shows its real steps. Adding/removing selections updates the plan and empty state. Reload preserves saved selections.
 - Downloaded UTF-8 plan was read back and contains the selected initiatives and their steps in order. An empty plan disables download.
-- At 320, 390, 768, 1024 and 1440 px, the page has no horizontal overflow. The narrow detail dialog keeps its actions reachable; Escape returns focus to its initiating button.
+- Current motion revision: no horizontal overflow at 320, 390, 768 and 1024 px, plus the default desktop viewport. The prior 1440 px baseline and narrow-dialog checks are historical, not rerun for this motion revision. Filter → detail → save → Escape was rerun: two learning cards, plan count one, focus restored to the opening card.
 - No browser console errors were recorded during the main flows.
 
-Reduced-motion support, offscreen/hidden-tab animation suspension and canvas fallback are implemented. The operating-system reduced-motion preference was not emulated during this check.
+Reduced-motion support, hidden-tab suspension and canvas fallback are implemented. Hero-offscreen suspension was deliberately removed: scroll chapters reuse the same field. The operating-system reduced-motion preference and physical touchscreen input were not emulated during this check; mobile geometry and keyboard control were tested.
 
 The gallery, handoff manifests and portable archives are checked separately by `design/verify_handoff.py`; deployment status is verified after publication rather than assumed here.
 

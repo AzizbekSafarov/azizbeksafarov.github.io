@@ -42,7 +42,7 @@ FLOWS = {
  '10':['Yangi loyiha → bo‘sh forma xatosi → haqiqiy yozishda xato yo‘qolishi → muvaffaqiyat → keyingi forma toza.','Qidiruv + kategoriya + saralash + saqlangan/bajarilgan bo‘limlar; takror bosilgan chip tanlangan qoladi.','Karta/ro‘yxat, bookmark, detail uch checkbox → progress → reload.','Palitra label/ArrowRight/Space → bitta radio; light/dark; qisqa oynada Tayyor doim ko‘rinadi.','Escape → opener; filtrdan yo‘qolgan karta uchun fokus loyiha sarlavhasiga qaytadi.']
 }
 
-FLOWS['11']=['Canvas SI, pause/resume, reduced-motion va statik yozuv fallback.','Dumaloq menyu → bo‘lim; Escape → ochgan tugmaga fokus qaytishi.','Kategoriya → 4/2/1/1 kartalar; aniq tanlangan holat.','Detail → reja qo‘shish/olish → hisob → reload → matn yuklash; bo‘sh rejada yuklash o‘chiq.','320 px dialog, uzun sarlavha va yopish/saqlash amallari; lokal shrift va resurslar.']
+FLOWS['11']=['SI → Super Intelligence hover / mobil tap, kursor itarishi va click to‘lqini. Scroll: ring → helix → towers → ring → broadcast → scatter → flag. Pause/reduced-motion va statik SI fallback.','Dumaloq menyu → bo‘lim; Escape → ochgan tugmaga fokus qaytishi.','Kategoriya → 4/2/1/1 kartalar; aniq tanlangan holat.','Detail → reja qo‘shish/olish → hisob → reload → matn yuklash; bo‘sh rejada yuklash o‘chiq.','320 px dialog, uzun sarlavha va yopish/saqlash amallari; lokal shrift va resurslar.']
 
 def read(path):
     return path.read_text(encoding='utf-8-sig')
@@ -119,7 +119,7 @@ def ai_brief(t):
       '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: four existing model tests.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
       if bloom else f"- `{t['file']}`: selected page; its custom styles are inline.\n- `shared.css`, `shared.js`: shared layout, dialogs/forms, filters, cart/dashboard interactions.\n- `extra.js`, `lesson-model.js`: Qadam/Spark and additional interactions, where referenced.\n- `assets/fonts/`: local fonts and licenses.\n- `src/shared.js`, `src/extra.js`, `src/lesson-model.js`, `src/material.css`: library source.\n- `build_templates.py`, `extra_templates.py`: original generators; rerunning them overwrites generated edits."
     )
-    if t['id']=='11':source_map='- `index.html`: bo‘lim, kartalar, o‘zbekcha matn va dialoglar.\n- `style.css`: navy/krem/qizil dizayn va responsive holatlar.\n- `app.js`: canvas, menyu, filtr, reja va yuklash.\n- `model.js`: ID, mazmun, uch qadam va reja validatsiyasi.\n- `model.test.mjs`: saqlanish, toggle va eksport testlari.\n- `fonts/`: mahalliy Instrument shriftlar va OFL.\n- `QA-REPORT.md`: haqiqiy tekshiruv.'
+    if t['id']=='11':source_map='- `index.html`: bo‘lim, kartalar, o‘zbekcha matn va dialoglar.\n- `style.css`: navy/krem/qizil dizayn va responsive holatlar.\n- `app.js`: menyu, filtr, reja, yuklash va harakat sozlamalari.\n- `motion.js`: yagona persistent spring particle field; hover/tap morph, kursor, click to‘lqini va scroll shakllari.\n- `motion.test.mjs`: fizik barqarorlik, kursor, to‘lqin va harakatlanuvchi shakllar.\n- `MOTION.md`: originaldan tekshirilgan animatsiya kontrakti.\n- `model.js`: ID, mazmun, uch qadam va reja validatsiyasi.\n- `model.test.mjs`: saqlanish, toggle va eksport testlari.\n- `fonts/`: mahalliy Instrument shriftlar va OFL.\n- `QA-REPORT.md`: haqiqiy tekshiruv.'
     source_map += '\n\nFaqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):\n'+'\n'.join(f'- [{name}]({RAW}/design/{t["slug"]}/files/{name}.txt)' for name in code_names(t,{}))
     technical=(
       "React 19 + Vite 7 + Motion + `@material/web` 2.5 + Material Color Utilities. Use the lockfile (`npm ci`). Keep official Material buttons, chip-set/filter chips, outlined fields/selects, radios, checkboxes, dialogs and ripples. React custom-element change events currently use lowercase `onchange`; verify the installed control API rather than substituting native events by guesswork. Tokens come from SchemeTonalSpot with matched on-color roles. The three-step model and its category validation must change together when the ticket needs a different structure. Icons use a local subset: adding a new symbol requires updating `download_symbols.py` and rebuilding the font when network is available; otherwise use an existing supported icon. Unsupported icon names can render as text."
@@ -134,8 +134,8 @@ def ai_brief(t):
       if bloom else "Keep visible button states, labels, dialog Escape/focus and responsive navigation. A shared-script change can affect other pages: check the selected page's flows and the directly related shared behavior. Keep Qadam lesson progress idempotent and persisted, Forma totals derived from quantity, and Pulseboard CSV consistent with its active query."
     )
     if t['id']=='11':
-        technical='Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas dekorativ, DPR 2 va ~30 FPS; offscreen/hidden tab/pause’da to‘xtaydi. OS reduced-motion va statik SI fallback saqlansin.'
-        commands='node serve.mjs\n# ZIPdagi site/ ichida alohida terminal:\ncd site\nnode model.test.mjs'
+        technical='Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas butun sahifaga fixed; 1800 desktop / 1500 mobile nuqta, DPR 2, requestAnimationFrame va delta-time spring. SI → Super Intelligence: desktop serpentine text, mobile rotating lettering circle. Pointer repulsion radius 120 px; click expanding wave; spring .045 va damping .84. Scroll shakllarni almashtiradi, zarracha identity/velocity saqlanadi. Hidden tab/pause’da to‘xtaydi; faqat hero offscreen bo‘lgani uchun to‘xtatma. `MOTION.md` ni o‘qi. OS reduced-motion va statik SI fallback saqlansin.'
+        commands='node serve.mjs\n# ZIPdagi site/ ichida alohida terminal:\ncd site\nnode --test model.test.mjs motion.test.mjs'
         regression='Navy/krem sirtlar, aniq qizil CTA, serif-kursiv/sans farqi va outline holatlar saqlansin. Animatsiya matn/tugmani to‘smasin; mobilga majburiy scroll-snap qo‘shilmasin. Pause canvas hamda orbni to‘xtatsin. Plan faqat known unique IDlarni oladi; boshqa storage tozalanmaydi. Detail action footer va Escape/fokus qaytishi saqlansin. Hisob/eksport tanlangan yo‘nalishlarga mos bo‘lsin.'
     flows='\n'.join('- '+x for x in t['flows'])
     return f"""# {t['name']} — tanlovda yangi AI uchun boshlash
@@ -290,7 +290,7 @@ def source_files(t,templates):
 
 def code_names(t,files):
     if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','package.json','vite.config.js','download_symbols.py']
-    if t['id']=='11':return ['index.html','style.css','app.js','model.js','model.test.mjs']
+    if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs']
     else:
         names=[t['file'],'shared.css','shared.js']
         html=files['site/'+t['file']].decode('utf-8-sig') if files else read(ROOT/t['file'])
@@ -396,7 +396,7 @@ Python preview manzili: http://127.0.0.1:8080/{kit['entry']}
 CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna statistika, profil, narxlar, formalar va datasetlar haqiqiy xizmat emas. Tashqi CDN runtime’da kerak emas; fonts/licenses ZIP ichida. To‘liq tanlov tadqiqoti barcha dizaynlar paketi `kit.zip` ichida va https://azizbeksafarov.github.io/ustoz/ai.md da.
 """
         extras={'README.md':intro,'AGENTS.md':rules(t),'CLAUDE.md':'# Project context\n\nRead AGENTS.md in this directory, then AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before editing. User task and actual competition rules take priority. Communicate in Uzbek.\n','AI-BRIEF.md':brief,'CURRENT-TASK.md':current,'HANDOFF.md':handoff(t),'CHECKLIST.md':checklist(t),'COMPETITION.md':read(ROOT/'handoff/competition.md'),'kit.json':json.dumps(kit,ensure_ascii=False,indent=2),'serve.mjs':read(ROOT/'handoff/serve.mjs')}
-        if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node site/model.test.mjs`. Read AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before adapting.\n'
+        if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node --test site/model.test.mjs site/motion.test.mjs`. Read AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before adapting.\n'
         extras['GEMINI.md']=extras['CLAUDE.md']
         files.update({k:v.encode() for k,v in extras.items()})
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive

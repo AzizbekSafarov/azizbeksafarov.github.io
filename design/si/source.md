@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `43021b6f31c9867a9e3e627d7cfc828ddb45c9e92e7613f6085dd52766425d22`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `c92a788c7eee3d5714266bc4a706ad9596f5dba2ad403c6b094145c6aeaf9498`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 
@@ -15,32 +15,34 @@ Source fingerprint: `43021b6f31c9867a9e3e627d7cfc828ddb45c9e92e7613f6085dd527664
   <title>Yuksal · SI — kelajakni birga yaratamiz</title>
   <link rel="icon" href="mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js"></script>
+  <link rel="stylesheet" href="style.css?v=2">
+  <script type="module" src="app.js?v=2"></script>
 </head>
 <body>
 <a class="skip" href="#main">Asosiy mazmunga o‘tish</a>
 <header class="site-header"><a class="brand" href="#boshlanish" aria-label="Yuksal bosh sahifasi">Yuksal<span aria-hidden="true">✳</span><small>SI</small></a><a class="header-link" href="#tashabbuslar">Kelajak uchun tashabbuslar <span aria-hidden="true">↗</span></a><button class="motion-control" id="motion-toggle" type="button" aria-label="Animatsiyani to‘xtatish" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg><span>Harakat</span></button></header>
-<nav class="section-nav" aria-label="Sahifa bo‘limlari"><a href="#boshlanish" aria-label="Boshlanish" aria-current="location"><span>Boshlanish</span></a><a href="#qarash" aria-label="Bizning qarash"><span>Qarash</span></a><a href="#yondashuv" aria-label="Yondashuv"><span>Yondashuv</span></a><a href="#tashabbuslar" aria-label="Tashabbuslar"><span>Tashabbuslar</span></a><a href="#reja" aria-label="Shaxsiy reja"><span>Rejangiz</span></a></nav>
+<nav class="section-nav" aria-label="Sahifa bo‘limlari"><a href="#boshlanish" aria-label="Boshlanish" aria-current="location"><span>Boshlanish</span></a><a href="#qarash" aria-label="Bizning qarash"><span>Qarash</span></a><a href="#yondashuv" aria-label="Yondashuv"><span>Yondashuv</span></a><a href="#signal" aria-label="G‘oyalar signali"><span>Signal</span></a><a href="#tashabbuslar" aria-label="Tashabbuslar"><span>Tashabbuslar</span></a><a href="#reja" aria-label="Shaxsiy reja"><span>Rejangiz</span></a></nav>
+<canvas id="particles" class="particle-field" aria-hidden="true"></canvas>
 <main id="main">
-  <section class="hero section-dark" id="boshlanish" aria-labelledby="hero-title">
-    <div class="hero-art" aria-hidden="true"><canvas id="particles"></canvas><span class="particle-fallback">SI</span><div class="art-coordinate left">BILIM + TASAVVUR</div><div class="art-coordinate right">41.31° N / 69.24° E</div></div>
+  <section class="hero section-dark" data-motion="text" id="boshlanish" aria-labelledby="hero-title">
+    <div class="hero-art"><button class="art-toggle" type="button" aria-label="SI va Super Intelligence zarracha shakllarini almashtirish" aria-pressed="false"><span class="motion-hint">SI ustiga kursor olib boring · telefonda bosing ↗</span></button><span class="particle-fallback" aria-hidden="true">SI</span><div class="art-coordinate left">BILIM + TASAVVUR</div><div class="art-coordinate right">41.31° N / 69.24° E</div></div>
     <div class="hero-copy"><div><p class="eyebrow"><span class="status-dot"></span> KELAJAKNI KUTMAYMIZ. YARATAMIZ.</p><h1 id="hero-title">Yangi davr.<br>Yangi <em>imkoniyat.</em><br>Uni birga yaratamiz.</h1></div><div class="hero-aside"><p>Sun’iy intellektni tushunishdan — uning yordamida foydali yechimlar yaratishgacha. Katta kelajak kichik bir qadamdan boshlanadi.</p><a class="button primary" href="#tashabbuslar">Tashabbuslarni kashf eting <span aria-hidden="true">↗</span></a><a class="scroll-cue" href="#qarash"><span aria-hidden="true">↓</span> Keyingi sahifa</a></div></div>
     <span class="hero-edition" aria-hidden="true">YUKSAL / MUSTAQIL DIZAYN / 2026</span>
   </section>
-  <section class="vision section-dark" id="qarash" aria-labelledby="vision-title"><div class="section-inner"><p class="eyebrow reveal"><span class="status-dot"></span> NEGA BU MUHIM?</p><h2 id="vision-title" class="statement reveal">Texnologiyaning kuchi —<br>u ochadigan <em>imkoniyatlarda.</em></h2><div class="vision-bottom"><p class="reveal">Savol beradigan, tajriba qiladigan va o‘rganganini amalda sinaydigan avlod. Bizning e’tiborimiz ana shu yo‘lda.</p><div class="vision-note reveal"><span>01 — BIZNING QARASH</span><p>Bilim ochiq.<br>Imkoniyat <em>sizniki.</em></p></div></div><div class="orbit-art" aria-hidden="true"><span></span><span></span><span></span><i>✳</i></div></div></section>
-  <section class="approach section-cream" id="yondashuv" aria-labelledby="approach-title"><div class="section-inner"><div class="section-top reveal"><p class="eyebrow"><span class="status-dot"></span> SODDA YONDASHUV</p><span class="section-index">02 / 04</span></div><div class="approach-heading"><h2 id="approach-title" class="reveal">Bir g‘oya.<br><em>Uchta aniq qadam.</em></h2><p class="reveal">Hamma narsani birdan bilish shart emas. Muhimi — boshlash, sinash va foydali natijaga yetish.</p></div><div class="steps"><article class="step reveal"><span class="step-number">01</span><div><h3>Anglang.</h3><p>Yechmoqchi bo‘lgan muammoni toping. Kim uchun va nima uchun yaratayotganingizni biling.</p></div><span class="step-symbol" aria-hidden="true">◌</span></article><article class="step reveal"><span class="step-number">02</span><div><h3>Sinab ko‘ring.</h3><p>To‘g‘ri vositani tanlang. Kichik prototip yarating, ishlashini haqiqiy vazifa bilan tekshiring.</p></div><span class="step-symbol" aria-hidden="true">✳</span></article><article class="step reveal"><span class="step-number">03</span><div><h3>Ulashtiring.</h3><p>Natijani ko‘rsating, fikr oling va yaxshilang. Bitta yaxshi yechim boshqalarga ham yo‘l ochadi.</p></div><span class="step-symbol" aria-hidden="true">↗</span></article></div></div></section>
-  <section class="initiatives section-light" id="tashabbuslar" aria-labelledby="initiatives-title"><div class="section-inner"><div class="section-top reveal"><p class="eyebrow"><span class="status-dot"></span> TASHABBUSLAR</p><span class="section-index">03 / 04</span></div><div class="initiatives-heading"><h2 id="initiatives-title" class="reveal">Qiziqishdan —<br><em>yangi imkoniyatga.</em></h2><p class="reveal">O‘zingizga mos boshlanish nuqtasini toping. Yoqqan yo‘nalishni shaxsiy rejangizga qo‘shing.</p></div><div class="filter-bar"><div class="filters" role="group" aria-label="Tashabbus yo‘nalishi"><button type="button" data-filter="all" aria-pressed="true">Barchasi</button><button type="button" data-filter="learn" aria-pressed="false">O‘rganish</button><button type="button" data-filter="build" aria-pressed="false">Yaratish</button><button type="button" data-filter="connect" aria-pressed="false">Hamkorlik</button></div><p id="results" role="status" aria-live="polite">4 ta tashabbus</p></div><div class="initiative-grid" id="initiative-grid">
+  <section class="vision section-dark" data-motion="ring" id="qarash" aria-labelledby="vision-title"><div class="section-inner"><p class="eyebrow reveal"><span class="status-dot"></span> NEGA BU MUHIM?</p><h2 id="vision-title" class="statement reveal">Texnologiyaning kuchi —<br>u ochadigan <em>imkoniyatlarda.</em></h2><div class="vision-bottom"><p class="reveal">Savol beradigan, tajriba qiladigan va o‘rganganini amalda sinaydigan avlod. Bizning e’tiborimiz ana shu yo‘lda.</p><div class="vision-note reveal"><span>01 — BIZNING QARASH</span><p>Bilim ochiq.<br>Imkoniyat <em>sizniki.</em></p></div></div><div class="motion-stage vision-stage" aria-hidden="true"></div></div></section>
+  <section class="approach section-cream" data-motion="helix" id="yondashuv" aria-labelledby="approach-title"><div class="section-inner"><div class="section-top reveal"><p class="eyebrow"><span class="status-dot"></span> SODDA YONDASHUV</p><span class="section-index">02 / 04</span></div><div class="approach-heading"><h2 id="approach-title" class="reveal">Bir g‘oya.<br><em>Uchta aniq qadam.</em></h2><p class="reveal">Hamma narsani birdan bilish shart emas. Muhimi — boshlash, sinash va foydali natijaga yetish.</p></div><div class="steps"><article class="step reveal" data-motion="helix"><span class="step-number">01</span><div><h3>Anglang.</h3><p>Yechmoqchi bo‘lgan muammoni toping. Kim uchun va nima uchun yaratayotganingizni biling.</p></div><div class="motion-stage" aria-hidden="true"></div></article><article class="step reveal" data-motion="towers"><span class="step-number">02</span><div><h3>Sinab ko‘ring.</h3><p>To‘g‘ri vositani tanlang. Kichik prototip yarating, ishlashini haqiqiy vazifa bilan tekshiring.</p></div><div class="motion-stage" aria-hidden="true"></div></article><article class="step reveal" data-motion="ring"><span class="step-number">03</span><div><h3>Ulashtiring.</h3><p>Natijani ko‘rsating, fikr oling va yaxshilang. Bitta yaxshi yechim boshqalarga ham yo‘l ochadi.</p></div><div class="motion-stage" aria-hidden="true"></div></article></div></div></section>
+  <section class="signal section-dark" data-motion="broadcast" id="signal" aria-labelledby="signal-title"><div class="section-inner"><p class="eyebrow">G‘OYALAR CHEGARALANMAYDI</p><h2 id="signal-title">Bitta fikr.<br><em>Minglab imkoniyat.</em></h2><p>O‘rganganingizni ulashing. Yaxshi g‘oya boshqalarga ham yo‘l ochadi.</p></div></section>
+  <section class="initiatives section-light" data-motion="scatter" id="tashabbuslar" aria-labelledby="initiatives-title"><div class="section-inner"><div class="section-top reveal"><p class="eyebrow"><span class="status-dot"></span> TASHABBUSLAR</p><span class="section-index">03 / 04</span></div><div class="initiatives-heading"><h2 id="initiatives-title" class="reveal">Qiziqishdan —<br><em>yangi imkoniyatga.</em></h2><p class="reveal">O‘zingizga mos boshlanish nuqtasini toping. Yoqqan yo‘nalishni shaxsiy rejangizga qo‘shing.</p></div><div class="filter-bar"><div class="filters" role="group" aria-label="Tashabbus yo‘nalishi"><button type="button" data-filter="all" aria-pressed="true">Barchasi</button><button type="button" data-filter="learn" aria-pressed="false">O‘rganish</button><button type="button" data-filter="build" aria-pressed="false">Yaratish</button><button type="button" data-filter="connect" aria-pressed="false">Hamkorlik</button></div><p id="results" role="status" aria-live="polite">4 ta tashabbus</p></div><div class="initiative-grid" id="initiative-grid">
       <article class="initiative-card" data-id="savod" data-category="learn"><div class="card-art art-literacy" aria-hidden="true"><span class="art-label">BILIMDAN BOSHLANADI</span><span class="letter-art">Aa<span>✳</span></span><span class="art-bottom">SUN’IY INTELLEKT / 01</span></div><div class="card-copy"><p class="card-kicker">O‘RGANISH / MUSTAQIL MASHQ</p><h3>SI savodxonligi</h3><p>Yaxshi savol berish, javobni tekshirish va sun’iy intellektdan ongli foydalanish.</p><button class="card-open" data-open="savod" type="button">Yo‘nalishni o‘rganish <span aria-hidden="true">↗</span></button></div></article>
       <article class="initiative-card" data-id="lab" data-category="build"><div class="card-art art-lab" aria-hidden="true"><span class="art-label">G‘OYANGIZGA SHAKL BERING</span><div class="lab-glyph"><span></span><span></span><span></span></div><span class="art-bottom">TAJRIBA / 02</span></div><div class="card-copy"><p class="card-kicker">YARATISH / LOYIHA</p><h3>G‘oyalar laboratoriyasi</h3><p>Kundalik muammoni ishlaydigan prototipga aylantirish uchun amaliy boshlanish.</p><button class="card-open" data-open="lab" type="button">Yo‘nalishni o‘rganish <span aria-hidden="true">↗</span></button></div></article>
       <article class="initiative-card" data-id="ustoz" data-category="connect"><div class="card-art art-mentor" aria-hidden="true"><span class="art-label">BIRGA TEZROQ O‘SAMIZ</span><div class="mentor-glyph"><span>↗</span><span>↗</span></div><span class="art-bottom">HAMKORLIK / 03</span></div><div class="card-copy"><p class="card-kicker">HAMKORLIK / FIKR ALMASHISH</p><h3>Ustoz bilan bir qadam</h3><p>Ishingizni tushuntiring, savol tayyorlang va foydali fikr asosida keyingi qadamni tanlang.</p><button class="card-open" data-open="ustoz" type="button">Yo‘nalishni o‘rganish <span aria-hidden="true">↗</span></button></div></article>
       <article class="initiative-card" data-id="ilm" data-category="learn"><div class="card-art art-science" aria-hidden="true"><span class="art-label">QIZIQISH — BIRINCHI QADAM</span><div class="science-glyph"><i></i><i></i><i></i><span>·</span></div><span class="art-bottom">TADQIQOT / 04</span></div><div class="card-copy"><p class="card-kicker">O‘RGANISH / TADQIQOT</p><h3>Ilmga ochiq eshik</h3><p>Taxminni dalildan ajratish, kichik tajriba o‘tkazish va natijani tushunarli ko‘rsatish.</p><button class="card-open" data-open="ilm" type="button">Yo‘nalishni o‘rganish <span aria-hidden="true">↗</span></button></div></article>
     </div><noscript><p>JavaScript o‘chiq: barcha yo‘nalishlar yuqorida ko‘rsatilgan. Reja tuzish uchun JavaScriptni yoqing.</p></noscript></div></section>
-  <section class="plan section-dark" id="reja" aria-labelledby="plan-title"><div class="section-inner"><div class="section-top"><p class="eyebrow"><span class="status-dot"></span> SIZNING KEYINGI QADAMINGIZ</p><span class="section-index">04 / 04</span></div><div class="plan-layout"><div><h2 id="plan-title" class="reveal">Kelajak uchun<br><em>bir qadam.</em><br>Bugundan.</h2><p class="plan-intro">Sizni qiziqtirgan tashabbuslarni shu yerga jamlang. Tayyor rejangizni matn fayli qilib olishingiz mumkin.</p><a class="text-link" href="#tashabbuslar">Tashabbus tanlash <span aria-hidden="true">↑</span></a></div><div class="plan-panel"><div class="plan-panel-heading"><span>SHAXSIY YO‘NALISHLAR</span><span id="plan-count">0 / 4</span></div><div id="plan-items"><p class="plan-empty">Hozircha rejangiz bo‘sh.<br>Bir tashabbusni oching va rejangizga qo‘shing.</p></div><button class="button pale" id="download-plan" type="button" disabled>Rejani yuklab olish <span aria-hidden="true">↓</span></button><p class="privacy-note">Tanlovlar faqat shu brauzerda saqlanadi. Ro‘yxatdan o‘tish yoki ma’lumot yuborish talab qilinmaydi.</p><p id="storage-warning" class="storage-warning" role="alert" hidden>Brauzer saqlashga ruxsat bermadi. Rejani yo‘qotmaslik uchun yuklab oling.</p></div></div></div></section>
+  <section class="plan section-dark" data-motion="flag" id="reja" aria-labelledby="plan-title"><div class="section-inner"><div class="section-top"><p class="eyebrow"><span class="status-dot"></span> SIZNING KEYINGI QADAMINGIZ</p><span class="section-index">04 / 04</span></div><div class="plan-layout"><div><h2 id="plan-title" class="reveal">Kelajak uchun<br><em>bir qadam.</em><br>Bugundan.</h2><p class="plan-intro">Sizni qiziqtirgan tashabbuslarni shu yerga jamlang. Tayyor rejangizni matn fayli qilib olishingiz mumkin.</p><a class="text-link" href="#tashabbuslar">Tashabbus tanlash <span aria-hidden="true">↑</span></a><div class="motion-stage" aria-hidden="true"></div></div><div class="plan-panel"><div class="plan-panel-heading"><span>SHAXSIY YO‘NALISHLAR</span><span id="plan-count">0 / 4</span></div><div id="plan-items"><p class="plan-empty">Hozircha rejangiz bo‘sh.<br>Bir tashabbusni oching va rejangizga qo‘shing.</p></div><button class="button pale" id="download-plan" type="button" disabled>Rejani yuklab olish <span aria-hidden="true">↓</span></button><p class="privacy-note">Tanlovlar faqat shu brauzerda saqlanadi. Ro‘yxatdan o‘tish yoki ma’lumot yuborish talab qilinmaydi.</p><p id="storage-warning" class="storage-warning" role="alert" hidden>Brauzer saqlashga ruxsat bermadi. Rejani yo‘qotmaslik uchun yuklab oling.</p></div></div></div></section>
 </main>
 <footer class="site-footer section-dark"><div class="footer-top"><a class="brand" href="#boshlanish">Yuksal<span aria-hidden="true">✳</span><small>SI</small></a><p>Bilim. Tasavvur.<br><em>Yangi imkoniyat.</em></p><div><a href="https://azizbeksafarov.github.io/design/si/">AI uchun kontekst va kod ↗</a><a href="https://azizbeksafarov.github.io/design/">Barcha dizaynlar ↗</a></div></div><div class="footer-bottom"><span>© 2026 Yuksal · Mustaqil dizayn namunasi</span><span><a href="https://www.si.gov/" target="_blank" rel="noopener">SI.gov</a> vizual uslubidan ilhomlangan. Rasmiy davlat sayti emas.</span></div></footer>
 <button class="menu-orb" id="menu-open" type="button" aria-haspopup="dialog" aria-controls="site-menu"><svg class="orb-ring" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="circle-text" d="M50,50m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"/></defs><text><textPath href="#circle-text">BILIM · TASAVVUR · IMKONIYAT · </textPath></text></svg><span>Menyu</span></button>
-<dialog id="site-menu" class="menu-dialog" aria-labelledby="menu-title"><div class="menu-heading"><span class="brand" id="menu-title">Yuksal · SI</span><button class="close" data-close type="button" aria-label="Menyuni yopish">×</button></div><div class="menu-body"><p class="eyebrow">KASHF ETING</p><nav aria-label="Asosiy menyu"><a href="#boshlanish"><small>01</small>Boshlanish <span>↗</span></a><a href="#qarash"><small>02</small>Bizning qarash <span>↗</span></a><a href="#yondashuv"><small>03</small>Yondashuv <span>↗</span></a><a href="#tashabbuslar"><small>04</small>Tashabbuslar <span>↗</span></a><a href="#reja"><small>05</small>Shaxsiy reja <span>↗</span></a></nav><p class="menu-note">Katta kelajak — kichik bir qadamdan.</p></div></dialog>
+<dialog id="site-menu" class="menu-dialog" aria-labelledby="menu-title"><div class="menu-heading"><span class="brand" id="menu-title">Yuksal · SI</span><button class="close" data-close type="button" aria-label="Menyuni yopish">×</button></div><div class="menu-body"><p class="eyebrow">KASHF ETING</p><nav aria-label="Asosiy menyu"><a href="#boshlanish"><small>01</small>Boshlanish <span>↗</span></a><a href="#qarash"><small>02</small>Bizning qarash <span>↗</span></a><a href="#yondashuv"><small>03</small>Yondashuv <span>↗</span></a><a href="#signal"><small>04</small>G‘oyalar signali <span>↗</span></a><a href="#tashabbuslar"><small>05</small>Tashabbuslar <span>↗</span></a><a href="#reja"><small>06</small>Shaxsiy reja <span>↗</span></a></nav><p class="menu-note">Katta kelajak — kichik bir qadamdan.</p></div></dialog>
 <dialog id="initiative-dialog" class="initiative-dialog" aria-labelledby="detail-title" aria-describedby="detail-description"><div class="detail-heading"><p class="eyebrow" id="detail-category">TASHABBUS</p><button class="close" data-close type="button" aria-label="Yo‘nalish oynasini yopish">×</button></div><div class="detail-content"><h2 id="detail-title">Yo‘nalish</h2><p id="detail-description"></p><h3>Boshlash uchun uch qadam</h3><ol id="detail-steps"></ol><p class="detail-note">Bu mustaqil mashq namunasi. Haqiqiy kursga ariza yoki tashqi xizmatga yuborish mavjud emas.</p></div><div class="detail-actions"><button class="button navy" id="save-initiative" type="button">Rejaga qo‘shish <span aria-hidden="true">+</span></button><button class="text-button" data-close type="button">Yopish</button></div></dialog>
 <p class="toast" id="feedback" role="status" aria-live="polite" hidden></p>
 </body>
@@ -65,11 +67,23 @@ Source fingerprint: `43021b6f31c9867a9e3e627d7cfc828ddb45c9e92e7613f6085dd527664
 /* Keep the floating menu clear of the main action on the narrowest phones. */
 @media(max-width:380px){.menu-orb{top:14px;right:68px;bottom:auto;width:56px;height:56px}.menu-orb>span{font-size:15px}}
 
+/* The field persists across sections; only its target geometry changes. */
+.particle-field{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:0;transition:opacity .6s}.particle-field.ready{opacity:1}
+.section-inner,.hero-copy,.hero-art,.footer-top,.footer-bottom{position:relative;z-index:2}.site-header{z-index:6}.hero-art{z-index:3}
+.art-toggle{position:absolute;inset:0;width:100%;height:100%;border:0;background:none;cursor:crosshair}.motion-hint{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font:400 9px/1.5 var(--sans);letter-spacing:.06em;color:var(--muted);white-space:nowrap;opacity:.75}.particle-fallback{pointer-events:none}.art-coordinate{pointer-events:none}
+.vision .statement{max-width:63%;font-size:clamp(54px,6vw,90px)}.vision-bottom{max-width:50%;flex-direction:column;gap:35px}.vision-note{min-width:0;max-width:350px}.vision-stage{position:absolute;left:52%;top:10%;width:47%;height:80%;min-height:360px}
+.approach{padding-bottom:0}.approach .steps{display:block}.approach .step{position:relative;min-height:100svh;padding:80px 0!important;border:0;border-top:1px solid #0a103d33;display:flex;justify-content:center;align-items:flex-start;flex-direction:column;isolation:isolate}.step-number{margin-bottom:30px}.step h3{font-size:clamp(48px,6vw,84px)}.step>div:not(.motion-stage){max-width:40%}.step p{font-size:16px;max-width:390px}.step>.motion-stage{position:absolute;left:52%;top:14%;width:47%;height:72%;min-height:260px}
+.signal{position:relative;min-height:100svh;padding:100px 0;display:flex;align-items:center;overflow:hidden}.signal h2{font-size:clamp(55px,7vw,105px);max-width:700px;margin:35px 0}.signal .section-inner>p:last-child{max-width:320px;color:var(--muted);font-size:14px}.signal .section-inner{pointer-events:none}
+.plan .motion-stage{height:180px;width:100%;margin-top:35px;pointer-events:none}.motion-control{position:fixed;right:36px;top:26px;backdrop-filter:blur(10px);background:#0a103dd9;z-index:30}.header-link{margin-right:125px}
+@media(max-width:900px){.motion-control{top:22px;right:24px}.motion-hint{font-size:8px;letter-spacing:0}.vision .statement{max-width:100%;font-size:clamp(43px,8vw,67px)}.vision-bottom{max-width:100%}.vision-stage{position:relative;left:auto;top:auto;width:100%;height:300px;min-height:0;margin-top:40px}.approach .step{min-height:760px;padding:55px 0!important;justify-content:flex-start}.step>div:not(.motion-stage){max-width:100%}.step h3{font-size:46px}.step p{font-size:14px}.step>.motion-stage{position:relative;left:auto;top:auto;width:100%;height:390px;min-height:0;margin-top:35px}.signal{min-height:100svh;padding:85px 0}.signal h2{font-size:clamp(48px,8vw,72px)}.header-link{margin-right:0}}
+@media(max-width:380px){.motion-control{right:20px}.motion-hint{font-size:7px}.approach .step{min-height:700px}.step>.motion-stage{height:340px}}
+
 ```
 
 ## site/app.js
 
 ```javascript
+import {ParticleField} from './motion.js';
 import {initiatives,validPlan,togglePlan,planText} from './model.js';
 
 const $=selector=>document.querySelector(selector);
@@ -107,7 +121,7 @@ document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListen
 $('#download-plan').addEventListener('click',()=>{if(!plan.length)return;const blob=new Blob(['\ufeff'+planText(plan)],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='yuksal-rejam.txt';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Reja matn fayli sifatida tayyorlandi.');});
 
 const reduce=matchMedia('(prefers-reduced-motion: reduce)');
-let paused=reduce.matches,visible=true,frame=0,lastFrame=0;
+let paused=reduce.matches;
 const motionButton=$('#motion-toggle');
 function motionLabel(){motionButton.setAttribute('aria-pressed',String(paused));motionButton.setAttribute('aria-label',paused?'Animatsiyani davom ettirish':'Animatsiyani to‘xtatish');motionButton.querySelector('path').setAttribute('d',paused?'M8 5l11 7-11 7Z':'M9 5v14M15 5v14');document.body.classList.toggle('motion-paused',paused);}
 motionLabel();
@@ -117,35 +131,215 @@ if('IntersectionObserver' in window){
  const sections=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){document.querySelectorAll('.section-nav a').forEach(link=>{if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}},{rootMargin:'-25% 0px -40% 0px',threshold:0});document.querySelectorAll('main>section').forEach(section=>sections.observe(section));
 }else document.documentElement.classList.remove('js-motion');
 
-const canvas=$('#particles'),ctx=canvas.getContext('2d');
-let points=[],width=0,height=0,pointer={x:0,y:0},heroVisible=true;
-const random=(value)=>{const n=Math.sin(value*127.1+311.7)*43758.5453;return n-Math.floor(n);};
-async function buildParticles(){
- if(!ctx)return;
- await document.fonts.load('400 200px "Instrument Serif"');
- const box=canvas.getBoundingClientRect();width=box.width;height=box.height;if(!width||!height)return;
- const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
- const mask=document.createElement('canvas');mask.width=620;mask.height=420;const brush=mask.getContext('2d',{willReadFrequently:true});brush.fillStyle='#fff';brush.textAlign='center';brush.textBaseline='middle';brush.font='400 440px "Instrument Serif"';brush.fillText('SI',310,237);const pixels=brush.getImageData(0,0,620,420).data;points=[];
- for(let y=15;y<410;y+=4)for(let x=20;x<600;x+=4)if(pixels[(y*620+x)*4+3]>128){const index=points.length;points.push({x:(x-310)/620,y:(y-210)/420,z:(random(index)-.5)*65,phase:random(index+17)*Math.PI*2,size:2+random(index+31)*1.8});}
- canvas.parentElement.classList.add('ready');draw(performance.now());schedule();
+const field=new ParticleField($('#particles'),{paused,reduced:reduce.matches});
+field.init().catch(()=>{$('.hero-art').classList.remove('ready');$('#particles').classList.remove('ready');});
+motionButton.addEventListener('click',()=>{paused=!paused;motionLabel();field.setPaused(paused,reduce.matches);});
+reduce.addEventListener('change',event=>{paused=event.matches;motionLabel();document.documentElement.classList.toggle('js-motion',!event.matches);field.setPaused(paused,event.matches);});
+
+```
+
+## site/motion.js
+
+```javascript
+// One persistent particle field: targets change; particles keep their positions/velocity.
+// Independently implemented from observed SI.gov interaction and timing.
+export const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+export const seeded=n=>{const v=Math.sin(n*127.1+311.7)*43758.5453;return v-Math.floor(v);};
+export function advanceParticle(p,target,pointer,waves,dt=1){
+ const steps=Math.max(1,Math.ceil(dt)),step=dt/steps;
+ for(let j=0;j<steps;j++){
+  let ax=(target.x-p.x)*.045,ay=(target.y-p.y)*.045;
+  const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy);
+  if(d<120&&d>.01){const force=(1-d/120)*5;ax+=dx/d*force;ay+=dy/d*force;}
+  for(const wave of waves){const x=p.x-wave.x,y=p.y-wave.y,r=Math.hypot(x,y);if(r>.01&&Math.abs(r-wave.radius)<26){ax+=x/r*10;ay+=y/r*10;}}
+  const damping=Math.pow(.84,step);p.vx=(p.vx+ax*step)*damping;p.vy=(p.vy+ay*step)*damping;p.x+=p.vx*step;p.y+=p.vy*step;
+ }
 }
-function draw(time){
- if(!ctx||!width)return;ctx.clearRect(0,0,width,height);
- const scale=Math.min(width/620,height/430)*.94;const t=paused?0:time*.0002;const sway=paused?0:Math.sin(t)*.08;const cos=Math.cos(sway),sin=Math.sin(sway);
- for(const point of points){const px=point.x*620*scale,py=point.y*420*scale;const drift=paused?0:Math.sin(t*2+point.phase)*3;const x=width/2+px*cos+point.z*sin+drift+pointer.x*(point.z/55);const y=height/2+py+Math.cos(t+point.phase)*(paused?0:2)+pointer.y*(point.z/70);const size=point.size*scale;ctx.fillStyle=point.z>0?'#ff425d':'#ed294d';ctx.globalAlpha=.8+(point.z+33)/350;ctx.fillRect(x,y,size,size);}
- ctx.globalAlpha=1;
+export function shapeTarget(kind,i,count,time,box,pointer={nx:0,ny:0}){
+ const cx=box.x+box.w/2,cy=box.y+box.h/2,r=Math.min(box.w,box.h)*.42;
+ if(kind==='sphere'||kind==='ring'){
+  const ring=kind==='ring'?Math.floor(count*.2):0;
+  if(i<ring){const a=i/ring*Math.PI*2+time*.35,x=Math.cos(a)*r*1.55,y=Math.sin(a)*r*.38;return{x:cx+x*Math.cos(-.32)-y*Math.sin(-.32),y:cy+x*Math.sin(-.32)+y*Math.cos(-.32),alpha:.95,color:1,size:1.6};}
+  const t=(i-ring+.5)/(count-ring),polar=Math.acos(1-2*t),angle=(i-ring+.5)*10.166407384630519;
+  const x=Math.sin(polar)*Math.cos(angle),y=Math.cos(polar),z=Math.sin(polar)*Math.sin(angle),rotation=time*.22+pointer.nx*.7,tilt=.35+pointer.ny*.35;
+  const xx=x*Math.cos(rotation)-z*Math.sin(rotation),zz=x*Math.sin(rotation)+z*Math.cos(rotation),yy=y*Math.cos(tilt)-zz*Math.sin(tilt),depth=y*Math.sin(tilt)+zz*Math.cos(tilt),perspective=1/(1.9-depth*.5);
+  return{x:cx+xx*r*perspective*1.5,y:cy+yy*r*perspective*1.5,alpha:.25+.75*(depth*.5+.5),size:1+depth*.9};
+ }
+ if(kind==='helix'){
+  const strand=i%3,t=(i/count+time*.03)%1,a=t*Math.PI*16+time*1.1+(strand===1?Math.PI:0),radius=Math.min(box.w,box.h)*.28;
+  if(strand===2){const row=Math.floor(t*40)/40;return{x:cx+radius*Math.cos(row*Math.PI*16+time*1.1)*((i*.618%1)*2-1),y:box.y+box.h*(1-row),alpha:.45,color:2,size:1.1};}
+  const depth=Math.sin(a);return{x:cx+radius*Math.cos(a)*(1+t*.6),y:box.y+box.h*(1-t),alpha:.35+.65*(depth*.5+.5),color:strand?1:0,size:1.1+depth*.8};
+ }
+ if(kind==='towers'){
+  const column=i%36,col=column%9,row=Math.floor(column/9),level=i*.381966%1,height=.25+seeded(column+98)*.75;
+  return{x:box.x+box.w*(.08+col/8*.84)+(row-1.5)*box.w*.035+box.w/9*.55*(1-row*.12)*(i*.7548%1-.5),y:box.y+box.h*(.95-row*.06)-level*box.h*.75*height*(.9+.1*Math.sin(time*1.4+column)),alpha:.3+row*.2+(level>.97?.4:0),color:level>.97?1:row===3?2:0,size:1.3};
+ }
+ if(kind==='broadcast'){
+  const ring=i%9,t=(time*.07+ring/9)%1,a=Math.floor(i/9)/Math.ceil(count/9)*Math.PI*2+.4*ring+.05*Math.sin(time*.3+ring),radius=40+t*Math.max(box.w,box.h)*.72;
+  return{x:cx+Math.cos(a)*radius,y:cy+box.h*.06+Math.sin(a)*radius*(box.w<700?1:.62),alpha:.85*(1-t),color:ring%3===0?1:2,size:1.2+.8*(1-t)};
+ }
+ if(kind==='flag'){
+  const stripe=i%13,col=Math.floor(i/13)/Math.ceil(count/13),star=col<.4&&stripe<7,white=star&&Math.floor(i/13)%3===0&&stripe%2===0;
+  return{x:box.x+col*box.w,y:box.y+box.h*.08+stripe/12*box.h*.8+Math.sin(col*7-time*2.4)*box.h*.05*(col+.15)+Math.sin(col*3-time*1.1)*box.h*.02,alpha:star?white?1:.55:.9,color:star?white?0:2:stripe%2?0:1,size:1.6};
+ }
+ return{x:box.x+(seeded(i+51)*box.w+8*time*(seeded(i+5)+.2))%(box.w+20)-10,y:box.y+seeded(i+71)*box.h+8*Math.sin(time*.5+seeded(i+5)*9),alpha:.08+.28*seeded(i+5),size:1+seeded(i+5)};
 }
-function tick(time){frame=0;if(paused||!visible||!heroVisible)return;if(time-lastFrame>32){draw(time);lastFrame=time;}schedule();}
-function schedule(){if(!frame&&!paused&&visible&&heroVisible)frame=requestAnimationFrame(tick);}
-function stop(){if(frame)cancelAnimationFrame(frame);frame=0;}
-motionButton.addEventListener('click',()=>{paused=!paused;motionLabel();if(paused){stop();draw(0);}else schedule();});
-reduce.addEventListener('change',event=>{paused=event.matches;motionLabel();document.documentElement.classList.toggle('js-motion',!event.matches);if(paused){stop();draw(0);}else schedule();});
-document.addEventListener('visibilitychange',()=>{visible=!document.hidden;if(visible)schedule();else stop();});
-if('IntersectionObserver' in window)new IntersectionObserver(([entry])=>{heroVisible=entry.isIntersecting;if(heroVisible)schedule();else stop();}).observe(canvas);
-canvas.parentElement.addEventListener('pointermove',event=>{if(reduce.matches||paused||event.pointerType==='touch')return;const box=canvas.getBoundingClientRect();pointer={x:(event.clientX-box.left-box.width/2)*.035,y:(event.clientY-box.top-box.height/2)*.035};});
-canvas.parentElement.addEventListener('pointerleave',()=>{pointer={x:0,y:0};});
-let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>buildParticles().catch(()=>{}),150);});
-buildParticles().catch(()=>{canvas.parentElement.classList.remove('ready');});
+
+export class ParticleField{
+ constructor(canvas,{paused=false,reduced=false}={}){
+  this.canvas=canvas;this.ctx=canvas.getContext('2d');this.paused=paused;this.reduced=reduced;this.frame=0;this.time=0;this.last=0;this.waves=[];this.cache=new Map();this.particles=[];this.pointer={x:-10000,y:-10000,nx:0,ny:0};this.expanded=false;this.mode='text';this.targetName='SI';this.box={x:0,y:0,w:1,h:1};this.visible=true;this.motionStart=0;
+ }
+ async init(){
+  if(!this.ctx)throw new Error('Canvas unavailable');
+  await document.fonts.load('400 200px "Instrument Serif"');this.resize();
+  window.addEventListener('pointermove',e=>this.onPointer(e),{passive:true});
+  document.addEventListener('pointerleave',()=>{this.pointer.x=this.pointer.y=-10000;});
+  window.addEventListener('pointerdown',e=>{if(this.paused||this.reduced||e.target.closest('a,input,button:not(.art-toggle),dialog'))return;this.waves.push({x:e.clientX,y:e.clientY,radius:0});},{passive:true});
+  window.addEventListener('scroll',()=>{this.syncScene();if(this.paused)this.paint();},{passive:true});
+  let timer;window.addEventListener('resize',()=>{clearTimeout(timer);timer=setTimeout(()=>this.resize(),120);});
+  document.addEventListener('visibilitychange',()=>{this.visible=!document.hidden;if(this.visible)this.start();else this.stop();});
+  document.querySelector('.art-toggle').addEventListener('click',e=>{if(e.pointerType==='touch'||e.detail===0)this.setExpanded(!this.expanded);});
+  this.canvas.classList.add('ready');document.querySelector('.hero-art').classList.add('ready');this.paint();this.start();return this;
+ }
+ resize(){
+  this.width=innerWidth;this.height=innerHeight;const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(this.width*dpr);this.canvas.height=Math.round(this.height*dpr);this.ctx.setTransform(dpr,0,0,dpr,0,0);
+  const count=this.width<700?1500:1800;
+  if(this.particles.length!==count)this.particles=Array.from({length:count},(_,i)=>({x:seeded(i+7)*this.width,y:seeded(i+47)*this.height,vx:0,vy:0,color:seeded(i+17)<.08?1:seeded(i+37)<.12?2:0}));
+  this.cache.clear();this.syncScene(true);if(this.paused||this.reduced)this.snap();this.paint();this.start();
+ }
+ onPointer(e){
+  if(e.pointerType==='touch'||this.paused||this.reduced)return;
+  this.pointer={x:e.clientX,y:e.clientY,nx:e.clientX/this.width*2-1,ny:e.clientY/this.height*2-1};
+  if(this.scene!=='hero'||document.querySelector('dialog[open]'))return;
+  const b=this.expanded?this.textBounds:this.siBounds,pad=this.expanded?60:20;
+  if(b)this.setExpanded(e.clientX>b.x-pad&&e.clientX<b.x+b.w+pad&&e.clientY>b.y-pad&&e.clientY<b.y+b.h+pad);
+ }
+ setExpanded(value){
+  if(value===this.expanded||this.paused||this.reduced)return;this.expanded=value;document.querySelector('.art-toggle').setAttribute('aria-pressed',String(value));this.syncScene(true);
+ }
+ syncScene(force=false){
+  const middle=this.height*.5,hero=document.querySelector('.hero'),heroBox=hero.getBoundingClientRect();
+  const candidates=[...document.querySelectorAll('[data-motion]')].filter(e=>{const b=e.getBoundingClientRect();return b.top<=middle&&b.bottom>middle;});
+  let section=candidates.at(-1)||hero;let mode=section.dataset.motion||'text',scene=section===hero?'hero':section.id||mode;
+  let box;
+  if(scene==='hero'){
+   const heading=document.querySelector('.hero h1').getBoundingClientRect().top+scrollY;
+   mode=this.expanded?(this.width<900?'circle':'snake'):'text';
+   box=this.width>=900?(this.expanded?{x:this.width*.04,y:72,w:this.width*.92,h:Math.max(this.height*.3,heading-72)}:{x:this.width*.04,y:this.height*.1,w:this.width*.92,h:this.height*.6}):{x:this.width*.02,y:64,w:this.width*.96,h:Math.max(this.height*.25,heading-82)};
+  }else{
+   const b=section.querySelector('.motion-stage')?.getBoundingClientRect();
+   box=this.width>=900&&scene!=='reja'?{x:this.width*.52,y:this.height*.14,w:this.width*.42,h:this.height*.72}:b?{x:b.left,y:b.top,w:b.width,h:b.height}:{x:this.width*.08,y:this.height*.1,w:this.width*.84,h:this.height*.5};
+  }
+  if(mode==='scatter'||mode==='broadcast')box={x:0,y:0,w:this.width,h:this.height};
+  const target=mode==='text'?'SI':mode==='snake'?'Super|Intelligence':mode==='circle'?'SUPER INTELLIGENCE ':'';
+  const signature=[mode,scene,target,Math.round(box.x),Math.round(box.y),Math.round(box.w),Math.round(box.h)].join('|');
+  const changed=signature!==this.signature;
+  this.scene=scene;this.box=box;this.mode=mode;this.targetName=target;
+  this.light=Boolean(section.closest('.section-cream,.section-light'));
+  const footer=document.querySelector('.site-footer').getBoundingClientRect();this.opacity=clamp((footer.top-this.height*.25)/(this.height*.5),0,1);
+  if(scene==='hero'&&heroBox.bottom<0)this.opacity=0;
+  if(changed||force){
+   const modeChanged=this.canvas.dataset.form!==mode;this.signature=signature;
+   if(mode==='text'||mode==='snake'||mode==='circle'){
+    this.previous=this.targets;this.targets=this.textTargets(target,box,mode==='circle');
+    if(mode==='text')this.siBounds=this.targets.bounds;else this.textBounds=this.targets.bounds;
+   }
+   if(modeChanged)this.motionStart=this.time;
+   this.canvas.dataset.form=mode;this.canvas.dataset.scene=scene;
+   if(this.paused||this.reduced)this.snap();
+  }
+ }
+ textTargets(text,box,circular=false){
+  const key=[text,box.x|0,box.y|0,box.w|0,box.h|0,circular].join(':');if(this.cache.has(key))return this.cache.get(key);
+  const mask=document.createElement('canvas');mask.width=Math.max(20,Math.round(box.w));mask.height=Math.max(20,Math.round(box.h));const c=mask.getContext('2d',{willReadFrequently:true});
+  c.fillStyle='#fff';c.textAlign='center';c.textBaseline='alphabetic';let points=[];
+  if(circular){
+   const chars=[...text],radius=Math.min(box.w,box.h)*.36,font=radius*.42;c.font=`400 ${font}px "Instrument Serif"`;c.textBaseline='middle';
+   chars.forEach((char,i)=>{const a=-Math.PI/2+i/chars.length*Math.PI*2;c.save();c.translate(box.w/2+Math.cos(a)*radius,box.h/2+Math.sin(a)*radius);c.rotate(a+Math.PI/2);c.fillText(char,0,0);c.restore();});
+  }else{
+   const lines=text.split('|');c.font='400 100px "Instrument Serif"';const metrics=lines.map(line=>c.measureText(line)),mw=Math.max(...metrics.map(m=>m.actualBoundingBoxLeft+m.actualBoundingBoxRight)),ascent=metrics[0].actualBoundingBoxAscent/100,descent=metrics.at(-1).actualBoundingBoxDescent/100;
+   const total=ascent+.92*(lines.length-1)+descent,font=Math.min(box.w*.86/(mw/100),box.h*.9/total);c.font=`400 ${font}px "Instrument Serif"`;
+   lines.forEach((line,i)=>c.fillText(line,box.w/2,(box.h-total*font)/2+ascent*font+i*font*.92));
+  }
+  const pixels=c.getImageData(0,0,mask.width,mask.height).data;let area=0;for(let j=3;j<pixels.length;j+=4)if(pixels[j]>128)area++;
+  const spacing=Math.max(1.5,Math.sqrt(area/(this.particles.length*.95)));
+  let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+  for(let y=spacing/2;y<mask.height;y+=spacing)for(let x=spacing/2;x<mask.width;x+=spacing)if(pixels[(Math.floor(y)*mask.width+Math.floor(x))*4+3]>128){points.push({x:box.x+x,y:box.y+y,column:Math.floor(x/spacing),line:text.includes('|')&&y>box.h/2?1:0});minX=Math.min(minX,x);minY=Math.min(minY,y);maxX=Math.max(maxX,x);maxY=Math.max(maxY,y);}
+  if(!points.length)throw new Error('Particle text mask empty');
+  points.sort((a,b)=>a.line-b.line||a.column-b.column||(a.column%2?b.y-a.y:a.y-b.y));points.forEach((p,i)=>p.rank=i/points.length);
+  // Stable shuffle avoids visible rows flying in together; rank preserves the writing path.
+  for(let j=points.length-1;j>0;j--){const k=Math.floor(seeded(j+97)*(j+1));[points[j],points[k]]=[points[k],points[j]];}
+  const result=Array.from({length:this.particles.length},(_,i)=>{const p=points[i%points.length];return{...p,x:p.x+(i>=points.length?(seeded(i+9)-.5)*3:0),y:p.y+(i>=points.length?(seeded(i+19)-.5)*3:0),alpha:1,size:1.7};});
+  result.bounds={x:box.x+minX,y:box.y+minY,w:maxX-minX,h:maxY-minY};this.cache.set(key,result);return result;
+ }
+ target(i){
+  if(this.mode==='text')return this.targets[i];
+  if(this.mode==='snake'){
+   const p=this.targets[i],progress=(this.time-this.motionStart)/2.4;
+   if(!this.reduced&&progress<p.rank){return this.previous?.[i]||{...p,alpha:.3};}
+   return{...p,color:!this.reduced&&progress-p.rank<.045?1:undefined,size:!this.reduced&&progress-p.rank<.045?2.7:1.7};
+  }
+  if(this.mode==='circle'){
+   const p=this.targets[i],cx=this.box.x+this.box.w/2,cy=this.box.y+this.box.h/2,angle=this.reduced?0:Math.max(0,this.time-this.motionStart-.6)*.35,x=p.x-cx,y=p.y-cy;return{...p,x:cx+x*Math.cos(angle)-y*Math.sin(angle),y:cy+x*Math.sin(angle)+y*Math.cos(angle),size:1.6};
+  }
+  return shapeTarget(this.mode,i,this.particles.length,this.reduced?0:this.time,this.box,this.pointer);
+ }
+ snap(){if(!this.targets&&['text','snake','circle'].includes(this.mode))return;for(let i=0;i<this.particles.length;i++){const t=this.target(i),p=this.particles[i];p.x=t.x;p.y=t.y;p.vx=p.vy=0;}}
+ paint(dt=0){
+  if(!this.ctx||!this.particles.length)return;const c=this.ctx;c.clearRect(0,0,this.width,this.height);
+  const palette=this.light?['#0a103d','#ff3347','#526fae']:['#f5f6fa','#ff3347','#8fb4ff'];
+  for(let i=0;i<this.particles.length;i++){
+   const p=this.particles[i],t=this.target(i);if(dt)advanceParticle(p,t,this.pointer,this.waves,dt);
+   const speed=clamp(Math.hypot(p.vx,p.vy)/7,0,1),size=t.size*(this.width<700?1.1:1.35)+speed*2;
+   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[speed>.35?1:t.color??p.color];c.fillRect(p.x-size/2,p.y-size/2,size,size);
+  }c.globalAlpha=1;
+ }
+ tick=now=>{
+  this.frame=0;if(this.paused||!this.visible)return;const elapsed=this.last?clamp((now-this.last)/16.6667,0,3):1;this.last=now;this.time+=elapsed/60;
+  for(const wave of this.waves)wave.radius+=16*elapsed;this.waves=this.waves.filter(w=>w.radius<Math.max(this.width,this.height)*1.2);
+  this.paint(elapsed);this.start();
+ };
+ start(){if(!this.frame&&!this.paused&&this.visible)this.frame=requestAnimationFrame(this.tick);}
+ stop(){if(this.frame)cancelAnimationFrame(this.frame);this.frame=0;this.last=0;}
+ setPaused(paused,reduced=this.reduced){this.paused=paused;this.reduced=reduced;if(paused){this.stop();if(reduced){this.expanded=false;this.syncScene(true);this.snap();}this.paint();}else this.start();}
+}
+
+```
+
+## site/motion.test.mjs
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {advanceParticle,shapeTarget} from './motion.js';
+const away={x:-10000,y:-10000};
+test('spring converges after a morph and preserves bounded finite velocity',()=>{
+ const p={x:-500,y:900,vx:0,vy:0},target={x:600,y:240};
+ for(let i=0;i<600;i++){advanceParticle(p,target,away,[]);assert.ok(Number.isFinite(p.x+p.y+p.vx+p.vy));}
+ assert.ok(Math.hypot(p.x-target.x,p.y-target.y)<.001);
+});
+test('pointer and expanding click wave displace particles away from their origins',()=>{
+ const a={x:60,y:0,vx:0,vy:0},b={...a},c={...a};
+ advanceParticle(a,{x:60,y:0},away,[]);
+ advanceParticle(b,{x:60,y:0},{x:0,y:0},[]);
+ advanceParticle(c,{x:60,y:0},away,[{x:0,y:0,radius:60}]);
+ assert.equal(a.x,60);assert.ok(b.x>a.x);assert.ok(c.x>b.x);
+});
+test('long frames are substepped rather than destabilizing the spring',()=>{
+ const a={x:0,y:0,vx:3,vy:-2},b={...a},target={x:100,y:200};
+ advanceParticle(a,target,away,[],3);for(let i=0;i<3;i++)advanceParticle(b,target,away,[]);
+ assert.deepEqual(a,b);
+});
+test('every procedural shape remains finite and animated on mobile and desktop',()=>{
+ for(const count of [1500,1800])for(const kind of ['sphere','ring','helix','towers','broadcast','flag','scatter']){
+  const box={x:20,y:60,w:count===1500?280:540,h:380};let moving=0;
+  for(let i=0;i<count;i++){
+   const a=shapeTarget(kind,i,count,0,box),b=shapeTarget(kind,i,count,3,box);
+   assert.ok(Number.isFinite(a.x+a.y+a.size+a.alpha+b.x+b.y));assert.ok(a.size>0&&a.alpha>=0&&a.alpha<=1.3+Number.EPSILON*2);
+   if(Math.hypot(a.x-b.x,a.y-b.y)>.01)moving++;
+  }assert.ok(moving>count*.2,`${kind} must move, not show a static shape`);
+ }
+});
 
 ```
 

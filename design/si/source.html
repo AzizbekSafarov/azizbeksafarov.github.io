@@ -1,5 +1,5 @@
 <!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi"><title>Yuksal · SI — source</title><link rel="stylesheet" href="../handoff/styles.css?v=4c4f7e30df37"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="../start/">← AI boshlash markazi</a><a href="../">Barcha jonli dizaynlar</a></nav></header><main id="main" class="wrap"><h1>Yuksal · SI — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content"><h2>Yuksal · SI — editable source snapshot</h2>
-<p>Source fingerprint: <code>43021b6f31c9867a9e3e627d7cfc828ddb45c9e92e7613f6085dd52766425d22</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
+<p>Source fingerprint: <code>c92a788c7eee3d5714266bc4a706ad9596f5dba2ad403c6b094145c6aeaf9498</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
 <h3>site/index.html</h3>
 <pre><code>&lt;!doctype html&gt;
 &lt;html lang=&quot;uz&quot;&gt;
@@ -11,32 +11,34 @@
   &lt;title&gt;Yuksal · SI — kelajakni birga yaratamiz&lt;/title&gt;
   &lt;link rel=&quot;icon&quot; href=&quot;mark.svg&quot; type=&quot;image/svg+xml&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;fonts/fonts.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-  &lt;script type=&quot;module&quot; src=&quot;app.js&quot;&gt;&lt;/script&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css?v=2&quot;&gt;
+  &lt;script type=&quot;module&quot; src=&quot;app.js?v=2&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;a class=&quot;skip&quot; href=&quot;#main&quot;&gt;Asosiy mazmunga o‘tish&lt;/a&gt;
 &lt;header class=&quot;site-header&quot;&gt;&lt;a class=&quot;brand&quot; href=&quot;#boshlanish&quot; aria-label=&quot;Yuksal bosh sahifasi&quot;&gt;Yuksal&lt;span aria-hidden=&quot;true&quot;&gt;✳&lt;/span&gt;&lt;small&gt;SI&lt;/small&gt;&lt;/a&gt;&lt;a class=&quot;header-link&quot; href=&quot;#tashabbuslar&quot;&gt;Kelajak uchun tashabbuslar &lt;span aria-hidden=&quot;true&quot;&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;button class=&quot;motion-control&quot; id=&quot;motion-toggle&quot; type=&quot;button&quot; aria-label=&quot;Animatsiyani to‘xtatish&quot; aria-pressed=&quot;false&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M9 5v14M15 5v14&quot;/&gt;&lt;/svg&gt;&lt;span&gt;Harakat&lt;/span&gt;&lt;/button&gt;&lt;/header&gt;
-&lt;nav class=&quot;section-nav&quot; aria-label=&quot;Sahifa bo‘limlari&quot;&gt;&lt;a href=&quot;#boshlanish&quot; aria-label=&quot;Boshlanish&quot; aria-current=&quot;location&quot;&gt;&lt;span&gt;Boshlanish&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#qarash&quot; aria-label=&quot;Bizning qarash&quot;&gt;&lt;span&gt;Qarash&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#yondashuv&quot; aria-label=&quot;Yondashuv&quot;&gt;&lt;span&gt;Yondashuv&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#tashabbuslar&quot; aria-label=&quot;Tashabbuslar&quot;&gt;&lt;span&gt;Tashabbuslar&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#reja&quot; aria-label=&quot;Shaxsiy reja&quot;&gt;&lt;span&gt;Rejangiz&lt;/span&gt;&lt;/a&gt;&lt;/nav&gt;
+&lt;nav class=&quot;section-nav&quot; aria-label=&quot;Sahifa bo‘limlari&quot;&gt;&lt;a href=&quot;#boshlanish&quot; aria-label=&quot;Boshlanish&quot; aria-current=&quot;location&quot;&gt;&lt;span&gt;Boshlanish&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#qarash&quot; aria-label=&quot;Bizning qarash&quot;&gt;&lt;span&gt;Qarash&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#yondashuv&quot; aria-label=&quot;Yondashuv&quot;&gt;&lt;span&gt;Yondashuv&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#signal&quot; aria-label=&quot;G‘oyalar signali&quot;&gt;&lt;span&gt;Signal&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#tashabbuslar&quot; aria-label=&quot;Tashabbuslar&quot;&gt;&lt;span&gt;Tashabbuslar&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#reja&quot; aria-label=&quot;Shaxsiy reja&quot;&gt;&lt;span&gt;Rejangiz&lt;/span&gt;&lt;/a&gt;&lt;/nav&gt;
+&lt;canvas id=&quot;particles&quot; class=&quot;particle-field&quot; aria-hidden=&quot;true&quot;&gt;&lt;/canvas&gt;
 &lt;main id=&quot;main&quot;&gt;
-  &lt;section class=&quot;hero section-dark&quot; id=&quot;boshlanish&quot; aria-labelledby=&quot;hero-title&quot;&gt;
-    &lt;div class=&quot;hero-art&quot; aria-hidden=&quot;true&quot;&gt;&lt;canvas id=&quot;particles&quot;&gt;&lt;/canvas&gt;&lt;span class=&quot;particle-fallback&quot;&gt;SI&lt;/span&gt;&lt;div class=&quot;art-coordinate left&quot;&gt;BILIM + TASAVVUR&lt;/div&gt;&lt;div class=&quot;art-coordinate right&quot;&gt;41.31° N / 69.24° E&lt;/div&gt;&lt;/div&gt;
+  &lt;section class=&quot;hero section-dark&quot; data-motion=&quot;text&quot; id=&quot;boshlanish&quot; aria-labelledby=&quot;hero-title&quot;&gt;
+    &lt;div class=&quot;hero-art&quot;&gt;&lt;button class=&quot;art-toggle&quot; type=&quot;button&quot; aria-label=&quot;SI va Super Intelligence zarracha shakllarini almashtirish&quot; aria-pressed=&quot;false&quot;&gt;&lt;span class=&quot;motion-hint&quot;&gt;SI ustiga kursor olib boring · telefonda bosing ↗&lt;/span&gt;&lt;/button&gt;&lt;span class=&quot;particle-fallback&quot; aria-hidden=&quot;true&quot;&gt;SI&lt;/span&gt;&lt;div class=&quot;art-coordinate left&quot;&gt;BILIM + TASAVVUR&lt;/div&gt;&lt;div class=&quot;art-coordinate right&quot;&gt;41.31° N / 69.24° E&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;hero-copy&quot;&gt;&lt;div&gt;&lt;p class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; KELAJAKNI KUTMAYMIZ. YARATAMIZ.&lt;/p&gt;&lt;h1 id=&quot;hero-title&quot;&gt;Yangi davr.&lt;br&gt;Yangi &lt;em&gt;imkoniyat.&lt;/em&gt;&lt;br&gt;Uni birga yaratamiz.&lt;/h1&gt;&lt;/div&gt;&lt;div class=&quot;hero-aside&quot;&gt;&lt;p&gt;Sun’iy intellektni tushunishdan — uning yordamida foydali yechimlar yaratishgacha. Katta kelajak kichik bir qadamdan boshlanadi.&lt;/p&gt;&lt;a class=&quot;button primary&quot; href=&quot;#tashabbuslar&quot;&gt;Tashabbuslarni kashf eting &lt;span aria-hidden=&quot;true&quot;&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a class=&quot;scroll-cue&quot; href=&quot;#qarash&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;↓&lt;/span&gt; Keyingi sahifa&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
     &lt;span class=&quot;hero-edition&quot; aria-hidden=&quot;true&quot;&gt;YUKSAL / MUSTAQIL DIZAYN / 2026&lt;/span&gt;
   &lt;/section&gt;
-  &lt;section class=&quot;vision section-dark&quot; id=&quot;qarash&quot; aria-labelledby=&quot;vision-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;p class=&quot;eyebrow reveal&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; NEGA BU MUHIM?&lt;/p&gt;&lt;h2 id=&quot;vision-title&quot; class=&quot;statement reveal&quot;&gt;Texnologiyaning kuchi —&lt;br&gt;u ochadigan &lt;em&gt;imkoniyatlarda.&lt;/em&gt;&lt;/h2&gt;&lt;div class=&quot;vision-bottom&quot;&gt;&lt;p class=&quot;reveal&quot;&gt;Savol beradigan, tajriba qiladigan va o‘rganganini amalda sinaydigan avlod. Bizning e’tiborimiz ana shu yo‘lda.&lt;/p&gt;&lt;div class=&quot;vision-note reveal&quot;&gt;&lt;span&gt;01 — BIZNING QARASH&lt;/span&gt;&lt;p&gt;Bilim ochiq.&lt;br&gt;Imkoniyat &lt;em&gt;sizniki.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;orbit-art&quot; aria-hidden=&quot;true&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;i&gt;✳&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
-  &lt;section class=&quot;approach section-cream&quot; id=&quot;yondashuv&quot; aria-labelledby=&quot;approach-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;div class=&quot;section-top reveal&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; SODDA YONDASHUV&lt;/p&gt;&lt;span class=&quot;section-index&quot;&gt;02 / 04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;approach-heading&quot;&gt;&lt;h2 id=&quot;approach-title&quot; class=&quot;reveal&quot;&gt;Bir g‘oya.&lt;br&gt;&lt;em&gt;Uchta aniq qadam.&lt;/em&gt;&lt;/h2&gt;&lt;p class=&quot;reveal&quot;&gt;Hamma narsani birdan bilish shart emas. Muhimi — boshlash, sinash va foydali natijaga yetish.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;steps&quot;&gt;&lt;article class=&quot;step reveal&quot;&gt;&lt;span class=&quot;step-number&quot;&gt;01&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Anglang.&lt;/h3&gt;&lt;p&gt;Yechmoqchi bo‘lgan muammoni toping. Kim uchun va nima uchun yaratayotganingizni biling.&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;step-symbol&quot; aria-hidden=&quot;true&quot;&gt;◌&lt;/span&gt;&lt;/article&gt;&lt;article class=&quot;step reveal&quot;&gt;&lt;span class=&quot;step-number&quot;&gt;02&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Sinab ko‘ring.&lt;/h3&gt;&lt;p&gt;To‘g‘ri vositani tanlang. Kichik prototip yarating, ishlashini haqiqiy vazifa bilan tekshiring.&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;step-symbol&quot; aria-hidden=&quot;true&quot;&gt;✳&lt;/span&gt;&lt;/article&gt;&lt;article class=&quot;step reveal&quot;&gt;&lt;span class=&quot;step-number&quot;&gt;03&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Ulashtiring.&lt;/h3&gt;&lt;p&gt;Natijani ko‘rsating, fikr oling va yaxshilang. Bitta yaxshi yechim boshqalarga ham yo‘l ochadi.&lt;/p&gt;&lt;/div&gt;&lt;span class=&quot;step-symbol&quot; aria-hidden=&quot;true&quot;&gt;↗&lt;/span&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
-  &lt;section class=&quot;initiatives section-light&quot; id=&quot;tashabbuslar&quot; aria-labelledby=&quot;initiatives-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;div class=&quot;section-top reveal&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; TASHABBUSLAR&lt;/p&gt;&lt;span class=&quot;section-index&quot;&gt;03 / 04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;initiatives-heading&quot;&gt;&lt;h2 id=&quot;initiatives-title&quot; class=&quot;reveal&quot;&gt;Qiziqishdan —&lt;br&gt;&lt;em&gt;yangi imkoniyatga.&lt;/em&gt;&lt;/h2&gt;&lt;p class=&quot;reveal&quot;&gt;O‘zingizga mos boshlanish nuqtasini toping. Yoqqan yo‘nalishni shaxsiy rejangizga qo‘shing.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;filter-bar&quot;&gt;&lt;div class=&quot;filters&quot; role=&quot;group&quot; aria-label=&quot;Tashabbus yo‘nalishi&quot;&gt;&lt;button type=&quot;button&quot; data-filter=&quot;all&quot; aria-pressed=&quot;true&quot;&gt;Barchasi&lt;/button&gt;&lt;button type=&quot;button&quot; data-filter=&quot;learn&quot; aria-pressed=&quot;false&quot;&gt;O‘rganish&lt;/button&gt;&lt;button type=&quot;button&quot; data-filter=&quot;build&quot; aria-pressed=&quot;false&quot;&gt;Yaratish&lt;/button&gt;&lt;button type=&quot;button&quot; data-filter=&quot;connect&quot; aria-pressed=&quot;false&quot;&gt;Hamkorlik&lt;/button&gt;&lt;/div&gt;&lt;p id=&quot;results&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;4 ta tashabbus&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;initiative-grid&quot; id=&quot;initiative-grid&quot;&gt;
+  &lt;section class=&quot;vision section-dark&quot; data-motion=&quot;ring&quot; id=&quot;qarash&quot; aria-labelledby=&quot;vision-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;p class=&quot;eyebrow reveal&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; NEGA BU MUHIM?&lt;/p&gt;&lt;h2 id=&quot;vision-title&quot; class=&quot;statement reveal&quot;&gt;Texnologiyaning kuchi —&lt;br&gt;u ochadigan &lt;em&gt;imkoniyatlarda.&lt;/em&gt;&lt;/h2&gt;&lt;div class=&quot;vision-bottom&quot;&gt;&lt;p class=&quot;reveal&quot;&gt;Savol beradigan, tajriba qiladigan va o‘rganganini amalda sinaydigan avlod. Bizning e’tiborimiz ana shu yo‘lda.&lt;/p&gt;&lt;div class=&quot;vision-note reveal&quot;&gt;&lt;span&gt;01 — BIZNING QARASH&lt;/span&gt;&lt;p&gt;Bilim ochiq.&lt;br&gt;Imkoniyat &lt;em&gt;sizniki.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;motion-stage vision-stage&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+  &lt;section class=&quot;approach section-cream&quot; data-motion=&quot;helix&quot; id=&quot;yondashuv&quot; aria-labelledby=&quot;approach-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;div class=&quot;section-top reveal&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; SODDA YONDASHUV&lt;/p&gt;&lt;span class=&quot;section-index&quot;&gt;02 / 04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;approach-heading&quot;&gt;&lt;h2 id=&quot;approach-title&quot; class=&quot;reveal&quot;&gt;Bir g‘oya.&lt;br&gt;&lt;em&gt;Uchta aniq qadam.&lt;/em&gt;&lt;/h2&gt;&lt;p class=&quot;reveal&quot;&gt;Hamma narsani birdan bilish shart emas. Muhimi — boshlash, sinash va foydali natijaga yetish.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;steps&quot;&gt;&lt;article class=&quot;step reveal&quot; data-motion=&quot;helix&quot;&gt;&lt;span class=&quot;step-number&quot;&gt;01&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Anglang.&lt;/h3&gt;&lt;p&gt;Yechmoqchi bo‘lgan muammoni toping. Kim uchun va nima uchun yaratayotganingizni biling.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;motion-stage&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;&lt;/article&gt;&lt;article class=&quot;step reveal&quot; data-motion=&quot;towers&quot;&gt;&lt;span class=&quot;step-number&quot;&gt;02&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Sinab ko‘ring.&lt;/h3&gt;&lt;p&gt;To‘g‘ri vositani tanlang. Kichik prototip yarating, ishlashini haqiqiy vazifa bilan tekshiring.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;motion-stage&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;&lt;/article&gt;&lt;article class=&quot;step reveal&quot; data-motion=&quot;ring&quot;&gt;&lt;span class=&quot;step-number&quot;&gt;03&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Ulashtiring.&lt;/h3&gt;&lt;p&gt;Natijani ko‘rsating, fikr oling va yaxshilang. Bitta yaxshi yechim boshqalarga ham yo‘l ochadi.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;motion-stage&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+  &lt;section class=&quot;signal section-dark&quot; data-motion=&quot;broadcast&quot; id=&quot;signal&quot; aria-labelledby=&quot;signal-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;G‘OYALAR CHEGARALANMAYDI&lt;/p&gt;&lt;h2 id=&quot;signal-title&quot;&gt;Bitta fikr.&lt;br&gt;&lt;em&gt;Minglab imkoniyat.&lt;/em&gt;&lt;/h2&gt;&lt;p&gt;O‘rganganingizni ulashing. Yaxshi g‘oya boshqalarga ham yo‘l ochadi.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+  &lt;section class=&quot;initiatives section-light&quot; data-motion=&quot;scatter&quot; id=&quot;tashabbuslar&quot; aria-labelledby=&quot;initiatives-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;div class=&quot;section-top reveal&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; TASHABBUSLAR&lt;/p&gt;&lt;span class=&quot;section-index&quot;&gt;03 / 04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;initiatives-heading&quot;&gt;&lt;h2 id=&quot;initiatives-title&quot; class=&quot;reveal&quot;&gt;Qiziqishdan —&lt;br&gt;&lt;em&gt;yangi imkoniyatga.&lt;/em&gt;&lt;/h2&gt;&lt;p class=&quot;reveal&quot;&gt;O‘zingizga mos boshlanish nuqtasini toping. Yoqqan yo‘nalishni shaxsiy rejangizga qo‘shing.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;filter-bar&quot;&gt;&lt;div class=&quot;filters&quot; role=&quot;group&quot; aria-label=&quot;Tashabbus yo‘nalishi&quot;&gt;&lt;button type=&quot;button&quot; data-filter=&quot;all&quot; aria-pressed=&quot;true&quot;&gt;Barchasi&lt;/button&gt;&lt;button type=&quot;button&quot; data-filter=&quot;learn&quot; aria-pressed=&quot;false&quot;&gt;O‘rganish&lt;/button&gt;&lt;button type=&quot;button&quot; data-filter=&quot;build&quot; aria-pressed=&quot;false&quot;&gt;Yaratish&lt;/button&gt;&lt;button type=&quot;button&quot; data-filter=&quot;connect&quot; aria-pressed=&quot;false&quot;&gt;Hamkorlik&lt;/button&gt;&lt;/div&gt;&lt;p id=&quot;results&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;4 ta tashabbus&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;initiative-grid&quot; id=&quot;initiative-grid&quot;&gt;
       &lt;article class=&quot;initiative-card&quot; data-id=&quot;savod&quot; data-category=&quot;learn&quot;&gt;&lt;div class=&quot;card-art art-literacy&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;art-label&quot;&gt;BILIMDAN BOSHLANADI&lt;/span&gt;&lt;span class=&quot;letter-art&quot;&gt;Aa&lt;span&gt;✳&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;art-bottom&quot;&gt;SUN’IY INTELLEKT / 01&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;card-copy&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;O‘RGANISH / MUSTAQIL MASHQ&lt;/p&gt;&lt;h3&gt;SI savodxonligi&lt;/h3&gt;&lt;p&gt;Yaxshi savol berish, javobni tekshirish va sun’iy intellektdan ongli foydalanish.&lt;/p&gt;&lt;button class=&quot;card-open&quot; data-open=&quot;savod&quot; type=&quot;button&quot;&gt;Yo‘nalishni o‘rganish &lt;span aria-hidden=&quot;true&quot;&gt;↗&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/article&gt;
       &lt;article class=&quot;initiative-card&quot; data-id=&quot;lab&quot; data-category=&quot;build&quot;&gt;&lt;div class=&quot;card-art art-lab&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;art-label&quot;&gt;G‘OYANGIZGA SHAKL BERING&lt;/span&gt;&lt;div class=&quot;lab-glyph&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;art-bottom&quot;&gt;TAJRIBA / 02&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;card-copy&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;YARATISH / LOYIHA&lt;/p&gt;&lt;h3&gt;G‘oyalar laboratoriyasi&lt;/h3&gt;&lt;p&gt;Kundalik muammoni ishlaydigan prototipga aylantirish uchun amaliy boshlanish.&lt;/p&gt;&lt;button class=&quot;card-open&quot; data-open=&quot;lab&quot; type=&quot;button&quot;&gt;Yo‘nalishni o‘rganish &lt;span aria-hidden=&quot;true&quot;&gt;↗&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/article&gt;
       &lt;article class=&quot;initiative-card&quot; data-id=&quot;ustoz&quot; data-category=&quot;connect&quot;&gt;&lt;div class=&quot;card-art art-mentor&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;art-label&quot;&gt;BIRGA TEZROQ O‘SAMIZ&lt;/span&gt;&lt;div class=&quot;mentor-glyph&quot;&gt;&lt;span&gt;↗&lt;/span&gt;&lt;span&gt;↗&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;art-bottom&quot;&gt;HAMKORLIK / 03&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;card-copy&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;HAMKORLIK / FIKR ALMASHISH&lt;/p&gt;&lt;h3&gt;Ustoz bilan bir qadam&lt;/h3&gt;&lt;p&gt;Ishingizni tushuntiring, savol tayyorlang va foydali fikr asosida keyingi qadamni tanlang.&lt;/p&gt;&lt;button class=&quot;card-open&quot; data-open=&quot;ustoz&quot; type=&quot;button&quot;&gt;Yo‘nalishni o‘rganish &lt;span aria-hidden=&quot;true&quot;&gt;↗&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/article&gt;
       &lt;article class=&quot;initiative-card&quot; data-id=&quot;ilm&quot; data-category=&quot;learn&quot;&gt;&lt;div class=&quot;card-art art-science&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;art-label&quot;&gt;QIZIQISH — BIRINCHI QADAM&lt;/span&gt;&lt;div class=&quot;science-glyph&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;span&gt;·&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;art-bottom&quot;&gt;TADQIQOT / 04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;card-copy&quot;&gt;&lt;p class=&quot;card-kicker&quot;&gt;O‘RGANISH / TADQIQOT&lt;/p&gt;&lt;h3&gt;Ilmga ochiq eshik&lt;/h3&gt;&lt;p&gt;Taxminni dalildan ajratish, kichik tajriba o‘tkazish va natijani tushunarli ko‘rsatish.&lt;/p&gt;&lt;button class=&quot;card-open&quot; data-open=&quot;ilm&quot; type=&quot;button&quot;&gt;Yo‘nalishni o‘rganish &lt;span aria-hidden=&quot;true&quot;&gt;↗&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/article&gt;
     &lt;/div&gt;&lt;noscript&gt;&lt;p&gt;JavaScript o‘chiq: barcha yo‘nalishlar yuqorida ko‘rsatilgan. Reja tuzish uchun JavaScriptni yoqing.&lt;/p&gt;&lt;/noscript&gt;&lt;/div&gt;&lt;/section&gt;
-  &lt;section class=&quot;plan section-dark&quot; id=&quot;reja&quot; aria-labelledby=&quot;plan-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;div class=&quot;section-top&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; SIZNING KEYINGI QADAMINGIZ&lt;/p&gt;&lt;span class=&quot;section-index&quot;&gt;04 / 04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;plan-layout&quot;&gt;&lt;div&gt;&lt;h2 id=&quot;plan-title&quot; class=&quot;reveal&quot;&gt;Kelajak uchun&lt;br&gt;&lt;em&gt;bir qadam.&lt;/em&gt;&lt;br&gt;Bugundan.&lt;/h2&gt;&lt;p class=&quot;plan-intro&quot;&gt;Sizni qiziqtirgan tashabbuslarni shu yerga jamlang. Tayyor rejangizni matn fayli qilib olishingiz mumkin.&lt;/p&gt;&lt;a class=&quot;text-link&quot; href=&quot;#tashabbuslar&quot;&gt;Tashabbus tanlash &lt;span aria-hidden=&quot;true&quot;&gt;↑&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;plan-panel&quot;&gt;&lt;div class=&quot;plan-panel-heading&quot;&gt;&lt;span&gt;SHAXSIY YO‘NALISHLAR&lt;/span&gt;&lt;span id=&quot;plan-count&quot;&gt;0 / 4&lt;/span&gt;&lt;/div&gt;&lt;div id=&quot;plan-items&quot;&gt;&lt;p class=&quot;plan-empty&quot;&gt;Hozircha rejangiz bo‘sh.&lt;br&gt;Bir tashabbusni oching va rejangizga qo‘shing.&lt;/p&gt;&lt;/div&gt;&lt;button class=&quot;button pale&quot; id=&quot;download-plan&quot; type=&quot;button&quot; disabled&gt;Rejani yuklab olish &lt;span aria-hidden=&quot;true&quot;&gt;↓&lt;/span&gt;&lt;/button&gt;&lt;p class=&quot;privacy-note&quot;&gt;Tanlovlar faqat shu brauzerda saqlanadi. Ro‘yxatdan o‘tish yoki ma’lumot yuborish talab qilinmaydi.&lt;/p&gt;&lt;p id=&quot;storage-warning&quot; class=&quot;storage-warning&quot; role=&quot;alert&quot; hidden&gt;Brauzer saqlashga ruxsat bermadi. Rejani yo‘qotmaslik uchun yuklab oling.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
+  &lt;section class=&quot;plan section-dark&quot; data-motion=&quot;flag&quot; id=&quot;reja&quot; aria-labelledby=&quot;plan-title&quot;&gt;&lt;div class=&quot;section-inner&quot;&gt;&lt;div class=&quot;section-top&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;&lt;span class=&quot;status-dot&quot;&gt;&lt;/span&gt; SIZNING KEYINGI QADAMINGIZ&lt;/p&gt;&lt;span class=&quot;section-index&quot;&gt;04 / 04&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;plan-layout&quot;&gt;&lt;div&gt;&lt;h2 id=&quot;plan-title&quot; class=&quot;reveal&quot;&gt;Kelajak uchun&lt;br&gt;&lt;em&gt;bir qadam.&lt;/em&gt;&lt;br&gt;Bugundan.&lt;/h2&gt;&lt;p class=&quot;plan-intro&quot;&gt;Sizni qiziqtirgan tashabbuslarni shu yerga jamlang. Tayyor rejangizni matn fayli qilib olishingiz mumkin.&lt;/p&gt;&lt;a class=&quot;text-link&quot; href=&quot;#tashabbuslar&quot;&gt;Tashabbus tanlash &lt;span aria-hidden=&quot;true&quot;&gt;↑&lt;/span&gt;&lt;/a&gt;&lt;div class=&quot;motion-stage&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;plan-panel&quot;&gt;&lt;div class=&quot;plan-panel-heading&quot;&gt;&lt;span&gt;SHAXSIY YO‘NALISHLAR&lt;/span&gt;&lt;span id=&quot;plan-count&quot;&gt;0 / 4&lt;/span&gt;&lt;/div&gt;&lt;div id=&quot;plan-items&quot;&gt;&lt;p class=&quot;plan-empty&quot;&gt;Hozircha rejangiz bo‘sh.&lt;br&gt;Bir tashabbusni oching va rejangizga qo‘shing.&lt;/p&gt;&lt;/div&gt;&lt;button class=&quot;button pale&quot; id=&quot;download-plan&quot; type=&quot;button&quot; disabled&gt;Rejani yuklab olish &lt;span aria-hidden=&quot;true&quot;&gt;↓&lt;/span&gt;&lt;/button&gt;&lt;p class=&quot;privacy-note&quot;&gt;Tanlovlar faqat shu brauzerda saqlanadi. Ro‘yxatdan o‘tish yoki ma’lumot yuborish talab qilinmaydi.&lt;/p&gt;&lt;p id=&quot;storage-warning&quot; class=&quot;storage-warning&quot; role=&quot;alert&quot; hidden&gt;Brauzer saqlashga ruxsat bermadi. Rejani yo‘qotmaslik uchun yuklab oling.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
 &lt;/main&gt;
 &lt;footer class=&quot;site-footer section-dark&quot;&gt;&lt;div class=&quot;footer-top&quot;&gt;&lt;a class=&quot;brand&quot; href=&quot;#boshlanish&quot;&gt;Yuksal&lt;span aria-hidden=&quot;true&quot;&gt;✳&lt;/span&gt;&lt;small&gt;SI&lt;/small&gt;&lt;/a&gt;&lt;p&gt;Bilim. Tasavvur.&lt;br&gt;&lt;em&gt;Yangi imkoniyat.&lt;/em&gt;&lt;/p&gt;&lt;div&gt;&lt;a href=&quot;https://azizbeksafarov.github.io/design/si/&quot;&gt;AI uchun kontekst va kod ↗&lt;/a&gt;&lt;a href=&quot;https://azizbeksafarov.github.io/design/&quot;&gt;Barcha dizaynlar ↗&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;footer-bottom&quot;&gt;&lt;span&gt;© 2026 Yuksal · Mustaqil dizayn namunasi&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;https://www.si.gov/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SI.gov&lt;/a&gt; vizual uslubidan ilhomlangan. Rasmiy davlat sayti emas.&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;
 &lt;button class=&quot;menu-orb&quot; id=&quot;menu-open&quot; type=&quot;button&quot; aria-haspopup=&quot;dialog&quot; aria-controls=&quot;site-menu&quot;&gt;&lt;svg class=&quot;orb-ring&quot; viewBox=&quot;0 0 100 100&quot; aria-hidden=&quot;true&quot;&gt;&lt;defs&gt;&lt;path id=&quot;circle-text&quot; d=&quot;M50,50m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0&quot;/&gt;&lt;/defs&gt;&lt;text&gt;&lt;textPath href=&quot;#circle-text&quot;&gt;BILIM · TASAVVUR · IMKONIYAT · &lt;/textPath&gt;&lt;/text&gt;&lt;/svg&gt;&lt;span&gt;Menyu&lt;/span&gt;&lt;/button&gt;
-&lt;dialog id=&quot;site-menu&quot; class=&quot;menu-dialog&quot; aria-labelledby=&quot;menu-title&quot;&gt;&lt;div class=&quot;menu-heading&quot;&gt;&lt;span class=&quot;brand&quot; id=&quot;menu-title&quot;&gt;Yuksal · SI&lt;/span&gt;&lt;button class=&quot;close&quot; data-close type=&quot;button&quot; aria-label=&quot;Menyuni yopish&quot;&gt;×&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;menu-body&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;KASHF ETING&lt;/p&gt;&lt;nav aria-label=&quot;Asosiy menyu&quot;&gt;&lt;a href=&quot;#boshlanish&quot;&gt;&lt;small&gt;01&lt;/small&gt;Boshlanish &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#qarash&quot;&gt;&lt;small&gt;02&lt;/small&gt;Bizning qarash &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#yondashuv&quot;&gt;&lt;small&gt;03&lt;/small&gt;Yondashuv &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#tashabbuslar&quot;&gt;&lt;small&gt;04&lt;/small&gt;Tashabbuslar &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#reja&quot;&gt;&lt;small&gt;05&lt;/small&gt;Shaxsiy reja &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;/nav&gt;&lt;p class=&quot;menu-note&quot;&gt;Katta kelajak — kichik bir qadamdan.&lt;/p&gt;&lt;/div&gt;&lt;/dialog&gt;
+&lt;dialog id=&quot;site-menu&quot; class=&quot;menu-dialog&quot; aria-labelledby=&quot;menu-title&quot;&gt;&lt;div class=&quot;menu-heading&quot;&gt;&lt;span class=&quot;brand&quot; id=&quot;menu-title&quot;&gt;Yuksal · SI&lt;/span&gt;&lt;button class=&quot;close&quot; data-close type=&quot;button&quot; aria-label=&quot;Menyuni yopish&quot;&gt;×&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;menu-body&quot;&gt;&lt;p class=&quot;eyebrow&quot;&gt;KASHF ETING&lt;/p&gt;&lt;nav aria-label=&quot;Asosiy menyu&quot;&gt;&lt;a href=&quot;#boshlanish&quot;&gt;&lt;small&gt;01&lt;/small&gt;Boshlanish &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#qarash&quot;&gt;&lt;small&gt;02&lt;/small&gt;Bizning qarash &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#yondashuv&quot;&gt;&lt;small&gt;03&lt;/small&gt;Yondashuv &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#signal&quot;&gt;&lt;small&gt;04&lt;/small&gt;G‘oyalar signali &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#tashabbuslar&quot;&gt;&lt;small&gt;05&lt;/small&gt;Tashabbuslar &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;#reja&quot;&gt;&lt;small&gt;06&lt;/small&gt;Shaxsiy reja &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;&lt;/nav&gt;&lt;p class=&quot;menu-note&quot;&gt;Katta kelajak — kichik bir qadamdan.&lt;/p&gt;&lt;/div&gt;&lt;/dialog&gt;
 &lt;dialog id=&quot;initiative-dialog&quot; class=&quot;initiative-dialog&quot; aria-labelledby=&quot;detail-title&quot; aria-describedby=&quot;detail-description&quot;&gt;&lt;div class=&quot;detail-heading&quot;&gt;&lt;p class=&quot;eyebrow&quot; id=&quot;detail-category&quot;&gt;TASHABBUS&lt;/p&gt;&lt;button class=&quot;close&quot; data-close type=&quot;button&quot; aria-label=&quot;Yo‘nalish oynasini yopish&quot;&gt;×&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;detail-content&quot;&gt;&lt;h2 id=&quot;detail-title&quot;&gt;Yo‘nalish&lt;/h2&gt;&lt;p id=&quot;detail-description&quot;&gt;&lt;/p&gt;&lt;h3&gt;Boshlash uchun uch qadam&lt;/h3&gt;&lt;ol id=&quot;detail-steps&quot;&gt;&lt;/ol&gt;&lt;p class=&quot;detail-note&quot;&gt;Bu mustaqil mashq namunasi. Haqiqiy kursga ariza yoki tashqi xizmatga yuborish mavjud emas.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;detail-actions&quot;&gt;&lt;button class=&quot;button navy&quot; id=&quot;save-initiative&quot; type=&quot;button&quot;&gt;Rejaga qo‘shish &lt;span aria-hidden=&quot;true&quot;&gt;+&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;text-button&quot; data-close type=&quot;button&quot;&gt;Yopish&lt;/button&gt;&lt;/div&gt;&lt;/dialog&gt;
 &lt;p class=&quot;toast&quot; id=&quot;feedback&quot; role=&quot;status&quot; aria-live=&quot;polite&quot; hidden&gt;&lt;/p&gt;
 &lt;/body&gt;
@@ -56,9 +58,21 @@
 .section-light a:focus-visible,.section-light button:focus-visible,.section-cream a:focus-visible,.section-cream button:focus-visible,.initiative-dialog button:focus-visible{outline-color:var(--navy)}.button.primary{color:var(--navy)}.menu-orb{color:var(--navy)}
 /* Keep the floating menu clear of the main action on the narrowest phones. */
 @media(max-width:380px){.menu-orb{top:14px;right:68px;bottom:auto;width:56px;height:56px}.menu-orb&gt;span{font-size:15px}}
+
+/* The field persists across sections; only its target geometry changes. */
+.particle-field{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:0;transition:opacity .6s}.particle-field.ready{opacity:1}
+.section-inner,.hero-copy,.hero-art,.footer-top,.footer-bottom{position:relative;z-index:2}.site-header{z-index:6}.hero-art{z-index:3}
+.art-toggle{position:absolute;inset:0;width:100%;height:100%;border:0;background:none;cursor:crosshair}.motion-hint{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font:400 9px/1.5 var(--sans);letter-spacing:.06em;color:var(--muted);white-space:nowrap;opacity:.75}.particle-fallback{pointer-events:none}.art-coordinate{pointer-events:none}
+.vision .statement{max-width:63%;font-size:clamp(54px,6vw,90px)}.vision-bottom{max-width:50%;flex-direction:column;gap:35px}.vision-note{min-width:0;max-width:350px}.vision-stage{position:absolute;left:52%;top:10%;width:47%;height:80%;min-height:360px}
+.approach{padding-bottom:0}.approach .steps{display:block}.approach .step{position:relative;min-height:100svh;padding:80px 0!important;border:0;border-top:1px solid #0a103d33;display:flex;justify-content:center;align-items:flex-start;flex-direction:column;isolation:isolate}.step-number{margin-bottom:30px}.step h3{font-size:clamp(48px,6vw,84px)}.step&gt;div:not(.motion-stage){max-width:40%}.step p{font-size:16px;max-width:390px}.step&gt;.motion-stage{position:absolute;left:52%;top:14%;width:47%;height:72%;min-height:260px}
+.signal{position:relative;min-height:100svh;padding:100px 0;display:flex;align-items:center;overflow:hidden}.signal h2{font-size:clamp(55px,7vw,105px);max-width:700px;margin:35px 0}.signal .section-inner&gt;p:last-child{max-width:320px;color:var(--muted);font-size:14px}.signal .section-inner{pointer-events:none}
+.plan .motion-stage{height:180px;width:100%;margin-top:35px;pointer-events:none}.motion-control{position:fixed;right:36px;top:26px;backdrop-filter:blur(10px);background:#0a103dd9;z-index:30}.header-link{margin-right:125px}
+@media(max-width:900px){.motion-control{top:22px;right:24px}.motion-hint{font-size:8px;letter-spacing:0}.vision .statement{max-width:100%;font-size:clamp(43px,8vw,67px)}.vision-bottom{max-width:100%}.vision-stage{position:relative;left:auto;top:auto;width:100%;height:300px;min-height:0;margin-top:40px}.approach .step{min-height:760px;padding:55px 0!important;justify-content:flex-start}.step&gt;div:not(.motion-stage){max-width:100%}.step h3{font-size:46px}.step p{font-size:14px}.step&gt;.motion-stage{position:relative;left:auto;top:auto;width:100%;height:390px;min-height:0;margin-top:35px}.signal{min-height:100svh;padding:85px 0}.signal h2{font-size:clamp(48px,8vw,72px)}.header-link{margin-right:0}}
+@media(max-width:380px){.motion-control{right:20px}.motion-hint{font-size:7px}.approach .step{min-height:700px}.step&gt;.motion-stage{height:340px}}
 </code></pre>
 <h3>site/app.js</h3>
-<pre><code>import {initiatives,validPlan,togglePlan,planText} from &#x27;./model.js&#x27;;
+<pre><code>import {ParticleField} from &#x27;./motion.js&#x27;;
+import {initiatives,validPlan,togglePlan,planText} from &#x27;./model.js&#x27;;
 
 const $=selector=&gt;document.querySelector(selector);
 const key=&#x27;ustoz.yuksal.plan.v1&#x27;;
@@ -95,7 +109,7 @@ document.querySelectorAll(&#x27;[data-filter]&#x27;).forEach(button=&gt;button.a
 $(&#x27;#download-plan&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{if(!plan.length)return;const blob=new Blob([&#x27;\ufeff&#x27;+planText(plan)],{type:&#x27;text/plain;charset=utf-8&#x27;});const url=URL.createObjectURL(blob);const link=document.createElement(&#x27;a&#x27;);link.href=url;link.download=&#x27;yuksal-rejam.txt&#x27;;link.click();setTimeout(()=&gt;URL.revokeObjectURL(url),1000);notify(&#x27;Reja matn fayli sifatida tayyorlandi.&#x27;);});
 
 const reduce=matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;);
-let paused=reduce.matches,visible=true,frame=0,lastFrame=0;
+let paused=reduce.matches;
 const motionButton=$(&#x27;#motion-toggle&#x27;);
 function motionLabel(){motionButton.setAttribute(&#x27;aria-pressed&#x27;,String(paused));motionButton.setAttribute(&#x27;aria-label&#x27;,paused?&#x27;Animatsiyani davom ettirish&#x27;:&#x27;Animatsiyani to‘xtatish&#x27;);motionButton.querySelector(&#x27;path&#x27;).setAttribute(&#x27;d&#x27;,paused?&#x27;M8 5l11 7-11 7Z&#x27;:&#x27;M9 5v14M15 5v14&#x27;);document.body.classList.toggle(&#x27;motion-paused&#x27;,paused);}
 motionLabel();
@@ -105,35 +119,207 @@ if(&#x27;IntersectionObserver&#x27; in window){
  const sections=new IntersectionObserver(entries=&gt;{for(const entry of entries)if(entry.isIntersecting){document.querySelectorAll(&#x27;.section-nav a&#x27;).forEach(link=&gt;{if(link.hash===&#x27;#&#x27;+entry.target.id)link.setAttribute(&#x27;aria-current&#x27;,&#x27;location&#x27;);else link.removeAttribute(&#x27;aria-current&#x27;);});}},{rootMargin:&#x27;-25% 0px -40% 0px&#x27;,threshold:0});document.querySelectorAll(&#x27;main&gt;section&#x27;).forEach(section=&gt;sections.observe(section));
 }else document.documentElement.classList.remove(&#x27;js-motion&#x27;);
 
-const canvas=$(&#x27;#particles&#x27;),ctx=canvas.getContext(&#x27;2d&#x27;);
-let points=[],width=0,height=0,pointer={x:0,y:0},heroVisible=true;
-const random=(value)=&gt;{const n=Math.sin(value*127.1+311.7)*43758.5453;return n-Math.floor(n);};
-async function buildParticles(){
- if(!ctx)return;
- await document.fonts.load(&#x27;400 200px &quot;Instrument Serif&quot;&#x27;);
- const box=canvas.getBoundingClientRect();width=box.width;height=box.height;if(!width||!height)return;
- const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
- const mask=document.createElement(&#x27;canvas&#x27;);mask.width=620;mask.height=420;const brush=mask.getContext(&#x27;2d&#x27;,{willReadFrequently:true});brush.fillStyle=&#x27;#fff&#x27;;brush.textAlign=&#x27;center&#x27;;brush.textBaseline=&#x27;middle&#x27;;brush.font=&#x27;400 440px &quot;Instrument Serif&quot;&#x27;;brush.fillText(&#x27;SI&#x27;,310,237);const pixels=brush.getImageData(0,0,620,420).data;points=[];
- for(let y=15;y&lt;410;y+=4)for(let x=20;x&lt;600;x+=4)if(pixels[(y*620+x)*4+3]&gt;128){const index=points.length;points.push({x:(x-310)/620,y:(y-210)/420,z:(random(index)-.5)*65,phase:random(index+17)*Math.PI*2,size:2+random(index+31)*1.8});}
- canvas.parentElement.classList.add(&#x27;ready&#x27;);draw(performance.now());schedule();
+const field=new ParticleField($(&#x27;#particles&#x27;),{paused,reduced:reduce.matches});
+field.init().catch(()=&gt;{$(&#x27;.hero-art&#x27;).classList.remove(&#x27;ready&#x27;);$(&#x27;#particles&#x27;).classList.remove(&#x27;ready&#x27;);});
+motionButton.addEventListener(&#x27;click&#x27;,()=&gt;{paused=!paused;motionLabel();field.setPaused(paused,reduce.matches);});
+reduce.addEventListener(&#x27;change&#x27;,event=&gt;{paused=event.matches;motionLabel();document.documentElement.classList.toggle(&#x27;js-motion&#x27;,!event.matches);field.setPaused(paused,event.matches);});
+</code></pre>
+<h3>site/motion.js</h3>
+<pre><code>// One persistent particle field: targets change; particles keep their positions/velocity.
+// Independently implemented from observed SI.gov interaction and timing.
+export const clamp=(v,a,b)=&gt;Math.max(a,Math.min(b,v));
+export const seeded=n=&gt;{const v=Math.sin(n*127.1+311.7)*43758.5453;return v-Math.floor(v);};
+export function advanceParticle(p,target,pointer,waves,dt=1){
+ const steps=Math.max(1,Math.ceil(dt)),step=dt/steps;
+ for(let j=0;j&lt;steps;j++){
+  let ax=(target.x-p.x)*.045,ay=(target.y-p.y)*.045;
+  const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy);
+  if(d&lt;120&amp;&amp;d&gt;.01){const force=(1-d/120)*5;ax+=dx/d*force;ay+=dy/d*force;}
+  for(const wave of waves){const x=p.x-wave.x,y=p.y-wave.y,r=Math.hypot(x,y);if(r&gt;.01&amp;&amp;Math.abs(r-wave.radius)&lt;26){ax+=x/r*10;ay+=y/r*10;}}
+  const damping=Math.pow(.84,step);p.vx=(p.vx+ax*step)*damping;p.vy=(p.vy+ay*step)*damping;p.x+=p.vx*step;p.y+=p.vy*step;
+ }
 }
-function draw(time){
- if(!ctx||!width)return;ctx.clearRect(0,0,width,height);
- const scale=Math.min(width/620,height/430)*.94;const t=paused?0:time*.0002;const sway=paused?0:Math.sin(t)*.08;const cos=Math.cos(sway),sin=Math.sin(sway);
- for(const point of points){const px=point.x*620*scale,py=point.y*420*scale;const drift=paused?0:Math.sin(t*2+point.phase)*3;const x=width/2+px*cos+point.z*sin+drift+pointer.x*(point.z/55);const y=height/2+py+Math.cos(t+point.phase)*(paused?0:2)+pointer.y*(point.z/70);const size=point.size*scale;ctx.fillStyle=point.z&gt;0?&#x27;#ff425d&#x27;:&#x27;#ed294d&#x27;;ctx.globalAlpha=.8+(point.z+33)/350;ctx.fillRect(x,y,size,size);}
- ctx.globalAlpha=1;
+export function shapeTarget(kind,i,count,time,box,pointer={nx:0,ny:0}){
+ const cx=box.x+box.w/2,cy=box.y+box.h/2,r=Math.min(box.w,box.h)*.42;
+ if(kind===&#x27;sphere&#x27;||kind===&#x27;ring&#x27;){
+  const ring=kind===&#x27;ring&#x27;?Math.floor(count*.2):0;
+  if(i&lt;ring){const a=i/ring*Math.PI*2+time*.35,x=Math.cos(a)*r*1.55,y=Math.sin(a)*r*.38;return{x:cx+x*Math.cos(-.32)-y*Math.sin(-.32),y:cy+x*Math.sin(-.32)+y*Math.cos(-.32),alpha:.95,color:1,size:1.6};}
+  const t=(i-ring+.5)/(count-ring),polar=Math.acos(1-2*t),angle=(i-ring+.5)*10.166407384630519;
+  const x=Math.sin(polar)*Math.cos(angle),y=Math.cos(polar),z=Math.sin(polar)*Math.sin(angle),rotation=time*.22+pointer.nx*.7,tilt=.35+pointer.ny*.35;
+  const xx=x*Math.cos(rotation)-z*Math.sin(rotation),zz=x*Math.sin(rotation)+z*Math.cos(rotation),yy=y*Math.cos(tilt)-zz*Math.sin(tilt),depth=y*Math.sin(tilt)+zz*Math.cos(tilt),perspective=1/(1.9-depth*.5);
+  return{x:cx+xx*r*perspective*1.5,y:cy+yy*r*perspective*1.5,alpha:.25+.75*(depth*.5+.5),size:1+depth*.9};
+ }
+ if(kind===&#x27;helix&#x27;){
+  const strand=i%3,t=(i/count+time*.03)%1,a=t*Math.PI*16+time*1.1+(strand===1?Math.PI:0),radius=Math.min(box.w,box.h)*.28;
+  if(strand===2){const row=Math.floor(t*40)/40;return{x:cx+radius*Math.cos(row*Math.PI*16+time*1.1)*((i*.618%1)*2-1),y:box.y+box.h*(1-row),alpha:.45,color:2,size:1.1};}
+  const depth=Math.sin(a);return{x:cx+radius*Math.cos(a)*(1+t*.6),y:box.y+box.h*(1-t),alpha:.35+.65*(depth*.5+.5),color:strand?1:0,size:1.1+depth*.8};
+ }
+ if(kind===&#x27;towers&#x27;){
+  const column=i%36,col=column%9,row=Math.floor(column/9),level=i*.381966%1,height=.25+seeded(column+98)*.75;
+  return{x:box.x+box.w*(.08+col/8*.84)+(row-1.5)*box.w*.035+box.w/9*.55*(1-row*.12)*(i*.7548%1-.5),y:box.y+box.h*(.95-row*.06)-level*box.h*.75*height*(.9+.1*Math.sin(time*1.4+column)),alpha:.3+row*.2+(level&gt;.97?.4:0),color:level&gt;.97?1:row===3?2:0,size:1.3};
+ }
+ if(kind===&#x27;broadcast&#x27;){
+  const ring=i%9,t=(time*.07+ring/9)%1,a=Math.floor(i/9)/Math.ceil(count/9)*Math.PI*2+.4*ring+.05*Math.sin(time*.3+ring),radius=40+t*Math.max(box.w,box.h)*.72;
+  return{x:cx+Math.cos(a)*radius,y:cy+box.h*.06+Math.sin(a)*radius*(box.w&lt;700?1:.62),alpha:.85*(1-t),color:ring%3===0?1:2,size:1.2+.8*(1-t)};
+ }
+ if(kind===&#x27;flag&#x27;){
+  const stripe=i%13,col=Math.floor(i/13)/Math.ceil(count/13),star=col&lt;.4&amp;&amp;stripe&lt;7,white=star&amp;&amp;Math.floor(i/13)%3===0&amp;&amp;stripe%2===0;
+  return{x:box.x+col*box.w,y:box.y+box.h*.08+stripe/12*box.h*.8+Math.sin(col*7-time*2.4)*box.h*.05*(col+.15)+Math.sin(col*3-time*1.1)*box.h*.02,alpha:star?white?1:.55:.9,color:star?white?0:2:stripe%2?0:1,size:1.6};
+ }
+ return{x:box.x+(seeded(i+51)*box.w+8*time*(seeded(i+5)+.2))%(box.w+20)-10,y:box.y+seeded(i+71)*box.h+8*Math.sin(time*.5+seeded(i+5)*9),alpha:.08+.28*seeded(i+5),size:1+seeded(i+5)};
 }
-function tick(time){frame=0;if(paused||!visible||!heroVisible)return;if(time-lastFrame&gt;32){draw(time);lastFrame=time;}schedule();}
-function schedule(){if(!frame&amp;&amp;!paused&amp;&amp;visible&amp;&amp;heroVisible)frame=requestAnimationFrame(tick);}
-function stop(){if(frame)cancelAnimationFrame(frame);frame=0;}
-motionButton.addEventListener(&#x27;click&#x27;,()=&gt;{paused=!paused;motionLabel();if(paused){stop();draw(0);}else schedule();});
-reduce.addEventListener(&#x27;change&#x27;,event=&gt;{paused=event.matches;motionLabel();document.documentElement.classList.toggle(&#x27;js-motion&#x27;,!event.matches);if(paused){stop();draw(0);}else schedule();});
-document.addEventListener(&#x27;visibilitychange&#x27;,()=&gt;{visible=!document.hidden;if(visible)schedule();else stop();});
-if(&#x27;IntersectionObserver&#x27; in window)new IntersectionObserver(([entry])=&gt;{heroVisible=entry.isIntersecting;if(heroVisible)schedule();else stop();}).observe(canvas);
-canvas.parentElement.addEventListener(&#x27;pointermove&#x27;,event=&gt;{if(reduce.matches||paused||event.pointerType===&#x27;touch&#x27;)return;const box=canvas.getBoundingClientRect();pointer={x:(event.clientX-box.left-box.width/2)*.035,y:(event.clientY-box.top-box.height/2)*.035};});
-canvas.parentElement.addEventListener(&#x27;pointerleave&#x27;,()=&gt;{pointer={x:0,y:0};});
-let resizeTimer;window.addEventListener(&#x27;resize&#x27;,()=&gt;{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=&gt;buildParticles().catch(()=&gt;{}),150);});
-buildParticles().catch(()=&gt;{canvas.parentElement.classList.remove(&#x27;ready&#x27;);});
+
+export class ParticleField{
+ constructor(canvas,{paused=false,reduced=false}={}){
+  this.canvas=canvas;this.ctx=canvas.getContext(&#x27;2d&#x27;);this.paused=paused;this.reduced=reduced;this.frame=0;this.time=0;this.last=0;this.waves=[];this.cache=new Map();this.particles=[];this.pointer={x:-10000,y:-10000,nx:0,ny:0};this.expanded=false;this.mode=&#x27;text&#x27;;this.targetName=&#x27;SI&#x27;;this.box={x:0,y:0,w:1,h:1};this.visible=true;this.motionStart=0;
+ }
+ async init(){
+  if(!this.ctx)throw new Error(&#x27;Canvas unavailable&#x27;);
+  await document.fonts.load(&#x27;400 200px &quot;Instrument Serif&quot;&#x27;);this.resize();
+  window.addEventListener(&#x27;pointermove&#x27;,e=&gt;this.onPointer(e),{passive:true});
+  document.addEventListener(&#x27;pointerleave&#x27;,()=&gt;{this.pointer.x=this.pointer.y=-10000;});
+  window.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{if(this.paused||this.reduced||e.target.closest(&#x27;a,input,button:not(.art-toggle),dialog&#x27;))return;this.waves.push({x:e.clientX,y:e.clientY,radius:0});},{passive:true});
+  window.addEventListener(&#x27;scroll&#x27;,()=&gt;{this.syncScene();if(this.paused)this.paint();},{passive:true});
+  let timer;window.addEventListener(&#x27;resize&#x27;,()=&gt;{clearTimeout(timer);timer=setTimeout(()=&gt;this.resize(),120);});
+  document.addEventListener(&#x27;visibilitychange&#x27;,()=&gt;{this.visible=!document.hidden;if(this.visible)this.start();else this.stop();});
+  document.querySelector(&#x27;.art-toggle&#x27;).addEventListener(&#x27;click&#x27;,e=&gt;{if(e.pointerType===&#x27;touch&#x27;||e.detail===0)this.setExpanded(!this.expanded);});
+  this.canvas.classList.add(&#x27;ready&#x27;);document.querySelector(&#x27;.hero-art&#x27;).classList.add(&#x27;ready&#x27;);this.paint();this.start();return this;
+ }
+ resize(){
+  this.width=innerWidth;this.height=innerHeight;const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(this.width*dpr);this.canvas.height=Math.round(this.height*dpr);this.ctx.setTransform(dpr,0,0,dpr,0,0);
+  const count=this.width&lt;700?1500:1800;
+  if(this.particles.length!==count)this.particles=Array.from({length:count},(_,i)=&gt;({x:seeded(i+7)*this.width,y:seeded(i+47)*this.height,vx:0,vy:0,color:seeded(i+17)&lt;.08?1:seeded(i+37)&lt;.12?2:0}));
+  this.cache.clear();this.syncScene(true);if(this.paused||this.reduced)this.snap();this.paint();this.start();
+ }
+ onPointer(e){
+  if(e.pointerType===&#x27;touch&#x27;||this.paused||this.reduced)return;
+  this.pointer={x:e.clientX,y:e.clientY,nx:e.clientX/this.width*2-1,ny:e.clientY/this.height*2-1};
+  if(this.scene!==&#x27;hero&#x27;||document.querySelector(&#x27;dialog[open]&#x27;))return;
+  const b=this.expanded?this.textBounds:this.siBounds,pad=this.expanded?60:20;
+  if(b)this.setExpanded(e.clientX&gt;b.x-pad&amp;&amp;e.clientX&lt;b.x+b.w+pad&amp;&amp;e.clientY&gt;b.y-pad&amp;&amp;e.clientY&lt;b.y+b.h+pad);
+ }
+ setExpanded(value){
+  if(value===this.expanded||this.paused||this.reduced)return;this.expanded=value;document.querySelector(&#x27;.art-toggle&#x27;).setAttribute(&#x27;aria-pressed&#x27;,String(value));this.syncScene(true);
+ }
+ syncScene(force=false){
+  const middle=this.height*.5,hero=document.querySelector(&#x27;.hero&#x27;),heroBox=hero.getBoundingClientRect();
+  const candidates=[...document.querySelectorAll(&#x27;[data-motion]&#x27;)].filter(e=&gt;{const b=e.getBoundingClientRect();return b.top&lt;=middle&amp;&amp;b.bottom&gt;middle;});
+  let section=candidates.at(-1)||hero;let mode=section.dataset.motion||&#x27;text&#x27;,scene=section===hero?&#x27;hero&#x27;:section.id||mode;
+  let box;
+  if(scene===&#x27;hero&#x27;){
+   const heading=document.querySelector(&#x27;.hero h1&#x27;).getBoundingClientRect().top+scrollY;
+   mode=this.expanded?(this.width&lt;900?&#x27;circle&#x27;:&#x27;snake&#x27;):&#x27;text&#x27;;
+   box=this.width&gt;=900?(this.expanded?{x:this.width*.04,y:72,w:this.width*.92,h:Math.max(this.height*.3,heading-72)}:{x:this.width*.04,y:this.height*.1,w:this.width*.92,h:this.height*.6}):{x:this.width*.02,y:64,w:this.width*.96,h:Math.max(this.height*.25,heading-82)};
+  }else{
+   const b=section.querySelector(&#x27;.motion-stage&#x27;)?.getBoundingClientRect();
+   box=this.width&gt;=900&amp;&amp;scene!==&#x27;reja&#x27;?{x:this.width*.52,y:this.height*.14,w:this.width*.42,h:this.height*.72}:b?{x:b.left,y:b.top,w:b.width,h:b.height}:{x:this.width*.08,y:this.height*.1,w:this.width*.84,h:this.height*.5};
+  }
+  if(mode===&#x27;scatter&#x27;||mode===&#x27;broadcast&#x27;)box={x:0,y:0,w:this.width,h:this.height};
+  const target=mode===&#x27;text&#x27;?&#x27;SI&#x27;:mode===&#x27;snake&#x27;?&#x27;Super|Intelligence&#x27;:mode===&#x27;circle&#x27;?&#x27;SUPER INTELLIGENCE &#x27;:&#x27;&#x27;;
+  const signature=[mode,scene,target,Math.round(box.x),Math.round(box.y),Math.round(box.w),Math.round(box.h)].join(&#x27;|&#x27;);
+  const changed=signature!==this.signature;
+  this.scene=scene;this.box=box;this.mode=mode;this.targetName=target;
+  this.light=Boolean(section.closest(&#x27;.section-cream,.section-light&#x27;));
+  const footer=document.querySelector(&#x27;.site-footer&#x27;).getBoundingClientRect();this.opacity=clamp((footer.top-this.height*.25)/(this.height*.5),0,1);
+  if(scene===&#x27;hero&#x27;&amp;&amp;heroBox.bottom&lt;0)this.opacity=0;
+  if(changed||force){
+   const modeChanged=this.canvas.dataset.form!==mode;this.signature=signature;
+   if(mode===&#x27;text&#x27;||mode===&#x27;snake&#x27;||mode===&#x27;circle&#x27;){
+    this.previous=this.targets;this.targets=this.textTargets(target,box,mode===&#x27;circle&#x27;);
+    if(mode===&#x27;text&#x27;)this.siBounds=this.targets.bounds;else this.textBounds=this.targets.bounds;
+   }
+   if(modeChanged)this.motionStart=this.time;
+   this.canvas.dataset.form=mode;this.canvas.dataset.scene=scene;
+   if(this.paused||this.reduced)this.snap();
+  }
+ }
+ textTargets(text,box,circular=false){
+  const key=[text,box.x|0,box.y|0,box.w|0,box.h|0,circular].join(&#x27;:&#x27;);if(this.cache.has(key))return this.cache.get(key);
+  const mask=document.createElement(&#x27;canvas&#x27;);mask.width=Math.max(20,Math.round(box.w));mask.height=Math.max(20,Math.round(box.h));const c=mask.getContext(&#x27;2d&#x27;,{willReadFrequently:true});
+  c.fillStyle=&#x27;#fff&#x27;;c.textAlign=&#x27;center&#x27;;c.textBaseline=&#x27;alphabetic&#x27;;let points=[];
+  if(circular){
+   const chars=[...text],radius=Math.min(box.w,box.h)*.36,font=radius*.42;c.font=`400 ${font}px &quot;Instrument Serif&quot;`;c.textBaseline=&#x27;middle&#x27;;
+   chars.forEach((char,i)=&gt;{const a=-Math.PI/2+i/chars.length*Math.PI*2;c.save();c.translate(box.w/2+Math.cos(a)*radius,box.h/2+Math.sin(a)*radius);c.rotate(a+Math.PI/2);c.fillText(char,0,0);c.restore();});
+  }else{
+   const lines=text.split(&#x27;|&#x27;);c.font=&#x27;400 100px &quot;Instrument Serif&quot;&#x27;;const metrics=lines.map(line=&gt;c.measureText(line)),mw=Math.max(...metrics.map(m=&gt;m.actualBoundingBoxLeft+m.actualBoundingBoxRight)),ascent=metrics[0].actualBoundingBoxAscent/100,descent=metrics.at(-1).actualBoundingBoxDescent/100;
+   const total=ascent+.92*(lines.length-1)+descent,font=Math.min(box.w*.86/(mw/100),box.h*.9/total);c.font=`400 ${font}px &quot;Instrument Serif&quot;`;
+   lines.forEach((line,i)=&gt;c.fillText(line,box.w/2,(box.h-total*font)/2+ascent*font+i*font*.92));
+  }
+  const pixels=c.getImageData(0,0,mask.width,mask.height).data;let area=0;for(let j=3;j&lt;pixels.length;j+=4)if(pixels[j]&gt;128)area++;
+  const spacing=Math.max(1.5,Math.sqrt(area/(this.particles.length*.95)));
+  let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+  for(let y=spacing/2;y&lt;mask.height;y+=spacing)for(let x=spacing/2;x&lt;mask.width;x+=spacing)if(pixels[(Math.floor(y)*mask.width+Math.floor(x))*4+3]&gt;128){points.push({x:box.x+x,y:box.y+y,column:Math.floor(x/spacing),line:text.includes(&#x27;|&#x27;)&amp;&amp;y&gt;box.h/2?1:0});minX=Math.min(minX,x);minY=Math.min(minY,y);maxX=Math.max(maxX,x);maxY=Math.max(maxY,y);}
+  if(!points.length)throw new Error(&#x27;Particle text mask empty&#x27;);
+  points.sort((a,b)=&gt;a.line-b.line||a.column-b.column||(a.column%2?b.y-a.y:a.y-b.y));points.forEach((p,i)=&gt;p.rank=i/points.length);
+  // Stable shuffle avoids visible rows flying in together; rank preserves the writing path.
+  for(let j=points.length-1;j&gt;0;j--){const k=Math.floor(seeded(j+97)*(j+1));[points[j],points[k]]=[points[k],points[j]];}
+  const result=Array.from({length:this.particles.length},(_,i)=&gt;{const p=points[i%points.length];return{...p,x:p.x+(i&gt;=points.length?(seeded(i+9)-.5)*3:0),y:p.y+(i&gt;=points.length?(seeded(i+19)-.5)*3:0),alpha:1,size:1.7};});
+  result.bounds={x:box.x+minX,y:box.y+minY,w:maxX-minX,h:maxY-minY};this.cache.set(key,result);return result;
+ }
+ target(i){
+  if(this.mode===&#x27;text&#x27;)return this.targets[i];
+  if(this.mode===&#x27;snake&#x27;){
+   const p=this.targets[i],progress=(this.time-this.motionStart)/2.4;
+   if(!this.reduced&amp;&amp;progress&lt;p.rank){return this.previous?.[i]||{...p,alpha:.3};}
+   return{...p,color:!this.reduced&amp;&amp;progress-p.rank&lt;.045?1:undefined,size:!this.reduced&amp;&amp;progress-p.rank&lt;.045?2.7:1.7};
+  }
+  if(this.mode===&#x27;circle&#x27;){
+   const p=this.targets[i],cx=this.box.x+this.box.w/2,cy=this.box.y+this.box.h/2,angle=this.reduced?0:Math.max(0,this.time-this.motionStart-.6)*.35,x=p.x-cx,y=p.y-cy;return{...p,x:cx+x*Math.cos(angle)-y*Math.sin(angle),y:cy+x*Math.sin(angle)+y*Math.cos(angle),size:1.6};
+  }
+  return shapeTarget(this.mode,i,this.particles.length,this.reduced?0:this.time,this.box,this.pointer);
+ }
+ snap(){if(!this.targets&amp;&amp;[&#x27;text&#x27;,&#x27;snake&#x27;,&#x27;circle&#x27;].includes(this.mode))return;for(let i=0;i&lt;this.particles.length;i++){const t=this.target(i),p=this.particles[i];p.x=t.x;p.y=t.y;p.vx=p.vy=0;}}
+ paint(dt=0){
+  if(!this.ctx||!this.particles.length)return;const c=this.ctx;c.clearRect(0,0,this.width,this.height);
+  const palette=this.light?[&#x27;#0a103d&#x27;,&#x27;#ff3347&#x27;,&#x27;#526fae&#x27;]:[&#x27;#f5f6fa&#x27;,&#x27;#ff3347&#x27;,&#x27;#8fb4ff&#x27;];
+  for(let i=0;i&lt;this.particles.length;i++){
+   const p=this.particles[i],t=this.target(i);if(dt)advanceParticle(p,t,this.pointer,this.waves,dt);
+   const speed=clamp(Math.hypot(p.vx,p.vy)/7,0,1),size=t.size*(this.width&lt;700?1.1:1.35)+speed*2;
+   c.globalAlpha=clamp((t.alpha+speed*.4)*this.opacity,0,1);c.fillStyle=palette[speed&gt;.35?1:t.color??p.color];c.fillRect(p.x-size/2,p.y-size/2,size,size);
+  }c.globalAlpha=1;
+ }
+ tick=now=&gt;{
+  this.frame=0;if(this.paused||!this.visible)return;const elapsed=this.last?clamp((now-this.last)/16.6667,0,3):1;this.last=now;this.time+=elapsed/60;
+  for(const wave of this.waves)wave.radius+=16*elapsed;this.waves=this.waves.filter(w=&gt;w.radius&lt;Math.max(this.width,this.height)*1.2);
+  this.paint(elapsed);this.start();
+ };
+ start(){if(!this.frame&amp;&amp;!this.paused&amp;&amp;this.visible)this.frame=requestAnimationFrame(this.tick);}
+ stop(){if(this.frame)cancelAnimationFrame(this.frame);this.frame=0;this.last=0;}
+ setPaused(paused,reduced=this.reduced){this.paused=paused;this.reduced=reduced;if(paused){this.stop();if(reduced){this.expanded=false;this.syncScene(true);this.snap();}this.paint();}else this.start();}
+}
+</code></pre>
+<h3>site/motion.test.mjs</h3>
+<pre><code>import test from &#x27;node:test&#x27;;
+import assert from &#x27;node:assert/strict&#x27;;
+import {advanceParticle,shapeTarget} from &#x27;./motion.js&#x27;;
+const away={x:-10000,y:-10000};
+test(&#x27;spring converges after a morph and preserves bounded finite velocity&#x27;,()=&gt;{
+ const p={x:-500,y:900,vx:0,vy:0},target={x:600,y:240};
+ for(let i=0;i&lt;600;i++){advanceParticle(p,target,away,[]);assert.ok(Number.isFinite(p.x+p.y+p.vx+p.vy));}
+ assert.ok(Math.hypot(p.x-target.x,p.y-target.y)&lt;.001);
+});
+test(&#x27;pointer and expanding click wave displace particles away from their origins&#x27;,()=&gt;{
+ const a={x:60,y:0,vx:0,vy:0},b={...a},c={...a};
+ advanceParticle(a,{x:60,y:0},away,[]);
+ advanceParticle(b,{x:60,y:0},{x:0,y:0},[]);
+ advanceParticle(c,{x:60,y:0},away,[{x:0,y:0,radius:60}]);
+ assert.equal(a.x,60);assert.ok(b.x&gt;a.x);assert.ok(c.x&gt;b.x);
+});
+test(&#x27;long frames are substepped rather than destabilizing the spring&#x27;,()=&gt;{
+ const a={x:0,y:0,vx:3,vy:-2},b={...a},target={x:100,y:200};
+ advanceParticle(a,target,away,[],3);for(let i=0;i&lt;3;i++)advanceParticle(b,target,away,[]);
+ assert.deepEqual(a,b);
+});
+test(&#x27;every procedural shape remains finite and animated on mobile and desktop&#x27;,()=&gt;{
+ for(const count of [1500,1800])for(const kind of [&#x27;sphere&#x27;,&#x27;ring&#x27;,&#x27;helix&#x27;,&#x27;towers&#x27;,&#x27;broadcast&#x27;,&#x27;flag&#x27;,&#x27;scatter&#x27;]){
+  const box={x:20,y:60,w:count===1500?280:540,h:380};let moving=0;
+  for(let i=0;i&lt;count;i++){
+   const a=shapeTarget(kind,i,count,0,box),b=shapeTarget(kind,i,count,3,box);
+   assert.ok(Number.isFinite(a.x+a.y+a.size+a.alpha+b.x+b.y));assert.ok(a.size&gt;0&amp;&amp;a.alpha&gt;=0&amp;&amp;a.alpha&lt;=1.3+Number.EPSILON*2);
+   if(Math.hypot(a.x-b.x,a.y-b.y)&gt;.01)moving++;
+  }assert.ok(moving&gt;count*.2,`${kind} must move, not show a static shape`);
+ }
+});
 </code></pre>
 <h3>site/model.js</h3>
 <pre><code>export const initiatives=[

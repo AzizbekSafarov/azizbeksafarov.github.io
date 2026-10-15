@@ -220,7 +220,7 @@
       "color": "#ff354f",
       "background": "#0a103d",
       "summary": "To‘q ko‘k fon, nafis serif, kursiv aksentlar va harakatlanuvchi qizil zarrachalar. SI.gov vizual uslubidan ilhomlangan mustaqil portal.",
-      "features": "Zarrachali animatsiya · dumaloq menyu · bo‘lim navigatsiyasi · filtr · shaxsiy reja · light/dark sirtlar",
+      "features": "SI ↔ Super Intelligence · kursor va click fizikasi · scroll morph · spiral / shar / signal · filtr · shaxsiy reja",
       "use": "AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari",
       "fonts": [
         "instrument-sans",
@@ -233,8 +233,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/si/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/si/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/si/manifest.json",
-      "source_fingerprint": "43021b6f31c9867a9e3e627d7cfc828ddb45c9e92e7613f6085dd52766425d22",
-      "archive_bytes": 145758
+      "source_fingerprint": "c92a788c7eee3d5714266bc4a706ad9596f5dba2ad403c6b094145c6aeaf9498",
+      "archive_bytes": 155113
     }
   ]
 }
