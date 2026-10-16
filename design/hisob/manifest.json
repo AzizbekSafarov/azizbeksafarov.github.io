@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "source_fingerprint": "6223696f6f3c5e2031df94c8f26f1e262ae820e7896744f45b872a49ba4786d3",
   "name": "Hisob",
   "slug": "hisob",
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "9b5ea6eb204af655d4529eb478e938d0916898391e8fa7d321938e70056d3051",
-  "archive_bytes": 260408,
+  "archive_sha256": "8b14bba63df1dc94e37ff8e59e250c08f59038911b741cabe4049899fa1f339e",
+  "archive_bytes": 260462,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -63,8 +63,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 4947,
-      "sha256": "b84976511cd2bb880d1569846af56ea2c2d0256c7fdedec27f346cfd1bffffd3"
+      "bytes": 5051,
+      "sha256": "cae15be37c8faf5d62ef48677519fbf0106ab2efcaac5c572eec067f7c5f324a"
     },
     {
       "path": "CHECKLIST.md",
@@ -99,7 +99,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "30dcb5f6ac56987a5db98ed581c222374d5a548e7d9b37b2d9f6a104e332a258"
+      "sha256": "28caf4503d077d70f2fdeaccac0969ef1fc9075d7384fac2114436b90dc6687e"
     },
     {
       "path": "README.md",

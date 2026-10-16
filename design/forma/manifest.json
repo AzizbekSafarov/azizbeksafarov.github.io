@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
-  "source_fingerprint": "5dff9a5901c21aee95da265aaa33a842e0da75b93f062973e9fe152e7e50f760",
+  "snapshot_date": "2026-10-16",
+  "source_fingerprint": "a3696ced9204f77bacf6d578d42007a8f0b2114968173b1422ecf992d471b14f",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "4c47666fc86ae6b049612a2f2961cd5969a90a0c4418c8da2f14ad99c9527cec",
-  "archive_bytes": 518698,
+  "archive_sha256": "58c76f483957ae574d46adce9bedc733845e962842c9102c071175d7bd394f72",
+  "archive_bytes": 521095,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/forma/files/index.html.txt",
-      "sha256": "4d98b0765f76442580d7b7d4d0ff53c8f5c2493ab170ad849d6c015acbcdeb4c",
+      "sha256": "66a0f58b26eefa5c548af4b4dc242285edd2e0aebbf4c078b1f7778a8892528e",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/index.html.txt"
     },
     {
@@ -23,6 +23,12 @@
       "url": "https://azizbeksafarov.github.io/design/forma/files/style.css.txt",
       "sha256": "e55b97dcfe217fab39bfaae396b98ef0e0fe54e1d137607aadae1c80434ab0f1",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/style.css.txt"
+    },
+    {
+      "path": "layout.css",
+      "url": "https://azizbeksafarov.github.io/design/forma/files/layout.css.txt",
+      "sha256": "c3dd8b688b49becc8bb02083e34138af469a2b27c04be27be3db5d591baa9fda",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/layout.css.txt"
     },
     {
       "path": "app.js",
@@ -58,13 +64,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2297,
-      "sha256": "ed9605be8a93c96d8da48f23a03a6a8fa0010cee955d63a5b3d111c8bfd00e2b"
+      "bytes": 2423,
+      "sha256": "f1e59348c4642e2170777a70e734349dcfcbd2b82d2be7296ee7e302c0a6fca5"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 5697,
-      "sha256": "d6e153fdf628542221c4c3643bfcb2788b39527eef6e321060dc23bcde683ab5"
+      "bytes": 6003,
+      "sha256": "20cd58b3af8d153e5505b3e9734ad326460e0bc5a0eae35013d4c4125acf0ee4"
     },
     {
       "path": "CHECKLIST.md",
@@ -99,17 +105,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "5a2bf2d30ef442dccc7e47ec11546a301a74ba409cfa4eba2e3a76bda0fe395f"
+      "sha256": "f479c368019e04907ed02ede5007b09c6704ae2db658fde3390e121eb6f794d3"
     },
     {
       "path": "README.md",
-      "bytes": 568,
-      "sha256": "6fca9f15007f4e631fdbdf8ac6d907ac64455fae17e119fc32bf91108c89265e"
+      "bytes": 927,
+      "sha256": "630ff6d51c2d116c6dee86a9ddfc8a821e269fa8f5864c9d110b93e5cee19534"
     },
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "cad36844406cb449119fa5a986bf7a0f918344b4f8097a6c45033fdb4ee6a475"
+      "sha256": "cbc35463bc15a4681c48f92e3e5cc8b506cb32246be7f7bc87c97beafdd179b0"
     },
     {
       "path": "serve.mjs",
@@ -123,13 +129,13 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 2291,
-      "sha256": "bc62fbc03e6df8fc3686d06f8af3022e42955738adcdf7cbf1220c0dea2ca761"
+      "bytes": 2540,
+      "sha256": "86dfae671666a8472f4031da09936c3fca62211a748e832dc58e09ac45c269e4"
     },
     {
       "path": "site/README.md",
-      "bytes": 476,
-      "sha256": "2706f89f1e4b64cd36c3b01817bec69ac2eaa2da6d7e272ab37dd9bfe4b79815"
+      "bytes": 835,
+      "sha256": "b98ef6f7632c75a27c41cde68ad404b673118f2f3228784d13983d45cf368fe4"
     },
     {
       "path": "site/app.js",
@@ -173,8 +179,13 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 8089,
-      "sha256": "4d98b0765f76442580d7b7d4d0ff53c8f5c2493ab170ad849d6c015acbcdeb4c"
+      "bytes": 7416,
+      "sha256": "66a0f58b26eefa5c548af4b4dc242285edd2e0aebbf4c078b1f7778a8892528e"
+    },
+    {
+      "path": "site/layout.css",
+      "bytes": 6057,
+      "sha256": "c3dd8b688b49becc8bb02083e34138af469a2b27c04be27be3db5d591baa9fda"
     },
     {
       "path": "site/mark.svg",

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "templates": [
     {
       "id": "12",
@@ -24,7 +24,7 @@
       "source_text_url": "https://azizbeksafarov.github.io/design/orbita/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/orbita/manifest.json",
       "source_fingerprint": "6426e4c3588637946df9aa0d669c878898be8136b480e4d18f1b8b88a15e2ada",
-      "archive_bytes": 260590,
+      "archive_bytes": 260644,
       "status": "featured"
     },
     {
@@ -49,7 +49,7 @@
       "source_text_url": "https://azizbeksafarov.github.io/design/nashr/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/nashr/manifest.json",
       "source_fingerprint": "469ee9c6b90c9bcd8dfe3b18b11eed3d8425b2745036102ef39d6642865914b0",
-      "archive_bytes": 1273732,
+      "archive_bytes": 1273785,
       "status": "featured"
     },
     {
@@ -74,16 +74,16 @@
       "source_text_url": "https://azizbeksafarov.github.io/design/hisob/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/hisob/manifest.json",
       "source_fingerprint": "6223696f6f3c5e2031df94c8f26f1e262ae820e7896744f45b872a49ba4786d3",
-      "archive_bytes": 260408,
+      "archive_bytes": 260462,
       "status": "featured"
     },
     {
       "id": "15",
       "name": "Ziyo",
       "category": "Ta’lim / interaktiv dars",
-      "color": "#263ab3",
-      "background": "#f4d663",
-      "summary": "Sariq dars muqovasi, ko‘k geometrik diagramma, modul navigatsiyasi va tekshiriladigan mini-test.",
+      "color": "#197261",
+      "background": "#f2f5f2",
+      "summary": "Uch qismli o‘quv studiyasi: kurs dasturi, kodli dars va alohida amaliy tekshiruv. Marketing muqovasi yo‘q.",
       "use": "Ta’lim, kasb, kurs va ko‘nikmalar",
       "fonts": [
         "space-grotesk",
@@ -98,8 +98,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/ziyo/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/ziyo/manifest.json",
-      "source_fingerprint": "5c1d22fed73cf59987ebfd3e940bba146ec736272feba48f7b2afcda5d5c4ea2",
-      "archive_bytes": 260320,
+      "source_fingerprint": "7224c9f2f43bf7246c2db688d18f8ff52e00dd84e65e3f619139b7cd1bd53299",
+      "archive_bytes": 263124,
       "status": "featured"
     },
     {
@@ -124,7 +124,7 @@
       "source_text_url": "https://azizbeksafarov.github.io/design/meros/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/meros/manifest.json",
       "source_fingerprint": "c9c27359b42cc4726cd4224da960acba4217eb592104748fa540189dffb6cbbd",
-      "archive_bytes": 1729528,
+      "archive_bytes": 1729582,
       "status": "featured"
     },
     {
@@ -132,9 +132,9 @@
       "name": "Samar",
       "file": "samar-site/index.html",
       "category": "Turizm / madaniyat",
-      "color": "#005ea8",
-      "background": "#ffffff",
-      "summary": "Moviy shahar qo‘llanmasi, Barlow Condensed masthead, katta panorama va tartiblanadigan kun rejasi.",
+      "color": "#a74e29",
+      "background": "#f6f4ed",
+      "summary": "Buklama shahar atlasi: manzil ro‘yxati, bosiladigan shartli xarita va yonma-yon kun rejasi. Mobil uchun alohida ketma-ketlik.",
       "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
       "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
       "preview": "previews/02.png",
@@ -148,8 +148,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/samar/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/samar/manifest.json",
-      "source_fingerprint": "107d2d9ada13907a2be15a45a3121e026f38150bc23ee4b6ce07db27acabfa7c",
-      "archive_bytes": 1467723,
+      "source_fingerprint": "5fc1ca7584943948f3dba260903992fe9fc07192e2ae152091a65928fc320d45",
+      "archive_bytes": 1471665,
       "status": "featured"
     },
     {
@@ -157,9 +157,9 @@
       "name": "Forma",
       "file": "forma-site/index.html",
       "category": "Interyer / konsept katalog",
-      "color": "#aa3f2b",
-      "background": "#ecded5",
-      "summary": "Geometrik mahsulot katalogi, DM Sans, oq/qora va terrakota, yirik fotosuratlar, savat va aniq jami.",
+      "color": "#506445",
+      "background": "#f9f9f6",
+      "summary": "Mahsulotdan boshlanadigan showroom: yon navigatsiya, bitta katta obyekt va ixcham inventar qatorlari. Detail va savat.",
       "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
       "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
       "preview": "previews/04.png",
@@ -172,8 +172,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/forma/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/forma/manifest.json",
-      "source_fingerprint": "5dff9a5901c21aee95da265aaa33a842e0da75b93f062973e9fe152e7e50f760",
-      "archive_bytes": 518698,
+      "source_fingerprint": "a3696ced9204f77bacf6d578d42007a8f0b2114968173b1422ecf992d471b14f",
+      "archive_bytes": 521095,
       "status": "featured"
     },
     {

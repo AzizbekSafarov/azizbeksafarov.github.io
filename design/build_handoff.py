@@ -14,7 +14,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
-DATE = '2026-10-15'
+DATE = '2026-10-16'
 SLUGS = {'02': 'samar', '04': 'forma', '10': 'bloom', '11': 'si'}
 LOOKS = {'02': 'Krem/yashil, mahalliy Instrument Serif/Sans, haqiqiy Samarqand suratlari, rasmiy manbalar, 3 manzil va tartiblanadigan '
        'kun rejasi.',
@@ -52,8 +52,8 @@ for spec in SPECS:
     SLUGS[spec['id']]=spec['slug']
     LOOKS[spec['id']]=spec['look']
     FLOWS[spec['id']]=[spec['flow']]
-LOOKS['02']='Oq/moviy shahar qo‘llanmasi, Barlow Condensed + DM Sans, ulkan SAMARQAND masthead, panoramali surat, gorizontal manzil qatorlari, to‘q ko‘k kun rejasi.'
-LOOKS['04']='DM Sans geometrik katalog, oq/qora va terrakota, mahsulotning katta vertikal fotosurati, BUYUM/MAKON/HAYOT kompozitsiyasi, alohida savat drawer.'
+LOOKS['02']='Buklama shahar atlasi: chapda ixcham manzil ro‘yxati, markazda bosiladigan shartli xarita, o‘ngda doim yonma-yon kun rejasi. Qog‘oz, zaytun, g‘isht aksenti. Barlow Condensed + DM Sans. Mobil: xarita → manzillar → reja. Masshtab haqiqiy emas; rasmiy xarita havolasi detailda.'
+LOOKS['04']='Mahsulotdan boshlanadigan asimmetrik showroom. Chapda doimiy do‘kon navigatsiyasi, bitta katta buyum va ikkita ixcham inventar qatori; marketing hero yo‘q. Oqartirilgan qog‘oz, siyoh, xira zaytun; DM Sans. Mobil: tabiiy katalog ketma-ketligi. Alohida savat drawer.'
 
 def write(path,text):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -298,7 +298,7 @@ def source_files(t,templates):
 def code_names(t,files):
     if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','package.json','vite.config.js','download_symbols.py']
     if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','uzbekistan.svg','brand-icon.svg']
-    return ['index.html','style.css','app.js','model.js','model.test.mjs','CREDITS.md','package.json']
+    return ['index.html','style.css']+(['layout.css'] if t['slug'] in ('ziyo','forma','samar') else [])+['app.js','model.js','model.test.mjs','CREDITS.md','package.json']
 
 def code_text(t,files):
     names=code_names(t,files)

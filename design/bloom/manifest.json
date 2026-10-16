@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "source_fingerprint": "639ecb5a0932b26a482c4dd4881c5044ea35553c342000320dc292d841427871",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "649b5a4c257d76ef595d61f68327f03e590eb49496d961e23b7e29e692ecc1ae",
+  "archive_sha256": "d28536de3e80fd43ce50c5619fba754f9931645eb862a315316ecbb0402556ba",
   "archive_bytes": 967091,
   "entry": "index.html",
   "serve_root": "site/dist",
@@ -64,7 +64,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 10325,
-      "sha256": "8501b633f7da77abcec6202e0258f4c8c2b824d56d624fd5c1fdeebacee9d1e4"
+      "sha256": "9fbdc1f61a910f3f69b46021ef801cc5e639481350c9c3dce82bf0386d9e0cff"
     },
     {
       "path": "CHECKLIST.md",
@@ -99,7 +99,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1089,
-      "sha256": "10621e4eac90e28301fbe62a937f7b0aa4abf1acbbd99d0feb1e3cc1b48eb5f9"
+      "sha256": "1093548dd9561e036ad38bc08f81e846190b33cb987314abaae4343b90ab4123"
     },
     {
       "path": "README.md",

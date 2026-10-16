@@ -71,3 +71,5 @@ if __name__=='__main__':
  build()
  from refined_v2 import apply
  apply(BASE)
+ from diversity_v3 import apply as apply_compositions
+ apply_compositions(('forma','samar'))

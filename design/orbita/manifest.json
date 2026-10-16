@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "source_fingerprint": "6426e4c3588637946df9aa0d669c878898be8136b480e4d18f1b8b88a15e2ada",
   "name": "Orbita",
   "slug": "orbita",
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "770ad44096340193ccf47895f7b16d5cb793ea930d3731e07974564180672aa5",
-  "archive_bytes": 260590,
+  "archive_sha256": "5569bfd4d92d19f5c5eee7792109973d334782d7b4cff5aa3ce365acf86d177b",
+  "archive_bytes": 260644,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -63,8 +63,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 4993,
-      "sha256": "9a1e052af8fbacea7466a3f5cc50608fb0514ffb1d3303677a33da2cddd72d35"
+      "bytes": 5097,
+      "sha256": "4d23181858a364ed76b28e68cf6ab63a99014ff9fe8b9ec7a5b610baec76e5d0"
     },
     {
       "path": "CHECKLIST.md",
@@ -99,7 +99,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1070,
-      "sha256": "c677d83106d6e1236d651ab5069c8254281b30ad9c6dcbfb1c8ddfcccc0406ab"
+      "sha256": "cec8a21b815dc51a9702e7e879dde5097f1b8bcf5250df6b1a4ce0c858e0af4a"
     },
     {
       "path": "README.md",

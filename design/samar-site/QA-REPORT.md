@@ -16,3 +16,8 @@
 Models are tested with node --test. Handoff verifier checks manifest hashes, source ZIP integrity, internal runtime assets and competition context. Fonts/photos bundled locally with licenses. No account, real booking/payment, official statistics or full accessibility/performance certification claimed.
 
 Final verification: 16 model tests PASS; handoff manifests and 9 source ZIP packages PASS. Nashr two-tab storage sync: both visible counts 2. Graph preview captured after entrance stroke-dashoffset reached 0px. Final 50-case sweep recorded in design/QA-BREAKPOINTS.json.
+
+
+## 2026-10-16 — task-specific composition
+
+See ../DIVERSITY.md and ../QA-DIVERSITY.json for this turn’s browser flows, all five responsive widths, independent visual review and limits. Final layout: layout.css. Prior QA remains baseline only.

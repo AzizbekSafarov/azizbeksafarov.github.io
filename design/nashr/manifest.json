@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "source_fingerprint": "469ee9c6b90c9bcd8dfe3b18b11eed3d8425b2745036102ef39d6642865914b0",
   "name": "Nashr",
   "slug": "nashr",
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "ddb884a061aa26ccfc7bdaee1a5250ada0fa9570da4f62f8b58d4ef908335ba4",
-  "archive_bytes": 1273732,
+  "archive_sha256": "5b0f0ee205d2440b503b2e144b6d2481dadb8071687da4275729f133147e2086",
+  "archive_bytes": 1273785,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -63,8 +63,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 4941,
-      "sha256": "f9c1982a649f6b930fd196e70ba768e6f858ae19407e649d85e3604b8e923552"
+      "bytes": 5045,
+      "sha256": "7a0602de53a095dcf57b3efadcaef65f97e851eb0e41e6418e77c0d30dbd1007"
     },
     {
       "path": "CHECKLIST.md",
@@ -99,7 +99,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "001d32db52c285def75167443049b106e3febf3087f673eb0e134a5c3d8dd990"
+      "sha256": "5619c1ddf25ddc5592a2f994957bdb2309a082e8e66232f52926fbe2dfde124e"
     },
     {
       "path": "README.md",

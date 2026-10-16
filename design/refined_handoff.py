@@ -1,12 +1,8 @@
 """Compact AI context for the independently rebuilt plain-JS starters."""
 def brief(t,site,raw,date):
  slug=t['slug'];name=t['name'];folder='samar-site' if t['id']=='02' else 'forma-site'
- specific=(
- 'Samar: oq/moviy shahar qo‘llanmasi. Barlow Condensed masthead + DM Sans, ulkan SAMARQAND yozuvi, katta panorama va gorizontal manzil qatorlari. To‘q ko‘k reja bo‘limi. Krem serif landingga aylantirma. model.js: uch manzil, known IDlar, boshlash vaqti, 20 daqiqa shartli transfer, tun yarmidan o‘tish va eksport. app.js: qo‘shish/olish/tartiblash, detail va browser-local saqlash. Tarif, ochilish vaqti yoki bronni uydirma. Rasmiy manbalar bor; tashrif vaqti taklif.'
- if t['id']=='02' else
- 'Forma: oq/qora va terrakota, DM Sans geometrik yozuv, mahsulotning vertikal katta fotosurati, BUYUM/MAKON/HAYOT kompozitsiyasi va aniq katalog. model.js: uch known mahsulot, integer 1–20 miqdor, narxlar, material/o‘lcham namunasi va jami/eksport. app.js: kategoriya, detail, savat drawer, qo‘shish/miqdor/olish, saqlash va download. Narx/material/o‘lcham namunaviy; suratdagi buyumning tekshirilgan spetsifikatsiyasi emas. To‘lov/buyurtma yuborilmaydi.'
- )
- files=['index.html','style.css','app.js','model.js','model.test.mjs','CREDITS.md','package.json']
+ specific=t['look']+' model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.'
+ files=['index.html','style.css','layout.css','app.js','model.js','model.test.mjs','CREDITS.md','package.json']
  flows='\n'.join('- '+s for s in t['flows'])
  return f'''# {name} — yangi AI bilan davom ettirish
 
@@ -38,7 +34,7 @@ Bu eski arxiv maketi emas: qayta ishlangan mustaqil starter. Bloom/Yuksalni ko�
 ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Ish kodi site/ ichida. Source fayllar:
 '''+ '\n'.join(f'- [{n}]({raw}/design/{slug}/files/{n}.txt)' for n in files)+f'''
 
-index.html — mazmun va boshlang‘ich kartalar. style.css — token, responsive va motion. model.js — ma’lumot/validatsiya/hisob. app.js — dialog, amallar, storage va download. images/, fonts/ — lokal resurslar. CREDITS.md — surat litsenziyasi/provenance; almashtirganda yangila. Karta IDlari index.html va model.js da mos bo‘lsin. Kutubxonadagi build_refined.py HTML/CSSni qayta yozadi; tanlovdagi alohida ZIPda runtime fayllarini to‘g‘ridan-to‘g‘ri tahrirla.
+index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va komponentlar. layout.css — yakuniy mustaqil sahifa kompozitsiyasi, responsive va holatlar. Kutubxonada diversity_v3.py oxirgi qatlam; generator shu modulni chaqiradi. model.js — ma’lumot/validatsiya/hisob. app.js — dialog, amallar, storage va download. images/, fonts/ — lokal resurslar. CREDITS.md — surat litsenziyasi/provenance; almashtirganda yangila. Karta IDlari index.html va model.js da mos bo‘lsin. Kutubxonadagi build_refined.py HTML/CSSni qayta yozadi; tanlovdagi alohida ZIPda runtime fayllarini to‘g‘ridan-to‘g‘ri tahrirla.
 
 ## Local run va tekshiruv
 

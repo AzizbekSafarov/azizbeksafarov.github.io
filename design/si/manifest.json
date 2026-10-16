@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "source_fingerprint": "4c2f7bdcb31e33fd9516d7e6c3eab7a6346af87744ee95d3e143391457bae9fa",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "dc0df9dc075876cfd397ce86eb2cb02cc822b29bbdc54178f2e877bce5cf4803",
+  "archive_sha256": "e2ec0d5515f262a340f7a6308d0d5469002dd0061059766d8efde2e81c47d832",
   "archive_bytes": 179544,
   "entry": "index.html",
   "serve_root": "site",
@@ -76,7 +76,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 10997,
-      "sha256": "d10c9a01d46e6b4248929f208ccb56947859d76ad85c88bd9385f903a9f3aa27"
+      "sha256": "c0401b1c75aabccf40e373673c2dbfdeb6eb678060b24fa813109330fc893080"
     },
     {
       "path": "CHECKLIST.md",
@@ -111,7 +111,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1072,
-      "sha256": "cf7668b899a8ffb8da59fdbc66130f6fb86439bd756574d43c10177df182f637"
+      "sha256": "5b757d2ce82ee54634b7ee1689cf02410771c393c8925864505666a2c64270d7"
     },
     {
       "path": "README.md",

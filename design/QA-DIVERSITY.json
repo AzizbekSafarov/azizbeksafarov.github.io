@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-16",
+  "cases": [
+    {
+      "site": "samar",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "site": "samar",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "site": "samar",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "site": "samar",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "site": "samar",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "site": "forma",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "site": "forma",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "site": "forma",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "site": "ziyo",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "site": "ziyo",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "site": "ziyo",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "site": "ziyo",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "site": "ziyo",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "site": "forma",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "site": "forma",
+      "missingVisibleImages": 0,
+      "overflow": 0,
+      "width": 768
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "source_fingerprint": "c9c27359b42cc4726cd4224da960acba4217eb592104748fa540189dffb6cbbd",
   "name": "Meros",
   "slug": "meros",
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "53f10f9fa7076890c01864397061b4e1b4d8c1131cfad097476037d34ff4fb3a",
-  "archive_bytes": 1729528,
+  "archive_sha256": "7c0a4bd6fa98a44204c41b5a6d76b1eff4467ebc177e4dec4085d380715cfee3",
+  "archive_bytes": 1729582,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -63,8 +63,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 4975,
-      "sha256": "2bcf2dd38097067a0b3fda63f5ec09f14d4bbda2ae622c0d40ff41e1721d661f"
+      "bytes": 5079,
+      "sha256": "440ac5b470c1385e1c8549690a1b1f969319c9e2aa12eb501e4dc45ff391ddba"
     },
     {
       "path": "CHECKLIST.md",
@@ -99,7 +99,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "36e80a36a338b2186e792b2c03ac4ea4fa999fae42b27f43dd5b6b5f6af5a8ea"
+      "sha256": "a45eccf1847fb5b29d6324127df9cba560240b7abe6657fe4dbf5783f0c9df1c"
     },
     {
       "path": "README.md",
