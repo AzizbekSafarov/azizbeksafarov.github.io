@@ -1,5 +1,7 @@
 # Distinct compositions — 2026-10-16
 
+Follow-up: the user still finds the typography and visual identities too similar. The earlier screenshot review below checked layout usability and is not user acceptance of brand diversity. Read [the subsequent source-based art-direction audit](ART-DIRECTION-RESEARCH.md) before another redesign; it documents repeated runtime fonts, remaining visual similarities and the next review criteria.
+
 The user's request is structural variety, not extra color themes. Three repeated marketing compositions were rebuilt around actual tasks:
 
 | Starter | Main visual / user task | Composition to preserve |
