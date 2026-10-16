@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-16",
-  "source_fingerprint": "66e4e6725af446ce453cfb5869050d38f19858156ab99e45d9ab2365b09d325c",
+  "source_fingerprint": "5952daf8c662e8b5fb2ee7155dd0f1bc54a00012f61c9195167ef14238f01396",
   "name": "Samar",
   "slug": "samar",
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "4e29ccaa52c5457c4213495ce534290f8ed752e1eaf3c17b52778a3fb09a971b",
-  "archive_bytes": 1649248,
+  "archive_sha256": "774efa19d95ba4fe7c41f5500c0e1f5c99e3ea29f75be71d437365957a780c70",
+  "archive_bytes": 1649700,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/samar/files/index.html.txt",
-      "sha256": "698157b3bd33366eac8f74b388076578699421ba1458c03df02df24a501eef37",
+      "sha256": "1a0819ab22aa42d39289a95f84859456dad86856a6837881538ab7ff6f9e849c",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/index.html.txt"
     },
     {
@@ -27,7 +27,7 @@
     {
       "path": "layout.css",
       "url": "https://azizbeksafarov.github.io/design/samar/files/layout.css.txt",
-      "sha256": "f797b8f8825db74875f42bc19dbdc1c0fc3107c9de2940c38273d1a73d19321d",
+      "sha256": "18f473d93fcd0751cba27fefa7c0452ac3a7ef7887e98d1a0bee698bcda400f4",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/layout.css.txt"
     },
     {
@@ -64,13 +64,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2490,
-      "sha256": "c7aca9e9ac97930e3551c0038d164144b178ff0a78e9dd9136d7e18f4e986d9f"
+      "bytes": 2583,
+      "sha256": "6951ae9d35df06e8c36bb7e8e713ec85a5e7b32a93f50a754517b2a928699075"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6149,
-      "sha256": "e7d78a0a3f3c8286c8b9b104508b624cda56895cc364a02b3f8dd63c94c82ca8"
+      "bytes": 6242,
+      "sha256": "ebbf7f90117641b9bfa7d885ab933db2190321ff2afb806baeea823da9b34030"
     },
     {
       "path": "CHECKLIST.md",
@@ -105,17 +105,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "14f1206f25ec8a59e77ab7a9d5ec8a657daab270f4839d329b760e06de6fc803"
+      "sha256": "59c39ae1d0fb3428ce67f74acab3659c03e4c04022be0d75c02ee9748f66dab4"
     },
     {
       "path": "README.md",
-      "bytes": 1200,
-      "sha256": "9c9b490b1c7a33ef10d3aa3e049f29c492efa0d6f2d53dbe167bb383f80f3adf"
+      "bytes": 1293,
+      "sha256": "40edf6c7b8376971e7a01761523ac20cb7b4f7855f1006a5fa0e66b701043740"
     },
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "8bc1e905b3e605810cb740d3782cdc412589b43eb71f9665dc42ace713344cfe"
+      "sha256": "fd2a4e85361628f2ff79b2406b8e3a7621366aaf8d81fb817f25d076959af0f6"
     },
     {
       "path": "serve.mjs",
@@ -129,13 +129,13 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 2764,
-      "sha256": "24dba2ef009ac6a48d8d9a4fcf86f5815b13ab2a3c85f630c76777cfcc101ea1"
+      "bytes": 3284,
+      "sha256": "a16a17afe424c9c1389da048e0a79667c63490628691a2aa11602afae9400f60"
     },
     {
       "path": "site/README.md",
-      "bytes": 1108,
-      "sha256": "a13868a82b664255f0aafe1c03be68974f3f9a1c999835e0c441bd09879c68db"
+      "bytes": 1201,
+      "sha256": "32ccd9eb3c37cb0ce009d6b7f8564dd06d0db7ca36ec1901c529708b9ca9d0dc"
     },
     {
       "path": "site/app.js",
@@ -179,13 +179,13 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 9667,
-      "sha256": "698157b3bd33366eac8f74b388076578699421ba1458c03df02df24a501eef37"
+      "bytes": 9425,
+      "sha256": "1a0819ab22aa42d39289a95f84859456dad86856a6837881538ab7ff6f9e849c"
     },
     {
       "path": "site/layout.css",
-      "bytes": 11217,
-      "sha256": "f797b8f8825db74875f42bc19dbdc1c0fc3107c9de2940c38273d1a73d19321d"
+      "bytes": 13323,
+      "sha256": "18f473d93fcd0751cba27fefa7c0452ac3a7ef7887e98d1a0bee698bcda400f4"
     },
     {
       "path": "site/mark.svg",

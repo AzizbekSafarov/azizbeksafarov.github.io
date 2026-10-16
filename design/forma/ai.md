@@ -1,6 +1,6 @@
 # Forma — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-16; source fingerprint `57838570c47abced`.
+Snapshot: 2026-10-16; source fingerprint `c45c68780784a51f`.
 Entry: https://azizbeksafarov.github.io/design/forma/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -15,7 +15,7 @@ Ishtirokchi xabari: Urgutdan Samarqand viloyat bosqichi, 2026-10-13. Video trans
 
 ## Tanlangan dizayn va haqiqiy kod
 
-Nafis obyekt showroomi: Italiana ingichka kontrastli sarlavhalar, Manrope mahsulot/servis matni. Suyak-oq, siyoh, tabiiy material. Oddiy yuqori navigatsiya, katta serif kirish va balandligi turlicha fotografik shelf. Mobil: katta tanlangan buyum, so‘ng ikki ixcham obyekt. Yon dashboard paneli yo‘q. Narx/materiallar namuna, savat lokal. model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.
+Zamonaviy obyekt studiyasi. Manrope 500 asosiy matn, 650 xizmat, 750–800 sarlavha/narx. Oqartirilgan maydon, grafit, material fotosuratlari. Qattiq to‘rtburchak qora savdo tugmalari; aniq rangli savat holati. Ingichka serif, mikro matn, ghost savdo tugmalari va yumaloq sayohat kartalari yo‘q. Asimmetrik fotografik shelf saqlansin; mobil uch buyum ham o‘qiladigan kenglikda. Narx/materiallar namuna, savat lokal. model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.
 
 Bu eski arxiv maketi emas: qayta ishlangan mustaqil starter. Bloom/Yuksalni ko‘chirish bilan almashtirma. Har bir rang, shrift roli va tugma holatini saqla; mazmun/model/funksiyalarni biletga moslashtir.
 

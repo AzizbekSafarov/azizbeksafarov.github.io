@@ -2,7 +2,7 @@
 
 Original implementation and sample copy created for this library. Not affiliated with reference organizations.
 
-Visual contract: Kuratorlik ko‘rgazmasi: Alfa Slab One og‘ir slab-display + Literata sharh va xizmat yozuvi. Ultramarin ko‘k maydon, limon-sariq bosma siyoh, katta raqam va asimmetrik fotosurat. Ekspozitsiyada asar va sharh o‘rni navbat bilan almashadi. Sayohat kitobi, condensed sans afishasi yoki neytral kartalar bilan almashtirma.
+Visual contract: Kuratorlik ko‘rgazmasi. Alfa Slab One katta afisha; Archivo 650–800 barcha xizmat, indeks va tugma; Literata faqat uzun asar sharhi. Ultramarin, limon, oq. Indeks — yirik raqam + to‘liq bosiladigan qalin blok; nozik serif satr va mayda chiziqli havola emas. O‘tkir burchakli plakat tili, asimmetrik foto va navbat almashadigan asar/sharh. Sayohat pill kartalari yoki showroom savdo tizimini ko‘chirma.
 
 Fonts from https://github.com/google/fonts under bundled SIL OFL licenses. No remote runtime assets.
 
@@ -30,4 +30,4 @@ Typography update: local DM Sans and Barlow Condensed from https://github.com/go
 
 ## Sector identity fonts
 
-alfa-slab-one, literata. Acquired from the official google/fonts repository under the individual bundled fonts/*-OFL.txt licenses. Layout is our independent implementation, not work by or endorsed by the referenced studios.
+alfa-slab-one, archivo, literata. Acquired from the official google/fonts repository under the individual bundled fonts/*-OFL.txt licenses. Layout is our independent implementation, not work by or endorsed by the referenced studios.

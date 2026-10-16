@@ -36,13 +36,6 @@
   },
   {
     "site": "forma",
-    "alias": "Object Display",
-    "family": "Italiana",
-    "missingTestGlyphs": [],
-    "bytes": 31828
-  },
-  {
-    "site": "forma",
     "alias": "Object Text",
     "family": "Manrope ExtraLight",
     "missingTestGlyphs": [],
@@ -68,6 +61,13 @@
     "family": "Alfa Slab One",
     "missingTestGlyphs": [],
     "bytes": 97376
+  },
+  {
+    "site": "meros",
+    "alias": "Gallery UI",
+    "family": "Archivo SemiBold",
+    "missingTestGlyphs": [],
+    "bytes": 658596
   },
   {
     "site": "meros",

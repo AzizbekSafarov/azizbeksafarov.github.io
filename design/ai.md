@@ -6,9 +6,9 @@
 - [Nashr](https://azizbeksafarov.github.io/design/nashr/) — /design/nashr/; Bosma gazeta: Newsreader masthead, PT Serif maqola, Archivo xizmat yozuvi, oq-qora suratlar va zich tahririy ustunlar.
 - [Hisob](https://azizbeksafarov.github.io/design/hisob/) — /design/hisob/; Ma’lumotlar ish stoli: Public Sans xizmat interfeysi, ixcham Plex raqamlari, birlashgan ko‘rsatkich bandi va aniq jadval.
 - [Ziyo](https://azizbeksafarov.github.io/design/ziyo/) — /design/ziyo/; Rangli ta’lim ustaxonasi: yumshoq Bree Serif, bosqichli dars yo‘li, ishlaydigan ko‘rgazmali misol va olcha rangli mashq daftari.
-- [Meros](https://azizbeksafarov.github.io/design/meros/) — /design/meros/; Yorqin ko‘rgazma afishasi: ultramarin va limon, og‘ir Alfa Slab One, Literata sharhlari va navbatma-navbat joylashgan asarlar.
-- [Samar](https://azizbeksafarov.github.io/design/samar/) — /design/samar/; Sayohat qaydlari va buklama atlas: Lora kitob serifi, qum rangli shartli xarita, moviy belgilar va chipta kabi kun rejasi.
-- [Forma](https://azizbeksafarov.github.io/design/forma/) — /design/forma/; Interyer jurnali kabi showroom: nozik Italiana serifi, uch xil balandlikdagi mahsulotlar, sokin Manrope va material fotosuratlari.
+- [Meros](https://azizbeksafarov.github.io/design/meros/) — /design/meros/; Ko‘rgazma plakati: og‘ir Alfa Slab One, dadil Archivo navigatsiyasi, yirik raqamli indeks va ultramarin/limon bloklari.
+- [Samar](https://azizbeksafarov.github.io/design/samar/) — /design/samar/; Sayohat atlasi: dadil Lora sarlavhasi, yumaloq manzil kartalari, to‘liq rangli reja tugmalari va buklama xarita.
+- [Forma](https://azizbeksafarov.github.io/design/forma/) — /design/forma/; Zamonaviy obyekt studiyasi: kuchli Manrope, qora savdo tugmalari, yirik narxlar va balandligi turlicha fotografik shelf.
 - [Bloom · Material Design 3](https://azizbeksafarov.github.io/design/bloom/) — /design/bloom/; Rasmiy Material Web komponentlari, Material Symbols va dinamik rang tizimi. Ishlaydigan loyiha maydoni.
 - [Yuksal · SI](https://azizbeksafarov.github.io/design/si/) — /design/si/; Oq asosiy fon, O‘zbekistonning moviy va yashil aksentlari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, serif va jonli shakl almashishi.
 

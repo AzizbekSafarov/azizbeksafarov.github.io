@@ -1,6 +1,6 @@
 # Samar — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-16; source fingerprint `66e4e6725af446ce`.
+Snapshot: 2026-10-16; source fingerprint `5952daf8c662e8b5`.
 Entry: https://azizbeksafarov.github.io/design/samar/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -15,7 +15,7 @@ Ishtirokchi xabari: Urgutdan Samarqand viloyat bosqichi, 2026-10-13. Video trans
 
 ## Tanlangan dizayn va haqiqiy kod
 
-Sayohat atlasi: Lora kitob serifi + Source Sans 3 xizmat matni. Siyoh-ko‘k, och osmon, qum xarita, bronza belgi. Buklama xarita markazda, chapda manzillar, o‘ngda reja; mobil xarita → manzillar → reja. Yumaloq raqamli xarita pinlari va teshilgan chipta singari reja chiziqlari. Chizma shartli; haqiqiy navigatsiya yoki bron emas. model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.
+Sayohat atlasi. Lora 700 faqat katta sarlavha/atlas ovozi; Source Sans 3 500–700 manzil nomi, xizmat va boshqaruv. Moviy, qum, osmon. Yumaloq oq manzil kartalari, to‘liq moviy pill shaklidagi reja tugmalari, yumshoq soyalar. Mayda rangsiz outline/ghost tugma yoki moda showroomi emas. Buklama xarita markazda, chapda manzillar, o‘ngda reja; mobil xarita → manzillar → reja. Chizma shartli; haqiqiy navigatsiya/bron emas. model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.
 
 Bu eski arxiv maketi emas: qayta ishlangan mustaqil starter. Bloom/Yuksalni ko‘chirish bilan almashtirma. Har bir rang, shrift roli va tugma holatini saqla; mazmun/model/funksiyalarni biletga moslashtir.
 

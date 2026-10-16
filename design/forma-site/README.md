@@ -1,6 +1,6 @@
 # Forma — independent sector identity
 
-Nafis obyekt showroomi: Italiana ingichka kontrastli sarlavhalar, Manrope mahsulot/servis matni. Suyak-oq, siyoh, tabiiy material. Oddiy yuqori navigatsiya, katta serif kirish va balandligi turlicha fotografik shelf. Mobil: katta tanlangan buyum, so‘ng ikki ixcham obyekt. Yon dashboard paneli yo‘q. Narx/materiallar namuna, savat lokal.
+Zamonaviy obyekt studiyasi. Manrope 500 asosiy matn, 650 xizmat, 750–800 sarlavha/narx. Oqartirilgan maydon, grafit, material fotosuratlari. Qattiq to‘rtburchak qora savdo tugmalari; aniq rangli savat holati. Ingichka serif, mikro matn, ghost savdo tugmalari va yumaloq sayohat kartalari yo‘q. Asimmetrik fotografik shelf saqlansin; mobil uch buyum ham o‘qiladigan kenglikda. Narx/materiallar namuna, savat lokal.
 
 Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 8080 --bind 127.0.0.1` here. Test: `node --test model.test.mjs`.
 

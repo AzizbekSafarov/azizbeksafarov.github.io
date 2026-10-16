@@ -6,7 +6,7 @@
     "category": "Turizm / madaniyat",
     "color": "#173952",
     "background": "#f1f4f3",
-    "summary": "Sayohat qaydlari va buklama atlas: Lora kitob serifi, qum rangli shartli xarita, moviy belgilar va chipta kabi kun rejasi.",
+    "summary": "Sayohat atlasi: dadil Lora sarlavhasi, yumaloq manzil kartalari, to‘liq rangli reja tugmalari va buklama xarita.",
     "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
     "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
     "preview": "previews/02.png",
@@ -20,14 +20,13 @@
     "name": "Forma",
     "file": "forma-site/index.html",
     "category": "Interyer / konsept katalog",
-    "color": "#8d6544",
+    "color": "#29261f",
     "background": "#faf9f5",
-    "summary": "Interyer jurnali kabi showroom: nozik Italiana serifi, uch xil balandlikdagi mahsulotlar, sokin Manrope va material fotosuratlari.",
+    "summary": "Zamonaviy obyekt studiyasi: kuchli Manrope, qora savdo tugmalari, yirik narxlar va balandligi turlicha fotografik shelf.",
     "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
     "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
     "preview": "previews/04.png",
     "fonts": [
-      "italiana",
       "manrope"
     ]
   },
@@ -135,10 +134,11 @@
     "category": "Madaniyat / raqamli muzey",
     "color": "#e5f344",
     "background": "#1d2ed8",
-    "summary": "Yorqin ko‘rgazma afishasi: ultramarin va limon, og‘ir Alfa Slab One, Literata sharhlari va navbatma-navbat joylashgan asarlar.",
+    "summary": "Ko‘rgazma plakati: og‘ir Alfa Slab One, dadil Archivo navigatsiyasi, yirik raqamli indeks va ultramarin/limon bloklari.",
     "use": "Muzey, arxiv, me’morchilik va ko‘rgazma",
     "fonts": [
       "alfa-slab-one",
+      "archivo",
       "literata"
     ],
     "file": "meros-site/index.html",

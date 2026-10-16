@@ -1,33 +1,33 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-16",
-  "source_fingerprint": "57838570c47abced53b46ef8d10870a2ad60fa2707f08b8c32a148ac76d31a24",
+  "source_fingerprint": "c45c68780784a51f4793adaf469673c2d5aaede65d7569fcb521a36c18010f21",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "c99e9f95a417c2ef6aa40aa0f4e0f348805df4ccdd529096c6c2d72f1240b68d",
-  "archive_bytes": 491779,
+  "archive_sha256": "c02e9ce3e0f14dc640aa6691b27898d6bb24f157a30ea41001f57e87e76d4851",
+  "archive_bytes": 475018,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/forma/files/index.html.txt",
-      "sha256": "ef8962c650ea447c8114121c51e66e3cf39f165fa7165e57f2dfed48bc9c4366",
+      "sha256": "0cfaa83aef13bf91d9676676aa849b784dcef1f6d4759a22a62714e33756832c",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/forma/files/style.css.txt",
-      "sha256": "4e4016486da8c42aa3f1165d54feaf16dfbd6cb47d327b96454ac0f56c537a1d",
+      "sha256": "9082023a87f87fd5ada357999467d61f11ab6c4fb8008f8978bcd972d91078dc",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/style.css.txt"
     },
     {
       "path": "layout.css",
       "url": "https://azizbeksafarov.github.io/design/forma/files/layout.css.txt",
-      "sha256": "672a069b13ba89c4dedb68f5f78fc5d3302692ac6b2c6115ff5880774f854e03",
+      "sha256": "f44b2b90ec11fc9915782a3c25843c9e9554b745eef4ca7fb9467963641d917c",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/layout.css.txt"
     },
     {
@@ -51,7 +51,7 @@
     {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/forma/files/CREDITS.md.txt",
-      "sha256": "9cb80faafe1b5ae990e1f4884dcd40ebf37b8e4d94b17e31188b2f0cfc591705",
+      "sha256": "4b028cad257d7c908984c5f01db6a83592b307e2c8684276c70fa77d73c72fb2",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/CREDITS.md.txt"
     },
     {
@@ -64,13 +64,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2494,
-      "sha256": "0a6253cee043e7d51266cdf9de4bc0171abab90897ba4291ad2390852c86572e"
+      "bytes": 2574,
+      "sha256": "d82fdfb49daee4c53f5c67d9be16366f64d0a81d2753fc379d5e16f9f5adc4cb"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6136,
-      "sha256": "064088f81931f792de93c51628323901aebca2c2ba0709b58b24066dafeef536"
+      "bytes": 6216,
+      "sha256": "8461e51864b0e0db20a37a0a990ac3e42eb285f29d61b5607b732d7bd5b7d329"
     },
     {
       "path": "CHECKLIST.md",
@@ -105,17 +105,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1068,
-      "sha256": "3cf19a2415ba68ca7f2932a7820eb7e000132804a2b3493a2c0db897199cab46"
+      "sha256": "ad947384efbea2cd549b92fb6ca69609aee8e3f8b13063ebab1a8fb5764f9630"
     },
     {
       "path": "README.md",
-      "bytes": 1204,
-      "sha256": "6bdb42d5b49fdd0bc8b6621c7a7dff693de11a2d9e84384f8accee542499abe7"
+      "bytes": 1284,
+      "sha256": "519a6a2ec867942bc3a11fcb25a477f0904bbd3c207c1cca6f1bc6362d07c2f0"
     },
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "0ba61218864a935bb9ea63b1b73634114ad8515c59594208afda4d2975dabbfa"
+      "sha256": "c3b0bb18117e4f139ef5c0a434f2b90b7765b4200d6d8fcfe0ef53bcf1959509"
     },
     {
       "path": "serve.mjs",
@@ -124,33 +124,23 @@
     },
     {
       "path": "site/CREDITS.md",
-      "bytes": 1337,
-      "sha256": "9cb80faafe1b5ae990e1f4884dcd40ebf37b8e4d94b17e31188b2f0cfc591705"
+      "bytes": 1327,
+      "sha256": "4b028cad257d7c908984c5f01db6a83592b307e2c8684276c70fa77d73c72fb2"
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 2764,
-      "sha256": "24dba2ef009ac6a48d8d9a4fcf86f5815b13ab2a3c85f630c76777cfcc101ea1"
+      "bytes": 3284,
+      "sha256": "a16a17afe424c9c1389da048e0a79667c63490628691a2aa11602afae9400f60"
     },
     {
       "path": "site/README.md",
-      "bytes": 1112,
-      "sha256": "5c96e473398629429fbd8f68d121689d31e6280e873edb593697eb95c9d03ade"
+      "bytes": 1192,
+      "sha256": "9f0c1be3ea457ac84e489fce308f103c7695ba5e9f2c84ab7cc12794e7267c78"
     },
     {
       "path": "site/app.js",
       "bytes": 4870,
       "sha256": "817d286e70170e13fea3eea3807bedfbca2f1ca80966cf972f9be7b39ab71cee"
-    },
-    {
-      "path": "site/fonts/italiana-OFL.txt",
-      "bytes": 4393,
-      "sha256": "486c4d5b9baf0d0ba5546ef3c43fcfe22c062299ab6948045a43efffe4b0f74b"
-    },
-    {
-      "path": "site/fonts/italiana.ttf",
-      "bytes": 31828,
-      "sha256": "0ad271d9cd42a57cd5c5fa483ae2406a8138b95acb2a43eb73a8d37b7291fee9"
     },
     {
       "path": "site/fonts/manrope-OFL.txt",
@@ -179,13 +169,13 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 7580,
-      "sha256": "ef8962c650ea447c8114121c51e66e3cf39f165fa7165e57f2dfed48bc9c4366"
+      "bytes": 7486,
+      "sha256": "0cfaa83aef13bf91d9676676aa849b784dcef1f6d4759a22a62714e33756832c"
     },
     {
       "path": "site/layout.css",
-      "bytes": 8967,
-      "sha256": "672a069b13ba89c4dedb68f5f78fc5d3302692ac6b2c6115ff5880774f854e03"
+      "bytes": 12055,
+      "sha256": "f44b2b90ec11fc9915782a3c25843c9e9554b745eef4ca7fb9467963641d917c"
     },
     {
       "path": "site/mark.svg",
@@ -209,8 +199,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 3485,
-      "sha256": "4e4016486da8c42aa3f1165d54feaf16dfbd6cb47d327b96454ac0f56c537a1d"
+      "bytes": 3361,
+      "sha256": "9082023a87f87fd5ada357999467d61f11ab6c4fb8008f8978bcd972d91078dc"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/forma-site/QA-REPORT.md",

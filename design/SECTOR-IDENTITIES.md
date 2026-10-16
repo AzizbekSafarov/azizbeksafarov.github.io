@@ -36,3 +36,8 @@ Run python design/build_collection.py, python design/build_refined.py, then pyth
 - Full original regeneration reproduced tested application/model code hashes.
 
 These are demonstrated paths, not a zero-bug guarantee for future adaptations. Statistics, prices and travel durations remain labeled samples. Maps and orbital diagrams are schematic. No real payment, booking or telemetry service is implied.
+
+
+## Component correction
+
+The user identified thin repeated text/rules/ghost controls inside Meros, Samar and Forma after this snapshot. COMPONENT-RESEARCH.md and QA-COMPONENTS.json document the subsequent correction. Do not treat the first review as proof of successful brand differentiation.

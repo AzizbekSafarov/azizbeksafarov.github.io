@@ -110,10 +110,11 @@
       "category": "Madaniyat / raqamli muzey",
       "color": "#e5f344",
       "background": "#1d2ed8",
-      "summary": "Yorqin ko‘rgazma afishasi: ultramarin va limon, og‘ir Alfa Slab One, Literata sharhlari va navbatma-navbat joylashgan asarlar.",
+      "summary": "Ko‘rgazma plakati: og‘ir Alfa Slab One, dadil Archivo navigatsiyasi, yirik raqamli indeks va ultramarin/limon bloklari.",
       "use": "Muzey, arxiv, me’morchilik va ko‘rgazma",
       "fonts": [
         "alfa-slab-one",
+        "archivo",
         "literata"
       ],
       "file": "meros-site/index.html",
@@ -125,8 +126,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/meros/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/meros/manifest.json",
-      "source_fingerprint": "8d79b5c153bae2619674db3cfe94b06d4634734e258f0bef985470358c7061cb",
-      "archive_bytes": 1862402,
+      "source_fingerprint": "56225cfbd33a5e15dccb81f44c8c61bdf7ed7f1f0534cefbc6cac36bce088539",
+      "archive_bytes": 2119234,
       "status": "featured"
     },
     {
@@ -136,7 +137,7 @@
       "category": "Turizm / madaniyat",
       "color": "#173952",
       "background": "#f1f4f3",
-      "summary": "Sayohat qaydlari va buklama atlas: Lora kitob serifi, qum rangli shartli xarita, moviy belgilar va chipta kabi kun rejasi.",
+      "summary": "Sayohat atlasi: dadil Lora sarlavhasi, yumaloq manzil kartalari, to‘liq rangli reja tugmalari va buklama xarita.",
       "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
       "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
       "preview": "previews/02.png",
@@ -150,8 +151,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/samar/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/samar/manifest.json",
-      "source_fingerprint": "66e4e6725af446ce453cfb5869050d38f19858156ab99e45d9ab2365b09d325c",
-      "archive_bytes": 1649248,
+      "source_fingerprint": "5952daf8c662e8b5fb2ee7155dd0f1bc54a00012f61c9195167ef14238f01396",
+      "archive_bytes": 1649700,
       "status": "featured"
     },
     {
@@ -159,14 +160,13 @@
       "name": "Forma",
       "file": "forma-site/index.html",
       "category": "Interyer / konsept katalog",
-      "color": "#8d6544",
+      "color": "#29261f",
       "background": "#faf9f5",
-      "summary": "Interyer jurnali kabi showroom: nozik Italiana serifi, uch xil balandlikdagi mahsulotlar, sokin Manrope va material fotosuratlari.",
+      "summary": "Zamonaviy obyekt studiyasi: kuchli Manrope, qora savdo tugmalari, yirik narxlar va balandligi turlicha fotografik shelf.",
       "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
       "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
       "preview": "previews/04.png",
       "fonts": [
-        "italiana",
         "manrope"
       ],
       "slug": "forma",
@@ -175,8 +175,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/forma/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/forma/manifest.json",
-      "source_fingerprint": "57838570c47abced53b46ef8d10870a2ad60fa2707f08b8c32a148ac76d31a24",
-      "archive_bytes": 491779,
+      "source_fingerprint": "c45c68780784a51f4793adaf469673c2d5aaede65d7569fcb521a36c18010f21",
+      "archive_bytes": 475018,
       "status": "featured"
     },
     {

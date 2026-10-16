@@ -20,3 +20,10 @@ Final verification: 16 model tests PASS; handoff manifests and 9 source ZIP pack
 ## 2026-10-16 — independent sector identity
 
 See ../SECTOR-IDENTITIES.md and ../QA-SECTORS.json for the current visual contract, interaction checks and 35 responsive measurements. Earlier QA applies to earlier snapshots.
+
+
+## Component correction — 2026-10-16
+
+User rejected the remaining thin inner-component language. See ../COMPONENT-RESEARCH.md and ../QA-COMPONENTS.json for evidence and the current contract. Existing models and storage keys unchanged; canonical final visual rules are identity-styles/.
+
+Final component sweep: 15 cases across three changed designs, zero document overflow at five widths. Eight domain model tests passed. Current screenshots and component actions inspected after fixes. See ../COMPONENT-RESEARCH.md.

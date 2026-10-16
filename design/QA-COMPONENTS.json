@@ -1,0 +1,515 @@
+{
+  "date": "2026-10-16",
+  "checks": [
+    {
+      "slug": "forma",
+      "requestedWidth": 1440,
+      "actions": [
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 1024,
+      "actions": [
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 768,
+      "actions": [
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 390,
+      "actions": [
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 320,
+      "actions": [
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Object Text\", sans-serif",
+          "size": "14px",
+          "text": "Savatga +",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 1440,
+      "actions": [
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Rejaga qo‘shish +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 1024,
+      "actions": [
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Rejaga qo‘shish +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 768,
+      "actions": [
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Rejaga qo‘shish +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 390,
+      "actions": [
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Rejaga qo‘shish +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 320,
+      "actions": [
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "✓ Rejada",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Rejaga qo‘shish +",
+          "weight": "750"
+        },
+        {
+          "font": "\"Atlas Text\", sans-serif",
+          "size": "14px",
+          "text": "Hikoyasini o‘qish ↗",
+          "weight": "700"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 1440,
+      "actions": [
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "01Maydon va mutanosiblik↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "02Rangning xotirasi↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "03Gumbaz ostidagi hikoya↙",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 1024,
+      "actions": [
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "01Maydon va mutanosiblik↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "02Rangning xotirasi↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "03Gumbaz ostidagi hikoya↙",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 768,
+      "actions": [
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "01Maydon va mutanosiblik↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "02Rangning xotirasi↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "17px",
+          "text": "03Gumbaz ostidagi hikoya↙",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 390,
+      "actions": [
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "18px",
+          "text": "01Maydon va mutanosiblik↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "18px",
+          "text": "02Rangning xotirasi↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "18px",
+          "text": "03Gumbaz ostidagi hikoya↙",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 320,
+      "actions": [
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "18px",
+          "text": "01Maydon va mutanosiblik↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "18px",
+          "text": "02Rangning xotirasi↙",
+          "weight": "750"
+        },
+        {
+          "font": "\"Gallery UI\", sans-serif",
+          "size": "18px",
+          "text": "03Gumbaz ostidagi hikoya↙",
+          "weight": "750"
+        }
+      ],
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    }
+  ]
+}

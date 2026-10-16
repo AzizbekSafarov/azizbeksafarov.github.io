@@ -8,9 +8,9 @@ ROOT=Path(__file__).resolve().parent
 FAMILIES={
     'ziyo':('breeserif','nunitosans'),
     'orbita':('chakrapetch',),
-    'forma':('italiana','manrope'),
+    'forma':('manrope',),
     'samar':('lora','sourcesans3'),
-    'meros':('alfaslabone','literata'),
+    'meros':('alfaslabone','archivo','literata'),
     'nashr':('ptserif','archivo'),
     'hisob':('publicsans','ibmplexsanscondensed'),
 }

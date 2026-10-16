@@ -15,4 +15,4 @@ Typography update: local DM Sans from https://github.com/google/fonts . SIL OFL 
 
 ## Sector identity fonts
 
-italiana, manrope. Acquired from the official google/fonts repository under the individual bundled fonts/*-OFL.txt licenses. Layout is our independent implementation, not work by or endorsed by the referenced studios.
+manrope. Acquired from the official google/fonts repository under the individual bundled fonts/*-OFL.txt licenses. Layout is our independent implementation, not work by or endorsed by the referenced studios.
