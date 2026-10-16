@@ -1,6 +1,6 @@
 # Forma — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-16; source fingerprint `a3696ced9204f77b`.
+Snapshot: 2026-10-16; source fingerprint `57838570c47abced`.
 Entry: https://azizbeksafarov.github.io/design/forma/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -15,7 +15,7 @@ Ishtirokchi xabari: Urgutdan Samarqand viloyat bosqichi, 2026-10-13. Video trans
 
 ## Tanlangan dizayn va haqiqiy kod
 
-Mahsulotdan boshlanadigan asimmetrik showroom. Chapda doimiy do‘kon navigatsiyasi, bitta katta buyum va ikkita ixcham inventar qatori; marketing hero yo‘q. Oqartirilgan qog‘oz, siyoh, xira zaytun; DM Sans. Mobil: tabiiy katalog ketma-ketligi. Alohida savat drawer. model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.
+Nafis obyekt showroomi: Italiana ingichka kontrastli sarlavhalar, Manrope mahsulot/servis matni. Suyak-oq, siyoh, tabiiy material. Oddiy yuqori navigatsiya, katta serif kirish va balandligi turlicha fotografik shelf. Mobil: katta tanlangan buyum, so‘ng ikki ixcham obyekt. Yon dashboard paneli yo‘q. Narx/materiallar namuna, savat lokal. model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.
 
 Bu eski arxiv maketi emas: qayta ishlangan mustaqil starter. Bloom/Yuksalni ko‘chirish bilan almashtirma. Har bir rang, shrift roli va tugma holatini saqla; mazmun/model/funksiyalarni biletga moslashtir.
 
@@ -35,7 +35,7 @@ ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Ish kodi site
 - [CREDITS.md](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/CREDITS.md.txt)
 - [package.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/package.json.txt)
 
-index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va komponentlar. layout.css — yakuniy mustaqil sahifa kompozitsiyasi, responsive va holatlar. Kutubxonada diversity_v3.py oxirgi qatlam; generator shu modulni chaqiradi. model.js — ma’lumot/validatsiya/hisob. app.js — dialog, amallar, storage va download. images/, fonts/ — lokal resurslar. CREDITS.md — surat litsenziyasi/provenance; almashtirganda yangila. Karta IDlari index.html va model.js da mos bo‘lsin. Kutubxonadagi build_refined.py HTML/CSSni qayta yozadi; tanlovdagi alohida ZIPda runtime fayllarini to‘g‘ridan-to‘g‘ri tahrirla.
+index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va komponentlar. layout.css — yakuniy mustaqil sahifa kompozitsiyasi, responsive va holatlar. Kutubxonada identities_v4.py va identity-styles/ oxirgi qatlam; generator shu modulni chaqiradi. Eski diversity_v3.py yakuniy uslub emas. model.js — ma’lumot/validatsiya/hisob. app.js — dialog, amallar, storage va download. images/, fonts/ — lokal resurslar. CREDITS.md — surat litsenziyasi/provenance; almashtirganda yangila. Karta IDlari index.html va model.js da mos bo‘lsin. Kutubxonadagi build_refined.py HTML/CSSni qayta yozadi; tanlovdagi alohida ZIPda runtime fayllarini to‘g‘ridan-to‘g‘ri tahrirla.
 
 ## Local run va tekshiruv
 

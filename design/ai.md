@@ -2,13 +2,13 @@
 
 2026-10-16. Faol dizaynlar: 9. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.
 
-- [Orbita](https://azizbeksafarov.github.io/design/orbita/) — /design/orbita/; Qora observatoriya, orbital chizma, texnik metadata va keng grotesk. Uch missiyani o‘rganish va kuzatuv ro‘yxati.
-- [Nashr](https://azizbeksafarov.github.io/design/nashr/) — /design/nashr/; Gazeta mastheadi, Newsreader, ingichka chiziqlar va ustunli tahririyat. Maqola o‘qish, bo‘lim va saqlanganlar.
-- [Hisob](https://azizbeksafarov.github.io/design/hisob/) — /design/hisob/; Ixcham sidebar, aniq sonlar, davrga bog‘langan grafik va saralanadigan jadval. CSV eksporti.
-- [Ziyo](https://azizbeksafarov.github.io/design/ziyo/) — /design/ziyo/; Uch qismli o‘quv studiyasi: kurs dasturi, kodli dars va alohida amaliy tekshiruv. Marketing muqovasi yo‘q.
-- [Meros](https://azizbeksafarov.github.io/design/meros/) — /design/meros/; Muzey afishasi, keskin masshtab, katta fotografiya va ochiq ekspozitsiya. Asar tafsiloti va shaxsiy kolleksiya.
-- [Samar](https://azizbeksafarov.github.io/design/samar/) — /design/samar/; Buklama shahar atlasi: manzil ro‘yxati, bosiladigan shartli xarita va yonma-yon kun rejasi. Mobil uchun alohida ketma-ketlik.
-- [Forma](https://azizbeksafarov.github.io/design/forma/) — /design/forma/; Mahsulotdan boshlanadigan showroom: yon navigatsiya, bitta katta obyekt va ixcham inventar qatorlari. Detail va savat.
+- [Orbita](https://azizbeksafarov.github.io/design/orbita/) — /design/orbita/; Qorong‘i texnik observatoriya: Chakra Petch, monospace yozuv, orbital asbob oynasi va vertikal missiya registri.
+- [Nashr](https://azizbeksafarov.github.io/design/nashr/) — /design/nashr/; Bosma gazeta: Newsreader masthead, PT Serif maqola, Archivo xizmat yozuvi, oq-qora suratlar va zich tahririy ustunlar.
+- [Hisob](https://azizbeksafarov.github.io/design/hisob/) — /design/hisob/; Ma’lumotlar ish stoli: Public Sans xizmat interfeysi, ixcham Plex raqamlari, birlashgan ko‘rsatkich bandi va aniq jadval.
+- [Ziyo](https://azizbeksafarov.github.io/design/ziyo/) — /design/ziyo/; Rangli ta’lim ustaxonasi: yumshoq Bree Serif, bosqichli dars yo‘li, ishlaydigan ko‘rgazmali misol va olcha rangli mashq daftari.
+- [Meros](https://azizbeksafarov.github.io/design/meros/) — /design/meros/; Yorqin ko‘rgazma afishasi: ultramarin va limon, og‘ir Alfa Slab One, Literata sharhlari va navbatma-navbat joylashgan asarlar.
+- [Samar](https://azizbeksafarov.github.io/design/samar/) — /design/samar/; Sayohat qaydlari va buklama atlas: Lora kitob serifi, qum rangli shartli xarita, moviy belgilar va chipta kabi kun rejasi.
+- [Forma](https://azizbeksafarov.github.io/design/forma/) — /design/forma/; Interyer jurnali kabi showroom: nozik Italiana serifi, uch xil balandlikdagi mahsulotlar, sokin Manrope va material fotosuratlari.
 - [Bloom · Material Design 3](https://azizbeksafarov.github.io/design/bloom/) — /design/bloom/; Rasmiy Material Web komponentlari, Material Symbols va dinamik rang tizimi. Ishlaydigan loyiha maydoni.
 - [Yuksal · SI](https://azizbeksafarov.github.io/design/si/) — /design/si/; Oq asosiy fon, O‘zbekistonning moviy va yashil aksentlari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, serif va jonli shakl almashishi.
 

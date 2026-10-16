@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" fill="#005ea8"/><path d="M10 29V11H30M10 20H25M20 11V29" fill="none" stroke="white" stroke-width="3"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="20" fill="#e9e3d0"/><path d="M20 5L29 30L20 26L11 30Z" fill="#173952"/><path d="M20 5V26L11 30Z" fill="#5794aa"/></svg>

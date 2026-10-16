@@ -100,6 +100,10 @@ JS['orbita']=JS['orbita'].replace("$('#satellite text').textContent=p.id.toUpper
 JS['orbita']=JS['orbita'].replace("$('.orbit-display').dataset.mission=p.id;", "$('.orbit-display').dataset.mission=p.id;$('#motion-toggle').disabled=p.id!=='iss';$('#motion-toggle').textContent=p.id!=='iss'?'Bu chizma statik':document.body.classList.contains('paused')?'Harakatni davom ettirish ▶':'Harakatni to‘xtatish Ⅱ';")
 CSS['orbita']+='.orbit-display[data-mission=webb] #satellite,.orbit-display[data-mission=voyager] #satellite{animation:none}.orbit-display>svg>circle{transition:r .5s ease-out}'
 
+from identities_v4 import IDENTITIES
+for _spec in SPECS:
+ _spec.update(IDENTITIES[_spec['slug']])
+
 def build():
  for t in SPECS:
   slug=t['slug'];folder=ROOT/(slug+'-site');folder.mkdir(exist_ok=True)
@@ -170,10 +174,10 @@ Bu mustaqil original implementatsiya; NASA, Muuto yoki professional studiya tomo
 
 ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Kod site/ ichida. Rootda `node serve.mjs`; http://127.0.0.1:8080/ . Python fallback: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Npm kerak emas. Test: `node --test site/model.test.mjs`.
 
-index.html — mazmun va tuzilma. style.css — lokal fontlar va asos; Ziyoda layout.css oxirgi uch qismli o‘quv kompozitsiyasi, responsive va reduced-motion. Kutubxonadagi diversity_v3.py oxirgi qatlamni yaratadi. app.js — event, dialog/fokus, filtr, saqlash, download. model.js — data va hisob/validatsiya. model.test.mjs — meaningful model checks. fonts/ va images/ lokal. CREDITS.md litsenziyalar. Original kutubxonada build_collection.py generator; tanlovdagi alohida ZIP runtime fayllari to‘g‘ridan-to‘g‘ri tahrirlanadi.
+index.html — mazmun va tuzilma. style.css — lokal fontlar va accessibility mexanikasi. layout.css — tanlangan sohaning to‘liq kompozitsiyasi, tipografika va responsive. identities_v4.py hamda identity-styles/ yakuniy generator manbasi; oldingi diversity_v3.py yakuniy uslub emas. Ziyoda identity.js ishlaydigan dars misolini boshqaradi. app.js — event, dialog/fokus, filtr, saqlash, download. model.js — data va hisob/validatsiya. model.test.mjs — meaningful model checks. fonts/ va images/ lokal. CREDITS.md litsenziyalar. Original kutubxonada build_collection.py generator; tanlovdagi alohida ZIP runtime fayllari to‘g‘ridan-to‘g‘ri tahrirlanadi.
 
 Source faylni alohida o‘qish:
-'''+ '\n'.join(f'- [{name}]({raw}/design/{slug}/files/{name}.txt)' for name in (['index.html','style.css','layout.css'] if slug=='ziyo' else ['index.html','style.css'])+['app.js','model.js','model.test.mjs','CREDITS.md','package.json'])+f'''
+'''+ '\n'.join(f'- [{name}]({raw}/design/{slug}/files/{name}.txt)' for name in ['index.html','style.css','layout.css','app.js']+(['identity.js'] if slug=='ziyo' else [])+['model.js','model.test.mjs','CREDITS.md','package.json'])+f'''
 
 ## Asosiy oqim va tekshiruv
 {spec['flow']}
@@ -188,3 +192,5 @@ if __name__=='__main__':
  build()
  from diversity_v3 import apply
  apply(('ziyo',))
+ from identities_v4 import apply as apply_identities
+ apply_identities(('orbita','nashr','hisob','ziyo','meros'))

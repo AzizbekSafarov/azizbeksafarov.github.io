@@ -1,9 +1,9 @@
-# Nashr
+# Nashr — independent sector identity
 
-No npm install. `python -m http.server 8080 --bind 127.0.0.1` here, or ZIP root `node serve.mjs`. `node --test model.test.mjs`.
+Bosma tahririyat: Newsreader masthead va sarlavha; PT Serif o‘qish; Archivo ixcham navigatsiya. Sarg‘aygan gazeta qog‘ozi, qora siyoh, kichik qizil tahririy belgi, double-rule, oq-qora fotografiya va zich ustunlar. Chetdan chetga marketing hero yoki ilova dashboardi emas. Original maqolalar namuna.
 
-Edit index.html, style.css, app.js, model.js. Keep IDs aligned. Newsreader reading serif + DM Sans yordamchi yozuv. Qog‘oz fon, qora siyoh, qizil tahririy belgi. Masthead va zich asimmetrik gazeta ustunlari. Landing-page hero emas.
+Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 8080 --bind 127.0.0.1` here. Test: `node --test model.test.mjs`.
 
-Flow: Bo‘lim filtri → maqola o‘qish → saqlash → saqlanganlar → qayta ochish.
+index.html: markup and IDs. style.css: local fonts and accessible mechanics. layout.css: this sector’s full art direction and responsive rules. app.js: existing flows, storage and focus. model.js: data/validation. Read CREDITS.md and bundled font licenses. Preserve model IDs and validated storage keys when changing layout.
 
-Original library generator: design/build_collection.py. In isolated competition copy edit runtime files directly. Read CREDITS.md. No backend, orders, accounts or tracking.
+Original library: identity-styles/*.css and identities_v4.py apply last after build_collection.py / build_refined.py. In the isolated competition ZIP, edit runtime files directly. After gallery changes regenerate previews, metadata and build_handoff.py.

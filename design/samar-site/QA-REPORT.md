@@ -21,3 +21,7 @@ Final verification: 16 model tests PASS; handoff manifests and 9 source ZIP pack
 ## 2026-10-16 — task-specific composition
 
 See ../DIVERSITY.md and ../QA-DIVERSITY.json for this turn’s browser flows, all five responsive widths, independent visual review and limits. Final layout: layout.css. Prior QA remains baseline only.
+
+## 2026-10-16 — independent sector identity
+
+See ../SECTOR-IDENTITIES.md and ../QA-SECTORS.json for the current visual contract, interaction checks and 35 responsive measurements. Earlier QA applies to earlier snapshots.

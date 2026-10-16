@@ -1,10 +1,9 @@
-# Forma — sokin shakl, iliq hayot
+# Forma — independent sector identity
 
-Standalone HTML/CSS/JavaScript. No npm install. Run `python -m http.server 8080 --bind 127.0.0.1` here, or root ZIP `node serve.mjs`. Tests: `node --test model.test.mjs`.
+Nafis obyekt showroomi: Italiana ingichka kontrastli sarlavhalar, Manrope mahsulot/servis matni. Suyak-oq, siyoh, tabiiy material. Oddiy yuqori navigatsiya, katta serif kirish va balandligi turlicha fotografik shelf. Mobil: katta tanlangan buyum, so‘ng ikki ixcham obyekt. Yon dashboard paneli yo‘q. Narx/materiallar namuna, savat lokal.
 
-Edit index.html content/cards, model.js data/validation, app.js interactions and style.css. Keep card IDs aligned with model data. Read CREDITS.md before replacing photos; preserve attribution. No booking/payment/backend. Record actual task and checks in HANDOFF.md.
+Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 8080 --bind 127.0.0.1` here. Test: `node --test model.test.mjs`.
 
+index.html: markup and IDs. style.css: local fonts and accessible mechanics. layout.css: this sector’s full art direction and responsive rules. app.js: existing flows, storage and focus. model.js: data/validation. Read CREDITS.md and bundled font licenses. Preserve model IDs and validated storage keys when changing layout.
 
-## Current composition (2026-10-16)
-
-Read layout.css after style.css: it is the final task-specific layout and responsive layer. Original library regeneration: build_collection.py / build_refined.py → diversity_v3.py. In an isolated starter, edit index.html, style.css and layout.css directly. Preserve IDs and storage keys when changing only the layout.
+Original library: identity-styles/*.css and identities_v4.py apply last after build_collection.py / build_refined.py. In the isolated competition ZIP, edit runtime files directly. After gallery changes regenerate previews, metadata and build_handoff.py.

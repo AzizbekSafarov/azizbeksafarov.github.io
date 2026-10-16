@@ -2,7 +2,7 @@
 
 Original implementation and sample copy created for this library. Not affiliated with reference organizations.
 
-Visual contract: Barlow Condensed afisha + Newsreader sharh. To‘q olxo‘ri, chang-pushti, oq. Ulkan to‘liq enli masthead va chetdan chetga fotosuratli ekspozitsiya. Oddiy sayohat kartalari emas.
+Visual contract: Kuratorlik ko‘rgazmasi: Alfa Slab One og‘ir slab-display + Literata sharh va xizmat yozuvi. Ultramarin ko‘k maydon, limon-sariq bosma siyoh, katta raqam va asimmetrik fotosurat. Ekspozitsiyada asar va sharh o‘rni navbat bilan almashadi. Sayohat kitobi, condensed sans afishasi yoki neytral kartalar bilan almashtirma.
 
 Fonts from https://github.com/google/fonts under bundled SIL OFL licenses. No remote runtime assets.
 
@@ -24,3 +24,10 @@ Destination facts checked on 2026-10-15 against Uzbekistan Travel:
 Visit durations and 20-minute transfer gaps are planning suggestions, not official schedules. No current opening hours or ticket prices are asserted. This is an independent demo, not an official tourism service.
 
 Instrument Sans / Instrument Serif are locally bundled under SIL OFL; license files are in fonts/.
+
+
+Typography update: local DM Sans and Barlow Condensed from https://github.com/google/fonts . SIL OFL licenses in fonts/.
+
+## Sector identity fonts
+
+alfa-slab-one, literata. Acquired from the official google/fonts repository under the individual bundled fonts/*-OFL.txt licenses. Layout is our independent implementation, not work by or endorsed by the referenced studios.

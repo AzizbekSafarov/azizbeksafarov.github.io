@@ -4,15 +4,15 @@
     "name": "Samar",
     "file": "samar-site/index.html",
     "category": "Turizm / madaniyat",
-    "color": "#a74e29",
-    "background": "#f6f4ed",
-    "summary": "Buklama shahar atlasi: manzil ro‘yxati, bosiladigan shartli xarita va yonma-yon kun rejasi. Mobil uchun alohida ketma-ketlik.",
+    "color": "#173952",
+    "background": "#f1f4f3",
+    "summary": "Sayohat qaydlari va buklama atlas: Lora kitob serifi, qum rangli shartli xarita, moviy belgilar va chipta kabi kun rejasi.",
     "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
     "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
     "preview": "previews/02.png",
     "fonts": [
-      "barlow-condensed",
-      "dm-sans"
+      "lora",
+      "source-sans-3"
     ]
   },
   {
@@ -20,14 +20,15 @@
     "name": "Forma",
     "file": "forma-site/index.html",
     "category": "Interyer / konsept katalog",
-    "color": "#506445",
-    "background": "#f9f9f6",
-    "summary": "Mahsulotdan boshlanadigan showroom: yon navigatsiya, bitta katta obyekt va ixcham inventar qatorlari. Detail va savat.",
+    "color": "#8d6544",
+    "background": "#faf9f5",
+    "summary": "Interyer jurnali kabi showroom: nozik Italiana serifi, uch xil balandlikdagi mahsulotlar, sokin Manrope va material fotosuratlari.",
     "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
     "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
     "preview": "previews/04.png",
     "fonts": [
-      "dm-sans"
+      "italiana",
+      "manrope"
     ]
   },
   {
@@ -66,12 +67,12 @@
     "id": "12",
     "name": "Orbita",
     "category": "Ilm-fan / kosmik atlas",
-    "color": "#ff6b35",
-    "background": "#101217",
-    "summary": "Qora observatoriya, orbital chizma, texnik metadata va keng grotesk. Uch missiyani o‘rganish va kuzatuv ro‘yxati.",
+    "color": "#b1f56a",
+    "background": "#071215",
+    "summary": "Qorong‘i texnik observatoriya: Chakra Petch, monospace yozuv, orbital asbob oynasi va vertikal missiya registri.",
     "use": "Ilm-fan, texnologiya, tadqiqot va ekspeditsiya",
     "fonts": [
-      "space-grotesk",
+      "chakra-petch",
       "ibm-plex-mono"
     ],
     "file": "orbita-site/index.html",
@@ -82,13 +83,14 @@
     "id": "13",
     "name": "Nashr",
     "category": "Tahririyat / raqamli gazeta",
-    "color": "#b12b20",
-    "background": "#f5f3eb",
-    "summary": "Gazeta mastheadi, Newsreader, ingichka chiziqlar va ustunli tahririyat. Maqola o‘qish, bo‘lim va saqlanganlar.",
+    "color": "#a3271e",
+    "background": "#eeebde",
+    "summary": "Bosma gazeta: Newsreader masthead, PT Serif maqola, Archivo xizmat yozuvi, oq-qora suratlar va zich tahririy ustunlar.",
     "use": "Yangilik, jurnal, madaniyat va bilim portali",
     "fonts": [
       "newsreader",
-      "dm-sans"
+      "pt-serif",
+      "archivo"
     ],
     "file": "nashr-site/index.html",
     "preview": "previews/13.png",
@@ -98,13 +100,13 @@
     "id": "14",
     "name": "Hisob",
     "category": "Ma’lumot / tahlil paneli",
-    "color": "#174cea",
-    "background": "#edf1f6",
-    "summary": "Ixcham sidebar, aniq sonlar, davrga bog‘langan grafik va saralanadigan jadval. CSV eksporti.",
+    "color": "#a66c21",
+    "background": "#edf0f2",
+    "summary": "Ma’lumotlar ish stoli: Public Sans xizmat interfeysi, ixcham Plex raqamlari, birlashgan ko‘rsatkich bandi va aniq jadval.",
     "use": "Monitoring, statistika, loyiha va biznes tahlili",
     "fonts": [
-      "ibm-plex-mono",
-      "dm-sans"
+      "public-sans",
+      "ibm-plex-sans-condensed"
     ],
     "file": "hisob-site/index.html",
     "preview": "previews/14.png",
@@ -114,13 +116,14 @@
     "id": "15",
     "name": "Ziyo",
     "category": "Ta’lim / interaktiv dars",
-    "color": "#197261",
-    "background": "#f2f5f2",
-    "summary": "Uch qismli o‘quv studiyasi: kurs dasturi, kodli dars va alohida amaliy tekshiruv. Marketing muqovasi yo‘q.",
+    "color": "#772c3c",
+    "background": "#ffedd6",
+    "summary": "Rangli ta’lim ustaxonasi: yumshoq Bree Serif, bosqichli dars yo‘li, ishlaydigan ko‘rgazmali misol va olcha rangli mashq daftari.",
     "use": "Ta’lim, kasb, kurs va ko‘nikmalar",
     "fonts": [
-      "space-grotesk",
-      "dm-sans"
+      "bree-serif",
+      "nunito-sans",
+      "ibm-plex-mono"
     ],
     "file": "ziyo-site/index.html",
     "preview": "previews/15.png",
@@ -130,13 +133,13 @@
     "id": "16",
     "name": "Meros",
     "category": "Madaniyat / raqamli muzey",
-    "color": "#592443",
-    "background": "#e8dedd",
-    "summary": "Muzey afishasi, keskin masshtab, katta fotografiya va ochiq ekspozitsiya. Asar tafsiloti va shaxsiy kolleksiya.",
+    "color": "#e5f344",
+    "background": "#1d2ed8",
+    "summary": "Yorqin ko‘rgazma afishasi: ultramarin va limon, og‘ir Alfa Slab One, Literata sharhlari va navbatma-navbat joylashgan asarlar.",
     "use": "Muzey, arxiv, me’morchilik va ko‘rgazma",
     "fonts": [
-      "barlow-condensed",
-      "newsreader"
+      "alfa-slab-one",
+      "literata"
     ],
     "file": "meros-site/index.html",
     "preview": "previews/16.png",

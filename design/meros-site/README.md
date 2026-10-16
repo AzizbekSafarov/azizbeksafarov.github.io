@@ -1,9 +1,9 @@
-# Meros
+# Meros — independent sector identity
 
-No npm install. `python -m http.server 8080 --bind 127.0.0.1` here, or ZIP root `node serve.mjs`. `node --test model.test.mjs`.
+Kuratorlik ko‘rgazmasi: Alfa Slab One og‘ir slab-display + Literata sharh va xizmat yozuvi. Ultramarin ko‘k maydon, limon-sariq bosma siyoh, katta raqam va asimmetrik fotosurat. Ekspozitsiyada asar va sharh o‘rni navbat bilan almashadi. Sayohat kitobi, condensed sans afishasi yoki neytral kartalar bilan almashtirma.
 
-Edit index.html, style.css, app.js, model.js. Keep IDs aligned. Barlow Condensed afisha + Newsreader sharh. To‘q olxo‘ri, chang-pushti, oq. Ulkan to‘liq enli masthead va chetdan chetga fotosuratli ekspozitsiya. Oddiy sayohat kartalari emas.
+Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 8080 --bind 127.0.0.1` here. Test: `node --test model.test.mjs`.
 
-Flow: Ekspozitsiya filtri → asar tafsiloti/manbasi → kolleksiyaga olish → saqlanganlar → TXT eksport.
+index.html: markup and IDs. style.css: local fonts and accessible mechanics. layout.css: this sector’s full art direction and responsive rules. app.js: existing flows, storage and focus. model.js: data/validation. Read CREDITS.md and bundled font licenses. Preserve model IDs and validated storage keys when changing layout.
 
-Original library generator: design/build_collection.py. In isolated competition copy edit runtime files directly. Read CREDITS.md. No backend, orders, accounts or tracking.
+Original library: identity-styles/*.css and identities_v4.py apply last after build_collection.py / build_refined.py. In the isolated competition ZIP, edit runtime files directly. After gallery changes regenerate previews, metadata and build_handoff.py.

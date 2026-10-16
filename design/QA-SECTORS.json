@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-16",
+  "checks": [
+    {
+      "slug": "ziyo",
+      "requestedWidth": 1440,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "ziyo",
+      "requestedWidth": 1024,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "ziyo",
+      "requestedWidth": 768,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "ziyo",
+      "requestedWidth": 390,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "ziyo",
+      "requestedWidth": 320,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "orbita",
+      "requestedWidth": 1440,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "orbita",
+      "requestedWidth": 1024,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "orbita",
+      "requestedWidth": 768,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "orbita",
+      "requestedWidth": 390,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "orbita",
+      "requestedWidth": 320,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 1440,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 1024,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 768,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 390,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "forma",
+      "requestedWidth": 320,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 1440,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 1024,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 768,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 390,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "samar",
+      "requestedWidth": 320,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 1440,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 1024,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 768,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 390,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "meros",
+      "requestedWidth": 320,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "nashr",
+      "requestedWidth": 1440,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "nashr",
+      "requestedWidth": 1024,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "nashr",
+      "requestedWidth": 768,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "nashr",
+      "requestedWidth": 390,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "nashr",
+      "requestedWidth": 320,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "slug": "hisob",
+      "requestedWidth": 1440,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "slug": "hisob",
+      "requestedWidth": 1024,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "slug": "hisob",
+      "requestedWidth": 768,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "slug": "hisob",
+      "requestedWidth": 390,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "slug": "hisob",
+      "requestedWidth": 320,
+      "fonts": "loaded",
+      "missingVisibleImages": [],
+      "overflow": 0,
+      "width": 320
+    }
+  ]
+}

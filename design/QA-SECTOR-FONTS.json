@@ -1,0 +1,114 @@
+[
+  {
+    "site": "ziyo",
+    "alias": "Study Display",
+    "family": "Bree Serif",
+    "missingTestGlyphs": [],
+    "bytes": 46572
+  },
+  {
+    "site": "ziyo",
+    "alias": "Study Sans",
+    "family": "Nunito Sans 12pt ExtraLight",
+    "missingTestGlyphs": [],
+    "bytes": 571240
+  },
+  {
+    "site": "ziyo",
+    "alias": "Study Mono",
+    "family": "IBM Plex Mono",
+    "missingTestGlyphs": [],
+    "bytes": 135580
+  },
+  {
+    "site": "orbita",
+    "alias": "Flight Display",
+    "family": "Chakra Petch",
+    "missingTestGlyphs": [],
+    "bytes": 78488
+  },
+  {
+    "site": "orbita",
+    "alias": "Flight Mono",
+    "family": "IBM Plex Mono",
+    "missingTestGlyphs": [],
+    "bytes": 135580
+  },
+  {
+    "site": "forma",
+    "alias": "Object Display",
+    "family": "Italiana",
+    "missingTestGlyphs": [],
+    "bytes": 31828
+  },
+  {
+    "site": "forma",
+    "alias": "Object Text",
+    "family": "Manrope ExtraLight",
+    "missingTestGlyphs": [],
+    "bytes": 164700
+  },
+  {
+    "site": "samar",
+    "alias": "Atlas Display",
+    "family": "Lora",
+    "missingTestGlyphs": [],
+    "bytes": 212196
+  },
+  {
+    "site": "samar",
+    "alias": "Atlas Text",
+    "family": "Source Sans 3 ExtraLight",
+    "missingTestGlyphs": [],
+    "bytes": 646340
+  },
+  {
+    "site": "meros",
+    "alias": "Gallery Display",
+    "family": "Alfa Slab One",
+    "missingTestGlyphs": [],
+    "bytes": 97376
+  },
+  {
+    "site": "meros",
+    "alias": "Gallery Text",
+    "family": "Literata",
+    "missingTestGlyphs": [],
+    "bytes": 955132
+  },
+  {
+    "site": "nashr",
+    "alias": "Paper Display",
+    "family": "Newsreader 16pt",
+    "missingTestGlyphs": [],
+    "bytes": 451664
+  },
+  {
+    "site": "nashr",
+    "alias": "Paper Text",
+    "family": "PT Serif",
+    "missingTestGlyphs": [],
+    "bytes": 359048
+  },
+  {
+    "site": "nashr",
+    "alias": "Paper UI",
+    "family": "Archivo SemiBold",
+    "missingTestGlyphs": [],
+    "bytes": 658596
+  },
+  {
+    "site": "hisob",
+    "alias": "Ledger UI",
+    "family": "Public Sans Thin",
+    "missingTestGlyphs": [],
+    "bytes": 103316
+  },
+  {
+    "site": "hisob",
+    "alias": "Ledger Figures",
+    "family": "IBM Plex Sans Condensed",
+    "missingTestGlyphs": [],
+    "bytes": 111236
+  }
+]

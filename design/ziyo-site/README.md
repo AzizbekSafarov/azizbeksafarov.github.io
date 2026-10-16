@@ -1,14 +1,9 @@
-# Ziyo
+# Ziyo — independent sector identity
 
-No npm install. `python -m http.server 8080 --bind 127.0.0.1` here, or ZIP root `node serve.mjs`. `node --test model.test.mjs`.
+Ta’lim ustaxonasi. Bree Serif sarlavha + Nunito Sans matn + IBM Plex Mono kod. Shaftoli qog‘oz, oq doska, olcha mashq maydoni. Dastur yuqorida, dars va interaktiv misol chapda, test o‘ngda. Yumshoq asimmetrik burchaklar; texnik terminal yoki gazeta bilan bir xil qobiq qilma.
 
-Edit index.html, style.css, app.js, model.js. Keep IDs aligned. Space Grotesk sarlavha + DM Sans o‘qish. Issiq sariq, kobalt, oq. Kitob muqovasidek qat’iy kompozitsiya, keyin ikki ustunli dars muhiti; dashboardga aylantirma.
+Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 8080 --bind 127.0.0.1` here. Test: `node --test model.test.mjs`.
 
-Flow: Modul tanlash → mazmun → javob → xato/to‘g‘ri izoh → progress → reload.
+index.html: markup and IDs. style.css: local fonts and accessible mechanics. layout.css: this sector’s full art direction and responsive rules. app.js: existing flows, storage and focus. model.js: data/validation. identity.js: interactive lesson illustration. Read CREDITS.md and bundled font licenses. Preserve model IDs and validated storage keys when changing layout.
 
-Original library generator: design/build_collection.py. In isolated competition copy edit runtime files directly. Read CREDITS.md. No backend, orders, accounts or tracking.
-
-
-## Current composition (2026-10-16)
-
-Read layout.css after style.css: it is the final task-specific layout and responsive layer. Original library regeneration: build_collection.py / build_refined.py → diversity_v3.py. In an isolated starter, edit index.html, style.css and layout.css directly. Preserve IDs and storage keys when changing only the layout.
+Original library: identity-styles/*.css and identities_v4.py apply last after build_collection.py / build_refined.py. In the isolated competition ZIP, edit runtime files directly. After gallery changes regenerate previews, metadata and build_handoff.py.

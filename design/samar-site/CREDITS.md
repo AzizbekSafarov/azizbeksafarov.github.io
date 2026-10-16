@@ -19,3 +19,7 @@ Instrument Sans / Instrument Serif are locally bundled under SIL OFL; license fi
 
 
 Typography update: local DM Sans and Barlow Condensed from https://github.com/google/fonts . SIL OFL licenses in fonts/.
+
+## Sector identity fonts
+
+lora, source-sans-3. Acquired from the official google/fonts repository under the individual bundled fonts/*-OFL.txt licenses. Layout is our independent implementation, not work by or endorsed by the referenced studios.

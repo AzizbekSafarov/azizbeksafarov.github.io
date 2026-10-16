@@ -1,9 +1,9 @@
-# Orbita
+# Orbita — independent sector identity
 
-No npm install. `python -m http.server 8080 --bind 127.0.0.1` here, or ZIP root `node serve.mjs`. `node --test model.test.mjs`.
+Kosmik observatoriya: Chakra Petch texnik display, IBM Plex Mono barcha xizmat/o‘qish matni. Siyoh-qora teal, fosfor-yashil signal, asbob oynasi burchaklari, katta orbital SVG va vertikal missiya registri. Chizma shartli, jonli telemetriya emas. Bezaksiz texnik ovoz; oq marketing hero yoki kartali dashboardga aylantirma.
 
-Edit index.html, style.css, app.js, model.js. Keep IDs aligned. Space Grotesk + IBM Plex Mono. Qora, oq, signal-to‘q sariq. Asosiy sahna: katta orbital SVG; gorizontal missiya registri. Marketing kartalari va krem serif hero bilan almashtirma.
+Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 8080 --bind 127.0.0.1` here. Test: `node --test model.test.mjs`.
 
-Flow: Missiya tanlash → chizma va ma’lumot yangilanishi → kuzatuvga qo‘shish → saqlanish → TXT eksport.
+index.html: markup and IDs. style.css: local fonts and accessible mechanics. layout.css: this sector’s full art direction and responsive rules. app.js: existing flows, storage and focus. model.js: data/validation. Read CREDITS.md and bundled font licenses. Preserve model IDs and validated storage keys when changing layout.
 
-Original library generator: design/build_collection.py. In isolated competition copy edit runtime files directly. Read CREDITS.md. No backend, orders, accounts or tracking.
+Original library: identity-styles/*.css and identities_v4.py apply last after build_collection.py / build_refined.py. In the isolated competition ZIP, edit runtime files directly. After gallery changes regenerate previews, metadata and build_handoff.py.

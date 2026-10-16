@@ -73,3 +73,5 @@ if __name__=='__main__':
  apply(BASE)
  from diversity_v3 import apply as apply_compositions
  apply_compositions(('forma','samar'))
+ from identities_v4 import apply as apply_identities
+ apply_identities(('forma','samar'))

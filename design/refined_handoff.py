@@ -34,7 +34,7 @@ Bu eski arxiv maketi emas: qayta ishlangan mustaqil starter. Bloom/Yuksalni ko�
 ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Ish kodi site/ ichida. Source fayllar:
 '''+ '\n'.join(f'- [{n}]({raw}/design/{slug}/files/{n}.txt)' for n in files)+f'''
 
-index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va komponentlar. layout.css — yakuniy mustaqil sahifa kompozitsiyasi, responsive va holatlar. Kutubxonada diversity_v3.py oxirgi qatlam; generator shu modulni chaqiradi. model.js — ma’lumot/validatsiya/hisob. app.js — dialog, amallar, storage va download. images/, fonts/ — lokal resurslar. CREDITS.md — surat litsenziyasi/provenance; almashtirganda yangila. Karta IDlari index.html va model.js da mos bo‘lsin. Kutubxonadagi build_refined.py HTML/CSSni qayta yozadi; tanlovdagi alohida ZIPda runtime fayllarini to‘g‘ridan-to‘g‘ri tahrirla.
+index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va komponentlar. layout.css — yakuniy mustaqil sahifa kompozitsiyasi, responsive va holatlar. Kutubxonada identities_v4.py va identity-styles/ oxirgi qatlam; generator shu modulni chaqiradi. Eski diversity_v3.py yakuniy uslub emas. model.js — ma’lumot/validatsiya/hisob. app.js — dialog, amallar, storage va download. images/, fonts/ — lokal resurslar. CREDITS.md — surat litsenziyasi/provenance; almashtirganda yangila. Karta IDlari index.html va model.js da mos bo‘lsin. Kutubxonadagi build_refined.py HTML/CSSni qayta yozadi; tanlovdagi alohida ZIPda runtime fayllarini to‘g‘ridan-to‘g‘ri tahrirla.
 
 ## Local run va tekshiruv
 

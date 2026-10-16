@@ -1,9 +1,9 @@
-# Hisob
+# Hisob — independent sector identity
 
-No npm install. `python -m http.server 8080 --bind 127.0.0.1` here, or ZIP root `node serve.mjs`. `node --test model.test.mjs`.
+Tahlil ish stoli: Public Sans UI + IBM Plex Sans Condensed tabular raqamlar. Sovuq kulrang, oq ish sirtlari, grafit navigatsiya va amber analitika. Ko‘rsatkichlar bitta ajratilgan bandda; chart va table aniq xizmat iyerarxiyasida. Display-hero yo‘q. CSV aynan filtrlangan qatorlarni oladi, barcha sonlar namuna.
 
-Edit index.html, style.css, app.js, model.js. Keep IDs aligned. DM Sans UI + IBM Plex Mono qiymatlar. Sovuq kulrang ish stoli, ko‘k aktiv holat, oq zich ma’lumot panellari. Hero va dekorativ gradientlar yo‘q.
+Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 8080 --bind 127.0.0.1` here. Test: `node --test model.test.mjs`.
 
-Flow: 7/30 kun → grafik/jami/jadval mosligi → qidiruv → saralash → ko‘rinayotgan qatorlar CSV eksporti.
+index.html: markup and IDs. style.css: local fonts and accessible mechanics. layout.css: this sector’s full art direction and responsive rules. app.js: existing flows, storage and focus. model.js: data/validation. Read CREDITS.md and bundled font licenses. Preserve model IDs and validated storage keys when changing layout.
 
-Original library generator: design/build_collection.py. In isolated competition copy edit runtime files directly. Read CREDITS.md. No backend, orders, accounts or tracking.
+Original library: identity-styles/*.css and identities_v4.py apply last after build_collection.py / build_refined.py. In the isolated competition ZIP, edit runtime files directly. After gallery changes regenerate previews, metadata and build_handoff.py.

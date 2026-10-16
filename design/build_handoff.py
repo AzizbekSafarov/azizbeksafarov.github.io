@@ -54,6 +54,10 @@ for spec in SPECS:
     FLOWS[spec['id']]=[spec['flow']]
 LOOKS['02']='Buklama shahar atlasi: chapda ixcham manzil ro‘yxati, markazda bosiladigan shartli xarita, o‘ngda doim yonma-yon kun rejasi. Qog‘oz, zaytun, g‘isht aksenti. Barlow Condensed + DM Sans. Mobil: xarita → manzillar → reja. Masshtab haqiqiy emas; rasmiy xarita havolasi detailda.'
 LOOKS['04']='Mahsulotdan boshlanadigan asimmetrik showroom. Chapda doimiy do‘kon navigatsiyasi, bitta katta buyum va ikkita ixcham inventar qatori; marketing hero yo‘q. Oqartirilgan qog‘oz, siyoh, xira zaytun; DM Sans. Mobil: tabiiy katalog ketma-ketligi. Alohida savat drawer.'
+from identities_v4 import IDENTITIES
+for identity_slug,identity in IDENTITIES.items():
+    identity_id=next(k for k,v in SLUGS.items() if v==identity_slug)
+    LOOKS[identity_id]=identity['look']
 
 def write(path,text):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -298,7 +302,7 @@ def source_files(t,templates):
 def code_names(t,files):
     if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','package.json','vite.config.js','download_symbols.py']
     if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','uzbekistan.svg','brand-icon.svg']
-    return ['index.html','style.css']+(['layout.css'] if t['slug'] in ('ziyo','forma','samar') else [])+['app.js','model.js','model.test.mjs','CREDITS.md','package.json']
+    return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','CREDITS.md','package.json']
 
 def code_text(t,files):
     names=code_names(t,files)

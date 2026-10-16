@@ -6,12 +6,12 @@
       "id": "12",
       "name": "Orbita",
       "category": "Ilm-fan / kosmik atlas",
-      "color": "#ff6b35",
-      "background": "#101217",
-      "summary": "Qora observatoriya, orbital chizma, texnik metadata va keng grotesk. Uch missiyani o‘rganish va kuzatuv ro‘yxati.",
+      "color": "#b1f56a",
+      "background": "#071215",
+      "summary": "Qorong‘i texnik observatoriya: Chakra Petch, monospace yozuv, orbital asbob oynasi va vertikal missiya registri.",
       "use": "Ilm-fan, texnologiya, tadqiqot va ekspeditsiya",
       "fonts": [
-        "space-grotesk",
+        "chakra-petch",
         "ibm-plex-mono"
       ],
       "file": "orbita-site/index.html",
@@ -23,21 +23,22 @@
       "source_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/orbita/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/orbita/manifest.json",
-      "source_fingerprint": "6426e4c3588637946df9aa0d669c878898be8136b480e4d18f1b8b88a15e2ada",
-      "archive_bytes": 260644,
+      "source_fingerprint": "370f8adbd4f2078f82194246d667aaa525beb8fe5a417f665e15cd04bd3eaf87",
+      "archive_bytes": 124117,
       "status": "featured"
     },
     {
       "id": "13",
       "name": "Nashr",
       "category": "Tahririyat / raqamli gazeta",
-      "color": "#b12b20",
-      "background": "#f5f3eb",
-      "summary": "Gazeta mastheadi, Newsreader, ingichka chiziqlar va ustunli tahririyat. Maqola o‘qish, bo‘lim va saqlanganlar.",
+      "color": "#a3271e",
+      "background": "#eeebde",
+      "summary": "Bosma gazeta: Newsreader masthead, PT Serif maqola, Archivo xizmat yozuvi, oq-qora suratlar va zich tahririy ustunlar.",
       "use": "Yangilik, jurnal, madaniyat va bilim portali",
       "fonts": [
         "newsreader",
-        "dm-sans"
+        "pt-serif",
+        "archivo"
       ],
       "file": "nashr-site/index.html",
       "preview": "previews/13.png",
@@ -48,21 +49,21 @@
       "source_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/nashr/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/nashr/manifest.json",
-      "source_fingerprint": "469ee9c6b90c9bcd8dfe3b18b11eed3d8425b2745036102ef39d6642865914b0",
-      "archive_bytes": 1273785,
+      "source_fingerprint": "cb835ad2dbba3cffe125779b85da94ec09feaaf6524dbea772172b030c78914f",
+      "archive_bytes": 1603209,
       "status": "featured"
     },
     {
       "id": "14",
       "name": "Hisob",
       "category": "Ma’lumot / tahlil paneli",
-      "color": "#174cea",
-      "background": "#edf1f6",
-      "summary": "Ixcham sidebar, aniq sonlar, davrga bog‘langan grafik va saralanadigan jadval. CSV eksporti.",
+      "color": "#a66c21",
+      "background": "#edf0f2",
+      "summary": "Ma’lumotlar ish stoli: Public Sans xizmat interfeysi, ixcham Plex raqamlari, birlashgan ko‘rsatkich bandi va aniq jadval.",
       "use": "Monitoring, statistika, loyiha va biznes tahlili",
       "fonts": [
-        "ibm-plex-mono",
-        "dm-sans"
+        "public-sans",
+        "ibm-plex-sans-condensed"
       ],
       "file": "hisob-site/index.html",
       "preview": "previews/14.png",
@@ -73,21 +74,22 @@
       "source_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/hisob/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/hisob/manifest.json",
-      "source_fingerprint": "6223696f6f3c5e2031df94c8f26f1e262ae820e7896744f45b872a49ba4786d3",
-      "archive_bytes": 260462,
+      "source_fingerprint": "65dfcbe128a4fa2ef64aa5da898dd50d8ccca9574bb0b68350df356b5ef33be1",
+      "archive_bytes": 133424,
       "status": "featured"
     },
     {
       "id": "15",
       "name": "Ziyo",
       "category": "Ta’lim / interaktiv dars",
-      "color": "#197261",
-      "background": "#f2f5f2",
-      "summary": "Uch qismli o‘quv studiyasi: kurs dasturi, kodli dars va alohida amaliy tekshiruv. Marketing muqovasi yo‘q.",
+      "color": "#772c3c",
+      "background": "#ffedd6",
+      "summary": "Rangli ta’lim ustaxonasi: yumshoq Bree Serif, bosqichli dars yo‘li, ishlaydigan ko‘rgazmali misol va olcha rangli mashq daftari.",
       "use": "Ta’lim, kasb, kurs va ko‘nikmalar",
       "fonts": [
-        "space-grotesk",
-        "dm-sans"
+        "bree-serif",
+        "nunito-sans",
+        "ibm-plex-mono"
       ],
       "file": "ziyo-site/index.html",
       "preview": "previews/15.png",
@@ -98,21 +100,21 @@
       "source_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/ziyo/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/ziyo/manifest.json",
-      "source_fingerprint": "7224c9f2f43bf7246c2db688d18f8ff52e00dd84e65e3f619139b7cd1bd53299",
-      "archive_bytes": 263124,
+      "source_fingerprint": "06d1f233f2c5fd05847f4af59b7d05ae4798f8f53356ddc2f204a912412b4418",
+      "archive_bytes": 375495,
       "status": "featured"
     },
     {
       "id": "16",
       "name": "Meros",
       "category": "Madaniyat / raqamli muzey",
-      "color": "#592443",
-      "background": "#e8dedd",
-      "summary": "Muzey afishasi, keskin masshtab, katta fotografiya va ochiq ekspozitsiya. Asar tafsiloti va shaxsiy kolleksiya.",
+      "color": "#e5f344",
+      "background": "#1d2ed8",
+      "summary": "Yorqin ko‘rgazma afishasi: ultramarin va limon, og‘ir Alfa Slab One, Literata sharhlari va navbatma-navbat joylashgan asarlar.",
       "use": "Muzey, arxiv, me’morchilik va ko‘rgazma",
       "fonts": [
-        "barlow-condensed",
-        "newsreader"
+        "alfa-slab-one",
+        "literata"
       ],
       "file": "meros-site/index.html",
       "preview": "previews/16.png",
@@ -123,8 +125,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/meros/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/meros/manifest.json",
-      "source_fingerprint": "c9c27359b42cc4726cd4224da960acba4217eb592104748fa540189dffb6cbbd",
-      "archive_bytes": 1729582,
+      "source_fingerprint": "8d79b5c153bae2619674db3cfe94b06d4634734e258f0bef985470358c7061cb",
+      "archive_bytes": 1862402,
       "status": "featured"
     },
     {
@@ -132,15 +134,15 @@
       "name": "Samar",
       "file": "samar-site/index.html",
       "category": "Turizm / madaniyat",
-      "color": "#a74e29",
-      "background": "#f6f4ed",
-      "summary": "Buklama shahar atlasi: manzil ro‘yxati, bosiladigan shartli xarita va yonma-yon kun rejasi. Mobil uchun alohida ketma-ketlik.",
+      "color": "#173952",
+      "background": "#f1f4f3",
+      "summary": "Sayohat qaydlari va buklama atlas: Lora kitob serifi, qum rangli shartli xarita, moviy belgilar va chipta kabi kun rejasi.",
       "features": "Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus. · Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.",
       "use": "Turizm, shahar, tarix, madaniyat va mahalliy loyihalar",
       "preview": "previews/02.png",
       "fonts": [
-        "barlow-condensed",
-        "dm-sans"
+        "lora",
+        "source-sans-3"
       ],
       "slug": "samar",
       "context_url": "https://azizbeksafarov.github.io/design/samar/",
@@ -148,8 +150,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/samar/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/samar/manifest.json",
-      "source_fingerprint": "5fc1ca7584943948f3dba260903992fe9fc07192e2ae152091a65928fc320d45",
-      "archive_bytes": 1471665,
+      "source_fingerprint": "66e4e6725af446ce453cfb5869050d38f19858156ab99e45d9ab2365b09d325c",
+      "archive_bytes": 1649248,
       "status": "featured"
     },
     {
@@ -157,14 +159,15 @@
       "name": "Forma",
       "file": "forma-site/index.html",
       "category": "Interyer / konsept katalog",
-      "color": "#506445",
-      "background": "#f9f9f6",
-      "summary": "Mahsulotdan boshlanadigan showroom: yon navigatsiya, bitta katta obyekt va ixcham inventar qatorlari. Detail va savat.",
+      "color": "#8d6544",
+      "background": "#faf9f5",
+      "summary": "Interyer jurnali kabi showroom: nozik Italiana serifi, uch xil balandlikdagi mahsulotlar, sokin Manrope va material fotosuratlari.",
       "features": "Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi. · Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.",
       "use": "Savdo, hunarmandchilik, mebel va mahalliy mahsulotlar",
       "preview": "previews/04.png",
       "fonts": [
-        "dm-sans"
+        "italiana",
+        "manrope"
       ],
       "slug": "forma",
       "context_url": "https://azizbeksafarov.github.io/design/forma/",
@@ -172,8 +175,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/forma/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/forma/manifest.json",
-      "source_fingerprint": "a3696ced9204f77bacf6d578d42007a8f0b2114968173b1422ecf992d471b14f",
-      "archive_bytes": 521095,
+      "source_fingerprint": "57838570c47abced53b46ef8d10870a2ad60fa2707f08b8c32a148ac76d31a24",
+      "archive_bytes": 491779,
       "status": "featured"
     },
     {
