@@ -64,8 +64,8 @@ def build():
   (folder/'index.html').write_text(html,encoding='utf-8',newline='\n')
 
   (folder/'mark.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" fill="{("#285a45" if slug=="samar-site" else "#4b5441")}"/><text x="20" y="29" fill="#fff" font-family="Georgia,serif" font-size="32" text-anchor="middle">{("s" if slug=="samar-site" else "f")}</text></svg>',encoding='utf-8')
-  (folder/'package.json').write_text('{"private":true,"type":"module","scripts":{"test":"node --test model.test.mjs"}}\n',encoding='utf-8')
-  (folder/'README.md').write_text(f'# {title}\n\nStandalone HTML/CSS/JavaScript. No npm install. Run `python -m http.server 8080 --bind 127.0.0.1` here, or root ZIP `node serve.mjs`. Tests: `node --test model.test.mjs`.\n\nEdit index.html content/cards, model.js data/validation, app.js interactions and style.css. Keep card IDs aligned with model data. Read CREDITS.md before replacing photos; preserve attribution. No booking/payment/backend. Record actual task and checks in HANDOFF.md.\n',encoding='utf-8')
+  (folder/'package.json').write_text('{"private":true,"type":"module","scripts":{"test":"node --test *.test.mjs"}}\n',encoding='utf-8')
+  (folder/'README.md').write_text(f'# {title}\n\nStandalone HTML/CSS/JavaScript. No npm install. Run `python -m http.server 8080 --bind 127.0.0.1` here, or root ZIP `node serve.mjs`. Tests: `node --test *.test.mjs`.\n\nEdit index.html content/cards, model.js data/validation, app.js interactions and style.css. Keep card IDs aligned with model data. Read CREDITS.md before replacing photos; preserve attribution. No booking/payment/backend. Record actual task and checks in HANDOFF.md.\n',encoding='utf-8')
 
 if __name__=='__main__':
  build()

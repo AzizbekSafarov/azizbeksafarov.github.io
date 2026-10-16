@@ -134,7 +134,7 @@ def ai_brief(t):
     bloom=t['id']=='10'
     folder='design/material-expressive' if bloom else 'design/si-site' if t['id']=='11' else 'design'
     source_map=(
-      '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: four existing model tests.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
+      '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: baseline model tests; `src/combinations.test.js`: combined filters, task masks and storage boundaries.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
       if bloom else f"- `{t['file']}`: selected page; its custom styles are inline.\n- `shared.css`, `shared.js`: shared layout, dialogs/forms, filters, cart/dashboard interactions.\n- `extra.js`, `lesson-model.js`: Qadam/Spark and additional interactions, where referenced.\n- `assets/fonts/`: local fonts and licenses.\n- `src/shared.js`, `src/extra.js`, `src/lesson-model.js`, `src/material.css`: library source.\n- `build_templates.py`, `extra_templates.py`: original generators; rerunning them overwrites generated edits."
     )
     if t['id']=='11':source_map='- `index.html`: bo‘lim, kartalar, o‘zbekcha matn va dialoglar.\n- `style.css`: O‘zbekiston moviy/oq/yashil palitrasi, oq asosiy fon, to‘q teal matn va responsive holatlar.\n- `app.js`: menyu, filtr, reja, yuklash va harakat sozlamalari.\n- `motion.js`: yagona persistent spring particle field; hover/tap morph, kursor, click to‘lqini va scroll shakllari.\n- `motion.test.mjs`: fizik barqarorlik, kursor, to‘lqin va harakatlanuvchi shakllar.\n- `MOTION.md`: originaldan tekshirilgan animatsiya kontrakti.\n- `model.js`: ID, mazmun, uch qadam va reja validatsiyasi.\n- `model.test.mjs`: saqlanish, toggle va eksport testlari.\n- `fonts/`: mahalliy Instrument shriftlar va OFL.\n- `QA-REPORT.md`: haqiqiy tekshiruv.'
@@ -153,7 +153,7 @@ def ai_brief(t):
     )
     if t['id']=='11':
         technical='Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas butun sahifaga fixed; 1800 desktop / 1500 mobile nuqta, DPR 2, requestAnimationFrame va delta-time spring. SI → Super Intelligence: desktop serpentine text, mobile rotating lettering circle. Pointer repulsion radius 120 px; click expanding wave; spring .045 va damping .84. Scroll shakllarni almashtiradi, zarracha identity/velocity saqlanadi. Hidden tab/pause’da to‘xtaydi; faqat hero offscreen bo‘lgani uchun to‘xtatma. `MOTION.md` ni o‘qi. OS reduced-motion va statik SI fallback saqlansin.'
-        commands='node serve.mjs\n# ZIPdagi site/ ichida alohida terminal:\ncd site\nnode --test model.test.mjs motion.test.mjs'
+        commands='node serve.mjs\n# ZIPdagi site/ ichida alohida terminal:\ncd site\nnode --test *.test.mjs'
         regression='Oq asosiy fon (foydalanuvchi talabi), O‘zbekiston palitrasi, moviy CTA, oq/yashil sirtlar, serif-kursiv/sans farqi va outline holatlar saqlansin. USA bayrog‘iga qaytarma: 3 tasma, 2 ingichka qizil hoshiya, oq yarim oy va 3/4/5 qatorda jami 12 yulduz. Bayroq harakatida ranglari tezlik sabab o‘zgarmasin. Animatsiya matn/tugmani to‘smasin; mobilga majburiy scroll-snap qo‘shilmasin. Pause canvas hamda orbni to‘xtatsin. Favicon brand-icon.svg/PNG Yuksal belgisi; bayroqni favicon qilma. Plan faqat known unique IDlarni oladi; storage event orqali tablar sinxronlashadi, har o‘zgartirish oldidan eng yangi reja o‘qiladi; boshqa storage tozalanmaydi. Detail action footer va Escape/fokus qaytishi saqlansin. Hisob/eksport tanlangan yo‘nalishlarga mos bo‘lsin.'
     flows='\n'.join('- '+x for x in t['flows'])
     return f"""# {t['name']} — tanlovda yangi AI uchun boshlash
@@ -256,7 +256,7 @@ def handoff(t):
 - Manba: {SITE}/design/{t['slug']}/
 - Paket sanasi: {DATE}; source fingerprint: {t['fingerprint']}
 - Holat: oldindan tayyorlangan demo. Hozirgi biletga moslashtirish hali bajarilmagan.
-- Baseline QA: ZIP ichidagi site/QA-REPORT.md; Bloom uchun 4 model testi va build o‘tgan. Bu yangi o‘zgarishlar uchun avtomatik dalil emas.
+- Baseline QA: ZIP ichidagi site/QA-REPORT.md; Kengaytirilgan tekshiruv: /design/QA-EXPANDED.md. Har bir paket o‘z model va kombinatsiya testlarini olib yuradi; markaziy event-fixture sinovlari faqat to‘liq repoda. Bu yangi o‘zgarishlar uchun avtomatik dalil emas.
 
 ## Hozirgi topshiriq
 - Bilet: CURRENT-TASK.md ga yoziladi.
@@ -300,9 +300,9 @@ def source_files(t,templates):
     return {path:portable_bytes(path,data) for path,data in files.items()}
 
 def code_names(t,files):
-    if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','package.json','vite.config.js','download_symbols.py']
-    if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','uzbekistan.svg','brand-icon.svg']
-    return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','CREDITS.md','package.json']
+    if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','src/combinations.test.js','package.json','vite.config.js','download_symbols.py']
+    if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','combinations.test.mjs','uzbekistan.svg','brand-icon.svg']
+    return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','combinations.test.mjs','CREDITS.md','package.json']
 
 def code_text(t,files):
     names=code_names(t,files)
@@ -388,10 +388,11 @@ Python preview manzili: http://127.0.0.1:8080/{kit['entry']}
 CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna statistika, profil, narxlar, formalar va datasetlar haqiqiy xizmat emas. Tashqi CDN runtime’da kerak emas; fonts/licenses ZIP ichida. To‘liq tanlov tadqiqoti barcha dizaynlar paketi `kit.zip` ichida va https://azizbeksafarov.github.io/ustoz/ai.md da.
 """
         extras={'README.md':intro,'AGENTS.md':rules(t),'CLAUDE.md':'# Project context\n\nRead AGENTS.md in this directory, then AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before editing. User task and actual competition rules take priority. Communicate in Uzbek.\n','AI-BRIEF.md':brief,'CURRENT-TASK.md':current,'HANDOFF.md':handoff(t),'CHECKLIST.md':checklist(t),'COMPETITION.md':read(ROOT/'handoff/competition.md'),'kit.json':json.dumps(kit,ensure_ascii=False,indent=2),'serve.mjs':read(ROOT/'handoff/serve.mjs')}
-        if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node --test site/model.test.mjs site/motion.test.mjs`. Read AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before adapting.\n'
+        if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node --test site/*.test.mjs`. Read AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md and HANDOFF.md before adapting.\n'
         if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:extras['README.md']=read(ROOT/(t['slug']+'-site')/'README.md')+'\n\nAt ZIP root run node serve.mjs. Editable files are site/. Read AGENTS.md and AI-BRIEF.md.\n'
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md')
+        extras['LIBRARY-QA.md']=read(ROOT/'QA-EXPANDED.md')
         extras['AGENTS.md']+='\nRead DESIGN-STANDARD.md for the quality bar. Do not reproduce generic blocks, invented proof or decorative interactions that displace the task.\n'
         files.update({k:v.encode() for k,v in extras.items()})
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
@@ -410,9 +411,10 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     archives={name:data for name,data in archives.items() if name.split('/')[0] in {t['slug'] for t in catalog}}
     write(ROOT/'catalog.json',json.dumps({'schema_version':2,'snapshot_date':DATE,'templates':catalog},ensure_ascii=False,indent=2)+'\n')
     links='\n'.join(f"- [{t['name']}]({t['context_url']}) — /design/{t['slug']}/; {t['summary']}" for t in catalog)
-    root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Faol dizaynlar: {len(catalog)}. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Markaziy kontekst]({SITE}/ai.md)\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n\nFoydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
+    root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Faol dizaynlar: {len(catalog)}. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Markaziy kontekst]({SITE}/ai.md)\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n- [Kengaytirilgan testlar]({SITE}/design/QA-EXPANDED.md)\n\nFoydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
     write(ROOT/'ai.md',root_brief)
     archives['START-HERE.md']=root_brief.encode();archives['COMPETITION.md']=read(ROOT/'handoff/competition.md').encode()
+    archives['LIBRARY-QA.md']=read(ROOT/'QA-EXPANDED.md').encode()
     full=ROOT/'handoff/competition-full.md'
     if full.exists():archives['competition/FULL-CONTEXT.md']=portable_bytes('competition/FULL-CONTEXT.md',full.read_bytes())
     for t in catalog:

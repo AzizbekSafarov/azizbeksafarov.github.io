@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-16",
-  "source_fingerprint": "cb835ad2dbba3cffe125779b85da94ec09feaaf6524dbea772172b030c78914f",
+  "source_fingerprint": "d441f3cf67e7b9aa8c9eb04c7809eece3fd4dbef88ef38a2d605c7303b6896b9",
   "name": "Nashr",
   "slug": "nashr",
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "8475b29d444adfe0d9a2fd74bf3670834437f3b1d84a884656fd621f4105c433",
-  "archive_bytes": 1603209,
+  "archive_sha256": "f8670f34110d0878f12456a00c220e320a22c23fbc08731721ecbdc8f8451932",
+  "archive_bytes": 1606979,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -49,6 +49,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/model.test.mjs.txt"
     },
     {
+      "path": "combinations.test.mjs",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/combinations.test.mjs.txt",
+      "sha256": "04b450633437b3f67e6b3020f588321f93329e8a6b9518e640fc4b79caa70edd",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/combinations.test.mjs.txt"
+    },
+    {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/nashr/files/CREDITS.md.txt",
       "sha256": "18ed6920837047390742939ebd7171a5b151b41e4db2b2059278123e6abb2b43",
@@ -57,7 +63,7 @@
     {
       "path": "package.json",
       "url": "https://azizbeksafarov.github.io/design/nashr/files/package.json.txt",
-      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36",
+      "sha256": "9ae9f62055edc78d6f868e95fd346eec46ebf84cf6e387118699c6b49a0409b8",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/package.json.txt"
     }
   ],
@@ -69,8 +75,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 5438,
-      "sha256": "43a769e80bebfa5c58abd7027336df8a325b4a936d4583537c22bb8dd4829e53"
+      "bytes": 5434,
+      "sha256": "6d7c06933998f0f48c2f66a884bf194b9efcef91efd36829ab82b96e58207a18"
     },
     {
       "path": "CHECKLIST.md",
@@ -104,18 +110,23 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 1068,
-      "sha256": "c2da298915d48ab5d1c28a23a56e9e3a784875261687c6219d04c03177daf019"
+      "bytes": 1195,
+      "sha256": "4627239b6fa85b6ecff24c8183e3c5074676e107b022b89a0995f0a4e5924a76"
+    },
+    {
+      "path": "LIBRARY-QA.md",
+      "bytes": 5104,
+      "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
     },
     {
       "path": "README.md",
-      "bytes": 1168,
-      "sha256": "35f1cb9246e85df38f113ccbb5bc78600477fd7c2c11aad42e2fb0843a8d04cf"
+      "bytes": 1164,
+      "sha256": "96d23f75c261b2d603824d254d006d747ded48d90f8e8bb9654ddbace75a74f1"
     },
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "b1316c3eb9700d9d1900784c659918e097fbff491384dabd03f158a8a75d4c51"
+      "sha256": "ab2c80249dd2b2dafdb7022d4123020d5bd6733f1f59cf0ec0e1f0a057dbf79c"
     },
     {
       "path": "serve.mjs",
@@ -129,18 +140,23 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 2515,
-      "sha256": "832d8766f7762daad2a99dc76f938b476c05fff156c48ad738ad561f400e4ae5"
+      "bytes": 3204,
+      "sha256": "82d702186825914761f8bccac6ad9532c63cec3861a402bb8bc5587ef05a384c"
     },
     {
       "path": "site/README.md",
-      "bytes": 1076,
-      "sha256": "31b41fdd2e06d833a98f225c5ea03855b77304063d69d92e099ed54d4686ed5c"
+      "bytes": 1072,
+      "sha256": "42e96824a9a91b04c7aebf409f54913414f9338fdde808f6f64f28e8dcf78a60"
     },
     {
       "path": "site/app.js",
       "bytes": 3500,
       "sha256": "1f386ca4e9ba8bf7303e1ae1f5166638e65bb2ada948738bbe83557942a7f16a"
+    },
+    {
+      "path": "site/combinations.test.mjs",
+      "bytes": 1403,
+      "sha256": "04b450633437b3f67e6b3020f588321f93329e8a6b9518e640fc4b79caa70edd"
     },
     {
       "path": "site/fonts/archivo-OFL.txt",
@@ -209,8 +225,8 @@
     },
     {
       "path": "site/package.json",
-      "bytes": 81,
-      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36"
+      "bytes": 83,
+      "sha256": "9ae9f62055edc78d6f868e95fd346eec46ebf84cf6e387118699c6b49a0409b8"
     },
     {
       "path": "site/style.css",

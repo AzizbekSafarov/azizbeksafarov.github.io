@@ -1,4 +1,4 @@
-import {data,normalize,report,csv} from './model.js?v=b11ffd97f5';
+import {data,normalize,report,csv} from './model.js?v=d5b2701a45';
 const SLUG='hisob';
 document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];

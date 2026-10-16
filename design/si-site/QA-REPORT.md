@@ -32,3 +32,10 @@ Favicon and interaction audit:
 - Downloaded the remaining laboratory plan through the real browser download flow and read the file back: correct title, description and three steps. The temporary anchor is now connected to the document and its Blob URL has a longer release window.
 - At actual 320×568 viewport, scrolling the menu kept the close button visible (top 22 px). Filter → two learning results → detail → save → Escape restored the card opener; count became 2/4 and console errors were empty.
 - Initialize visibility from document.hidden and wait for active fonts before measuring particle masks. Touch pointer type is retained from pointerdown for click-event compatibility. Explicit Continue now enables motion when the OS originally requested static display; physical touch and OS preference switching were not device-tested.
+
+
+## Expanded regression verification — 2026-10-16
+
+The complete library now has 544 automated tests (544 pass, zero fail), including per-template combination tests. Run all local `*.test.mjs` files for HTML starters; Bloom uses `npm run test`. The central app event fixture is only included in the complete repository.
+
+All ten pages were rechecked at seven widths (320–1440 px): no document overflow, duplicate IDs or unloaded visible images. See the [expanded report](https://azizbeksafarov.github.io/design/QA-EXPANDED.md) for reproduced fixes, actual browser scenarios, rerun commands and limitations. This is baseline evidence for this revision, not a guarantee for later edits.

@@ -1,11 +1,11 @@
 # Ziyo — editable source snapshot
 
-Source fingerprint: `06d1f233f2c5fd05847f4af59b7d05ae4798f8f53356ddc2f204a912412b4418`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `7b11855a317598039cc76a971d5ee14c25c2954cc4f2bf5aecf0fe39f5560f75`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 
 ```html
-<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Rangli ta’lim ustaxonasi: yumshoq Bree Serif, bosqichli dars yo‘li, ishlaydigan ko‘rgazmali misol va olcha rangli mashq daftari."><meta name="theme-color" content="#ffedd6"><title>Ziyo — Ta’lim / interaktiv dars</title><link rel="icon" href="mark.svg?v=4dfc3aa135"><script>document.documentElement.classList.add('font-loading')</script><script type="module" src="app.js?v=b44cd003ea"></script><meta name="composition" content="task-specific-v3"><link rel="preload" href="fonts/breeserif.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/nunitosans.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=7c4549c852"><link rel="stylesheet" href="layout.css?v=c7b0a22c8e"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="studio-header"><a class="learn-logo" href="#main">ziyo<span>✳</span></a><p>O‘quv studiyasi <span>/ Veb asoslari</span></p><a href="../ziyo/">AI yo‘riqnomasi ↗</a></header><main id="main" class="studio-main"><aside class="lesson-nav"><p class="eyebrow">KURS DASTURI</p><h2>Veb asoslari</h2><p class="course-note">Bir tushuncha. Bir misol.<br>Bir amaliy tekshiruv.</p><div class="progress-track"><span id="progress-fill"></span></div><p id="progress-label">0 / 3 modul tugallangan</p><div id="lesson-tabs" role="group" aria-label="Modul tanlash"></div><div class="course-end"><span>✳</span><p>Shoshilmang.<br>Tushunib davom eting.</p></div><p class="progress-note">Natija shu brauzerda saqlanadi. Bu qisqa mashq, sertifikat berilmaydi.</p></aside><article class="lesson-content"><div class="lesson-breadcrumb">USTAXONA <span>→</span> BIRINCHI VEBSAHIFA</div><p class="eyebrow" id="lesson-tag"></p><h1 id="lesson-title"></h1><p id="lesson-text"></p><div class="visual-caption">G‘oyani sahifada sinab ko‘ring</div><div class="learning-visual" id="learning-visual"><div class="demo-webpage" id="demo-webpage"><span id="demo-label">HTML · SAHIFA TUZILISHI</span><h3 id="demo-title">Mening birinchi loyiham</h3><button type="button" id="demo-action">Sinab ko‘rish</button><output id="demo-result" aria-live="polite">Tugma amalni boshlab beradi.</output></div></div><div class="code-heading"><span>KO‘RIB CHIQING</span><span>Namuna kodi</span></div><pre><code id="lesson-code"></code></pre><div class="lesson-tip"><span aria-hidden="true">↳</span><p>Kodni yodlashdan boshlamang. Har bir qator sahifada nima vazifa bajarishini tushuntirib ko‘ring.</p></div><a class="exercise-link" href="#practice">Tushunganingizni tekshiring →</a></article><aside class="practice" id="practice" aria-label="Dars mashqi"><div class="practice-heading"><span class="practice-dot"></span> BILIMNI SINASH</div><p class="practice-intro">Navbat sizga.</p><form id="quiz"><fieldset><legend id="question"></legend><div id="answers"></div></fieldset><button class="btn" type="submit">Javobni tekshirish <span>→</span></button><p id="feedback" role="status"></p></form><button class="next-lesson" id="next" hidden>Keyingi modul →</button><p class="practice-note">To‘g‘ri javobdan keyin modul tugallangan deb belgilanadi.</p></aside><p id="status" class="live" role="status"></p></main><footer class="demo-footer wrap"><p>Original o‘quv mashqlari bilan mustaqil ta’lim namunasi. Progress faqat shu brauzerda.</p><nav aria-label="Qo‘shimcha havolalar"><a href="../">Dizaynlar ↗</a><a href="../ziyo/">AI konteksti ↗</a><a href="CREDITS.md">Manbalar ↗</a></nav></footer></body></html>
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Rangli ta’lim ustaxonasi: yumshoq Bree Serif, bosqichli dars yo‘li, ishlaydigan ko‘rgazmali misol va olcha rangli mashq daftari."><meta name="theme-color" content="#ffedd6"><title>Ziyo — Ta’lim / interaktiv dars</title><link rel="icon" href="mark.svg?v=4dfc3aa135"><script>document.documentElement.classList.add('font-loading')</script><script type="module" src="app.js?v=bd191914d4"></script><meta name="composition" content="task-specific-v3"><link rel="preload" href="fonts/breeserif.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/nunitosans.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=7c4549c852"><link rel="stylesheet" href="layout.css?v=c7b0a22c8e"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="studio-header"><a class="learn-logo" href="#main">ziyo<span>✳</span></a><p>O‘quv studiyasi <span>/ Veb asoslari</span></p><a href="../ziyo/">AI yo‘riqnomasi ↗</a></header><main id="main" class="studio-main"><aside class="lesson-nav"><p class="eyebrow">KURS DASTURI</p><h2>Veb asoslari</h2><p class="course-note">Bir tushuncha. Bir misol.<br>Bir amaliy tekshiruv.</p><div class="progress-track"><span id="progress-fill"></span></div><p id="progress-label">0 / 3 modul tugallangan</p><div id="lesson-tabs" role="group" aria-label="Modul tanlash"></div><div class="course-end"><span>✳</span><p>Shoshilmang.<br>Tushunib davom eting.</p></div><p class="progress-note">Natija shu brauzerda saqlanadi. Bu qisqa mashq, sertifikat berilmaydi.</p></aside><article class="lesson-content"><div class="lesson-breadcrumb">USTAXONA <span>→</span> BIRINCHI VEBSAHIFA</div><p class="eyebrow" id="lesson-tag"></p><h1 id="lesson-title"></h1><p id="lesson-text"></p><div class="visual-caption">G‘oyani sahifada sinab ko‘ring</div><div class="learning-visual" id="learning-visual"><div class="demo-webpage" id="demo-webpage"><span id="demo-label">HTML · SAHIFA TUZILISHI</span><h3 id="demo-title">Mening birinchi loyiham</h3><button type="button" id="demo-action">Sinab ko‘rish</button><output id="demo-result" aria-live="polite">Tugma amalni boshlab beradi.</output></div></div><div class="code-heading"><span>KO‘RIB CHIQING</span><span>Namuna kodi</span></div><pre><code id="lesson-code"></code></pre><div class="lesson-tip"><span aria-hidden="true">↳</span><p>Kodni yodlashdan boshlamang. Har bir qator sahifada nima vazifa bajarishini tushuntirib ko‘ring.</p></div><a class="exercise-link" href="#practice">Tushunganingizni tekshiring →</a></article><aside class="practice" id="practice" aria-label="Dars mashqi"><div class="practice-heading"><span class="practice-dot"></span> BILIMNI SINASH</div><p class="practice-intro">Navbat sizga.</p><form id="quiz"><fieldset><legend id="question"></legend><div id="answers"></div></fieldset><button class="btn" type="submit">Javobni tekshirish <span>→</span></button><p id="feedback" role="status"></p></form><button class="next-lesson" id="next" hidden>Keyingi modul →</button><p class="practice-note">To‘g‘ri javobdan keyin modul tugallangan deb belgilanadi.</p></aside><p id="status" class="live" role="status"></p></main><footer class="demo-footer wrap"><p>Original o‘quv mashqlari bilan mustaqil ta’lim namunasi. Progress faqat shu brauzerda.</p><nav aria-label="Qo‘shimcha havolalar"><a href="../">Dizaynlar ↗</a><a href="../ziyo/">AI konteksti ↗</a><a href="CREDITS.md">Manbalar ↗</a></nav></footer></body></html>
 ```
 
 ## site/style.css
@@ -46,7 +46,7 @@ let opener,openedId;function openDialog(button){opener=button;openedId=button.da
 window.addEventListener('storage',e=>{if(e.key===storageKey||e.key===null){render();if($('#reader')?.open&&typeof syncSave==='function')syncSave();}});
 let selected='structure';function render(){const ids=read();$('#progress-label').textContent=ids.length+' / '+data.length+' modul tugallangan';$('#progress-fill').style.width=(ids.length/data.length*100)+'%';$('#lesson-tabs').innerHTML=data.map((p,i)=>`<button data-lesson="${p.id}" aria-pressed="${p.id===selected}"><span>${ids.includes(p.id)?'✓':i+1}</span>${p.name}</button>`).join('');}
 function lesson(){const p=data.find(p=>p.id===selected);$('#lesson-tag').textContent=p.tag+' · '+p.minutes;$('#lesson-title').textContent=p.title;$('#lesson-text').textContent=p.text;$('#lesson-code').textContent=p.example;showLesson(p);$('#question').textContent=p.question;$('#answers').innerHTML=p.answers.map((a,i)=>`<label><input type="radio" name="answer" value="${i}" required><span></span></label>`).join('');$$('#answers label span').forEach((s,i)=>s.textContent=p.answers[i]);$('#feedback').textContent='';$('#feedback').removeAttribute('data-result');$('#next').hidden=true;render();}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-lesson]');if(b){selected=b.dataset.lesson;lesson();document.querySelector('[data-lesson="'+selected+'"]').focus();}});$('#quiz').addEventListener('submit',e=>{e.preventDefault();const choice=new FormData(e.currentTarget).get('answer');if(choice===null){$('#feedback').textContent='Avval javobni tanlang.';return;}const p=data.find(p=>p.id===selected),correct=grade(selected,Number(choice));$('#feedback').dataset.result=correct?'correct':'wrong';$('#feedback').textContent=(correct?'To‘g‘ri. ':'Yana urinib ko‘ring. ')+p.explanation;if(correct){commit([...read(),selected]);render();$('#next').hidden=data.at(-1).id===selected;}});$('#next').addEventListener('click',()=>{selected=data[data.findIndex(p=>p.id===selected)+1].id;lesson();$('#lesson-title').setAttribute('tabindex','-1');$('#lesson-title').focus();});lesson();
+document.addEventListener('click',e=>{const b=e.target.closest('[data-lesson]');if(b){selected=b.dataset.lesson;lesson();document.querySelector('[data-lesson="'+selected+'"]').focus();}});$('#quiz').addEventListener('submit',e=>{e.preventDefault();$('#next').hidden=true;const choice=new FormData(e.currentTarget).get('answer');if(choice===null){$('#feedback').textContent='Avval javobni tanlang.';return;}const p=data.find(p=>p.id===selected),correct=grade(selected,Number(choice));$('#feedback').dataset.result=correct?'correct':'wrong';$('#feedback').textContent=(correct?'To‘g‘ri. ':'Yana urinib ko‘ring. ')+p.explanation;if(correct){commit([...read(),selected]);render();$('#next').hidden=data.at(-1).id===selected;}});$('#next').addEventListener('click',()=>{selected=data[data.findIndex(p=>p.id===selected)+1].id;lesson();$('#lesson-title').setAttribute('tabindex','-1');$('#lesson-title').focus();});lesson();
 
 ```
 
@@ -132,6 +132,39 @@ test('each quiz rejects wrong answers and accepts only exact correct answer',()=
 
 ```
 
+## site/combinations.test.mjs
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import * as model from './model.js';
+const bad=[null,undefined,false,true,0,-1,NaN,Infinity,'','unknown',{}, {ids:[]}, ['unknown',null,0,{},['nested']]];
+
+for(const [i,value] of bad.entries())test('invalid persisted selection '+i,()=>{
+ assert.deepEqual(model.normalize(value),[]);
+});
+test('selection sanitization is ordered, idempotent, immutable and bounded',()=>{
+ const ids=model.data.map(p=>p.id),raw=[...ids.reverse(),...ids,'unknown',null];const snapshot=JSON.stringify(raw);
+ const clean=model.normalize(raw);assert.deepEqual(clean,ids);assert.deepEqual(model.normalize(clean),clean);
+ assert.equal(JSON.stringify(raw),snapshot);assert.notEqual(clean,raw);assert.ok(clean.length<=model.data.length);
+});
+test('all content IDs, images and answers are internally consistent',()=>{
+ assert.equal(new Set(model.data.map(p=>p.id)).size,model.data.length);
+ for(const item of model.data){assert.match(item.id,/^[a-z][a-z0-9-]*$/);assert.ok(item.name.trim());
+  if(item.image)assert.ok(readFileSync(new URL('images/'+item.image,import.meta.url)).length>0);
+  if(item.source)assert.equal(new URL(item.source).protocol,'https:');
+  if(item.answers){assert.ok(item.answers.length>1);assert.ok(Number.isInteger(item.correct));assert.ok(item.correct>=0&&item.correct<item.answers.length);}
+ }
+});
+
+for(const item of model.data)for(const answer of [-1,0,1,2,3,null,undefined,'1',true,NaN,Infinity,1.5])test('quiz '+item.id+' / '+String(answer),()=>{
+ assert.equal(model.grade(item.id,answer),answer===item.correct);
+});
+test('unknown lesson cannot be graded',()=>{for(const id of ['',null,undefined,'unknown','__proto__'])assert.equal(model.grade(id,1),false);});
+
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -152,7 +185,7 @@ bree-serif, nunito-sans, ibm-plex-mono. Acquired from the official google/fonts 
 ## site/package.json
 
 ```json
-{"private":true,"type":"module","scripts":{"test":"node --test model.test.mjs"}}
+{"private": true, "type": "module", "scripts": {"test": "node --test *.test.mjs"}}
 
 ```
 

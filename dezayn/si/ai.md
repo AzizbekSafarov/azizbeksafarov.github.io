@@ -1,6 +1,6 @@
 # Yuksal · SI — tanlovda yangi AI uchun boshlash
 
-Snapshot: 2026-10-16; source fingerprint: `4c2f7bdcb31e33fd`. Readable page: https://azizbeksafarov.github.io/design/si/
+Snapshot: 2026-10-16; source fingerprint: `736da8848f1a9bf7`. Readable page: https://azizbeksafarov.github.io/design/si/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -56,6 +56,7 @@ Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [motion.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.test.mjs.txt)
 - [model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.js.txt)
 - [model.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.test.mjs.txt)
+- [combinations.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/combinations.test.mjs.txt)
 - [uzbekistan.svg](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/uzbekistan.svg.txt)
 - [brand-icon.svg](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/brand-icon.svg.txt)
 
@@ -67,7 +68,7 @@ Oldindan yig‘ilgan nusxa uchun npm yoki internet shart emas: ZIP ildizida `nod
 node serve.mjs
 # ZIPdagi site/ ichida alohida terminal:
 cd site
-node --test model.test.mjs motion.test.mjs
+node --test *.test.mjs
 ```
 
 ## 6. Moslashtirish va xatoni o‘zi tuzatish tartibi

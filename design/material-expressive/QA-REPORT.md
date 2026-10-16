@@ -22,3 +22,10 @@ The latest dark terracotta palette was visually verified at 320 px: all four cho
 Custom navigation, cards, hero and segmented controls use shared M3 roles; the controls listed in README use official Material Web components. This is an independent M3 implementation with browser-local storage. It does not claim complete M3 Expressive coverage. Reduced-motion behavior remains implemented for custom motion and Material dialogs.
 
 Deployment target: `https://azizbeksafarov.github.io/design/material-expressive/dist/`, registered as gallery variant 10. This report records local verification before publishing the current revision; it does not confirm a completed deployment.
+
+
+## Expanded regression verification — 2026-10-16
+
+The complete library now has 544 automated tests (544 pass, zero fail), including per-template combination tests. Run all local `*.test.mjs` files for HTML starters; Bloom uses `npm run test`. The central app event fixture is only included in the complete repository.
+
+All ten pages were rechecked at seven widths (320–1440 px): no document overflow, duplicate IDs or unloaded visible images. See the [expanded report](https://azizbeksafarov.github.io/design/QA-EXPANDED.md) for reproduced fixes, actual browser scenarios, rerun commands and limitations. This is baseline evidence for this revision, not a guarantee for later edits.

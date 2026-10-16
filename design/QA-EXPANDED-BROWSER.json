@@ -1,0 +1,1455 @@
+{
+  "date": "2026-10-16",
+  "responsive": [
+    {
+      "route": "/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    }
+  ],
+  "followupFlows": [
+    {
+      "site": "bloom",
+      "case": "empty submit then typing clears validation",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "light palette 0",
+      "overflow": 0,
+      "selected": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      "theme": "light",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "light palette 1",
+      "overflow": 0,
+      "selected": [
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      "theme": "light",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "light palette 2",
+      "overflow": 0,
+      "selected": [
+        "false",
+        "false",
+        "true",
+        "false"
+      ],
+      "theme": "light",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "light palette 3",
+      "overflow": 0,
+      "selected": [
+        "false",
+        "false",
+        "false",
+        "true"
+      ],
+      "theme": "light",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "dark palette 0",
+      "overflow": 0,
+      "selected": [
+        "true",
+        "false",
+        "false",
+        "false"
+      ],
+      "theme": "dark",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "dark palette 1",
+      "overflow": 0,
+      "selected": [
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      "theme": "dark",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "dark palette 2",
+      "overflow": 0,
+      "selected": [
+        "false",
+        "false",
+        "true",
+        "false"
+      ],
+      "theme": "dark",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "dark palette 3",
+      "overflow": 0,
+      "selected": [
+        "false",
+        "false",
+        "false",
+        "true"
+      ],
+      "theme": "dark",
+      "ok": true
+    },
+    {
+      "site": "bloom",
+      "case": "three tasks complete, reload, done filter",
+      "result": "2 ta loyiha",
+      "ok": true
+    },
+    {
+      "site": "orbita",
+      "case": "select/save iss",
+      "ok": true
+    },
+    {
+      "site": "orbita",
+      "case": "select/save webb",
+      "ok": true
+    },
+    {
+      "site": "orbita",
+      "case": "select/save voyager",
+      "ok": true
+    },
+    {
+      "site": "orbita",
+      "case": "ISS pause/resume and reload three saved missions",
+      "paused": "paused",
+      "running": "running",
+      "ok": true
+    },
+    {
+      "site": "samar",
+      "case": "three stops reordered at 23:59",
+      "ok": true
+    },
+    {
+      "site": "samar",
+      "case": "plan and midnight time survive reload",
+      "ok": true
+    },
+    {
+      "site": "samar",
+      "case": "empty plan disables download",
+      "ok": true
+    },
+    {
+      "site": "yuksal",
+      "case": "filter Barchasi",
+      "result": "4 ta tashabbus",
+      "ok": true
+    },
+    {
+      "site": "yuksal",
+      "case": "filter O‘rganish",
+      "result": "2 ta tashabbus",
+      "ok": true
+    },
+    {
+      "site": "yuksal",
+      "case": "filter Yaratish",
+      "result": "1 ta tashabbus",
+      "ok": true
+    },
+    {
+      "site": "yuksal",
+      "case": "filter Hamkorlik",
+      "result": "1 ta tashabbus",
+      "ok": true
+    },
+    {
+      "site": "yuksal",
+      "case": "motion toggle",
+      "ok": true
+    },
+    {
+      "site": "yuksal",
+      "case": "mobile menu Escape and focus restore",
+      "ok": true
+    }
+  ],
+  "finalResponsive": [
+    {
+      "route": "/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/forma-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/samar-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/orbita-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/nashr-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/meros-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/hisob-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/si-site/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 1440,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 1024,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 768,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 600,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 390,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 360,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 360
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "requestedWidth": 320,
+      "duplicateIds": [],
+      "mainCount": 1,
+      "missingImages": [],
+      "overflow": 0,
+      "width": 320
+    }
+  ]
+}

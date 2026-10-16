@@ -21,7 +21,7 @@ npm ci
 npm run dev
 ```
 
-After edits, run `npm run build`; `npm run preview` serves the production build. Run `npm run test` for four model checks, including Uzbek apostrophe normalization. All runtime fonts, icons, scripts and CSS are local; there is no runtime CDN dependency. `dist/` supports ordinary static hosting and subdirectories.
+After edits, run `npm run build`; `npm run preview` serves the production build. Run `npm run test` for all model and combination checks, including Uzbek apostrophes, filter intersections, task masks, validation and persistence boundaries. All runtime fonts, icons, scripts and CSS are local; there is no runtime CDN dependency. `dist/` supports ordinary static hosting and subdirectories.
 
 Deployment target: [GitHub Pages gallery variant 10](https://azizbeksafarov.github.io/design/material-expressive/dist/). Publish the rebuilt `dist/` and updated source documentation through the homepage repository. See `QA-REPORT.md` for the current verified scope.
 

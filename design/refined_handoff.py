@@ -2,7 +2,7 @@
 def brief(t,site,raw,date):
  slug=t['slug'];name=t['name'];folder='samar-site' if t['id']=='02' else 'forma-site'
  specific=t['look']+' model.js ma’lumot va hisobni, app.js saqlash, dialog, fokus va eksportni boshqaradi. Narxlar va vaqtlar namunaviy. Bron/to‘lov amalga oshirilmaydi. Katta marketing hero yoki bir xil kartalar gridiga qaytarma.'
- files=['index.html','style.css','layout.css','app.js','model.js','model.test.mjs','CREDITS.md','package.json']
+ files=['index.html','style.css','layout.css','app.js','model.js','model.test.mjs','combinations.test.mjs','CREDITS.md','package.json']
  flows='\n'.join('- '+s for s in t['flows'])
  return f'''# {name} — yangi AI bilan davom ettirish
 
@@ -38,7 +38,7 @@ index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va 
 
 ## Local run va tekshiruv
 
-Npm paket o‘rnatish shart emas. ZIP ildizida `node serve.mjs`; http://127.0.0.1:8080/ . Node bo‘lmasa: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Model test: `node --test site/model.test.mjs`.
+Npm paket o‘rnatish shart emas. ZIP ildizida `node serve.mjs`; http://127.0.0.1:8080/ . Node bo‘lmasa: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Model test: `node --test site/*.test.mjs`.
 
 {flows}
 

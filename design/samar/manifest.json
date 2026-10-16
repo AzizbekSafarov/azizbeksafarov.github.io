@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-16",
-  "source_fingerprint": "5952daf8c662e8b5fb2ee7155dd0f1bc54a00012f61c9195167ef14238f01396",
+  "source_fingerprint": "3c5214b35fa334bef8a8a3c20eacf064502c22b93025e33a22d0b91d3155cf15",
   "name": "Samar",
   "slug": "samar",
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "774efa19d95ba4fe7c41f5500c0e1f5c99e3ea29f75be71d437365957a780c70",
-  "archive_bytes": 1649700,
+  "archive_sha256": "9b2a8ecceb80025a975fc0e6e566562088bcc41455444a45b67f4ff2ed58a59d",
+  "archive_bytes": 1653631,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -49,6 +49,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/model.test.mjs.txt"
     },
     {
+      "path": "combinations.test.mjs",
+      "url": "https://azizbeksafarov.github.io/design/samar/files/combinations.test.mjs.txt",
+      "sha256": "c56f2c230d0f37ba242029c272860c14c36e21e95687fcd4b632f9a0e50e5e19",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/combinations.test.mjs.txt"
+    },
+    {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/samar/files/CREDITS.md.txt",
       "sha256": "01157b4c7790638295b30672b5f70259bb947a4bff1c57fdd1f594249421d9c1",
@@ -57,7 +63,7 @@
     {
       "path": "package.json",
       "url": "https://azizbeksafarov.github.io/design/samar/files/package.json.txt",
-      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36",
+      "sha256": "9ae9f62055edc78d6f868e95fd346eec46ebf84cf6e387118699c6b49a0409b8",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/package.json.txt"
     }
   ],
@@ -69,8 +75,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6242,
-      "sha256": "ebbf7f90117641b9bfa7d885ab933db2190321ff2afb806baeea823da9b34030"
+      "bytes": 6389,
+      "sha256": "b334c33b06ec169523eab9b9c4c9c12afa1ddd135846fa8948ca27dbcdb4d024"
     },
     {
       "path": "CHECKLIST.md",
@@ -104,18 +110,23 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 1068,
-      "sha256": "59c39ae1d0fb3428ce67f74acab3659c03e4c04022be0d75c02ee9748f66dab4"
+      "bytes": 1195,
+      "sha256": "49c40cada99a8dde2627fd3004407c71e09aae8659605e2a1be7e58391cdec43"
+    },
+    {
+      "path": "LIBRARY-QA.md",
+      "bytes": 5104,
+      "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
     },
     {
       "path": "README.md",
-      "bytes": 1293,
-      "sha256": "40edf6c7b8376971e7a01761523ac20cb7b4f7855f1006a5fa0e66b701043740"
+      "bytes": 1289,
+      "sha256": "12b961cec690929e9a502d9abbd2f1e32e5ce277359e9383236ad965cd7f86ca"
     },
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "fd2a4e85361628f2ff79b2406b8e3a7621366aaf8d81fb817f25d076959af0f6"
+      "sha256": "db243862895d513834ecfb05826c5dd22f1c2fb44deccabc1769b847c962f4f0"
     },
     {
       "path": "serve.mjs",
@@ -129,18 +140,23 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 3284,
-      "sha256": "a16a17afe424c9c1389da048e0a79667c63490628691a2aa11602afae9400f60"
+      "bytes": 3973,
+      "sha256": "c267370558d78472d9208367a397cca7af580c76d9a4b676ac9f7f6ea0524795"
     },
     {
       "path": "site/README.md",
-      "bytes": 1201,
-      "sha256": "32ccd9eb3c37cb0ce009d6b7f8564dd06d0db7ca36ec1901c529708b9ca9d0dc"
+      "bytes": 1197,
+      "sha256": "abcd9aece4836efc8f0861670772c08553c4943af5200cb7bf4a5b816f074354"
     },
     {
       "path": "site/app.js",
       "bytes": 5056,
       "sha256": "d2c275b678c6fb0ef163f29430ebbe76ae98636ac70d303f5b0a3020524eb3b8"
+    },
+    {
+      "path": "site/combinations.test.mjs",
+      "bytes": 1800,
+      "sha256": "c56f2c230d0f37ba242029c272860c14c36e21e95687fcd4b632f9a0e50e5e19"
     },
     {
       "path": "site/fonts/lora-OFL.txt",
@@ -204,8 +220,8 @@
     },
     {
       "path": "site/package.json",
-      "bytes": 81,
-      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36"
+      "bytes": 83,
+      "sha256": "9ae9f62055edc78d6f868e95fd346eec46ebf84cf6e387118699c6b49a0409b8"
     },
     {
       "path": "site/style.css",

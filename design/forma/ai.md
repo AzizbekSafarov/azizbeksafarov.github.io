@@ -1,6 +1,6 @@
 # Forma — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-16; source fingerprint `c45c68780784a51f`.
+Snapshot: 2026-10-16; source fingerprint `d70b2629bf2d247d`.
 Entry: https://azizbeksafarov.github.io/design/forma/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -32,6 +32,7 @@ ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Ish kodi site
 - [app.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/app.js.txt)
 - [model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/model.js.txt)
 - [model.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/model.test.mjs.txt)
+- [combinations.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/combinations.test.mjs.txt)
 - [CREDITS.md](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/CREDITS.md.txt)
 - [package.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/package.json.txt)
 
@@ -39,7 +40,7 @@ index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va 
 
 ## Local run va tekshiruv
 
-Npm paket o‘rnatish shart emas. ZIP ildizida `node serve.mjs`; http://127.0.0.1:8080/ . Node bo‘lmasa: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Model test: `node --test site/model.test.mjs`.
+Npm paket o‘rnatish shart emas. ZIP ildizida `node serve.mjs`; http://127.0.0.1:8080/ . Node bo‘lmasa: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Model test: `node --test site/*.test.mjs`.
 
 - Kategoriya → mos buyumlar; detail dialog → savatga qo‘shish → fokus qaytishi.
 - Savat → miqdor +/- → aniq jami → olish → bo‘sh holat. 20 ta chegara; buzilgan storage.

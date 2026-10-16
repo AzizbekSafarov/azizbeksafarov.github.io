@@ -1,6 +1,6 @@
 # Bloom · Material Design 3 — editable source snapshot
 
-Source fingerprint: `639ecb5a0932b26a482c4dd4881c5044ea35553c342000320dc292d841427871`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `6b30d418241639aabbc045b2080d12a46dea3bc88e9de54ee620020b3a9b7f5a`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/src/main.jsx
 
@@ -215,7 +215,7 @@ export const initialProjects=[
 {id:'portfolio',title:'Ishlaringiz so‘zlasin',description:'Eng yaxshi loyihalaringiz uchun tiniq va tartibli portfolio.',category:'Dizayn',tone:'lavender',art:'stack',saved:false,tasks:[{text:'Loyihalarni saralash',done:true},{text:'Sahifalarni yig‘ish',done:true},{text:'Taqdimotni tekshirish',done:true}]}
 ];
 export function progress(project){return project.tasks.filter(task=>task.done).length/project.tasks.length}
-export function validateProjects(value){if(!Array.isArray(value)||value.length>200)return null;const ids=new Set();for(const p of value){if(!p||typeof p.id!=='string'||ids.has(p.id)||typeof p.title!=='string'||!p.title.trim()||p.title.length>80||typeof p.description!=='string'||p.description.length>200||!categories.slice(1).includes(p.category)||!['blue','peach','green','lavender'].includes(p.tone)||!['orbit','flower','spark','stack'].includes(p.art)||typeof p.saved!=='boolean'||!Array.isArray(p.tasks)||p.tasks.length!==3||p.tasks.some(t=>!t||typeof t.text!=='string'||typeof t.done!=='boolean'))return null;ids.add(p.id)}return value}
+export function validateProjects(value){if(!Array.isArray(value)||value.length>200)return null;const ids=new Set();for(const p of value){if(!p||typeof p.id!=='string'||ids.has(p.id)||typeof p.title!=='string'||!p.title.trim()||p.title.length>80||typeof p.description!=='string'||p.description.length>200||!categories.slice(1).includes(p.category)||!['blue','peach','green','lavender'].includes(p.tone)||!['orbit','flower','spark','stack'].includes(p.art)||typeof p.saved!=='boolean'||!Array.isArray(p.tasks)||p.tasks.length!==3||p.tasks.some(t=>!t||typeof t.text!=='string'||!t.text.trim()||t.text.length>200||typeof t.done!=='boolean'))return null;ids.add(p.id)}return value}
 export function normalizeSearch(text){return text.toLocaleLowerCase('uz').normalize('NFKC').replace(/[‘’ʻʼ`´]/g,"'").trim()}
 export function visibleProjects(projects,{view='all',category='Hammasi',query='',sort='recent'}={}){const normalized=normalizeSearch(query);const filtered=projects.filter(p=>(view!=='saved'||p.saved)&&(view!=='done'||progress(p)===1)&&(category==='Hammasi'||p.category===category)&&normalizeSearch(`${p.title} ${p.description} ${p.category}`).includes(normalized));return sort==='name'?[...filtered].sort((a,b)=>a.title.localeCompare(b.title,'uz')):filtered}
 export function createProject({title,description,category},id){const cleanTitle=title.trim(),cleanDescription=description.trim();if(!cleanTitle||cleanTitle.length>80||cleanDescription.length>200||!categories.slice(1).includes(category))throw new Error('Invalid project');const visual={'Ta’lim':['blue','orbit'],'Dizayn':['peach','flower'],'Texnologiya':['green','spark']}[category];return{id,title:cleanTitle,description:cleanDescription||'Yangi g‘oyani ishlaydigan loyihaga aylantiring.',category,tone:visual[0],art:visual[1],saved:false,tasks:[{text:'G‘oyani aniq yozish',done:false},{text:'Birinchi variantni yaratish',done:false},{text:'Natijani tekshirish',done:false}]}}
@@ -234,10 +234,75 @@ test('Uzbek search treats keyboard and typographic apostrophes equally',()=>{for
 
 ```
 
+## site/src/combinations.test.js
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initialProjects,categories,visibleProjects,validateProjects,createProject,progress} from './model.js';
+
+for(const view of ['all','saved','done'])for(const category of categories)for(const query of ['', 'AI', "TA'LIM", 'missing'])for(const sort of ['recent','name']) {
+  test('Bloom filter combination '+JSON.stringify({view,category,query,sort}),()=>{
+    const before=JSON.stringify(initialProjects),result=visibleProjects(initialProjects,{view,category,query,sort});
+    assert.equal(JSON.stringify(initialProjects),before);
+    // Explicit catalog oracle: empty results cannot accidentally make the
+    // per-result assertions below pass vacuously.
+    const searchIds={'':['kasb','brand','ai','portfolio'],'AI':['ai'],"TA'LIM":['kasb'],'missing':[]}[query];
+    const expected=searchIds.filter(id=>
+      (view!=='saved'||id==='brand')&&(view!=='done'||id==='portfolio')&&
+      (category==='Hammasi'||({'kasb':'Ta’lim','brand':'Dizayn','ai':'Texnologiya','portfolio':'Dizayn'})[id]===category));
+    assert.deepEqual(result.map(p=>p.id).sort(),[...expected].sort());
+    for(const p of result){
+      if(view==='saved')assert.equal(p.saved,true);
+      if(view==='done')assert.equal(p.tasks.every(t=>t.done),true);
+      if(category!=='Hammasi')assert.equal(p.category,category);
+    }
+    if(query==='missing')assert.equal(result.length,0);
+    if(query==='AI')assert.deepEqual(result.map(p=>p.id),view==='saved'||view==='done'||!['Hammasi','Texnologiya'].includes(category)?[]:['ai']);
+    if(sort==='name')for(let i=1;i<result.length;i++)assert.ok(result[i-1].title.localeCompare(result[i].title,'uz')<=0);
+    if(query===''&&view==='all'&&category==='Hammasi')assert.equal(result.length,4);
+  });
+}
+
+for(let mask=0;mask<8;mask++)test('Bloom progress for task mask '+mask,()=>{
+  const p=structuredClone(initialProjects[0]);p.tasks.forEach((t,i)=>t.done=!!(mask&(1<<i)));
+  assert.equal(progress(p),[...mask.toString(2)].filter(c=>c==='1').length/3);
+  assert.equal(visibleProjects([p],{view:'done'}).length,mask===7?1:0);
+});
+
+for(const category of categories.slice(1))test('new project / '+category,()=>{
+  const p=createProject({title:'  <img src=x>  ',description:'  Example  ',category},'safe-id');
+  assert.equal(p.title,'<img src=x>');assert.equal(p.description,'Example');
+  assert.equal(progress(p),0);assert.equal(p.saved,false);assert.equal(p.tasks.length,3);
+  assert.ok(validateProjects([p]));
+});
+
+for(const patch of [{title:''},{title:' '},{title:'a'.repeat(81)},{description:'a'.repeat(201)},{category:'unknown'},{saved:1},{tone:'bad'},{art:'bad'},{tasks:[]},{tasks:[null,null,null]}]) {
+  test('Bloom rejects corrupt persisted field '+JSON.stringify(patch),()=>{
+    assert.equal(validateProjects([{...structuredClone(initialProjects[0]),...patch}]),null);
+  });
+}
+
+test('Bloom project count and text lengths accept exact limits',()=>{
+  const p=createProject({title:'a'.repeat(80),description:'b'.repeat(200),category:categories[1]},'id');
+  const projects=Array.from({length:200},(_,i)=>({...structuredClone(p),id:'p'+i}));
+  assert.ok(validateProjects(projects));assert.equal(validateProjects([...projects,{...p,id:'extra'}]),null);
+});
+
+test('Bloom persisted tasks must have readable bounded labels',()=>{
+  for(const text of ['', ' ', 'a'.repeat(201)]){
+    const p=structuredClone(initialProjects[0]);p.tasks[0].text=text;
+    assert.equal(validateProjects([p]),null);
+  }
+});
+
+```
+
 ## site/package.json
 
 ```json
-{"name":"bloom-material-expressive","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 127.0.0.1 --port 8767 --strictPort","build":"vite build","preview":"vite preview --host 127.0.0.1 --port 8767 --strictPort","test":"node --test src/model.test.js"},"dependencies":{"@material/material-color-utilities":"^0.4.0","@material/web":"^2.5.0","motion":"^12.35.0","react":"^19.2.0","react-dom":"^19.2.0"},"devDependencies":{"vite":"^7.3.1"}}
+{"name":"bloom-material-expressive","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 127.0.0.1 --port 8767 --strictPort","build":"vite build","preview":"vite preview --host 127.0.0.1 --port 8767 --strictPort","test":"node --test src/*.test.js"},"dependencies":{"@material/material-color-utilities":"^0.4.0","@material/web":"^2.5.0","motion":"^12.35.0","react":"^19.2.0","react-dom":"^19.2.0"},"devDependencies":{"vite":"^7.3.1"}}
+
 ```
 
 ## site/vite.config.js

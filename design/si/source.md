@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `4c2f7bdcb31e33fd9516d7e6c3eab7a6346af87744ee95d3e143391457bae9fa`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `736da8848f1a9bf77d7ecfdb74c46d32ce965ccdd3b7f50a85692adaedc0ba75`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 
@@ -445,6 +445,22 @@ test('persisted plans reject invalid input, unknown IDs and duplicates',()=>{ass
 test('storage reads tolerate broken JSON and sanitize external updates',()=>{for(const raw of [null,'','{','null','{}','42','"savod"'])assert.deepEqual(parsePlan(raw),[]);assert.deepEqual(parsePlan('["savod","bad","savod","ilm"]'),['savod','ilm']);});
 test('toggling is reversible and never introduces unknown choices',()=>{assert.deepEqual(togglePlan(['savod'],'lab'),['savod','lab']);assert.deepEqual(togglePlan(['savod','lab'],'savod'),['lab']);assert.deepEqual(togglePlan(['savod'],'bad'),['savod']);});
 test('download content follows selected order and contains actual exercise steps',()=>{const text=planText(['lab','ilm']);assert.ok(text.indexOf('G‘oyalar laboratoriyasi')<text.indexOf('Ilmga ochiq eshik'));assert.ok(text.includes('Bitta foydalanuvchida sinang'));assert.ok(!text.includes('SI savodxonligi'));assert.ok(!text.includes('undefined'));});
+
+```
+
+## site/combinations.test.mjs
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initiatives,parsePlan,validPlan,togglePlan,planText} from './model.js';
+for(let mask=0;mask<16;mask++)test('Yuksal plan subset '+mask,()=>{
+  const ids=initiatives.filter((_,i)=>mask&(1<<i)).map(p=>p.id),input=[...ids,...ids,'bad',null];
+  assert.deepEqual(validPlan(input),ids);assert.deepEqual(parsePlan(JSON.stringify(input)),ids);
+  for(const item of initiatives){assert.deepEqual([...togglePlan(togglePlan(ids,item.id),item.id)].sort(),[...ids].sort());}
+  const text=planText(ids);assert.ok(!text.includes('undefined'));
+  for(const p of initiatives){assert.equal(text.includes(p.title),ids.includes(p.id));if(ids.includes(p.id))for(const step of p.steps)assert.ok(text.includes(step));}
+});
 
 ```
 

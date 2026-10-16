@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-16",
+  "packages": [
+    {
+      "slug": "forma",
+      "files": 2,
+      "tests": 49,
+      "pass": true
+    },
+    {
+      "slug": "samar",
+      "files": 2,
+      "tests": 93,
+      "pass": true
+    },
+    {
+      "slug": "orbita",
+      "files": 2,
+      "tests": 17,
+      "pass": true
+    },
+    {
+      "slug": "nashr",
+      "files": 2,
+      "tests": 17,
+      "pass": true
+    },
+    {
+      "slug": "meros",
+      "files": 2,
+      "tests": 17,
+      "pass": true
+    },
+    {
+      "slug": "ziyo",
+      "files": 2,
+      "tests": 54,
+      "pass": true
+    },
+    {
+      "slug": "hisob",
+      "files": 2,
+      "tests": 75,
+      "pass": true
+    },
+    {
+      "slug": "si",
+      "files": 3,
+      "tests": 25,
+      "pass": true
+    },
+    {
+      "slug": "bloom",
+      "files": 2,
+      "tests": 123,
+      "pass": true
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-16",
-  "source_fingerprint": "639ecb5a0932b26a482c4dd4881c5044ea35553c342000320dc292d841427871",
+  "source_fingerprint": "6b30d418241639aabbc045b2080d12a46dea3bc88e9de54ee620020b3a9b7f5a",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "d28536de3e80fd43ce50c5619fba754f9931645eb862a315316ecbb0402556ba",
-  "archive_bytes": 967091,
+  "archive_sha256": "ff906e2cf12afbf7baf25cc5837f6db54291fbd4df28b7a0a1645067915061f3",
+  "archive_bytes": 971635,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -27,7 +27,7 @@
     {
       "path": "src/model.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/model.js.txt",
-      "sha256": "19e1433f59a00f6c4bdea0d2d9200187374695b7aead261f7358a87542877177",
+      "sha256": "4bde39e858ba127f396b65fd70b6a193e3791ec163db2c7dfad83399ecfd789c",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.js.txt"
     },
     {
@@ -37,9 +37,15 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.test.js.txt"
     },
     {
+      "path": "src/combinations.test.js",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/combinations.test.js.txt",
+      "sha256": "c4377ef1a351ca5988daf6a4b4e7994a76d80aba15482162985e56bbb7c63bc8",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/combinations.test.js.txt"
+    },
+    {
       "path": "package.json",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/package.json.txt",
-      "sha256": "75493151c7685d63785f2af59342592729aeae08b27cacfc87a0da8b0d3f3efb",
+      "sha256": "8ab8c0621312aa8b382e3ec105871259d24ead1b86cc9167c236a6036662644f",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package.json.txt"
     },
     {
@@ -63,8 +69,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 10325,
-      "sha256": "9fbdc1f61a910f3f69b46021ef801cc5e639481350c9c3dce82bf0386d9e0cff"
+      "bytes": 10558,
+      "sha256": "d46b3ee16d4e3c82c4297a86a2033a5e4c263b51ae6153fc8db48024269dacb0"
     },
     {
       "path": "CHECKLIST.md",
@@ -98,8 +104,13 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 1089,
-      "sha256": "1093548dd9561e036ad38bc08f81e846190b33cb987314abaae4343b90ab4123"
+      "bytes": 1216,
+      "sha256": "534f17e4d7609bd9e56b57fd4bb6fa9b693239a7e7a47a94793cfedf1ef2b05e"
+    },
+    {
+      "path": "LIBRARY-QA.md",
+      "bytes": 5104,
+      "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
     },
     {
       "path": "README.md",
@@ -109,7 +120,7 @@
     {
       "path": "kit.json",
       "bytes": 230,
-      "sha256": "78153a5614c6ae4dc126a6afa409a6e17baa4f0f0df51bcb11b0660a8ead57f3"
+      "sha256": "beec32fe3d0fa5adcdf51806618b837d7df18df90ef7890b8a29924e02b79b56"
     },
     {
       "path": "serve.mjs",
@@ -128,13 +139,13 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 2778,
-      "sha256": "d7c9b3b536217757d89109160542e5f1599411ca21607114a63f44453537a855"
+      "bytes": 3467,
+      "sha256": "61b636b8504da77e60562fc66d6815268e31acbca50e9d8f216885f3de782bb9"
     },
     {
       "path": "site/README.md",
-      "bytes": 4225,
-      "sha256": "01998f69ceaf1f3e55c72c38903ae196f7512aae680d063f6905258bbdf63bb8"
+      "bytes": 4300,
+      "sha256": "dada0c893ae9270162d12d629d62a209efb104a76acc72e08b0e43960fa5096a"
     },
     {
       "path": "site/dist/Material-Color-Utilities-LICENSE.txt",
@@ -157,14 +168,14 @@
       "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
     },
     {
+      "path": "site/dist/assets/index-C9A_vr2X.js",
+      "bytes": 739006,
+      "sha256": "16bcaff2983260391c820b50d81a5637a17a7558884a9a77de55e5f6d2e6f0d1"
+    },
+    {
       "path": "site/dist/assets/index-D1Rt40jH.css",
       "bytes": 34454,
       "sha256": "ef817f5c4c7660fe4ccc1d139244e21ffa78b2ebdf369c7e8e92dc9c77f8b2c1"
-    },
-    {
-      "path": "site/dist/assets/index-DnV60z8K.js",
-      "bytes": 738971,
-      "sha256": "da882248c70cba41b9dac45100ebc0033e90a1d980d94b62b98a81a1ba0536a4"
     },
     {
       "path": "site/dist/assets/material-symbols-CopIADRp.woff2",
@@ -224,7 +235,7 @@
     {
       "path": "site/dist/index.html",
       "bytes": 469,
-      "sha256": "f1f5b79698a1914f59badb3993c460a0f9358381c3891ddb440509d332a3be1b"
+      "sha256": "e81a4dd7319bddfccc768f58c34004178e72d3e538708c3cfadd60c1634c6113"
     },
     {
       "path": "site/download_symbols.py",
@@ -243,8 +254,8 @@
     },
     {
       "path": "site/package.json",
-      "bytes": 463,
-      "sha256": "75493151c7685d63785f2af59342592729aeae08b27cacfc87a0da8b0d3f3efb"
+      "bytes": 460,
+      "sha256": "8ab8c0621312aa8b382e3ec105871259d24ead1b86cc9167c236a6036662644f"
     },
     {
       "path": "site/public/Material-Color-Utilities-LICENSE.txt",
@@ -290,6 +301,11 @@
       "path": "site/public/fonts/google-sans-flex.css",
       "bytes": 803,
       "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185"
+    },
+    {
+      "path": "site/src/combinations.test.js",
+      "bytes": 3490,
+      "sha256": "c4377ef1a351ca5988daf6a4b4e7994a76d80aba15482162985e56bbb7c63bc8"
     },
     {
       "path": "site/src/fonts/Roboto-OFL.txt",
@@ -348,8 +364,8 @@
     },
     {
       "path": "site/src/model.js",
-      "bytes": 3441,
-      "sha256": "19e1433f59a00f6c4bdea0d2d9200187374695b7aead261f7358a87542877177"
+      "bytes": 3476,
+      "sha256": "4bde39e858ba127f396b65fd70b6a193e3791ec163db2c7dfad83399ecfd789c"
     },
     {
       "path": "site/src/model.test.js",

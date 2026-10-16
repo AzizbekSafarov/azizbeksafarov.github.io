@@ -1,1 +1,1 @@
-{"name":"yuksal-si","private":true,"type":"module","scripts":{"test":"node --test model.test.mjs motion.test.mjs"}}
+{"name":"yuksal-si","private":true,"type":"module","scripts":{"test":"node --test *.test.mjs"}}

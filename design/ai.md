@@ -18,5 +18,6 @@
 - [Tanlangan 9 source ZIP va tanlov matnlari](https://azizbeksafarov.github.io/design/kit.zip)
 - [Machine-readable faol katalog](https://azizbeksafarov.github.io/design/catalog.json)
 - [Sifat standarti](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md)
+- [Kengaytirilgan testlar](https://azizbeksafarov.github.io/design/QA-EXPANDED.md)
 
 Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.

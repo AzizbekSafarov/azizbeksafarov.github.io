@@ -6,7 +6,7 @@ Independent Uzbek initiative portal inspired by https://www.si.gov/, inspected o
 
 No npm install or build is needed. Serve this folder with `python -m http.server 8080 --bind 127.0.0.1` and open http://127.0.0.1:8080/ . Use HTTP for ES modules, rather than double-clicking HTML. The downloadable AI starter also includes `node serve.mjs` at ZIP root.
 
-Run `node --test model.test.mjs motion.test.mjs` in this folder. Nine tests cover plan validation/export/storage parsing and particle spring stability, pointer repulsion, click waves, long frames, animated procedural shapes, and Uzbekistan flag bands/crescent/12-star composition.
+Run `node --test *.test.mjs` in this folder. Model, motion and combination tests cover plan validation/export/storage parsing and particle spring stability, pointer repulsion, click waves, long frames, animated procedural shapes, and Uzbekistan flag bands/crescent/12-star composition.
 
 ## Editable files
 

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-16",
-  "source_fingerprint": "4c2f7bdcb31e33fd9516d7e6c3eab7a6346af87744ee95d3e143391457bae9fa",
+  "source_fingerprint": "736da8848f1a9bf77d7ecfdb74c46d32ce965ccdd3b7f50a85692adaedc0ba75",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "e2ec0d5515f262a340f7a6308d0d5469002dd0061059766d8efde2e81c47d832",
-  "archive_bytes": 179544,
+  "archive_sha256": "8ce898a93f6f377b01dd96b05254ef24ca8888e9fa658a5d7622b4780b871ce0",
+  "archive_bytes": 183036,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -55,6 +55,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.test.mjs.txt"
     },
     {
+      "path": "combinations.test.mjs",
+      "url": "https://azizbeksafarov.github.io/design/si/files/combinations.test.mjs.txt",
+      "sha256": "72139c18a2f099fe650ba92fb46a1afb3eb4f48e46320af358eda1f7c84cea3f",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/combinations.test.mjs.txt"
+    },
+    {
       "path": "uzbekistan.svg",
       "url": "https://azizbeksafarov.github.io/design/si/files/uzbekistan.svg.txt",
       "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35",
@@ -75,8 +81,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 10997,
-      "sha256": "c0401b1c75aabccf40e373673c2dbfdeb6eb678060b24fa813109330fc893080"
+      "bytes": 11125,
+      "sha256": "1c4507c559fe0f7f11fc4c9fe9a92d09d4d9425781c3ec202fba6c7d0594aac3"
     },
     {
       "path": "CHECKLIST.md",
@@ -110,18 +116,23 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 1072,
-      "sha256": "5b757d2ce82ee54634b7ee1689cf02410771c393c8925864505666a2c64270d7"
+      "bytes": 1199,
+      "sha256": "dd4a6e03b9715e71c4cace2477822496a84078f55661dbbcdb1a3b33e7bc9f95"
+    },
+    {
+      "path": "LIBRARY-QA.md",
+      "bytes": 5104,
+      "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
     },
     {
       "path": "README.md",
-      "bytes": 3514,
-      "sha256": "ea216300ef177cc6586ff6a9f99d13304967554c3a1dd1c77575423250dd862b"
+      "bytes": 3494,
+      "sha256": "73439c6a711c67af918561c239941ce84cbc39d201d561561e728ba39f0589c7"
     },
     {
       "path": "kit.json",
       "bytes": 208,
-      "sha256": "b0dd6dd1a54f99175581867ceb814dcaf0cdee44f9919e3c554cd52847b67ea7"
+      "sha256": "d052292c4b23055ffcd3c7b2cd45eb05ee3b5d5fc6023c3b19348cb255ac1e1f"
     },
     {
       "path": "serve.mjs",
@@ -135,13 +146,13 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 5305,
-      "sha256": "423c0e87800476eb39d6d5a5a9ba24bf9155f8f9329c0d784d75267595a29a62"
+      "bytes": 5994,
+      "sha256": "4b3f597cf82a0a126c504f1911f472ca39d2ed38290dba17857bd4763bf78a59"
     },
     {
       "path": "site/README.md",
-      "bytes": 3247,
-      "sha256": "591842be99912356e36e33f2366d299a7ce01d72cc6f116715cb0aa80c189930"
+      "bytes": 3252,
+      "sha256": "d60f341ea1b9b65f2a820666199ca8d83894f64d22ec70c51e0ba87f81da39f5"
     },
     {
       "path": "site/app.js",
@@ -157,6 +168,11 @@
       "path": "site/brand-icon.svg",
       "bytes": 356,
       "sha256": "4c59b0beca2e8c2fbf20a0d18d089ad6aea02febb5aaba2fe7852c3354af8425"
+    },
+    {
+      "path": "site/combinations.test.mjs",
+      "bytes": 777,
+      "sha256": "72139c18a2f099fe650ba92fb46a1afb3eb4f48e46320af358eda1f7c84cea3f"
     },
     {
       "path": "site/download_fonts.py",
@@ -245,8 +261,8 @@
     },
     {
       "path": "site/package.json",
-      "bytes": 116,
-      "sha256": "e92ddd9860983b4abbbc98f347dd2705c48ee0250e67bf39cc8a54d8ef0d0425"
+      "bytes": 96,
+      "sha256": "2934486c400c79d2766026eab48f0f57bf6d8ede05583deaf8a01e9f71ab967b"
     },
     {
       "path": "site/style.css",

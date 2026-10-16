@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-16",
-  "source_fingerprint": "c45c68780784a51f4793adaf469673c2d5aaede65d7569fcb521a36c18010f21",
+  "source_fingerprint": "d70b2629bf2d247dd48215b575c53856229daa6cc988049285c3751fa21eb108",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "c02e9ce3e0f14dc640aa6691b27898d6bb24f157a30ea41001f57e87e76d4851",
-  "archive_bytes": 475018,
+  "archive_sha256": "74c2eaa46adf8fd52df2c312889cfde1a8772ec4d2d73d1a598c9507b053c659",
+  "archive_bytes": 479073,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -49,6 +49,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/model.test.mjs.txt"
     },
     {
+      "path": "combinations.test.mjs",
+      "url": "https://azizbeksafarov.github.io/design/forma/files/combinations.test.mjs.txt",
+      "sha256": "b09cddb8533d8e6a4f77cb2eeb63d53d9cc41fce67699016184152a935e2d434",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/combinations.test.mjs.txt"
+    },
+    {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/forma/files/CREDITS.md.txt",
       "sha256": "4b028cad257d7c908984c5f01db6a83592b307e2c8684276c70fa77d73c72fb2",
@@ -57,7 +63,7 @@
     {
       "path": "package.json",
       "url": "https://azizbeksafarov.github.io/design/forma/files/package.json.txt",
-      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36",
+      "sha256": "9ae9f62055edc78d6f868e95fd346eec46ebf84cf6e387118699c6b49a0409b8",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/package.json.txt"
     }
   ],
@@ -69,8 +75,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6216,
-      "sha256": "8461e51864b0e0db20a37a0a990ac3e42eb285f29d61b5607b732d7bd5b7d329"
+      "bytes": 6363,
+      "sha256": "6ca6580f4858572b24ea8fd731500d2086b906c147340e41108ae26d96341f39"
     },
     {
       "path": "CHECKLIST.md",
@@ -104,18 +110,23 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 1068,
-      "sha256": "ad947384efbea2cd549b92fb6ca69609aee8e3f8b13063ebab1a8fb5764f9630"
+      "bytes": 1195,
+      "sha256": "d24565891c4cce445cbaadeeb79b2a5886e3932c6086bcb247cd1b40b3b164fc"
+    },
+    {
+      "path": "LIBRARY-QA.md",
+      "bytes": 5104,
+      "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
     },
     {
       "path": "README.md",
-      "bytes": 1284,
-      "sha256": "519a6a2ec867942bc3a11fcb25a477f0904bbd3c207c1cca6f1bc6362d07c2f0"
+      "bytes": 1280,
+      "sha256": "f2e4a6e59bf70b3dbb76f2cd8a8654dc9220290e5fa2f921df97a474930e4c0e"
     },
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "c3b0bb18117e4f139ef5c0a434f2b90b7765b4200d6d8fcfe0ef53bcf1959509"
+      "sha256": "80baefe17e8a41d433fb7b9fdf4dd94785399289280ddfd109bf55df491da637"
     },
     {
       "path": "serve.mjs",
@@ -129,18 +140,23 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 3284,
-      "sha256": "a16a17afe424c9c1389da048e0a79667c63490628691a2aa11602afae9400f60"
+      "bytes": 3973,
+      "sha256": "c267370558d78472d9208367a397cca7af580c76d9a4b676ac9f7f6ea0524795"
     },
     {
       "path": "site/README.md",
-      "bytes": 1192,
-      "sha256": "9f0c1be3ea457ac84e489fce308f103c7695ba5e9f2c84ab7cc12794e7267c78"
+      "bytes": 1188,
+      "sha256": "42195d6a160cc0f10bb8aaf9bfca19f8309db19b3393dbddabcc2be7f80946d9"
     },
     {
       "path": "site/app.js",
       "bytes": 4870,
       "sha256": "817d286e70170e13fea3eea3807bedfbca2f1ca80966cf972f9be7b39ab71cee"
+    },
+    {
+      "path": "site/combinations.test.mjs",
+      "bytes": 2209,
+      "sha256": "b09cddb8533d8e6a4f77cb2eeb63d53d9cc41fce67699016184152a935e2d434"
     },
     {
       "path": "site/fonts/manrope-OFL.txt",
@@ -194,8 +210,8 @@
     },
     {
       "path": "site/package.json",
-      "bytes": 81,
-      "sha256": "19f691876e42fd35b04931db2741b7f7eb9c930fbf7adfbe47f3e4000c7fef36"
+      "bytes": 83,
+      "sha256": "9ae9f62055edc78d6f868e95fd346eec46ebf84cf6e387118699c6b49a0409b8"
     },
     {
       "path": "site/style.css",

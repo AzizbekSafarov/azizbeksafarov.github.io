@@ -1,6 +1,6 @@
 # Bloom · Material Design 3 — tanlovda yangi AI uchun boshlash
 
-Snapshot: 2026-10-16; source fingerprint: `639ecb5a0932b26a`. Readable page: https://azizbeksafarov.github.io/design/bloom/
+Snapshot: 2026-10-16; source fingerprint: `6b30d418241639aa`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -40,7 +40,7 @@ Source archive va matn bir snapshotdan yaratilgan. ZIPni ochgach `AGENTS.md`, `A
 - `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.
 - `src/style.css`: shared M3 tokens, typography, responsive layout and control states.
 - `src/model.js`: sample data, categories, validation, search and progress.
-- `src/model.test.js`: four existing model tests.
+- `src/model.test.js`: baseline model tests; `src/combinations.test.js`: combined filters, task masks and storage boundaries.
 - `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.
 - `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.
 
@@ -49,6 +49,7 @@ Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [src/style.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/style.css.txt)
 - [src/model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.js.txt)
 - [src/model.test.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.test.js.txt)
+- [src/combinations.test.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/combinations.test.js.txt)
 - [package.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package.json.txt)
 - [vite.config.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/vite.config.js.txt)
 - [download_symbols.py](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/download_symbols.py.txt)

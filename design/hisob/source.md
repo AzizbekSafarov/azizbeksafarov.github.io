@@ -1,11 +1,11 @@
 # Hisob — editable source snapshot
 
-Source fingerprint: `65dfcbe128a4fa2ef64aa5da898dd50d8ccca9574bb0b68350df356b5ef33be1`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `8ce63ef4d2f920dd8ac9d8811eb8a358e74e08ef3156332ed6a046790d4930af`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 
 ```html
-<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ma’lumotlar ish stoli: Public Sans xizmat interfeysi, ixcham Plex raqamlari, birlashgan ko‘rsatkich bandi va aniq jadval."><meta name="theme-color" content="#edf0f2"><title>Hisob — Ma’lumot / tahlil paneli</title><link rel="icon" href="mark.svg?v=9320b39c9a"><script>document.documentElement.classList.add('font-loading')</script><script type="module" src="app.js?v=de9b28baef"></script><link rel="preload" href="fonts/publicsans.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/ibmplexsanscondensed.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=bdd2f0202c"><link rel="stylesheet" href="layout.css?v=00cbaedd9d"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><div class="data-shell"><aside class="data-sidebar"><a class="data-logo" href="#main">▥ hisob</a><p class="eyebrow">ISH MAYDONI</p><a class="side-active" href="#main" aria-current="page">▤ Umumiy ko‘rinish</a><a href="#table">≡ Hududlar jadvali</a><a href="../hisob/">↗ AI yo‘riqnomasi</a><div class="side-bottom"><span class="sample-dot"></span> NAMUNAVIY DATASET<br><a href="../">← Dizaynlar</a></div></aside><main id="main" class="data-main"><header class="data-top"><span>Tahlil / Umumiy ko‘rinish</span><span class="eyebrow">LOKAL TAHLIL · v1.0</span></header><div class="data-heading"><div><h1>Hududlar hisoboti</h1><p>Hududlar bo‘yicha o‘quv mashg‘ulotlari. Barcha sonlar namuna.</p></div><button class="btn primary" id="export">CSV eksport ↓</button></div><div class="data-toolbar"><div class="filter-bar" aria-label="Hisobot davri" role="group"><button data-period="7" aria-pressed="true">7 kun</button><button data-period="30" aria-pressed="false">30 kun</button></div><span id="period-label">Oxirgi 7 kun · namuna</span></div><section class="metrics" aria-label="Asosiy ko‘rsatkichlar"><article><p>Ishtiroklar</p><strong id="metric-total">0</strong><span>Davr davomida</span></article><article><p>Oldingi davrga nisbatan</p><strong id="metric-change">0%</strong><span>Bir xil namuna modeli</span></article><article><p>Faol hududlar</p><strong>04</strong><span>Birlashtirilgan dataset</span></article></section><section class="chart-panel"><div class="panel-heading"><h2>Ishtirok dinamikasi</h2><span>● Ishtiroklar</span></div><div class="chart"><svg id="chart" viewBox="0 0 900 245" role="img" aria-labelledby="chart-title"><title id="chart-title">Davr bo‘yicha ishtiroklar</title><g stroke="#dfe5ed"><path d="M45 25H875M45 85H875M45 145H875M45 205H875"/></g><path id="chart-area" fill="#e3ebff"/><path id="chart-line" fill="none" stroke="#174cea" stroke-width="3"/><g id="chart-dots" fill="#174cea"></g><g id="chart-labels" fill="#5c677b" font-size="11"></g></svg></div><p id="chart-summary" class="chart-summary"></p></section><section id="table" class="table-panel"><div class="panel-heading"><h2>Hududlar kesimida</h2><label class="search-label">Hudud qidirish<input id="search" type="search" placeholder="Masalan, Samarqand"></label></div><div class="table-scroll"><table><thead><tr><th scope="col"><button data-sort="name">Hudud ↕</button></th><th scope="col"><button data-sort="total">Ishtiroklar ↕</button></th><th scope="col">Ulush</th><th scope="col">Oldingi davr</th></tr></thead><tbody id="rows"></tbody></table></div><p class="table-note" id="result-count"></p></section><p class="live" id="status" role="status"></p><p class="data-note">Bu o‘quv uchun yaratilgan tahlil namunasi. Haqiqiy odamlar, tadbirlar yoki rasmiy statistika bilan bog‘liq emas.</p></main></div><footer class="demo-footer wrap"><p>Namuna ma’lumotlar bilan mustaqil tahlil paneli. Rasmiy statistika emas.</p><nav aria-label="Qo‘shimcha havolalar"><a href="../">Dizaynlar ↗</a><a href="../hisob/">AI konteksti ↗</a><a href="CREDITS.md">Manbalar ↗</a></nav></footer></body></html>
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ma’lumotlar ish stoli: Public Sans xizmat interfeysi, ixcham Plex raqamlari, birlashgan ko‘rsatkich bandi va aniq jadval."><meta name="theme-color" content="#edf0f2"><title>Hisob — Ma’lumot / tahlil paneli</title><link rel="icon" href="mark.svg?v=9320b39c9a"><script>document.documentElement.classList.add('font-loading')</script><script type="module" src="app.js?v=46b31b056d"></script><link rel="preload" href="fonts/publicsans.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/ibmplexsanscondensed.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=bdd2f0202c"><link rel="stylesheet" href="layout.css?v=00cbaedd9d"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><div class="data-shell"><aside class="data-sidebar"><a class="data-logo" href="#main">▥ hisob</a><p class="eyebrow">ISH MAYDONI</p><a class="side-active" href="#main" aria-current="page">▤ Umumiy ko‘rinish</a><a href="#table">≡ Hududlar jadvali</a><a href="../hisob/">↗ AI yo‘riqnomasi</a><div class="side-bottom"><span class="sample-dot"></span> NAMUNAVIY DATASET<br><a href="../">← Dizaynlar</a></div></aside><main id="main" class="data-main"><header class="data-top"><span>Tahlil / Umumiy ko‘rinish</span><span class="eyebrow">LOKAL TAHLIL · v1.0</span></header><div class="data-heading"><div><h1>Hududlar hisoboti</h1><p>Hududlar bo‘yicha o‘quv mashg‘ulotlari. Barcha sonlar namuna.</p></div><button class="btn primary" id="export">CSV eksport ↓</button></div><div class="data-toolbar"><div class="filter-bar" aria-label="Hisobot davri" role="group"><button data-period="7" aria-pressed="true">7 kun</button><button data-period="30" aria-pressed="false">30 kun</button></div><span id="period-label">Oxirgi 7 kun · namuna</span></div><section class="metrics" aria-label="Asosiy ko‘rsatkichlar"><article><p>Ishtiroklar</p><strong id="metric-total">0</strong><span>Davr davomida</span></article><article><p>Oldingi davrga nisbatan</p><strong id="metric-change">0%</strong><span>Bir xil namuna modeli</span></article><article><p>Faol hududlar</p><strong>04</strong><span>Birlashtirilgan dataset</span></article></section><section class="chart-panel"><div class="panel-heading"><h2>Ishtirok dinamikasi</h2><span>● Ishtiroklar</span></div><div class="chart"><svg id="chart" viewBox="0 0 900 245" role="img" aria-labelledby="chart-title"><title id="chart-title">Davr bo‘yicha ishtiroklar</title><g stroke="#dfe5ed"><path d="M45 25H875M45 85H875M45 145H875M45 205H875"/></g><path id="chart-area" fill="#e3ebff"/><path id="chart-line" fill="none" stroke="#174cea" stroke-width="3"/><g id="chart-dots" fill="#174cea"></g><g id="chart-labels" fill="#5c677b" font-size="11"></g></svg></div><p id="chart-summary" class="chart-summary"></p></section><section id="table" class="table-panel"><div class="panel-heading"><h2>Hududlar kesimida</h2><label class="search-label">Hudud qidirish<input id="search" type="search" placeholder="Masalan, Samarqand"></label></div><div class="table-scroll"><table><thead><tr><th scope="col"><button data-sort="name">Hudud ↕</button></th><th scope="col"><button data-sort="total">Ishtiroklar ↕</button></th><th scope="col">Ulush</th><th scope="col">Oldingi davr</th></tr></thead><tbody id="rows"></tbody></table></div><p class="table-note" id="result-count"></p></section><p class="live" id="status" role="status"></p><p class="data-note">Bu o‘quv uchun yaratilgan tahlil namunasi. Haqiqiy odamlar, tadbirlar yoki rasmiy statistika bilan bog‘liq emas.</p></main></div><footer class="demo-footer wrap"><p>Namuna ma’lumotlar bilan mustaqil tahlil paneli. Rasmiy statistika emas.</p><nav aria-label="Qo‘shimcha havolalar"><a href="../">Dizaynlar ↗</a><a href="../hisob/">AI konteksti ↗</a><a href="CREDITS.md">Manbalar ↗</a></nav></footer></body></html>
 ```
 
 ## site/style.css
@@ -33,7 +33,7 @@ Source fingerprint: `65dfcbe128a4fa2ef64aa5da898dd50d8ccca9574bb0b68350df356b5ef
 ## site/app.js
 
 ```javascript
-import {data,normalize,report,csv} from './model.js?v=b11ffd97f5';
+import {data,normalize,report,csv} from './model.js?v=d5b2701a45';
 const SLUG='hisob';
 document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -114,7 +114,8 @@ export const data=[
   }
 ];
 export function normalize(value){return Array.isArray(value)?[...new Set(value.filter(id=>data.some(p=>p.id===id)))]:[];}
-export function report(period=7,query='',sort='total',direction=-1){const factor=period===30?4:1,rows=data.map(p=>({...p,total:p.values.reduce((a,b)=>a+b,0)*factor,previous:p.previous*factor}));const total=rows.reduce((n,p)=>n+p.total,0),previous=rows.reduce((n,p)=>n+p.previous,0);return {total,previous,series:data[0].values.map((_,i)=>data.reduce((n,p)=>n+p.values[i]*factor,0)),rows:rows.filter(p=>p.name.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase())).sort((a,b)=>direction*(sort==='name'?a.name.localeCompare(b.name):a.total-b.total))};}
+export function normalizeSearch(value){return String(value??'').normalize('NFKC').toLocaleLowerCase('uz').replace(/[\u2018\u2019\u02bb\u02bc`\u00b4']/g,'').trim();}
+export function report(period=7,query='',sort='total',direction=-1){const factor=period===30?4:1,rows=data.map(p=>({...p,total:p.values.reduce((a,b)=>a+b,0)*factor,previous:p.previous*factor}));const total=rows.reduce((n,p)=>n+p.total,0),previous=rows.reduce((n,p)=>n+p.previous,0);return {total,previous,series:data[0].values.map((_,i)=>data.reduce((n,p)=>n+p.values[i]*factor,0)),rows:rows.filter(p=>normalizeSearch(p.name).includes(normalizeSearch(query))).sort((a,b)=>direction*(sort==='name'?a.name.localeCompare(b.name):a.total-b.total))};}
 export function csv(rows){return '\"Hudud\",\"Ishtiroklar\",\"Oldingi davr\"\n'+rows.map(r=>[r.name,r.total,r.previous].map(v=>'\"'+String(v).replaceAll('\"','\"\"')+'\"').join(',')).join('\n');}
 
 ```
@@ -126,6 +127,51 @@ import {data,normalize,report,csv} from './model.js';
 import test from 'node:test';import assert from 'node:assert/strict';
 test('storage accepts only known unique IDs',()=>{assert.deepEqual(normalize([data[0].id,'<script>',data[0].id,null]),[data[0].id]);assert.deepEqual(normalize({}),[]);});
 test('period totals match chart and rows; CSV uses filtered rows',()=>{const r=report(7);assert.equal(r.total,r.series.reduce((a,b)=>a+b,0));assert.equal(r.total,r.rows.reduce((n,p)=>n+p.total,0));assert.equal(report(30).total,4*r.total);const q=report(7,'Samarqand');assert.equal(q.rows.length,1);assert.ok(csv(q.rows).includes('Samarqand'));assert.ok(!csv(q.rows).includes('Toshkent'));assert.equal(report(7,'xyz').rows.length,0);});
+
+```
+
+## site/combinations.test.mjs
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import * as model from './model.js';
+const bad=[null,undefined,false,true,0,-1,NaN,Infinity,'','unknown',{}, {ids:[]}, ['unknown',null,0,{},['nested']]];
+
+for(const [i,value] of bad.entries())test('invalid persisted selection '+i,()=>{
+ assert.deepEqual(model.normalize(value),[]);
+});
+test('selection sanitization is ordered, idempotent, immutable and bounded',()=>{
+ const ids=model.data.map(p=>p.id),raw=[...ids.reverse(),...ids,'unknown',null];const snapshot=JSON.stringify(raw);
+ const clean=model.normalize(raw);assert.deepEqual(clean,ids);assert.deepEqual(model.normalize(clean),clean);
+ assert.equal(JSON.stringify(raw),snapshot);assert.notEqual(clean,raw);assert.ok(clean.length<=model.data.length);
+});
+test('all content IDs, images and answers are internally consistent',()=>{
+ assert.equal(new Set(model.data.map(p=>p.id)).size,model.data.length);
+ for(const item of model.data){assert.match(item.id,/^[a-z][a-z0-9-]*$/);assert.ok(item.name.trim());
+  if(item.image)assert.ok(readFileSync(new URL('images/'+item.image,import.meta.url)).length>0);
+  if(item.source)assert.equal(new URL(item.source).protocol,'https:');
+  if(item.answers){assert.ok(item.answers.length>1);assert.ok(Number.isInteger(item.correct));assert.ok(item.correct>=0&&item.correct<item.answers.length);}
+ }
+});
+
+const names=['Toshkent','Samarqand','Buxoro','Fargona'];
+for(const period of [7,30])for(const query of ['',...names,'  SAMARQAND  ','missing'])for(const sort of ['total','name'])for(const direction of [-1,1])test('report '+JSON.stringify({period,query,sort,direction}),()=>{
+ const result=model.report(period,query,sort,direction),factor=period===30?4:1;
+ assert.equal(result.total,1000*factor);assert.equal(result.previous,980*factor);
+ assert.equal(result.series.reduce((a,b)=>a+b,0),result.total);
+ assert.equal(result.rows.length,query==='missing'?0:query.trim()?1:4);
+ for(let i=1;i<result.rows.length;i++)assert.ok(direction*(sort==='name'?result.rows[i-1].name.localeCompare(result.rows[i].name):result.rows[i-1].total-result.rows[i].total)<=0);
+ const text=model.csv(result.rows);assert.equal(text.trimEnd().split('\n').length,result.rows.length+1);
+ if(query==='missing')assert.equal(text,'"Hudud","Ishtiroklar","Oldingi davr"\n');
+ for(const row of result.rows)assert.ok(text.includes(row.name));
+});
+test('CSV round trip preserves quoted names and embedded newlines',()=>{
+ const rows=[{name:'A, "B"\nC',total:2,previous:1}],text=model.csv(rows);
+ assert.equal(text,'"Hudud","Ishtiroklar","Oldingi davr"\n"A, ""B""\nC","2","1"');
+});
+test('report operations do not mutate the baseline dataset',()=>{const saved=JSON.stringify(model.data);model.report(30,'samar','name',1);assert.equal(JSON.stringify(model.data),saved);});
 
 ```
 
@@ -149,7 +195,7 @@ public-sans, ibm-plex-sans-condensed. Acquired from the official google/fonts re
 ## site/package.json
 
 ```json
-{"private":true,"type":"module","scripts":{"test":"node --test model.test.mjs"}}
+{"private": true, "type": "module", "scripts": {"test": "node --test *.test.mjs"}}
 
 ```
 

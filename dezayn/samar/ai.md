@@ -1,6 +1,6 @@
 # Samar — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-16; source fingerprint `5952daf8c662e8b5`.
+Snapshot: 2026-10-16; source fingerprint `3c5214b35fa334be`.
 Entry: https://azizbeksafarov.github.io/design/samar/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -32,6 +32,7 @@ ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Ish kodi site
 - [app.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/app.js.txt)
 - [model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/model.js.txt)
 - [model.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/model.test.mjs.txt)
+- [combinations.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/combinations.test.mjs.txt)
 - [CREDITS.md](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/CREDITS.md.txt)
 - [package.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/package.json.txt)
 
@@ -39,7 +40,7 @@ index.html — mazmun va boshlang‘ich kartalar. style.css — asosiy token va 
 
 ## Local run va tekshiruv
 
-Npm paket o‘rnatish shart emas. ZIP ildizida `node serve.mjs`; http://127.0.0.1:8080/ . Node bo‘lmasa: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Model test: `node --test site/model.test.mjs`.
+Npm paket o‘rnatish shart emas. ZIP ildizida `node serve.mjs`; http://127.0.0.1:8080/ . Node bo‘lmasa: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Model test: `node --test site/*.test.mjs`.
 
 - Manzil tafsiloti → rasmiy manba / xarita → Escape va fokus.
 - Manzil qo‘shish/olish → boshlash vaqtini o‘zgartirish → tartiblash → to‘g‘ri vaqt → reload / boshqa tab.

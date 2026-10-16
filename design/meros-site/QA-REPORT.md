@@ -27,3 +27,10 @@ See ../SECTOR-IDENTITIES.md and ../QA-SECTORS.json for the current visual contra
 User rejected the remaining thin inner-component language. See ../COMPONENT-RESEARCH.md and ../QA-COMPONENTS.json for evidence and the current contract. Existing models and storage keys unchanged; canonical final visual rules are identity-styles/.
 
 Final component sweep: 15 cases across three changed designs, zero document overflow at five widths. Eight domain model tests passed. Current screenshots and component actions inspected after fixes. See ../COMPONENT-RESEARCH.md.
+
+
+## Expanded regression verification — 2026-10-16
+
+The complete library now has 544 automated tests (544 pass, zero fail), including per-template combination tests. Run all local `*.test.mjs` files for HTML starters; Bloom uses `npm run test`. The central app event fixture is only included in the complete repository.
+
+All ten pages were rechecked at seven widths (320–1440 px): no document overflow, duplicate IDs or unloaded visible images. See the [expanded report](https://azizbeksafarov.github.io/design/QA-EXPANDED.md) for reproduced fixes, actual browser scenarios, rerun commands and limitations. This is baseline evidence for this revision, not a guarantee for later edits.

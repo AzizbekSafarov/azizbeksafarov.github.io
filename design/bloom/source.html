@@ -1,5 +1,5 @@
 <!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi"><title>Bloom · Material Design 3 — source</title><link rel="icon" href="/assets/hq/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../handoff/styles.css?v=560965086502"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="/">← Bosh qarorgoh</a><a href="/design/start/">AI bilan boshlash</a><a href="/design/">Tanlangan dizaynlar</a></nav></header><main id="main" class="wrap"><h1>Bloom · Material Design 3 — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content"><h2>Bloom · Material Design 3 — editable source snapshot</h2>
-<p>Source fingerprint: <code>639ecb5a0932b26a482c4dd4881c5044ea35553c342000320dc292d841427871</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
+<p>Source fingerprint: <code>6b30d418241639aabbc045b2080d12a46dea3bc88e9de54ee620020b3a9b7f5a</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
 <h3>site/src/main.jsx</h3>
 <pre><code>import React,{useState,useEffect,useRef} from &#x27;react&#x27;;
 import {createRoot} from &#x27;react-dom/client&#x27;;
@@ -203,7 +203,7 @@ export const initialProjects=[
 {id:&#x27;portfolio&#x27;,title:&#x27;Ishlaringiz so‘zlasin&#x27;,description:&#x27;Eng yaxshi loyihalaringiz uchun tiniq va tartibli portfolio.&#x27;,category:&#x27;Dizayn&#x27;,tone:&#x27;lavender&#x27;,art:&#x27;stack&#x27;,saved:false,tasks:[{text:&#x27;Loyihalarni saralash&#x27;,done:true},{text:&#x27;Sahifalarni yig‘ish&#x27;,done:true},{text:&#x27;Taqdimotni tekshirish&#x27;,done:true}]}
 ];
 export function progress(project){return project.tasks.filter(task=&gt;task.done).length/project.tasks.length}
-export function validateProjects(value){if(!Array.isArray(value)||value.length&gt;200)return null;const ids=new Set();for(const p of value){if(!p||typeof p.id!==&#x27;string&#x27;||ids.has(p.id)||typeof p.title!==&#x27;string&#x27;||!p.title.trim()||p.title.length&gt;80||typeof p.description!==&#x27;string&#x27;||p.description.length&gt;200||!categories.slice(1).includes(p.category)||![&#x27;blue&#x27;,&#x27;peach&#x27;,&#x27;green&#x27;,&#x27;lavender&#x27;].includes(p.tone)||![&#x27;orbit&#x27;,&#x27;flower&#x27;,&#x27;spark&#x27;,&#x27;stack&#x27;].includes(p.art)||typeof p.saved!==&#x27;boolean&#x27;||!Array.isArray(p.tasks)||p.tasks.length!==3||p.tasks.some(t=&gt;!t||typeof t.text!==&#x27;string&#x27;||typeof t.done!==&#x27;boolean&#x27;))return null;ids.add(p.id)}return value}
+export function validateProjects(value){if(!Array.isArray(value)||value.length&gt;200)return null;const ids=new Set();for(const p of value){if(!p||typeof p.id!==&#x27;string&#x27;||ids.has(p.id)||typeof p.title!==&#x27;string&#x27;||!p.title.trim()||p.title.length&gt;80||typeof p.description!==&#x27;string&#x27;||p.description.length&gt;200||!categories.slice(1).includes(p.category)||![&#x27;blue&#x27;,&#x27;peach&#x27;,&#x27;green&#x27;,&#x27;lavender&#x27;].includes(p.tone)||![&#x27;orbit&#x27;,&#x27;flower&#x27;,&#x27;spark&#x27;,&#x27;stack&#x27;].includes(p.art)||typeof p.saved!==&#x27;boolean&#x27;||!Array.isArray(p.tasks)||p.tasks.length!==3||p.tasks.some(t=&gt;!t||typeof t.text!==&#x27;string&#x27;||!t.text.trim()||t.text.length&gt;200||typeof t.done!==&#x27;boolean&#x27;))return null;ids.add(p.id)}return value}
 export function normalizeSearch(text){return text.toLocaleLowerCase(&#x27;uz&#x27;).normalize(&#x27;NFKC&#x27;).replace(/[‘’ʻʼ`´]/g,&quot;&#x27;&quot;).trim()}
 export function visibleProjects(projects,{view=&#x27;all&#x27;,category=&#x27;Hammasi&#x27;,query=&#x27;&#x27;,sort=&#x27;recent&#x27;}={}){const normalized=normalizeSearch(query);const filtered=projects.filter(p=&gt;(view!==&#x27;saved&#x27;||p.saved)&amp;&amp;(view!==&#x27;done&#x27;||progress(p)===1)&amp;&amp;(category===&#x27;Hammasi&#x27;||p.category===category)&amp;&amp;normalizeSearch(`${p.title} ${p.description} ${p.category}`).includes(normalized));return sort===&#x27;name&#x27;?[...filtered].sort((a,b)=&gt;a.title.localeCompare(b.title,&#x27;uz&#x27;)):filtered}
 export function createProject({title,description,category},id){const cleanTitle=title.trim(),cleanDescription=description.trim();if(!cleanTitle||cleanTitle.length&gt;80||cleanDescription.length&gt;200||!categories.slice(1).includes(category))throw new Error(&#x27;Invalid project&#x27;);const visual={&#x27;Ta’lim&#x27;:[&#x27;blue&#x27;,&#x27;orbit&#x27;],&#x27;Dizayn&#x27;:[&#x27;peach&#x27;,&#x27;flower&#x27;],&#x27;Texnologiya&#x27;:[&#x27;green&#x27;,&#x27;spark&#x27;]}[category];return{id,title:cleanTitle,description:cleanDescription||&#x27;Yangi g‘oyani ishlaydigan loyihaga aylantiring.&#x27;,category,tone:visual[0],art:visual[1],saved:false,tasks:[{text:&#x27;G‘oyani aniq yozish&#x27;,done:false},{text:&#x27;Birinchi variantni yaratish&#x27;,done:false},{text:&#x27;Natijani tekshirish&#x27;,done:false}]}}
@@ -216,8 +216,69 @@ test(&#x27;new projects validate trimmed titles and start at zero progress&#x27;
 
 test(&#x27;Uzbek search treats keyboard and typographic apostrophes equally&#x27;,()=&gt;{for(const query of [&quot;g&#x27;oya&quot;,&#x27;g‘oya&#x27;,&#x27;gʻoya&#x27;,&#x27;gʼoya&#x27;])assert.ok(visibleProjects(initialProjects,{query}).some(p=&gt;p.id===&#x27;brand&#x27;));assert.equal(visibleProjects(initialProjects,{query:&quot;TA&#x27;LIM&quot;}).length,1)});
 </code></pre>
+<h3>site/src/combinations.test.js</h3>
+<pre><code>import test from &#x27;node:test&#x27;;
+import assert from &#x27;node:assert/strict&#x27;;
+import {initialProjects,categories,visibleProjects,validateProjects,createProject,progress} from &#x27;./model.js&#x27;;
+
+for(const view of [&#x27;all&#x27;,&#x27;saved&#x27;,&#x27;done&#x27;])for(const category of categories)for(const query of [&#x27;&#x27;, &#x27;AI&#x27;, &quot;TA&#x27;LIM&quot;, &#x27;missing&#x27;])for(const sort of [&#x27;recent&#x27;,&#x27;name&#x27;]) {
+  test(&#x27;Bloom filter combination &#x27;+JSON.stringify({view,category,query,sort}),()=&gt;{
+    const before=JSON.stringify(initialProjects),result=visibleProjects(initialProjects,{view,category,query,sort});
+    assert.equal(JSON.stringify(initialProjects),before);
+    // Explicit catalog oracle: empty results cannot accidentally make the
+    // per-result assertions below pass vacuously.
+    const searchIds={&#x27;&#x27;:[&#x27;kasb&#x27;,&#x27;brand&#x27;,&#x27;ai&#x27;,&#x27;portfolio&#x27;],&#x27;AI&#x27;:[&#x27;ai&#x27;],&quot;TA&#x27;LIM&quot;:[&#x27;kasb&#x27;],&#x27;missing&#x27;:[]}[query];
+    const expected=searchIds.filter(id=&gt;
+      (view!==&#x27;saved&#x27;||id===&#x27;brand&#x27;)&amp;&amp;(view!==&#x27;done&#x27;||id===&#x27;portfolio&#x27;)&amp;&amp;
+      (category===&#x27;Hammasi&#x27;||({&#x27;kasb&#x27;:&#x27;Ta’lim&#x27;,&#x27;brand&#x27;:&#x27;Dizayn&#x27;,&#x27;ai&#x27;:&#x27;Texnologiya&#x27;,&#x27;portfolio&#x27;:&#x27;Dizayn&#x27;})[id]===category));
+    assert.deepEqual(result.map(p=&gt;p.id).sort(),[...expected].sort());
+    for(const p of result){
+      if(view===&#x27;saved&#x27;)assert.equal(p.saved,true);
+      if(view===&#x27;done&#x27;)assert.equal(p.tasks.every(t=&gt;t.done),true);
+      if(category!==&#x27;Hammasi&#x27;)assert.equal(p.category,category);
+    }
+    if(query===&#x27;missing&#x27;)assert.equal(result.length,0);
+    if(query===&#x27;AI&#x27;)assert.deepEqual(result.map(p=&gt;p.id),view===&#x27;saved&#x27;||view===&#x27;done&#x27;||![&#x27;Hammasi&#x27;,&#x27;Texnologiya&#x27;].includes(category)?[]:[&#x27;ai&#x27;]);
+    if(sort===&#x27;name&#x27;)for(let i=1;i&lt;result.length;i++)assert.ok(result[i-1].title.localeCompare(result[i].title,&#x27;uz&#x27;)&lt;=0);
+    if(query===&#x27;&#x27;&amp;&amp;view===&#x27;all&#x27;&amp;&amp;category===&#x27;Hammasi&#x27;)assert.equal(result.length,4);
+  });
+}
+
+for(let mask=0;mask&lt;8;mask++)test(&#x27;Bloom progress for task mask &#x27;+mask,()=&gt;{
+  const p=structuredClone(initialProjects[0]);p.tasks.forEach((t,i)=&gt;t.done=!!(mask&amp;(1&lt;&lt;i)));
+  assert.equal(progress(p),[...mask.toString(2)].filter(c=&gt;c===&#x27;1&#x27;).length/3);
+  assert.equal(visibleProjects([p],{view:&#x27;done&#x27;}).length,mask===7?1:0);
+});
+
+for(const category of categories.slice(1))test(&#x27;new project / &#x27;+category,()=&gt;{
+  const p=createProject({title:&#x27;  &lt;img src=x&gt;  &#x27;,description:&#x27;  Example  &#x27;,category},&#x27;safe-id&#x27;);
+  assert.equal(p.title,&#x27;&lt;img src=x&gt;&#x27;);assert.equal(p.description,&#x27;Example&#x27;);
+  assert.equal(progress(p),0);assert.equal(p.saved,false);assert.equal(p.tasks.length,3);
+  assert.ok(validateProjects([p]));
+});
+
+for(const patch of [{title:&#x27;&#x27;},{title:&#x27; &#x27;},{title:&#x27;a&#x27;.repeat(81)},{description:&#x27;a&#x27;.repeat(201)},{category:&#x27;unknown&#x27;},{saved:1},{tone:&#x27;bad&#x27;},{art:&#x27;bad&#x27;},{tasks:[]},{tasks:[null,null,null]}]) {
+  test(&#x27;Bloom rejects corrupt persisted field &#x27;+JSON.stringify(patch),()=&gt;{
+    assert.equal(validateProjects([{...structuredClone(initialProjects[0]),...patch}]),null);
+  });
+}
+
+test(&#x27;Bloom project count and text lengths accept exact limits&#x27;,()=&gt;{
+  const p=createProject({title:&#x27;a&#x27;.repeat(80),description:&#x27;b&#x27;.repeat(200),category:categories[1]},&#x27;id&#x27;);
+  const projects=Array.from({length:200},(_,i)=&gt;({...structuredClone(p),id:&#x27;p&#x27;+i}));
+  assert.ok(validateProjects(projects));assert.equal(validateProjects([...projects,{...p,id:&#x27;extra&#x27;}]),null);
+});
+
+test(&#x27;Bloom persisted tasks must have readable bounded labels&#x27;,()=&gt;{
+  for(const text of [&#x27;&#x27;, &#x27; &#x27;, &#x27;a&#x27;.repeat(201)]){
+    const p=structuredClone(initialProjects[0]);p.tasks[0].text=text;
+    assert.equal(validateProjects([p]),null);
+  }
+});
+</code></pre>
 <h3>site/package.json</h3>
-<pre><code>{&quot;name&quot;:&quot;bloom-material-expressive&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;private&quot;:true,&quot;type&quot;:&quot;module&quot;,&quot;scripts&quot;:{&quot;dev&quot;:&quot;vite --host 127.0.0.1 --port 8767 --strictPort&quot;,&quot;build&quot;:&quot;vite build&quot;,&quot;preview&quot;:&quot;vite preview --host 127.0.0.1 --port 8767 --strictPort&quot;,&quot;test&quot;:&quot;node --test src/model.test.js&quot;},&quot;dependencies&quot;:{&quot;@material/material-color-utilities&quot;:&quot;^0.4.0&quot;,&quot;@material/web&quot;:&quot;^2.5.0&quot;,&quot;motion&quot;:&quot;^12.35.0&quot;,&quot;react&quot;:&quot;^19.2.0&quot;,&quot;react-dom&quot;:&quot;^19.2.0&quot;},&quot;devDependencies&quot;:{&quot;vite&quot;:&quot;^7.3.1&quot;}}</code></pre>
+<pre><code>{&quot;name&quot;:&quot;bloom-material-expressive&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;private&quot;:true,&quot;type&quot;:&quot;module&quot;,&quot;scripts&quot;:{&quot;dev&quot;:&quot;vite --host 127.0.0.1 --port 8767 --strictPort&quot;,&quot;build&quot;:&quot;vite build&quot;,&quot;preview&quot;:&quot;vite preview --host 127.0.0.1 --port 8767 --strictPort&quot;,&quot;test&quot;:&quot;node --test src/*.test.js&quot;},&quot;dependencies&quot;:{&quot;@material/material-color-utilities&quot;:&quot;^0.4.0&quot;,&quot;@material/web&quot;:&quot;^2.5.0&quot;,&quot;motion&quot;:&quot;^12.35.0&quot;,&quot;react&quot;:&quot;^19.2.0&quot;,&quot;react-dom&quot;:&quot;^19.2.0&quot;},&quot;devDependencies&quot;:{&quot;vite&quot;:&quot;^7.3.1&quot;}}
+</code></pre>
 <h3>site/vite.config.js</h3>
 <pre><code>import {defineConfig} from &#x27;vite&#x27;;
 export default defineConfig({base:&#x27;./&#x27;});
