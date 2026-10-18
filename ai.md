@@ -4,10 +4,12 @@
 
 ## Avval shu tartibda boshlang
 
-1. [AI bilan ish tartibi](https://azizbeksafarov.github.io/ish-tartibi/ai.md): qaror, dalil, reja va noma’lumlarni ajratish; ehtimoliy nosozliklar.
-2. [Holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/status.json): jonli monitoring emas.
-3. Joriy bilet va loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Eski sana yoki tayyorgarlik holatini bugungi vazifa deb olmang.
-4. Quyidagi arxitektura/API qo‘llanmasi va faqat tanlangan dizayn.
+1. Joriy bilet va loyiha holati — Foydalanuvchining hozirgi topshirig‘i, amaldagi reglament hamda loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon; ularni joriy topshiriq deb olma.
+2. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
+3. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
+4. [Tanlov konteksti va mezonlar](https://azizbeksafarov.github.io/design/handoff/competition.md) — /design/handoff/score-workplan.md bilan talab → qabul dalilini bog‘la. /ustoz/CONTEXT-STATUS.md va to‘liq nizom /ustoz/nizom.md manba maqomini tushuntiradi; to‘liq matn kerak bo‘lsa qisqa kirish bilan almashtirma.
+5. [Arxitektura va API](https://azizbeksafarov.github.io/arxitektura/ai.md) — /api/ai.md bilan birga sahifa rollari, server chegarasi, kvota, xavfsizlik va sifat mezonlarini o‘qi. Rejalashtirilgan xizmatni yaratilgan deb hisoblama.
+6. [Bitta tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.
 
 [Ko‘rgazmali ish tartibi](https://azizbeksafarov.github.io/ish-tartibi/) · [Vazifa shabloni](https://azizbeksafarov.github.io/ish-tartibi/CURRENT-TASK.md) · [Topshirish shabloni](https://azizbeksafarov.github.io/ish-tartibi/HANDOFF.md)
 
@@ -51,7 +53,7 @@ Faqat tanlangan dizayn va joriy biletga mos funksiyalarni qur. Maxfiy kalitlarni
 - [Mezonlardan ish rejasiga](https://azizbeksafarov.github.io/ustoz/06-SCORE-WORKPLAN.md).
 - [Sifat standarti](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md).
 
-Hamma kodni birdan o‘qima. Tanlangan ai.md → kerakli source → ZIP AGENTS.md → CURRENT-TASK.md → HANDOFF.md. Dizaynning mustaqil grid/shrift/amal tilini saqla; biletga mos model va funksiyalar yarat. Asosiy oqim, xato/bo‘sh/natija, mobil, klaviatura va storage tekshir. Xatoni takrorla, sababini tuzat va qayta sina. Natijalarni HANDOFF.md ga yoz. Demo natijani haqiqiy backend deb ko‘rsatma.
+Hamma kodni birdan o‘qima. Yuqoridagi o‘qish tartibiga amal qil. Tanlangan ZIP ichida START-HERE.md va AGENTS.md / AI-BRIEF.md’ni kod tahriridan oldin o‘qi; joriy loyiha CURRENT-TASK.md / HANDOFF.md birinchi o‘rinda. Dizaynning mustaqil grid/shrift/amal tilini saqla; biletga mos model va funksiyalar yarat. Asosiy oqim, xato/bo‘sh/natija, mobil, klaviatura va storage tekshir. Xatoni takrorla, sababini tuzat va qayta sina. Natijalarni HANDOFF.md ga yoz. Demo natijani haqiqiy backend deb ko‘rsatma.
 
 Pages ochilmasa: https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/ai.md
 

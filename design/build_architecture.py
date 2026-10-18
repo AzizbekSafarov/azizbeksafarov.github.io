@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape
 import json
 from workspace_hq import frame
+from context_reading import markdown as reading_markdown
 from product_quality import markdown as quality_markdown, html as quality_html
 
 SITE = Path(__file__).resolve().parent.parent
@@ -155,9 +156,14 @@ Supabase Free kam faollik sabab pauzalanishi mumkin. Render monitori Supabase’
 
 Tayyor: .io dizayn kutubxonasi va ko‘chiriladigan kod; sanali rasmiy API ulanish sinovlari. Reja: Render hosting, UptimeRobot monitori, tanlovga alohida Supabase, OAuth client va Telegram webhook integratsiyasi. Render kombinatsiyasi hozirgi asosiy tanlov; avval ko‘rilgan Cloudflare/Vercel variantlari muqobil, bir vaqtning o‘zida majburiy serverlar emas.
 
-O‘qish tartibi: joriy bilet va loyiha CURRENT-TASK.md/HANDOFF.md → /ai.md → /ish-tartibi/ai.md va status.json → ushbu hujjat → /api/ai.md → tanlangan /design/SLUG/ai.md. So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
+O‘qish tartibi:
+
+{READING_ORDER}
+
+So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
 '''
 
+ARCH_MD = ARCH_MD.replace('{READING_ORDER}', reading_markdown().rstrip())
 ARCH_MD = ARCH_MD.replace('## Hosting va monitoring', PRODUCT_MD + quality_markdown() + '## Hosting va monitoring', 1)
 
 API_MD = '''# AI API va Telegram — sinovlar va ishlatish qoidalari

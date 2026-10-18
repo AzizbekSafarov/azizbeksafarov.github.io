@@ -43,12 +43,16 @@
     "Vercel competition frontend hosting"
   ],
   "reading_order": [
+    "current user ticket and project-local CURRENT-TASK.md / HANDOFF.md; public copies are templates",
     "/ai.md",
     "/ish-tartibi/ai.md",
-    "project-local CURRENT-TASK.md and HANDOFF.md if available",
+    "/ish-tartibi/status.json",
+    "/design/handoff/competition.md",
+    "/design/handoff/score-workplan.md",
+    "/ustoz/CONTEXT-STATUS.md and full regulations as needed",
     "/arxitektura/ai.md",
     "/api/ai.md",
-    "/design/SELECTED-SLUG/ai.md"
+    "/design/SELECTED-SLUG/ai.md and selected package instructions/source"
   ],
   "required_test_layers": [
     "happy path",
