@@ -8,8 +8,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "0b73b1a53cef023a4d3090f44427d59c9d59e73c1b4463b1a86f86e986c62344",
-  "archive_bytes": 157281,
+  "archive_sha256": "3d78d43261c6f204b07e65268cc3310ef160e7beba6267e5930ecd70d40706d4",
+  "archive_bytes": 159665,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -71,13 +71,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2978,
-      "sha256": "091de79620556d21c7f13473c077026c91dcef71893ddb31dc1ae8a390d562b6"
+      "bytes": 3166,
+      "sha256": "1403e20df3324433c68745c786872109134565a39e6ef3a0e061da2e8d35b6bb"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 5494,
-      "sha256": "2fecaebf3af18054a2977ed4970912760cf58e03fb6e9a614fc989af479fe01c"
+      "bytes": 5867,
+      "sha256": "50843428b536fb8b300d3f0db1bdb1951222abf78955d32b2c2e8676179f0318"
     },
     {
       "path": "CHECKLIST.md",
@@ -91,8 +91,13 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 4170,
-      "sha256": "5eb7c58ec828bd1f7323d43c639ad1c94ada324c893ac94607dec93e3eb764aa"
+      "bytes": 5527,
+      "sha256": "7350860fb16f4094f7d0a6ed54167f5ee580ea59234213ed6893d0db682875c0"
+    },
+    {
+      "path": "CONTEXT-STATUS.md",
+      "bytes": 2771,
+      "sha256": "bdbe5ad6fe2c45a84aa708d4c02a4380ebc643d4f2a46157f16dd7bb7c263381"
     },
     {
       "path": "CURRENT-TASK.md",

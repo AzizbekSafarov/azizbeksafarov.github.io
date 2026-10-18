@@ -72,6 +72,7 @@ def verify():
             for name in ('AGENTS.md','CLAUDE.md','GEMINI.md','CURRENT-TASK.md','HANDOFF.md','AI-BRIEF.md','CHECKLIST.md','COMPETITION.md','REGULATIONS.md','README.md','serve.mjs','kit.json'):assert name in z.namelist()
             assert z.read('AI-BRIEF.md')==(folder/'ai.md').read_bytes()
             assert z.read('REGULATIONS.md')==(ROOT/'handoff/regulations.md').read_bytes()
+            assert z.read('CONTEXT-STATUS.md')==(ROOT/'handoff/context-status.md').read_bytes()
             for entry in manifest['readable_source_files']:
                 actual=(folder/'files'/(entry['path']+'.txt')).read_bytes()
                 assert actual==z.read('site/'+entry['path']) and sha256(actual).hexdigest()==entry['sha256']

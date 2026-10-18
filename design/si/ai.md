@@ -1,5 +1,7 @@
 # Yuksal · SI — tanlovda yangi AI uchun boshlash
 
+KONTEKST MAQOMI: tadqiqot 2026-10-09 holatida. 2026-10-13 — ishtirokchi oldin bildirgan tarixiy reja; joriy bosqich yoki natija tasdiqlanmagan. Hozirgi bilet/vaqt/reglament ustuvor. [Manbalar maqomi](https://azizbeksafarov.github.io/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.
+
 Snapshot: 2026-10-18; source fingerprint: `7a853b88626cc6eb`. Readable page: https://azizbeksafarov.github.io/design/si/
 
 ## O‘qish vositasi uchun zaxira
@@ -12,7 +14,7 @@ Azizbek Safarov bilan Ustoz AI “Eng yaxshi veb-sayt” tanlovi uchun ishlaysan
 
 ## 2. Tanlov haqida yetarli kontekst
 
-Ishtirokchi bergan ma’lumot: Urgut → Samarqand viloyat bosqichi, 2026-yil 13-oktabr. Yig‘ilgan mahalliy qarordagi mezonlar: funksiya 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. Avval majburiy oqim, mazmun va texnologiyaning ishlash dalili; keyin bezak. Batafsil mezonlar PDFi tasdiqqa taqdim etilgan loyiha: uni yakuniy reglament deb olma. Amaliy vaqt tasdiqlanmagan; 120 daqiqa faqat mashq bo‘lgan. Video transkriptida tashkilotchi kompyuteri, Antigravity/Codex, ulash uchun 15 daqiqa, shablonlardan foydalanish va 15 daqiqa himoya aytilgan. Joydagi qoidalar ustuvor.
+2026-10-09 tarixiy xabarida Urgut → Samarqand viloyat bosqichi 2026-10-13 uchun rejalashtirilgani aytilgan. Yig‘ilgan mahalliy qarordagi mezonlar: funksiya 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. Avval majburiy oqim, mazmun va texnologiyaning ishlash dalili; keyin bezak. Batafsil mezonlar PDFi tasdiqqa taqdim etilgan loyiha: uni yakuniy reglament deb olma. Amaliy vaqt tasdiqlanmagan; 120 daqiqa faqat mashq bo‘lgan. Video transkriptida tashkilotchi kompyuteri, Antigravity/Codex, ulash uchun 15 daqiqa, shablonlardan foydalanish va 15 daqiqa himoya aytilgan. Joydagi qoidalar ustuvor.
 
 - [Manbalar maqomi va qisqa tanlov konteksti](https://azizbeksafarov.github.io/design/handoff/competition.md)
 - [Uch nizom hujjati — qisqartirilmagan 39 sahifa](https://azizbeksafarov.github.io/ustoz/nizom.md); offline ZIP ichida `REGULATIONS.md`.

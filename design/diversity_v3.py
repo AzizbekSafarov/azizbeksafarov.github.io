@@ -1,6 +1,7 @@
-"""Task-specific compositions, applied last by the original site generators.
+"""Intermediate compositions used by the complete site generators.
 
-Run directly to update existing builds. Existing data IDs and app flows stay intact.
+identities_v4 applies the final visual styles after this stage. Do not run this
+stage alone: that would restore an intermediate layout over the current design.
 """
 from pathlib import Path
 from hashlib import sha256
@@ -87,4 +88,4 @@ def apply(slugs=('ziyo', 'forma', 'samar')):
     print('Applied task-specific layouts: '+', '.join(slugs))
 
 if __name__=='__main__':
-    apply()
+    raise SystemExit('Intermediate build stage. Run build_refined.py or build_collection.py; see BUILD-GUIDE.md. No files changed.')

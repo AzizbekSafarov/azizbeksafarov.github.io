@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "research_as_of": "2026-10-09",
+  "package_edited_at": "2026-10-18",
+  "source_repository": "https://github.com/AzizbekSafarov/ustoz",
+  "files": [
+    {
+      "source": "00-START-HERE.md",
+      "source_url": "https://azizbeksafarov.github.io/ustoz/00-START-HERE.md",
+      "target": "competition.md",
+      "sha256": "7350860fb16f4094f7d0a6ed54167f5ee580ea59234213ed6893d0db682875c0"
+    },
+    {
+      "source": "ai.md",
+      "source_url": "https://azizbeksafarov.github.io/ustoz/ai.md",
+      "target": "competition-full.md",
+      "sha256": "489a50fa0119822907130620a1e3cd03f22f8fb683a23293aa69119a9d314aad"
+    },
+    {
+      "source": "nizom.md",
+      "source_url": "https://azizbeksafarov.github.io/ustoz/nizom.md",
+      "target": "regulations.md",
+      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
+    },
+    {
+      "source": "CONTEXT-STATUS.md",
+      "source_url": "https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md",
+      "target": "context-status.md",
+      "sha256": "bdbe5ad6fe2c45a84aa708d4c02a4380ebc643d4f2a46157f16dd7bb7c263381"
+    }
+  ]
+}

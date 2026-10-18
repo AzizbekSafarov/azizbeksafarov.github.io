@@ -1,49 +1,66 @@
-# Tanlov konteksti — qisqa nusxa
+# Ustoz AI: yangi AI yordamchisi uchun qisqa tanlov konteksti
 
-Paket yangilangan: 2026-10-13. Tadqiqot manbalari oxirgi marta 2026-10-09 tekshirilgan. Bu tayyorgarlik konteksti; tanlov kuni berilgan bilet va amaldagi reglament ustuvor.
+> MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
-## Ishtirokchi va vazifa
+Yangilangan: 2026-10-09. Til: o‘zbekcha. Bu hujjat tanlov faktlari va tayyorgarlik rejasini jamlaydi. U rasmiy bilet yoki tashkilotchining yakuniy texnik reglamenti emas. Ish boshlash uchun foydalanuvchining yangi topshirig‘i, haqiqiy bilet va ajratilgan vaqt kerak.
 
-Azizbek Safarov “Besh tashabbus olimpiadasi” doirasidagi “Zamonaviy kasblar” tanlovining “Eng yaxshi veb-sayt” yo‘nalishiga tayyorlanmoqda. Ishtirokchi bergan ma’lumot: Urgutdan Samarqand viloyat bosqichiga chiqqan, bosqich 2026-yil 13-oktabrda Samarqand shahrida. AI bilan o‘zbekcha ishlaydi. Mavzu ekspertlar tomonidan joyida beriladi; tayyor dizayn mazmuni shu mavzuga moslashtiriladi.
+## Tanlov
 
-## Ma’lum tartib va aniqlanmagan narsalar
+- “Besh tashabbus olimpiadasi” doirasidagi “Zamonaviy kasblar”, asosiy yo‘nalish: “Eng yaxshi veb-sayt”. Boshqa yo‘nalishlar: grafik dizayn, mobilografiya.
+- Uch bosqich: tuman/shahar, hududiy/viloyat, respublika. Mahalliy nizomda keyingi bosqichga 1-o‘rin o‘tishi belgilangan.
+- 14–30 yosh, tegishli Ustoz AI kursi sertifikati. Veb yo‘nalish uchun Saytlar yasash, AI orqali dasturlar yasash yoki Mobil ilova yasash kurslari.
+- Ishtirokchining 2026-10-09 xabarida Samarqand hududiy bosqichi 2026-10-13 uchun rejalashtirilgani aytilgan. Bu tarixiy xabar; o‘tkazilgani yoki natijasi ushbu paketda tasdiqlanmagan. Ochiq manbalarda bino, boshlanish soati va amaliy vaqt tasdiqlanmagan.
+- Changan bosh sovrini rasmiy tasdiqlangan. Kasbiy ta’lim agentligi 1-o‘rin sohiblari uchun 3 ta Changan Uni-E e’lon qilgan. Har viloyatda avtomobil berilishi e’lon qilinmagan.
 
-Ishtirokchi taqdim etgan rasmiy video transkriptiga ko‘ra: tashkilotchi kompyuter beradi; Antigravity va Codex o‘rnatilgan; akkauntni ulash uchun 15 daqiqa; g‘oya va shablonlardan foydalanish mumkin; yakunda 15 daqiqa taqdimot. [Video manbasi](https://t.me/ustozai/3357). Transkript mustaqil qayta transkripsiya qilinmagan.
+## Manbalar maqomi
 
-Amaliy ish davomiyligi, aniq bilet, internet/oldindan tayyorlangan kodga ruxsat va akkaunt/model/limitning yakuniy tartibi bu paketda tasdiqlanmagan. 120 daqiqa oldingi mashq ssenariysi edi, rasmiy limit emas. Shaxsiy Plus obunasi yangi yoki tashkilotchi hisobiga avtomatik ko‘chmaydi. Joydagi ruxsat etilgan hisob va vositalar bilan ishlanadi.
+1. Mahalliy 18 betlik “34-19 q-q.pdf” — imzo va muhrli iyul qo‘shma qarori. Undagi dastlabki sanalar va pul sovrinlari keyingi e’lonlar bilan birga o‘qiladi.
+2. Mahalliy 11 betlik “Eng_yaxshi_veb_sayt_baholash_mezonlari.pdf” birinchi betida “Tashkilotchilar tasdig‘iga taqdim etiladigan tahrir” deb yozilgan. Texnik talablar va kichik ballar tasdiqlangan deb ko‘rsatilmasin.
+3. Saytdagi 10 betlik nizom: https://ustoz.ai/tanlov/nizom.pdf — mahalliy qarordan farqli tahrir; jadval va sovrinlar keyingi e’lonlarga to‘liq mos emas.
+4. Rasmiy videoning ishtirokchi yuborgan transkripti: tashkilotchi kompyuteri, Antigravity/Codex, o‘z akkauntiga kirish uchun 15 daqiqa, mavzu joyida, g‘oya/shablon olish mumkin, 15 daqiqa himoya. Video havolasi topilgan, lekin og‘zaki tafsilotlar mustaqil qayta transkripsiya qilinmagan.
 
-## Baholashga mos natija
+## Baholash: 100 ball
 
-Asosiy olti mezon yig‘ilgan mahalliy qaror nusxasidan. Ekspertning tanlov kuni bergan jadvali mavjud bo‘lsa, shu jadval ishlatiladi.
+| Mezon | Ball |
+|---|---:|
+| Sifat va funksionallik | 30 |
+| Dolzarblik va mazmun | 20 |
+| Dizayn va UX/UI | 10 |
+| Taqdimot | 10 |
+| Zamonaviy texnologiyalar | 20 |
+| Kreativlik va originallik | 10 |
 
-| Mezon | Ball | Tayyorlanadigan dalil |
-|---|---:|---|
-| Sifat va funksionallik | 30 | Asosiy oqim, validatsiya, xato/bo‘sh holat, mobil ishlash |
-| Dolzarblik va mazmun | 20 | Biletga mos foydalanuvchi, mazmun va amaliy natija |
-| Dizayn va UX/UI | 10 | O‘qilish, tugma/panel farqi, fokus va izchil interfeys |
-| Taqdimot | 10 | Muammo → yechim → ishlaydigan namoyish → cheklov |
-| Zamonaviy texnologiyalar | 20 | Mos vosita, mazmunli moslashtirish, sinov, tahrirlanadigan kod |
-| Kreativlik va originallik | 10 | Vazifaga xizmat qiladigan o‘ziga xos yechim |
+Himoya mahalliy nizomda 5 daqiqa taqdimot + 5 daqiqa namoyish + 5 daqiqa savol-javob. Hududiy ish uchun taxminan 2 soat faqat loyiha hujjatida taklif qilingan; 120 daqiqa mashq ssenariysi, tasdiqlangan limit emas.
 
-11 betlik batafsil mezonlar fayli “Tashkilotchilar tasdig‘iga taqdim etiladigan tahrir” deb belgilangan. Undagi kichik ballar, vaqt, tarif va texnik talablar yakuniy qoida deb olinmaydi. Himoyada tahrir va teng ball tartibi manbalar orasida farq qiladi. AI buni qat’iy yangi talab sifatida qo‘shmaydi.
+## Muhim tafovutlar
 
-## Hamkorlik
+- Mahalliy qaror himoyada kichik texnik tahrir so‘rashga ruxsat beradi; sayt nusxasida ushbu jumlalar yo‘q; mezonlar loyihasi himoyada tahrirni taqiqlaydi.
+- Teng ball: mahalliy qarorda funksiya, keyin texnologiya; sayt nusxasida funksiya, keyin kreativlik.
+- Video shaxsiy akkauntni aytadi; mezonlar loyihasi tashkilotchi teng tarif/model/limit tayyorlashini va shaxsiy tarif bilan ustunlik olmaslikni taklif qiladi.
+- Agar faqat tashkilotchi ajratgan hisobga ruxsat berilsa, ish uning limiti va ruxsatlari bilan bajariladi. Hisobning yangi emaili Free tarif ekanini o‘zi isbotlamaydi.
 
-AI kod, tekshiruv va tuzatishni bajaradi. Ishtirokchi bilet, qolgan vaqt, foydalanuvchi maqsadi va himoyani boshqaradi. Avval biletning majburiy oqimi va mazmuni; keyin ko‘rinish va bitta foydali ijodiy detal. Har talab uchun “talab → funksiya → tekshiruv → natija” qaydi yoziladi. Faqat kod yoki animatsiya soni baholash dalili emas.
+## Birga ishlash rejasi
 
-## To‘liq ma’lumot va asl manbalar
+AI asosiy kod yozish, sinov va tuzatish bilan shug‘ullanadi; ishtirokchi bilet, vaqt, foydalanuvchi maqsadi va himoyani boshqaradi. Bitta asosiy yozuvchi; bir xil fayl parallel tahrirlanmaydi. Avval majburiy amallar, mazmun va texnologiya dalillari — jami 70 ball. Keyin UI va foydali kreativ detal.
 
-- [Qisqa tanlov konteksti](https://azizbeksafarov.github.io/ustoz/00-START-HERE.md)
-- [Barcha yig‘ilgan mahalliy va internet ma’lumotlari](https://azizbeksafarov.github.io/ustoz/ai.md)
-- [To‘liq tadqiqot](https://azizbeksafarov.github.io/ustoz/01-RESEARCH.md)
-- [Mezon va ish rejasi](https://azizbeksafarov.github.io/ustoz/06-SCORE-WORKPLAN.md)
-- [Imzoli mahalliy qaror](https://azizbeksafarov.github.io/ustoz/sources/34-19-q-q.pdf)
-- [Tasdiqqa taqdim etilgan mezonlar](https://azizbeksafarov.github.io/ustoz/sources/Eng_yaxshi_veb_sayt_baholash_mezonlari.pdf)
-- [Saytdagi nizomning saqlangan nusxasi](https://azizbeksafarov.github.io/ustoz/sources/ustoz-ai-saytdagi-nizom.pdf)
+120 daqiqalik mashq: 10 reja / 80 yaratish / 20 sinov / 10 topshirish. Har talab uchun “talab → funksiya → sinov → natija” qaydi. Kichik xatoda butun sayt qayta yaratilmaydi. Ishtirokchiga matn, rang, ma’lumot va validatsiyani qo‘lda tahrirlash joylari ko‘rsatiladi.
 
-To‘liq kontekst paket arxivida ham matn sifatida bor. Asl PDFlar yuqoridagi havolalarda; qisqa yo‘riqnoma asl hujjatning o‘rnini bosmaydi. Topshiriq, reglament va foydalanuvchining yangi ko‘rsatmasi ushbu tarixiy ma’lumotdan ustuvor.
+## Qo‘shimcha ma’lumot
+
+2026-10-09 dashboard kuzatuvi: 20 999 jami ariza; 6 010 veb ariza; Samarqandda 451 veb ariza. Bular tasdiqlangan yoki keladigan raqiblar soni emas. Sertifikat/ism avtomatik ogohlantirishi ham chetlashtirish qarori emas.
+
+To‘liq ma’lumot shu paketdagi **01-RESEARCH.md**, ish tartibi **02-WORKFLOW.md**, hududiy agregatlar **03-STATISTICS.csv** fayllarida. Asl PDFlar **sources/** papkasida; GitHub repository variantida joylashtirish mumkin. Gist uchun matn fayllari yetarli boshlang‘ich paket bo‘ladi.
+
+Rasmiy internet manbalari:
+
+- https://gov.uz/oz/wcu/news/view/225579 — 28-sentabr, Changan e’loni.
+- https://t.me/kasb_edu/2763 — Changan Uni-E va tanlov talablari.
+- https://t.me/ustozai/3357 — 5-oktabr, veb-sayt yo‘nalishi videosi.
+- https://gov.uz/oz/yaypan/news/view/229498 — 7-oktabr, tuman bosqichi haqidagi xabar.
+
+Havolani o‘qish AIga doimiy xotira yoki barcha fayllarga avtomatik kirish bermaydi. Internetga kirish imkoniyati bo‘lmasa, qisqa matn yoki fayl bevosita chatga beriladi. Tanlov kuni tashqi tayyorgarlik materiallaridan foydalanish joydagi reglamentga bog‘liq.
 
 
-## Nizomlarning qisqartirilmagan to‘liq matni
+## Nizomlarni to‘liq o‘qish
 
-Uch hujjat, 39 sahifa: https://azizbeksafarov.github.io/ustoz/nizom.md . Brauzerda: https://azizbeksafarov.github.io/ustoz/nizom.html . Alohida kod ZIPida REGULATIONS.md, umumiy paketda competition/REGULATIONS.md ham bor. Matn nashri 2026-10-18; tadqiqot 2026-10-09 holati. Imzoli qaror, saytdagi tahrir va tasdiqqa taqdim etilgan mezonlar loyihasi alohida saqlanadi.
+39 sahifalik uch hujjatning qisqartirilmagan matni: https://azizbeksafarov.github.io/ustoz/nizom.md . Brauzer uchun: https://azizbeksafarov.github.io/ustoz/nizom.html . 2026-10-18 kuni matnga tayyorlangan; tadqiqot sanasi 2026-10-09. Imzoli nusxa, saytdagi tahrir va tasdiqqa taqdim etilgan loyiha alohida saqlangan.

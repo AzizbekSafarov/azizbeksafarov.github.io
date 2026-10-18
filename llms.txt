@@ -11,6 +11,7 @@
 - [Bloom · Material Design 3](https://azizbeksafarov.github.io/design/bloom/ai.md): Rasmiy Material Web komponentlari, Material Symbols va dinamik rang tizimi. Ishlaydigan loyiha maydoni.
 - [Yuksal · SI](https://azizbeksafarov.github.io/design/si/ai.md): Oq asosiy fon, O‘zbekistonning moviy va yashil aksentlari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, serif va jonli shakl almashishi.
 
+- [Context status and historical scope](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md)
 - [Full competition research](https://azizbeksafarov.github.io/ustoz/ai.md)
 - [Quality standard](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md)
 

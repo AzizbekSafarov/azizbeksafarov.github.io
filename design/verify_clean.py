@@ -7,6 +7,8 @@ SITE=ROOT.parent
 RETIRED={'01-kasblab.html','03-pulse.html','05-qadam.html','06-lola.html','07-spark.html','08-city.html','09-pulseboard.html','archive','kasblab','orbit','pulse','qadam','lola','spark','city','pulseboard','open-city'}
 
 def verify():
+    from sync_context import verify as verify_context
+    verify_context()
     catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))['templates']
     slugs={t['slug'] for t in catalog}
     assert len(slugs)==len(catalog)==9
@@ -28,6 +30,10 @@ def verify():
     for asset in assets:
         assert asset.name in references,f'Unreferenced build artifact: {asset.name}'
     for item in catalog:
+        brief=(ROOT/item['slug']/'ai.md').read_bytes()
+        assert 'KONTEKST MAQOMI'.encode() in brief
+        assert (SITE/'dezayn'/item['slug']/'ai.md').read_bytes()==brief,'Alias context drift'
+        if item['slug']=='bloom':assert (SITE/'bloom/ai.md').read_bytes()==brief
         manifest=json.loads((ROOT/item['slug']/'manifest.json').read_text(encoding='utf-8'))
         expected_exports={entry['path']+'.txt' for entry in manifest['readable_source_files']}
         actual_exports={p.relative_to(ROOT/item['slug']/'files').as_posix() for p in (ROOT/item['slug']/'files').rglob('*') if p.is_file()}
