@@ -1,6 +1,6 @@
 # Forma — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-16; source fingerprint `d70b2629bf2d247d`.
+Snapshot: 2026-10-18; source fingerprint `5d4be88024dc566c`.
 Entry: https://azizbeksafarov.github.io/design/forma/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov

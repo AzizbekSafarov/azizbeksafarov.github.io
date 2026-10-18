@@ -4,6 +4,8 @@ import {application} from './app-fixture.mjs';
 import * as ziyo from '../ziyo-site/model.js';
 import * as orbita from '../orbita-site/model.js';
 import * as meros from '../meros-site/model.js';
+import * as nashr from '../nashr-site/model.js';
+import * as yuksal from '../si-site/model.js';
 import {report} from '../hisob-site/model.js';
 
 test('Ziyo correct → wrong answer removes stale next-step permission',async()=>{
@@ -54,3 +56,34 @@ test('Meros filtering keeps the permanent exhibit number',async()=>{
   assert.match(markup,/class="exhibit-number">02<\/span>/);
   assert.doesNotMatch(markup,/class="exhibit-number">01<\/span>/);
 });
+
+test('Yuksal keeps successive selections and removals in memory after storage quota failure',async()=>{
+  const key='ustoz.yuksal.plan.v1';
+  const app=await application(new URL('../si-site/app.js',import.meta.url),yuksal,{values:{[key]:'["savod"]'},writeThrows:true});
+  app.click('initiative-lab');app.click('#save-initiative');
+  assert.equal(app.element('#plan-count').textContent,'2 / 4');
+  app.click('initiative-ustoz');app.click('#save-initiative');
+  assert.equal(app.element('#plan-count').textContent,'3 / 4');
+  app.click('initiative-savod');app.click('#save-initiative');
+  assert.equal(app.element('#plan-count').textContent,'2 / 4');
+  assert.equal(app.element('#storage-warning').hidden,false);
+  assert.equal(app.values.get(key),'["savod"]');
+});
+
+test('Yuksal does not discard unsaved memory when another tab writes after storage failure',async()=>{
+  const app=await application(new URL('../si-site/app.js',import.meta.url),yuksal,{writeThrows:true});
+  app.click('initiative-lab');app.click('#save-initiative');
+  app.external('ustoz.yuksal.plan.v1','["savod"]');
+  app.click('initiative-ustoz');app.click('#save-initiative');
+  assert.equal(app.element('#plan-count').textContent,'2 / 4');
+  assert.match(app.element('#plan-items').children.map(row=>row.children[0].textContent).join('|'),/G‘oyalar laboratoriyasi/);
+});
+
+for(const [slug,model,id] of [['nashr',nashr,'city'],['meros',meros,'registan']]) {
+  test(slug+' keeps the storage warning visible after a save action',async()=>{
+    const app=await application(new URL('../'+slug+'-site/app.js',import.meta.url),model,{writeThrows:true});
+    const button=app.element('save-first');button.dataset.save=id;app.click('save-first');
+    assert.match(app.element('#status').textContent,/Saqlash cheklangan/);
+    assert.equal(app.element('#saved-count').textContent,1);
+  });
+}

@@ -1,6 +1,6 @@
 # Samar — yangi AI bilan davom ettirish
 
-Snapshot: 2026-10-16; source fingerprint `3c5214b35fa334be`.
+Snapshot: 2026-10-18; source fingerprint `8e768b8796f3a285`.
 Entry: https://azizbeksafarov.github.io/design/samar/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov

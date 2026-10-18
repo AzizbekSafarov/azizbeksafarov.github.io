@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "snapshot_date": "2026-10-16",
+  "snapshot_date": "2026-10-18",
   "templates": [
     {
       "id": "12",
@@ -23,8 +23,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/orbita/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/orbita/manifest.json",
-      "source_fingerprint": "7dafe9d61c53063bf92ae84fa3c91b48a5999452e181305d529bcecfe5f0406c",
-      "archive_bytes": 127901,
+      "source_fingerprint": "7b0561e4e5777cb6b366bb321b718a1b862af2d1f08107a91da9003caa6a221c",
+      "archive_bytes": 130773,
       "status": "featured"
     },
     {
@@ -49,8 +49,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/nashr/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/nashr/manifest.json",
-      "source_fingerprint": "d441f3cf67e7b9aa8c9eb04c7809eece3fd4dbef88ef38a2d605c7303b6896b9",
-      "archive_bytes": 1606979,
+      "source_fingerprint": "18941a395e99f4a684a964eaafda080977b8fd2291be71162c7348bf00e1580d",
+      "archive_bytes": 1609895,
       "status": "featured"
     },
     {
@@ -74,8 +74,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/hisob/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/hisob/manifest.json",
-      "source_fingerprint": "8ce63ef4d2f920dd8ac9d8811eb8a358e74e08ef3156332ed6a046790d4930af",
-      "archive_bytes": 137837,
+      "source_fingerprint": "6e83f091fd30fcf752a2a52e9d9b501fcf3f200e3e862045ef71cf91e07dbc61",
+      "archive_bytes": 140706,
       "status": "featured"
     },
     {
@@ -100,8 +100,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/ziyo/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/ziyo/manifest.json",
-      "source_fingerprint": "7b11855a317598039cc76a971d5ee14c25c2954cc4f2bf5aecf0fe39f5560f75",
-      "archive_bytes": 379384,
+      "source_fingerprint": "a03ec60ef1184ea2ac51ce40cb2ec7dd52484b9f4566364d43d9bfe720647421",
+      "archive_bytes": 382255,
       "status": "featured"
     },
     {
@@ -126,8 +126,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/meros/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/meros/manifest.json",
-      "source_fingerprint": "397bd3a4c19b8b81e528960db6c8163718c43395111e856d588531b7138e87f5",
-      "archive_bytes": 2123019,
+      "source_fingerprint": "443547efb0fae908a330e8bfcbfdc7034e9c175eeb12b64d2f77a211c7d6ff71",
+      "archive_bytes": 2125916,
       "status": "featured"
     },
     {
@@ -151,8 +151,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/samar/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/samar/manifest.json",
-      "source_fingerprint": "3c5214b35fa334bef8a8a3c20eacf064502c22b93025e33a22d0b91d3155cf15",
-      "archive_bytes": 1653631,
+      "source_fingerprint": "8e768b8796f3a285c557b9ee850f86ac2e90063bbe8d189614757702e1941d69",
+      "archive_bytes": 1656512,
       "status": "featured"
     },
     {
@@ -175,8 +175,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/forma/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/forma/manifest.json",
-      "source_fingerprint": "d70b2629bf2d247dd48215b575c53856229daa6cc988049285c3751fa21eb108",
-      "archive_bytes": 479073,
+      "source_fingerprint": "5d4be88024dc566c7754a7f9153590fd9671531f80be6152de84fad78121e854",
+      "archive_bytes": 481949,
       "status": "featured"
     },
     {
@@ -200,8 +200,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/bloom/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/bloom/manifest.json",
-      "source_fingerprint": "6b30d418241639aabbc045b2080d12a46dea3bc88e9de54ee620020b3a9b7f5a",
-      "archive_bytes": 971635,
+      "source_fingerprint": "577e3a75cb0b13ee359aab2180b462d42435f0f53ee1e89195d42f00142082fd",
+      "archive_bytes": 978835,
       "status": "featured"
     },
     {
@@ -225,8 +225,8 @@
       "source_url": "https://azizbeksafarov.github.io/design/si/source.zip",
       "source_text_url": "https://azizbeksafarov.github.io/design/si/source.md",
       "manifest_url": "https://azizbeksafarov.github.io/design/si/manifest.json",
-      "source_fingerprint": "736da8848f1a9bf77d7ecfdb74c46d32ce965ccdd3b7f50a85692adaedc0ba75",
-      "archive_bytes": 183036,
+      "source_fingerprint": "7a853b88626cc6eb0116af723056a06f3c2bd166bb526e1ac99f9cf44a3a1b27",
+      "archive_bytes": 186037,
       "status": "featured"
     }
   ]

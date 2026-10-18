@@ -1,0 +1,41 @@
+/* Overview shows the actual compositions. Details keep the working selection rail. */
+body[data-page=library] .library{max-width:1740px;padding-top:40px}
+body[data-page=library] .library-heading h1{font-size:clamp(30px,3.4vw,48px);font-weight:500;letter-spacing:-.045em}
+body[data-page=library] .library-heading>div>p:last-child{font-size:15px;line-height:1.7}
+body[data-page=library] .eyebrow{font-size:11px;letter-spacing:.08em}
+body[data-page=library] .library-toolbar{padding-bottom:18px;margin-bottom:28px}
+body[data-page=library] .search input{font-size:15px;min-height:48px}
+body[data-page=library] .library-filters button{font-size:13px;min-height:44px}
+body[data-page=library] .index-heading h2{font-size:16px;font-weight:500}
+body[data-page=library] .index-heading>span{font-size:13px}
+body[data-page=library] .index-hint{font-size:14px;max-width:680px}
+.row-summary{display:none}
+.workspace-ready .library[data-view=list] .library-layout{display:block}
+.workspace-ready .library[data-view=list] .selected-design{display:none}
+.workspace-ready .library[data-view=list] #design-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 28px;margin-top:24px}
+.workspace-ready .library[data-view=list] .design-row{display:grid;grid-template-columns:minmax(0,1fr) 40px;align-items:start;position:relative;gap:17px 10px;padding:0;margin:0;border:0;border-radius:0;background:none;min-width:0;isolation:auto;text-align:left;transition:none}
+.workspace-ready .library[data-view=list] .design-row::before,.workspace-ready .library[data-view=list] .design-row::after{display:none}
+.workspace-ready .library[data-view=list] .design-row>img{grid-column:1/-1;display:block;width:100%;height:auto;aspect-ratio:1.48;object-fit:cover;object-position:top;flex-basis:auto;border:1px solid #ffffff20;border-radius:8px;box-shadow:none;transition:filter .2s}
+.workspace-ready .library[data-view=list] .design-row:hover>img{filter:brightness(1.07)}
+.workspace-ready .library[data-view=list] .design-row>span:not(.row-check){padding-left:2px;min-width:0}
+.workspace-ready .library[data-view=list] .design-row strong{font-size:24px;font-weight:550;line-height:1.2;letter-spacing:-.03em;color:var(--ink)}
+.workspace-ready .library[data-view=list] .design-row small{font-size:13px;color:#c1bdcb;line-height:1.5;margin-top:7px}
+.workspace-ready .library[data-view=list] .row-summary{display:block;font-size:14px;line-height:1.65;color:var(--muted);margin-top:10px;max-width:48ch}
+.workspace-ready .library[data-view=list] .row-check{display:grid;place-items:center;width:40px;height:40px;border:1px solid #67636e;border-radius:50%;font-size:18px;margin:0;background:transparent;color:#f4f0fb}
+.workspace-ready body[data-page=library] .library[data-view=list] .design-row[aria-pressed=true] .row-check{width:40px;height:40px;flex-basis:40px;font-size:18px}
+.workspace-ready .library[data-view=list] .design-row:hover .row-check{background:#e8deff;color:#272036;border-color:#e8deff}
+.workspace-ready .library[data-view=detail] .mobile-back{display:inline-flex;order:-1;min-height:44px;align-items:center;border:0;background:transparent;color:#c7b9e3;font-size:14px;padding:0;margin-bottom:12px;width:100%}
+.workspace-ready .library[data-view=detail] .return-search{display:none}
+body[data-page=library] #selected-summary{font-size:16px;line-height:1.75;max-width:64ch}
+body[data-page=library] .selected-heading h2{font-size:36px}
+body[data-page=library] .use-details{font-size:14px}
+body[data-page=library] .use-details summary{color:#d3c6ed;font-size:14px;min-height:44px}
+body[data-page=library] .use-details p{font-size:15px}
+.share-link{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:18px;align-items:center}
+.share-link button{padding:8px 0;min-height:44px;border:0;background:transparent;color:#c7b9e3;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+.share-link input{width:100%;padding:12px;color:var(--ink);background:var(--paper);border:1px solid var(--line);font-size:13px;border-radius:4px}
+.share-link span{font-size:13px;color:var(--muted)}
+@media(min-width:1750px){.workspace-ready .library[data-view=list] #design-rows{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1000px) and (min-width:701px){.workspace-ready .library[data-view=detail] .library-layout{grid-template-columns:210px minmax(0,1fr)}.workspace-ready .library[data-view=detail] .design-row{flex-wrap:wrap}.workspace-ready .library[data-view=detail] .design-row>img{width:64px;height:44px;flex-basis:64px}.workspace-ready .library[data-view=detail] .design-row strong{font-size:15px}.workspace-ready .library[data-view=detail] .row-check{display:none}}
+@media(max-width:700px){body[data-page=library] .library{padding-top:24px}.workspace-ready .library[data-view=list] #design-rows{grid-template-columns:1fr;gap:36px}.workspace-ready .library[data-view=list] .design-row>img{aspect-ratio:1.48}.workspace-ready .library[data-view=list] .design-row strong{font-size:25px}body[data-page=library] .library-heading h1{font-size:32px}body[data-page=library] .library-filters button{padding-inline:9px;font-size:12px}body[data-page=library] .search input{font-size:16px}.workspace-ready .library[data-view=detail] .mobile-back{margin-bottom:4px}.library[data-view=detail] .selected-heading{gap:10px}body[data-page=library] .library-heading>div>p:last-child{max-width:42ch}}
+@media(prefers-reduced-motion:reduce){.workspace-ready .library[data-view=list] .design-row>img{transition:none}}

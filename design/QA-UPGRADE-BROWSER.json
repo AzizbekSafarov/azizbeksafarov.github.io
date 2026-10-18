@@ -1,0 +1,607 @@
+{
+  "date": "2026-10-18",
+  "scope": "Chromium browser via Chrome DevTools; actual generated local runtime. Device viewport widths checked against innerWidth. Functional flows separately performed through UI on 2026-10-17.",
+  "responsive": [
+    {
+      "route": "/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/?design=bloom",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/?design=bloom",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/?design=bloom",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/?design=bloom",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/?design=bloom",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/start/?design=bloom",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/start/?design=bloom",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/start/?design=bloom",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/start/?design=bloom",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/start/?design=bloom",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/forma-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/forma-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/forma-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/forma-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/forma-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/samar-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/samar-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/samar-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/samar-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/samar-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/orbita-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/orbita-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/orbita-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/orbita-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/orbita-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/nashr-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/nashr-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/nashr-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/nashr-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/nashr-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/meros-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/meros-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/meros-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/meros-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/meros-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/ziyo-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/hisob-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/hisob-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/hisob-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/hisob-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/hisob-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/si-site/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/si-site/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/si-site/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/si-site/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/si-site/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "width": 1440,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1440
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "width": 1024,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 1024
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "width": 768,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 768
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "width": 390,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 390
+    },
+    {
+      "route": "/design/material-expressive/dist/",
+      "width": 320,
+      "overflow": 0,
+      "main": 1,
+      "duplicateIDs": [],
+      "hiddenHeadings": 0,
+      "brokenVisibleImages": [],
+      "requestedWidth": 320
+    }
+  ],
+  "failures": []
+}

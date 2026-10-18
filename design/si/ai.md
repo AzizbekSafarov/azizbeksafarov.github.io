@@ -1,6 +1,6 @@
 # Yuksal · SI — tanlovda yangi AI uchun boshlash
 
-Snapshot: 2026-10-16; source fingerprint: `736da8848f1a9bf7`. Readable page: https://azizbeksafarov.github.io/design/si/
+Snapshot: 2026-10-18; source fingerprint: `7a853b88626cc6eb`. Readable page: https://azizbeksafarov.github.io/design/si/
 
 ## O‘qish vositasi uchun zaxira
 

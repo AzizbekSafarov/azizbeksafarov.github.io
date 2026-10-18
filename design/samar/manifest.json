@@ -1,27 +1,28 @@
 {
+  "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-16",
-  "source_fingerprint": "3c5214b35fa334bef8a8a3c20eacf064502c22b93025e33a22d0b91d3155cf15",
+  "snapshot_date": "2026-10-18",
+  "source_fingerprint": "8e768b8796f3a285c557b9ee850f86ac2e90063bbe8d189614757702e1941d69",
   "name": "Samar",
   "slug": "samar",
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "9b2a8ecceb80025a975fc0e6e566562088bcc41455444a45b67f4ff2ed58a59d",
-  "archive_bytes": 1653631,
+  "archive_sha256": "ff07bf6cea095f7899fe926a79e525809be121048032b50914952764b5bbae3f",
+  "archive_bytes": 1656512,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/samar/files/index.html.txt",
-      "sha256": "1a0819ab22aa42d39289a95f84859456dad86856a6837881538ab7ff6f9e849c",
+      "sha256": "d4651dcdc06a051a3d4316f9bd46b3bb183ca1b61ffc9c03f4f5d78ebe798f59",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/samar/files/style.css.txt",
-      "sha256": "65e0f2c159afd2e6a8a2476509b1c0cdb5adfdf04dfdf142a774115e73978844",
+      "sha256": "835f1c97d925249eab26c1277d4bf892aa5760560c9a5a6d56b3da8125467680",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/samar/files/style.css.txt"
     },
     {
@@ -70,13 +71,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2583,
-      "sha256": "6951ae9d35df06e8c36bb7e8e713ec85a5e7b32a93f50a754517b2a928699075"
+      "bytes": 2761,
+      "sha256": "b4b4289b95b4b22b8108e1dca97ad6dac51bb9b613f58c9647f9a86a2d605947"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 6389,
-      "sha256": "b334c33b06ec169523eab9b9c4c9c12afa1ddd135846fa8948ca27dbcdb4d024"
+      "sha256": "5235b76770807d5a79a30ba98da034ed88ea77b464db1bf0a4e7b697bff9ddbb"
     },
     {
       "path": "CHECKLIST.md",
@@ -111,12 +112,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1195,
-      "sha256": "49c40cada99a8dde2627fd3004407c71e09aae8659605e2a1be7e58391cdec43"
+      "sha256": "0d3ee1ebb6c6eb399bfb16e2bf5e052c244766276674bf2a03949f751423201e"
     },
     {
       "path": "LIBRARY-QA.md",
       "bytes": 5104,
       "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
+    },
+    {
+      "path": "LIBRARY-UPGRADE.md",
+      "bytes": 5769,
+      "sha256": "982aa201c8d7ec80218a563a2139edb3923c6a34efbed3fd8518a36925bc626b"
     },
     {
       "path": "README.md",
@@ -126,7 +132,7 @@
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "db243862895d513834ecfb05826c5dd22f1c2fb44deccabc1769b847c962f4f0"
+      "sha256": "a70361b716f6a6bce21a49222fbc5544fa7ff643911a5886009b4581b17dde69"
     },
     {
       "path": "serve.mjs",
@@ -195,8 +201,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 9425,
-      "sha256": "1a0819ab22aa42d39289a95f84859456dad86856a6837881538ab7ff6f9e849c"
+      "bytes": 9354,
+      "sha256": "d4651dcdc06a051a3d4316f9bd46b3bb183ca1b61ffc9c03f4f5d78ebe798f59"
     },
     {
       "path": "site/layout.css",
@@ -225,8 +231,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 3487,
-      "sha256": "65e0f2c159afd2e6a8a2476509b1c0cdb5adfdf04dfdf142a774115e73978844"
+      "bytes": 3402,
+      "sha256": "835f1c97d925249eab26c1277d4bf892aa5760560c9a5a6d56b3da8125467680"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/samar-site/QA-REPORT.md",

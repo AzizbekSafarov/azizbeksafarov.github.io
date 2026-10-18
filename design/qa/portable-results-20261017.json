@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-17",
+  "packages": [
+    {
+      "slug": "orbita",
+      "files": 2,
+      "tests": 17,
+      "passed": true
+    },
+    {
+      "slug": "nashr",
+      "files": 2,
+      "tests": 17,
+      "passed": true
+    },
+    {
+      "slug": "hisob",
+      "files": 2,
+      "tests": 75,
+      "passed": true
+    },
+    {
+      "slug": "ziyo",
+      "files": 2,
+      "tests": 54,
+      "passed": true
+    },
+    {
+      "slug": "meros",
+      "files": 2,
+      "tests": 17,
+      "passed": true
+    },
+    {
+      "slug": "samar",
+      "files": 2,
+      "tests": 93,
+      "passed": true
+    },
+    {
+      "slug": "forma",
+      "files": 2,
+      "tests": 49,
+      "passed": true
+    },
+    {
+      "slug": "bloom",
+      "files": 3,
+      "tests": 141,
+      "passed": true
+    },
+    {
+      "slug": "si",
+      "files": 3,
+      "tests": 25,
+      "passed": true
+    }
+  ],
+  "total": 488,
+  "scope": "Subset of full repository tests, run from extracted distributed ZIP files."
+}

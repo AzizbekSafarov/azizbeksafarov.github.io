@@ -3,11 +3,11 @@ import {initiatives,parsePlan,togglePlan,planText} from './model.js?v=2';
 
 const $=selector=>document.querySelector(selector);
 const key='ustoz.yuksal.plan.v1';
-let plan=[];let currentId=null;let opener=null;let toastTimer;
-function readCurrentPlan(){try{plan=parsePlan(localStorage.getItem(key));}catch{$('#storage-warning').hidden=false;}}
+let plan=[];let currentId=null;let opener=null;let toastTimer;let storageUsable=true;
+function readCurrentPlan(){if(!storageUsable)return;try{plan=parsePlan(localStorage.getItem(key));}catch{storageUsable=false;$('#storage-warning').hidden=false;}}
 readCurrentPlan();
 function notify(message){clearTimeout(toastTimer);$('#feedback').textContent=message;$('#feedback').hidden=false;toastTimer=setTimeout(()=>{$('#feedback').hidden=true;},3200);}
-function persist(){try{localStorage.setItem(key,JSON.stringify(plan));$('#storage-warning').hidden=true;}catch{$('#storage-warning').hidden=false;}}
+function persist(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(plan));$('#storage-warning').hidden=true;}catch{storageUsable=false;$('#storage-warning').hidden=false;}}
 function syncSave(){const chosen=plan.includes(currentId);$('#save-initiative').replaceChildren(document.createTextNode(chosen?'Rejadan olish ':'Rejaga qo‘shish '));const icon=document.createElement('span');icon.setAttribute('aria-hidden','true');icon.textContent=chosen?'−':'+';$('#save-initiative').append(icon);$('#save-initiative').setAttribute('aria-pressed',String(chosen));}
 function renderPlan(){
  const container=$('#plan-items');container.replaceChildren();
@@ -17,7 +17,7 @@ function renderPlan(){
  if(currentId)syncSave();
 }
 renderPlan();
-window.addEventListener('storage',event=>{if(event.key!==key&&event.key!==null)return;const restoreFocus=document.activeElement?.closest('#plan-items button');plan=parsePlan(event.newValue);renderPlan();if(restoreFocus&&!restoreFocus.isConnected)(plan.length?$('#download-plan'):$('#reja .text-link')).focus({preventScroll:true});});
+window.addEventListener('storage',event=>{if(!storageUsable||(event.key!==key&&event.key!==null))return;const restoreFocus=document.activeElement?.closest('#plan-items button');plan=parsePlan(event.newValue);renderPlan();if(restoreFocus&&!restoreFocus.isConnected)(plan.length?$('#download-plan'):$('#reja .text-link')).focus({preventScroll:true});});
 const detail=$('#initiative-dialog'),menu=$('#site-menu');
 document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{
  const item=initiatives.find(entry=>entry.id===button.dataset.open);if(!item)return;

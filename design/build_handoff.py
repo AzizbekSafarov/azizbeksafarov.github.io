@@ -14,7 +14,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
-DATE = '2026-10-16'
+DATE = '2026-10-18'
 SLUGS = {'02': 'samar', '04': 'forma', '10': 'bloom', '11': 'si'}
 LOOKS = {'02': 'Krem/yashil, mahalliy Instrument Serif/Sans, haqiqiy Samarqand suratlari, rasmiy manbalar, 3 manzil va tartiblanadigan '
        'kun rejasi.',
@@ -119,7 +119,7 @@ Keep the selected visual identity while replacing sample content, navigation and
 
 The editable project is `site/`. `node serve.mjs` previews its existing build without downloading npm packages. See README for source development and Python fallback. For Bloom, edit `site/src/`, not minified `site/dist/assets/`; run its existing tests/build after changes. For the HTML templates, the isolated competition copy can be edited directly; the original generators overwrite direct edits.
 
-Preserve visible labels, focus, keyboard access, button/panel distinction, empty/error/success states and reduced-motion support. Migrate/version local storage if the data model changes; never clear unrelated browser data. Demo forms do not send data; only describe an integration as working when it actually works.
+Preserve visible labels, focus, keyboard access, button/panel distinction, empty/error/success states and reduced-motion support. On Bloom, storage startup reads must be non-destructive; keep unavailable-storage sessions in memory and offer JSON export. Preserve malformed original data before replacing it. Migrate/version local storage if the data model changes; never clear unrelated browser data. Demo forms do not send data; only describe an integration as working when it actually works.
 
 Map ticket requirements to user actions and concrete checks. Verify the primary flow, invalid input, mobile layout and relevant persisted state. Read console/resource failures. Fix a reproduced cause and retest the affected path. An old QA report is a baseline, not proof of today's changes. Finish with editable source, a usable run command, actual test results and concise presentation notes. Update `HANDOFF.md` with files changed, commands, results, unresolved issues and next action. Do not claim zero bugs or a perfect score.
 """
@@ -134,7 +134,7 @@ def ai_brief(t):
     bloom=t['id']=='10'
     folder='design/material-expressive' if bloom else 'design/si-site' if t['id']=='11' else 'design'
     source_map=(
-      '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: baseline model tests; `src/combinations.test.js`: combined filters, task masks and storage boundaries.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
+      '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/persistence.js`: non-destructive startup reads, recovery backups and JSON export; `src/persistence.test.js`: failure regressions.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: baseline model tests; `src/combinations.test.js`: combined filters, task masks and storage boundaries.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
       if bloom else f"- `{t['file']}`: selected page; its custom styles are inline.\n- `shared.css`, `shared.js`: shared layout, dialogs/forms, filters, cart/dashboard interactions.\n- `extra.js`, `lesson-model.js`: Qadam/Spark and additional interactions, where referenced.\n- `assets/fonts/`: local fonts and licenses.\n- `src/shared.js`, `src/extra.js`, `src/lesson-model.js`, `src/material.css`: library source.\n- `build_templates.py`, `extra_templates.py`: original generators; rerunning them overwrites generated edits."
     )
     if t['id']=='11':source_map='- `index.html`: bo‘lim, kartalar, o‘zbekcha matn va dialoglar.\n- `style.css`: O‘zbekiston moviy/oq/yashil palitrasi, oq asosiy fon, to‘q teal matn va responsive holatlar.\n- `app.js`: menyu, filtr, reja, yuklash va harakat sozlamalari.\n- `motion.js`: yagona persistent spring particle field; hover/tap morph, kursor, click to‘lqini va scroll shakllari.\n- `motion.test.mjs`: fizik barqarorlik, kursor, to‘lqin va harakatlanuvchi shakllar.\n- `MOTION.md`: originaldan tekshirilgan animatsiya kontrakti.\n- `model.js`: ID, mazmun, uch qadam va reja validatsiyasi.\n- `model.test.mjs`: saqlanish, toggle va eksport testlari.\n- `fonts/`: mahalliy Instrument shriftlar va OFL.\n- `QA-REPORT.md`: haqiqiy tekshiruv.'
@@ -300,7 +300,7 @@ def source_files(t,templates):
     return {path:portable_bytes(path,data) for path,data in files.items()}
 
 def code_names(t,files):
-    if t['id']=='10':return ['src/main.jsx','src/style.css','src/model.js','src/model.test.js','src/combinations.test.js','package.json','vite.config.js','download_symbols.py']
+    if t['id']=='10':return ['src/main.jsx','src/style.css','src/persistence.js','src/persistence.test.js','src/model.js','src/model.test.js','src/combinations.test.js','package.json','vite.config.js','download_symbols.py']
     if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','combinations.test.mjs','uzbekistan.svg','brand-icon.svg']
     return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','combinations.test.mjs','CREDITS.md','package.json']
 
@@ -393,10 +393,11 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md')
         extras['LIBRARY-QA.md']=read(ROOT/'QA-EXPANDED.md')
+        extras['LIBRARY-UPGRADE.md']=read(ROOT/'QA-UPGRADE.md')
         extras['AGENTS.md']+='\nRead DESIGN-STANDARD.md for the quality bar. Do not reproduce generic blocks, invented proof or decorative interactions that displace the task.\n'
         files.update({k:v.encode() for k,v in extras.items()})
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
-        manifest={'schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
+        manifest={'upgrade_qa_url':f'{SITE}/design/QA-UPGRADE.md','schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
         if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:manifest['baseline_qa_url']=f'{SITE}/design/'+t['slug']+'-site/QA-REPORT.md'
         if t['id']=='11':manifest['baseline_qa_url']=f'{SITE}/design/si-site/QA-REPORT.md'
         manifest['ai_fallback_url']=f'{RAW}/design/{t["slug"]}/ai.md'
@@ -415,6 +416,7 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     write(ROOT/'ai.md',root_brief)
     archives['START-HERE.md']=root_brief.encode();archives['COMPETITION.md']=read(ROOT/'handoff/competition.md').encode()
     archives['LIBRARY-QA.md']=read(ROOT/'QA-EXPANDED.md').encode()
+    archives['LIBRARY-UPGRADE.md']=read(ROOT/'QA-UPGRADE.md').encode()
     full=ROOT/'handoff/competition-full.md'
     if full.exists():archives['competition/FULL-CONTEXT.md']=portable_bytes('competition/FULL-CONTEXT.md',full.read_bytes())
     for t in catalog:

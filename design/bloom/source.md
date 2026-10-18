@@ -1,6 +1,6 @@
 # Bloom · Material Design 3 — editable source snapshot
 
-Source fingerprint: `6b30d418241639aabbc045b2080d12a46dea3bc88e9de54ee620020b3a9b7f5a`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `577e3a75cb0b13ee359aab2180b462d42435f0f53ee1e89195d42f00142082fd`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/src/main.jsx
 
@@ -25,12 +25,12 @@ import '@material/web/progress/linear-progress.js';
 import '@material/web/dialog/dialog.js';
 import '@material/web/ripple/ripple.js';
 import {argbFromHex,hexFromArgb,Hct,SchemeTonalSpot,MaterialDynamicColors} from '@material/material-color-utilities';
-import {initialProjects,categories,visibleProjects,validateProjects,createProject,progress} from './model.js';
+import {categories,visibleProjects,createProject,progress} from './model.js';
+import {loadProjectState,persistProjectState,exportProjects} from './persistence.js';
 import './style.css';
 const SPRING={type:'spring',stiffness:380,damping:29,mass:1};
-const KEY='ustoz.bloom.projects.v1';
-function readProjects(){try{return validateProjects(JSON.parse(localStorage.getItem(KEY)))||structuredClone(initialProjects)}catch{return structuredClone(initialProjects)}}
 function Icon({name,size=24,fill,style,...props}){return <span {...props} aria-hidden="true" className="material-symbols" style={{fontSize:size,fontVariationSettings:`'FILL' ${fill&&fill!=='none'?1:0}`, ...style}}>{name}</span>}
+function DownloadIcon({size=18,...props}){return <svg {...props} aria-hidden="true" focusable="false" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg>}
 const Plus=p=><Icon name="add" {...p}/>,Search=p=><Icon name="search" {...p}/>,X=p=><Icon name="close" {...p}/>,ArrowUpRight=p=><Icon name="arrow_outward" {...p}/>,ArrowRight=p=><Icon name="arrow_forward" {...p}/>,Bookmark=p=><Icon name="bookmark" {...p}/>,LayoutGrid=p=><Icon name="grid_view" {...p}/>,Check=p=><Icon name="check" {...p}/>,CheckCheck=p=><Icon name="check_circle" {...p}/>,Sun=p=><Icon name="light_mode" {...p}/>,Moon=p=><Icon name="dark_mode" {...p}/>,ChevronDown=p=><Icon name="expand_more" {...p}/>,HelpCircle=p=><Icon name="help" {...p}/>,Leaf=p=><Icon name="check_circle" {...p}/>,FolderOpen=p=><Icon name="folder_open" {...p}/>,ExternalLink=p=><Icon name="arrow_outward" {...p}/>,Home=p=><Icon name="home" {...p}/>,Star=p=><Icon name="star" {...p}/>,List=p=><Icon name="list" {...p}/>,HardDrive=p=><Icon name="storage" {...p}/>,Cloud=p=><Icon name="cloud" {...p}/>,ChevronRight=p=><Icon name="chevron_right" {...p}/>,GraduationCap=p=><Icon name="school" {...p}/>,Palette=p=><Icon name="palette" {...p}/>,Code2=p=><Icon name="code" {...p}/>;
 function ProjectIcon({category,size=24}){const Element=category==='Ta’lim'?GraduationCap:category==='Dizayn'?Palette:Code2;return <Element size={size}/>}
 function Art({kind='flower',title='Yangi loyiha',category='Loyiha'}){return <div className={`material-cover cover-${kind}`} aria-hidden="true"><div className="cover-ring"/><div className="cover-page"><span className="cover-kicker">{category}</span><strong>{title}</strong><div className="cover-sample"><span/><span/><span/></div><div className="cover-caption">G‘oya · Reja · Natija</div></div></div>}
@@ -51,12 +51,13 @@ function Modal({open,onOpenChange,title,description,children,actions,opener,clas
 const SEEDS=[{color:'#6750a4',label:'Binafsha'},{color:'#1a73e8',label:'Ko‘k'},{color:'#00856a',label:'Yashil'},{color:'#ad4d25',label:'Terrakota'}];
 function applyMaterialTheme(seed,dark){const scheme=new SchemeTonalSpot(Hct.fromInt(argbFromHex(seed)),dark,0);const roles=new MaterialDynamicColors();for(const color of roles.allColors){document.documentElement.style.setProperty('--md-sys-color-'+color.name.replaceAll('_','-'),hexFromArgb(color.getArgb(scheme)))} }
 function App(){
-const reduce=useReducedMotion();const [projects,setProjects]=useState(readProjects);const [view,setView]=useState('all');const [category,setCategory]=useState('Hammasi');const [query,setQuery]=useState('');const [sort,setSort]=useState('recent');const [selected,setSelected]=useState(null);const [detailOpen,setDetailOpen]=useState(false);const [createOpen,setCreateOpen]=useState(false);const [helpOpen,setHelpOpen]=useState(false);const [theme,setTheme]=useState(()=>{try{return localStorage.getItem('ustoz.bloom.theme')==='dark'?'dark':'light'}catch{return'light'}});const [toast,setToast]=useState('');const [storageError,setStorageError]=useState(false);const [formError,setFormError]=useState('');const [formVersion,setFormVersion]=useState(0);const [display,setDisplay]=useState('grid');const [paletteOpen,setPaletteOpen]=useState(false);const paletteOpener=useRef(null);const [seed,setSeed]=useState(()=>{try{const stored=localStorage.getItem('ustoz.bloom.seed');return SEEDS.some(s=>s.color===stored)?stored:SEEDS[0].color}catch{return SEEDS[0].color}});const opener=useRef(null);const createOpener=useRef(null);const helpOpener=useRef(null);const searchRef=useRef(null);const headingRef=useRef(null);
-useEffect(()=>{try{localStorage.setItem(KEY,JSON.stringify(projects));setStorageError(false)}catch{setStorageError(true)}},[projects]);
+const reduce=useReducedMotion();const [startup]=useState(()=>loadProjectState(()=>localStorage));const [projects,setProjects]=useState(startup.projects);const [view,setView]=useState('all');const [category,setCategory]=useState('Hammasi');const [query,setQuery]=useState('');const [sort,setSort]=useState('recent');const [selected,setSelected]=useState(null);const [detailOpen,setDetailOpen]=useState(false);const [createOpen,setCreateOpen]=useState(false);const [helpOpen,setHelpOpen]=useState(false);const [theme,setTheme]=useState(()=>{try{return localStorage.getItem('ustoz.bloom.theme')==='dark'?'dark':'light'}catch{return'light'}});const [toast,setToast]=useState('');const [storageStatus,setStorageStatus]=useState(startup.status);const [formError,setFormError]=useState('');const [formVersion,setFormVersion]=useState(0);const [display,setDisplay]=useState('grid');const [paletteOpen,setPaletteOpen]=useState(false);const paletteOpener=useRef(null);const [seed,setSeed]=useState(()=>{try{const stored=localStorage.getItem('ustoz.bloom.seed');return SEEDS.some(s=>s.color===stored)?stored:SEEDS[0].color}catch{return SEEDS[0].color}});const opener=useRef(null);const createOpener=useRef(null);const helpOpener=useRef(null);const searchRef=useRef(null);const headingRef=useRef(null);
+useEffect(()=>{if(projects===startup.projects)return;setStorageStatus(persistProjectState(()=>localStorage,projects,{startupStatus:startup.status}).status)},[projects,startup]);
 useEffect(()=>{try{localStorage.setItem('ustoz.bloom.theme',theme)}catch{}document.documentElement.dataset.theme=theme;applyMaterialTheme(seed,theme==='dark');try{localStorage.setItem('ustoz.bloom.seed',seed)}catch{}},[theme,seed]);
 useEffect(()=>{if(!toast)return;const timer=setTimeout(()=>setToast(''),3200);return()=>clearTimeout(timer)},[toast]);
 useEffect(()=>{function shortcut(event){if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!document.querySelector('md-dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){event.preventDefault();searchRef.current?.focus()}}window.addEventListener('keydown',shortcut);return()=>window.removeEventListener('keydown',shortcut)},[]);
 const filtered=visibleProjects(projects,{view,category,query,sort});const done=projects.filter(p=>progress(p)===1).length;const saved=projects.filter(p=>p.saved).length;const totalTasks=projects.reduce((n,p)=>n+p.tasks.length,0);const checkedTasks=projects.reduce((n,p)=>n+p.tasks.filter(t=>t.done).length,0);const selectedProject=projects.find(p=>p.id===selected);const totalPercent=totalTasks?Math.round(checkedTasks/totalTasks*100):0;
+function downloadBackup(){const url=URL.createObjectURL(new Blob([exportProjects(projects)],{type:'application/json;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='bloom-loyihalar.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);setToast('Loyihalar nusxasi yuklashga topshirildi')}
 function navigate(next){setView(next);setCategory('Hammasi');setQuery('')}
 function openProject(event,id){opener.current=event.currentTarget;setSelected(id);setDetailOpen(true)}
 function startProject(event){createOpener.current=event.currentTarget;setFormError('');setCreateOpen(true)}
@@ -71,7 +72,7 @@ return <MotionConfig reducedMotion="user" transition={transition}>
  <main id="main" className="workspace">
   <header className="topbar"><a href="#main" className="wordmark">Bloom<span>Ijod maydoni</span></a><div className="search"><Search size={24}/><input ref={searchRef} value={query} onChange={e=>setQuery(e.target.value)} type="search" aria-label="Loyihalarni qidirish" placeholder="Loyihalarni qidirish" onKeyDown={e=>{if(e.key==='Escape')setQuery('');if(e.key==='Enter')headingRef.current?.focus({preventScroll:true})}}/>{query?<Button className="icon-button" onClick={()=>{setQuery('');searchRef.current?.focus()}} aria-label="Qidiruvni tozalash"><X size={24}/></Button>:<kbd>/</kbd>}</div><div className="top-actions"><Button className="icon-button top-help" aria-label="Bloom haqida" onClick={event=>{helpOpener.current=event.currentTarget;setHelpOpen(true)}}><HelpCircle size={24}/></Button><Button className="icon-button" aria-label="Rang palitrasini tanlash" onClick={event=>{paletteOpener.current=event.currentTarget;setPaletteOpen(true)}}><Palette size={24}/></Button><Button className="icon-button" aria-label={theme==='light'?'Qorong‘i rejimga o‘tish':'Yorug‘ rejimga o‘tish'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')}>{theme==='light'?<Moon size={24}/>:<Sun size={24}/>}</Button><span className="avatar" aria-label="Namuna profil: Azizbek Safarov">A</span></div></header>
   <div className="greeting"><h1>Salom, Azizbek</h1><p>Bugun yaxshi g‘oyaga bir qadam yaqinlashing.</p></div>
-  {storageError&&<p className="storage-warning" role="alert">Brauzer xotirasiga saqlab bo‘lmadi. O‘zgarishlar faqat bu ochiq sahifada qoladi.</p>}
+  {['invalid','unavailable','invalid-current','recovered'].includes(storageStatus)&&<div className="storage-warning"><p role="alert">{storageStatus==='invalid'?'Saqlangan loyihalarni o‘qib bo‘lmadi. Asl ma’lumot o‘zgartirilmadi; hozir namuna loyihalari ko‘rsatilmoqda.':storageStatus==='recovered'?'Yangi o‘zgarishlar saqlandi. Avvalgi o‘qilmagan ma’lumotning zaxira nusxasi ham saqlab qo‘yildi.':'Brauzer xotirasiga saqlab bo‘lmadi. O‘zgarishlar faqat bu ochiq sahifada qoladi. Ularni fayl sifatida yuklab olishingiz mumkin.'}</p><Button className="outlined" onClick={downloadBackup}>Loyihalarni yuklab olish <DownloadIcon size={18}/></Button></div>}
   <section className="overview"><div className="hero"><div><span className="hero-label"><Icon name="palette" size={18}/> Sizning ijodiy maydoningiz</span><h2>G‘oyangizga<br/>shakl bering.</h2><p>Yangi loyiha boshlang. Aniq qadamlar bilan uni tayyor natijaga aylantiring.</p><div className="hero-actions"><Button className="filled" onClick={startProject}><Plus size={18}/> Yangi loyiha</Button><Button className="outlined" onClick={()=>{headingRef.current?.scrollIntoView({behavior:reduce?'instant':'smooth',block:'start'});headingRef.current?.focus({preventScroll:true})}}>Loyihalarni ko‘rish</Button></div></div><div className="hero-composition" aria-hidden="true"><motion.div className="shape shape-square" initial={reduce?false:{opacity:0,scale:.85}} animate={{opacity:1,scale:1}} transition={transition}/><motion.div className="shape shape-circle" initial={reduce?false:{opacity:0,scale:.8}} animate={{opacity:1,scale:1}} transition={{...transition,delay:reduce?0:.08}}/><div className="shape shape-arch"/><span className="composition-label">B</span></div></div><aside className="progress-panel"><div className="progress-label"><CheckCheck size={24}/> Qadamlaringiz</div><strong>{totalPercent}<span>%</span></strong><p>{checkedTasks} / {totalTasks} qadam bajarildi</p><md-linear-progress value={totalPercent/100} aria-label="Umumiy loyiha progressi"/><div className="progress-counts"><span><b>{projects.length}</b>loyiha</span><span><b>{done}</b>tayyor</span><span><b>{saved}</b>saqlangan</span></div></aside></section>
   <div className="workspace-header"><h2 ref={headingRef} tabIndex={-1} id="projects-heading">{{all:'Loyihalaringiz',saved:'Saqlangan loyihalar',done:'Bajarilgan loyihalar'}[view]}</h2><div className="view-switch" role="group" aria-label="Ko‘rinish">{[{id:'list',icon:List,label:'Ro‘yxat ko‘rinishi'},{id:'grid',icon:LayoutGrid,label:'Karta ko‘rinishi'}].map(item=><button type="button" key={item.id} className={`view-segment ${display===item.id?'chosen':''}`} aria-label={item.label} title={item.label} aria-pressed={display===item.id} onClick={()=>setDisplay(item.id)}><md-ripple/>{display===item.id&&<Check size={16}/>}<item.icon size={20}/></button>)}</div></div>
   <div className="toolbar"><md-chip-set className="filters" aria-label="Loyiha yo‘nalishlari">{categories.map(c=><Button key={c} onClick={event=>{if(category===c)event.preventDefault();else setCategory(c)}} aria-pressed={category===c} className={`filter ${category===c?'selected':''}`}>{c}</Button>)}</md-chip-set><md-outlined-select className="sort" value={sort} quick={reduce} onchange={e=>setSort(e.target.value)} aria-label="Loyihalarni saralash"><md-select-option value="recent"><div slot="headline">Yangi qo‘shilgan</div></md-select-option><md-select-option value="name"><div slot="headline">Nom bo‘yicha</div></md-select-option></md-outlined-select></div>
@@ -92,7 +93,7 @@ return <MotionConfig reducedMotion="user" transition={transition}>
 </div>
 <Modal open={createOpen} onOpenChange={setCreateOpen} title="Yangi loyiha" description="Yangi loyiha yarating. U shu brauzerda saqlanadi." opener={createOpener}><form key={formVersion} onSubmit={submitProject} onInput={()=>setFormError('')} className="project-form" noValidate><md-outlined-text-field autofocus id="project-title" name="title" label="Loyiha nomi" aria-label="Loyiha nomi" maxLength={80} required error={!!formError} error-text={formError}/><md-outlined-text-field type="textarea" id="project-description" name="description" label="Qisqa g‘oya" aria-label="Qisqa g‘oya" rows={3} maxLength={200}/><md-outlined-select id="project-category" name="category" label="Yo‘nalish" aria-label="Yo‘nalish" quick={reduce}><md-select-option selected value="Ta’lim"><div slot="headline">Ta’lim</div></md-select-option>{categories.slice(2).map(c=><md-select-option key={c} value={c}><div slot="headline">{c}</div></md-select-option>)}</md-outlined-select>{formError&&<p className="sr-only" id="form-error" role="alert">{formError}</p>}<div className="form-actions"><Button className="text" onClick={()=>setCreateOpen(false)}>Bekor qilish</Button><Button type="submit" className="filled">Loyihani yaratish <Plus size={18}/></Button></div></form></Modal>
 <Modal open={detailOpen} onOpenChange={setDetailOpen} title={selectedProject?.title||'Loyiha'} description={selectedProject?.description||''} opener={opener} className="detail-modal">{selectedProject&&<><div className={`detail-art ${selectedProject.tone}`}><Art kind={selectedProject.art} title={selectedProject.title} description={selectedProject.description} category={selectedProject.category}/><span>{selectedProject.category}</span></div><div className="detail-progress"><h3>Uchta aniq qadam</h3><span>{selectedProject.tasks.filter(t=>t.done).length} / 3 bajarildi</span></div><div className="task-list">{selectedProject.tasks.map((task,index)=><div className={`task ${task.done?'checked':''}`} key={index}><md-checkbox id={`task-${index}`} checked={task.done} onchange={()=>changeTask(selectedProject.id,index)} aria-label={task.text}/><label htmlFor={`task-${index}`}><small>0{index+1}</small>{task.text}</label></div>)}</div><AnimatePresence mode="wait"><motion.div className={`detail-result ${progress(selectedProject)===1?'finished':''}`} key={progress(selectedProject)===1?'done':'in-progress'} initial={{opacity:0,y:reduce?0:8}} animate={{opacity:1,y:0}} exit={{opacity:0}}>{progress(selectedProject)===1?<><CheckCheck size={23}/><div><strong>Yaxshi ish. Loyiha tayyor!</strong><span>Bajarilgan loyihalar bo‘limida ham ko‘rinadi.</span></div></>:<><Leaf size={22}/><div><strong>Har bir qadam hisobga olinadi.</strong><span>Progress avtomatik saqlanadi.</span></div></>}</motion.div></AnimatePresence><div className="detail-actions"><Button className="tonal" onClick={()=>toggleSaved(selectedProject.id)}><Bookmark size={18} fill={selectedProject.saved?'currentColor':'none'}/>{selectedProject.saved?'Saqlangan':'Saqlash'}</Button><Button className="filled" onClick={()=>setDetailOpen(false)}>Davom etamiz <ArrowRight size={18}/></Button></div></>}</Modal>
-<Modal open={helpOpen} onOpenChange={setHelpOpen} title="Bloom haqida" description="Material Design 3 komponentlari bilan yaratilgan mustaqil loyiha maydoni." opener={helpOpener}><div className="help-copy"><p>Yangi loyiha yarating, uchta qadamni belgilang va yoqqan loyihalarni saqlang. Qidiruv, filtrlar va saralash birgalikda ishlaydi.</p><p>Ma’lumotlar faqat shu brauzer xotirasida qoladi. Profil va boshlang‘ich loyihalar namuna. Serverga ma’lumot yuborilmaydi.</p><p>Tugmalar, maydonlar, checkboxlar, filtrlar va dialoglar rasmiy Material Web komponentlaridan foydalanadi. Ranglar Google Material Color Utilities bilan hosil qilinadi. Operatsion tizimda harakatni kamaytirish yoqilsa, katta harakatlar o‘chadi.</p><a href="https://m3.material.io/styles/motion/overview/how-it-works" target="_blank" rel="noopener">Google Material motion qo‘llanmasi <ExternalLink size={15}/></a></div></Modal>
+<Modal open={helpOpen} onOpenChange={setHelpOpen} title="Bloom haqida" description="Material Design 3 komponentlari bilan yaratilgan mustaqil loyiha maydoni." opener={helpOpener}><div className="help-copy"><p>Yangi loyiha yarating, uchta qadamni belgilang va yoqqan loyihalarni saqlang. Qidiruv, filtrlar va saralash birgalikda ishlaydi.</p><p>Ma’lumotlar faqat shu brauzer xotirasida qoladi. Profil va boshlang‘ich loyihalar namuna. Serverga ma’lumot yuborilmaydi.</p><p>Loyihalar, saqlangan belgilar va bajarilgan qadamlarni JSON fayliga yuklab olishingiz mumkin.</p><Button className="outlined" onClick={downloadBackup}>Loyihalarni yuklab olish <DownloadIcon size={18}/></Button><p>Tugmalar, maydonlar, checkboxlar, filtrlar va dialoglar rasmiy Material Web komponentlaridan foydalanadi. Ranglar Google Material Color Utilities bilan hosil qilinadi. Operatsion tizimda harakatni kamaytirish yoqilsa, katta harakatlar o‘chadi.</p><a href="https://m3.material.io/styles/motion/overview/how-it-works" target="_blank" rel="noopener">Google Material motion qo‘llanmasi <ExternalLink size={15}/></a></div></Modal>
 <Modal open={paletteOpen} onOpenChange={setPaletteOpen} title="O‘zingizga mos rang" description="Tugmalar va faol belgilar rangini tanlang." opener={paletteOpener} className="palette-modal" actions={<Button className="filled" onClick={()=>setPaletteOpen(false)}>Tayyor <Check size={18}/></Button>}>
  <div className="palette-options" role="radiogroup" aria-label="Asosiy rang">{SEEDS.map((item,index)=><label key={item.color} className="palette-option" data-selected={seed===item.color} htmlFor={`palette-${index}`}><span className="palette-swatch" style={{background:item.color}} aria-hidden="true"/><span className="palette-name">{item.label}<small>{seed===item.color?'Tanlangan':'Tanlash'}</small></span><md-radio id={`palette-${index}`} name="palette" value={item.color} checked={seed===item.color} aria-label={item.label} onchange={event=>{if(event.target.checked)setSeed(item.color)}}/></label>)}</div>
  <div className="palette-samples"><h3>Sahifadagi ko‘rinishi</h3><dl className="palette-preview"><div><dt>Asosiy tugma</dt><dd className="sample-primary"/></div><div><dt>Sahifa foni</dt><dd className="sample-surface"/></div><div><dt>Oddiy panel</dt><dd className="sample-panel"/></div></dl></div>
@@ -201,6 +202,197 @@ body{font-size:16px;line-height:24px}
 .palette-modal [slot=content]{padding-bottom:8px}.palette-modal .palette-samples{margin-bottom:0}
 @media(max-width:460px){.palette-options{grid-template-columns:1fr;gap:8px}.palette-option{min-height:68px}.palette-option>.palette-name{font-size:16px;line-height:24px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
+
+```
+
+## site/src/persistence.js
+
+```javascript
+import {initialProjects, validateProjects} from './model.js';
+
+export const PROJECTS_KEY = 'ustoz.bloom.projects.v1';
+export const RECOVERY_KEY = 'ustoz.bloom.projects.recovery.v1';
+
+function parseProjects(raw) {
+  try { return validateProjects(JSON.parse(raw)); } catch { return null; }
+}
+
+// Reading is deliberately side-effect free. A damaged or temporarily unreadable
+// workspace must not be replaced by sample projects merely by opening the page.
+export function loadProjectState(getStorage) {
+  try {
+    const raw = getStorage().getItem(PROJECTS_KEY);
+    if (raw === null) return {projects: structuredClone(initialProjects), status: 'new'};
+    const projects = parseProjects(raw);
+    if (projects) return {projects, status: 'ready'};
+    return {projects: structuredClone(initialProjects), status: 'invalid'};
+  } catch {
+    return {projects: structuredClone(initialProjects), status: 'unavailable'};
+  }
+}
+
+export function persistProjectState(getStorage, projects, {startupStatus} = {}) {
+  if (!validateProjects(projects)) return {status: 'invalid-current'};
+  // A failed initial read means the displayed samples may not be the user's
+  // actual workspace. Keep this session in memory even if access later returns.
+  if (startupStatus === 'unavailable') return {status: 'unavailable'};
+  try {
+    const storage = getStorage();
+    const raw = storage.getItem(PROJECTS_KEY);
+    const needsRecovery = raw !== null && !parseProjects(raw);
+    // Preserve the exact original before replacement. If this backup fails,
+    // the original key stays untouched and the caller keeps an in-memory copy.
+    if (needsRecovery) storage.setItem(RECOVERY_KEY, raw);
+    storage.setItem(PROJECTS_KEY, JSON.stringify(projects));
+    return {status: needsRecovery ? 'recovered' : 'saved'};
+  } catch {
+    return {status: 'unavailable'};
+  }
+}
+
+export function exportProjects(projects) {
+  if (!validateProjects(projects)) throw new Error('Invalid project backup');
+  return JSON.stringify(projects, null, 2);
+}
+
+```
+
+## site/src/persistence.test.js
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initialProjects, createProject} from './model.js';
+import {PROJECTS_KEY, RECOVERY_KEY, loadProjectState, persistProjectState, exportProjects} from './persistence.js';
+
+function memoryStorage(entries = [], {readBlocked = false, failKey = ''} = {}) {
+  const values = new Map(entries), writes = [];
+  return {values, writes, getItem(key) {
+    if (readBlocked) throw new Error('Read access denied');
+    return values.get(key) ?? null;
+  }, setItem(key, value) {
+    if (key === failKey) throw new Error('Storage quota exceeded');
+    writes.push(key);
+    values.set(key, value);
+  }};
+}
+
+for (const raw of ['{broken user work', 'null', '{}', '[{"title":"My draft"}]']) {
+  test('opening a corrupt workspace preserves its original bytes: ' + raw, () => {
+    const storage = memoryStorage([[PROJECTS_KEY, raw]]);
+    const state = loadProjectState(() => storage);
+    assert.equal(state.status, 'invalid');
+    assert.deepEqual(state.projects, initialProjects);
+    assert.notEqual(state.projects, initialProjects);
+    assert.equal(storage.values.get(PROJECTS_KEY), raw);
+    assert.deepEqual(storage.writes, []);
+  });
+  test('the first edit backs up a corrupt workspace before replacement: ' + raw, () => {
+    const storage = memoryStorage([[PROJECTS_KEY, raw]]);
+    const projects = [createProject({title: 'New work', description: '', category: 'Dizayn'}, 'new')];
+    assert.equal(persistProjectState(() => storage, projects).status, 'recovered');
+    assert.equal(storage.values.get(RECOVERY_KEY), raw);
+    assert.deepEqual(storage.writes, [RECOVERY_KEY, PROJECTS_KEY]);
+    assert.deepEqual(loadProjectState(() => storage).projects, projects);
+  });
+}
+
+test('first visit returns independent samples without writing them', () => {
+  const storage = memoryStorage();
+  const first = loadProjectState(() => storage), second = loadProjectState(() => storage);
+  assert.equal(first.status, 'new');
+  first.projects[0].tasks[0].done = false;
+  assert.equal(second.projects[0].tasks[0].done, true);
+  assert.equal(initialProjects[0].tasks[0].done, true);
+  assert.deepEqual(storage.writes, []);
+});
+
+test('an intentionally empty saved workspace stays empty', () => {
+  const storage = memoryStorage([[PROJECTS_KEY, '[]']]);
+  const state = loadProjectState(() => storage);
+  assert.equal(state.status, 'ready');
+  assert.deepEqual(state.projects, []);
+  assert.deepEqual(storage.writes, []);
+});
+
+test('denied storage property access is recoverable without crashing', () => {
+  const denied = () => {throw new Error('SecurityError');};
+  assert.equal(loadProjectState(denied).status, 'unavailable');
+  assert.equal(persistProjectState(denied, initialProjects).status, 'unavailable');
+});
+
+test('read denied but write allowed never overwrites unknown existing work', () => {
+  const raw = JSON.stringify(initialProjects.slice(0, 1));
+  const storage = memoryStorage([[PROJECTS_KEY, raw]], {readBlocked: true});
+  assert.equal(loadProjectState(() => storage).status, 'unavailable');
+  assert.equal(persistProjectState(() => storage, initialProjects).status, 'unavailable');
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.deepEqual(storage.writes, []);
+});
+
+test('a session that started unreadable cannot replace real projects after storage access returns', () => {
+  const original = [{...structuredClone(initialProjects[0]), id: 'real-project', title: 'My saved work'}];
+  const storage = memoryStorage([[PROJECTS_KEY, JSON.stringify(original)]]);
+  let blocked = true;
+  const getStorage = () => {
+    if (blocked) throw new Error('Temporary SecurityError');
+    return storage;
+  };
+  const startup = loadProjectState(getStorage);
+  assert.equal(startup.status, 'unavailable');
+  const edited = startup.projects.map(project => ({...project, saved: true}));
+  blocked = false;
+  for (let edit = 0; edit < 2; edit++) {
+    assert.equal(persistProjectState(getStorage, edited, {startupStatus: startup.status}).status, 'unavailable');
+  }
+  assert.deepEqual(JSON.parse(storage.values.get(PROJECTS_KEY)), original);
+  assert.deepEqual(storage.writes, []);
+  assert.deepEqual(JSON.parse(exportProjects(edited)), edited);
+  // A new page load can read the actual workspace normally.
+  assert.deepEqual(loadProjectState(getStorage).projects, original);
+});
+
+test('failed recovery backup prevents destructive replacement', () => {
+  const raw = '{valuable broken draft';
+  const storage = memoryStorage([[PROJECTS_KEY, raw]], {failKey: RECOVERY_KEY});
+  assert.equal(persistProjectState(() => storage, initialProjects).status, 'unavailable');
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.deepEqual(storage.writes, []);
+});
+
+test('failed main write keeps both the original and the successful recovery backup', () => {
+  const raw = '{valuable broken draft';
+  const storage = memoryStorage([[PROJECTS_KEY, raw]], {failKey: PROJECTS_KEY});
+  assert.equal(persistProjectState(() => storage, initialProjects).status, 'unavailable');
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.equal(storage.values.get(RECOVERY_KEY), raw);
+  assert.deepEqual(storage.writes, [RECOVERY_KEY]);
+});
+
+test('healthy edits preserve recovery backups from an earlier session', () => {
+  const storage = memoryStorage([[PROJECTS_KEY, JSON.stringify(initialProjects)], [RECOVERY_KEY, '{original draft']]);
+  assert.equal(persistProjectState(() => storage, []).status, 'saved');
+  assert.equal(storage.values.get(RECOVERY_KEY), '{original draft');
+  assert.deepEqual(storage.writes, [PROJECTS_KEY]);
+  assert.deepEqual(loadProjectState(() => storage).projects, []);
+});
+
+test('invalid current state cannot overwrite valid stored projects', () => {
+  const raw = JSON.stringify(initialProjects);
+  const storage = memoryStorage([[PROJECTS_KEY, raw]]);
+  assert.equal(persistProjectState(() => storage, [{title: 'Incomplete'}]).status, 'invalid-current');
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.deepEqual(storage.writes, []);
+});
+
+test('downloaded backups preserve Unicode, checklists, bookmarks and boundaries', () => {
+  const project = createProject({title: 'O‘zbekcha — ' + 'a'.repeat(65), description: 'b'.repeat(200), category: 'Ta’lim'}, 'backup');
+  project.saved = true;
+  project.tasks[1].done = true;
+  const projects = Array.from({length: 200}, (_, i) => ({...structuredClone(project), id: 'p' + i}));
+  assert.deepEqual(JSON.parse(exportProjects(projects)), projects);
+  assert.throws(() => exportProjects([...projects, {...project, id: 'extra'}]));
+});
 
 ```
 

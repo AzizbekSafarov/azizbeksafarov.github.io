@@ -1,5 +1,5 @@
 <!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi"><title>Bloom · Material Design 3 — source</title><link rel="icon" href="/assets/hq/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../handoff/styles.css?v=560965086502"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="/">← Bosh qarorgoh</a><a href="/design/start/">AI bilan boshlash</a><a href="/design/">Tanlangan dizaynlar</a></nav></header><main id="main" class="wrap"><h1>Bloom · Material Design 3 — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content"><h2>Bloom · Material Design 3 — editable source snapshot</h2>
-<p>Source fingerprint: <code>6b30d418241639aabbc045b2080d12a46dea3bc88e9de54ee620020b3a9b7f5a</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
+<p>Source fingerprint: <code>577e3a75cb0b13ee359aab2180b462d42435f0f53ee1e89195d42f00142082fd</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
 <h3>site/src/main.jsx</h3>
 <pre><code>import React,{useState,useEffect,useRef} from &#x27;react&#x27;;
 import {createRoot} from &#x27;react-dom/client&#x27;;
@@ -21,12 +21,12 @@ import &#x27;@material/web/progress/linear-progress.js&#x27;;
 import &#x27;@material/web/dialog/dialog.js&#x27;;
 import &#x27;@material/web/ripple/ripple.js&#x27;;
 import {argbFromHex,hexFromArgb,Hct,SchemeTonalSpot,MaterialDynamicColors} from &#x27;@material/material-color-utilities&#x27;;
-import {initialProjects,categories,visibleProjects,validateProjects,createProject,progress} from &#x27;./model.js&#x27;;
+import {categories,visibleProjects,createProject,progress} from &#x27;./model.js&#x27;;
+import {loadProjectState,persistProjectState,exportProjects} from &#x27;./persistence.js&#x27;;
 import &#x27;./style.css&#x27;;
 const SPRING={type:&#x27;spring&#x27;,stiffness:380,damping:29,mass:1};
-const KEY=&#x27;ustoz.bloom.projects.v1&#x27;;
-function readProjects(){try{return validateProjects(JSON.parse(localStorage.getItem(KEY)))||structuredClone(initialProjects)}catch{return structuredClone(initialProjects)}}
 function Icon({name,size=24,fill,style,...props}){return &lt;span {...props} aria-hidden=&quot;true&quot; className=&quot;material-symbols&quot; style={{fontSize:size,fontVariationSettings:`&#x27;FILL&#x27; ${fill&amp;&amp;fill!==&#x27;none&#x27;?1:0}`, ...style}}&gt;{name}&lt;/span&gt;}
+function DownloadIcon({size=18,...props}){return &lt;svg {...props} aria-hidden=&quot;true&quot; focusable=&quot;false&quot; width={size} height={size} viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; strokeWidth=&quot;2&quot; strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot;&gt;&lt;path d=&quot;M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4&quot;/&gt;&lt;/svg&gt;}
 const Plus=p=&gt;&lt;Icon name=&quot;add&quot; {...p}/&gt;,Search=p=&gt;&lt;Icon name=&quot;search&quot; {...p}/&gt;,X=p=&gt;&lt;Icon name=&quot;close&quot; {...p}/&gt;,ArrowUpRight=p=&gt;&lt;Icon name=&quot;arrow_outward&quot; {...p}/&gt;,ArrowRight=p=&gt;&lt;Icon name=&quot;arrow_forward&quot; {...p}/&gt;,Bookmark=p=&gt;&lt;Icon name=&quot;bookmark&quot; {...p}/&gt;,LayoutGrid=p=&gt;&lt;Icon name=&quot;grid_view&quot; {...p}/&gt;,Check=p=&gt;&lt;Icon name=&quot;check&quot; {...p}/&gt;,CheckCheck=p=&gt;&lt;Icon name=&quot;check_circle&quot; {...p}/&gt;,Sun=p=&gt;&lt;Icon name=&quot;light_mode&quot; {...p}/&gt;,Moon=p=&gt;&lt;Icon name=&quot;dark_mode&quot; {...p}/&gt;,ChevronDown=p=&gt;&lt;Icon name=&quot;expand_more&quot; {...p}/&gt;,HelpCircle=p=&gt;&lt;Icon name=&quot;help&quot; {...p}/&gt;,Leaf=p=&gt;&lt;Icon name=&quot;check_circle&quot; {...p}/&gt;,FolderOpen=p=&gt;&lt;Icon name=&quot;folder_open&quot; {...p}/&gt;,ExternalLink=p=&gt;&lt;Icon name=&quot;arrow_outward&quot; {...p}/&gt;,Home=p=&gt;&lt;Icon name=&quot;home&quot; {...p}/&gt;,Star=p=&gt;&lt;Icon name=&quot;star&quot; {...p}/&gt;,List=p=&gt;&lt;Icon name=&quot;list&quot; {...p}/&gt;,HardDrive=p=&gt;&lt;Icon name=&quot;storage&quot; {...p}/&gt;,Cloud=p=&gt;&lt;Icon name=&quot;cloud&quot; {...p}/&gt;,ChevronRight=p=&gt;&lt;Icon name=&quot;chevron_right&quot; {...p}/&gt;,GraduationCap=p=&gt;&lt;Icon name=&quot;school&quot; {...p}/&gt;,Palette=p=&gt;&lt;Icon name=&quot;palette&quot; {...p}/&gt;,Code2=p=&gt;&lt;Icon name=&quot;code&quot; {...p}/&gt;;
 function ProjectIcon({category,size=24}){const Element=category===&#x27;Ta’lim&#x27;?GraduationCap:category===&#x27;Dizayn&#x27;?Palette:Code2;return &lt;Element size={size}/&gt;}
 function Art({kind=&#x27;flower&#x27;,title=&#x27;Yangi loyiha&#x27;,category=&#x27;Loyiha&#x27;}){return &lt;div className={`material-cover cover-${kind}`} aria-hidden=&quot;true&quot;&gt;&lt;div className=&quot;cover-ring&quot;/&gt;&lt;div className=&quot;cover-page&quot;&gt;&lt;span className=&quot;cover-kicker&quot;&gt;{category}&lt;/span&gt;&lt;strong&gt;{title}&lt;/strong&gt;&lt;div className=&quot;cover-sample&quot;&gt;&lt;span/&gt;&lt;span/&gt;&lt;span/&gt;&lt;/div&gt;&lt;div className=&quot;cover-caption&quot;&gt;G‘oya · Reja · Natija&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;}
@@ -47,12 +47,13 @@ function Modal({open,onOpenChange,title,description,children,actions,opener,clas
 const SEEDS=[{color:&#x27;#6750a4&#x27;,label:&#x27;Binafsha&#x27;},{color:&#x27;#1a73e8&#x27;,label:&#x27;Ko‘k&#x27;},{color:&#x27;#00856a&#x27;,label:&#x27;Yashil&#x27;},{color:&#x27;#ad4d25&#x27;,label:&#x27;Terrakota&#x27;}];
 function applyMaterialTheme(seed,dark){const scheme=new SchemeTonalSpot(Hct.fromInt(argbFromHex(seed)),dark,0);const roles=new MaterialDynamicColors();for(const color of roles.allColors){document.documentElement.style.setProperty(&#x27;--md-sys-color-&#x27;+color.name.replaceAll(&#x27;_&#x27;,&#x27;-&#x27;),hexFromArgb(color.getArgb(scheme)))} }
 function App(){
-const reduce=useReducedMotion();const [projects,setProjects]=useState(readProjects);const [view,setView]=useState(&#x27;all&#x27;);const [category,setCategory]=useState(&#x27;Hammasi&#x27;);const [query,setQuery]=useState(&#x27;&#x27;);const [sort,setSort]=useState(&#x27;recent&#x27;);const [selected,setSelected]=useState(null);const [detailOpen,setDetailOpen]=useState(false);const [createOpen,setCreateOpen]=useState(false);const [helpOpen,setHelpOpen]=useState(false);const [theme,setTheme]=useState(()=&gt;{try{return localStorage.getItem(&#x27;ustoz.bloom.theme&#x27;)===&#x27;dark&#x27;?&#x27;dark&#x27;:&#x27;light&#x27;}catch{return&#x27;light&#x27;}});const [toast,setToast]=useState(&#x27;&#x27;);const [storageError,setStorageError]=useState(false);const [formError,setFormError]=useState(&#x27;&#x27;);const [formVersion,setFormVersion]=useState(0);const [display,setDisplay]=useState(&#x27;grid&#x27;);const [paletteOpen,setPaletteOpen]=useState(false);const paletteOpener=useRef(null);const [seed,setSeed]=useState(()=&gt;{try{const stored=localStorage.getItem(&#x27;ustoz.bloom.seed&#x27;);return SEEDS.some(s=&gt;s.color===stored)?stored:SEEDS[0].color}catch{return SEEDS[0].color}});const opener=useRef(null);const createOpener=useRef(null);const helpOpener=useRef(null);const searchRef=useRef(null);const headingRef=useRef(null);
-useEffect(()=&gt;{try{localStorage.setItem(KEY,JSON.stringify(projects));setStorageError(false)}catch{setStorageError(true)}},[projects]);
+const reduce=useReducedMotion();const [startup]=useState(()=&gt;loadProjectState(()=&gt;localStorage));const [projects,setProjects]=useState(startup.projects);const [view,setView]=useState(&#x27;all&#x27;);const [category,setCategory]=useState(&#x27;Hammasi&#x27;);const [query,setQuery]=useState(&#x27;&#x27;);const [sort,setSort]=useState(&#x27;recent&#x27;);const [selected,setSelected]=useState(null);const [detailOpen,setDetailOpen]=useState(false);const [createOpen,setCreateOpen]=useState(false);const [helpOpen,setHelpOpen]=useState(false);const [theme,setTheme]=useState(()=&gt;{try{return localStorage.getItem(&#x27;ustoz.bloom.theme&#x27;)===&#x27;dark&#x27;?&#x27;dark&#x27;:&#x27;light&#x27;}catch{return&#x27;light&#x27;}});const [toast,setToast]=useState(&#x27;&#x27;);const [storageStatus,setStorageStatus]=useState(startup.status);const [formError,setFormError]=useState(&#x27;&#x27;);const [formVersion,setFormVersion]=useState(0);const [display,setDisplay]=useState(&#x27;grid&#x27;);const [paletteOpen,setPaletteOpen]=useState(false);const paletteOpener=useRef(null);const [seed,setSeed]=useState(()=&gt;{try{const stored=localStorage.getItem(&#x27;ustoz.bloom.seed&#x27;);return SEEDS.some(s=&gt;s.color===stored)?stored:SEEDS[0].color}catch{return SEEDS[0].color}});const opener=useRef(null);const createOpener=useRef(null);const helpOpener=useRef(null);const searchRef=useRef(null);const headingRef=useRef(null);
+useEffect(()=&gt;{if(projects===startup.projects)return;setStorageStatus(persistProjectState(()=&gt;localStorage,projects,{startupStatus:startup.status}).status)},[projects,startup]);
 useEffect(()=&gt;{try{localStorage.setItem(&#x27;ustoz.bloom.theme&#x27;,theme)}catch{}document.documentElement.dataset.theme=theme;applyMaterialTheme(seed,theme===&#x27;dark&#x27;);try{localStorage.setItem(&#x27;ustoz.bloom.seed&#x27;,seed)}catch{}},[theme,seed]);
 useEffect(()=&gt;{if(!toast)return;const timer=setTimeout(()=&gt;setToast(&#x27;&#x27;),3200);return()=&gt;clearTimeout(timer)},[toast]);
 useEffect(()=&gt;{function shortcut(event){if(event.key===&#x27;/&#x27;&amp;&amp;!event.ctrlKey&amp;&amp;!event.metaKey&amp;&amp;!document.querySelector(&#x27;md-dialog[open]&#x27;)&amp;&amp;![&#x27;INPUT&#x27;,&#x27;TEXTAREA&#x27;,&#x27;SELECT&#x27;].includes(document.activeElement?.tagName)){event.preventDefault();searchRef.current?.focus()}}window.addEventListener(&#x27;keydown&#x27;,shortcut);return()=&gt;window.removeEventListener(&#x27;keydown&#x27;,shortcut)},[]);
 const filtered=visibleProjects(projects,{view,category,query,sort});const done=projects.filter(p=&gt;progress(p)===1).length;const saved=projects.filter(p=&gt;p.saved).length;const totalTasks=projects.reduce((n,p)=&gt;n+p.tasks.length,0);const checkedTasks=projects.reduce((n,p)=&gt;n+p.tasks.filter(t=&gt;t.done).length,0);const selectedProject=projects.find(p=&gt;p.id===selected);const totalPercent=totalTasks?Math.round(checkedTasks/totalTasks*100):0;
+function downloadBackup(){const url=URL.createObjectURL(new Blob([exportProjects(projects)],{type:&#x27;application/json;charset=utf-8&#x27;}));const link=document.createElement(&#x27;a&#x27;);link.href=url;link.download=&#x27;bloom-loyihalar.json&#x27;;document.body.append(link);link.click();link.remove();setTimeout(()=&gt;URL.revokeObjectURL(url),1000);setToast(&#x27;Loyihalar nusxasi yuklashga topshirildi&#x27;)}
 function navigate(next){setView(next);setCategory(&#x27;Hammasi&#x27;);setQuery(&#x27;&#x27;)}
 function openProject(event,id){opener.current=event.currentTarget;setSelected(id);setDetailOpen(true)}
 function startProject(event){createOpener.current=event.currentTarget;setFormError(&#x27;&#x27;);setCreateOpen(true)}
@@ -67,7 +68,7 @@ return &lt;MotionConfig reducedMotion=&quot;user&quot; transition={transition}&g
  &lt;main id=&quot;main&quot; className=&quot;workspace&quot;&gt;
   &lt;header className=&quot;topbar&quot;&gt;&lt;a href=&quot;#main&quot; className=&quot;wordmark&quot;&gt;Bloom&lt;span&gt;Ijod maydoni&lt;/span&gt;&lt;/a&gt;&lt;div className=&quot;search&quot;&gt;&lt;Search size={24}/&gt;&lt;input ref={searchRef} value={query} onChange={e=&gt;setQuery(e.target.value)} type=&quot;search&quot; aria-label=&quot;Loyihalarni qidirish&quot; placeholder=&quot;Loyihalarni qidirish&quot; onKeyDown={e=&gt;{if(e.key===&#x27;Escape&#x27;)setQuery(&#x27;&#x27;);if(e.key===&#x27;Enter&#x27;)headingRef.current?.focus({preventScroll:true})}}/&gt;{query?&lt;Button className=&quot;icon-button&quot; onClick={()=&gt;{setQuery(&#x27;&#x27;);searchRef.current?.focus()}} aria-label=&quot;Qidiruvni tozalash&quot;&gt;&lt;X size={24}/&gt;&lt;/Button&gt;:&lt;kbd&gt;/&lt;/kbd&gt;}&lt;/div&gt;&lt;div className=&quot;top-actions&quot;&gt;&lt;Button className=&quot;icon-button top-help&quot; aria-label=&quot;Bloom haqida&quot; onClick={event=&gt;{helpOpener.current=event.currentTarget;setHelpOpen(true)}}&gt;&lt;HelpCircle size={24}/&gt;&lt;/Button&gt;&lt;Button className=&quot;icon-button&quot; aria-label=&quot;Rang palitrasini tanlash&quot; onClick={event=&gt;{paletteOpener.current=event.currentTarget;setPaletteOpen(true)}}&gt;&lt;Palette size={24}/&gt;&lt;/Button&gt;&lt;Button className=&quot;icon-button&quot; aria-label={theme===&#x27;light&#x27;?&#x27;Qorong‘i rejimga o‘tish&#x27;:&#x27;Yorug‘ rejimga o‘tish&#x27;} onClick={()=&gt;setTheme(t=&gt;t===&#x27;light&#x27;?&#x27;dark&#x27;:&#x27;light&#x27;)}&gt;{theme===&#x27;light&#x27;?&lt;Moon size={24}/&gt;:&lt;Sun size={24}/&gt;}&lt;/Button&gt;&lt;span className=&quot;avatar&quot; aria-label=&quot;Namuna profil: Azizbek Safarov&quot;&gt;A&lt;/span&gt;&lt;/div&gt;&lt;/header&gt;
   &lt;div className=&quot;greeting&quot;&gt;&lt;h1&gt;Salom, Azizbek&lt;/h1&gt;&lt;p&gt;Bugun yaxshi g‘oyaga bir qadam yaqinlashing.&lt;/p&gt;&lt;/div&gt;
-  {storageError&amp;&amp;&lt;p className=&quot;storage-warning&quot; role=&quot;alert&quot;&gt;Brauzer xotirasiga saqlab bo‘lmadi. O‘zgarishlar faqat bu ochiq sahifada qoladi.&lt;/p&gt;}
+  {[&#x27;invalid&#x27;,&#x27;unavailable&#x27;,&#x27;invalid-current&#x27;,&#x27;recovered&#x27;].includes(storageStatus)&amp;&amp;&lt;div className=&quot;storage-warning&quot;&gt;&lt;p role=&quot;alert&quot;&gt;{storageStatus===&#x27;invalid&#x27;?&#x27;Saqlangan loyihalarni o‘qib bo‘lmadi. Asl ma’lumot o‘zgartirilmadi; hozir namuna loyihalari ko‘rsatilmoqda.&#x27;:storageStatus===&#x27;recovered&#x27;?&#x27;Yangi o‘zgarishlar saqlandi. Avvalgi o‘qilmagan ma’lumotning zaxira nusxasi ham saqlab qo‘yildi.&#x27;:&#x27;Brauzer xotirasiga saqlab bo‘lmadi. O‘zgarishlar faqat bu ochiq sahifada qoladi. Ularni fayl sifatida yuklab olishingiz mumkin.&#x27;}&lt;/p&gt;&lt;Button className=&quot;outlined&quot; onClick={downloadBackup}&gt;Loyihalarni yuklab olish &lt;DownloadIcon size={18}/&gt;&lt;/Button&gt;&lt;/div&gt;}
   &lt;section className=&quot;overview&quot;&gt;&lt;div className=&quot;hero&quot;&gt;&lt;div&gt;&lt;span className=&quot;hero-label&quot;&gt;&lt;Icon name=&quot;palette&quot; size={18}/&gt; Sizning ijodiy maydoningiz&lt;/span&gt;&lt;h2&gt;G‘oyangizga&lt;br/&gt;shakl bering.&lt;/h2&gt;&lt;p&gt;Yangi loyiha boshlang. Aniq qadamlar bilan uni tayyor natijaga aylantiring.&lt;/p&gt;&lt;div className=&quot;hero-actions&quot;&gt;&lt;Button className=&quot;filled&quot; onClick={startProject}&gt;&lt;Plus size={18}/&gt; Yangi loyiha&lt;/Button&gt;&lt;Button className=&quot;outlined&quot; onClick={()=&gt;{headingRef.current?.scrollIntoView({behavior:reduce?&#x27;instant&#x27;:&#x27;smooth&#x27;,block:&#x27;start&#x27;});headingRef.current?.focus({preventScroll:true})}}&gt;Loyihalarni ko‘rish&lt;/Button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div className=&quot;hero-composition&quot; aria-hidden=&quot;true&quot;&gt;&lt;motion.div className=&quot;shape shape-square&quot; initial={reduce?false:{opacity:0,scale:.85}} animate={{opacity:1,scale:1}} transition={transition}/&gt;&lt;motion.div className=&quot;shape shape-circle&quot; initial={reduce?false:{opacity:0,scale:.8}} animate={{opacity:1,scale:1}} transition={{...transition,delay:reduce?0:.08}}/&gt;&lt;div className=&quot;shape shape-arch&quot;/&gt;&lt;span className=&quot;composition-label&quot;&gt;B&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;aside className=&quot;progress-panel&quot;&gt;&lt;div className=&quot;progress-label&quot;&gt;&lt;CheckCheck size={24}/&gt; Qadamlaringiz&lt;/div&gt;&lt;strong&gt;{totalPercent}&lt;span&gt;%&lt;/span&gt;&lt;/strong&gt;&lt;p&gt;{checkedTasks} / {totalTasks} qadam bajarildi&lt;/p&gt;&lt;md-linear-progress value={totalPercent/100} aria-label=&quot;Umumiy loyiha progressi&quot;/&gt;&lt;div className=&quot;progress-counts&quot;&gt;&lt;span&gt;&lt;b&gt;{projects.length}&lt;/b&gt;loyiha&lt;/span&gt;&lt;span&gt;&lt;b&gt;{done}&lt;/b&gt;tayyor&lt;/span&gt;&lt;span&gt;&lt;b&gt;{saved}&lt;/b&gt;saqlangan&lt;/span&gt;&lt;/div&gt;&lt;/aside&gt;&lt;/section&gt;
   &lt;div className=&quot;workspace-header&quot;&gt;&lt;h2 ref={headingRef} tabIndex={-1} id=&quot;projects-heading&quot;&gt;{{all:&#x27;Loyihalaringiz&#x27;,saved:&#x27;Saqlangan loyihalar&#x27;,done:&#x27;Bajarilgan loyihalar&#x27;}[view]}&lt;/h2&gt;&lt;div className=&quot;view-switch&quot; role=&quot;group&quot; aria-label=&quot;Ko‘rinish&quot;&gt;{[{id:&#x27;list&#x27;,icon:List,label:&#x27;Ro‘yxat ko‘rinishi&#x27;},{id:&#x27;grid&#x27;,icon:LayoutGrid,label:&#x27;Karta ko‘rinishi&#x27;}].map(item=&gt;&lt;button type=&quot;button&quot; key={item.id} className={`view-segment ${display===item.id?&#x27;chosen&#x27;:&#x27;&#x27;}`} aria-label={item.label} title={item.label} aria-pressed={display===item.id} onClick={()=&gt;setDisplay(item.id)}&gt;&lt;md-ripple/&gt;{display===item.id&amp;&amp;&lt;Check size={16}/&gt;}&lt;item.icon size={20}/&gt;&lt;/button&gt;)}&lt;/div&gt;&lt;/div&gt;
   &lt;div className=&quot;toolbar&quot;&gt;&lt;md-chip-set className=&quot;filters&quot; aria-label=&quot;Loyiha yo‘nalishlari&quot;&gt;{categories.map(c=&gt;&lt;Button key={c} onClick={event=&gt;{if(category===c)event.preventDefault();else setCategory(c)}} aria-pressed={category===c} className={`filter ${category===c?&#x27;selected&#x27;:&#x27;&#x27;}`}&gt;{c}&lt;/Button&gt;)}&lt;/md-chip-set&gt;&lt;md-outlined-select className=&quot;sort&quot; value={sort} quick={reduce} onchange={e=&gt;setSort(e.target.value)} aria-label=&quot;Loyihalarni saralash&quot;&gt;&lt;md-select-option value=&quot;recent&quot;&gt;&lt;div slot=&quot;headline&quot;&gt;Yangi qo‘shilgan&lt;/div&gt;&lt;/md-select-option&gt;&lt;md-select-option value=&quot;name&quot;&gt;&lt;div slot=&quot;headline&quot;&gt;Nom bo‘yicha&lt;/div&gt;&lt;/md-select-option&gt;&lt;/md-outlined-select&gt;&lt;/div&gt;
@@ -88,7 +89,7 @@ return &lt;MotionConfig reducedMotion=&quot;user&quot; transition={transition}&g
 &lt;/div&gt;
 &lt;Modal open={createOpen} onOpenChange={setCreateOpen} title=&quot;Yangi loyiha&quot; description=&quot;Yangi loyiha yarating. U shu brauzerda saqlanadi.&quot; opener={createOpener}&gt;&lt;form key={formVersion} onSubmit={submitProject} onInput={()=&gt;setFormError(&#x27;&#x27;)} className=&quot;project-form&quot; noValidate&gt;&lt;md-outlined-text-field autofocus id=&quot;project-title&quot; name=&quot;title&quot; label=&quot;Loyiha nomi&quot; aria-label=&quot;Loyiha nomi&quot; maxLength={80} required error={!!formError} error-text={formError}/&gt;&lt;md-outlined-text-field type=&quot;textarea&quot; id=&quot;project-description&quot; name=&quot;description&quot; label=&quot;Qisqa g‘oya&quot; aria-label=&quot;Qisqa g‘oya&quot; rows={3} maxLength={200}/&gt;&lt;md-outlined-select id=&quot;project-category&quot; name=&quot;category&quot; label=&quot;Yo‘nalish&quot; aria-label=&quot;Yo‘nalish&quot; quick={reduce}&gt;&lt;md-select-option selected value=&quot;Ta’lim&quot;&gt;&lt;div slot=&quot;headline&quot;&gt;Ta’lim&lt;/div&gt;&lt;/md-select-option&gt;{categories.slice(2).map(c=&gt;&lt;md-select-option key={c} value={c}&gt;&lt;div slot=&quot;headline&quot;&gt;{c}&lt;/div&gt;&lt;/md-select-option&gt;)}&lt;/md-outlined-select&gt;{formError&amp;&amp;&lt;p className=&quot;sr-only&quot; id=&quot;form-error&quot; role=&quot;alert&quot;&gt;{formError}&lt;/p&gt;}&lt;div className=&quot;form-actions&quot;&gt;&lt;Button className=&quot;text&quot; onClick={()=&gt;setCreateOpen(false)}&gt;Bekor qilish&lt;/Button&gt;&lt;Button type=&quot;submit&quot; className=&quot;filled&quot;&gt;Loyihani yaratish &lt;Plus size={18}/&gt;&lt;/Button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/Modal&gt;
 &lt;Modal open={detailOpen} onOpenChange={setDetailOpen} title={selectedProject?.title||&#x27;Loyiha&#x27;} description={selectedProject?.description||&#x27;&#x27;} opener={opener} className=&quot;detail-modal&quot;&gt;{selectedProject&amp;&amp;&lt;&gt;&lt;div className={`detail-art ${selectedProject.tone}`}&gt;&lt;Art kind={selectedProject.art} title={selectedProject.title} description={selectedProject.description} category={selectedProject.category}/&gt;&lt;span&gt;{selectedProject.category}&lt;/span&gt;&lt;/div&gt;&lt;div className=&quot;detail-progress&quot;&gt;&lt;h3&gt;Uchta aniq qadam&lt;/h3&gt;&lt;span&gt;{selectedProject.tasks.filter(t=&gt;t.done).length} / 3 bajarildi&lt;/span&gt;&lt;/div&gt;&lt;div className=&quot;task-list&quot;&gt;{selectedProject.tasks.map((task,index)=&gt;&lt;div className={`task ${task.done?&#x27;checked&#x27;:&#x27;&#x27;}`} key={index}&gt;&lt;md-checkbox id={`task-${index}`} checked={task.done} onchange={()=&gt;changeTask(selectedProject.id,index)} aria-label={task.text}/&gt;&lt;label htmlFor={`task-${index}`}&gt;&lt;small&gt;0{index+1}&lt;/small&gt;{task.text}&lt;/label&gt;&lt;/div&gt;)}&lt;/div&gt;&lt;AnimatePresence mode=&quot;wait&quot;&gt;&lt;motion.div className={`detail-result ${progress(selectedProject)===1?&#x27;finished&#x27;:&#x27;&#x27;}`} key={progress(selectedProject)===1?&#x27;done&#x27;:&#x27;in-progress&#x27;} initial={{opacity:0,y:reduce?0:8}} animate={{opacity:1,y:0}} exit={{opacity:0}}&gt;{progress(selectedProject)===1?&lt;&gt;&lt;CheckCheck size={23}/&gt;&lt;div&gt;&lt;strong&gt;Yaxshi ish. Loyiha tayyor!&lt;/strong&gt;&lt;span&gt;Bajarilgan loyihalar bo‘limida ham ko‘rinadi.&lt;/span&gt;&lt;/div&gt;&lt;/&gt;:&lt;&gt;&lt;Leaf size={22}/&gt;&lt;div&gt;&lt;strong&gt;Har bir qadam hisobga olinadi.&lt;/strong&gt;&lt;span&gt;Progress avtomatik saqlanadi.&lt;/span&gt;&lt;/div&gt;&lt;/&gt;}&lt;/motion.div&gt;&lt;/AnimatePresence&gt;&lt;div className=&quot;detail-actions&quot;&gt;&lt;Button className=&quot;tonal&quot; onClick={()=&gt;toggleSaved(selectedProject.id)}&gt;&lt;Bookmark size={18} fill={selectedProject.saved?&#x27;currentColor&#x27;:&#x27;none&#x27;}/&gt;{selectedProject.saved?&#x27;Saqlangan&#x27;:&#x27;Saqlash&#x27;}&lt;/Button&gt;&lt;Button className=&quot;filled&quot; onClick={()=&gt;setDetailOpen(false)}&gt;Davom etamiz &lt;ArrowRight size={18}/&gt;&lt;/Button&gt;&lt;/div&gt;&lt;/&gt;}&lt;/Modal&gt;
-&lt;Modal open={helpOpen} onOpenChange={setHelpOpen} title=&quot;Bloom haqida&quot; description=&quot;Material Design 3 komponentlari bilan yaratilgan mustaqil loyiha maydoni.&quot; opener={helpOpener}&gt;&lt;div className=&quot;help-copy&quot;&gt;&lt;p&gt;Yangi loyiha yarating, uchta qadamni belgilang va yoqqan loyihalarni saqlang. Qidiruv, filtrlar va saralash birgalikda ishlaydi.&lt;/p&gt;&lt;p&gt;Ma’lumotlar faqat shu brauzer xotirasida qoladi. Profil va boshlang‘ich loyihalar namuna. Serverga ma’lumot yuborilmaydi.&lt;/p&gt;&lt;p&gt;Tugmalar, maydonlar, checkboxlar, filtrlar va dialoglar rasmiy Material Web komponentlaridan foydalanadi. Ranglar Google Material Color Utilities bilan hosil qilinadi. Operatsion tizimda harakatni kamaytirish yoqilsa, katta harakatlar o‘chadi.&lt;/p&gt;&lt;a href=&quot;https://m3.material.io/styles/motion/overview/how-it-works&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Material motion qo‘llanmasi &lt;ExternalLink size={15}/&gt;&lt;/a&gt;&lt;/div&gt;&lt;/Modal&gt;
+&lt;Modal open={helpOpen} onOpenChange={setHelpOpen} title=&quot;Bloom haqida&quot; description=&quot;Material Design 3 komponentlari bilan yaratilgan mustaqil loyiha maydoni.&quot; opener={helpOpener}&gt;&lt;div className=&quot;help-copy&quot;&gt;&lt;p&gt;Yangi loyiha yarating, uchta qadamni belgilang va yoqqan loyihalarni saqlang. Qidiruv, filtrlar va saralash birgalikda ishlaydi.&lt;/p&gt;&lt;p&gt;Ma’lumotlar faqat shu brauzer xotirasida qoladi. Profil va boshlang‘ich loyihalar namuna. Serverga ma’lumot yuborilmaydi.&lt;/p&gt;&lt;p&gt;Loyihalar, saqlangan belgilar va bajarilgan qadamlarni JSON fayliga yuklab olishingiz mumkin.&lt;/p&gt;&lt;Button className=&quot;outlined&quot; onClick={downloadBackup}&gt;Loyihalarni yuklab olish &lt;DownloadIcon size={18}/&gt;&lt;/Button&gt;&lt;p&gt;Tugmalar, maydonlar, checkboxlar, filtrlar va dialoglar rasmiy Material Web komponentlaridan foydalanadi. Ranglar Google Material Color Utilities bilan hosil qilinadi. Operatsion tizimda harakatni kamaytirish yoqilsa, katta harakatlar o‘chadi.&lt;/p&gt;&lt;a href=&quot;https://m3.material.io/styles/motion/overview/how-it-works&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Material motion qo‘llanmasi &lt;ExternalLink size={15}/&gt;&lt;/a&gt;&lt;/div&gt;&lt;/Modal&gt;
 &lt;Modal open={paletteOpen} onOpenChange={setPaletteOpen} title=&quot;O‘zingizga mos rang&quot; description=&quot;Tugmalar va faol belgilar rangini tanlang.&quot; opener={paletteOpener} className=&quot;palette-modal&quot; actions={&lt;Button className=&quot;filled&quot; onClick={()=&gt;setPaletteOpen(false)}&gt;Tayyor &lt;Check size={18}/&gt;&lt;/Button&gt;}&gt;
  &lt;div className=&quot;palette-options&quot; role=&quot;radiogroup&quot; aria-label=&quot;Asosiy rang&quot;&gt;{SEEDS.map((item,index)=&gt;&lt;label key={item.color} className=&quot;palette-option&quot; data-selected={seed===item.color} htmlFor={`palette-${index}`}&gt;&lt;span className=&quot;palette-swatch&quot; style={{background:item.color}} aria-hidden=&quot;true&quot;/&gt;&lt;span className=&quot;palette-name&quot;&gt;{item.label}&lt;small&gt;{seed===item.color?&#x27;Tanlangan&#x27;:&#x27;Tanlash&#x27;}&lt;/small&gt;&lt;/span&gt;&lt;md-radio id={`palette-${index}`} name=&quot;palette&quot; value={item.color} checked={seed===item.color} aria-label={item.label} onchange={event=&gt;{if(event.target.checked)setSeed(item.color)}}/&gt;&lt;/label&gt;)}&lt;/div&gt;
  &lt;div className=&quot;palette-samples&quot;&gt;&lt;h3&gt;Sahifadagi ko‘rinishi&lt;/h3&gt;&lt;dl className=&quot;palette-preview&quot;&gt;&lt;div&gt;&lt;dt&gt;Asosiy tugma&lt;/dt&gt;&lt;dd className=&quot;sample-primary&quot;/&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Sahifa foni&lt;/dt&gt;&lt;dd className=&quot;sample-surface&quot;/&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Oddiy panel&lt;/dt&gt;&lt;dd className=&quot;sample-panel&quot;/&gt;&lt;/div&gt;&lt;/dl&gt;&lt;/div&gt;
@@ -193,6 +194,189 @@ body{font-size:16px;line-height:24px}
 .palette-modal [slot=content]{padding-bottom:8px}.palette-modal .palette-samples{margin-bottom:0}
 @media(max-width:460px){.palette-options{grid-template-columns:1fr;gap:8px}.palette-option{min-height:68px}.palette-option&gt;.palette-name{font-size:16px;line-height:24px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
+</code></pre>
+<h3>site/src/persistence.js</h3>
+<pre><code>import {initialProjects, validateProjects} from &#x27;./model.js&#x27;;
+
+export const PROJECTS_KEY = &#x27;ustoz.bloom.projects.v1&#x27;;
+export const RECOVERY_KEY = &#x27;ustoz.bloom.projects.recovery.v1&#x27;;
+
+function parseProjects(raw) {
+  try { return validateProjects(JSON.parse(raw)); } catch { return null; }
+}
+
+// Reading is deliberately side-effect free. A damaged or temporarily unreadable
+// workspace must not be replaced by sample projects merely by opening the page.
+export function loadProjectState(getStorage) {
+  try {
+    const raw = getStorage().getItem(PROJECTS_KEY);
+    if (raw === null) return {projects: structuredClone(initialProjects), status: &#x27;new&#x27;};
+    const projects = parseProjects(raw);
+    if (projects) return {projects, status: &#x27;ready&#x27;};
+    return {projects: structuredClone(initialProjects), status: &#x27;invalid&#x27;};
+  } catch {
+    return {projects: structuredClone(initialProjects), status: &#x27;unavailable&#x27;};
+  }
+}
+
+export function persistProjectState(getStorage, projects, {startupStatus} = {}) {
+  if (!validateProjects(projects)) return {status: &#x27;invalid-current&#x27;};
+  // A failed initial read means the displayed samples may not be the user&#x27;s
+  // actual workspace. Keep this session in memory even if access later returns.
+  if (startupStatus === &#x27;unavailable&#x27;) return {status: &#x27;unavailable&#x27;};
+  try {
+    const storage = getStorage();
+    const raw = storage.getItem(PROJECTS_KEY);
+    const needsRecovery = raw !== null &amp;&amp; !parseProjects(raw);
+    // Preserve the exact original before replacement. If this backup fails,
+    // the original key stays untouched and the caller keeps an in-memory copy.
+    if (needsRecovery) storage.setItem(RECOVERY_KEY, raw);
+    storage.setItem(PROJECTS_KEY, JSON.stringify(projects));
+    return {status: needsRecovery ? &#x27;recovered&#x27; : &#x27;saved&#x27;};
+  } catch {
+    return {status: &#x27;unavailable&#x27;};
+  }
+}
+
+export function exportProjects(projects) {
+  if (!validateProjects(projects)) throw new Error(&#x27;Invalid project backup&#x27;);
+  return JSON.stringify(projects, null, 2);
+}
+</code></pre>
+<h3>site/src/persistence.test.js</h3>
+<pre><code>import test from &#x27;node:test&#x27;;
+import assert from &#x27;node:assert/strict&#x27;;
+import {initialProjects, createProject} from &#x27;./model.js&#x27;;
+import {PROJECTS_KEY, RECOVERY_KEY, loadProjectState, persistProjectState, exportProjects} from &#x27;./persistence.js&#x27;;
+
+function memoryStorage(entries = [], {readBlocked = false, failKey = &#x27;&#x27;} = {}) {
+  const values = new Map(entries), writes = [];
+  return {values, writes, getItem(key) {
+    if (readBlocked) throw new Error(&#x27;Read access denied&#x27;);
+    return values.get(key) ?? null;
+  }, setItem(key, value) {
+    if (key === failKey) throw new Error(&#x27;Storage quota exceeded&#x27;);
+    writes.push(key);
+    values.set(key, value);
+  }};
+}
+
+for (const raw of [&#x27;{broken user work&#x27;, &#x27;null&#x27;, &#x27;{}&#x27;, &#x27;[{&quot;title&quot;:&quot;My draft&quot;}]&#x27;]) {
+  test(&#x27;opening a corrupt workspace preserves its original bytes: &#x27; + raw, () =&gt; {
+    const storage = memoryStorage([[PROJECTS_KEY, raw]]);
+    const state = loadProjectState(() =&gt; storage);
+    assert.equal(state.status, &#x27;invalid&#x27;);
+    assert.deepEqual(state.projects, initialProjects);
+    assert.notEqual(state.projects, initialProjects);
+    assert.equal(storage.values.get(PROJECTS_KEY), raw);
+    assert.deepEqual(storage.writes, []);
+  });
+  test(&#x27;the first edit backs up a corrupt workspace before replacement: &#x27; + raw, () =&gt; {
+    const storage = memoryStorage([[PROJECTS_KEY, raw]]);
+    const projects = [createProject({title: &#x27;New work&#x27;, description: &#x27;&#x27;, category: &#x27;Dizayn&#x27;}, &#x27;new&#x27;)];
+    assert.equal(persistProjectState(() =&gt; storage, projects).status, &#x27;recovered&#x27;);
+    assert.equal(storage.values.get(RECOVERY_KEY), raw);
+    assert.deepEqual(storage.writes, [RECOVERY_KEY, PROJECTS_KEY]);
+    assert.deepEqual(loadProjectState(() =&gt; storage).projects, projects);
+  });
+}
+
+test(&#x27;first visit returns independent samples without writing them&#x27;, () =&gt; {
+  const storage = memoryStorage();
+  const first = loadProjectState(() =&gt; storage), second = loadProjectState(() =&gt; storage);
+  assert.equal(first.status, &#x27;new&#x27;);
+  first.projects[0].tasks[0].done = false;
+  assert.equal(second.projects[0].tasks[0].done, true);
+  assert.equal(initialProjects[0].tasks[0].done, true);
+  assert.deepEqual(storage.writes, []);
+});
+
+test(&#x27;an intentionally empty saved workspace stays empty&#x27;, () =&gt; {
+  const storage = memoryStorage([[PROJECTS_KEY, &#x27;[]&#x27;]]);
+  const state = loadProjectState(() =&gt; storage);
+  assert.equal(state.status, &#x27;ready&#x27;);
+  assert.deepEqual(state.projects, []);
+  assert.deepEqual(storage.writes, []);
+});
+
+test(&#x27;denied storage property access is recoverable without crashing&#x27;, () =&gt; {
+  const denied = () =&gt; {throw new Error(&#x27;SecurityError&#x27;);};
+  assert.equal(loadProjectState(denied).status, &#x27;unavailable&#x27;);
+  assert.equal(persistProjectState(denied, initialProjects).status, &#x27;unavailable&#x27;);
+});
+
+test(&#x27;read denied but write allowed never overwrites unknown existing work&#x27;, () =&gt; {
+  const raw = JSON.stringify(initialProjects.slice(0, 1));
+  const storage = memoryStorage([[PROJECTS_KEY, raw]], {readBlocked: true});
+  assert.equal(loadProjectState(() =&gt; storage).status, &#x27;unavailable&#x27;);
+  assert.equal(persistProjectState(() =&gt; storage, initialProjects).status, &#x27;unavailable&#x27;);
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.deepEqual(storage.writes, []);
+});
+
+test(&#x27;a session that started unreadable cannot replace real projects after storage access returns&#x27;, () =&gt; {
+  const original = [{...structuredClone(initialProjects[0]), id: &#x27;real-project&#x27;, title: &#x27;My saved work&#x27;}];
+  const storage = memoryStorage([[PROJECTS_KEY, JSON.stringify(original)]]);
+  let blocked = true;
+  const getStorage = () =&gt; {
+    if (blocked) throw new Error(&#x27;Temporary SecurityError&#x27;);
+    return storage;
+  };
+  const startup = loadProjectState(getStorage);
+  assert.equal(startup.status, &#x27;unavailable&#x27;);
+  const edited = startup.projects.map(project =&gt; ({...project, saved: true}));
+  blocked = false;
+  for (let edit = 0; edit &lt; 2; edit++) {
+    assert.equal(persistProjectState(getStorage, edited, {startupStatus: startup.status}).status, &#x27;unavailable&#x27;);
+  }
+  assert.deepEqual(JSON.parse(storage.values.get(PROJECTS_KEY)), original);
+  assert.deepEqual(storage.writes, []);
+  assert.deepEqual(JSON.parse(exportProjects(edited)), edited);
+  // A new page load can read the actual workspace normally.
+  assert.deepEqual(loadProjectState(getStorage).projects, original);
+});
+
+test(&#x27;failed recovery backup prevents destructive replacement&#x27;, () =&gt; {
+  const raw = &#x27;{valuable broken draft&#x27;;
+  const storage = memoryStorage([[PROJECTS_KEY, raw]], {failKey: RECOVERY_KEY});
+  assert.equal(persistProjectState(() =&gt; storage, initialProjects).status, &#x27;unavailable&#x27;);
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.deepEqual(storage.writes, []);
+});
+
+test(&#x27;failed main write keeps both the original and the successful recovery backup&#x27;, () =&gt; {
+  const raw = &#x27;{valuable broken draft&#x27;;
+  const storage = memoryStorage([[PROJECTS_KEY, raw]], {failKey: PROJECTS_KEY});
+  assert.equal(persistProjectState(() =&gt; storage, initialProjects).status, &#x27;unavailable&#x27;);
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.equal(storage.values.get(RECOVERY_KEY), raw);
+  assert.deepEqual(storage.writes, [RECOVERY_KEY]);
+});
+
+test(&#x27;healthy edits preserve recovery backups from an earlier session&#x27;, () =&gt; {
+  const storage = memoryStorage([[PROJECTS_KEY, JSON.stringify(initialProjects)], [RECOVERY_KEY, &#x27;{original draft&#x27;]]);
+  assert.equal(persistProjectState(() =&gt; storage, []).status, &#x27;saved&#x27;);
+  assert.equal(storage.values.get(RECOVERY_KEY), &#x27;{original draft&#x27;);
+  assert.deepEqual(storage.writes, [PROJECTS_KEY]);
+  assert.deepEqual(loadProjectState(() =&gt; storage).projects, []);
+});
+
+test(&#x27;invalid current state cannot overwrite valid stored projects&#x27;, () =&gt; {
+  const raw = JSON.stringify(initialProjects);
+  const storage = memoryStorage([[PROJECTS_KEY, raw]]);
+  assert.equal(persistProjectState(() =&gt; storage, [{title: &#x27;Incomplete&#x27;}]).status, &#x27;invalid-current&#x27;);
+  assert.equal(storage.values.get(PROJECTS_KEY), raw);
+  assert.deepEqual(storage.writes, []);
+});
+
+test(&#x27;downloaded backups preserve Unicode, checklists, bookmarks and boundaries&#x27;, () =&gt; {
+  const project = createProject({title: &#x27;O‘zbekcha — &#x27; + &#x27;a&#x27;.repeat(65), description: &#x27;b&#x27;.repeat(200), category: &#x27;Ta’lim&#x27;}, &#x27;backup&#x27;);
+  project.saved = true;
+  project.tasks[1].done = true;
+  const projects = Array.from({length: 200}, (_, i) =&gt; ({...structuredClone(project), id: &#x27;p&#x27; + i}));
+  assert.deepEqual(JSON.parse(exportProjects(projects)), projects);
+  assert.throws(() =&gt; exportProjects([...projects, {...project, id: &#x27;extra&#x27;}]));
+});
 </code></pre>
 <h3>site/src/model.js</h3>
 <pre><code>export const categories=[&#x27;Hammasi&#x27;,&#x27;Ta’lim&#x27;,&#x27;Dizayn&#x27;,&#x27;Texnologiya&#x27;];
@@ -299,4 +483,4 @@ root = Path(__file__).parent / &#x27;src/fonts&#x27;
 (root/&#x27;material-symbols.woff2&#x27;).write_bytes(font)
 (root/&#x27;material-symbols.css&#x27;).write_text(css.replace(font_url, &#x27;./material-symbols.woff2&#x27;), encoding=&#x27;utf-8&#x27;)
 print(&#x27;Updated Material Symbols subset:&#x27;, len(font), &#x27;bytes&#x27;)
-</code></pre></article></main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · 2026-10-16</div></footer></body></html>
+</code></pre></article></main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · 2026-10-18</div></footer></body></html>

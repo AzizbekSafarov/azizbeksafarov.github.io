@@ -29,7 +29,7 @@ Deployment target: [GitHub Pages gallery variant 10](https://azizbeksafarov.gith
 
 Create projects, choose their category, combine search and category filters, switch between cards and rows, save projects, toggle checklist steps, sort, and change the source color or light/dark preference. Repeated clicks keep the active category selected; successful creation clears the next form and field edits clear its validation error. Saving uses the same bookmark symbol throughout, with focus recovery when filtering removes a card.
 
-Projects persist in this browser. Invalid stored data falls back to valid sample projects; storage failures display a warning. Profiles and starter projects are illustrative. There is no backend or account sync.
+Projects persist in this browser. Opening a page never rewrites project storage. Invalid stored data displays sample projects with a warning; the original bytes must be backed up before replacement. If storage cannot be read at startup, that session remains in memory even if access later recovers. Help and storage warnings offer a JSON download of the currently displayed projects. `src/persistence.js` owns these rules and has dedicated regression tests. Profiles and starter projects are illustrative. There is no backend or account sync.
 
 ## References and licenses
 

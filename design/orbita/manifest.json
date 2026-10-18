@@ -1,27 +1,28 @@
 {
+  "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-16",
-  "source_fingerprint": "7dafe9d61c53063bf92ae84fa3c91b48a5999452e181305d529bcecfe5f0406c",
+  "snapshot_date": "2026-10-18",
+  "source_fingerprint": "7b0561e4e5777cb6b366bb321b718a1b862af2d1f08107a91da9003caa6a221c",
   "name": "Orbita",
   "slug": "orbita",
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "5fcd3e21190a6979143ba90f4714fed09d6fea2b4a56c0a83b8e35e1ca31f526",
-  "archive_bytes": 127901,
+  "archive_sha256": "88164ca0224fe611e824db593d6643f3c59e8f9e33d616a9926eb446c1b46077",
+  "archive_bytes": 130773,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/index.html.txt",
-      "sha256": "0005445895a5a46ce39462b8a0ef6b4b435a67f4d05d1dc6936e465feb7e129f",
+      "sha256": "959dc37bace21694fd063f26aac0a45d75cff5245a76cab520443db247e23095",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/style.css.txt",
-      "sha256": "bfca381b390db19ee4077758c37e60898d47dfe6cda2d571c14e31202cb90747",
+      "sha256": "8398ba75d38abaf0c204470f44e75ab8800e529e176707ef25d70b5120c6c7ae",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/style.css.txt"
     },
     {
@@ -70,13 +71,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2478,
-      "sha256": "a4c12b5c0193a170153e21a2eb50259a1a1308d056d39e748da3125402987ca5"
+      "bytes": 2656,
+      "sha256": "5bc1b31980a72db96fd00655353c744d6a8942805a6ad8ddaf8e2d885b509fbb"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 5494,
-      "sha256": "c488dc7f42c1aea840a89d1b8075618bd811fbea16dd0c4dda23d1d3efd1fa22"
+      "sha256": "2b2d74cf74fca51a1be29d258c113be97a7dc9037da6d2867aa71fb36034c2f3"
     },
     {
       "path": "CHECKLIST.md",
@@ -111,12 +112,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1197,
-      "sha256": "cf49a9c07ca8e0f5178fa218843cc23b78d35d21d552bd3f00fb6741b521d7a6"
+      "sha256": "8bf034e4d72b249edf924be829c82440b96eacd1421023c73abdf4f25be1905c"
     },
     {
       "path": "LIBRARY-QA.md",
       "bytes": 5104,
       "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
+    },
+    {
+      "path": "LIBRARY-UPGRADE.md",
+      "bytes": 5769,
+      "sha256": "982aa201c8d7ec80218a563a2139edb3923c6a34efbed3fd8518a36925bc626b"
     },
     {
       "path": "README.md",
@@ -126,7 +132,7 @@
     {
       "path": "kit.json",
       "bytes": 206,
-      "sha256": "5d2a352205eeb091e69781b6f480b3b16aae664b31e2f5b538a22993e4c8138e"
+      "sha256": "4e16f20f73f21851c19f8697ce30aea566b7cbccae9fb5ef316de75d2634ffad"
     },
     {
       "path": "serve.mjs",
@@ -180,8 +186,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 4757,
-      "sha256": "0005445895a5a46ce39462b8a0ef6b4b435a67f4d05d1dc6936e465feb7e129f"
+      "bytes": 4686,
+      "sha256": "959dc37bace21694fd063f26aac0a45d75cff5245a76cab520443db247e23095"
     },
     {
       "path": "site/layout.css",
@@ -210,8 +216,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 3481,
-      "sha256": "bfca381b390db19ee4077758c37e60898d47dfe6cda2d571c14e31202cb90747"
+      "bytes": 3396,
+      "sha256": "8398ba75d38abaf0c204470f44e75ab8800e529e176707ef25d70b5120c6c7ae"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/orbita-site/QA-REPORT.md",

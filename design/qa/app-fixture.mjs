@@ -5,12 +5,12 @@ import {readFile} from 'node:fs/promises';
 
 export async function application(url, model, storage = {}) {
   const elements = new Map(), events = new Map(), windowEvents = new Map();
-  let activeElement, choice = null;
+  let activeElement, choice = null, created = 0;
   function element(selector) {
     if (elements.has(selector)) return elements.get(selector);
     const listeners = new Map(), classes = new Set(), attrs = new Map();
     const el = {
-      dataset: {}, style: {}, hidden: false, disabled: false, textContent: '', innerHTML: '',
+      dataset: {}, style: {}, hidden: false, disabled: false, textContent: '', innerHTML: '', children: [],
       isConnected: true, clientWidth: 700,
       classList: {add: x => classes.add(x), remove: x => classes.delete(x), contains: x => classes.has(x), toggle(x) {if(classes.has(x)){classes.delete(x);return false;}classes.add(x);return true;}},
       setAttribute(k,v) {attrs.set(k,String(v));}, getAttribute: k => attrs.get(k) ?? null,
@@ -20,6 +20,8 @@ export async function application(url, model, storage = {}) {
       focus() {activeElement=el;}, closest() {return el;},
       querySelector: s => element(selector+' '+s), querySelectorAll: () => [],
       getBoundingClientRect: () => ({top:0,left:0,right:700,bottom:400}),
+      append(...children){el.children.push(...children);},
+      replaceChildren(...children){el.children=children;},
       animate(){}, showModal(){el.open=true;}, close(){el.open=false;el.fire('close');}
     };
     elements.set(selector,el);return el;
@@ -30,10 +32,13 @@ export async function application(url, model, storage = {}) {
     querySelectorAll(selector) {
       if(selector==='#answers label span')return [0,1,2].map(i=>element('answer-span-'+i));
       if(selector==='[data-mission]')return model.data.map(p=>{const el=element('mission-'+p.id);el.dataset.mission=p.id;return el;});
+      if(selector==='[data-open]')return (model.initiatives??[]).map(p=>{const el=element('initiative-'+p.id);el.dataset.open=p.id;return el;});
       if(selector==='#satellite circle')return [element('satellite-circle')];
       return [];
     },
     addEventListener: (name,fn)=>events.set(name,fn),
+    createElement: tag=>element('created-'+tag+'-'+created++),
+    createTextNode: text=>({textContent:text}),
     get activeElement(){return activeElement;}
   };
   const values = new Map(Object.entries(storage.values ?? {}));
@@ -42,7 +47,8 @@ export async function application(url, model, storage = {}) {
     window:{addEventListener:(name,fn)=>windowEvents.set(name,fn)},
     localStorage:{getItem(k){if(storage.readThrows)throw Error('storage denied');return values.get(k)??null;},setItem(k,v){if(storage.writeThrows)throw Error('quota');values.set(k,v);}},
     FormData:class {get(){return choice;}},
-    showLesson(){}, matchMedia:()=>({matches:true}),
+    showLesson(){}, matchMedia:()=>({matches:true,addEventListener(){}}),
+    ParticleField:class {async init(){} setPaused(){}},
     setTimeout:()=>0,clearTimeout(){},
   });
   const source=(await readFile(url,'utf8')).replace(/^import .*?;\r?\n/gm,'');

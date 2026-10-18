@@ -1,27 +1,28 @@
 {
+  "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-16",
-  "source_fingerprint": "397bd3a4c19b8b81e528960db6c8163718c43395111e856d588531b7138e87f5",
+  "snapshot_date": "2026-10-18",
+  "source_fingerprint": "443547efb0fae908a330e8bfcbfdc7034e9c175eeb12b64d2f77a211c7d6ff71",
   "name": "Meros",
   "slug": "meros",
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "9eac55bddf5c2664430015e3ef62908df44412cd3a76e0bef51e599cfeb16b54",
-  "archive_bytes": 2123019,
+  "archive_sha256": "309d9fe31a184d18654708d80bda4a6030907e5bfad17e2771e17d24280776c7",
+  "archive_bytes": 2125916,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/meros/files/index.html.txt",
-      "sha256": "35c1205f66adb89e6e3a7ddc058179851f6197ff6b5679106825bdb1ab345882",
+      "sha256": "65075654c3874207002a825adab0684da4128ce2ad6e0b9d61656b1e8755e1e8",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/meros/files/style.css.txt",
-      "sha256": "6581d3edafbaea9f3e8370113eaa961ac3419191fd856ae53e96bb29e75ff063",
+      "sha256": "8e43838ad4ac47887734d5829243a10f3fb5bcc449ae0da2454bfbf838d7c707",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/style.css.txt"
     },
     {
@@ -33,7 +34,7 @@
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/meros/files/app.js.txt",
-      "sha256": "4504c4bd83dee68341539e7ed38943710a0b2aa31c574ff39c2d39c80529471c",
+      "sha256": "05b466bf606cb404e036eeb7252f1ac9268f8040dea6f973070287c6f2cfd055",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/app.js.txt"
     },
     {
@@ -70,13 +71,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2566,
-      "sha256": "94a4331b2169a539bb295f1599f4164b4108b3f7365d6509e1f74c98daacbddb"
+      "bytes": 2744,
+      "sha256": "3b4875e4f1f8900bf38671796e33db1f30a96ccbc969df74081caca7c1f085ba"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 5563,
-      "sha256": "0007e40b288ea525180b258a7519b930630a276b01531f871bd36da6948ed322"
+      "sha256": "d2aff103ad53505669bb8ad0475b742e0d2ba62988dbab83a1cf5728c616e4d6"
     },
     {
       "path": "CHECKLIST.md",
@@ -111,12 +112,17 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1195,
-      "sha256": "a6e104613230a4b6a9f752b9faf4cf4914c7c866274ceda28e2200782a202cdd"
+      "sha256": "cf64e6f89131fd6837f01abde8c66bda59c1052516aa7202488b19aa8b565d27"
     },
     {
       "path": "LIBRARY-QA.md",
       "bytes": 5104,
       "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
+    },
+    {
+      "path": "LIBRARY-UPGRADE.md",
+      "bytes": 5769,
+      "sha256": "982aa201c8d7ec80218a563a2139edb3923c6a34efbed3fd8518a36925bc626b"
     },
     {
       "path": "README.md",
@@ -126,7 +132,7 @@
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "4657f6f527c9814df8f163251bb3265539f4a337c65f8874933b6a890ffd307d"
+      "sha256": "ee99c0df087b9dd330ae81053e69e8cf171aa2226c76eeb57316cfd495faf9a1"
     },
     {
       "path": "serve.mjs",
@@ -150,8 +156,8 @@
     },
     {
       "path": "site/app.js",
-      "bytes": 4210,
-      "sha256": "4504c4bd83dee68341539e7ed38943710a0b2aa31c574ff39c2d39c80529471c"
+      "bytes": 4301,
+      "sha256": "05b466bf606cb404e036eeb7252f1ac9268f8040dea6f973070287c6f2cfd055"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -205,8 +211,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 3937,
-      "sha256": "35c1205f66adb89e6e3a7ddc058179851f6197ff6b5679106825bdb1ab345882"
+      "bytes": 3866,
+      "sha256": "65075654c3874207002a825adab0684da4128ce2ad6e0b9d61656b1e8755e1e8"
     },
     {
       "path": "site/layout.css",
@@ -235,8 +241,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 3614,
-      "sha256": "6581d3edafbaea9f3e8370113eaa961ac3419191fd856ae53e96bb29e75ff063"
+      "bytes": 3529,
+      "sha256": "8e43838ad4ac47887734d5829243a10f3fb5bcc449ae0da2454bfbf838d7c707"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/meros-site/QA-REPORT.md",

@@ -50,6 +50,8 @@ def apply(slugs=None):
     slugs=slugs or tuple(IDENTITIES)
     for slug in slugs:
         d=IDENTITIES[slug];folder=ROOT/(slug+'-site');p=folder/'index.html';html=p.read_text(encoding='utf-8')
+        # Content stays readable while fonts/modules load or fail; fonts already use swap.
+        html=html.replace("<script>document.documentElement.classList.add('font-loading')</script>",'')
         if slug in ('ziyo','forma','samar') and 'name="composition"' not in html:
             from diversity_v3 import apply as v3
             v3((slug,));html=p.read_text(encoding='utf-8')

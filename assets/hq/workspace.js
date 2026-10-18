@@ -1,4 +1,4 @@
-import {matching,readLibraryState,writeLibraryState} from './library-model.mjs?v=2';
+import {matching,readLibraryState,writeLibraryState} from './library-model.mjs?v=a03b61b91b';
 const $=selector=>document.querySelector(selector);
 const navToggle=$('#nav-toggle'),sidebar=$('.workspace-sidebar');
 if(navToggle){
@@ -24,6 +24,7 @@ if(payload){
   $('#selected-context').href=item.context;$('#selected-download').href=item.zip;$('#selected-size').textContent=item.size+' KB';
   document.querySelectorAll('a[href^="/design/start/"]').forEach(a=>{a.href='/design/start/?design='+encodeURIComponent(item.slug);});
   $('#download-status').textContent='';
+  $('#share-status').textContent='';$('#share-url').hidden=true;
  }
  function render(){
   state.found=matching(items,state.query,state.group);const slugs=new Set(state.found.map(t=>t.slug));
@@ -41,15 +42,21 @@ if(payload){
   const item=state.found.find(t=>t.slug===slug);if(!item)return;
   state.selected=item;state.view='detail';render();remember(true);
   $('#selection-status').textContent=item.name+' tanlandi. Saytni oching yoki shu dizayn bilan boshlang.';
-  if(matchMedia('(max-width:700px)').matches){panel.scrollIntoView({behavior:'auto',block:'start'});$('#selected-name').focus({preventScroll:true});}
+  panel.scrollIntoView({behavior:'auto',block:'start'});$('#selected-name').focus({preventScroll:true});
  }
  rows.forEach(row=>row.addEventListener('click',()=>choose(row.dataset.template)));
  query.addEventListener('input',()=>{state.query=query.value;state.view='list';render();remember();});
  groups.forEach(b=>b.addEventListener('click',()=>{state.group=b.dataset.group;state.view='list';render();remember(true);}));
  $('#clear-search').addEventListener('click',()=>{state.query='';state.group='all';state.view='list';render();remember(true);query.focus();});
  $('#back-to-list').addEventListener('click',()=>{state.view='list';render();remember(true);const row=rows.find(r=>r.dataset.template===state.selected?.slug);row?.focus();});
+ $('#share-design').addEventListener('click',async()=>{
+  const button=$('#share-design'),url=new URL('/',location.origin);url.searchParams.set('design',state.selected.slug);button.disabled=true;
+  try{await navigator.clipboard.writeText(url.href);$('#share-status').textContent='Tanlangan dizayn havolasi nusxalandi.';}
+  catch{const input=$('#share-url');input.value=url.href;input.hidden=false;input.focus();input.select();$('#share-status').textContent='Havolani qo‘lda nusxalang.';}
+  finally{button.disabled=false;}
+ });
  window.addEventListener('popstate',()=>{state=readLibraryState(items,location.search);render();});
- document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){event.preventDefault();state.view='list';render();remember();query.focus();}});
+ document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!document.activeElement?.isContentEditable&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){event.preventDefault();state.view='list';render();remember();query.focus();}});
  render();
 }
 document.querySelectorAll('[data-download]').forEach(a=>a.addEventListener('click',()=>{
