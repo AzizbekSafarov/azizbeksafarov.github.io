@@ -1,0 +1,55 @@
+{
+  "tested_on": "2026-10-18",
+  "scope": "Single connectivity probes; not live uptime or quality benchmarks",
+  "billing_tier_verified": false,
+  "tests": [
+    {
+      "provider": "Groq",
+      "key_role": "Asosiy",
+      "model_or_method": "openai/gpt-oss-120b",
+      "http_status": 200,
+      "result": "OK",
+      "latency_ms": 406
+    },
+    {
+      "provider": "Groq",
+      "key_role": "Zaxira",
+      "model_or_method": "openai/gpt-oss-120b",
+      "http_status": 200,
+      "result": "OK",
+      "latency_ms": 447
+    },
+    {
+      "provider": "Gemini",
+      "key_role": "Asosiy",
+      "model_or_method": "gemini-3.8-flash",
+      "http_status": 200,
+      "result": "OK",
+      "latency_ms": 10183
+    },
+    {
+      "provider": "Gemini",
+      "key_role": "Zaxira",
+      "model_or_method": "gemini-3.8-flash",
+      "http_status": 200,
+      "result": "OK",
+      "latency_ms": 3608
+    },
+    {
+      "provider": "Telegram",
+      "key_role": "Bot",
+      "model_or_method": "getMe",
+      "http_status": 200,
+      "result": "Bot tasdiqlandi",
+      "latency_ms": 3881
+    },
+    {
+      "provider": "Telegram",
+      "key_role": "Bot",
+      "model_or_method": "getChat",
+      "http_status": 200,
+      "result": "Chat topildi",
+      "latency_ms": 355
+    }
+  ]
+}

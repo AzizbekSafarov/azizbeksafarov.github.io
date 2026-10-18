@@ -28,3 +28,4 @@
 
 .copy-line>button{background:#2c3027;border-color:#2c3027;color:white;font-size:14px;min-height:46px}.copy-line>button:hover{background:#454c3b}.field-error{font-size:13px;line-height:1.6;color:#a02f24}.field [aria-invalid=true]{border:2px solid #a02f24}.field label{font-size:14px}.copy-line>a{font-size:13px}.field textarea[readonly]{font-size:13px}.copy-status{font-size:13px;line-height:1.7}
 @media(max-width:700px){.field input,.field select,.field textarea,.context-copy textarea,.search input{font-size:16px}.field textarea[readonly]{font-size:14px}.page-hero h1,.document-page h1{font-size:34px}.page-hero{padding-top:28px}.start-layout aside>p{font-size:13px}.form-pair{grid-template-columns:1fr}.copy-line{gap:12px 20px}}
+.workspace-sidebar{overflow-y:auto}

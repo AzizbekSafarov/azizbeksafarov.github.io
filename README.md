@@ -14,6 +14,10 @@ Topshiriq qoralamasi brauzer xotirasida saqlanadi. JSON orqali boshqa kompyuterd
 - `/design/kit.zip` — to‘qqiz kod paketi va tanlov konteksti.
 - `/design/standart/` — sifat mezonlari.
 - `/ustoz/` — alohida research Pages repozitoriysi.
+- `/arxitektura/` — foydalanuvchi tanlagan Render + UptimeRobot + Supabase + Google Auth + AI + Telegram rejasining interaktiv xaritasi; `/arxitektura/ai.md` — to‘liq texnik kontekst.
+- `/api/` — sanali rasmiy API sinovlari, tier/kvota va xatolar; `/api/verification.json` — kalitlarsiz natijalar. Hosting va monitor hali reja ekanligi aniq belgilangan.
+
+Arxitektura va API bo‘limlari `design/build_architecture.py`dan, `python design/build_hq.py` orqali yaratiladi. `assets/hq/architecture.mjs` faqat izohli oqimlarni almashtiradi; hech qanday haqiqiy AI yoki shaxsiy API’ni chaqirmaydi. Shaxsiy kalit omborining fayllari bu repozitoriyga ko‘chirilmaydi.
 
 HQ: `design/workspace_hq.py`, `assets/hq/workspace.css`, `exhibition.css`, `workspace.js`, `library-model.mjs`. `design/build_hq.py` yordamchi sahifalar va markaziy kontekstni bevosita joriy qobiq bilan yaratadi. Eski bosh sahifa generatori ishlatilmaydi. Barcha shriftlar lokal. Generator CSS/JS va import qilingan model URLlarini content hash bilan yangilaydi.
 

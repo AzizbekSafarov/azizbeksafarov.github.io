@@ -14,6 +14,18 @@
 - [Bloom · Material Design 3](https://azizbeksafarov.github.io/design/bloom/ai.md): Rasmiy Material Web komponentlari, Material Symbols va dinamik rang tizimi. Ishlaydigan loyiha maydoni.
 - [Yuksal · SI](https://azizbeksafarov.github.io/design/si/ai.md): Oq asosiy fon, O‘zbekistonning moviy va yashil aksentlari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, serif va jonli shakl almashishi.
 
+## Tanlov saytining arxitekturasi
+
+Asosiy tanlov: bitta Render Web Service frontend build va Node.js API’ni xizmat qiladi; UptimeRobot /health manzilini 5 daqiqada tekshirish uchun rejalashtirilgan. Supabase — Auth/PostgreSQL/RLS/Storage; Google OAuth Supabase orqali; AI va Telegram so‘rovlari Render API orqali. Bu reja, hali ishga tushgan tanlov infratuzilmasi emas.
+
+- [Arxitektura](https://azizbeksafarov.github.io/arxitektura/)
+- [To‘liq texnik qo‘llanma](https://azizbeksafarov.github.io/arxitektura/ai.md)
+- [API, tier va sanali sinovlar](https://azizbeksafarov.github.io/api/)
+- [API texnik konteksti](https://azizbeksafarov.github.io/api/ai.md)
+
+Faqat tanlangan dizayn va joriy biletga mos funksiyalarni qur. Maxfiy kalitlarni ochiq hujjatdan izlama yoki kodga yozma. Frontend hostingidagi o‘zgarish Supabase/Google callback va ruxsatlarini avtomatik yangilamaydi.
+
+
 - [Bilet yozish, qoralama va CURRENT-TASK.md](https://azizbeksafarov.github.io/design/start/).
 - [Jonli katalog](https://azizbeksafarov.github.io/design/).
 - [Barcha kod + tanlov matnlari ZIP](https://azizbeksafarov.github.io/design/kit.zip).
