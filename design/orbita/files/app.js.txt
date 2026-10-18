@@ -1,6 +1,5 @@
 import {data,normalize} from './model.js?v=e2364eb354';
 const SLUG='orbita';
-document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const storageKey=SLUG+'-state-v1';let memory=[],persistent=true;
 function read(){if(!persistent)return memory;try{return normalize(JSON.parse(localStorage.getItem(storageKey)));}catch{return [];}}

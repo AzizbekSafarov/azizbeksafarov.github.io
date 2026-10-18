@@ -45,6 +45,8 @@ def check_runtime(z,root):
             assert target in names,f'{name}: missing runtime resource {value}'
 
 def verify():
+    from verify_clean import verify as verify_current_only
+    verify_current_only()
     catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))['templates']
     archived=[]
     policy=json.loads((ROOT/'curation.json').read_text(encoding='utf-8'))

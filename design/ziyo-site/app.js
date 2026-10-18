@@ -1,7 +1,6 @@
 import {showLesson} from './identity.js?v=a0ccb35df4';
 import {data,normalize,grade} from './model.js?v=3419133037';
 const SLUG='ziyo';
-document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const storageKey=SLUG+'-state-v1';let memory=[],persistent=true;
 function read(){if(!persistent)return memory;try{return normalize(JSON.parse(localStorage.getItem(storageKey)));}catch{return [];}}

@@ -2,21 +2,21 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-18",
-  "source_fingerprint": "5d4be88024dc566c7754a7f9153590fd9671531f80be6152de84fad78121e854",
+  "source_fingerprint": "409348346c1ae355c5146fcb9218117970b4a924caceec95a4c53a2e3c6aa67f",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "cfec3ff8cab225a84da6e6300a40374dc0061858996f5b5e3572608ddd2c9253",
-  "archive_bytes": 481949,
+  "archive_sha256": "cd38cc787416b8a5677fc06e86d2d2dabcb7343d73b13b57ca56034cc3346f7d",
+  "archive_bytes": 481908,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/forma/files/index.html.txt",
-      "sha256": "ac31e1403be434665a77f252091b14dd4ef13f3d7da3c284481f3c937b818f83",
+      "sha256": "067573c4ceb910901df0ce0f5dac730bb322bb1e1c930c9bf9b22ef2d64cee8a",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/index.html.txt"
     },
     {
@@ -34,7 +34,7 @@
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/forma/files/app.js.txt",
-      "sha256": "817d286e70170e13fea3eea3807bedfbca2f1ca80966cf972f9be7b39ab71cee",
+      "sha256": "65d9d83c6d1e8694bc88392cc67375600908b45c30da585e72848cbfc2b6dffa",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/app.js.txt"
     },
     {
@@ -77,7 +77,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 6363,
-      "sha256": "b910b527c8c3ffbf9bcebac957c9eee38300d466ab32642ac46449c225e29478"
+      "sha256": "92b2d8e50a9b1547fc57eb6fac690f63f27df743a3b8a42836557b3bdd752b76"
     },
     {
       "path": "CHECKLIST.md",
@@ -112,7 +112,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1195,
-      "sha256": "ff76825628abf1131a57759c6ab289bba3015f47592f5cda16773458c3ce0e22"
+      "sha256": "b93bdae57e29901a437e74e1fe34c66651ce93fb9e2900dacf9428ca954c5941"
     },
     {
       "path": "LIBRARY-QA.md",
@@ -132,7 +132,7 @@
     {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "db1478bd9eca693aff8ef00b93e4575f5e268f63345385f7286e42d6e92319d6"
+      "sha256": "821baf15f1daf54ad441d1d22fcd1f40dbd64f3e0f68b0582aadacb698f8d76d"
     },
     {
       "path": "serve.mjs",
@@ -156,8 +156,8 @@
     },
     {
       "path": "site/app.js",
-      "bytes": 4870,
-      "sha256": "817d286e70170e13fea3eea3807bedfbca2f1ca80966cf972f9be7b39ab71cee"
+      "bytes": 4776,
+      "sha256": "65d9d83c6d1e8694bc88392cc67375600908b45c30da585e72848cbfc2b6dffa"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -192,7 +192,7 @@
     {
       "path": "site/index.html",
       "bytes": 7415,
-      "sha256": "ac31e1403be434665a77f252091b14dd4ef13f3d7da3c284481f3c937b818f83"
+      "sha256": "067573c4ceb910901df0ce0f5dac730bb322bb1e1c930c9bf9b22ef2d64cee8a"
     },
     {
       "path": "site/layout.css",

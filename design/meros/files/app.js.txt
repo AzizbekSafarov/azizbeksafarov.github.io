@@ -1,6 +1,5 @@
 import {data,normalize} from './model.js?v=5ef9ac47c9';
 const SLUG='meros';
-document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const storageKey=SLUG+'-state-v1';let memory=[],persistent=true;
 function read(){if(!persistent)return memory;try{return normalize(JSON.parse(localStorage.getItem(storageKey)));}catch{return [];}}

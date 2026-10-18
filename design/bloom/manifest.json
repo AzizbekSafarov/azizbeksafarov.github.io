@@ -2,14 +2,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-18",
-  "source_fingerprint": "577e3a75cb0b13ee359aab2180b462d42435f0f53ee1e89195d42f00142082fd",
+  "source_fingerprint": "2f65c30773255f926c09e94309f6cc486738ab8187faeb63738f06e83ebc89ce",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "a309f039df3a978e18d434f20cea7a387da2495208524434522b348b63457e8e",
-  "archive_bytes": 978835,
+  "archive_sha256": "a8f94e15784ef24b8ab47e0c50516b09415b99e6f21db24d5029c7d79baef7b7",
+  "archive_bytes": 867385,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -83,7 +83,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 10995,
-      "sha256": "a88f9745084002125de8b6d6cea31280f7566ac55033cbcdc3666bedc9c9c6d7"
+      "sha256": "0e28363c5ddb60fd99d0ddd1886b1ee00a6e66ee5968657908130fdb764dcb59"
     },
     {
       "path": "CHECKLIST.md",
@@ -118,7 +118,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1216,
-      "sha256": "9d75acbd346c0d6770371aa9b09a87463a759b2aa8a36d4444833c5ad85248a3"
+      "sha256": "4af12a6657b5c53a7ccde80aa193ca0ee807530b214341bbf7c8d47ee209647b"
     },
     {
       "path": "LIBRARY-QA.md",
@@ -138,7 +138,7 @@
     {
       "path": "kit.json",
       "bytes": 230,
-      "sha256": "8a1fbf8036f729de8c6203683f4cb7fa1debcdd5a66d2edf1a5f2e031cb7510e"
+      "sha256": "7ada43046d1c0bfa30cadee443f04aded1dbdc437de95446f928420979ec7c46"
     },
     {
       "path": "serve.mjs",
@@ -236,21 +236,6 @@
       "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
     },
     {
-      "path": "site/dist/fonts/google-sans-flex-latin-ext.woff2",
-      "bytes": 18788,
-      "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
-    },
-    {
-      "path": "site/dist/fonts/google-sans-flex-latin.woff2",
-      "bytes": 36096,
-      "sha256": "c59d5c0ad9ea76de9598d7041a53fd0b0ca2e0b2e73f22dd1374934f9354c3b3"
-    },
-    {
-      "path": "site/dist/fonts/google-sans-flex.css",
-      "bytes": 803,
-      "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185"
-    },
-    {
       "path": "site/dist/index.html",
       "bytes": 469,
       "sha256": "7f846c2ec6dda7b9f81fa3770a54608f0457d63bcd33b88f1a2477773024dd51"
@@ -304,21 +289,6 @@
       "path": "site/public/fonts/Roboto-OFL.txt",
       "bytes": 4394,
       "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
-    },
-    {
-      "path": "site/public/fonts/google-sans-flex-latin-ext.woff2",
-      "bytes": 18788,
-      "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
-    },
-    {
-      "path": "site/public/fonts/google-sans-flex-latin.woff2",
-      "bytes": 36096,
-      "sha256": "c59d5c0ad9ea76de9598d7041a53fd0b0ca2e0b2e73f22dd1374934f9354c3b3"
-    },
-    {
-      "path": "site/public/fonts/google-sans-flex.css",
-      "bytes": 803,
-      "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185"
     },
     {
       "path": "site/src/combinations.test.js",

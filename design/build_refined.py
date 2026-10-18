@@ -31,7 +31,7 @@ FORMA='''
 '''
 
 def shell(title,body,theme):
- return f'''<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f3eb"><meta name="description" content="{title} — mustaqil interaktiv dizayn namunasi."><title>{title}</title><link rel="icon" href="mark.svg" type="image/svg+xml"><link rel="preload" href="fonts/instrument-1.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/instrument-5.woff2" as="font" type="font/woff2" crossorigin><script>document.documentElement.classList.add('font-loading')</script><link rel="stylesheet" href="style.css?v=2"><script type="module" src="app.js?v=2"></script></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a>{body}</body></html>'''
+ return f'''<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f3eb"><meta name="description" content="{title} — mustaqil interaktiv dizayn namunasi."><title>{title}</title><link rel="icon" href="mark.svg" type="image/svg+xml"><link rel="preload" href="fonts/instrument-1.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/instrument-5.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="style.css?v=2"><script type="module" src="app.js?v=2"></script></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a>{body}</body></html>'''
 
 def nav(brand,links):
  a=''.join(f'<a href="{url}">{label}</a>' for url,label in links)

@@ -326,7 +326,7 @@ def template_page(t,brief):
 <p class="quiet">Faqat havola AIga doimiy xotira yoki fayl tahrirlash imkoniyatini bermaydi. Internetni o‘qiy oladigan AI uchun shu manzil yetarli boshlash nuqtasi. O‘qiy olmasa, AI matnini yoki ZIPni chatga bering. Yangi topshiriq va joydagi reglament ustuvor.</p>
 <details open><summary>AI uchun to‘liq boshlash yo‘riqnomasi</summary><article class="content">{render_md(brief)}</article></details>
 <details><summary>Tanlov konteksti va manbalar maqomi</summary><article class="content">{render_md(read(ROOT/'handoff/competition.md'))}</article></details>
-<section class="panel"><h2>Keyingi AI bilan davom ettirish</h2><p>ZIP ichidagi <code>CURRENT-TASK.md</code> ga bilet va vaqtni, <code>HANDOFF.md</code> ga bajarilgan ish, haqiqiy sinov va keyingi amalni yozdiring. Sessiya almashsa, shu ikki faylni yangi AIga bering.</p><div class="actions"><a href="../kit.zip" download>Barcha 10 dizayn + tanlov matnlari ↓</a><a href="../handoff/competition.md">Qisqa tanlov konteksti</a></div></section>
+<section class="panel"><h2>Keyingi AI bilan davom ettirish</h2><p>ZIP ichidagi <code>CURRENT-TASK.md</code> ga bilet va vaqtni, <code>HANDOFF.md</code> ga bajarilgan ish, haqiqiy sinov va keyingi amalni yozdiring. Sessiya almashsa, shu ikki faylni yangi AIga bering.</p><div class="actions"><a href="../kit.zip" download>Barcha dizaynlar + tanlov matnlari ↓</a><a href="../handoff/competition.md">Qisqa tanlov konteksti</a></div></section>
 <script type="application/json" id="prompt-config">{config}</script><script src="../handoff/prompt.js" defer></script>'''
     content=content.replace('Barcha 10 dizayn','Tanlangan 4 dizayn')
     if t.get('archived'):

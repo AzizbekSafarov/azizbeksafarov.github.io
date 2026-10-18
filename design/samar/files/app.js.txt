@@ -1,4 +1,3 @@
-document.fonts?.ready.finally(()=>document.documentElement.classList.remove('font-loading'));
 import {places,normalize,schedule,clock,exportPlan} from './model.js?v=bcb8054ec2';
 const key='samar-plan-v2';const $=s=>document.querySelector(s);let state=normalize(null),opener;
 let storageUsable=true;

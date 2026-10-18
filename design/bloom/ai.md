@@ -1,6 +1,6 @@
 # Bloom · Material Design 3 — tanlovda yangi AI uchun boshlash
 
-Snapshot: 2026-10-18; source fingerprint: `577e3a75cb0b13ee`. Readable page: https://azizbeksafarov.github.io/design/bloom/
+Snapshot: 2026-10-18; source fingerprint: `2f65c30773255f92`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
 ## O‘qish vositasi uchun zaxira
 

@@ -1,10 +1,4 @@
 /* Shared copy helpers. The task editor is isolated in starter.mjs. */
-const fontGate = document.documentElement;
-if (document.fonts) {
-  Promise.race([document.fonts.ready, new Promise(resolve => setTimeout(resolve, 2500))])
-    .finally(() => fontGate.classList.remove('font-loading'));
-} else fontGate.classList.remove('font-loading');
-
 document.querySelectorAll('[data-copy]').forEach(button => {
   button.addEventListener('click', async () => {
     const output = document.getElementById('quick-prompt');
@@ -18,10 +12,4 @@ document.querySelectorAll('[data-copy]').forEach(button => {
       target.textContent = 'Matn belgilandi. Ctrl+C yoki telefonning nusxalash amalidan foydalaning.';
     } finally { button.disabled = false; }
   });
-});
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    const menu = document.querySelector('.mobile-menu[open]');
-    if (menu) { menu.open = false; menu.querySelector('summary').focus(); }
-  }
 });
