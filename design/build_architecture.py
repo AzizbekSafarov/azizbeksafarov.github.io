@@ -156,8 +156,8 @@ def write(name, text):
 
 def build():
     refs = '<ol class="source-list">' + ''.join(f'<li><a href="{url}">{escape(title)} <span aria-hidden="true">↗</span></a></li>' for title, url in SOURCES) + '</ol>'
-    write('arxitektura/ai.md', ARCH_MD + '\n## Rasmiy manbalar\n\n' + '\n'.join(f'- [{title}]({url})' for title, url in SOURCES))
-    write('api/ai.md', API_MD + '\n## Rasmiy manbalar\n\n' + '\n'.join(f'- [{title}]({url})' for title, url in SOURCES[6:]))
+    write('arxitektura/ai.md', ARCH_MD + '\n\n[AI ish tartibi, ehtimoliy xatolar va topshirish qo‘llanmasi](https://azizbeksafarov.github.io/ish-tartibi/ai.md)\n' + '\n## Rasmiy manbalar\n\n' + '\n'.join(f'- [{title}]({url})' for title, url in SOURCES))
+    write('api/ai.md', API_MD + '\n\n[AI ish tartibi va diagnostika](https://azizbeksafarov.github.io/ish-tartibi/ai.md)\n' + '\n## Rasmiy manbalar\n\n' + '\n'.join(f'- [{title}]({url})' for title, url in SOURCES[6:]))
     nodes = [
         ('frontend', '01', 'Interfeys', 'Tanlangan dizayn', 'HTML / React / Vite'),
         ('render', '02', 'Server', 'Render', 'Frontend + Node.js API'),
@@ -177,6 +177,7 @@ def build():
 Shu arxitekturani va /api/ai.md qo‘llanmasini o‘qi. Asosiy stack: Render + UptimeRobot + Supabase + Google Auth + Telegram + AI. Hali ulanmagan xizmatlarni tayyor deb ko‘rsatma. Biletimni va tanlangan dizaynimni keyin beraman.</textarea><div class="copy-line"><button class="button dark" type="button" data-copy="quick" data-status="quick-status">Matnni nusxalash ↗</button><a href="/arxitektura/ai.md" download data-download>Markdown ↓</a></div><p id="quick-status" role="status"></p></div></section>
       <section class="sources-section" id="manbalar"><p class="eyebrow">MANBA VA YANGILANISH</p><h2>Qoidalar taxmin bilan yozilmagan.</h2><p class="section-intro">Rasmiy hujjatlar {DATE} kuni tekshirildi. Xizmatlar va tariflar o‘zgarsa bu reja ham qayta tekshiriladi.</p>{refs}</section>
     </div>'''
+    content=content.replace('<section class="system-board"', '<p class="workflow-crosslink"><a href="/ish-tartibi/">AI adashmasligi uchun: o‘qish tartibi, ehtimoliy xatolar va 3 qatlamli sinov →</a></p><section class="system-board"',1)
     write('arxitektura/index.html', frame('Loyiha arxitekturasi — Render + UptimeRobot', content, 'architecture'))
     tests = [
       ('Groq', 'Asosiy', 'openai/gpt-oss-120b', 'OK', 406),

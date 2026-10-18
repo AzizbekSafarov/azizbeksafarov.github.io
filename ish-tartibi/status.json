@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-18",
+  "scope": "Public preparation snapshot, not live infrastructure status",
+  "approved_stack": {
+    "hosting": "Render Web Service: frontend + Node.js API",
+    "monitoring": "UptimeRobot GET /health every 5 minutes",
+    "backend": "Supabase PostgreSQL/Auth/RLS/Storage",
+    "login": "Google OAuth through Supabase",
+    "ai": [
+      "Groq",
+      "Gemini"
+    ],
+    "messaging": "Telegram Bot API"
+  },
+  "verified": [
+    {
+      "item": "Published design library",
+      "evidence": "/design/catalog.json"
+    },
+    {
+      "item": "Dated provider connectivity probes only",
+      "evidence": "/api/verification.json"
+    }
+  ],
+  "planned": [
+    "competition Render service",
+    "UptimeRobot monitor",
+    "competition Supabase project",
+    "Google OAuth client/redirect setup",
+    "end-to-end app/AI/Telegram integration"
+  ],
+  "unknown": [
+    "current ticket",
+    "remaining competition time",
+    "on-site account/template permissions",
+    "final product domain",
+    "provider billing tiers",
+    "whether backup keys have independent quotas"
+  ],
+  "historical_alternatives": [
+    "Cloudflare frontend hosting",
+    "Vercel competition frontend hosting"
+  ],
+  "reading_order": [
+    "/ai.md",
+    "/ish-tartibi/ai.md",
+    "project-local CURRENT-TASK.md and HANDOFF.md if available",
+    "/arxitektura/ai.md",
+    "/api/ai.md",
+    "/design/SELECTED-SLUG/ai.md"
+  ],
+  "required_test_layers": [
+    "happy path",
+    "failure scenarios",
+    "clean environment"
+  ],
+  "issue_register": {
+    "scope": "competition product only",
+    "confirmed_open_issues": [],
+    "meaning": "No evidenced issue entries recorded here; not a claim that the product is bug-free or audited. Record reproduced issues in project HANDOFF.md."
+  },
+  "content_kinds": [
+    "confirmed issue with evidence",
+    "potential risk",
+    "procedure",
+    "conditional recommendation"
+  ],
+  "risk_catalog_ids": [
+    "oauth",
+    "permission",
+    "duplicate",
+    "ai-limit",
+    "telegram",
+    "deploy",
+    "health",
+    "new-pc",
+    "data",
+    "context",
+    "availability",
+    "secrets",
+    "storage",
+    "migration",
+    "session",
+    "ai-output",
+    "capacity",
+    "accessibility",
+    "cache"
+  ],
+  "privacy": "No credentials or personal data in public documents. This snapshot grants no account access."
+}

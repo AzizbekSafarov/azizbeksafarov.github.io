@@ -76,6 +76,9 @@ Tayyor: .io dizayn kutubxonasi va ko‘chiriladigan kod; sanali rasmiy API ulani
 
 O‘qish tartibi: /ai.md → ushbu hujjat → /api/ai.md → tanlangan /design/SLUG/ai.md → joriy bilet/CURRENT-TASK.md. So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
 
+
+[AI ish tartibi, ehtimoliy xatolar va topshirish qo‘llanmasi](https://azizbeksafarov.github.io/ish-tartibi/ai.md)
+
 ## Rasmiy manbalar
 
 - [Render Free: faoliyat va cheklovlar](https://render.com/docs/free)

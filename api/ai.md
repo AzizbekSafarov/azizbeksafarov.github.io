@@ -45,6 +45,9 @@ Supabase Google OAuth Client ID/Secret — AI kalitlaridan boshqa sozlama; Googl
 
 Bir xil o‘zbekcha topshiriqlar, fakt aniqligi, JSON strukturasi, manbaga tayangan javob, noto‘g‘ri ma’lumotdan himoya, bir nechta foydalanuvchi va kvota holatini sinash. Oldingi bir so‘zli OK vaqtlaridan sifat yoki barqarorlik xulosasi chiqarmaslik. Natijani yangi sana, model, anonim kalit roli va test usuli bilan yozish; maxfiy response/request yoki tokenlarni chiqarmaslik.
 
+
+[AI ish tartibi va diagnostika](https://azizbeksafarov.github.io/ish-tartibi/ai.md)
+
 ## Rasmiy manbalar
 
 - [Groq: model va limitlar](https://console.groq.com/docs/rate-limits)

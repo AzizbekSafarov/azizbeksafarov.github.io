@@ -16,6 +16,7 @@ Topshiriq qoralamasi brauzer xotirasida saqlanadi. JSON orqali boshqa kompyuterd
 - `/ustoz/` — alohida research Pages repozitoriysi.
 - `/arxitektura/` — foydalanuvchi tanlagan Render + UptimeRobot + Supabase + Google Auth + AI + Telegram rejasining interaktiv xaritasi; `/arxitektura/ai.md` — to‘liq texnik kontekst.
 - `/api/` — sanali rasmiy API sinovlari, tier/kvota va xatolar; `/api/verification.json` — kalitlarsiz natijalar. Hosting va monitor hali reja ekanligi aniq belgilangan.
+- `/ish-tartibi/` — yangi AI uchun o‘qish tartibi, fakt maqomi, 10 ehtimoliy nosozlik va uch qatlamli sinov xaritasi. To‘liq `ai.md`, sanali `status.json`, CURRENT-TASK.md va HANDOFF.md shablonlari bor. Manba: `design/build_workflow.py`; umumiy HQ build bilan qayta yaratiladi.
 
 Arxitektura va API bo‘limlari `design/build_architecture.py`dan, `python design/build_hq.py` orqali yaratiladi. `assets/hq/architecture.mjs` faqat izohli oqimlarni almashtiradi; hech qanday haqiqiy AI yoki shaxsiy API’ni chaqirmaydi. Shaxsiy kalit omborining fayllari bu repozitoriyga ko‘chirilmaydi.
 
