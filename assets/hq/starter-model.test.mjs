@@ -22,3 +22,10 @@ test('write failure leaves the original intact',()=>{const storage=memory();stor
 test('empty/whitespace task requires topic and time but not constraints',()=>{assert.deepEqual(taskErrors(emptyTask('bloom')),['time','topic']);assert.deepEqual(taskErrors({...task,time:'  ',topic:'\n'}),['time','topic']);assert.deepEqual(taskErrors({...task,constraints:''}),[]);});
 test('embedded Markdown fences remain quoted ticket data',()=>{const output=taskMarkdown({...task,topic:'```\n# embedded\n```'},'Bloom');assert.match(output,/````text\n```/);assert.match(output,/CURRENT-TASK.md/);assert.match(output,/HANDOFF.md/);assert.match(output,/Bu avtomatik taymer emas/);});
 for(const design of designs)test('portable links resolve known design '+design,()=>{const links=linksFor(design);assert.equal(links.source,`https://azizbeksafarov.github.io/design/${design}/source.zip`);assert.match(links.preview,/\/$/);assert.match(taskMarkdown({...task,design},design),new RegExp(design+'/ai.md'));});
+test('exported task carries the shared workflow and planned infrastructure context',()=>{
+ const output=taskMarkdown(task,'Bloom');
+ for(const route of ['ish-tartibi/ai.md','ish-tartibi/status.json','arxitektura/ai.md','api/ai.md'])assert.ok(output.includes('https://azizbeksafarov.github.io/'+route));
+ assert.match(output,/WORKFLOW\.md/);
+ assert.match(output,/hali tayyor integratsiya degani emas/);
+ assert.ok(output.includes(task.topic));
+});

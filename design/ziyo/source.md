@@ -1,6 +1,6 @@
 # Ziyo — editable source snapshot
 
-Source fingerprint: `95e2a285f12afa1f78edf19aede0f07f35f006761f7532a58fb7723e4a103d22`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

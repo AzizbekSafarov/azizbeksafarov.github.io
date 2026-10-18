@@ -1,6 +1,6 @@
 # Samar — editable source snapshot
 
-Source fingerprint: `1d189c818ad360d796b19a79158372a1a30c9b6491c85dfeb07e86c01e4d25e8`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `deb074c142f1e0bc00b30136816895bddbc5b43bb283493025a00edb2d7a23f7`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

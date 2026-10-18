@@ -1,5 +1,7 @@
 # Architecture publication QA — 2026-10-18
 
+MAQOM: sanali baseline dalili. Joriy qayta tekshiruv yoki yangi vazifa bajarilganining dalili emas. Eng yangi to‘liq audit: https://azizbeksafarov.github.io/design/AUDIT-20261018.md .
+
 Scope: new /arxitektura/ and /api/ documentation, shared navigation, root AI entry points. No Render/Supabase/OAuth/UptimeRobot account or service was provisioned by this release.
 
 - Static verification: 35 generated pages, 584 local references, 50 scripts/styles, zero errors. Separate /ustoz/ repository and external source URLs are not asserted by this checker.

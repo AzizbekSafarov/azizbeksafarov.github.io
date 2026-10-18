@@ -1,6 +1,6 @@
 # Nashr — editable source snapshot
 
-Source fingerprint: `a60026021ac74fb0a7b02e079903def193d6c114584e28464c1ed1ddd7e9a415`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `2c81c476f8d81d8fceb80e8442d656fc57fe818c0df1c1bab23963fc63bfb732`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

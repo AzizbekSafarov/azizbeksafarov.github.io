@@ -1,0 +1,407 @@
+{
+  "snapshot": "2026-10-18",
+  "scope": "Local browser samples; not competition infrastructure tests",
+  "responsive": [
+    {
+      "page": "hq",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Dizayn kutubxonasi — Azizbek Safarov",
+      "width": 320
+    },
+    {
+      "page": "hq",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Dizayn kutubxonasi — Azizbek Safarov",
+      "width": 768
+    },
+    {
+      "page": "hq",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Dizayn kutubxonasi — Azizbek Safarov",
+      "width": 1280
+    },
+    {
+      "page": "workflow",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "AI bilan ish tartibi — kontekst va muammolar",
+      "width": 320
+    },
+    {
+      "page": "workflow",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "AI bilan ish tartibi — kontekst va muammolar",
+      "width": 768
+    },
+    {
+      "page": "workflow",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "AI bilan ish tartibi — kontekst va muammolar",
+      "width": 1280
+    },
+    {
+      "page": "architecture",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Loyiha arxitekturasi — Render + UptimeRobot",
+      "width": 320
+    },
+    {
+      "page": "architecture",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Loyiha arxitekturasi — Render + UptimeRobot",
+      "width": 768
+    },
+    {
+      "page": "architecture",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Loyiha arxitekturasi — Render + UptimeRobot",
+      "width": 1280
+    },
+    {
+      "page": "api",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "API va sinovlar — Ustoz AI tayyorgarlik",
+      "width": 320
+    },
+    {
+      "page": "api",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "API va sinovlar — Ustoz AI tayyorgarlik",
+      "width": 768
+    },
+    {
+      "page": "api",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "API va sinovlar — Ustoz AI tayyorgarlik",
+      "width": 1280
+    },
+    {
+      "page": "task",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "AIga topshiriq — Azizbek Safarov",
+      "width": 320
+    },
+    {
+      "page": "task",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "AIga topshiriq — Azizbek Safarov",
+      "width": 768
+    },
+    {
+      "page": "task",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "AIga topshiriq — Azizbek Safarov",
+      "width": 1280
+    },
+    {
+      "page": "context",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "AI konteksti — Azizbek Safarov",
+      "width": 320
+    },
+    {
+      "page": "context",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "AI konteksti — Azizbek Safarov",
+      "width": 768
+    },
+    {
+      "page": "context",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "AI konteksti — Azizbek Safarov",
+      "width": 1280
+    },
+    {
+      "page": "bloom",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Bloom — Material Design 3",
+      "width": 320
+    },
+    {
+      "page": "bloom",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Bloom — Material Design 3",
+      "width": 768
+    },
+    {
+      "page": "bloom",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Bloom — Material Design 3",
+      "width": 1280
+    },
+    {
+      "page": "si",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Yuksal · SI — kelajakni birga yaratamiz",
+      "width": 320
+    },
+    {
+      "page": "si",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Yuksal · SI — kelajakni birga yaratamiz",
+      "width": 768
+    },
+    {
+      "page": "si",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Yuksal · SI — kelajakni birga yaratamiz",
+      "width": 1280
+    },
+    {
+      "page": "orbita",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Orbita — Ilm-fan / kosmik atlas",
+      "width": 320
+    },
+    {
+      "page": "orbita",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Orbita — Ilm-fan / kosmik atlas",
+      "width": 768
+    },
+    {
+      "page": "orbita",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Orbita — Ilm-fan / kosmik atlas",
+      "width": 1280
+    },
+    {
+      "page": "nashr",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Nashr — Tahririyat / raqamli gazeta",
+      "width": 320
+    },
+    {
+      "page": "nashr",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Nashr — Tahririyat / raqamli gazeta",
+      "width": 768
+    },
+    {
+      "page": "nashr",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Nashr — Tahririyat / raqamli gazeta",
+      "width": 1280
+    },
+    {
+      "page": "hisob",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Hisob — Ma’lumot / tahlil paneli",
+      "width": 320
+    },
+    {
+      "page": "hisob",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Hisob — Ma’lumot / tahlil paneli",
+      "width": 768
+    },
+    {
+      "page": "hisob",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Hisob — Ma’lumot / tahlil paneli",
+      "width": 1280
+    },
+    {
+      "page": "ziyo",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Ziyo — Ta’lim / interaktiv dars",
+      "width": 320
+    },
+    {
+      "page": "ziyo",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Ziyo — Ta’lim / interaktiv dars",
+      "width": 768
+    },
+    {
+      "page": "ziyo",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Ziyo — Ta’lim / interaktiv dars",
+      "width": 1280
+    },
+    {
+      "page": "meros",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Meros — Madaniyat / raqamli muzey",
+      "width": 320
+    },
+    {
+      "page": "meros",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Meros — Madaniyat / raqamli muzey",
+      "width": 768
+    },
+    {
+      "page": "meros",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Meros — Madaniyat / raqamli muzey",
+      "width": 1280
+    },
+    {
+      "page": "samar",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Samar — Samarqand o‘z ritmingizda",
+      "width": 320
+    },
+    {
+      "page": "samar",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Samar — Samarqand o‘z ritmingizda",
+      "width": 768
+    },
+    {
+      "page": "samar",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Samar — Samarqand o‘z ritmingizda",
+      "width": 1280
+    },
+    {
+      "page": "forma",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 305,
+      "title": "Forma — sokin shakl, iliq hayot",
+      "width": 320
+    },
+    {
+      "page": "forma",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 753,
+      "title": "Forma — sokin shakl, iliq hayot",
+      "width": 768
+    },
+    {
+      "page": "forma",
+      "brokenImages": [],
+      "headings": 1,
+      "scroll": 1265,
+      "title": "Forma — sokin shakl, iliq hayot",
+      "width": 1280
+    }
+  ],
+  "flows": [
+    {
+      "page": "forma",
+      "result": {
+        "closed": true,
+        "focus": "cart-open"
+      }
+    },
+    {
+      "page": "ziyo",
+      "progress": "1 / 3 modul tugallangan"
+    },
+    {
+      "page": "orbita",
+      "saved": "1"
+    },
+    {
+      "page": "nashr",
+      "dialog": true
+    },
+    {
+      "page": "meros",
+      "dialog": true
+    },
+    {
+      "page": "hisob",
+      "rows": "Farg‘ona\t250\t25.0%\t230"
+    },
+    {
+      "page": "samar",
+      "downloadEnabled": true
+    },
+    {
+      "page": "si",
+      "plan": "1 / 4"
+    },
+    {
+      "page": "bloom",
+      "saved": true
+    }
+  ]
+}

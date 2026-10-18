@@ -1,5 +1,7 @@
 # Kengaytirilgan QA — 2026-10-16
 
+MAQOM: sanali baseline dalili. Joriy qayta tekshiruv yoki yangi vazifa bajarilganining dalili emas. Eng yangi to‘liq audit: https://azizbeksafarov.github.io/design/AUDIT-20261018.md .
+
 35 ta avvalgi testdan 544 ta avtomatik testga kengaytirildi. Oxirgi ishga tushirish: **544 passed, 0 failed**. Barcha dizaynlarning tasdiqlangan vizual uslubi saqlandi.
 
 ## Qayta ishga tushirish

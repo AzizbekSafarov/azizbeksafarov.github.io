@@ -1,6 +1,6 @@
 # Bloom · Material Design 3 — editable source snapshot
 
-Source fingerprint: `2f65c30773255f926c09e94309f6cc486738ab8187faeb63738f06e83ebc89ce`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `36aa144427df8d89269c3a36a46d1f1ed320ebfb167173e46158f32f7ae022db`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/src/main.jsx
 

@@ -1,6 +1,6 @@
 # Orbita — editable source snapshot
 
-Source fingerprint: `d3167822398edbed71c71f722ebb948ec4c066640707db6fb0ef4af4f3d33777`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `5bbe54ec986d84b0d7416ba6d5afbeaea646f9f1bd38ce21758c99b188deb438`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

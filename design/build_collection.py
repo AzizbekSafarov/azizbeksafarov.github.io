@@ -186,7 +186,7 @@ Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘s
 
 Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 320/390/768/1024/1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin. Orbita harakati Pause, hidden tab va OS sozlamasiga mos.
 
-HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Backend faqat bilet talab qilsa; demo natijani haqiqiy yuborish/to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.
+HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Backendni foydalanuvchining joriy Render + Supabase rejasi va biletga mos qur; demo natijani haqiqiy yuborish/to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.
 '''
 if __name__=='__main__':
  build()

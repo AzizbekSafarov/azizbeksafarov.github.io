@@ -1,5 +1,7 @@
 # Bloom M3 verification — 2026-10-13
 
+MAQOM: sanali baseline dalili. Joriy qayta tekshiruv yoki yangi vazifa bajarilganining dalili emas. Eng yangi to‘liq audit: https://azizbeksafarov.github.io/design/AUDIT-20261018.md .
+
 Production build and all four model tests pass. Tests cover persisted data validation, combined filters and completion, project creation, and Uzbek keyboard/typographic apostrophe equivalence. The main script is 194.55 kB gzip; Vite reports a large-bundle advisory, with successful compilation. The final browser check returned no console error entries.
 
 ## Functional and interaction checks

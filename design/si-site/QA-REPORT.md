@@ -1,5 +1,7 @@
 # Yuksal · SI verification — 2026-10-15
 
+MAQOM: sanali baseline dalili. Joriy qayta tekshiruv yoki yangi vazifa bajarilganining dalili emas. Eng yangi to‘liq audit: https://azizbeksafarov.github.io/design/AUDIT-20261018.md .
+
 Nine tests pass: persisted-plan sanitization, reversible known-ID toggling, exported content/order, spring convergence, pointer/click repulsion, long-frame integration, finite animated geometry for all seven procedural shapes at 1500/1800 particles, Uzbekistan flag identity, and safe parsing of malformed/external storage values. The flag test checks the three bands, two red separators, crescent, 12 stars in 3/4/5 rows, and matching SVG fallback. Application and motion modules pass syntax validation.
 
 Browser checks completed on the local site:

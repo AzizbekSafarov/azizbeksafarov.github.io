@@ -1,6 +1,6 @@
 # Hisob — editable source snapshot
 
-Source fingerprint: `7954339fdcdd192f021996a67ce3c28c61c8dfaf9325d11cd1ce175ed8d2d8e6`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `aa93600ac56e3855f80f816cb6766b3d2c6e3c9d07e76698df14751d46122b03`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

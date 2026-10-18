@@ -1,15 +1,16 @@
 {
+  "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-18",
-  "source_fingerprint": "95e2a285f12afa1f78edf19aede0f07f35f006761f7532a58fb7723e4a103d22",
+  "source_fingerprint": "219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97",
   "name": "Ziyo",
   "slug": "ziyo",
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "a3d2c27655eb6cbd2cf0c9bf445222c99661ac0933869de3810d9e1034b46869",
-  "archive_bytes": 411142,
+  "archive_sha256": "313557056457fffe89f24a75840ecc876573d54ee982caa674b04c158f9ecba4",
+  "archive_bytes": 434448,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -77,13 +78,28 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 3121,
-      "sha256": "84415ddf393af9f750d6e75273a6a6e8981bbd6098a76563b8d9cf261c1c16df"
+      "bytes": 3513,
+      "sha256": "267574bf71eb5ca4023cea54636cf84ad36ff87abb7fae99fda87e778c3c0ab9"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 5902,
-      "sha256": "2ced76cf3d0457c099041ab47578dd1193732f3a0bad8f4f5643ac1750a44445"
+      "bytes": 6599,
+      "sha256": "78dc9a9a4d5c895378b7d6eb256978fc5b63cda774935f95809356cb7f2366ec"
+    },
+    {
+      "path": "API-EVIDENCE.json",
+      "bytes": 1286,
+      "sha256": "8c0a16d6256372b078562e3f7ac6ea6e89da3b2c34d0afc927c6f3b5c51b7912"
+    },
+    {
+      "path": "API-GUIDE.md",
+      "bytes": 5205,
+      "sha256": "e2666fb29a9c2bd121451398889f46a7c6a6896283a8462deb9d22b7c05d6bd1"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "bytes": 10354,
+      "sha256": "00ad76465673aff5ecacf4de9b8978a580e0a0471abd368424a2637d89b3000d"
     },
     {
       "path": "CHECKLIST.md",
@@ -107,8 +123,8 @@
     },
     {
       "path": "CURRENT-TASK.md",
-      "bytes": 314,
-      "sha256": "c409ba5150b0832df785586426f6ec88fb53cca79e176b0a44b3fc4c8218e1d4"
+      "bytes": 593,
+      "sha256": "a74ceef3d9b435bc4d868ee53bfb26520f1a72f05f895568d324d37c89b1157b"
     },
     {
       "path": "DESIGN-STANDARD.md",
@@ -121,24 +137,44 @@
       "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
     },
     {
+      "path": "HANDOFF-TEMPLATE.md",
+      "bytes": 1147,
+      "sha256": "e0f2ef2128689cbad82b6b4376c45ac7d5e29407234319ff5bc220a791655397"
+    },
+    {
       "path": "HANDOFF.md",
       "bytes": 1193,
-      "sha256": "4f6bb6f5f4c7ef7e6af961232cea13492542b313b041d2ec661ae5f16ed28c21"
+      "sha256": "514711d91af29e731d84c6e08bb8390f11ea4b7d71e297209f98a37e52d9e0e3"
+    },
+    {
+      "path": "LIBRARY-AUDIT.md",
+      "bytes": 6011,
+      "sha256": "50bcac97598919654d89591886cb1c948f730ef8efc894c896c78fe88ab0042f"
     },
     {
       "path": "LIBRARY-QA.md",
-      "bytes": 5104,
-      "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
+      "bytes": 5291,
+      "sha256": "1fa6b75a7025047362eb9521142fe0fe5d540401330cf0889f8d0576984f9c03"
     },
     {
       "path": "LIBRARY-UPGRADE.md",
-      "bytes": 5769,
-      "sha256": "982aa201c8d7ec80218a563a2139edb3923c6a34efbed3fd8518a36925bc626b"
+      "bytes": 5956,
+      "sha256": "562bb6bd789d4330d3f8bec9ea9207473d09289da1259a6ea8b1b065db4e488b"
+    },
+    {
+      "path": "PROJECT-STATUS.json",
+      "bytes": 2381,
+      "sha256": "bc9f04a5b183b150e63a6edac0f0b4871f5292efe63c881042688ac6b53fd9b4"
+    },
+    {
+      "path": "PROJECT-TASK-TEMPLATE.md",
+      "bytes": 1235,
+      "sha256": "fc2b3386f0031f34e86c7e82d4212336f6e743df410b32edaa1940f56386f204"
     },
     {
       "path": "README.md",
-      "bytes": 1185,
-      "sha256": "f0f732b5822e381c5b19ea16798306b5e62bf6c401e155688f1b77c490ebc999"
+      "bytes": 1432,
+      "sha256": "a200c4742435c5fc3be22b71c5f334790ed5ce43c223ec41585b16f68bbab4b7"
     },
     {
       "path": "REGULATIONS.md",
@@ -146,9 +182,14 @@
       "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
+      "path": "WORKFLOW.md",
+      "bytes": 22657,
+      "sha256": "a300e00456d8b5a9cbc1ed598ae694f2466ecc821c1f119b5feb7edac7e75bb8"
+    },
+    {
       "path": "kit.json",
       "bytes": 202,
-      "sha256": "d287a9b505abcebb2f3e7deb70ccb28ff760db1422ee46837f027c538e0f4086"
+      "sha256": "538dec19f4d12b6b7aee772dddb10b4dc321f70c5e8236b29515ee482b354a77"
     },
     {
       "path": "serve.mjs",
@@ -162,8 +203,8 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 3453,
-      "sha256": "c7c279c1c8a35c7ccad55d2f1c2121c6d8f5c0a579f954bf1004d7e1180e1735"
+      "bytes": 3640,
+      "sha256": "e582e00bb68a4194556f79461f7dbd60f1cc88fedd0543215424269c33151b6c"
     },
     {
       "path": "site/README.md",

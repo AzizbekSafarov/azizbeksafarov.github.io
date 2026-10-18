@@ -1,5 +1,7 @@
 # Kutubxona va topshiriq oqimi — 2026-10-18
 
+MAQOM: sanali baseline dalili. Joriy qayta tekshiruv yoki yangi vazifa bajarilganining dalili emas. Eng yangi to‘liq audit: https://azizbeksafarov.github.io/design/AUDIT-20261018.md .
+
 613 avtomatik test o‘tdi, 0 xato. Avvalgi 544 test saqlandi; 69 ta yangi tekshiruv topshiriq ko‘chirish va ma’lumotni saqlashdagi haqiqiy xatolarga qaratilgan. Ular barcha qurilmalarning kafolati emas.
 
 ## Natija va sabab

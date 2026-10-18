@@ -1,6 +1,6 @@
 # Forma — editable source snapshot
 
-Source fingerprint: `409348346c1ae355c5146fcb9218117970b4a924caceec95a4c53a2e3c6aa67f`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

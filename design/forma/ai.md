@@ -2,7 +2,11 @@
 
 KONTEKST MAQOMI: tadqiqot 2026-10-09 holatida. 2026-10-13 — ishtirokchi oldin bildirgan tarixiy reja; joriy bosqich yoki natija tasdiqlanmagan. Hozirgi bilet/vaqt/reglament ustuvor. [Manbalar maqomi](https://azizbeksafarov.github.io/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.
 
-Snapshot: 2026-10-18; source fingerprint `409348346c1ae355`.
+## Joriy ish tartibi va arxitektura
+
+Avval joriy bilet va loyiha CURRENT-TASK.md / HANDOFF.md’ini tekshir. [Ish tartibi](https://azizbeksafarov.github.io/ish-tartibi/ai.md) hamda [holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/status.json) qaror, dalil, reja va noma’lumlarni ajratadi. Tasdiqlangan reja: Render frontend + Node API, Supabase Auth/DB/RLS, zaruratga mos AI/Telegram va UptimeRobot monitoringi. Xizmatlar hali yaratilgan deb hisoblanmaydi. ZIP ichida WORKFLOW.md, ARCHITECTURE.md, API-GUIDE.md va PROJECT-STATUS.json bor. Uslub demo source’da; backendni bilet va foydalanuvchining joriy topshirig‘iga mos qur.
+
+Snapshot: 2026-10-18; source fingerprint `d5993c8e42927726`.
 Entry: https://azizbeksafarov.github.io/design/forma/ . Communicate in Uzbek.
 
 ## Ustuvorlik va tanlov
@@ -54,6 +58,6 @@ Storage faqat known ID va tekshirilgan qiymatlarni oladi. O‘zgarish oldidan so
 
 ## Ish tartibi
 
-Talab → foydalanuvchi amali → kod joyi → qabul tekshiruvi jadvalini tuz. Asosiy oqimni oxirigacha ishlat. Xatoni takrorla, sababini top, kichik tuzatish qil va qayta sina. Backend faqat bilet talab qilsa qo‘shiladi; demo natijani haqiqiy yuborish yoki buyurtma deb aytma. DESIGN-STANDARD.md ni o‘qi.
+Talab → foydalanuvchi amali → kod joyi → qabul tekshiruvi jadvalini tuz. Asosiy oqimni oxirigacha ishlat. Xatoni takrorla, sababini top, kichik tuzatish qil va qayta sina. Backend foydalanuvchining joriy Render + Supabase rejasi va biletga mos quriladi; demo natijani haqiqiy yuborish yoki buyurtma deb aytma. DESIGN-STANDARD.md ni o‘qi.
 
 HANDOFF.md ga bilet, o‘zgargan fayllar, haqiqiy buyruq/test natijasi, ochiq muammo va keyingi amalni yoz. Yangi chatga CURRENT-TASK.md va HANDOFF.md ni ber. Link o‘z-o‘zidan xotira, internet yoki fayl tahrirlash vositasini bermaydi; o‘qiy olmasa matn/ZIPni chatga bering.

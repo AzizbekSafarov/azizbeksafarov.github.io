@@ -48,7 +48,7 @@ Storage faqat known ID va tekshirilgan qiymatlarni oladi. O‘zgarish oldidan so
 
 ## Ish tartibi
 
-Talab → foydalanuvchi amali → kod joyi → qabul tekshiruvi jadvalini tuz. Asosiy oqimni oxirigacha ishlat. Xatoni takrorla, sababini top, kichik tuzatish qil va qayta sina. Backend faqat bilet talab qilsa qo‘shiladi; demo natijani haqiqiy yuborish yoki buyurtma deb aytma. DESIGN-STANDARD.md ni o‘qi.
+Talab → foydalanuvchi amali → kod joyi → qabul tekshiruvi jadvalini tuz. Asosiy oqimni oxirigacha ishlat. Xatoni takrorla, sababini top, kichik tuzatish qil va qayta sina. Backend foydalanuvchining joriy Render + Supabase rejasi va biletga mos quriladi; demo natijani haqiqiy yuborish yoki buyurtma deb aytma. DESIGN-STANDARD.md ni o‘qi.
 
 HANDOFF.md ga bilet, o‘zgargan fayllar, haqiqiy buyruq/test natijasi, ochiq muammo va keyingi amalni yoz. Yangi chatga CURRENT-TASK.md va HANDOFF.md ni ber. Link o‘z-o‘zidan xotira, internet yoki fayl tahrirlash vositasini bermaydi; o‘qiy olmasa matn/ZIPni chatga bering.
 '''

@@ -22,3 +22,7 @@ Tanlov matnlarining asl tahrirlanadigan nusxasi `ustoz` repozitoriysida. `sync_c
 O‘zgargan dizaynning tegishli test/buildini bajaring. Keyin `python -B design/build_handoff.py`, `python -B design/verify_handoff.py` va `python -B design/verify_site.py`ni repozitoriy ildizidan bajaring. Vizual o‘zgarish bo‘lsa yangi ko‘rinishni brauzerda tekshiring va previewni yangilang.
 
 `verify_clean.py` eski starterlar, ortiqcha build resurslari, kontekst nusxalarining ajralib ketishi va qisqa manzil nusxalari eskirishini aniqlaydi. Oldingi QA hisoboti joriy tahrir tekshirilganining kafolati emas.
+
+## Arxitektura va yangi AI konteksti
+
+Ish tartibi, arxitektura yoki API hujjati o‘zgarsa `python -B design/build_handoff.py` bajaring: saytdagi matn, to‘qqiz source ZIP va umumiy kit bir snapshotni oladi. WORKFLOW.md, ARCHITECTURE.md, API-GUIDE.md va PROJECT-STATUS.json paketlarda ham mavjud. `verify_handoff.py` eskirgan nusxani rad etadi.

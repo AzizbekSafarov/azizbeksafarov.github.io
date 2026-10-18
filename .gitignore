@@ -1,2 +1,11 @@
 __pycache__/
 *.pyc
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db

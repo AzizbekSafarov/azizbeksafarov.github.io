@@ -1,5 +1,7 @@
 # QA — independent design collection
 
+MAQOM: sanali baseline dalili. Joriy qayta tekshiruv yoki yangi vazifa bajarilganining dalili emas. Eng yangi to‘liq audit: https://azizbeksafarov.github.io/design/AUDIT-20261018.md .
+
 2026-10-15. Verification applies to this snapshot, not future ticket adaptations.
 
 - Actual browser inspection: HQ, gallery, starter and seven rebuilt/new sites. Desktop 1400; 1024, 768, 390, 320 responsive sweep (50 page/viewport combinations). No document horizontal overflow; Hisob table has intentional internal scrolling. No broken populated image sources.

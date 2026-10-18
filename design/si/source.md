@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `7a853b88626cc6eb0116af723056a06f3c2bd166bb526e1ac99f9cf44a3a1b27`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `0e9919fe2f5f5c84c1a9ed7e59d665e2fc33a98481d56c20063943f127125695`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

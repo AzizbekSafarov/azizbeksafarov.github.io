@@ -1,6 +1,6 @@
 # Meros — editable source snapshot
 
-Source fingerprint: `075c2a3a53442398873c629730fe3967c8210d893e6e5b8139f4d6c3b48cd11b`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `dd4fcdcad021b0ed36f24dff0b57de15deeb53b0ea1aaeee467929ab5450c8ac`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
 
 ## site/index.html
 

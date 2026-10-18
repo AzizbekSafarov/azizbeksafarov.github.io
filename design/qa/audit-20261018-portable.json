@@ -1,0 +1,61 @@
+{
+  "snapshot": "2026-10-18",
+  "scope": "Fresh ZIP extraction on this computer, not a new physical PC",
+  "results": [
+    {
+      "slug": "orbita",
+      "tests_passed": 17,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "nashr",
+      "tests_passed": 17,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "hisob",
+      "tests_passed": 75,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "ziyo",
+      "tests_passed": 54,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "meros",
+      "tests_passed": 17,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "samar",
+      "tests_passed": 93,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "forma",
+      "tests_passed": 49,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "bloom",
+      "tests_passed": 141,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    },
+    {
+      "slug": "si",
+      "tests_passed": 25,
+      "preview_http": 200,
+      "path_escape_rejected": true
+    }
+  ],
+  "total_passed": 488
+}

@@ -16,7 +16,7 @@ Topshiriq qoralamasi brauzer xotirasida saqlanadi. JSON orqali boshqa kompyuterd
 - `/ustoz/` — alohida research Pages repozitoriysi.
 - `/arxitektura/` — foydalanuvchi tanlagan Render + UptimeRobot + Supabase + Google Auth + AI + Telegram rejasining interaktiv xaritasi; `/arxitektura/ai.md` — to‘liq texnik kontekst.
 - `/api/` — sanali rasmiy API sinovlari, tier/kvota va xatolar; `/api/verification.json` — kalitlarsiz natijalar. Hosting va monitor hali reja ekanligi aniq belgilangan.
-- `/ish-tartibi/` — yangi AI uchun o‘qish tartibi, fakt maqomi, 10 ehtimoliy nosozlik va uch qatlamli sinov xaritasi. To‘liq `ai.md`, sanali `status.json`, CURRENT-TASK.md va HANDOFF.md shablonlari bor. Manba: `design/build_workflow.py`; umumiy HQ build bilan qayta yaratiladi.
+- `/ish-tartibi/` — yangi AI uchun o‘qish tartibi, fakt maqomi, son bilan cheklanmagan ehtimoliy xavflar, alohida ko‘rsatmalar/tavsiyalar va uch qatlamli sinov xaritasi. To‘liq `ai.md`, sanali `status.json`, CURRENT-TASK.md va HANDOFF.md shablonlari bor. Manba: `design/build_workflow.py`; umumiy HQ build bilan qayta yaratiladi.
 
 Arxitektura va API bo‘limlari `design/build_architecture.py`dan, `python design/build_hq.py` orqali yaratiladi. `assets/hq/architecture.mjs` faqat izohli oqimlarni almashtiradi; hech qanday haqiqiy AI yoki shaxsiy API’ni chaqirmaydi. Shaxsiy kalit omborining fayllari bu repozitoriyga ko‘chirilmaydi.
 
@@ -34,7 +34,7 @@ python design/verify_handoff.py
 python -m http.server 8770 --bind 127.0.0.1
 ```
 
-Faqat HQ o‘zgarsa build_hq yetadi. Source yoki DESIGN-STANDARD o‘zgarsa build_handoff barcha manifest/ZIPni yangilaydi. Bloomning o‘z AGENTS.md qoidalariga rioya qiling; minified distni patch qilmang. Yuksalning oq foni va brend faviconi saqlanadi.
+Faqat HQ ko‘rinishi o‘zgarsa build_hq yetadi. Source, DESIGN-STANDARD yoki ish tartibi/arxitektura/API konteksti o‘zgarsa build_handoff barcha manifest/ZIPni yangilaydi. verify_handoff paketdagi hujjat va runtime’ni amaldagi manba bilan ham solishtiradi. Bloomning o‘z AGENTS.md qoidalariga rioya qiling; minified distni patch qilmang. Yuksalning oq foni va brend faviconi saqlanadi.
 
 GitHub Pages main/rootdan nashr qiladi. Pushdan keyin deployment, ochiq HTML va muhim UI amallari tekshirilsin. Eski QA keyingi tahrirlar uchun dalil emas. HQ tekshiruvlari: `design/QA-HQ-FLOWS.json`, `design/QA-HQ-WORKSPACE.json`, `design/HQ-QA.md`.
 
@@ -42,4 +42,6 @@ Joriy kod yagona manba: shu repozitoriy. `design/verify_clean.py` arxivdagi star
 
 Asosiy tugmadagi rang va nur birgalikda 6 soniyada to‘liq aylanadi. Buning uchun aurora.cssdagi `--aurora-angle` ro‘yxatdan o‘tgan CSS xususiyati ishlatiladi. Tugma matni va shakli aylanmaydi. `prefers-reduced-motion` yoqilganida rangli chegara harakatsiz qoladi.
 
-Yakuniy 2026-10-18 upgrade dalili: `design/QA-UPGRADE.md`, `design/QA-UPGRADE-BROWSER.json`. 613 avtomatik test, ZIPlardan 488 test (shu to‘plamning bir qismi), 60 jonli responsive holat. `python design/verify_site.py` 33 sahifadagi lokal resurslar va anchorlarni ham tekshiradi.
+Oldingi 2026-10-18 upgrade snapshot’i: `design/QA-UPGRADE.md`, `design/QA-UPGRADE-BROWSER.json`. 613 avtomatik test, ZIPlardan 488 test (shu to‘plamning bir qismi), 60 jonli responsive holat. `python design/verify_site.py` barcha HTML, redirect, alias va sahifalararo anchorlarni tekshiradi.
+
+Joriy to‘liq audit: [AUDIT-20261018.md](design/AUDIT-20261018.md). 614 avtomatik test va 45 local browser o‘lchovi. `python -B design/verify_public.py` public fayl va ichma-ich ZIP’larni maxfiy qiymatlarni chiqarmasdan skanerlaydi.

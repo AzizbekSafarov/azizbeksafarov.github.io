@@ -45,6 +45,7 @@ def check_runtime(z,root):
             assert target in names,f'{name}: missing runtime resource {value}'
 
 def verify():
+    from build_handoff import CONTEXT_FILES, portable_bytes
     from verify_clean import verify as verify_current_only
     verify_current_only()
     catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))['templates']
@@ -57,9 +58,11 @@ def verify():
     assert len(catalog)+len(archived)==expected and len({t['slug'] for t in catalog+archived})==expected
     for template in catalog+archived:
         folder=ROOT/template['slug'];manifest=json.loads((folder/'manifest.json').read_text(encoding='utf-8'));archive=(folder/'source.zip').read_bytes()
+        brief=(folder/'ai.md').read_text(encoding='utf-8')
+        assert '/ish-tartibi/ai.md' in brief and 'PROJECT-STATUS.json' in brief, f'{template["slug"]}: missing current workflow entry'
         assert sha256(archive).hexdigest()==manifest['archive_sha256']
         assert len(archive)==manifest['archive_bytes']
-        assert len((folder/'ai.md').read_bytes())<12000,'Starter brief should stay focused'
+        assert 0<len((folder/'ai.md').read_bytes())<24000,'Starter brief should link to shared context rather than embed the whole research archive'
         with zipfile.ZipFile(BytesIO(archive)) as z:
             assert z.testzip() is None
             for entry in manifest['files']:
@@ -71,8 +74,17 @@ def verify():
             assert set(z.namelist())=={x['path'] for x in manifest['files']}
             for name in ('AGENTS.md','CLAUDE.md','GEMINI.md','CURRENT-TASK.md','HANDOFF.md','AI-BRIEF.md','CHECKLIST.md','COMPETITION.md','REGULATIONS.md','README.md','serve.mjs','kit.json'):assert name in z.namelist()
             assert z.read('AI-BRIEF.md')==(folder/'ai.md').read_bytes()
+            assert z.read('LIBRARY-AUDIT.md')==(ROOT/'AUDIT-20261018.md').read_bytes()
             assert z.read('REGULATIONS.md')==(ROOT/'handoff/regulations.md').read_bytes()
             assert z.read('CONTEXT-STATUS.md')==(ROOT/'handoff/context-status.md').read_bytes()
+            for name, source in CONTEXT_FILES.items():
+                assert z.read(name)==portable_bytes(source,(SITE_ROOT/source).read_bytes()),f'{template["slug"]}: stale context {name}'
+            # A self-consistent old manifest must not hide stale downloadable runtime code.
+            base=ROOT/('material-expressive' if template['slug']=='bloom' else template['slug']+'-site')
+            for entry in manifest['files']:
+                if entry['path'].startswith('site/'):
+                    name=entry['path'][5:]
+                    assert z.read(entry['path'])==portable_bytes(name,(base/name).read_bytes()),f'{template["slug"]}: stale runtime {name}'
             for entry in manifest['readable_source_files']:
                 actual=(folder/'files'/(entry['path']+'.txt')).read_bytes()
                 assert actual==z.read('site/'+entry['path']) and sha256(actual).hexdigest()==entry['sha256']
@@ -86,6 +98,9 @@ def verify():
         assert z.testzip() is None
         assert 'competition/FULL-CONTEXT.md' in z.namelist()
         assert z.read('competition/REGULATIONS.md')==(ROOT/'handoff/regulations.md').read_bytes()
+        assert z.read('LIBRARY-AUDIT.md')==(ROOT/'AUDIT-20261018.md').read_bytes()
+        for name, source in CONTEXT_FILES.items():
+            assert z.read(name)==portable_bytes(source,(SITE_ROOT/source).read_bytes()),f'kit: stale context {name}'
         for template in catalog:assert z.read(template['slug']+'/source.zip')==(ROOT/template['slug']/'source.zip').read_bytes()
         for template in archived:assert template['slug']+'/source.zip' not in z.namelist()
     for path in ('index.html','design/standart/index.html'):

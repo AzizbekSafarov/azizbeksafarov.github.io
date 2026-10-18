@@ -1,15 +1,16 @@
 {
+  "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-18",
-  "source_fingerprint": "409348346c1ae355c5146fcb9218117970b4a924caceec95a4c53a2e3c6aa67f",
+  "source_fingerprint": "d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "8d55adbe2cbf8064542e18430459e73f34644c3da5f3e28159de939f2f73f782",
-  "archive_bytes": 510824,
+  "archive_sha256": "9fad164a537b58facb2c42d3bbe464a27aaf8fa7793621821e8997d7150914ad",
+  "archive_bytes": 534127,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -71,13 +72,28 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 3262,
-      "sha256": "9cc85f0d5b203cc455d1ac14f1ee25388eeda34132edb84a3889ffefbb2cbdf8"
+      "bytes": 3654,
+      "sha256": "658dcb5bf5207db6507a87c23a51031b19b4a45b6cc9e8febcbfb3a80e3c77d8"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6752,
-      "sha256": "8bc28bdc0578d346d7605d275b82c3d5c12a0df7468e035aea2b611879628601"
+      "bytes": 7439,
+      "sha256": "45fa3d40222e2f9bc2d993f15ac40894164ce2c840b8049f932a2f65dfcf5721"
+    },
+    {
+      "path": "API-EVIDENCE.json",
+      "bytes": 1286,
+      "sha256": "8c0a16d6256372b078562e3f7ac6ea6e89da3b2c34d0afc927c6f3b5c51b7912"
+    },
+    {
+      "path": "API-GUIDE.md",
+      "bytes": 5205,
+      "sha256": "e2666fb29a9c2bd121451398889f46a7c6a6896283a8462deb9d22b7c05d6bd1"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "bytes": 10354,
+      "sha256": "00ad76465673aff5ecacf4de9b8978a580e0a0471abd368424a2637d89b3000d"
     },
     {
       "path": "CHECKLIST.md",
@@ -101,8 +117,8 @@
     },
     {
       "path": "CURRENT-TASK.md",
-      "bytes": 315,
-      "sha256": "6aef27412f9f75877094e02a02deb74ca3d168f5504cd4647db36bc84ac4990e"
+      "bytes": 594,
+      "sha256": "38ea7c925c4c5c637d955eb6fa476e8ec034620dfed105a25ce46db966d43056"
     },
     {
       "path": "DESIGN-STANDARD.md",
@@ -115,24 +131,44 @@
       "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
     },
     {
+      "path": "HANDOFF-TEMPLATE.md",
+      "bytes": 1147,
+      "sha256": "e0f2ef2128689cbad82b6b4376c45ac7d5e29407234319ff5bc220a791655397"
+    },
+    {
       "path": "HANDOFF.md",
       "bytes": 1195,
-      "sha256": "b93bdae57e29901a437e74e1fe34c66651ce93fb9e2900dacf9428ca954c5941"
+      "sha256": "919a16a112da1f270267c39c9b14094a8b69dc7f16830d3bef2832c24e4719b5"
+    },
+    {
+      "path": "LIBRARY-AUDIT.md",
+      "bytes": 6011,
+      "sha256": "50bcac97598919654d89591886cb1c948f730ef8efc894c896c78fe88ab0042f"
     },
     {
       "path": "LIBRARY-QA.md",
-      "bytes": 5104,
-      "sha256": "342287c2e925106aa019e49a4a8506cc9644ffc820288fb1fa7dff011a72b803"
+      "bytes": 5291,
+      "sha256": "1fa6b75a7025047362eb9521142fe0fe5d540401330cf0889f8d0576984f9c03"
     },
     {
       "path": "LIBRARY-UPGRADE.md",
-      "bytes": 5769,
-      "sha256": "982aa201c8d7ec80218a563a2139edb3923c6a34efbed3fd8518a36925bc626b"
+      "bytes": 5956,
+      "sha256": "562bb6bd789d4330d3f8bec9ea9207473d09289da1259a6ea8b1b065db4e488b"
+    },
+    {
+      "path": "PROJECT-STATUS.json",
+      "bytes": 2381,
+      "sha256": "bc9f04a5b183b150e63a6edac0f0b4871f5292efe63c881042688ac6b53fd9b4"
+    },
+    {
+      "path": "PROJECT-TASK-TEMPLATE.md",
+      "bytes": 1235,
+      "sha256": "fc2b3386f0031f34e86c7e82d4212336f6e743df410b32edaa1940f56386f204"
     },
     {
       "path": "README.md",
-      "bytes": 1280,
-      "sha256": "f2e4a6e59bf70b3dbb76f2cd8a8654dc9220290e5fa2f921df97a474930e4c0e"
+      "bytes": 1527,
+      "sha256": "508456d9d729e3e0cf80ace069a2141c3adcc1e5f07fa00793e65627957fcdcb"
     },
     {
       "path": "REGULATIONS.md",
@@ -140,9 +176,14 @@
       "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
+      "path": "WORKFLOW.md",
+      "bytes": 22657,
+      "sha256": "a300e00456d8b5a9cbc1ed598ae694f2466ecc821c1f119b5feb7edac7e75bb8"
+    },
+    {
       "path": "kit.json",
       "bytes": 204,
-      "sha256": "821baf15f1daf54ad441d1d22fcd1f40dbd64f3e0f68b0582aadacb698f8d76d"
+      "sha256": "c6a4efcc9a1abad52678312b0cab910ae1ced6812170dcc83223e0d7ec11b7f1"
     },
     {
       "path": "serve.mjs",
@@ -156,8 +197,8 @@
     },
     {
       "path": "site/QA-REPORT.md",
-      "bytes": 3973,
-      "sha256": "c267370558d78472d9208367a397cca7af580c76d9a4b676ac9f7f6ea0524795"
+      "bytes": 4160,
+      "sha256": "2de4aad7261eb97290b32345e0e4dbe3a7b54cec7ad65907f4933676fdfccde5"
     },
     {
       "path": "site/README.md",
