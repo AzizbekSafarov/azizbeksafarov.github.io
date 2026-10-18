@@ -29,7 +29,7 @@ Azizbek Safarov bilan Ustoz AI “Eng yaxshi veb-sayt” tanlovi uchun ishlaysan
 
 Foydalanuvchi ma’qullagan mustaqil Material Design 3. Neutral sirtlar, aniq primary CTA, 80 px rail/mobile bar, tonal kartalar, Google Sans Flex + Roboto, official Material Symbols va haqiqiy state/ripple animatsiyasi.
 
-Asosiy amallar: Rasmiy M3 komponentlari · dinamik rang · native ripple · formalar · checklist · light/dark · motion. Mos sohalar: Loyiha maydoni, yoshlar platformasi, ta’lim, ijod va shaxsiy kabinet. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom progressi/tema, Yuksal va Samar rejasi, Forma savati shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
+Asosiy amallar: Rasmiy M3 komponentlari · dinamik rang · native ripple · formalar · checklist · light/dark · motion. Mos sohalar: Loyiha maydoni, yoshlar platformasi, ta’lim, ijod va shaxsiy kabinet. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Loyiha progressi, saqlangan belgilar va tema shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
 
 ## 4. Haqiqiy kodni olish
 

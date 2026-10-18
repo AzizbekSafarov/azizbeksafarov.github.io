@@ -29,7 +29,7 @@ Azizbek Safarov bilan Ustoz AI “Eng yaxshi veb-sayt” tanlovi uchun ishlaysan
 
 SI.gov vizual uslubidagi mustaqil Yuksal · SI: O‘zbekiston palitrasi: moviy #0099b5, oq #ffffff, yashil #1eb53a; oq #ffffff asosiy fon; to‘q teal #062c35 matn, moviy kursiv. #ce1126 faqat bayroqning ikki ingichka hoshiyasida; mahalliy Instrument Serif/Sans; canvas SI zarrachalari, katta tahririy sarlavhalar, dumaloq menyu, yon nuqta navigatsiyasi va och kartalar. Rasmiy davlat xizmati emas.
 
-Asosiy amallar: O‘zbekiston palitrasi · 12 yulduzli bayroq · SI ↔ Super Intelligence · kursor / click fizikasi · scroll morph · shaxsiy reja. Mos sohalar: AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom progressi/tema, Yuksal va Samar rejasi, Forma savati shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
+Asosiy amallar: O‘zbekiston palitrasi · 12 yulduzli bayroq · SI ↔ Super Intelligence · kursor / click fizikasi · scroll morph · shaxsiy reja. Mos sohalar: AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Tanlangan tashabbuslar rejasi shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
 
 ## 4. Haqiqiy kodni olish
 

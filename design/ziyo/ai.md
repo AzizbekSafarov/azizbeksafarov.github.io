@@ -31,7 +31,7 @@ Bu mustaqil original implementatsiya; NASA, Muuto yoki professional studiya tomo
 
 ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Kod site/ ichida. Rootda `node serve.mjs`; http://127.0.0.1:8080/ . Python fallback: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Npm kerak emas. Test: `node --test site/*.test.mjs`.
 
-index.html — mazmun va tuzilma. style.css — lokal fontlar va accessibility mexanikasi. layout.css — tanlangan sohaning to‘liq kompozitsiyasi, tipografika va responsive. identities_v4.py hamda identity-styles/ yakuniy generator manbasi; oldingi diversity_v3.py yakuniy uslub emas. Ziyoda identity.js ishlaydigan dars misolini boshqaradi. app.js — event, dialog/fokus, filtr, saqlash, download. model.js — data va hisob/validatsiya. model.test.mjs — meaningful model checks. fonts/ va images/ lokal. CREDITS.md litsenziyalar. Original kutubxonada build_collection.py generator; tanlovdagi alohida ZIP runtime fayllari to‘g‘ridan-to‘g‘ri tahrirlanadi.
+index.html — mazmun va tuzilma. style.css — lokal fontlar va accessibility mexanikasi. layout.css — tanlangan sohaning to‘liq kompozitsiyasi, tipografika va responsive. identities_v4.py hamda identity-styles/ yakuniy generator manbasi; oldingi diversity_v3.py yakuniy uslub emas. identity.js ishlaydigan dars misolini boshqaradi. app.js — event, dialog/fokus, filtr, saqlash, download. model.js — data va hisob/validatsiya. model.test.mjs — meaningful model checks. Paketdagi font va rasmlar lokal. CREDITS.md litsenziyalar. Original kutubxonada build_collection.py generator; tanlovdagi alohida ZIP runtime fayllari to‘g‘ridan-to‘g‘ri tahrirlanadi.
 
 Source faylni alohida o‘qish:
 - [index.html](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/index.html.txt)
@@ -47,8 +47,8 @@ Source faylni alohida o‘qish:
 ## Asosiy oqim va tekshiruv
 Modul tanlash → mazmun → javob → xato/to‘g‘ri izoh → progress → reload
 
-Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. Hisob faqat namuna dataset, CSV aynan filtrlangan qatorlarni oladi; Ziyo progress faqat to‘g‘ri javobdan keyin oshadi. Orbita SVG chizmasi shartli, jonli telemetriya emas. Nashr original namuna matni; Meros mustaqil foto ekspozitsiya, rasmiy muzey emas.
+Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. Progress faqat to‘g‘ri javobdan keyin oshadi. Modul o‘zgarganda javob/izoh tozalansin; oxirgi modulda keyingi qadam noto‘g‘ri ochilmasin.
 
-Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 320/390/768/1024/1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin. Orbita harakati Pause, hidden tab va OS sozlamasiga mos.
+Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 320/390/768/1024/1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.
 
 HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Backendni foydalanuvchining joriy Render + Supabase rejasi va biletga mos qur; demo natijani haqiqiy yuborish/to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.

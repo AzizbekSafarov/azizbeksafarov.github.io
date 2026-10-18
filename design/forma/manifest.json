@@ -9,8 +9,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "9fad164a537b58facb2c42d3bbe464a27aaf8fa7793621821e8997d7150914ad",
-  "archive_bytes": 534127,
+  "archive_sha256": "0bedf61f3cb9a6b278754bca638f93c0ff43c8ebd447e9ca4bcec51e4ad8ea81",
+  "archive_bytes": 534240,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -142,8 +142,8 @@
     },
     {
       "path": "LIBRARY-AUDIT.md",
-      "bytes": 6011,
-      "sha256": "50bcac97598919654d89591886cb1c948f730ef8efc894c896c78fe88ab0042f"
+      "bytes": 6318,
+      "sha256": "3b2cab4450b8b0f88b559691db1c686d2d4cc3a92f3d7acd85b277f6aec7cb94"
     },
     {
       "path": "LIBRARY-QA.md",

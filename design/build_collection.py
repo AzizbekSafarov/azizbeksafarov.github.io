@@ -147,6 +147,14 @@ def build():
  print('Built 5 independent standalone designs.')
 def brief(t,site,raw,date):
  slug=t['slug'];spec=next(s for s in SPECS if s['slug']==slug)
+ domain_note={
+  'orbita':'SVG chizmasi shartli, jonli telemetriya emas. Harakat Pause, hidden tab va OS reduced-motion sozlamasiga mos qolsin.',
+  'nashr':'Maqolalar original namuna matni. Filtr va saqlangan maqolalar birga ishlasin; reader yopilganda fokus ochgan tugmaga qaytsin.',
+  'hisob':'Faqat namuna dataset ishlatiladi. CSV aynan filtrlangan qatorlarni oladi; topilmagan natijada eksport o‘chiq bo‘lsin. Grafik va jami bir xil modeldan hisoblansin.',
+  'ziyo':'Progress faqat to‘g‘ri javobdan keyin oshadi. Modul o‘zgarganda javob/izoh tozalansin; oxirgi modulda keyingi qadam noto‘g‘ri ochilmasin.',
+  'meros':'Mustaqil foto ekspozitsiya; rasmiy muzey emas. Filtrda lavhaning doimiy raqami saqlansin; kolleksiya va dialog holati bir xil modeldan olinsin.'
+ }[slug]
+ identity_note='identity.js ishlaydigan dars misolini boshqaradi. ' if slug=='ziyo' else ''
  return f'''# {t['name']} — tanlov uchun yangi AI konteksti
 
 Snapshot {date}; fingerprint {t['fingerprint'][:16]}. Foydalanuvchi bilan o‘zbekcha gaplash.
@@ -174,7 +182,7 @@ Bu mustaqil original implementatsiya; NASA, Muuto yoki professional studiya tomo
 
 ZIP: AGENTS.md → AI-BRIEF.md → CURRENT-TASK.md → HANDOFF.md. Kod site/ ichida. Rootda `node serve.mjs`; http://127.0.0.1:8080/ . Python fallback: `python -m http.server 8080 --bind 127.0.0.1 --directory site`. Npm kerak emas. Test: `node --test site/*.test.mjs`.
 
-index.html — mazmun va tuzilma. style.css — lokal fontlar va accessibility mexanikasi. layout.css — tanlangan sohaning to‘liq kompozitsiyasi, tipografika va responsive. identities_v4.py hamda identity-styles/ yakuniy generator manbasi; oldingi diversity_v3.py yakuniy uslub emas. Ziyoda identity.js ishlaydigan dars misolini boshqaradi. app.js — event, dialog/fokus, filtr, saqlash, download. model.js — data va hisob/validatsiya. model.test.mjs — meaningful model checks. fonts/ va images/ lokal. CREDITS.md litsenziyalar. Original kutubxonada build_collection.py generator; tanlovdagi alohida ZIP runtime fayllari to‘g‘ridan-to‘g‘ri tahrirlanadi.
+index.html — mazmun va tuzilma. style.css — lokal fontlar va accessibility mexanikasi. layout.css — tanlangan sohaning to‘liq kompozitsiyasi, tipografika va responsive. identities_v4.py hamda identity-styles/ yakuniy generator manbasi; oldingi diversity_v3.py yakuniy uslub emas. {identity_note}app.js — event, dialog/fokus, filtr, saqlash, download. model.js — data va hisob/validatsiya. model.test.mjs — meaningful model checks. Paketdagi font va rasmlar lokal. CREDITS.md litsenziyalar. Original kutubxonada build_collection.py generator; tanlovdagi alohida ZIP runtime fayllari to‘g‘ridan-to‘g‘ri tahrirlanadi.
 
 Source faylni alohida o‘qish:
 '''+ '\n'.join(f'- [{name}]({raw}/design/{slug}/files/{name}.txt)' for name in ['index.html','style.css','layout.css','app.js']+(['identity.js'] if slug=='ziyo' else [])+['model.js','model.test.mjs','CREDITS.md','package.json'])+f'''
@@ -182,9 +190,9 @@ Source faylni alohida o‘qish:
 ## Asosiy oqim va tekshiruv
 {spec['flow']}
 
-Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. Hisob faqat namuna dataset, CSV aynan filtrlangan qatorlarni oladi; Ziyo progress faqat to‘g‘ri javobdan keyin oshadi. Orbita SVG chizmasi shartli, jonli telemetriya emas. Nashr original namuna matni; Meros mustaqil foto ekspozitsiya, rasmiy muzey emas.
+Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. {domain_note}
 
-Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 320/390/768/1024/1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin. Orbita harakati Pause, hidden tab va OS sozlamasiga mos.
+Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 320/390/768/1024/1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.
 
 HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Backendni foydalanuvchining joriy Render + Supabase rejasi va biletga mos qur; demo natijani haqiqiy yuborish/to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.
 '''

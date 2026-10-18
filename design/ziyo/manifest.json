@@ -9,8 +9,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "313557056457fffe89f24a75840ecc876573d54ee982caa674b04c158f9ecba4",
-  "archive_bytes": 434448,
+  "archive_sha256": "aa1443e52947c3bbb5c5fe45c230b7c95d0ff4e96a9708f89ba3966fa8968c12",
+  "archive_bytes": 434463,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -83,8 +83,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6599,
-      "sha256": "78dc9a9a4d5c895378b7d6eb256978fc5b63cda774935f95809356cb7f2366ec"
+      "bytes": 6433,
+      "sha256": "b4d6af59fbe0eb2802b477441250a25742902d99727a5fb15490e13cb713e7d2"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -148,8 +148,8 @@
     },
     {
       "path": "LIBRARY-AUDIT.md",
-      "bytes": 6011,
-      "sha256": "50bcac97598919654d89591886cb1c948f730ef8efc894c896c78fe88ab0042f"
+      "bytes": 6318,
+      "sha256": "3b2cab4450b8b0f88b559691db1c686d2d4cc3a92f3d7acd85b277f6aec7cb94"
     },
     {
       "path": "LIBRARY-QA.md",

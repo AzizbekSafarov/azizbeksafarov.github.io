@@ -9,8 +9,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "3406f1a361d07ca4d13602fe4f2baa590a056b012b5680f9ba65478c6f53e7a6",
-  "archive_bytes": 192895,
+  "archive_sha256": "aca6e30548158ab258f6c6eac7694949732331a1e29da467a1798f5a1c344970",
+  "archive_bytes": 192903,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -77,8 +77,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6539,
-      "sha256": "c279e3e3718f6b7e9222ea163ad6562cb8dbd88c8292289a213a20d648a57134"
+      "bytes": 6342,
+      "sha256": "2007b14d09a70cd026ae68fa47bc92e075cb81c6c26a44baebc45feb9d7c87f8"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -142,8 +142,8 @@
     },
     {
       "path": "LIBRARY-AUDIT.md",
-      "bytes": 6011,
-      "sha256": "50bcac97598919654d89591886cb1c948f730ef8efc894c896c78fe88ab0042f"
+      "bytes": 6318,
+      "sha256": "3b2cab4450b8b0f88b559691db1c686d2d4cc3a92f3d7acd85b277f6aec7cb94"
     },
     {
       "path": "LIBRARY-QA.md",

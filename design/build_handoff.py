@@ -144,6 +144,7 @@ def ai_brief(t):
         from refined_handoff import brief
         return brief(t,SITE,RAW,DATE)
     bloom=t['id']=='10'
+    demo_state='Loyiha progressi, saqlangan belgilar va tema shu brauzerda saqlanadi.' if bloom else 'Tanlangan tashabbuslar rejasi shu brauzerda saqlanadi.'
     folder='design/material-expressive' if bloom else 'design/si-site' if t['id']=='11' else 'design'
     source_map=(
       '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/persistence.js`: non-destructive startup reads, recovery backups and JSON export; `src/persistence.test.js`: failure regressions.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: baseline model tests; `src/combinations.test.js`: combined filters, task masks and storage boundaries.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
@@ -193,7 +194,7 @@ Azizbek Safarov bilan Ustoz AI “Eng yaxshi veb-sayt” tanlovi uchun ishlaysan
 
 {t['look']}
 
-Asosiy amallar: {t['features']}. Mos sohalar: {t['use']}. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. Bloom progressi/tema, Yuksal va Samar rejasi, Forma savati shu brauzerda saqlanadi. Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
+Asosiy amallar: {t['features']}. Mos sohalar: {t['use']}. Statistika, narx, foydalanuvchi profili va fikrlar namunaviy. Formalar demo; backend yoki haqiqiy yuborish yo‘q. {demo_state} Bilet so‘ragan haqiqiy funksiyalarni qur; demo natijani haqiqiy xizmat deb ko‘rsatma.
 
 ## 4. Haqiqiy kodni olish
 

@@ -9,8 +9,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "9a50504d05734c6cd7fa2db6f7f263402bb1071cd64347162eb38aaf15a618d3",
-  "archive_bytes": 1708680,
+  "archive_sha256": "a2a7955ed13ce162b5900605c2a22e82ca82b37673170718d6daa841eedc3a54",
+  "archive_bytes": 1708793,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -142,8 +142,8 @@
     },
     {
       "path": "LIBRARY-AUDIT.md",
-      "bytes": 6011,
-      "sha256": "50bcac97598919654d89591886cb1c948f730ef8efc894c896c78fe88ab0042f"
+      "bytes": 6318,
+      "sha256": "3b2cab4450b8b0f88b559691db1c686d2d4cc3a92f3d7acd85b277f6aec7cb94"
     },
     {
       "path": "LIBRARY-QA.md",
