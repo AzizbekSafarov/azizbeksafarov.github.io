@@ -59,3 +59,5 @@ Pages ochilmasa: https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov
 ## Sahifalar va mahsulot oqimi
 
 [Landing → dashboard → workspace xaritasi](https://azizbeksafarov.github.io/arxitektura/#sahifalar) va to‘liq arxitektura qo‘llanmasida sahifa vazifalari, animatsiya, public/app qobiqlari, kirish huquqi, saqlash va muhim holatlar tushuntirilgan. Bular biletga moslashtiriladigan namuna qatlamlar, hali yaratilgan route’lar emas. PROJECT-TASK-TEMPLATE.md’da sahifa xaritasi maydonlari bor.
+
+[Professional mahsulot sifat mezonlari](https://azizbeksafarov.github.io/arxitektura/#sifat): UI tizimi, accessibility, server ruxsatlari, data/tiklash, API, barqarorlik, tezlik, kuzatuv va xavfsiz release. Har band dalil bilan baholanadi; bu hali bajarilgan infratuzilma yoki korporativ sertifikat da’vosi emas.

@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "7099938b5ad5ebf3ad154b1db52a83585ac618cedbcd6538ba663dd1f2e0221e",
-  "archive_bytes": 595439,
+  "archive_sha256": "aeb9c99c656e32d9a58db5d2c26624074ce0e64b9b62ab8c2bc71512b926bedb",
+  "archive_bytes": 599078,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -94,8 +94,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 17146,
-      "sha256": "8d0f5e43380f06a2a64f0e354d9848ea7d475e7d6b8b488e726669373c4db405"
+      "bytes": 25664,
+      "sha256": "7144ec1dc9a2a1d0b03d495bddf078b8e4353fe221c832bd36357c9ee0df92ec"
     },
     {
       "path": "CHECKLIST.md",
@@ -165,7 +165,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 7073,
-      "sha256": "130721da63df898775712dff5757965d3950d0ada88e21f3409ebaf1efdc68ef"
+      "sha256": "6ad27e0bdd1b69b52a295435c6b4dd9cf0fdb0b1133e014b835d6eaf555adc0c"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -174,8 +174,8 @@
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
-      "bytes": 1671,
-      "sha256": "0f355c3f020ded1310b30395ea9bd3cdaaabe055327754f2aba834b4bc80ea09"
+      "bytes": 2033,
+      "sha256": "1f5b66364d316394a8534a04941a0c96b92bfe21de3f226fea6622093a24d47b"
     },
     {
       "path": "README.md",
@@ -199,8 +199,8 @@
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 25737,
-      "sha256": "5668034c7e546975e021dc9af3dd6217dbf8cb9e91e8a0082b8330b459108324"
+      "bytes": 26126,
+      "sha256": "6236195b3aa87c05952ce5c0026c1fe3345a9e4886cd6ac2f839aef457b68ebf"
     },
     {
       "path": "kit.json",

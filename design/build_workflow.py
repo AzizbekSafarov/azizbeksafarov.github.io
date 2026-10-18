@@ -101,6 +101,7 @@ RISKS += [
 ]
 
 GUIDANCE = [
+ ('Professional sifatni dalil bilan qabul qil', 'Ko‘rsatma', 'Arxitektura qo‘llanmasidagi sifat bo‘limini biletga mos qo‘lla: izchil UI, accessibility, server ruxsati, ma’lumot/tiklash, API, nosozlik, tezlik, kuzatuv va xavfsiz nashr. Har muhim bandda dalil yoki ochiq holat bo‘lsin. Test soni, chiroyli ekran yoki hujjatning o‘zi enterprise darajasiga tenglikni isbotlamaydi.'),
  ('Landing, kabinet va ish maydonini xaritala', 'Ko‘rsatma', 'Arxitektura qo‘llanmasidagi sahifa qatlamlarini biletga mosla: landing/tushuntirish → kerakli login → dashboard holati → workspace amali va saqlangan natija. Route, kirish huquqi, ma’lumot manbasi va muhim holatlarni yoz. Animatsiya vazifaga xizmat qilsin; barcha qatlamni har biletga majburan qo‘shma.'),
  ('Mezon va to‘liq manbani o‘tkazib yuborma', 'Ko‘rsatma', 'Tanlov ishida qisqa kontekst va SCORING-WORKPLAN.md’ni o‘qi; talab → qabul sinovi → himoya dalilini yoz. 21 kichik mezon loyiha tahriridan. FULL-COMPETITION-CONTEXT.md va to‘liq REGULATIONS.md har bir source ZIP’da bor; boshlash matni ularning o‘rniga o‘tmaydi. To‘liq o‘qish so‘ralsa o‘qilmagan qismini yashirma.'),
  ('Avval biletni ishga aylantir', 'Ko‘rsatma', 'Asosiy foydalanuvchi, bitta to‘liq oqim va qabul mezonini yoz. AI, Telegram yoki login biletga foyda bermasa, ularni borligi uchungina majburan qo‘shma.'),
@@ -131,6 +132,13 @@ Dashboard/kabinet: [o‘z holati va davom ettirish; kerak bo‘lsa]
 Workspace: [asosiy yaratish/tahrirlash → saqlash → natija]
 Route → kirish huquqi → asosiy amal → data manbasi → loading/empty/error: [...]
 Saqlanmagan tahrir va deep link/reload xulqi: [...]
+
+## Muhim sifat talablari
+Shu vazifaga tatbiq etiladigan bandlar va sababi: [...]
+UI/accessibility, ruxsat va ma’lumot saqlanishi dalili: [...]
+Nosozlik/retry, kuzatuv, tezlik va foydalanish xarajati chegarasi: [...]
+Migration/backup/restore va deploy/rollback yo‘li: [...]
+Holat: [tekshirildi / ochiq muammo / hali tekshirilmadi / tatbiq etilmaydi + sabab]
 
 ## Joriy texnik qaror
 - Hosting: Render Web Service — [haqiqiy loyiha/manzil yoki hali yaratilmagan]

@@ -51,3 +51,5 @@ Har bir alohida source ZIP ham to‘liq tadqiqot (`FULL-COMPETITION-CONTEXT.md`)
 ZIP/kontekst to‘liqligi dalili: [ZIP-CONTEXT-QA.md](design/ZIP-CONTEXT-QA.md), [tekshiruv natijalari](design/qa/zip-context-20261018.json).
 
 Arxitekturada `/arxitektura/#sahifalar` mahsulot xaritasi mavjud: landing/animatsiya, ochiq mazmun, login, dashboard va workspace rollari; route, kirish huquqi, data saqlanishi, responsive va xato holatlari. Ko‘rsatmalar ZIP ichidagi ARCHITECTURE.md va PROJECT-TASK-TEMPLATE.md bilan birga yangilanadi. Route nomlari namunaviy, joriy ishlaydigan mahsulot deb ko‘rsatilmaydi.
+
+Professional mahsulot sifati `/arxitektura/#sifat` va ARCHITECTURE.md’da: UI/component tizimi, WCAG maqsadlari, ruxsatlar, ma’lumot va tiklash, API, resiliency/budget, Web Vitals, observability, release va rollback. Birlamchi manbalar va qabul dalillari bilan; korporativ sertifikat yoki allaqachon bajarilgan nazorat deb ko‘rsatilmaydi. Yagona tahrirlanadigan manba: design/product_quality.py.

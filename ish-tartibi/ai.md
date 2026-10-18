@@ -86,6 +86,10 @@ Ushbu snapshot’da tanlov mahsulotiga oid dalilli ochiq bug qaydi kiritilmagan:
 
 ## Ishni bajarish ko‘rsatmalari va tavsiyalar
 
+### Ko‘rsatma: Professional sifatni dalil bilan qabul qil
+
+Arxitektura qo‘llanmasidagi sifat bo‘limini biletga mos qo‘lla: izchil UI, accessibility, server ruxsati, ma’lumot/tiklash, API, nosozlik, tezlik, kuzatuv va xavfsiz nashr. Har muhim bandda dalil yoki ochiq holat bo‘lsin. Test soni, chiroyli ekran yoki hujjatning o‘zi enterprise darajasiga tenglikni isbotlamaydi.
+
 ### Ko‘rsatma: Landing, kabinet va ish maydonini xaritala
 
 Arxitektura qo‘llanmasidagi sahifa qatlamlarini biletga mosla: landing/tushuntirish → kerakli login → dashboard holati → workspace amali va saqlangan natija. Route, kirish huquqi, ma’lumot manbasi va muhim holatlarni yoz. Animatsiya vazifaga xizmat qilsin; barcha qatlamni har biletga majburan qo‘shma.

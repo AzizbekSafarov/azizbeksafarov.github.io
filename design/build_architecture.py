@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape
 import json
 from workspace_hq import frame
+from product_quality import markdown as quality_markdown, html as quality_html
 
 SITE = Path(__file__).resolve().parent.parent
 DATE = '2026-10-18'
@@ -157,7 +158,7 @@ Tayyor: .io dizayn kutubxonasi va ko‘chiriladigan kod; sanali rasmiy API ulani
 O‘qish tartibi: joriy bilet va loyiha CURRENT-TASK.md/HANDOFF.md → /ai.md → /ish-tartibi/ai.md va status.json → ushbu hujjat → /api/ai.md → tanlangan /design/SLUG/ai.md. So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
 '''
 
-ARCH_MD = ARCH_MD.replace('## Hosting va monitoring', PRODUCT_MD + '## Hosting va monitoring', 1)
+ARCH_MD = ARCH_MD.replace('## Hosting va monitoring', PRODUCT_MD + quality_markdown() + '## Hosting va monitoring', 1)
 
 API_MD = '''# AI API va Telegram — sinovlar va ishlatish qoidalari
 
@@ -238,7 +239,7 @@ Shu arxitekturani va /api/ai.md qo‘llanmasini o‘qi. Asosiy stack: Render + U
       <section class="sources-section" id="manbalar"><p class="eyebrow">MANBA VA YANGILANISH</p><h2>Qoidalar taxmin bilan yozilmagan.</h2><p class="section-intro">Rasmiy hujjatlar {DATE} kuni tekshirildi. Xizmatlar va tariflar o‘zgarsa bu reja ham qayta tekshiriladi.</p>{refs}</section>
     </div>'''
     content=content.replace('<section class="system-board"', '<p class="workflow-crosslink"><a href="/ish-tartibi/">AI adashmasligi uchun: o‘qish tartibi, ehtimoliy xatolar va 3 qatlamli sinov →</a></p><section class="system-board"',1)
-    content=content.replace('<section class="flow-section"', product_html+'<section class="flow-section"',1)
+    content=content.replace('<section class="flow-section"', product_html+quality_html()+'<section class="flow-section"',1)
     content=content.replace('<a href="/api/" class="plain-link">API sinov natijalari →</a>', '<a href="#sahifalar" class="plain-link">Landing → workspace xaritasi ↓</a><a href="/api/" class="plain-link">API sinov natijalari →</a>',1)
     write('arxitektura/index.html', frame('Loyiha arxitekturasi — Render + UptimeRobot', content, 'architecture'))
     tests = [

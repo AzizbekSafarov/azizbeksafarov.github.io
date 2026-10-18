@@ -17,6 +17,13 @@ Workspace: [asosiy yaratish/tahrirlash → saqlash → natija]
 Route → kirish huquqi → asosiy amal → data manbasi → loading/empty/error: [...]
 Saqlanmagan tahrir va deep link/reload xulqi: [...]
 
+## Muhim sifat talablari
+Shu vazifaga tatbiq etiladigan bandlar va sababi: [...]
+UI/accessibility, ruxsat va ma’lumot saqlanishi dalili: [...]
+Nosozlik/retry, kuzatuv, tezlik va foydalanish xarajati chegarasi: [...]
+Migration/backup/restore va deploy/rollback yo‘li: [...]
+Holat: [tekshirildi / ochiq muammo / hali tekshirilmadi / tatbiq etilmaydi + sabab]
+
 ## Joriy texnik qaror
 - Hosting: Render Web Service — [haqiqiy loyiha/manzil yoki hali yaratilmagan]
 - Monitoring: UptimeRobot — [haqiqiy holat]
