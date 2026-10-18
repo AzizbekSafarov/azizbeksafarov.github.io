@@ -19,6 +19,7 @@
 - [Barcha kod + tanlov matnlari ZIP](https://azizbeksafarov.github.io/design/kit.zip).
 - [Machine-readable katalog](https://azizbeksafarov.github.io/design/catalog.json).
 - [Tanlov tadqiqoti](https://azizbeksafarov.github.io/ustoz/ai.md).
+- [Nizomlar: 39 sahifa to‘liq matn](https://azizbeksafarov.github.io/ustoz/nizom.md).
 - [Mezonlardan ish rejasiga](https://azizbeksafarov.github.io/ustoz/06-SCORE-WORKPLAN.md).
 - [Sifat standarti](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md).
 

@@ -8,8 +8,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "be951c19534de4122ccf1faeabff826ef05840680ab72b14db0f9d546f232b7a",
-  "archive_bytes": 140670,
+  "archive_sha256": "61562d129eb6e74cb53612af549ed10eab106c725690c051c70502876bd1c896",
+  "archive_bytes": 167217,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -71,8 +71,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2646,
-      "sha256": "3b49697faabacadd3cbc913647a3d9c3fa2cde47ed0fdfb2471e3d4dbff148a1"
+      "bytes": 2968,
+      "sha256": "1c1d9eef3582c05b47ca78767c3428388ad95711e96892021d2990c6b75bf43c"
     },
     {
       "path": "AI-BRIEF.md",
@@ -91,8 +91,8 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3751,
-      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+      "bytes": 4170,
+      "sha256": "5eb7c58ec828bd1f7323d43c639ad1c94ada324c893ac94607dec93e3eb764aa"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -128,6 +128,11 @@
       "path": "README.md",
       "bytes": 1174,
       "sha256": "a5a0583b657e2c422e6606c08c5fdac3f78224f3efa0037512ccaab881c8cc25"
+    },
+    {
+      "path": "REGULATIONS.md",
+      "bytes": 117450,
+      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
       "path": "kit.json",

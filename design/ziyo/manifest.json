@@ -8,8 +8,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "1cba93bec157e9c1e312167656d07dca090bc3673434187529cc69b0b8a22153",
-  "archive_bytes": 382212,
+  "archive_sha256": "8b03ecf88eeacee67f6f7dd45642f4b0129957c96624cc2a5689ff45fe6f3e63",
+  "archive_bytes": 408759,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -77,8 +77,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2611,
-      "sha256": "b3248f0e21c72b86b11bc6aa84399734cbd74478a6f9dc05a1577ddad7a07c44"
+      "bytes": 2933,
+      "sha256": "bb002c5f4eb88dd3a57e22b93b392065d0c10c8039aae010972702c242249102"
     },
     {
       "path": "AI-BRIEF.md",
@@ -97,8 +97,8 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3751,
-      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+      "bytes": 4170,
+      "sha256": "5eb7c58ec828bd1f7323d43c639ad1c94ada324c893ac94607dec93e3eb764aa"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -134,6 +134,11 @@
       "path": "README.md",
       "bytes": 1185,
       "sha256": "f0f732b5822e381c5b19ea16798306b5e62bf6c401e155688f1b77c490ebc999"
+    },
+    {
+      "path": "REGULATIONS.md",
+      "bytes": 117450,
+      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
       "path": "kit.json",

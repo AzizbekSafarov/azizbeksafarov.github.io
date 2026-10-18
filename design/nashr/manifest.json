@@ -8,8 +8,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "31760e61aad37c67083819d572693a86405b16835d2577a029a49729ac469cc3",
-  "archive_bytes": 1609848,
+  "archive_sha256": "54e59af448c6a017886109882513abc944b9a5d1ce7627e1d0ed68fcd24155cd",
+  "archive_bytes": 1636396,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -71,8 +71,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2636,
-      "sha256": "9c43e01aa108bf35c9c9851426097218b0fd8719cb21c7def28fedbb33937eaf"
+      "bytes": 2958,
+      "sha256": "8642816a74f385e375388e3b1dfc615e01719678ebab3cc02b46ae88394b3fb2"
     },
     {
       "path": "AI-BRIEF.md",
@@ -91,8 +91,8 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3751,
-      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+      "bytes": 4170,
+      "sha256": "5eb7c58ec828bd1f7323d43c639ad1c94ada324c893ac94607dec93e3eb764aa"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -128,6 +128,11 @@
       "path": "README.md",
       "bytes": 1164,
       "sha256": "96d23f75c261b2d603824d254d006d747ded48d90f8e8bb9654ddbace75a74f1"
+    },
+    {
+      "path": "REGULATIONS.md",
+      "bytes": 117450,
+      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
       "path": "kit.json",

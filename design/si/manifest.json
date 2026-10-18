@@ -8,8 +8,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "8b46738676f4403caa2a92cb5e99a09e2dc5c272f049731304c607132a0325d2",
-  "archive_bytes": 186037,
+  "archive_sha256": "55a94148a9c4a29bbe7117f87d8ed1341160fc7b7c242a0c315adfda48f65267",
+  "archive_bytes": 212639,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -77,13 +77,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2736,
-      "sha256": "f3b1073d8d90c73c721b82320cec81c2b9ad6f419e4b7fa4136b61ac5346dbad"
+      "bytes": 3058,
+      "sha256": "2f4e6722f9284faa2c0be15cbc0eb8bec1c52e7439d4a32685cd15b3efe525ce"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 11125,
-      "sha256": "1e3fe81a01b4fb1c853cc5e634fe7c9468929696a812d0b09e829d1019543900"
+      "bytes": 11265,
+      "sha256": "b075b3089d5c2a3d9638355d35e5d3a2a0ba50324ef3bfc77d1f558c214b978a"
     },
     {
       "path": "CHECKLIST.md",
@@ -97,8 +97,8 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3751,
-      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+      "bytes": 4170,
+      "sha256": "5eb7c58ec828bd1f7323d43c639ad1c94ada324c893ac94607dec93e3eb764aa"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -134,6 +134,11 @@
       "path": "README.md",
       "bytes": 3494,
       "sha256": "73439c6a711c67af918561c239941ce84cbc39d201d561561e728ba39f0589c7"
+    },
+    {
+      "path": "REGULATIONS.md",
+      "bytes": 117450,
+      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
       "path": "kit.json",

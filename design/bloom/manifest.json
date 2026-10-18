@@ -8,8 +8,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "a8f94e15784ef24b8ab47e0c50516b09415b99e6f21db24d5029c7d79baef7b7",
-  "archive_bytes": 867385,
+  "archive_sha256": "35f03fbcd3e2ac3aa474de61e6ddcaf512cb7207a5a94644e22c4063839eab57",
+  "archive_bytes": 893985,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -77,13 +77,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2572,
-      "sha256": "f8294d4bb903e6b2fce487fee87e6a7ec67ac579abaac7001b3e40da2e4068e0"
+      "bytes": 2894,
+      "sha256": "ce3947d218e3f33be1a4dfcf20acfd46a5d89a423dca7870773a3ef5f2089374"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 10995,
-      "sha256": "0e28363c5ddb60fd99d0ddd1886b1ee00a6e66ee5968657908130fdb764dcb59"
+      "bytes": 11135,
+      "sha256": "40387da2dfc31a9eaef34674fc7a0cddd67d483fef80b3017397cb0821647840"
     },
     {
       "path": "CHECKLIST.md",
@@ -97,8 +97,8 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3751,
-      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+      "bytes": 4170,
+      "sha256": "5eb7c58ec828bd1f7323d43c639ad1c94ada324c893ac94607dec93e3eb764aa"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -134,6 +134,11 @@
       "path": "README.md",
       "bytes": 1360,
       "sha256": "1da115c9cec9c6ba0e926d9575413493227c926e31f2867277f6f13a6c630d56"
+    },
+    {
+      "path": "REGULATIONS.md",
+      "bytes": 117450,
+      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
       "path": "kit.json",

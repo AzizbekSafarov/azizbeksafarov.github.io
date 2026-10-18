@@ -69,8 +69,9 @@ def verify():
                 data=z.read(name)
                 assert len(data)==entry['bytes'] and sha256(data).hexdigest()==entry['sha256']
             assert set(z.namelist())=={x['path'] for x in manifest['files']}
-            for name in ('AGENTS.md','CLAUDE.md','GEMINI.md','CURRENT-TASK.md','HANDOFF.md','AI-BRIEF.md','CHECKLIST.md','COMPETITION.md','README.md','serve.mjs','kit.json'):assert name in z.namelist()
+            for name in ('AGENTS.md','CLAUDE.md','GEMINI.md','CURRENT-TASK.md','HANDOFF.md','AI-BRIEF.md','CHECKLIST.md','COMPETITION.md','REGULATIONS.md','README.md','serve.mjs','kit.json'):assert name in z.namelist()
             assert z.read('AI-BRIEF.md')==(folder/'ai.md').read_bytes()
+            assert z.read('REGULATIONS.md')==(ROOT/'handoff/regulations.md').read_bytes()
             for entry in manifest['readable_source_files']:
                 actual=(folder/'files'/(entry['path']+'.txt')).read_bytes()
                 assert actual==z.read('site/'+entry['path']) and sha256(actual).hexdigest()==entry['sha256']
@@ -83,6 +84,7 @@ def verify():
     with zipfile.ZipFile(ROOT/'kit.zip') as z:
         assert z.testzip() is None
         assert 'competition/FULL-CONTEXT.md' in z.namelist()
+        assert z.read('competition/REGULATIONS.md')==(ROOT/'handoff/regulations.md').read_bytes()
         for template in catalog:assert z.read(template['slug']+'/source.zip')==(ROOT/template['slug']/'source.zip').read_bytes()
         for template in archived:assert template['slug']+'/source.zip' not in z.namelist()
     for path in ('index.html','design/standart/index.html'):

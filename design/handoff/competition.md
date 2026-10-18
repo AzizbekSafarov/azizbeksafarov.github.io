@@ -42,3 +42,8 @@ AI kod, tekshiruv va tuzatishni bajaradi. Ishtirokchi bilet, qolgan vaqt, foydal
 - [Saytdagi nizomning saqlangan nusxasi](https://azizbeksafarov.github.io/ustoz/sources/ustoz-ai-saytdagi-nizom.pdf)
 
 To‘liq kontekst paket arxivida ham matn sifatida bor. Asl PDFlar yuqoridagi havolalarda; qisqa yo‘riqnoma asl hujjatning o‘rnini bosmaydi. Topshiriq, reglament va foydalanuvchining yangi ko‘rsatmasi ushbu tarixiy ma’lumotdan ustuvor.
+
+
+## Nizomlarning qisqartirilmagan to‘liq matni
+
+Uch hujjat, 39 sahifa: https://azizbeksafarov.github.io/ustoz/nizom.md . Brauzerda: https://azizbeksafarov.github.io/ustoz/nizom.html . Alohida kod ZIPida REGULATIONS.md, umumiy paketda competition/REGULATIONS.md ham bor. Matn nashri 2026-10-18; tadqiqot 2026-10-09 holati. Imzoli qaror, saytdagi tahrir va tasdiqqa taqdim etilgan mezonlar loyihasi alohida saqlanadi.

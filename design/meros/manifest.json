@@ -8,8 +8,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "2f45bceab241a8d19cc653f2aaf37989856fe1e79b1810cd02db43b5d83a6c7a",
-  "archive_bytes": 2125880,
+  "archive_sha256": "11ab863150b5373bc97077be016dd6a7695168e50afd83ef4153aa3b215b0f7d",
+  "archive_bytes": 2152424,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -71,8 +71,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 2744,
-      "sha256": "3b4875e4f1f8900bf38671796e33db1f30a96ccbc969df74081caca7c1f085ba"
+      "bytes": 3066,
+      "sha256": "69e5fe80bc94820130599a71e1f4af509fa342ff5e6ad8f90898c3f6c513f3a5"
     },
     {
       "path": "AI-BRIEF.md",
@@ -91,8 +91,8 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3751,
-      "sha256": "174bb7c2acb05d3e45755f22cd34d1b379803c4a16ef93cfcc09ffcd357f6f8f"
+      "bytes": 4170,
+      "sha256": "5eb7c58ec828bd1f7323d43c639ad1c94ada324c893ac94607dec93e3eb764aa"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -128,6 +128,11 @@
       "path": "README.md",
       "bytes": 1272,
       "sha256": "09766963ea656a6739b0b5231e13add7c79f99e8a62835d375c3fee05d02da38"
+    },
+    {
+      "path": "REGULATIONS.md",
+      "bytes": 117450,
+      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
       "path": "kit.json",
