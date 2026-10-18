@@ -9,6 +9,14 @@ Asosiy foydalanuvchi va muammo: [...]
 Asosiy oqim: [boshlanish → amal → saqlangan natija]
 Qabul mezonlari: [...]
 
+## Sahifalar va foydalanuvchi yo‘li
+Landing/ochiq mazmun: [maqsad, CTA va biletga mos sahifalar]
+Animatsiya: [nimani tushuntiradi; pause/reduced-motion/fallback]
+Dashboard/kabinet: [o‘z holati va davom ettirish; kerak bo‘lsa]
+Workspace: [asosiy yaratish/tahrirlash → saqlash → natija]
+Route → kirish huquqi → asosiy amal → data manbasi → loading/empty/error: [...]
+Saqlanmagan tahrir va deep link/reload xulqi: [...]
+
 ## Joriy texnik qaror
 - Hosting: Render Web Service — [haqiqiy loyiha/manzil yoki hali yaratilmagan]
 - Monitoring: UptimeRobot — [haqiqiy holat]

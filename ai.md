@@ -54,3 +54,8 @@ Faqat tanlangan dizayn va joriy biletga mos funksiyalarni qur. Maxfiy kalitlarni
 Hamma kodni birdan o‘qima. Tanlangan ai.md → kerakli source → ZIP AGENTS.md → CURRENT-TASK.md → HANDOFF.md. Dizaynning mustaqil grid/shrift/amal tilini saqla; biletga mos model va funksiyalar yarat. Asosiy oqim, xato/bo‘sh/natija, mobil, klaviatura va storage tekshir. Xatoni takrorla, sababini tuzat va qayta sina. Natijalarni HANDOFF.md ga yoz. Demo natijani haqiqiy backend deb ko‘rsatma.
 
 Pages ochilmasa: https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/ai.md
+
+
+## Sahifalar va mahsulot oqimi
+
+[Landing → dashboard → workspace xaritasi](https://azizbeksafarov.github.io/arxitektura/#sahifalar) va to‘liq arxitektura qo‘llanmasida sahifa vazifalari, animatsiya, public/app qobiqlari, kirish huquqi, saqlash va muhim holatlar tushuntirilgan. Bular biletga moslashtiriladigan namuna qatlamlar, hali yaratilgan route’lar emas. PROJECT-TASK-TEMPLATE.md’da sahifa xaritasi maydonlari bor.

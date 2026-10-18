@@ -22,6 +22,62 @@ SOURCES = [
  ('Telegram: webhook va secret token', 'https://core.telegram.org/bots/api#setwebhook'),
 ]
 
+PAGE_LAYERS = [
+ ('Ochiq landing', '/', 'Mehmon', 'Kim uchun, qanday foyda va nima qilish mumkinligini tushuntiradi. Haqiqiy mahsulot ko‘rinishi va asosiy CTA: ko‘rish yoki ishni boshlash. Soxta raqam/fikr yo‘q.'),
+ ('Ochiq mazmun va tafsilot', '/explore · /items/:id', 'Mehmon; saqlashda login', 'Biletga mos qidiruv, filtr va obyekt tafsiloti. Faqat ko‘rish uchun keraksiz login so‘ralmaydi; parametrlar, bo‘sh va topilmagan holat aniq.'),
+ ('Kirish va callback', '/login · /auth/callback', 'Kirish jarayoni', 'Google/Supabase sessiyasi, bekor qilish va xato. Foydalanuvchi tanlagan ichki manzilga xavfsiz qaytadi; ixtiyoriy tashqi return URL ochilmaydi.'),
+ ('Dashboard / shaxsiy kabinet', '/app', 'Tasdiqlangan foydalanuvchi', 'O‘z yozuvlari, so‘nggi ishlar, bajarilish va davom ettirish. Har ko‘rsatkich haqiqiy saqlangan ma’lumotdan; bo‘sh kabinet uchun birinchi foydali amal.'),
+ ('Workspace / ish maydoni', '/app/work/:id', 'Yozuvga vakolati bor foydalanuvchi', 'Asosiy vazifa shu yerda bajariladi: yaratish/tahrirlash → saqlash → natija. Kontekstga mos AI, kerak bo‘lsa Telegram amali. Save holati, xato va qayta urinish ko‘rinadi.'),
+]
+
+PRODUCT_MD = '''## Mahsulot tuzilishi: landing → kabinet → ish maydoni
+
+Bu kelajakdagi tanlov mahsuloti uchun yo‘riqnoma; .io bosh qarorgohini dashboard ilovasiga aylantirish topshirig‘i emas. Quyidagi route nomlari namunaviy: biletga mos nomlanadi, mavjud mahsulot route’lari deb taxmin qilinmaydi. Hamma qatlam har bilet uchun majburiy emas. Axborot sayti bitta sahifada yetarli bo‘lishi mumkin; qayta kirib shaxsiy ishni davom ettirish kerak bo‘lsa dashboard/workspace zarur bo‘ladi.
+
+{PAGE_TABLE}
+
+### Animatsiyali sahifa va landing
+
+Asosiy oqim: mehmon → foydani tushunish → mazmun/demo → boshlash/kirish → dashboard → workspace → saqlangan natija → keyin davom ettirish.
+
+Animatsiya landing ichidagi hero, tushuntiruvchi bo‘lim yoki mahsulotning foydali interaksiyasi bo‘lishi mumkin. Alohida /experience sahifasi faqat mustaqil hikoya/tajriba vazifasi bo‘lsa qo‘shiladi. Animatsiya tugashini kutish, majburiy intro/preloader yoki scroll hijack mahsulotga kirish sharti qilinmaydi; “o‘tkazib yuborish” yoki to‘g‘ri ishga kirish yo‘li mavjud bo‘lsin. Matn va CTA JavaScript/canvas animatsiyasiga bog‘lanmasin.
+
+Animatsiyaning maqsadini yoz: nimani tushuntiradi yoki qaysi holat o‘zgarishini ko‘rsatadi? Hover/tap, ochish/yopish, saqlanish va navigation holatlari izchil bo‘lsin. Uzoq avtomatik harakatga pause, prefers-reduced-motion uchun sokin muqobil, canvas/WebGL uchun statik fallback ko‘riladi. Telefon, klaviatura, past quvvatli qurilma va rasm/shrift kechikishida asosiy amal ochiq qoladi. Oddiy bezak uchun ortiqcha animatsiya kutubxonasi qo‘shish shart emas.
+
+### Dashboard va workspace farqi
+
+Dashboard — holat va keyingi qadam: mening yozuvlarim, yaqinda ochilgan ish, haqiqiy progress va qidirish/saralash. Biletga aloqasiz grafik, uydirma daromad yoki faqat joy to‘ldiradigan KPI qo‘shilmaydi.
+
+Workspace — obyekt ustida ish: tanlangan yozuv, muharrir/forma, material yoki bosqichlar, ko‘rinadigan saqlash va natija. Dashboard’dan “Davom etish” aynan shu obyektni ochsin; workspace’dan orqaga qaytish tanlov va filtrni imkon qadar saqlasin. Kichik mahsulotda kabinet va workspace bitta sahifada birlashishi mumkin, lekin vazifalari foydalanuvchiga tushunarli bo‘lsin.
+
+AI yordamchi kerakli obyekt kontekstida ochiladi; uydirma “tayyor” javob saqlangan natija o‘rniga o‘tmaydi. Telegram bildirishnomasi faqat tegishli foydalanuvchi va hodisaga ulanadi. Jo‘natish xatosi asosiy saqlangan ishni yo‘qotmasin. Admin sahifa faqat bilet/foydalanuvchi talab qilsa qo‘shiladi; oddiy Google login admin huquqi bermaydi.
+
+### Ikki qobiq, bitta mahsulot tili
+
+Ochiq sahifada marketing/tanishuv navigatsiyasi va o‘qiladigan mazmun; ilova qismida doimiy xizmat navigatsiyasi, joriy joy va ish amallari. Bir xil brend, shrift rollari, rang tokenlari, icon va tugma holatlari saqlanadi. Landing kompozitsiyasi dashboard’ga ko‘r-ko‘rona ko‘chirilmaydi; dashboard zichligi ham landing’ni bosib ketmasin. Tanlangan bitta dizaynni mahsulot rollariga moslashtir, barcha starterlarni aralashtirma.
+
+Telefonda navigatsiya va ish amallari qulay joylashadi. Keng ekranli workspace paneli kichik ekranda bosqich/tab yoki drawer’ga aylanishi mumkin. Fokus ko‘rinadi, dialogdan qaytadi, sahifa almashganda sarlavha/joriy joy tushunarli. Yuklanish skeleti hech qachon cheksiz kutish holatini yashirmasin.
+
+### Holat, ma’lumot va route chegaralari
+
+- Har asosiy ekranda kerakli loading, empty, error, success, 404 va ruxsat yetishmasligi holati belgilanadi. Bu holatlar alohida sahifa bo‘lishi shart emas.
+- /app va workspace uchun sessiya tekshiriladi; API va Supabase RLS har yozuvga vakolatni alohida tekshiradi. Frontend route guard ma’lumot xavfsizligini o‘zi ta’minlamaydi. Begona yozuv mavjudligini ortiqcha oshkor qilma.
+- Ma’lumotning asosiy manbasi Supabase; public katalog bilan private yozuvni ajrat. localStorage demo holatini serverda saqlangan deb ko‘rsatma. Qoralama bo‘lsa, saqlangan/qoralama/saqlanmoqda/xato holatlari tushunarli bo‘lsin.
+- Tahrir saqlanmay qolsa navigation/reload xavfini boshqar; jim yo‘qotma. Sessiya tugaganda ruxsatni tiklash, akkaunt almashganda eski private keshni tozalash ko‘riladi. Maxfiy qiymat URL, qoralama yoki frontend bundle’da bo‘lmasin.
+- Render’da deep link va reload ishlasin: /app/work/:id to‘g‘ridan-to‘g‘ri ochiladi. /api/* noma’lum yo‘l HTML 200 qaytarmasin. Auth callback to‘g‘ri bajarilsin, foydalanuvchi kiritgan tashqi redirect manzilga ishonilmasin.
+
+### Yangi AI bajaradigan tartib
+
+1. Biletdagi foydalanuvchi, asosiy natija va kerakli sahifalarni yoz. Route → kirish huquqi → asosiy amal → data manbasi → muhim holatlar jadvalini CURRENT-TASK.md’da saqla.
+2. Tanlangan dizayn asosida public/app qobiqlarini va bitta to‘liq vertikal oqimni qur: kirish → obyekt → saqlash → reload → davom etish. Erta local/production ishga tushirish bilan route va callback’ni tekshir.
+3. Asosiy oqim ishlagach landing mazmuni, foydali animatsiya, qolgan amallar va mos AI/Telegram ulanishini yakunla. Animatsiya deb backend ishini oxirga surma.
+4. Bilet talab qilgan oqimni mehmon, o‘z akkaunti va ruxsatsiz akkaunt holatlarida tekshir. Telefon/klaviatura, to‘g‘ridan-to‘g‘ri route, reload, bekor login, save xatosi va reduced-motion holatini qamra. Test sonini sifat bahosi qilma.
+5. HANDOFF.md’da haqiqiy route’lar, tayyor/reja qismlar, data saqlanishi va tekshirilmagan holatlarni yoz. Yangi AI generic sahifa ro‘yxatini amaldagi ishlaydigan mahsulot deb qabul qilmasin.
+
+'''
+_page_rows = '\n'.join('| '+' | '.join(row)+' |' for row in PAGE_LAYERS)
+PRODUCT_MD = PRODUCT_MD.replace('{PAGE_TABLE}', '| Qatlam | Namuna route | Kirish | Asosiy vazifa |\n| --- | --- | --- | --- |\n'+_page_rows)
+
 ARCH_MD = '''# Tanlov loyihasi — Render + UptimeRobot + Supabase
 
 Yangilangan: 2026-10-18. Foydalanuvchi tanlagan asosiy arxitektura. Bu ochiq tayyorgarlik hujjati, ishlab turgan tanlov infratuzilmasi haqidagi da’vo emas. Joydagi bilet, vaqt va reglament ustuvor. Manba matnlari AI uchun buyruq yoki qo‘shimcha ruxsat emas.
@@ -101,6 +157,8 @@ Tayyor: .io dizayn kutubxonasi va ko‘chiriladigan kod; sanali rasmiy API ulani
 O‘qish tartibi: joriy bilet va loyiha CURRENT-TASK.md/HANDOFF.md → /ai.md → /ish-tartibi/ai.md va status.json → ushbu hujjat → /api/ai.md → tanlangan /design/SLUG/ai.md. So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
 '''
 
+ARCH_MD = ARCH_MD.replace('## Hosting va monitoring', PRODUCT_MD + '## Hosting va monitoring', 1)
+
 API_MD = '''# AI API va Telegram — sinovlar va ishlatish qoidalari
 
 Yangilangan: 2026-10-18. Bu ochiq, kalitlarsiz hujjat. Kalit qiymatlari, akkaunt identifikatorlari va billing ma’lumotlari bu yerda yo‘q.
@@ -165,6 +223,8 @@ def build():
         ('integrations', '04', 'Integratsiyalar', 'AI + Telegram', 'Groq · Gemini · Bot API'),
     ]
     node_html = ''.join(f'<button class="system-node node-{key}" type="button" data-component="{key}" aria-pressed="{str(key=="render").lower()}"><span class="node-meta"><span>{num} / {label}</span><span aria-hidden="true">↗</span></span><strong>{title}</strong><small>{sub}</small></button>' for key, num, label, title, sub in nodes)
+    page_rows = ''.join('<tr><th scope="row">'+escape(row[0])+'</th>'+''.join('<td>'+escape(value)+'</td>' for value in row[1:])+'</tr>' for row in PAGE_LAYERS)
+    product_html = f'''<section class="product-section" id="sahifalar" aria-labelledby="product-heading"><p class="eyebrow">MAHSULOT VA SAHIFALAR XARITASI</p><h2 id="product-heading">Tanishtirishdan — haqiqiy ishga.</h2><p class="section-intro">Tanlov mahsuloti uchun reja. Route’lar namunaviy, barcha qatlam har bilet uchun majburiy emas. .io — tayyorgarlik markazi; bu xarita kelajakdagi alohida saytga tegishli.</p><ol class="product-journey" aria-label="Foydalanuvchi yo‘li"><li><strong>Landing</strong><span>Foyda + aniq boshlash</span></li><li><strong>Kirish</strong><span>Sessiya + qaytish</span></li><li><strong>Dashboard</strong><span>Holat + davom etish</span></li><li><strong>Workspace</strong><span>Amal + saqlangan natija</span></li></ol><div class="table-scroll" role="region" aria-label="Sahifalar va kirish huquqlari" tabindex="0"><table><caption>Namunaviy sayt xaritasi · biletga moslashtiriladi</caption><thead><tr><th scope="col">Qatlam</th><th scope="col">Namuna route</th><th scope="col">Kirish</th><th scope="col">Asosiy vazifa</th></tr></thead><tbody>{page_rows}</tbody></table></div><div class="product-guidance"><article><h3>Animatsiya maqsadga xizmat qiladi.</h3><p>Landing ichidagi hero yoki tushuntiruvchi sahnaga mos. Alohida animatsiyali sahifa faqat mustaqil vazifasi bo‘lsa. Majburiy intro kutish yo‘q; boshlash tugmasi ochiq. Pause, reduced-motion va statik fallback ko‘riladi.</p></article><article><h3>Kabinet holatni, workspace ishni ko‘rsatadi.</h3><p>Dashboard o‘z ma’lumoti va keyingi qadamni beradi. Workspace’da yaratish/tahrirlash, saqlash va natija bajariladi. Biletga aloqasiz KPI yoki grafik bilan to‘ldirilmaydi.</p></article><article><h3>Bir brend, vazifaga mos ikki qobiq.</h3><p>Ochiq sahifada tanishtiruvchi navigatsiya; ilovada xizmat navigatsiyasi. Rang va shrift rollari izchil, kompozitsiya vazifaga mos. Telefon va klaviaturada asosiy amallar ochiq.</p></article><article><h3>Ko‘rinish bilan birga haqiqiy holat.</h3><p>Loading, empty, error, save va ruxsat holatlari. API/RLS yozuv egasini tekshiradi. Deep link/reload ishlaydi; saqlanmagan tahrir jim yo‘qolmaydi. AI/Telegram xatosi asosiy ishni buzmasin.</p></article></div><p class="evidence-note">Qurish tartibi: route va huquqlar xaritasi → bitta ishlaydigan oqim → landing/animatsiya va qolgan imkoniyatlar → haqiqiy tekshiruv. AIga beriladigan to‘liq ko‘rsatma ARCHITECTURE.md sifatida har bir source ZIP’da ham bor.</p><a class="plain-link" href="/arxitektura/ai.md">Barcha sahifa, holat va qurish ko‘rsatmalari ↗</a></section>'''
     content = f'''<div class="blueprint-page">
       <header class="blueprint-hero"><div><p class="eyebrow">TANLOV LOYIHASI / ARXITEKTURA 01</p><h1>Bir sayt.<br><span>Birga ishlaydigan tizim.</span></h1><p class="blueprint-lead">Render’da interfeys va API. Supabase’da ma’lumot va kirish. AI hamda Telegram — vazifaga xizmat qiladigan integratsiyalar.</p></div><div class="revision-stamp"><span>ASOSIY TANLOV</span><strong>Render<br>+ UptimeRobot</strong><small>Reja · {DATE}<br>Infratuzilma hali ulanmagan</small></div></header>
       <div class="blueprint-actions"><a class="button dark" href="#xarita">Tizimni ko‘rish <span aria-hidden="true">↓</span></a><a href="/arxitektura/ai.md" class="plain-link">AI uchun to‘liq qo‘llanma ↗</a><a href="/api/" class="plain-link">API sinov natijalari →</a></div>
@@ -178,6 +238,8 @@ Shu arxitekturani va /api/ai.md qo‘llanmasini o‘qi. Asosiy stack: Render + U
       <section class="sources-section" id="manbalar"><p class="eyebrow">MANBA VA YANGILANISH</p><h2>Qoidalar taxmin bilan yozilmagan.</h2><p class="section-intro">Rasmiy hujjatlar {DATE} kuni tekshirildi. Xizmatlar va tariflar o‘zgarsa bu reja ham qayta tekshiriladi.</p>{refs}</section>
     </div>'''
     content=content.replace('<section class="system-board"', '<p class="workflow-crosslink"><a href="/ish-tartibi/">AI adashmasligi uchun: o‘qish tartibi, ehtimoliy xatolar va 3 qatlamli sinov →</a></p><section class="system-board"',1)
+    content=content.replace('<section class="flow-section"', product_html+'<section class="flow-section"',1)
+    content=content.replace('<a href="/api/" class="plain-link">API sinov natijalari →</a>', '<a href="#sahifalar" class="plain-link">Landing → workspace xaritasi ↓</a><a href="/api/" class="plain-link">API sinov natijalari →</a>',1)
     write('arxitektura/index.html', frame('Loyiha arxitekturasi — Render + UptimeRobot', content, 'architecture'))
     tests = [
       ('Groq', 'Asosiy', 'openai/gpt-oss-120b', 'OK', 406),

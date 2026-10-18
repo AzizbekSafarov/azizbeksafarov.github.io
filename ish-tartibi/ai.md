@@ -86,6 +86,10 @@ Ushbu snapshot’da tanlov mahsulotiga oid dalilli ochiq bug qaydi kiritilmagan:
 
 ## Ishni bajarish ko‘rsatmalari va tavsiyalar
 
+### Ko‘rsatma: Landing, kabinet va ish maydonini xaritala
+
+Arxitektura qo‘llanmasidagi sahifa qatlamlarini biletga mosla: landing/tushuntirish → kerakli login → dashboard holati → workspace amali va saqlangan natija. Route, kirish huquqi, ma’lumot manbasi va muhim holatlarni yoz. Animatsiya vazifaga xizmat qilsin; barcha qatlamni har biletga majburan qo‘shma.
+
 ### Ko‘rsatma: Mezon va to‘liq manbani o‘tkazib yuborma
 
 Tanlov ishida qisqa kontekst va SCORING-WORKPLAN.md’ni o‘qi; talab → qabul sinovi → himoya dalilini yoz. 21 kichik mezon loyiha tahriridan. FULL-COMPETITION-CONTEXT.md va to‘liq REGULATIONS.md har bir source ZIP’da bor; boshlash matni ularning o‘rniga o‘tmaydi. To‘liq o‘qish so‘ralsa o‘qilmagan qismini yashirma.

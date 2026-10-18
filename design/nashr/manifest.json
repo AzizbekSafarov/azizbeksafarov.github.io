@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "b61e9baf51b62ed046381cb9ba0c355d51ce05f92fe709df0d02c8942ddbbe25",
-  "archive_bytes": 1720468,
+  "archive_sha256": "2b671d867576e1e3b17369321ddfe50ff52df6ad997d48f2bf83325dd2de10b3",
+  "archive_bytes": 1723405,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -94,8 +94,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 10354,
-      "sha256": "00ad76465673aff5ecacf4de9b8978a580e0a0471abd368424a2637d89b3000d"
+      "bytes": 17146,
+      "sha256": "8d0f5e43380f06a2a64f0e354d9848ea7d475e7d6b8b488e726669373c4db405"
     },
     {
       "path": "CHECKLIST.md",
@@ -165,7 +165,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 7553,
-      "sha256": "99f356a24aa239590d20fb8dbc937fc6dcbf44cc07a12e4e0fca820f40c4307a"
+      "sha256": "6d19710d50ebc0c58a64cc6679a590f3a74a292e76d91ae6b08b51df24060f28"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -174,8 +174,8 @@
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
-      "bytes": 1235,
-      "sha256": "fc2b3386f0031f34e86c7e82d4212336f6e743df410b32edaa1940f56386f204"
+      "bytes": 1671,
+      "sha256": "0f355c3f020ded1310b30395ea9bd3cdaaabe055327754f2aba834b4bc80ea09"
     },
     {
       "path": "README.md",
@@ -199,8 +199,8 @@
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 25360,
-      "sha256": "361e258dc9136b369956e82086dd966b07364c88a0b7d49a83942dbd64a98c91"
+      "bytes": 25737,
+      "sha256": "5668034c7e546975e021dc9af3dd6217dbf8cb9e91e8a0082b8330b459108324"
     },
     {
       "path": "kit.json",

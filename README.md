@@ -49,3 +49,5 @@ Joriy to‘liq audit: [AUDIT-20261018.md](design/AUDIT-20261018.md). 614 avtomat
 Har bir alohida source ZIP ham to‘liq tadqiqot (`FULL-COMPETITION-CONTEXT.md`), 39 sahifalik nizom (`REGULATIONS.md`) va baholash/taqdimot ish rejasini (`SCORING-WORKPLAN.md`) olib yuradi. AI `START-HERE.md`dan boshlaydi. Original paketni tahrirlashdan oldin `node verify-package.mjs` ichki `PACKAGE-MANIFEST.json` bilan hajm va SHA-256’ni tekshiradi; build verifikatori CRC, UTF-8 va takror yo‘llarni ham tekshiradi. Hash boshlang‘ich nusxa uchun; foydalanuvchi tahriridan so‘ng farq bo‘lishi tabiiy.
 
 ZIP/kontekst to‘liqligi dalili: [ZIP-CONTEXT-QA.md](design/ZIP-CONTEXT-QA.md), [tekshiruv natijalari](design/qa/zip-context-20261018.json).
+
+Arxitekturada `/arxitektura/#sahifalar` mahsulot xaritasi mavjud: landing/animatsiya, ochiq mazmun, login, dashboard va workspace rollari; route, kirish huquqi, data saqlanishi, responsive va xato holatlari. Ko‘rsatmalar ZIP ichidagi ARCHITECTURE.md va PROJECT-TASK-TEMPLATE.md bilan birga yangilanadi. Route nomlari namunaviy, joriy ishlaydigan mahsulot deb ko‘rsatilmaydi.

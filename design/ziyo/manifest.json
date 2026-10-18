@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "4428f1eb0d326fe398f2a03f7fcb458bdf131a46e12c7facb7415e7e626eab32",
-  "archive_bytes": 492803,
+  "archive_sha256": "7518a071be861f8819256ce1c79bfcdbf352d665a817daaeca0990048f63d459",
+  "archive_bytes": 495747,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -100,8 +100,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 10354,
-      "sha256": "00ad76465673aff5ecacf4de9b8978a580e0a0471abd368424a2637d89b3000d"
+      "bytes": 17146,
+      "sha256": "8d0f5e43380f06a2a64f0e354d9848ea7d475e7d6b8b488e726669373c4db405"
     },
     {
       "path": "CHECKLIST.md",
@@ -171,7 +171,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 7392,
-      "sha256": "c65c5e14f280cc8cd850da6ab5f8f228fffee9fe532f298bc2f6c6b90bf2164e"
+      "sha256": "657dd967c9404e8565b5e0b19098240444a16740d801c4c5e10e728fa1050af7"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -180,8 +180,8 @@
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
-      "bytes": 1235,
-      "sha256": "fc2b3386f0031f34e86c7e82d4212336f6e743df410b32edaa1940f56386f204"
+      "bytes": 1671,
+      "sha256": "0f355c3f020ded1310b30395ea9bd3cdaaabe055327754f2aba834b4bc80ea09"
     },
     {
       "path": "README.md",
@@ -205,8 +205,8 @@
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 25360,
-      "sha256": "361e258dc9136b369956e82086dd966b07364c88a0b7d49a83942dbd64a98c91"
+      "bytes": 25737,
+      "sha256": "5668034c7e546975e021dc9af3dd6217dbf8cb9e91e8a0082b8330b459108324"
     },
     {
       "path": "kit.json",
