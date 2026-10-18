@@ -44,6 +44,18 @@ def check_runtime(z,root):
             target=posixpath.normpath(posixpath.join(posixpath.dirname(name),unquote(parts.path)))
             assert target in names,f'{name}: missing runtime resource {value}'
 
+def check_package(z):
+    paths=z.namelist()
+    assert len(paths)==len({p.casefold() for p in paths}),'Duplicate/case-colliding archive paths'
+    package=json.loads(z.read('PACKAGE-MANIFEST.json').decode('utf-8'))
+    assert package['schema_version']==1 and package['self_excluded']=='PACKAGE-MANIFEST.json'
+    assert set(paths)=={x['path'] for x in package['files']}|{'PACKAGE-MANIFEST.json'}
+    for entry in package['files']:
+        data=z.read(entry['path'])
+        assert len(data)==entry['bytes'] and sha256(data).hexdigest()==entry['sha256']
+        if Path(entry['path']).suffix in {'.md','.json','.html','.txt','.js','.jsx','.mjs','.css','.py'}:
+            data.decode('utf-8-sig') # Strictly reject damaged text; binary fonts/images are separate.
+
 def verify():
     from build_handoff import CONTEXT_FILES, portable_bytes
     from verify_clean import verify as verify_current_only
@@ -65,6 +77,8 @@ def verify():
         assert 0<len((folder/'ai.md').read_bytes())<24000,'Starter brief should link to shared context rather than embed the whole research archive'
         with zipfile.ZipFile(BytesIO(archive)) as z:
             assert z.testzip() is None
+            check_package(z)
+            assert 'START-HERE.md' in z.namelist() and 'verify-package.mjs' in z.namelist()
             for entry in manifest['files']:
                 name=entry['path']
                 assert not PurePosixPath(name).is_absolute() and '..' not in PurePosixPath(name).parts
@@ -96,6 +110,7 @@ def verify():
     check_links(SITE_ROOT/'index.html');check_links(ROOT/'standart/index.html')
     with zipfile.ZipFile(ROOT/'kit.zip') as z:
         assert z.testzip() is None
+        check_package(z)
         assert 'competition/FULL-CONTEXT.md' in z.namelist()
         assert z.read('competition/REGULATIONS.md')==(ROOT/'handoff/regulations.md').read_bytes()
         assert z.read('LIBRARY-AUDIT.md')==(ROOT/'AUDIT-20261018.md').read_bytes()

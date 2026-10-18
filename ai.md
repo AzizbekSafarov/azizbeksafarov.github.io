@@ -13,6 +13,10 @@
 
 Ehtimoliy muammolar ro‘yxati ularning bizda yuz berganini anglatmaydi. API ulanish sinovi to‘liq mahsulot integratsiyasi dalili emas.
 
+## Muhim manbalar to‘liq saqlangan
+
+Tanlov ishida [qisqa tanlov konteksti](https://azizbeksafarov.github.io/design/handoff/competition.md) va [baholashdan ish/dalil rejasiga](https://azizbeksafarov.github.io/design/handoff/score-workplan.md) matnini o‘qing. 21 kichik ko‘rsatkich loyiha tahriridan, joriy reglament ustuvor. Har bir source ZIP’da SCORING-WORKPLAN.md, FULL-COMPETITION-CONTEXT.md va to‘liq REGULATIONS.md bor. Boshlash matni to‘liq manba o‘rnini bosmaydi. To‘liq o‘qish so‘ralganda bo‘limlarni o‘tkazib yubormang; o‘qilmaganini ochiq ayting. ZIP’ni ochgach START-HERE.md va node verify-package.mjs dan boshlang.
+
 ## Tanlangan dizaynni o‘qi
 
 - [Orbita](https://azizbeksafarov.github.io/design/orbita/ai.md): Qorong‘i texnik observatoriya: Chakra Petch, monospace yozuv, orbital asbob oynasi va vertikal missiya registri.

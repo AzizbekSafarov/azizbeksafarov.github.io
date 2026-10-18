@@ -1,4 +1,4 @@
-import {DRAFT_KEY,MAX_IMPORT_BYTES,emptyTask,parseDraft,serializeDraft,createDraftStore,taskMarkdown,taskErrors,linksFor} from './starter-model.mjs?v=92c861b7d9';
+import {DRAFT_KEY,MAX_IMPORT_BYTES,emptyTask,parseDraft,serializeDraft,createDraftStore,taskMarkdown,taskErrors,linksFor} from './starter-model.mjs?v=313c12d253';
 const $=id=>document.getElementById(id), form=$('starter');
 if(form){
  const fields=form.elements, designs=[...fields.design.options].map(o=>o.value);

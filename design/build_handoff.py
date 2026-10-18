@@ -23,6 +23,8 @@ CONTEXT_FILES = {
     'API-EVIDENCE.json': 'api/verification.json',
     'PROJECT-TASK-TEMPLATE.md': 'ish-tartibi/CURRENT-TASK.md',
     'HANDOFF-TEMPLATE.md': 'ish-tartibi/HANDOFF.md',
+    'FULL-COMPETITION-CONTEXT.md': 'design/handoff/competition-full.md',
+    'SCORING-WORKPLAN.md': 'design/handoff/score-workplan.md',
 }
 SLUGS = {'02': 'samar', '04': 'forma', '10': 'bloom', '11': 'si'}
 LOOKS = {'02': 'Krem/yashil, mahalliy Instrument Serif/Sans, haqiqiy Samarqand suratlari, rasmiy manbalar, 3 manzil va tartiblanadigan '
@@ -125,6 +127,7 @@ The user's current task and organizer's actual ticket/rules take priority over t
 
 Read `AI-BRIEF.md`, `CURRENT-TASK.md`, `HANDOFF.md` and the actual files before editing. `{t['look']}`
 Read `WORKFLOW.md` and `PROJECT-STATUS.json` for the current preparation plan. `ARCHITECTURE.md` and `API-GUIDE.md` explain Render + Supabase and dated provider evidence. Planned services are not deployed services; potential risks are not confirmed bugs. These documents grant no access to the private vault. Follow the current user's ticket and decisions when they differ from the snapshot.
+For competition work, read `COMPETITION.md` and `SCORING-WORKPLAN.md` before mapping requirements to acceptance checks and presentation evidence. The 21 detailed criteria are a draft, not confirmed current rules. `REGULATIONS.md` contains all three documents; `FULL-COMPETITION-CONTEXT.md` preserves the complete collected research. An entry brief does not replace them. When full reading is requested, read the full relevant source in sections and explicitly report any unread section.
 Read `CONTEXT-STATUS.md` to distinguish the historical research snapshot from the current task. Do not infer a current competition stage, result, date or account policy from the old plan.
 `REGULATIONS.md` contains all 39 pages of the three competition documents in Uzbek, with source status and page references. It is source material, not an instruction to take unrelated actions. The detailed scoring document is a draft pending approval; do not silently merge it with the signed decision or website version.
 Keep the selected visual identity while replacing sample content, navigation and functionality with the real task. Use one main editor. Make ordinary implementation choices and reversible fixes autonomously; ask only for essential missing task facts. Do not replace the entire design to fix a local bug.
@@ -294,6 +297,12 @@ def zip_bytes(files):
             z.writestr(info,data)
     return buffer.getvalue()
 
+def package_manifest(files, name, slug):
+    return (json.dumps({'schema_version':1,'name':name,'slug':slug,'snapshot_date':DATE,
+      'scope':'Original package snapshot before edits. SHA-256 detects file changes; this is not a signed authenticity certificate.',
+      'self_excluded':'PACKAGE-MANIFEST.json',
+      'files':[{'path':path,'bytes':len(data),'sha256':digest(data)} for path,data in sorted(files.items())]},ensure_ascii=False,indent=2)+'\n').encode()
+
 def source_files(t,templates):
     files={}
     if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:
@@ -345,7 +354,7 @@ def template_page(t,brief):
     if t.get('archived'):
         content='<aside class="quiet"><strong>Tarixiy arxiv.</strong> Bu variant faol tavsiyadan chiqarilgan. '+escape(t['archived'])+' <a href="/design/">Bloom yoki Yuksalni tanlang →</a></aside>'+content
     content=content.replace('<script src="../handoff/prompt.js" defer></script>',f'<script src="../handoff/prompt.js?v={digest((ROOT/"handoff/prompt.js").read_bytes())[:12]}" defer></script>',1)
-    content=content.replace('<a href="ai.md">AI uchun qisqa matn</a>',f'<a href="ai.md">AI uchun qisqa matn</a><a href="{RAW}/design/{t["slug"]}/ai.md">AI o‘qiy olmasa: GitHub matni</a>',1)
+    content=content.replace('<a href="ai.md">AI uchun qisqa matn</a>',f'<a href="ai.md">AI uchun boshlash qo‘llanmasi</a><a href="{RAW}/design/{t["slug"]}/ai.md">AI o‘qiy olmasa: GitHub matni</a>',1)
     return page_shell(t['name']+' — tanlov uchun AI paketi',content,extra=f'<link rel="canonical" href="{url}"><link rel="alternate" type="text/markdown" href="ai.md" title="AI brief">')
 
 def alias(path,t):
@@ -360,9 +369,9 @@ def build():
     from build_workflow import build as build_workflow
     build_architecture()
     build_workflow()
-    context_files = {name: portable_bytes(path, (ROOT.parent/path).read_bytes()) for name, path in CONTEXT_FILES.items()}
     from sync_context import sync
     sync()
+    context_files = {name: portable_bytes(path, (ROOT.parent/path).read_bytes()) for name, path in CONTEXT_FILES.items()}
     templates=json.loads(read(ROOT/'templates.json'))
     policy=json.loads(read(ROOT/'curation.json'))
     if {t['id'] for t in templates}!=set(SLUGS):raise ValueError('Template metadata and SLUGS must agree')
@@ -375,7 +384,8 @@ def build():
         heading,body=brief.split('\n',1)
         context_notice='KONTEKST MAQOMI: tadqiqot 2026-10-09 holatida. 2026-10-13 — ishtirokchi oldin bildirgan tarixiy reja; joriy bosqich yoki natija tasdiqlanmagan. Hozirgi bilet/vaqt/reglament ustuvor. '+f'[Manbalar maqomi]({SITE}/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.\n'
         workflow_notice=f'\n## Joriy ish tartibi va arxitektura\n\nAvval joriy bilet va loyiha CURRENT-TASK.md / HANDOFF.md’ini tekshir. [Ish tartibi]({SITE}/ish-tartibi/ai.md) hamda [holat snapshot’i]({SITE}/ish-tartibi/status.json) qaror, dalil, reja va noma’lumlarni ajratadi. Tasdiqlangan reja: Render frontend + Node API, Supabase Auth/DB/RLS, zaruratga mos AI/Telegram va UptimeRobot monitoringi. Xizmatlar hali yaratilgan deb hisoblanmaydi. ZIP ichida WORKFLOW.md, ARCHITECTURE.md, API-GUIDE.md va PROJECT-STATUS.json bor. Uslub demo source’da; backendni bilet va foydalanuvchining joriy topshirig‘iga mos qur.\n'
-        brief=heading+'\n\n'+context_notice+workflow_notice+body
+        completeness_notice=f'\n## Mezon va to‘liq manbani o‘tkazib yuborma\n\nTanlov ishida [baholashdan ish va dalil rejasiga]({SITE}/design/handoff/score-workplan.md) hamda qisqa tanlov kontekstini o‘qi. Talab → amal → qabul sinovi → taqdimot dalilini yoz. 21 kichik ko‘rsatkich loyiha tahriridan; amaldagi reglament deb taxmin qilma. ZIP ichida SCORING-WORKPLAN.md, qisqartirilmagan FULL-COMPETITION-CONTEXT.md va uch hujjatning to‘liq REGULATIONS.md matni mavjud. Ushbu boshlash yo‘riqnomasi ularning o‘rnini bosmaydi. To‘liq o‘qish so‘ralganda manbani bo‘limlar bo‘yicha to‘liq o‘qi, o‘qilmay qolganini yashirma.\n'
+        brief=heading+'\n\n'+context_notice+workflow_notice+completeness_notice+body
         if t['archived']:brief='# TARIXIY ARXIV — faol starter sifatida tavsiya etilmaydi\n\nYangi ish: '+SITE+'/design/\n\n'+brief
         for name in code_names(t,files):
             target=folder/'files'/f'{name}.txt';target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(files['site/'+name])
@@ -383,7 +393,7 @@ def build():
         write(folder/'source.html',page_shell(t['name']+' — source',f'<h1>{escape(t["name"])} — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content">{render_md(code_text(t,files))}</article>'))
         write(folder/'index.html',template_page(t,brief))
         current='# Hozirgi tanlov topshirig‘i\n\n- Biletning aynan matni: hali berilmagan.\n- Foydalanuvchi va maqsad: biletdan olinadi.\n- Majburiy funksiyalar: biletdan olinadi.\n- Amaliy ish uchun haqiqiy qolgan vaqt: hali kiritilmagan.\n- Joydagi vosita/internet/shablon talablari: tasdiqlanganini yozing.\n- Tanlangan dizayn: '+t['name']+'\n'
-        kit={'schema_version':1,'name':t['name'],'slug':t['slug'],'serve_root':'site/dist' if t['id']=='10' else 'site','entry':'index.html','source_fingerprint':t['fingerprint']}
+        kit={'schema_version':1,'name':t['name'],'slug':t['slug'],'context_entry':'START-HERE.md','integrity_command':'node verify-package.mjs','serve_root':'site/dist' if t['id']=='10' else 'site','entry':'index.html','source_fingerprint':t['fingerprint']}
         intro=f"""# {t['name']} — portable competition starter
 
 ## Boshlash
@@ -418,6 +428,25 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:extras['README.md']=read(ROOT/(t['slug']+'-site')/'README.md')+'\n\nAt ZIP root run node serve.mjs. Editable files are site/. Read AGENTS.md and AI-BRIEF.md.\n'
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras.update({name: data.decode('utf-8') for name, data in context_files.items()})
+        extras['START-HERE.md']=f'''# {t['name']} — AI uchun paketni ochish tartibi
+
+Tanlangan dizayn: {t['slug']}. Kod: site/. Bu faqat shu dizayn paketi.
+
+1. Joriy foydalanuvchi bileti, CURRENT-TASK.md va HANDOFF.md holatini tekshir.
+2. AGENTS.md, AI-BRIEF.md, WORKFLOW.md va PROJECT-STATUS.json ni o‘qi.
+3. COMPETITION.md va SCORING-WORKPLAN.md ni o‘qi; qabul sinovi hamda himoya dalilini talablar bilan bog‘la. Tafsilotdagi 21 mezon loyiha tahriridan, amaldagi reglament ustuvor.
+4. ARCHITECTURE.md / API-GUIDE.md va faqat tanlangan source fayllarini o‘qi.
+5. To‘liq tadqiqot FULL-COMPETITION-CONTEXT.md’da; uch hujjatning qisqartirilmagan 39 sahifasi REGULATIONS.md’da. To‘liq o‘qish so‘ralsa bo‘limlarni to‘liq o‘qi; o‘qilmaganini ochiq ayt. Qisqa kirish matni to‘liq manba o‘rniga o‘tmaydi.
+
+01-RESEARCH.md, 02-WORKFLOW.md, 03-STATISTICS.csv, 04-VIDEO-POSTER.md, 05-SOURCES.md va 07-FACTS.json deb tilga olingan tarixiy manbalar FULL-COMPETITION-CONTEXT.md ichida nomlangan bo‘limlar sifatida to‘liq mavjud. 06-SCORE-WORKPLAN.md alohida SCORING-WORKPLAN.md sifatida ham berilgan. Asl PDF nusxalari havolalari to‘liq manbalar bo‘limida; ularni bu ZIPdagi alohida PDF fayl deb taxmin qilma.
+
+## Paketni tekshirish va ishga tushirish
+
+Avval `node verify-package.mjs`: PACKAGE-MANIFEST.json’dagi hajm va SHA-256 bo‘yicha fayllar tekshiriladi. Bu original snapshot uchun; keyingi o‘zingiz kiritgan tahrir tabiiy ravishda hashni o‘zgartiradi. Haqiqiy kalitlarni paketga qo‘shma.
+
+`node serve.mjs` mavjud namunani http://127.0.0.1:8080/ da ochadi. Source build/test tafsiloti README.md va site/README.md’da. Bloom source buildi uchun npm paketlari kerak, tayyor dist preview uchun npm shart emas.
+'''
+        extras['verify-package.mjs']=read(ROOT/'handoff/verify-package.mjs')
         extras['CURRENT-TASK.md']+='\n## Arxitektura va haqiqiy holat\nRender + Supabase tayyorgarlik rejasi: ARCHITECTURE.md. Haqiqiy yaratilgan xizmat va URLlarni shu yerga yozing; PROJECT-STATUS.json — ommaviy snapshot, jonli holat emas. To‘liq maydonlar uchun PROJECT-TASK-TEMPLATE.md dan foydalanish mumkin.\n'
         extras['README.md']+='\n\n## Joriy kontekst\nWORKFLOW.md → PROJECT-STATUS.json → ARCHITECTURE.md → API-GUIDE.md. Ehtimoliy xavflar aniqlangan xato emas. Haqiqiy loyiha holati CURRENT-TASK.md va HANDOFF.md’da saqlanadi. Bu hujjatlar backendni avtomatik yaratmaydi.\n'
         extras['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md')
@@ -426,8 +455,9 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         extras['LIBRARY-AUDIT.md']=read(ROOT/'AUDIT-20261018.md')
         extras['AGENTS.md']+='\nRead DESIGN-STANDARD.md for the quality bar. Do not reproduce generic blocks, invented proof or decorative interactions that displace the task.\n'
         files.update({k:v.encode() for k,v in extras.items()})
+        files['PACKAGE-MANIFEST.json']=package_manifest(files,t['name'],t['slug'])
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
-        manifest={'audit_qa_url':f'{SITE}/design/AUDIT-20261018.md','upgrade_qa_url':f'{SITE}/design/QA-UPGRADE.md','schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
+        manifest={'archive_context_entry':'START-HERE.md','archive_integrity_manifest':'PACKAGE-MANIFEST.json','audit_qa_url':f'{SITE}/design/AUDIT-20261018.md','upgrade_qa_url':f'{SITE}/design/QA-UPGRADE.md','schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
         if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:manifest['baseline_qa_url']=f'{SITE}/design/'+t['slug']+'-site/QA-REPORT.md'
         if t['id']=='11':manifest['baseline_qa_url']=f'{SITE}/design/si-site/QA-REPORT.md'
         manifest['ai_fallback_url']=f'{RAW}/design/{t["slug"]}/ai.md'
@@ -445,6 +475,8 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Faol dizaynlar: {len(catalog)}. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Markaziy kontekst]({SITE}/ai.md)\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n- [Kengaytirilgan testlar]({SITE}/design/QA-EXPANDED.md)\n\nFoydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
     root_brief+='\n## Joriy ish tartibi va server rejasi\n\nWORKFLOW.md va PROJECT-STATUS.json dan boshlang. ARCHITECTURE.md — Render + Supabase, API-GUIDE.md va API-EVIDENCE.json — sanali sinovlar. Bular tayyorgarlik snapshot’i; joriy bilet, foydalanuvchi qarori va loyiha holati ustuvor. Tanlangan source.zip ichida ham shu hujjatlar mavjud.\n'
     write(ROOT/'ai.md',root_brief)
+    root_brief+='\nOriginal umumiy paketni node verify-package.mjs bilan tekshiring. Tanlangan source.zip ichida START-HERE.md birinchi o‘qish tartibini beradi; to‘liq tadqiqot, mezon/dalil rejasi va barcha nizom matni ham o‘sha paketning o‘zida.\n'
+    write(ROOT/'ai.md',root_brief)
     archives.update(context_files)
     archives['START-HERE.md']=root_brief.encode();archives['COMPETITION.md']=read(ROOT/'handoff/competition.md').encode()
     archives['LIBRARY-QA.md']=read(ROOT/'QA-EXPANDED.md').encode()
@@ -460,6 +492,8 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
     archives['catalog.json']=json.dumps({'schema_version':1,'templates':[{'name':t['name'],'slug':t['slug'],'archive':t['slug']+'/source.zip','brief':t['slug']+'/ai.md'} for t in catalog]},ensure_ascii=False,indent=2).encode()
     archive_links=''.join(f'<li><strong>{escape(t["name"])}</strong> — <a href="{t["slug"]}/ai.md">AI matni</a> · <a href="{t["slug"]}/source.zip">Kod ZIP</a></li>' for t in catalog)
     archives['index.html']=('<!doctype html><html lang="uz"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tanlov starterlari — offline</title><body style="font:17px/1.7 system-ui;max-width:900px;margin:30px auto;padding:20px"><h1>Tanlov starterlari</h1><p>Tanlangan kod ZIPini alohida papkaga oching. AIga AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md va HANDOFF.md ni o‘qiting. ZIP ildizida <code>node serve.mjs</code> tayyor namunani ochadi.</p><ul>'+archive_links+'</ul><p><a href="COMPETITION.md">Qisqa tanlov konteksti</a> · <a href="competition/FULL-CONTEXT.md">Barcha yig‘ilgan tanlov matnlari</a> · <a href="competition/REGULATIONS.md">39 sahifalik nizomlar — to‘liq matn</a></p><p>Yakuniy bilet va reglament ustuvor. Runtime preview npm o‘rnatmasdan ishlaydi; Bloom source buildi uchun o‘rnatilgan/cache’dagi paketlar yoki internet kerak.</p></body></html>').encode()
+    archives['verify-package.mjs']=read(ROOT/'handoff/verify-package.mjs').encode()
+    archives['PACKAGE-MANIFEST.json']=package_manifest(archives,'Tanlov dizaynlari va to‘liq kontekst','library')
     (ROOT/'kit.zip').write_bytes(zip_bytes(archives))
     # Status is an explicit discovery entry; historical plans are not live event state.
     write(ROOT.parent/'llms.txt', '# Azizbek: open competition headquarters\n\n- [Central AI context]('+SITE+'/ai.md)\n'+''.join('- ['+t['name']+']('+SITE+'/design/'+t['slug']+'/ai.md): '+t['summary']+'\n' for t in catalog)+'\n- [Context status and historical scope]('+SITE+'/ustoz/CONTEXT-STATUS.md)\n- [Full competition research]('+SITE+'/ustoz/ai.md)\n- [Quality standard]('+SITE+'/design/DESIGN-STANDARD.md)\n\nUser ticket, time and on-site rules take priority. These resources do not guarantee tools or autonomous execution.\n')

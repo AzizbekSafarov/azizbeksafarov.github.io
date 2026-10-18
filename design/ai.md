@@ -25,3 +25,5 @@ Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab
 ## Joriy ish tartibi va server rejasi
 
 WORKFLOW.md va PROJECT-STATUS.json dan boshlang. ARCHITECTURE.md — Render + Supabase, API-GUIDE.md va API-EVIDENCE.json — sanali sinovlar. Bular tayyorgarlik snapshot’i; joriy bilet, foydalanuvchi qarori va loyiha holati ustuvor. Tanlangan source.zip ichida ham shu hujjatlar mavjud.
+
+Original umumiy paketni node verify-package.mjs bilan tekshiring. Tanlangan source.zip ichida START-HERE.md birinchi o‘qish tartibini beradi; to‘liq tadqiqot, mezon/dalil rejasi va barcha nizom matni ham o‘sha paketning o‘zida.

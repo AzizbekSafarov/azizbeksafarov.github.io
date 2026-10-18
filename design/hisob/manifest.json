@@ -1,4 +1,6 @@
 {
+  "archive_context_entry": "START-HERE.md",
+  "archive_integrity_manifest": "PACKAGE-MANIFEST.json",
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
@@ -9,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "aca6e30548158ab258f6c6eac7694949732331a1e29da467a1798f5a1c344970",
-  "archive_bytes": 192903,
+  "archive_sha256": "1aa0dd6cfae8e01ab31ad0699530bf90007ef5e965657132e7289ccc8385fccd",
+  "archive_bytes": 251091,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -72,13 +74,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 3548,
-      "sha256": "e1f3e0f3a4cf77e3507e41228ad09622e457e3f363f51c2336301b55ff04460f"
+      "bytes": 4035,
+      "sha256": "8ad1600ca712285ad64cd14b000be22c4b4e25b5e87a5ad7f30e675e101f16fc"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6342,
-      "sha256": "2007b14d09a70cd026ae68fa47bc92e075cb81c6c26a44baebc45feb9d7c87f8"
+      "bytes": 6990,
+      "sha256": "2fdf2048f327d3e3969af6a4d1aa245b3dcba96c6c3f09f7c5b9ee4e154513d6"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -126,6 +128,11 @@
       "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6"
     },
     {
+      "path": "FULL-COMPETITION-CONTEXT.md",
+      "bytes": 192196,
+      "sha256": "489a50fa0119822907130620a1e3cd03f22f8fb683a23293aa69119a9d314aad"
+    },
+    {
       "path": "GEMINI.md",
       "bytes": 194,
       "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
@@ -156,6 +163,11 @@
       "sha256": "562bb6bd789d4330d3f8bec9ea9207473d09289da1259a6ea8b1b065db4e488b"
     },
     {
+      "path": "PACKAGE-MANIFEST.json",
+      "bytes": 6952,
+      "sha256": "7fd823998ace77841b3c948916a70f0de836a5fd54e251e4755bf5080b6c4c9c"
+    },
+    {
       "path": "PROJECT-STATUS.json",
       "bytes": 2381,
       "sha256": "bc9f04a5b183b150e63a6edac0f0b4871f5292efe63c881042688ac6b53fd9b4"
@@ -176,14 +188,24 @@
       "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
+      "path": "SCORING-WORKPLAN.md",
+      "bytes": 5590,
+      "sha256": "9c4f3c6a2293808b83676c4739fc4889d40162f614d1d26d0d4bca6331000466"
+    },
+    {
+      "path": "START-HERE.md",
+      "bytes": 1705,
+      "sha256": "ef270c6bc1dc51ce93170d898b92cd59e3c6335ec86565c23ac1e86dd1be45fb"
+    },
+    {
       "path": "WORKFLOW.md",
-      "bytes": 22657,
-      "sha256": "a300e00456d8b5a9cbc1ed598ae694f2466ecc821c1f119b5feb7edac7e75bb8"
+      "bytes": 25360,
+      "sha256": "361e258dc9136b369956e82086dd966b07364c88a0b7d49a83942dbd64a98c91"
     },
     {
       "path": "kit.json",
-      "bytes": 204,
-      "sha256": "c8affcca92eced316fa704520a92d7374ade8e39413d3acb5380583b3f0c7daf"
+      "bytes": 290,
+      "sha256": "163e81cdf8c532c0987ab881b004b151994952e6ed0156cec056a574f4cf2d73"
     },
     {
       "path": "serve.mjs",
@@ -269,6 +291,11 @@
       "path": "site/style.css",
       "bytes": 3413,
       "sha256": "4802109c8efec5f9e88f115e2eb5a566d4ad5014554844a7ba15e8a3c36110db"
+    },
+    {
+      "path": "verify-package.mjs",
+      "bytes": 1781,
+      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/hisob-site/QA-REPORT.md",

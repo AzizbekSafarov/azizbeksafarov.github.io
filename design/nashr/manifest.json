@@ -1,4 +1,6 @@
 {
+  "archive_context_entry": "START-HERE.md",
+  "archive_integrity_manifest": "PACKAGE-MANIFEST.json",
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
@@ -9,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "c242dff37ee865e54c2a1c325a6f0a048af703b141a7119052827d2d28b2deaa",
-  "archive_bytes": 1662073,
+  "archive_sha256": "b61e9baf51b62ed046381cb9ba0c355d51ce05f92fe709df0d02c8942ddbbe25",
+  "archive_bytes": 1720468,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -72,13 +74,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 3538,
-      "sha256": "cfbc5a6872490ad4281b49c21777ff0af24b60d98d466b34d8577413a795c5f2"
+      "bytes": 4025,
+      "sha256": "d02ac29d08ca36554a5b45abcc866f1291b9b48fc0094122f3060d9ef1503941"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6266,
-      "sha256": "c7d676d4c75eec971002144be3765fdee794f1f6d299afb84d8d24d6240aed25"
+      "bytes": 6914,
+      "sha256": "705905410918c2b4ff92fb7f170e3ed6fed3dad97926040d771fcab1b630477b"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -126,6 +128,11 @@
       "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6"
     },
     {
+      "path": "FULL-COMPETITION-CONTEXT.md",
+      "bytes": 192196,
+      "sha256": "489a50fa0119822907130620a1e3cd03f22f8fb683a23293aa69119a9d314aad"
+    },
+    {
       "path": "GEMINI.md",
       "bytes": 194,
       "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
@@ -156,6 +163,11 @@
       "sha256": "562bb6bd789d4330d3f8bec9ea9207473d09289da1259a6ea8b1b065db4e488b"
     },
     {
+      "path": "PACKAGE-MANIFEST.json",
+      "bytes": 7553,
+      "sha256": "99f356a24aa239590d20fb8dbc937fc6dcbf44cc07a12e4e0fca820f40c4307a"
+    },
+    {
       "path": "PROJECT-STATUS.json",
       "bytes": 2381,
       "sha256": "bc9f04a5b183b150e63a6edac0f0b4871f5292efe63c881042688ac6b53fd9b4"
@@ -176,14 +188,24 @@
       "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
     },
     {
+      "path": "SCORING-WORKPLAN.md",
+      "bytes": 5590,
+      "sha256": "9c4f3c6a2293808b83676c4739fc4889d40162f614d1d26d0d4bca6331000466"
+    },
+    {
+      "path": "START-HERE.md",
+      "bytes": 1705,
+      "sha256": "c235c39a3071b37319253dd565790ce0a43a8b3aa805a277041056ac9bfef432"
+    },
+    {
       "path": "WORKFLOW.md",
-      "bytes": 22657,
-      "sha256": "a300e00456d8b5a9cbc1ed598ae694f2466ecc821c1f119b5feb7edac7e75bb8"
+      "bytes": 25360,
+      "sha256": "361e258dc9136b369956e82086dd966b07364c88a0b7d49a83942dbd64a98c91"
     },
     {
       "path": "kit.json",
-      "bytes": 204,
-      "sha256": "10be8784fb6e547b3792e7d8badb37cd57e29136b074d283c095c6a8522e4d13"
+      "bytes": 290,
+      "sha256": "773fc2313b8a61ad20cc2084ebdec32077c09f45700d31b43ba123a318383757"
     },
     {
       "path": "serve.mjs",
@@ -289,6 +311,11 @@
       "path": "site/style.css",
       "bytes": 3515,
       "sha256": "78cac5e1ed1f3c308d0faab02451b220be33e19cc259d2864f147995e1b20e54"
+    },
+    {
+      "path": "verify-package.mjs",
+      "bytes": 1781,
+      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/nashr-site/QA-REPORT.md",

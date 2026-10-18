@@ -6,6 +6,10 @@ KONTEKST MAQOMI: tadqiqot 2026-10-09 holatida. 2026-10-13 — ishtirokchi oldin 
 
 Avval joriy bilet va loyiha CURRENT-TASK.md / HANDOFF.md’ini tekshir. [Ish tartibi](https://azizbeksafarov.github.io/ish-tartibi/ai.md) hamda [holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/status.json) qaror, dalil, reja va noma’lumlarni ajratadi. Tasdiqlangan reja: Render frontend + Node API, Supabase Auth/DB/RLS, zaruratga mos AI/Telegram va UptimeRobot monitoringi. Xizmatlar hali yaratilgan deb hisoblanmaydi. ZIP ichida WORKFLOW.md, ARCHITECTURE.md, API-GUIDE.md va PROJECT-STATUS.json bor. Uslub demo source’da; backendni bilet va foydalanuvchining joriy topshirig‘iga mos qur.
 
+## Mezon va to‘liq manbani o‘tkazib yuborma
+
+Tanlov ishida [baholashdan ish va dalil rejasiga](https://azizbeksafarov.github.io/design/handoff/score-workplan.md) hamda qisqa tanlov kontekstini o‘qi. Talab → amal → qabul sinovi → taqdimot dalilini yoz. 21 kichik ko‘rsatkich loyiha tahriridan; amaldagi reglament deb taxmin qilma. ZIP ichida SCORING-WORKPLAN.md, qisqartirilmagan FULL-COMPETITION-CONTEXT.md va uch hujjatning to‘liq REGULATIONS.md matni mavjud. Ushbu boshlash yo‘riqnomasi ularning o‘rnini bosmaydi. To‘liq o‘qish so‘ralganda manbani bo‘limlar bo‘yicha to‘liq o‘qi, o‘qilmay qolganini yashirma.
+
 Snapshot: 2026-10-18; source fingerprint: `36aa144427df8d89`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
 ## O‘qish vositasi uchun zaxira

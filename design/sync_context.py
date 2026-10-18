@@ -7,7 +7,8 @@ ROOT=Path(__file__).resolve().parent
 SOURCE=ROOT.parent.parent/'internet-kontekst'
 DEST=ROOT/'handoff'
 MAPPING={'00-START-HERE.md':'competition.md','ai.md':'competition-full.md',
-         'nizom.md':'regulations.md','CONTEXT-STATUS.md':'context-status.md'}
+         'nizom.md':'regulations.md','CONTEXT-STATUS.md':'context-status.md',
+         '06-SCORE-WORKPLAN.md':'score-workplan.md'}
 BASE='https://azizbeksafarov.github.io/ustoz/'
 
 def fingerprint(data):return sha256(data).hexdigest()
@@ -37,4 +38,4 @@ def sync():
     (DEST/'context-origin.json').write_text(json.dumps(origin,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     verify()
 
-if __name__=='__main__':sync();print('PASS: 4 context copies match their canonical source hashes.')
+if __name__=='__main__':sync();print(f'PASS: {len(MAPPING)} context copies match their canonical source hashes.')

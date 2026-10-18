@@ -26,6 +26,9 @@ test('exported task carries the shared workflow and planned infrastructure conte
  const output=taskMarkdown(task,'Bloom');
  for(const route of ['ish-tartibi/ai.md','ish-tartibi/status.json','arxitektura/ai.md','api/ai.md'])assert.ok(output.includes('https://azizbeksafarov.github.io/'+route));
  assert.match(output,/WORKFLOW\.md/);
+ assert.match(output,/FULL-COMPETITION-CONTEXT\.md/);
+ assert.match(output,/SCORING-WORKPLAN\.md/);
+ assert.match(output,/verify-package\.mjs/);
  assert.match(output,/hali tayyor integratsiya degani emas/);
  assert.ok(output.includes(task.topic));
 });

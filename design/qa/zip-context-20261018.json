@@ -1,0 +1,125 @@
+{
+  "snapshot": "2026-10-18",
+  "scope": "Fresh extraction on this computer; original package integrity and text preservation, not every possible AI import tool",
+  "results": [
+    {
+      "slug": "orbita",
+      "crc_ok": true,
+      "manifest_files": 44,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 17,
+      "preview_http": 200
+    },
+    {
+      "slug": "nashr",
+      "crc_ok": true,
+      "manifest_files": 48,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 17,
+      "preview_http": 200
+    },
+    {
+      "slug": "hisob",
+      "crc_ok": true,
+      "manifest_files": 44,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 75,
+      "preview_http": 200
+    },
+    {
+      "slug": "ziyo",
+      "crc_ok": true,
+      "manifest_files": 47,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 54,
+      "preview_http": 200
+    },
+    {
+      "slug": "meros",
+      "crc_ok": true,
+      "manifest_files": 49,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 17,
+      "preview_http": 200
+    },
+    {
+      "slug": "samar",
+      "crc_ok": true,
+      "manifest_files": 47,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 93,
+      "preview_http": 200
+    },
+    {
+      "slug": "forma",
+      "crc_ok": true,
+      "manifest_files": 45,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 49,
+      "preview_http": 200
+    },
+    {
+      "slug": "bloom",
+      "crc_ok": true,
+      "manifest_files": 75,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 141,
+      "preview_http": 200
+    },
+    {
+      "slug": "si",
+      "crc_ok": true,
+      "manifest_files": 56,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true,
+      "tests_passed": 25,
+      "preview_http": 200
+    },
+    {
+      "slug": "library",
+      "crc_ok": true,
+      "manifest_files": 47,
+      "node_integrity_ok": true,
+      "changed_file_rejected": true,
+      "full_research_bytes": 192196,
+      "full_research_matches_canonical": true,
+      "scoring_matches_canonical": true
+    }
+  ],
+  "packaged_tests_total": 488
+}
