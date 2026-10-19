@@ -504,6 +504,13 @@ Avval `node verify-package.mjs`: PACKAGE-MANIFEST.json’dagi hajm va SHA-256 bo
     archives['catalog.json']=json.dumps({'schema_version':1,'templates':[{'name':t['name'],'slug':t['slug'],'archive':t['slug']+'/source.zip','brief':t['slug']+'/ai.md'} for t in catalog]},ensure_ascii=False,indent=2).encode()
     archive_links=''.join(f'<li><strong>{escape(t["name"])}</strong> — <a href="{t["slug"]}/ai.md">AI matni</a> · <a href="{t["slug"]}/source.zip">Kod ZIP</a></li>' for t in catalog)
     archives['index.html']=('<!doctype html><html lang="uz"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tanlov starterlari — offline</title><body style="font:17px/1.7 system-ui;max-width:900px;margin:30px auto;padding:20px"><h1>Tanlov starterlari</h1><p>Tanlangan kod ZIPini alohida papkaga oching. AIga AGENTS.md, AI-BRIEF.md, CURRENT-TASK.md va HANDOFF.md ni o‘qiting. ZIP ildizida <code>node serve.mjs</code> tayyor namunani ochadi.</p><ul>'+archive_links+'</ul><p><a href="COMPETITION.md">Qisqa tanlov konteksti</a> · <a href="competition/FULL-CONTEXT.md">Barcha yig‘ilgan tanlov matnlari</a> · <a href="competition/REGULATIONS.md">39 sahifalik nizomlar — to‘liq matn</a></p><p>Yakuniy bilet va reglament ustuvor. Runtime preview npm o‘rnatmasdan ishlaydi; Bloom source buildi uchun o‘rnatilgan/cache’dagi paketlar yoki internet kerak.</p></body></html>').encode()
+    archives['READ-RECEIPT.md']=RECEIPT.encode()
+    archives['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md').encode()
+    common_read=list(context_files)+['competition/CONTEXT-STATUS.md','competition/REGULATIONS.md','DESIGN-STANDARD.md']
+    archives['READING-PLAN.json']=(json.dumps({'schema_version':1,'mode':'full common context; extract exactly one selected source.zip',
+        'documents':[{'path':name,'bytes':len(archives[name]),'sha256':digest(archives[name])} for name in common_read],
+        'selected_design':'catalog.json -> selected archive -> START-HERE.md / READING-PLAN.json',
+        'receipt':'READ-RECEIPT.md','meaning':'This map does not mark documents as read. Nested design paths apply only after extracting the selected source.zip.'},ensure_ascii=False,indent=2)+'\n').encode()
     archives['verify-package.mjs']=read(ROOT/'handoff/verify-package.mjs').encode()
     archives['PACKAGE-MANIFEST.json']=package_manifest(archives,'Tanlov dizaynlari va to‘liq kontekst','library')
     (ROOT/'kit.zip').write_bytes(zip_bytes(archives))
