@@ -14,8 +14,9 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
-DATE = '2026-10-18'
+DATE = '2026-10-19'
 CONTEXT_FILES = {
+    'PREPARATION.md': 'design/preparation-guide.md',
     'WORKFLOW.md': 'ish-tartibi/ai.md',
     'ARCHITECTURE.md': 'arxitektura/ai.md',
     'API-GUIDE.md': 'api/ai.md',
@@ -371,6 +372,8 @@ def build():
     build_workflow()
     from sync_context import sync
     sync()
+    from build_preparation import build as build_preparation, package_plan, RECEIPT
+    build_preparation()
     context_files = {name: portable_bytes(path, (ROOT.parent/path).read_bytes()) for name, path in CONTEXT_FILES.items()}
     templates=json.loads(read(ROOT/'templates.json'))
     policy=json.loads(read(ROOT/'curation.json'))
@@ -385,7 +388,7 @@ def build():
         context_notice='KONTEKST MAQOMI: tadqiqot 2026-10-09 holatida. 2026-10-13 — ishtirokchi oldin bildirgan tarixiy reja; joriy bosqich yoki natija tasdiqlanmagan. Hozirgi bilet/vaqt/reglament ustuvor. '+f'[Manbalar maqomi]({SITE}/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.\n'
         workflow_notice=f'\n## Joriy ish tartibi va arxitektura\n\nAvval joriy bilet va loyiha CURRENT-TASK.md / HANDOFF.md’ini tekshir. [Ish tartibi]({SITE}/ish-tartibi/ai.md) hamda [holat snapshot’i]({SITE}/ish-tartibi/status.json) qaror, dalil, reja va noma’lumlarni ajratadi. Tasdiqlangan reja: Render frontend + Node API, Supabase Auth/DB/RLS, zaruratga mos AI/Telegram va UptimeRobot monitoringi. Xizmatlar hali yaratilgan deb hisoblanmaydi. ZIP ichida WORKFLOW.md, ARCHITECTURE.md, API-GUIDE.md va PROJECT-STATUS.json bor. Uslub demo source’da; backendni bilet va foydalanuvchining joriy topshirig‘iga mos qur.\n'
         completeness_notice=f'\n## Mezon va to‘liq manbani o‘tkazib yuborma\n\nTanlov ishida [baholashdan ish va dalil rejasiga]({SITE}/design/handoff/score-workplan.md) hamda qisqa tanlov kontekstini o‘qi. Talab → amal → qabul sinovi → taqdimot dalilini yoz. 21 kichik ko‘rsatkich loyiha tahriridan; amaldagi reglament deb taxmin qilma. ZIP ichida SCORING-WORKPLAN.md, qisqartirilmagan FULL-COMPETITION-CONTEXT.md va uch hujjatning to‘liq REGULATIONS.md matni mavjud. Ushbu boshlash yo‘riqnomasi ularning o‘rnini bosmaydi. To‘liq o‘qish so‘ralganda manbani bo‘limlar bo‘yicha to‘liq o‘qi, o‘qilmay qolganini yashirma.\n'
-        brief=heading+'\n\n'+context_notice+workflow_notice+completeness_notice+body
+        brief=heading+'\n\n'+context_notice+workflow_notice+completeness_notice+'\n## To‘liq kontekst va kamchiliksiz paket\n\nSTART-HERE — mundarija, to‘liq o‘qish o‘rnini bosmaydi. [Tanlovga tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) va [yig‘ma to‘liq matn](https://azizbeksafarov.github.io/tayyorgarlik/full-context.md). Paket ichida PREPARATION.md, READING-PLAN.json, READ-RECEIPT.md va BRAND-ASSETS.json bor. Fayl yo‘llarini manifestdan oling; boshqa dizayndagi nomni taxmin qilmang. To‘liq source ZIPni oling va hashini tekshiring; faqat HTML parchasidan qayta qurish ishlaydigan dizaynni yo‘qotishi mumkin.\n'+body
         if t['archived']:brief='# TARIXIY ARXIV — faol starter sifatida tavsiya etilmaydi\n\nYangi ish: '+SITE+'/design/\n\n'+brief
         for name in code_names(t,files):
             target=folder/'files'/f'{name}.txt';target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(files['site/'+name])
@@ -432,7 +435,9 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
 
 Tanlangan dizayn: {t['slug']}. Kod: site/. Bu faqat shu dizayn paketi.
 
-1. Joriy foydalanuvchi bileti, CURRENT-TASK.md va HANDOFF.md holatini tekshir.
+Bu fayl mundarija. PREPARATION.md va READING-PLAN.json to‘liq o‘qiladigan manbalarni sanaydi; READ-RECEIPT.md o‘qilganlikni halol qayd qilish uchun bo‘sh shablon. START-HERE yoki AI-BRIEF bilan cheklanib to‘liq o‘qidim demang.
+
+1. Joriy foydalanuvchi bileti, CURRENT-TASK.md va HANDOFF.md holatini tekshir. PREPARATION.md’ni o‘qi.
 2. AGENTS.md, AI-BRIEF.md, WORKFLOW.md va PROJECT-STATUS.json ni o‘qi.
 3. COMPETITION.md va SCORING-WORKPLAN.md ni o‘qi; qabul sinovi hamda himoya dalilini talablar bilan bog‘la. Tafsilotdagi 21 mezon loyiha tahriridan, amaldagi reglament ustuvor.
 4. ARCHITECTURE.md / API-GUIDE.md va faqat tanlangan source fayllarini o‘qi.
@@ -449,12 +454,18 @@ Avval `node verify-package.mjs`: PACKAGE-MANIFEST.json’dagi hajm va SHA-256 bo
         extras['verify-package.mjs']=read(ROOT/'handoff/verify-package.mjs')
         extras['CURRENT-TASK.md']+='\n## Arxitektura va haqiqiy holat\nRender + Supabase tayyorgarlik rejasi: ARCHITECTURE.md. Haqiqiy yaratilgan xizmat va URLlarni shu yerga yozing; PROJECT-STATUS.json — ommaviy snapshot, jonli holat emas. To‘liq maydonlar uchun PROJECT-TASK-TEMPLATE.md dan foydalanish mumkin.\n'
         extras['README.md']+='\n\n## Joriy kontekst\nWORKFLOW.md → PROJECT-STATUS.json → ARCHITECTURE.md → API-GUIDE.md. Ehtimoliy xavflar aniqlangan xato emas. Haqiqiy loyiha holati CURRENT-TASK.md va HANDOFF.md’da saqlanadi. Bu hujjatlar backendni avtomatik yaratmaydi.\n'
+        extras['READ-RECEIPT.md']=RECEIPT
+        extras['README.md']+='\nTo‘liq o‘qish: START-HERE.md → PREPARATION.md → READING-PLAN.json. Qisqa brif to‘liq hujjatni almashtirmaydi.\n'
         extras['DESIGN-STANDARD.md']=read(ROOT/'DESIGN-STANDARD.md')
         extras['LIBRARY-QA.md']=read(ROOT/'QA-EXPANDED.md')
         extras['LIBRARY-UPGRADE.md']=read(ROOT/'QA-UPGRADE.md')
         extras['LIBRARY-AUDIT.md']=read(ROOT/'AUDIT-20261018.md')
         extras['AGENTS.md']+='\nRead DESIGN-STANDARD.md for the quality bar. Do not reproduce generic blocks, invented proof or decorative interactions that displace the task.\n'
+        extras['AGENTS.md']+='\nSTART-HERE.md is an index, not a substitute for full context. Read PREPARATION.md; follow READING-PLAN.json when the user asks for full reading. Record missing/partial reads honestly in READ-RECEIPT.md. Get files from the manifest, never guessed names. BRAND-ASSETS.json distinguishes an existing favicon from a final transparent product logo.\n'
         files.update({k:v.encode() for k,v in extras.items()})
+        files['READING-PLAN.json']=package_plan(files).encode()
+        branding=[{'path':name,'sha256':digest(data)} for name,data in sorted(files.items()) if name.startswith('site/') and name.endswith(('.svg','.png','.webp')) and any(word in Path(name).name.lower() for word in ('logo','mark','icon','bloom'))]
+        files['BRAND-ASSETS.json']=(json.dumps({'schema_version':1,'slug':t['slug'],'scope':'Existing demo brand assets, not final competition identity','assets':branding,'instructions':'PREPARATION.md: Logo, favicon va OAuth brendi','transparency':'Not guaranteed by extension or filename. A background badge is not a transparent logo; verify light/dark/checkerboard before reuse.'},ensure_ascii=False,indent=2)+'\n').encode()
         files['PACKAGE-MANIFEST.json']=package_manifest(files,t['name'],t['slug'])
         archive=zip_bytes(files);(folder/'source.zip').write_bytes(archive);archives[t['slug']+'/source.zip']=archive
         manifest={'archive_context_entry':'START-HERE.md','archive_integrity_manifest':'PACKAGE-MANIFEST.json','audit_qa_url':f'{SITE}/design/AUDIT-20261018.md','upgrade_qa_url':f'{SITE}/design/QA-UPGRADE.md','schema_version':1,'snapshot_date':DATE,'source_fingerprint':t['fingerprint'],'name':t['name'],'slug':t['slug'],'context_url':f'{SITE}/design/{t["slug"]}/','ai_url':f'{SITE}/design/{t["slug"]}/ai.md','archive_url':f'{SITE}/design/{t["slug"]}/source.zip','archive_sha256':digest(archive),'archive_bytes':len(archive),'entry':kit['entry'],'serve_root':kit['serve_root'],'readable_source_files':[{'path':name,'url':f'{SITE}/design/{t["slug"]}/files/{name}.txt','sha256':digest(files['site/'+name])} for name in code_names(t,files)],'files':[{'path':p,'bytes':len(d),'sha256':digest(d)} for p,d in sorted(files.items())],'baseline_qa_url':f'{SITE}/design/'+('material-expressive/' if t['id']=='10' else '')+'QA-REPORT.md'}
@@ -475,6 +486,7 @@ Avval `node verify-package.mjs`: PACKAGE-MANIFEST.json’dagi hajm va SHA-256 bo
     root_brief=f"# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish\n\n{DATE}. Faol dizaynlar: {len(catalog)}. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.\n\n{links}\n\n- [Markaziy kontekst]({SITE}/ai.md)\n- [Qisqa tanlov konteksti]({SITE}/design/handoff/competition.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n- [Kengaytirilgan testlar]({SITE}/design/QA-EXPANDED.md)\n\nFoydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.\n"
     root_brief+='\n## Joriy ish tartibi va server rejasi\n\nWORKFLOW.md va PROJECT-STATUS.json dan boshlang. ARCHITECTURE.md — Render + Supabase, API-GUIDE.md va API-EVIDENCE.json — sanali sinovlar. Bular tayyorgarlik snapshot’i; joriy bilet, foydalanuvchi qarori va loyiha holati ustuvor. Tanlangan source.zip ichida ham shu hujjatlar mavjud.\n'
     write(ROOT/'ai.md',root_brief)
+    root_brief+='\nTo‘liq o‘qish uchun PREPARATION.md ga amal qiling. START-HERE mundarija; to‘liq manba o‘rnini bosmaydi. Online yig‘ma: https://azizbeksafarov.github.io/tayyorgarlik/full-context.md .\n'
     root_brief+='\nOriginal umumiy paketni node verify-package.mjs bilan tekshiring. Tanlangan source.zip ichida START-HERE.md birinchi o‘qish tartibini beradi; to‘liq tadqiqot, mezon/dalil rejasi va barcha nizom matni ham o‘sha paketning o‘zida.\n'
     write(ROOT/'ai.md',root_brief)
     archives.update(context_files)

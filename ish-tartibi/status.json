@@ -44,6 +44,7 @@
   ],
   "reading_order": [
     "current user ticket and project-local CURRENT-TASK.md / HANDOFF.md; public copies are templates",
+    "/tayyorgarlik/ai.md; full-context.md or reading-plan.json for full reading",
     "/ai.md",
     "/ish-tartibi/ai.md",
     "/ish-tartibi/status.json",

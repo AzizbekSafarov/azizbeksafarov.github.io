@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-18",
+  "snapshot_date": "2026-10-19",
   "source_fingerprint": "5bbe54ec986d84b0d7416ba6d5afbeaea646f9f1bd38ce21758c99b188deb438",
   "name": "Orbita",
   "slug": "orbita",
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "0c869b5c713a854ced491dbf83a84d66091861f2afe78d2f6af3ee853365b69a",
-  "archive_bytes": 248474,
+  "archive_sha256": "48bee20e773b469866d7652f7980a64c7a1c0c835e8b056271efd03f41f27b3b",
+  "archive_bytes": 257818,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -74,13 +74,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4045,
-      "sha256": "08e237d5e472503dfd7d2f2e5f61387080b213a1840fb2cb730899ec350015ba"
+      "bytes": 4390,
+      "sha256": "a41b7009fe92f8e4cb635f64d3760b0ba2165510e4e3e7e8f633aafdcd14b7fd"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6965,
-      "sha256": "41e624ea5f74329910b0ca648081bdfd288f986bd31ac426c10ce5cd81dc3a1a"
+      "bytes": 7539,
+      "sha256": "5e1f450c67ab80c964e22432b103249090fb02a5da4794ae7ec47c7029e46973"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -94,8 +94,13 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 27010,
-      "sha256": "5f63dc48850a16fac6edfe5e7bc18274d8a351b832dea29ec03a365fc565aee0"
+      "bytes": 27327,
+      "sha256": "bbfd113cfa96acbac97f9831bda47fd8eb2e8bf55ae06fb8deafee23b5c658f7"
+    },
+    {
+      "path": "BRAND-ASSETS.json",
+      "bytes": 484,
+      "sha256": "4b3ecf59a0a9011e4e38fe6d942078f7391a1698f7d90558a1b5c6d2bde89b27"
     },
     {
       "path": "CHECKLIST.md",
@@ -145,7 +150,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1197,
-      "sha256": "b363de14c414054a80118d3a239c2af8fd46a3b7c4bbe31d2f0798865e7732c3"
+      "sha256": "5d907e77bd781ce85c8887bdd522842340fbb48fecec1a648e30f6147dc691ea"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -164,13 +169,18 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 6924,
-      "sha256": "005da37b5df72b4fd51c68b130d7bb88176f04e72abe03e13982bdce12046d77"
+      "bytes": 7526,
+      "sha256": "fbaf21f0835ef6793fc563b9e7825b4f7e45a756f0513043f6b16951b8cb6926"
+    },
+    {
+      "path": "PREPARATION.md",
+      "bytes": 13417,
+      "sha256": "a64db1ba488c76e5ac6b85598431c02b8bde32a5014f42f9fcb6ec0802612652"
     },
     {
       "path": "PROJECT-STATUS.json",
-      "bytes": 2634,
-      "sha256": "313d1021cd2dc8ecf791bd10e9b8d4bbd44d65e47baf280999a4129e03b3b80c"
+      "bytes": 2716,
+      "sha256": "41765bc10c638d1a27ea603fc4f7746b3fee8d62fff905ce39a3eddb3c1cb869"
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
@@ -178,9 +188,19 @@
       "sha256": "1f5b66364d316394a8534a04941a0c96b92bfe21de3f226fea6622093a24d47b"
     },
     {
+      "path": "READ-RECEIPT.md",
+      "bytes": 850,
+      "sha256": "ce580d118b6727bc871e692c1808564041621c68792a0380c052eb781cbc00ae"
+    },
+    {
+      "path": "READING-PLAN.json",
+      "bytes": 2673,
+      "sha256": "952d605b63b8f281eba0eb50af2542f8167d7cc8a05c2f5b387cd2774dc986b5"
+    },
+    {
       "path": "README.md",
-      "bytes": 1431,
-      "sha256": "a7912fe14fa4081701b1de2e2f165c48d6632dec765632fb1b2040bd47e863a5"
+      "bytes": 1552,
+      "sha256": "a097e9c728af35a0f923337363223f4d8d29a3b0fcea982bd45b6096476bf71b"
     },
     {
       "path": "REGULATIONS.md",
@@ -194,13 +214,13 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 1707,
-      "sha256": "3ccc4b00b6ec404c62614fab580a21e4d54ef879b122c435cf8b7f6dc93345bc"
+      "bytes": 1975,
+      "sha256": "3f753ddaac947223df0307fab579f2010478d8a6535eacc2db73f270348f77d9"
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 26990,
-      "sha256": "767a0d40fe40a99dcded3581657f0b663ac9cc6e0697caa6d92e5fa3e752c11c"
+      "bytes": 27307,
+      "sha256": "4e6cd8e0e77a43060b9ebbfd0bc714bf52c8ecf33845e9479bbf7123ec511d2a"
     },
     {
       "path": "kit.json",

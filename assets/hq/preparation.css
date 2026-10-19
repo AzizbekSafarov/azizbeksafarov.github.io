@@ -1,0 +1,14 @@
+body[data-page=preparation] .document-page{max-width:1120px}
+body[data-page=preparation] .blueprint-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px 24px;margin:30px 0}
+body[data-page=preparation] .blueprint-actions>a:not(.button){text-decoration:underline;text-underline-offset:5px;line-height:1.8}
+body[data-page=preparation] nav[aria-label="Tayyorgarlik yo‘li"]{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0 42px;padding:24px 0;border-block:1px solid var(--line)}
+body[data-page=preparation] nav[aria-label="Tayyorgarlik yo‘li"] p{line-height:1.8;margin:0}
+body[data-page=preparation] nav[aria-label="Tayyorgarlik yo‘li"] strong{display:block;font-size:20px;margin-bottom:8px}
+body[data-page=preparation] summary{padding:20px 0;cursor:pointer;font-size:18px;font-weight:600;line-height:1.5;border-bottom:1px solid var(--line)}
+body[data-page=preparation] summary:focus-visible{outline:3px solid #2861c8;outline-offset:5px}
+body[data-page=preparation] .prose{padding:24px 0;overflow-wrap:anywhere;line-height:1.85}
+body[data-page=preparation] .prose h2{margin-top:36px}
+body[data-page=preparation] .prose p,body[data-page=preparation] .prose li{margin-block:12px}
+body[data-page=preparation] .prose pre{overflow:auto;padding:20px;background:#e9ede8;border-radius:8px}
+body[data-page=preparation] .context-explainer{margin-top:30px;line-height:1.8}
+@media(max-width:650px){body[data-page=preparation] nav[aria-label="Tayyorgarlik yo‘li"]{grid-template-columns:1fr}body[data-page=preparation] .blueprint-actions{align-items:flex-start;flex-direction:column}body[data-page=preparation] .blueprint-actions>a{max-width:100%;overflow-wrap:anywhere}}

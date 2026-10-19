@@ -215,11 +215,12 @@ Tayyor: .io dizayn kutubxonasi va ko‘chiriladigan kod; sanali rasmiy API ulani
 O‘qish tartibi:
 
 1. Joriy bilet va loyiha holati — Foydalanuvchining hozirgi topshirig‘i, amaldagi reglament hamda loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon; ularni joriy topshiriq deb olma.
-2. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
-3. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
-4. [Tanlov konteksti va mezonlar](https://azizbeksafarov.github.io/design/handoff/competition.md) — /design/handoff/score-workplan.md bilan talab → qabul dalilini bog‘la. /ustoz/CONTEXT-STATUS.md va to‘liq nizom /ustoz/nizom.md manba maqomini tushuntiradi; to‘liq matn kerak bo‘lsa qisqa kirish bilan almashtirma.
-5. [Arxitektura va API](https://azizbeksafarov.github.io/arxitektura/ai.md) — /api/ai.md bilan birga sahifa rollari, server chegarasi, kvota, xavfsizlik va sifat mezonlarini o‘qi. Rejalashtirilgan xizmatni yaratilgan deb hisoblama.
-6. [Bitta tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.
+2. [To‘liq tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.
+3. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
+4. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
+5. [Tanlov konteksti va mezonlar](https://azizbeksafarov.github.io/design/handoff/competition.md) — /design/handoff/score-workplan.md bilan talab → qabul dalilini bog‘la. /ustoz/CONTEXT-STATUS.md va to‘liq nizom /ustoz/nizom.md manba maqomini tushuntiradi; to‘liq matn kerak bo‘lsa qisqa kirish bilan almashtirma.
+6. [Arxitektura va API](https://azizbeksafarov.github.io/arxitektura/ai.md) — /api/ai.md bilan birga sahifa rollari, server chegarasi, kvota, xavfsizlik va sifat mezonlarini o‘qi. Rejalashtirilgan xizmatni yaratilgan deb hisoblama.
+7. [Bitta tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.
 
 So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
 

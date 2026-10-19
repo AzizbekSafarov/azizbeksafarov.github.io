@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-18",
+  "snapshot_date": "2026-10-19",
   "source_fingerprint": "219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97",
   "name": "Ziyo",
   "slug": "ziyo",
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "1a5322e7a1712bcdfa9d09d6e09761d2dff591157532ca24a1e9267bf09fcffd",
-  "archive_bytes": 500139,
+  "archive_sha256": "bbe062d3433b10272119dd9c1e5fd727521e2b55c7b970e4f1878deb1c2386c2",
+  "archive_bytes": 509471,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4000,
-      "sha256": "a89fcb0630f0a6919701cbe1041919563bd433e49bcc95b0406be8ed3d3be4c0"
+      "bytes": 4345,
+      "sha256": "f95597330cd1f537c2ee720d45fcf45d504cdb8aecc313fa0e002bc7e885c3ee"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7081,
-      "sha256": "5022086784bb28442032a11d9e77341e515bb0bdf6a96b9e4f99de2da4bdb71e"
+      "bytes": 7655,
+      "sha256": "c1292a30ad82065493c1b0a0ce254150434519ac3000a04e31bff8cc15432352"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -100,8 +100,13 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 27010,
-      "sha256": "5f63dc48850a16fac6edfe5e7bc18274d8a351b832dea29ec03a365fc565aee0"
+      "bytes": 27327,
+      "sha256": "bbfd113cfa96acbac97f9831bda47fd8eb2e8bf55ae06fb8deafee23b5c658f7"
+    },
+    {
+      "path": "BRAND-ASSETS.json",
+      "bytes": 482,
+      "sha256": "d9c40a0e4d0ffc321731f6407d9bed713a99c6948ee17dc54f3a789c5f9e47ff"
     },
     {
       "path": "CHECKLIST.md",
@@ -151,7 +156,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1193,
-      "sha256": "514711d91af29e731d84c6e08bb8390f11ea4b7d71e297209f98a37e52d9e0e3"
+      "sha256": "329b1da87d4efa4fa43830eee2ebedba69f0bcd1436c7b1dd9cbc53342e646f6"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -170,13 +175,18 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 7392,
-      "sha256": "c6b004e24dd253d1729660fa9d8a77ff1d807d351c18647aca8ede5b6a21ab6b"
+      "bytes": 7994,
+      "sha256": "6e2da30dd3dd91f32b937b8f764c31e213a475709cba54862f618b2dc8ef6dd0"
+    },
+    {
+      "path": "PREPARATION.md",
+      "bytes": 13417,
+      "sha256": "a64db1ba488c76e5ac6b85598431c02b8bde32a5014f42f9fcb6ec0802612652"
     },
     {
       "path": "PROJECT-STATUS.json",
-      "bytes": 2634,
-      "sha256": "313d1021cd2dc8ecf791bd10e9b8d4bbd44d65e47baf280999a4129e03b3b80c"
+      "bytes": 2716,
+      "sha256": "41765bc10c638d1a27ea603fc4f7746b3fee8d62fff905ce39a3eddb3c1cb869"
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
@@ -184,9 +194,19 @@
       "sha256": "1f5b66364d316394a8534a04941a0c96b92bfe21de3f226fea6622093a24d47b"
     },
     {
+      "path": "READ-RECEIPT.md",
+      "bytes": 850,
+      "sha256": "ce580d118b6727bc871e692c1808564041621c68792a0380c052eb781cbc00ae"
+    },
+    {
+      "path": "READING-PLAN.json",
+      "bytes": 2673,
+      "sha256": "c290fff9cde53240b1d142ee295011cfbdd626081aafc5112aaeb3cba6dd513c"
+    },
+    {
       "path": "README.md",
-      "bytes": 1432,
-      "sha256": "a200c4742435c5fc3be22b71c5f334790ed5ce43c223ec41585b16f68bbab4b7"
+      "bytes": 1553,
+      "sha256": "8a6e8675987ed088923f086c7b3ca26c5a8771ddb088d16d3e7cdb938b750126"
     },
     {
       "path": "REGULATIONS.md",
@@ -200,13 +220,13 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 1703,
-      "sha256": "2b767a68bde4b91195b1c7a61187b63424f6f601166b3e1d9f8f215d53b758e7"
+      "bytes": 1971,
+      "sha256": "4daed162d0a6558adb196b2775bc07913971b87fab5a4007057889372b820ae0"
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 26990,
-      "sha256": "767a0d40fe40a99dcded3581657f0b663ac9cc6e0697caa6d92e5fa3e752c11c"
+      "bytes": 27307,
+      "sha256": "4e6cd8e0e77a43060b9ebbfd0bc714bf52c8ecf33845e9479bbf7123ec511d2a"
     },
     {
       "path": "kit.json",

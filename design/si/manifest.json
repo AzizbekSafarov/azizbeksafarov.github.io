@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-18",
+  "snapshot_date": "2026-10-19",
   "source_fingerprint": "0e9919fe2f5f5c84c1a9ed7e59d665e2fc33a98481d56c20063943f127125695",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "7e202e5ac77ce0a33858d246f5c719ea86c9548a6424001df70c1de43fb1b4a7",
-  "archive_bytes": 304481,
+  "archive_sha256": "c12e5b4f0ef5c6a69938fc4a503c7bfd2e4db8db21b2abd88b1770f138297c87",
+  "archive_bytes": 313942,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4125,
-      "sha256": "a926d2b2172806f7e0895393f84039c31d59f304c39bcea290657854da3d7120"
+      "bytes": 4470,
+      "sha256": "4c0931b76ac9bdcd9540122b0d358b214fcab667827e872edbd174f0e02f3837"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 12929,
-      "sha256": "61c1c2a03917103b9d9f7fa3eb00b989d150a792853edfc2fdc7b88978251738"
+      "bytes": 13503,
+      "sha256": "73298bad3fbc087219501ccdcbe6031c3dd7460fb661ed9f77b4e15dd2348db4"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -100,8 +100,13 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 27010,
-      "sha256": "5f63dc48850a16fac6edfe5e7bc18274d8a351b832dea29ec03a365fc565aee0"
+      "bytes": 27327,
+      "sha256": "bbfd113cfa96acbac97f9831bda47fd8eb2e8bf55ae06fb8deafee23b5c658f7"
+    },
+    {
+      "path": "BRAND-ASSETS.json",
+      "bytes": 885,
+      "sha256": "fe6e698d1ac6603899507b267ebbdeecbf80a069346f600cf146ff3be60b152f"
     },
     {
       "path": "CHECKLIST.md",
@@ -151,7 +156,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1199,
-      "sha256": "1fb55fc4538bf4918ec6370ae66a7b4a02cec56f3914d376b2960a6798cf11d1"
+      "sha256": "75321c6d6d5a708d45aacd5398336ddf667b3e15e23275d3af0f75d372b154e6"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -170,13 +175,18 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 8854,
-      "sha256": "ae73b272d6d7793b299961649db5da38df88aae4f8f02000da6f626894c8c49e"
+      "bytes": 9456,
+      "sha256": "967959e3c3e7877622df1878790e7504aca64a4aba300f94f43783b6d567c8d4"
+    },
+    {
+      "path": "PREPARATION.md",
+      "bytes": 13417,
+      "sha256": "a64db1ba488c76e5ac6b85598431c02b8bde32a5014f42f9fcb6ec0802612652"
     },
     {
       "path": "PROJECT-STATUS.json",
-      "bytes": 2634,
-      "sha256": "313d1021cd2dc8ecf791bd10e9b8d4bbd44d65e47baf280999a4129e03b3b80c"
+      "bytes": 2716,
+      "sha256": "41765bc10c638d1a27ea603fc4f7746b3fee8d62fff905ce39a3eddb3c1cb869"
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
@@ -184,9 +194,19 @@
       "sha256": "1f5b66364d316394a8534a04941a0c96b92bfe21de3f226fea6622093a24d47b"
     },
     {
+      "path": "READ-RECEIPT.md",
+      "bytes": 850,
+      "sha256": "ce580d118b6727bc871e692c1808564041621c68792a0380c052eb781cbc00ae"
+    },
+    {
+      "path": "READING-PLAN.json",
+      "bytes": 2674,
+      "sha256": "ebde40ba60d980b96433c694e260eb9b850889ee72960cacdee10ce81df05c99"
+    },
+    {
       "path": "README.md",
-      "bytes": 3741,
-      "sha256": "43511d2e0c0885e51af1b231a20e1c772ce228898596c7f7d319763a6df7dde2"
+      "bytes": 3862,
+      "sha256": "721fba1cd5ba630a54e678103054c7bc2fdc5e782af282a1e00307327d384b20"
     },
     {
       "path": "REGULATIONS.md",
@@ -200,13 +220,13 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 1709,
-      "sha256": "eb2af50b569fc254a5ffc3e8f95b4caf63a5f34b0c6f115c9f32545f0e9e64f6"
+      "bytes": 1977,
+      "sha256": "5346d8e8dbaee313d890c3b08622e4afbfd7b4c1c6bcd5c027916bb75e57f56a"
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 26990,
-      "sha256": "767a0d40fe40a99dcded3581657f0b663ac9cc6e0697caa6d92e5fa3e752c11c"
+      "bytes": 27307,
+      "sha256": "4e6cd8e0e77a43060b9ebbfd0bc714bf52c8ecf33845e9479bbf7123ec511d2a"
     },
     {
       "path": "kit.json",

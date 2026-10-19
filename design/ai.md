@@ -1,6 +1,6 @@
 # Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish
 
-2026-10-18. Faol dizaynlar: 9. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.
+2026-10-19. Faol dizaynlar: 9. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.
 
 - [Orbita](https://azizbeksafarov.github.io/design/orbita/) — /design/orbita/; Qorong‘i texnik observatoriya: Chakra Petch, monospace yozuv, orbital asbob oynasi va vertikal missiya registri.
 - [Nashr](https://azizbeksafarov.github.io/design/nashr/) — /design/nashr/; Bosma gazeta: Newsreader masthead, PT Serif maqola, Archivo xizmat yozuvi, oq-qora suratlar va zich tahririy ustunlar.
@@ -25,5 +25,7 @@ Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab
 ## Joriy ish tartibi va server rejasi
 
 WORKFLOW.md va PROJECT-STATUS.json dan boshlang. ARCHITECTURE.md — Render + Supabase, API-GUIDE.md va API-EVIDENCE.json — sanali sinovlar. Bular tayyorgarlik snapshot’i; joriy bilet, foydalanuvchi qarori va loyiha holati ustuvor. Tanlangan source.zip ichida ham shu hujjatlar mavjud.
+
+To‘liq o‘qish uchun PREPARATION.md ga amal qiling. START-HERE mundarija; to‘liq manba o‘rnini bosmaydi. Online yig‘ma: https://azizbeksafarov.github.io/tayyorgarlik/full-context.md .
 
 Original umumiy paketni node verify-package.mjs bilan tekshiring. Tanlangan source.zip ichida START-HERE.md birinchi o‘qish tartibini beradi; to‘liq tadqiqot, mezon/dalil rejasi va barcha nizom matni ham o‘sha paketning o‘zida.
