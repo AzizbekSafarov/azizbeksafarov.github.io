@@ -1,86 +1,35 @@
 {
   "schema_version": 1,
-  "scope": "current_public_source_snapshot",
+  "scope": "current_rules_review",
   "as_of": "2026-10-28",
-  "not_live": true,
-  "portal": {
-    "url": "https://zamonaviykasblar2026.uz/",
-    "ownership_independently_confirmed": false,
-    "observed_features": [
-      "aggregate statistics",
-      "stage/region schedule picker",
-      "published result listing/search",
-      "complaint registration interface"
-    ]
-  },
-  "registration_counts": {
-    "total": 21020,
-    "web": 6019,
-    "design": 8002,
-    "mobile": 6999,
-    "unit": "applications; not approved participants/attendees",
-    "source": "https://azizbeksafarov.github.io/ustoz/sources/2026-10-28/dashboard-aggregate.json"
-  },
-  "public_result_record_counts": {
-    "tuman": {
-      "count": 429,
-      "read_time": "2026-10-28T15:33:56.001134Z"
-    },
-    "hududiy": {
-      "count": 3,
-      "read_time": "2026-10-28T15:33:56.614687Z"
-    },
-    "respublika": {
-      "count": 0,
-      "read_time": "2026-10-28T15:33:57.158362Z"
-    }
-  },
-  "regional_scope": {
-    "region": "Farg‘ona viloyati",
-    "first_place_directions": [
-      "web",
-      "design",
-      "mobile"
-    ],
-    "records": 3
-  },
-  "schedule": {
-    "public_event_location_records": 0,
-    "samarqand_venue_date_time_confirmed": false
-  },
-  "prizes": {
-    "scope": "republic competition prize announcements",
-    "first": "Changan UNI-E",
-    "second_uzs": 75000000,
-    "third_uzs": 50000000,
-    "sources": [
-      "https://digital.gov.uz/oz/digital/news/view/234986",
-      "https://t.me/ustozai/3445"
-    ]
-  },
+  "new_approved_rulebook_found": false,
   "regulations": {
     "current_site_pdf_same_as_saved": true,
+    "site_pdf_url": "https://ustoz.ai/tanlov/nizom.pdf",
     "site_pdf_sha256": "b96018da0184cbabc5cd09a1864abcd895b68441a9f503b5bec6ff8ff71f378e",
-    "new_approved_rulebook_found": false,
-    "detailed_criteria_draft_approval_confirmed": false,
-    "new_ticket_or_build_duration_confirmed": false
+    "detailed_criteria_draft_approval_confirmed": false
   },
-  "interpretation": [
-    "Static HTML uses old counts; use captured API aggregate with provenance.",
-    "Placeholder republic winner cards are not actual winners.",
-    "Empty stored results or schedule does not prove an event was cancelled or not held.",
-    "Current provider/account quotas and previous API probes are separate from competition source updates.",
-    "Organizer Firebase is not the planned competition product backend."
+  "portal_explanatory_copy": {
+    "url": "https://zamonaviykasblar2026.uz/",
+    "status": "public explanatory text; not a newly approved regulation",
+    "task_delivery": "expert task provided at the same time",
+    "defence_minutes": 15,
+    "criteria_count": 6,
+    "total_points": 100
+  },
+  "historical_signed_weights": [
+    30,
+    20,
+    10,
+    10,
+    20,
+    10
   ],
-  "unknown": [
-    "current participant stage/outcome",
-    "Samarqand date/venue/time",
-    "republic date/venue",
-    "on-site account/template/backend permissions",
-    "exact build duration",
-    "new detailed scoring approval",
-    "new portal ownership cross-link"
-  ],
-  "personal_records_exported": false,
-  "read_only_research": true
+  "confirmed_new_build_duration_minutes": null,
+  "confirmed_new_account_policy": null,
+  "confirmed_new_prebuilt_backend_policy": null,
+  "confirmed_new_internet_template_restrictions": null,
+  "confirmed_new_live_edit_policy": null,
+  "confirmed_current_samarqand_schedule": null,
+  "practical_action": "Use the actual ticket, remaining time and on-site rules; do not promote historical drafts to new approved requirements."
 }

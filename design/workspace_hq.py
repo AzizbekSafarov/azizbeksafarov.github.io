@@ -41,7 +41,7 @@ def frame(title,content,active='library'):
 
 def build_library(catalog):
  content=library(catalog)
- content='<p class="context-explainer" style="margin:20px 28px;line-height:1.8"><strong>Tanlov konteksti yangilandi · 28-oktabr.</strong> <a href="/design/handoff/current-competition.md">Yangi portal, statistika va natija holati →</a>. Eski sanalar va shablon natijalar joriy fakt deb olinmaydi.</p>'+content
+ content='<p class="context-explainer" style="margin:20px 28px;line-height:1.8"><strong>Tanlov qoidalari tekshirildi · 28-oktabr.</strong> <a href="/design/handoff/current-competition.md">Nizom va amaliy tartibdagi o‘zgarishlar →</a>. Nizom PDF’i o‘zgarmagan; yangi ish vaqti va akkaunt qoidasi tasdiqlanmadi.</p>'+content
  # Keep real navigation actions above the preview, visible before scrolling.
  summary=re.search(r'<p id="selected-summary">.*?</p>',content).group()
  content=content.replace(summary,'',1)

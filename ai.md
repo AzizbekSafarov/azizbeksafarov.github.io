@@ -5,7 +5,7 @@
 ## Avval shu tartibda boshlang
 
 1. Joriy bilet va loyiha holati — Foydalanuvchining hozirgi topshirig‘i, amaldagi reglament hamda loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon; ularni joriy topshiriq deb olma.
-2. [Joriy tanlov yangilanishi](https://azizbeksafarov.github.io/design/handoff/current-competition.md) — 2026-10-28: yangi portal/API, sovrinlar, natija yozuvlari va noma’lum jadval. CURRENT-COMPETITION-FACTS.json tuzilgan snapshot; eski 9-oktabr qaydi joriy ma’lumot emas.
+2. [Joriy tanlov yangilanishi](https://azizbeksafarov.github.io/design/handoff/current-competition.md) — 2026-10-28: nizom, baholash, himoya, amaliy vaqt va ruxsatlar tekshiruvi. CURRENT-COMPETITION-FACTS.json qoida qaydi; loyiha yoki eski xabar yangi tasdiqlangan talab emas.
 3. [To‘liq tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.
 4. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
 5. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
@@ -74,6 +74,6 @@ START-HERE qisqa mundarija; to‘liq hujjat o‘rnini bosmaydi. [Tayyorgarlik qo
 Foydalanuvchi to‘liq o‘qishni so‘rasa [to‘liq umumiy matn](https://azizbeksafarov.github.io/tayyorgarlik/full-context.md) yoki [bo‘limli o‘qish xaritasi](https://azizbeksafarov.github.io/tayyorgarlik/reading-plan.json) bo‘yicha barcha manbani o‘qi. Output kesilsa qolgan qismni ol. Bir xil matnni qayta yuklama; tanlanmagan dizayn kodlarini o‘qish shart emas. O‘qilmaganini aniq ayt. Paketda READING-PLAN.json va READ-RECEIPT.md mavjud. [Tekshirib yuklash yordamchisi](https://azizbeksafarov.github.io/design/get_starter.py) manifest va ZIP hashlarini solishtirib yangi papkaga oladi.
 
 
-## 28-oktabr joriy manba tekshiruvi
+## 28-oktabr qoidalar tekshiruvi
 
-[Yangilanish](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [joriy faktlar](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json): yangi portal/API, 21 020 ariza (veb 6 019), 75/50 mln rasmiy sovrinlar; respublika natija yozuvi 0, yangi Samarqand jadvali noma’lum. Eski 9-oktabr statistikasi tarixiy. Nizom PDF’i o‘zgarmagan; yangi mezon loyihasi tasdig‘i topilmadi. Yangi tashkilotchi Firebase’i bizning Render+Supabase mahsulotimiz emas.
+[Amaliy qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [qoida qaydi](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json): nizom PDF’i o‘zgarmagan, yangi tasdiqlangan reglament/texnik qoida topilmadi. Yangi portal 15 daqiqalik himoya, bir vaqtda vazifa berilishi va 6 mezon/100 ballni takrorlaydi. Yangi ish davomiyligi, akkaunt/tarif, jonli tahrir va tayyor kod/backend bo‘yicha ruxsatlar tasdiqlanmadi; bilet va joydagi ko‘rsatma ustuvor.

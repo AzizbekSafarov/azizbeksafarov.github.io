@@ -1,6 +1,6 @@
 # Yuksal · SI — tanlovda yangi AI uchun boshlash
 
-KONTEKST MAQOMI: joriy ochiq manbalar tekshiruvi 2026-10-28; eski tadqiqot 2026-10-09 holatida tarixiy. Yangi portal/API va rasmiy sovrin e’lonlari CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json da. 13-oktabr — oldingi ishtirokchi xabari; yangi Samarqand jadvali yoki joriy bilet tasdiqlanmadi. Hozirgi topshiriq/reglament ustuvor. [Manbalar maqomi](https://azizbeksafarov.github.io/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.
+KONTEKST MAQOMI: joriy ochiq manbalar tekshiruvi 2026-10-28; eski tadqiqot 2026-10-09 holatida tarixiy. Nizom, amaliy tartib va ruxsatlar qayta tekshiruvi CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json da. 13-oktabr — oldingi ishtirokchi xabari; yangi Samarqand jadvali yoki joriy bilet tasdiqlanmadi. Hozirgi topshiriq/reglament ustuvor. [Manbalar maqomi](https://azizbeksafarov.github.io/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.
 
 ## Joriy ish tartibi va arxitektura
 

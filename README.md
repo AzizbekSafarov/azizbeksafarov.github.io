@@ -56,4 +56,4 @@ Professional mahsulot sifati `/arxitektura/#sifat` va ARCHITECTURE.md’da: UI/c
 
 Tanlovga tayyorgarlik: `/tayyorgarlik/`, qisqartirilmagan yig‘ma `/tayyorgarlik/full-context.md` va `reading-plan.json`. Har starterda PREPARATION.md, READING-PLAN.json, READ-RECEIPT.md va BRAND-ASSETS.json. `design/get_starter.py` katalog/ZIP/ichki manifestni tekshirib yangi papkaga oladi; kodni ishga tushirmaydi. Yagona tahrir manbasi `design/preparation-guide.md`; build_handoff.py barcha paketlarni yangilaydi.
 
-2026-10-28: yangi portal va ochiq backend/API tekshiruvi `design/handoff/current-competition.md` / `current-competition-facts.json` orqali tarqatiladi. 2026-10-09 qaydlari tarixiy; 18-oktabr provider probeslari qayta bajarilmagan. Barcha yangi nashr/paketlar canonical `internet-kontekst` hashlariga bog‘langan.
+2026-10-28: nizom va amaliy qoidalar tekshiruvi `design/handoff/current-competition.md` / `current-competition-facts.json` orqali tarqatiladi. 2026-10-09 qaydlari tarixiy; 18-oktabr provider probeslari qayta bajarilmagan. Barcha yangi nashr/paketlar canonical `internet-kontekst` hashlariga bog‘langan.

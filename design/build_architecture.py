@@ -163,7 +163,7 @@ O‘qish tartibi:
 So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
 '''
 
-ARCH_MD += '\n\n## 2026-10-28 qayta tekshiruv chegarasi\n\nTanlov manbalari CURRENT-COMPETITION.md’da yangilangan. Tashkilotchi portalining Firebase’i ushbu mahsulotning Supabase’i emas. Render Free 15 daqiqa/750 soat va Supabase 1 hafta faolsizlik pauzasi rasmiy sahifalarda qayta ko‘rildi. Gemini project-level quota qoidasi ham qayta ko‘rildi. UptimeRobot pricing va Groq rate-limits bu fetch’da HTTP xato qaytardi; oldingi raqamlar yangi tekshirildi deyilmaydi. 18-oktabr API ulanish dalillari qayta bajarilmagan. Bilet va haqiqiy project/account holati ustuvor.\n'
+ARCH_MD += '\n\n## 2026-10-28 qayta tekshiruv chegarasi\n\nTanlov manbalari CURRENT-COMPETITION.md’da yangilangan. Render Free 15 daqiqa/750 soat va Supabase 1 hafta faolsizlik pauzasi rasmiy sahifalarda qayta ko‘rildi. Gemini project-level quota qoidasi ham qayta ko‘rildi. UptimeRobot pricing va Groq rate-limits bu fetch’da HTTP xato qaytardi; oldingi raqamlar yangi tekshirildi deyilmaydi. 18-oktabr API ulanish dalillari qayta bajarilmagan. Bilet va haqiqiy project/account holati ustuvor.\n'
 ARCH_MD = ARCH_MD.replace('{READING_ORDER}', reading_markdown().rstrip())
 ARCH_MD = ARCH_MD.replace('## Hosting va monitoring', PRODUCT_MD + quality_markdown() + '## Hosting va monitoring', 1)
 

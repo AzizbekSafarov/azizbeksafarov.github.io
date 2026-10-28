@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "261719f4479664976b25024e6403a6be11927fff402b5067c403856eb2d30b80",
-  "archive_bytes": 271133,
+  "archive_sha256": "b870789d0ab5fb73fd1fdfd882eb02c1f88b38e168d4ba6d78a28c9267322d78",
+  "archive_bytes": 264127,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -79,8 +79,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7700,
-      "sha256": "443e9d9ccf85537319ed5221cdbf7e01bc1cbdf87d65ee6b9954fbecd6917830"
+      "bytes": 7705,
+      "sha256": "bbd526a96ce79373031240d81c58cbb88151d4a863d39393b1cd875e5a41f8f1"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -94,8 +94,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28170,
-      "sha256": "7ff72c061242dc46c3e5f9b10de45543f2003960b81abcc8661643ad6e9b0377"
+      "bytes": 28093,
+      "sha256": "310d44e24ac1fd9013d938ca868bb6d38138bf99dab7ef22228f730a637be072"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -114,23 +114,23 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3318,
-      "sha256": "649e5e810230f215ddcabed993a05fa139b6e8c0bda975f3820cf7189cf5a183"
+      "bytes": 1898,
+      "sha256": "c0ad3e05914caea00ec3a8dbbbf0e9764195e9bd6ac91c04f34c88575e6f72a0"
     },
     {
       "path": "CONTEXT-STATUS.md",
-      "bytes": 3456,
-      "sha256": "5527e09682acc560c46775979c3d3e669ead10f0f2d092dc39152fa726e0d41e"
+      "bytes": 3222,
+      "sha256": "95850e902b7e65d11a13bfd872d66f628c36a5fc97fbebf572d2a531f2a04b3c"
     },
     {
       "path": "CURRENT-COMPETITION-FACTS.json",
-      "bytes": 2652,
-      "sha256": "e36e6e63774177526f9da41af794a9e57237c5645d29e7a836c20307da497594"
+      "bytes": 1206,
+      "sha256": "c6d2a85ed67f541a284df6116075e8bbd881601abffb69c185c650b24f98b810"
     },
     {
       "path": "CURRENT-COMPETITION.md",
-      "bytes": 10266,
-      "sha256": "815eea07c8573252904ca01941c409de9f5438f1aae7a1ff0cc5bfd7a2bea9ea"
+      "bytes": 5250,
+      "sha256": "785105abfea6cfb1e1553b548afa16eee0ff9d3a65fbee4a003248b073489979"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -144,8 +144,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 211769,
-      "sha256": "fb5d06b3dbf036b2c83cfe55e0e8bb34b9b3b245dc98bfd4df382774ea3c9473"
+      "bytes": 202970,
+      "sha256": "f3d95251e2b1c051f147a4cea3d3cf6a783dd1178f7c552e6298b09fe23deb16"
     },
     {
       "path": "GEMINI.md",
@@ -179,13 +179,13 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 7849,
-      "sha256": "b7a52b0ecb1d030397fce04d0eb0b87f7fdb346bb179653424748a8ff4040583"
+      "bytes": 7848,
+      "sha256": "21b95095c364179b1001ffafc38edcaa9931fd957661c06a6ac3653d4e762cbf"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 14491,
-      "sha256": "5518cf40046409fede013cf79d9807cf306b9d44efdbfeb74a007885b2745b0c"
+      "bytes": 14209,
+      "sha256": "c62d33312e2d0b408f8cd871ac514b97bc35d7b890191c516f2c956c0e7924cd"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -204,8 +204,8 @@
     },
     {
       "path": "READING-PLAN.json",
-      "bytes": 2996,
-      "sha256": "c78966e012ab6dee38a5013f24acc1533ba362f1a60a4fff8c82e9e207c3587f"
+      "bytes": 2995,
+      "sha256": "6e272dd26ec255a05dcdaec2e1d90a0167474bdb00255388885006c68181aa8e"
     },
     {
       "path": "README.md",
@@ -229,8 +229,8 @@
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 27701,
-      "sha256": "7bc4a09fee178544c582f1af42c7751c5a7ab63b2c9589127cf3439e5153aa3f"
+      "bytes": 27700,
+      "sha256": "677511dc1ed1fac73fcdb5be72c737e5dcee7582f666144309fd0ec10c7d8db3"
     },
     {
       "path": "kit.json",

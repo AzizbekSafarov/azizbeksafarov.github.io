@@ -1,8 +1,8 @@
 # Kontekst maqomi va manbalarni o‘qish tartibi
 
-Paket va joriy manbalar tekshiruvi: **2026-10-28**. [08-CURRENT.md](08-CURRENT.md) va [09-CURRENT-FACTS.json](09-CURRENT-FACTS.json) — yangi portal, sanitizatsiyalangan API agregatlari va keyingi rasmiy e’lonlar. 01–04, 03-STATISTICS.csv va 07-FACTS.json ichidagi 2026-10-09 ma’lumotlari tarixiy. Joriy yangilanish faqat tekshirilgan bandlarga tatbiq etiladi, barcha eski taxminlar qayta tasdiqlandi degani emas.
+Qoidalar bo‘yicha joriy tekshiruv: **2026-10-28**. [08-CURRENT.md](08-CURRENT.md) va [09-CURRENT-FACTS.json](09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
 
-Yangi portal HTML’idagi eski raqam yoki respublika shablon kartalarini joriy statistik/natija deb olmang. API snapshotlari ham olish sanasi bilan saqlanadi, jonli hisoblagich emas. Eski 75/50 mln sovrin bo‘yicha noma’lumlik 16/20-oktabr rasmiy e’lonlari bilan yangilangan. Saytdagi nizom PDF’i 28-oktabr qayta olinib, o‘sha saqlangan nusxa ekani tasdiqlandi; mezonlar loyihasi yangi tasdiq olgani aniqlanmadi.
+01–04, 03-STATISTICS.csv va 07-FACTS.json ichidagi 2026-10-09 qaydlari tarixiy. Ularning statistika yoki sovrin tafsilotlari amaliy ishga yangi qoida emas. Joriy bilet va joydagi rasmiy ko‘rsatma ustuvor.
 
 ## Hozirgi ish va tarixiy xabarni ajratish
 

@@ -4,9 +4,9 @@ Yangilangan: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haq
 
 ## Joriy tanlov manbasi avval o‘qiladi
 
-2026-10-28 qayta tekshiruv: [CURRENT-COMPETITION.md](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [CURRENT-COMPETITION-FACTS.json](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json). Yangi portal HTML’idagi 16 981 va namunaviy respublika kartalari eski/fallback. API snapshoti 21 020 ariza / veb 6 019; public natija yozuvlari tuman 429, hududiy 3 (Farg‘ona), respublika 0. Bular noyob ishtirokchi yoki joriy jadval isboti emas. Yangi portal egasiga qayta havola ushbu tekshiruvda topilmadi.
+2026-10-28 qayta tekshiruv: [amaliy qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [qoida qaydi](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json). Nizom PDF’i o‘zgarmagan; yangi tasdiqlangan reglament yoki majburiy texnik qoida topilmadi. Yangi portal bir vaqtda vazifa berilishi, 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi.
 
-16/20-oktabr rasmiy e’lonlari 75/50 mln va Changan UNI-E’ni tasdiqlaydi. Saytdagi nizom PDF’i avvalgi nusxa; loyiha mezonlari tasdiqlangani topilmadi. Samarqandning yangi sana/manzil/soati noma’lum. 9-oktabr raqami va 13-oktabr tarixiy rejasi bugungi fakt emas. Tashkilotchi Firebase backendini bizning Render+Supabase mahsulotimiz yoki AI kalitlarimiz bilan aralashtirmang.
+Yangi amaliy ish davomiyligi, akkaunt/tarif, himoyada tahrir va oldindan tayyor backend ruxsati tasdiqlanmadi. 120 daqiqa eski loyiha/mashq; 13-oktabr eski ishtirokchi xabari. Bilet, haqiqiy qolgan vaqt va joydagi qoidalar bilan ishlaymiz.
 
 ## START-HERE nimaga xizmat qiladi?
 

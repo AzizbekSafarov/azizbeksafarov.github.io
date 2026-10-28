@@ -3,7 +3,7 @@ from html import escape
 URL = 'https://azizbeksafarov.github.io'
 STEPS = [
  ('Joriy bilet va loyiha holati', None, 'Foydalanuvchining hozirgi topshirig‘i, amaldagi reglament hamda loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon; ularni joriy topshiriq deb olma.'),
- ('Joriy tanlov yangilanishi', '/design/handoff/current-competition.md', '2026-10-28: yangi portal/API, sovrinlar, natija yozuvlari va noma’lum jadval. CURRENT-COMPETITION-FACTS.json tuzilgan snapshot; eski 9-oktabr qaydi joriy ma’lumot emas.'),
+ ('Joriy tanlov yangilanishi', '/design/handoff/current-competition.md', '2026-10-28: nizom, baholash, himoya, amaliy vaqt va ruxsatlar tekshiruvi. CURRENT-COMPETITION-FACTS.json qoida qaydi; loyiha yoki eski xabar yangi tasdiqlangan talab emas.'),
  ('To‘liq tayyorgarlik', '/tayyorgarlik/ai.md', 'START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.'),
  ('Markaziy kontekst', '/ai.md', 'Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.'),
  ('Ish tartibi va holat snapshot’i', '/ish-tartibi/ai.md', 'Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.'),
