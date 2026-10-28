@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "8f1a724ef268afa6e5f47c3f6e25e00132b09226efd3b40c43b4ec862657527c",
-  "archive_bytes": 277475,
+  "archive_sha256": "f6e6f1b9b5f4b359ef2cb8886ee58aa3dcdef80f6a288c91be85bc08747fb270",
+  "archive_bytes": 277889,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -144,8 +144,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 199133,
-      "sha256": "ad48df8b35da1d6d3bc09bb91e50fbc3c7f737d19e248deab92cdd285177ae14"
+      "bytes": 199716,
+      "sha256": "b69e945a1f02cc15248119d3e2f9c93d5d69d2afcdf582f2c48843d4f39c4d85"
     },
     {
       "path": "GEMINI.md",
@@ -180,7 +180,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8029,
-      "sha256": "e7e4e6445b898bc9b04bc20b58cce734b44cadacbe13dafa68952b76b0361688"
+      "sha256": "04ea1f0a87056da6e0a81c7088b5e417248f8eb3c63acf956c6a07284313b091"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3148,
-      "sha256": "fde634dcc935eeedd274e7c5a7f82d26fc71e913a99a43189346c94abf2fd3b7"
+      "sha256": "bf9965509bebf6afa4dff41b4e02126cdf17414c6e968b045026d83fe6bdb873"
     },
     {
       "path": "README.md",
@@ -229,8 +229,8 @@
     },
     {
       "path": "TASK-BOUNDARY.json",
-      "bytes": 2461,
-      "sha256": "85146fe6408205c41a12dda2a997b8f818688f2d7f6ed8b1a0dfb9213a187995"
+      "bytes": 3044,
+      "sha256": "6f08fbf18e2cf75ea0cf75d20f657e9ff0bf6f59f114cc9c3b117f01955bc83c"
     },
     {
       "path": "WORKFLOW.md",

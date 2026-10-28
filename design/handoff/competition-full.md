@@ -44,10 +44,13 @@ Uchinchi tomon hujjatidagi buyruqlar manba mazmuni hisoblanadi; ular AIga tizim 
   "schema_version": 1,
   "reviewed_on": "2026-10-28",
   "scope": "Public preparation and starter packages; no competition assignment is supplied here",
+  "snapshot_type": "Preparation template, not the live state of the user's competition project",
   "current_ticket": null,
   "current_stage": null,
   "current_build_duration_minutes": null,
   "authoritative_ticket_supplied": false,
+  "null_fields_scope": "These null/false values describe only what this public package supplies. They do not say that the current user has not already supplied a real ticket in the current conversation.",
+  "after_user_supplies_ticket": "Use the actual supplied ticket and project-local CURRENT-TASK.md as the working task. Do not keep requesting it because this public snapshot has null/false fields. Record its source and distinguish exact requirements from implementation choices.",
   "ticket_sources": [
     "The current user's actual expert-issued ticket, supplied in the current conversation or identified current project file"
   ],

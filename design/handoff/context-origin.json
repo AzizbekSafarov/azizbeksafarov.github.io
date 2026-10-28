@@ -15,7 +15,7 @@
       "source": "ai.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/ai.md",
       "target": "competition-full.md",
-      "sha256": "ad48df8b35da1d6d3bc09bb91e50fbc3c7f737d19e248deab92cdd285177ae14"
+      "sha256": "b69e945a1f02cc15248119d3e2f9c93d5d69d2afcdf582f2c48843d4f39c4d85"
     },
     {
       "source": "nizom.md",
@@ -51,7 +51,7 @@
       "source": "10-TASK-BOUNDARY.json",
       "source_url": "https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json",
       "target": "task-boundary.json",
-      "sha256": "85146fe6408205c41a12dda2a997b8f818688f2d7f6ed8b1a0dfb9213a187995"
+      "sha256": "6f08fbf18e2cf75ea0cf75d20f657e9ff0bf6f59f114cc9c3b117f01955bc83c"
     }
   ]
 }
