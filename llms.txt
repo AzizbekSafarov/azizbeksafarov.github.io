@@ -19,6 +19,7 @@ User ticket, time and on-site rules take priority. These resources do not guaran
 
 ## System architecture
 
+- [Current competition source review, 2026-10-28](https://azizbeksafarov.github.io/design/handoff/current-competition.md)
 - [AI workflow and possible failure scenarios](https://azizbeksafarov.github.io/ish-tartibi/ai.md)
 - [Dated public status snapshot](https://azizbeksafarov.github.io/ish-tartibi/status.json)
 - [Approved Render + UptimeRobot plan](https://azizbeksafarov.github.io/arxitektura/ai.md)

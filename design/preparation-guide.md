@@ -1,6 +1,12 @@
 # Tanlovda boshlash va to‘liq kontekstni ishlatish
 
-Yangilangan: 2026-10-19. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
+Yangilangan: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
+
+## Joriy tanlov manbasi avval o‘qiladi
+
+2026-10-28 qayta tekshiruv: [CURRENT-COMPETITION.md](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [CURRENT-COMPETITION-FACTS.json](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json). Yangi portal HTML’idagi 16 981 va namunaviy respublika kartalari eski/fallback. API snapshoti 21 020 ariza / veb 6 019; public natija yozuvlari tuman 429, hududiy 3 (Farg‘ona), respublika 0. Bular noyob ishtirokchi yoki joriy jadval isboti emas. Yangi portal egasiga qayta havola ushbu tekshiruvda topilmadi.
+
+16/20-oktabr rasmiy e’lonlari 75/50 mln va Changan UNI-E’ni tasdiqlaydi. Saytdagi nizom PDF’i avvalgi nusxa; loyiha mezonlari tasdiqlangani topilmadi. Samarqandning yangi sana/manzil/soati noma’lum. 9-oktabr raqami va 13-oktabr tarixiy rejasi bugungi fakt emas. Tashkilotchi Firebase backendini bizning Render+Supabase mahsulotimiz yoki AI kalitlarimiz bilan aralashtirmang.
 
 ## START-HERE nimaga xizmat qiladi?
 
@@ -11,7 +17,7 @@ Foydalanuvchi “.io ni to‘liq o‘qi” desa, quyidagi to‘liq rejim qo‘ll
 ## To‘liq o‘qish yo‘li
 
 1. Joriy topshiriq, bilet, qolgan vaqt va loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon.
-2. PREPARATION.md — ushbu qo‘llanma; WORKFLOW.md va PROJECT-STATUS.json — ish tartibi, reja/haqiqiy holat va xavflar.
+2. CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json — yangi manba tekshiruvi; so‘ng PREPARATION.md — ushbu qo‘llanma; WORKFLOW.md va PROJECT-STATUS.json — ish tartibi, reja/haqiqiy holat va xavflar.
 3. ARCHITECTURE.md — landing, animatsiya, kabinet, workspace, data oqimi va sifat mezonlari. API-GUIDE.md va API-EVIDENCE.json — kalitsiz, sanali dalil va provayder chegaralari.
 4. CONTEXT-STATUS.md, SCORING-WORKPLAN.md, FULL-COMPETITION-CONTEXT.md va REGULATIONS.md — manba maqomi, baholash, to‘liq tadqiqot va qisqartirilmagan nizom. Imzoli qaror, sayt tahriri va mezonlar loyihasini bitta yangi rasmiy reglamentga birlashtirmang. Ziddiyat bo‘lsa tegishli manbalarni ko‘rsatib, aynan joriy bosqich talabi aniqlanmaguncha taxminni fakt qilmang.
 5. Tanlangan dizaynning AI-BRIEF.md, AGENTS.md, README.md, DESIGN-STANDARD.md, CHECKLIST.md va haqiqiy site/ kodi. Header/footer, font, ikonka, rasm, mobile navigation va motion ham dizaynning qismi.

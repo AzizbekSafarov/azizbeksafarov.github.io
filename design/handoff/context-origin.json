@@ -1,38 +1,51 @@
 {
   "schema_version": 1,
-  "research_as_of": "2026-10-09",
-  "package_edited_at": "2026-10-18",
+  "research_as_of": "2026-10-28",
+  "historical_research_as_of": "2026-10-09",
+  "package_edited_at": "2026-10-28",
   "source_repository": "https://github.com/AzizbekSafarov/ustoz",
   "files": [
     {
       "source": "00-START-HERE.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/00-START-HERE.md",
       "target": "competition.md",
-      "sha256": "7350860fb16f4094f7d0a6ed54167f5ee580ea59234213ed6893d0db682875c0"
+      "sha256": "649e5e810230f215ddcabed993a05fa139b6e8c0bda975f3820cf7189cf5a183"
     },
     {
       "source": "ai.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/ai.md",
       "target": "competition-full.md",
-      "sha256": "489a50fa0119822907130620a1e3cd03f22f8fb683a23293aa69119a9d314aad"
+      "sha256": "fb5d06b3dbf036b2c83cfe55e0e8bb34b9b3b245dc98bfd4df382774ea3c9473"
     },
     {
       "source": "nizom.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/nizom.md",
       "target": "regulations.md",
-      "sha256": "68e54693230eee476ed67e94dfc536eae690fd9aa72205cdf36b862bac95395e"
+      "sha256": "050c6302e57e14ef6901870456cf191fc7b23ffef3220678ef38497d170f7a89"
     },
     {
       "source": "CONTEXT-STATUS.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md",
       "target": "context-status.md",
-      "sha256": "bdbe5ad6fe2c45a84aa708d4c02a4380ebc643d4f2a46157f16dd7bb7c263381"
+      "sha256": "5527e09682acc560c46775979c3d3e669ead10f0f2d092dc39152fa726e0d41e"
     },
     {
       "source": "06-SCORE-WORKPLAN.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/06-SCORE-WORKPLAN.md",
       "target": "score-workplan.md",
-      "sha256": "9c4f3c6a2293808b83676c4739fc4889d40162f614d1d26d0d4bca6331000466"
+      "sha256": "f92dd5e2f05abb585fbe6b7b7cb8d2d6ba760b475c9b458de23745a32fcd1477"
+    },
+    {
+      "source": "08-CURRENT.md",
+      "source_url": "https://azizbeksafarov.github.io/ustoz/08-CURRENT.md",
+      "target": "current-competition.md",
+      "sha256": "815eea07c8573252904ca01941c409de9f5438f1aae7a1ff0cc5bfd7a2bea9ea"
+    },
+    {
+      "source": "09-CURRENT-FACTS.json",
+      "source_url": "https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json",
+      "target": "current-competition-facts.json",
+      "sha256": "e36e6e63774177526f9da41af794a9e57237c5645d29e7a836c20307da497594"
     }
   ]
 }

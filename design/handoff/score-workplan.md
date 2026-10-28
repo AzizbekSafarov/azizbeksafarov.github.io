@@ -1,5 +1,7 @@
 # Mezonlar bo‘yicha professional ish va dalil rejasi
 
+2026-10-28 tekshiruvi: 6 mezon/100 ball amaliyotiga yangi rasmiy xabar bor; aniq kichik mezonlar loyihasining tasdig‘i topilmadi. Asl PDFlar o‘zgarmagan. [Joriy holat](08-CURRENT.md).
+
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
 Asosiy 6 mezon mahalliy qarordan. Quyidagi 21 kichik ko‘rsatkich tasdiqqa taqdim etilgan loyiha hujjatidan; tayyorgarlik uchun qo‘llanadi. Yakuniy bilet va reglament ustuvor. Ballni ekspert beradi, reja esa tekshiriladigan dalil tayyorlaydi.

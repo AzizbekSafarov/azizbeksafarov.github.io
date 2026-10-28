@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-18",
+  "snapshot_date": "2026-10-28",
   "scope": "Public preparation snapshot, not live infrastructure status",
   "approved_stack": {
     "hosting": "Render Web Service: frontend + Node.js API",
@@ -23,6 +23,13 @@
       "evidence": "/api/verification.json"
     }
   ],
+  "competition_source_update": {
+    "as_of": "2026-10-28",
+    "report": "/design/handoff/current-competition.md",
+    "facts": "/design/handoff/current-competition-facts.json",
+    "not_live": true,
+    "provider_connectivity_evidence_date": "2026-10-18"
+  },
   "planned": [
     "competition Render service",
     "UptimeRobot monitor",
@@ -44,6 +51,7 @@
   ],
   "reading_order": [
     "current user ticket and project-local CURRENT-TASK.md / HANDOFF.md; public copies are templates",
+    "/design/handoff/current-competition.md and current-competition-facts.json",
     "/tayyorgarlik/ai.md; full-context.md or reading-plan.json for full reading",
     "/ai.md",
     "/ish-tartibi/ai.md",

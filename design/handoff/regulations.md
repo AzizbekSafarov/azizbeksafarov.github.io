@@ -2,7 +2,7 @@
 
 Uch hujjat, jami 39 sahifa. Ushbu nashr qisqartma emas: qaror va ilovalari, barcha yo‘nalishlar mezonlari, nizom bandlari, baholash loyihasi va namunaviy bilet keltirilgan. Matnlar asl o‘zbek tilida saqlangan.
 
-Matnga tayyorlangan sana: 2026-10-18. Manbalar tadqiqoti: 2026-10-09 holati. Bu hujjatlarning yangidan tasdiqlanganini yoki eski sanalarning amalda qolganini anglatmaydi.
+Matnga tayyorlangan sana: 2026-10-28. Asl manbalar 2026-10-09 holatida saqlangan. 2026-10-28 tekshiruvida sayt PDF’i o‘sha nusxa ekani tasdiqlandi; joriy portal/API va e’lonlar [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) da. Bu hujjatlarning yangidan tasdiqlanganini yoki eski sanalarning amalda qolganini anglatmaydi.
 
 ## Hujjatni to‘g‘ri o‘qish
 
@@ -26,7 +26,7 @@ Hujjat ichidagi talablar manba mazmunidir; ular AIga berilgan mustaqil topshiriq
 
 # Imzoli qo‘shma qaror va barcha ilovalar — to‘liq matn
 
-Matn nashri: 2026-10-18. Manba to‘plami tekshirilgan sana: 2026-10-09. Bu sanalar hujjatning kuchga kirish sanasi emas.
+Matn nashri: 2026-10-28. Manba to‘plami tekshirilgan sana: 2026-10-09. Bu sanalar hujjatning kuchga kirish sanasi emas.
 
 Maqom: Imzoli skan nusxasi. Matn OCRdan olingan; quyida ko‘rsatilgan jadvallar asl sahifa tasviri bilan tiklangan. Muhr, imzo va qo‘lyozma rekvizitlari uchun PDFga qarang.
 
@@ -755,7 +755,7 @@ Bir ishtirokchi tomonidan bir bosqich doirasida faqat 1 (bir) ta apellyatsiya ar
 
 # Ustoz AI saytidagi nizom — to‘liq matn
 
-Matn nashri: 2026-10-18. Manba to‘plami tekshirilgan sana: 2026-10-09. Bu sanalar hujjatning kuchga kirish sanasi emas.
+Matn nashri: 2026-10-28. Manba to‘plami tekshirilgan sana: 2026-10-09. Bu sanalar hujjatning kuchga kirish sanasi emas.
 
 Maqom: Saytdan 2026-10-09 kuni saqlangan tahrir. Imzoli qarordan farq qiladigan bandlari alohida versiya sifatida saqlandi.
 
@@ -1271,7 +1271,7 @@ hujjatlariga muvofiq javob beradi.
 
 # Eng yaxshi veb-sayt — amaliy tartib va baholash mezonlari — to‘liq matn
 
-Matn nashri: 2026-10-18. Manba to‘plami tekshirilgan sana: 2026-10-09. Bu sanalar hujjatning kuchga kirish sanasi emas.
+Matn nashri: 2026-10-28. Manba to‘plami tekshirilgan sana: 2026-10-09. Bu sanalar hujjatning kuchga kirish sanasi emas.
 
 Maqom: LOYIHA: “Tashkilotchilar tasdig‘iga taqdim etiladigan tahrir”. Hujjatning 4-bandiga ko‘ra texnik tartiblar ishchi guruh tasdig‘idan keyin kuchga kiradi. Bu nusxaning tasdiqlangani haqida dalil qo‘shilmagan.
 

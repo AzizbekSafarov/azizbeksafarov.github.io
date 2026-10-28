@@ -7,6 +7,8 @@ from html import escape
 ROOT = Path(__file__).resolve().parent
 SITE = ROOT.parent
 COMMON = [
+ ('CURRENT-COMPETITION.md','design/handoff/current-competition.md'),
+ ('CURRENT-COMPETITION-FACTS.json','design/handoff/current-competition-facts.json'),
  ('PREPARATION.md','design/preparation-guide.md'),
  ('WORKFLOW.md','ish-tartibi/ai.md'),
  ('PROJECT-STATUS.json','ish-tartibi/status.json'),
@@ -63,7 +65,7 @@ def build():
     (folder/'full-context.md').write_text(full,encoding='utf-8',newline='\n')
     (folder/'ai.md').write_text(normalized('design/preparation-guide.md'),encoding='utf-8',newline='\n')
     (folder/'READ-RECEIPT.md').write_text(RECEIPT,encoding='utf-8',newline='\n')
-    (folder/'reading-plan.json').write_text(json.dumps({'schema_version':1,'updated':'2026-10-19',
+    (folder/'reading-plan.json').write_text(json.dumps({'schema_version':1,'updated':'2026-10-28',
         'full_context_url':'https://azizbeksafarov.github.io/tayyorgarlik/full-context.md',
         'full_context_sha256':sha256(full.encode()).hexdigest(),'full_context_bytes':len(full.encode()),
         'documents':entries,'selected_design':'Read manifest and full source archive for only the selected design.',
@@ -73,7 +75,7 @@ def build():
 def build_page():
     from workspace_hq import frame
     from build_handoff import render_md
-    content='''<div class="document-page"><p class="eyebrow">BILETDAN OLDIN → YANGI AI → TO‘LIQ LOYIHA</p><h1>Tayyorgarlik joyida.<br>Asosni yo‘qotmang.</h1><p class="document-lead">Sizning vazifangiz, AI o‘qiydigan manbalar, dizaynni to‘liq olish va brendni izchil moslashtirish — bitta yo‘lda.</p><div class="blueprint-actions"><a class="button dark" href="/design/start/">Bilet va dizaynni berish ↗</a><a href="/tayyorgarlik/full-context.md">To‘liq umumiy kontekst ↓</a><a href="/tayyorgarlik/reading-plan.json">Fayllar xaritasi ↗</a><a href="/design/get_starter.py" download>Tekshirib olish yordamchisi ↓</a></div><nav aria-label="Tayyorgarlik yo‘li"><p><strong>Siz:</strong> bilet + dizayn + vaqt + joydagi qoidalar.</p><p><strong>AI:</strong> to‘liq kontekst → asl paket → bitta ishlaydigan oqim → tekshiruv → topshirish.</p></nav><details><summary>To‘liq o‘qish va moslashtirish qo‘llanmasi</summary><article class="prose">'''+render_md(normalized('design/preparation-guide.md'))+'''</article></details><p class="context-explainer">Kirish matni mundarija. <a href="/tayyorgarlik/ai.md">Ushbu qo‘llanma Markdown’da</a> · <a href="/tayyorgarlik/READ-RECEIPT.md">O‘qish qaydi shabloni</a>. To‘liq nizom va tadqiqot yig‘ma faylda qisqartirilmagan; boshqa dizaynlarning kodini birdan o‘qish talab qilinmaydi.</p></div>'''
+    content='''<div class="document-page"><p class="eyebrow">BILETDAN OLDIN → YANGI AI → TO‘LIQ LOYIHA</p><h1>Tayyorgarlik joyida.<br>Asosni yo‘qotmang.</h1><p class="document-lead">Sizning vazifangiz, AI o‘qiydigan manbalar, dizaynni to‘liq olish va brendni izchil moslashtirish — bitta yo‘lda.</p><div class="blueprint-actions"><a class="button dark" href="/design/start/">Bilet va dizaynni berish ↗</a><a href="/tayyorgarlik/full-context.md">To‘liq umumiy kontekst ↓</a><a href="/tayyorgarlik/reading-plan.json">Fayllar xaritasi ↗</a><a href="/design/get_starter.py" download>Tekshirib olish yordamchisi ↓</a></div><p class="context-explainer"><strong>2026-10-28 tanlov yangilanishi:</strong> <a href="/design/handoff/current-competition.md">Yangi portal/API, natijalar va rasmiy sovrinlar →</a>. Eski nizom va statistikalar manba sanasi bilan ajratilgan.</p><nav aria-label="Tayyorgarlik yo‘li"><p><strong>Siz:</strong> bilet + dizayn + vaqt + joydagi qoidalar.</p><p><strong>AI:</strong> to‘liq kontekst → asl paket → bitta ishlaydigan oqim → tekshiruv → topshirish.</p></nav><details><summary>To‘liq o‘qish va moslashtirish qo‘llanmasi</summary><article class="prose">'''+render_md(normalized('design/preparation-guide.md'))+'''</article></details><p class="context-explainer">Kirish matni mundarija. <a href="/tayyorgarlik/ai.md">Ushbu qo‘llanma Markdown’da</a> · <a href="/tayyorgarlik/READ-RECEIPT.md">O‘qish qaydi shabloni</a>. To‘liq nizom va tadqiqot yig‘ma faylda qisqartirilmagan; boshqa dizaynlarning kodini birdan o‘qish talab qilinmaydi.</p></div>'''
     (SITE/'tayyorgarlik/index.html').write_text(frame('Tanlovga tayyorgarlik',content,'preparation'),encoding='utf-8',newline='\n')
 
 if __name__=='__main__':

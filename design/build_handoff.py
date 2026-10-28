@@ -14,8 +14,10 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
-DATE = '2026-10-19'
+DATE = '2026-10-28'
 CONTEXT_FILES = {
+    'CURRENT-COMPETITION.md': 'design/handoff/current-competition.md',
+    'CURRENT-COMPETITION-FACTS.json': 'design/handoff/current-competition-facts.json',
     'PREPARATION.md': 'design/preparation-guide.md',
     'WORKFLOW.md': 'ish-tartibi/ai.md',
     'ARCHITECTURE.md': 'arxitektura/ai.md',
@@ -385,7 +387,7 @@ def build():
         t['fingerprint']=digest(''.join(path+':'+digest(data)+'\n' for path,data in sorted(files.items())).encode())
         brief=ai_brief(t);folder=ROOT/t['slug']
         heading,body=brief.split('\n',1)
-        context_notice='KONTEKST MAQOMI: tadqiqot 2026-10-09 holatida. 2026-10-13 — ishtirokchi oldin bildirgan tarixiy reja; joriy bosqich yoki natija tasdiqlanmagan. Hozirgi bilet/vaqt/reglament ustuvor. '+f'[Manbalar maqomi]({SITE}/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.\n'
+        context_notice='KONTEKST MAQOMI: joriy ochiq manbalar tekshiruvi 2026-10-28; eski tadqiqot 2026-10-09 holatida tarixiy. Yangi portal/API va rasmiy sovrin e’lonlari CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json da. 13-oktabr — oldingi ishtirokchi xabari; yangi Samarqand jadvali yoki joriy bilet tasdiqlanmadi. Hozirgi topshiriq/reglament ustuvor. '+f'[Manbalar maqomi]({SITE}/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.\n'
         workflow_notice=f'\n## Joriy ish tartibi va arxitektura\n\nAvval joriy bilet va loyiha CURRENT-TASK.md / HANDOFF.md’ini tekshir. [Ish tartibi]({SITE}/ish-tartibi/ai.md) hamda [holat snapshot’i]({SITE}/ish-tartibi/status.json) qaror, dalil, reja va noma’lumlarni ajratadi. Tasdiqlangan reja: Render frontend + Node API, Supabase Auth/DB/RLS, zaruratga mos AI/Telegram va UptimeRobot monitoringi. Xizmatlar hali yaratilgan deb hisoblanmaydi. ZIP ichida WORKFLOW.md, ARCHITECTURE.md, API-GUIDE.md va PROJECT-STATUS.json bor. Uslub demo source’da; backendni bilet va foydalanuvchining joriy topshirig‘iga mos qur.\n'
         completeness_notice=f'\n## Mezon va to‘liq manbani o‘tkazib yuborma\n\nTanlov ishida [baholashdan ish va dalil rejasiga]({SITE}/design/handoff/score-workplan.md) hamda qisqa tanlov kontekstini o‘qi. Talab → amal → qabul sinovi → taqdimot dalilini yoz. 21 kichik ko‘rsatkich loyiha tahriridan; amaldagi reglament deb taxmin qilma. ZIP ichida SCORING-WORKPLAN.md, qisqartirilmagan FULL-COMPETITION-CONTEXT.md va uch hujjatning to‘liq REGULATIONS.md matni mavjud. Ushbu boshlash yo‘riqnomasi ularning o‘rnini bosmaydi. To‘liq o‘qish so‘ralganda manbani bo‘limlar bo‘yicha to‘liq o‘qi, o‘qilmay qolganini yashirma.\n'
         brief=heading+'\n\n'+context_notice+workflow_notice+completeness_notice+'\n## To‘liq kontekst va kamchiliksiz paket\n\nSTART-HERE — mundarija, to‘liq o‘qish o‘rnini bosmaydi. [Tanlovga tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) va [yig‘ma to‘liq matn](https://azizbeksafarov.github.io/tayyorgarlik/full-context.md). Paket ichida PREPARATION.md, READING-PLAN.json, READ-RECEIPT.md va BRAND-ASSETS.json bor. Fayl yo‘llarini manifestdan oling; boshqa dizayndagi nomni taxmin qilmang. To‘liq source ZIPni oling va hashini tekshiring; faqat HTML parchasidan qayta qurish ishlaydigan dizaynni yo‘qotishi mumkin.\n'+body
@@ -438,7 +440,7 @@ Tanlangan dizayn: {t['slug']}. Kod: site/. Bu faqat shu dizayn paketi.
 Bu fayl mundarija. PREPARATION.md va READING-PLAN.json to‘liq o‘qiladigan manbalarni sanaydi; READ-RECEIPT.md o‘qilganlikni halol qayd qilish uchun bo‘sh shablon. START-HERE yoki AI-BRIEF bilan cheklanib to‘liq o‘qidim demang.
 
 1. Joriy foydalanuvchi bileti, CURRENT-TASK.md va HANDOFF.md holatini tekshir. PREPARATION.md’ni o‘qi.
-2. AGENTS.md, AI-BRIEF.md, WORKFLOW.md va PROJECT-STATUS.json ni o‘qi.
+2. CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json, so‘ng AGENTS.md, AI-BRIEF.md, WORKFLOW.md va PROJECT-STATUS.json ni o‘qi.
 3. COMPETITION.md va SCORING-WORKPLAN.md ni o‘qi; qabul sinovi hamda himoya dalilini talablar bilan bog‘la. Tafsilotdagi 21 mezon loyiha tahriridan, amaldagi reglament ustuvor.
 4. ARCHITECTURE.md / API-GUIDE.md va faqat tanlangan source fayllarini o‘qi.
 5. To‘liq tadqiqot FULL-COMPETITION-CONTEXT.md’da; uch hujjatning qisqartirilmagan 39 sahifasi REGULATIONS.md’da. To‘liq o‘qish so‘ralsa bo‘limlarni to‘liq o‘qi; o‘qilmaganini ochiq ayt. Qisqa kirish matni to‘liq manba o‘rniga o‘tmaydi.

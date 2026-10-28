@@ -1,6 +1,6 @@
 # AI bilan ish tartibi va ehtimoliy muammolar
 
-Snapshot: 2026-10-18. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
+Snapshot: 2026-10-28. Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
 
 ## 1. Avval joriy vazifani bil
 
@@ -11,12 +11,13 @@ Havolani ochganing avtomatik doimiy xotira, akkauntga kirish yoki fayl tahrirlas
 ## 2. O‘qish tartibi
 
 1. Joriy bilet va loyiha holati — Foydalanuvchining hozirgi topshirig‘i, amaldagi reglament hamda loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon; ularni joriy topshiriq deb olma.
-2. [To‘liq tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.
-3. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
-4. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
-5. [Tanlov konteksti va mezonlar](https://azizbeksafarov.github.io/design/handoff/competition.md) — /design/handoff/score-workplan.md bilan talab → qabul dalilini bog‘la. /ustoz/CONTEXT-STATUS.md va to‘liq nizom /ustoz/nizom.md manba maqomini tushuntiradi; to‘liq matn kerak bo‘lsa qisqa kirish bilan almashtirma.
-6. [Arxitektura va API](https://azizbeksafarov.github.io/arxitektura/ai.md) — /api/ai.md bilan birga sahifa rollari, server chegarasi, kvota, xavfsizlik va sifat mezonlarini o‘qi. Rejalashtirilgan xizmatni yaratilgan deb hisoblama.
-7. [Bitta tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.
+2. [Joriy tanlov yangilanishi](https://azizbeksafarov.github.io/design/handoff/current-competition.md) — 2026-10-28: yangi portal/API, sovrinlar, natija yozuvlari va noma’lum jadval. CURRENT-COMPETITION-FACTS.json tuzilgan snapshot; eski 9-oktabr qaydi joriy ma’lumot emas.
+3. [To‘liq tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.
+4. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
+5. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
+6. [Tanlov konteksti va mezonlar](https://azizbeksafarov.github.io/design/handoff/competition.md) — /design/handoff/score-workplan.md bilan talab → qabul dalilini bog‘la. /ustoz/CONTEXT-STATUS.md va to‘liq nizom /ustoz/nizom.md manba maqomini tushuntiradi; to‘liq matn kerak bo‘lsa qisqa kirish bilan almashtirma.
+7. [Arxitektura va API](https://azizbeksafarov.github.io/arxitektura/ai.md) — /api/ai.md bilan birga sahifa rollari, server chegarasi, kvota, xavfsizlik va sifat mezonlarini o‘qi. Rejalashtirilgan xizmatni yaratilgan deb hisoblama.
+8. [Bitta tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.
 
 Tanlov loyihasini boshlashda qisqa tanlov konteksti va /design/handoff/score-workplan.md’ni ham o‘qi. ZIP ichida SCORING-WORKPLAN.md va FULL-COMPETITION-CONTEXT.md mavjud. Mezonlar, himoya va topshirish dalillari faqat dizayn kodi o‘qilgani bilan qamrab olinmaydi. To‘liq manba so‘ralganda qisqa boshlash matni bilan almashtirma; uzun manbani bo‘limlar bo‘yicha to‘liq o‘qi va o‘qilmagan qismini ochiq ayt.
 

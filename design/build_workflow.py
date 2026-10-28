@@ -7,7 +7,7 @@ from context_reading import markdown as reading_markdown, html as reading_html, 
 
 SITE = Path(__file__).resolve().parent.parent
 URL = 'https://azizbeksafarov.github.io'
-DATE = '2026-10-18'
+DATE = '2026-10-28'
 
 RISKS = [
  ('oauth','Google login’dan keyin kabinet ochilmaydi','Kirish oynasi ishlaydi, lekin saytga qaytganda sessiya yo‘q yoki yuklanish tugamaydi.',
@@ -200,7 +200,7 @@ Secret, session cookie, haqiqiy request body yoki shaxsiy ma’lumotni log/namun
 
 INTRO = '''# AI bilan ish tartibi va ehtimoliy muammolar
 
-Snapshot: 2026-10-18. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
+Snapshot: 2026-10-28. Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
 
 ## 1. Avval joriy vazifani bil
 
@@ -322,6 +322,7 @@ Asosiy foydalanuvchi oqimi haqiqiy muhitda ishlaydi; ma’lumot saqlanishi tasdi
       'schema_version': 1, 'snapshot_date': DATE, 'scope': 'Public preparation snapshot, not live infrastructure status',
       'approved_stack': {'hosting': 'Render Web Service: frontend + Node.js API', 'monitoring': 'UptimeRobot GET /health every 5 minutes', 'backend': 'Supabase PostgreSQL/Auth/RLS/Storage', 'login': 'Google OAuth through Supabase', 'ai': ['Groq', 'Gemini'], 'messaging': 'Telegram Bot API'},
       'verified': [{'item': 'Published design library', 'evidence': '/design/catalog.json'}, {'item': 'Dated provider connectivity probes only', 'evidence': '/api/verification.json'}],
+      'competition_source_update': {'as_of':'2026-10-28','report':'/design/handoff/current-competition.md','facts':'/design/handoff/current-competition-facts.json','not_live':True,'provider_connectivity_evidence_date':'2026-10-18'},
       'planned': ['competition Render service', 'UptimeRobot monitor', 'competition Supabase project', 'Google OAuth client/redirect setup', 'end-to-end app/AI/Telegram integration'],
       'unknown': ['current ticket', 'remaining competition time', 'on-site account/template permissions', 'final product domain', 'provider billing tiers', 'whether backup keys have independent quotas'],
       'historical_alternatives': ['Cloudflare frontend hosting', 'Vercel competition frontend hosting'],
