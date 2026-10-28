@@ -2,8 +2,8 @@
   "schema_version": 1,
   "updated": "2026-10-28",
   "full_context_url": "https://azizbeksafarov.github.io/tayyorgarlik/full-context.md",
-  "full_context_sha256": "1f8c9fede51f5efc0b7a6965e61aeb2a8ba1fae5e23559c12b39daa08f38d68e",
-  "full_context_bytes": 429497,
+  "full_context_sha256": "1c5e24e7452672beee01191605f09b3d5f227fe03583dc1469760d8a05dbca80",
+  "full_context_bytes": 429613,
   "documents": [
     {
       "package_path": "TASK-BOUNDARY.json",
@@ -96,26 +96,26 @@
     {
       "package_path": "FULL-COMPETITION-CONTEXT.md",
       "source_url": "https://azizbeksafarov.github.io/design/handoff/competition-full.md",
-      "bytes": 199716,
-      "sha256": "b69e945a1f02cc15248119d3e2f9c93d5d69d2afcdf582f2c48843d4f39c4d85",
+      "bytes": 199832,
+      "sha256": "a01c5fd806b9f5ce3c77ec00ba573dce61bc6b24b30b8fd43b90eb709a7e5db9",
       "start_line": 1163,
-      "end_line": 4241
+      "end_line": 4242
     },
     {
       "package_path": "REGULATIONS.md",
       "source_url": "https://azizbeksafarov.github.io/design/handoff/regulations.md",
       "bytes": 118270,
       "sha256": "6d0abf160a76c8d40820b84bdb37c3b3b33990320168a828cf603eb8ccff8698",
-      "start_line": 4247,
-      "end_line": 6105
+      "start_line": 4248,
+      "end_line": 6106
     },
     {
       "package_path": "DESIGN-STANDARD.md",
       "source_url": "https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md",
       "bytes": 7444,
       "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6",
-      "start_line": 6111,
-      "end_line": 6179
+      "start_line": 6112,
+      "end_line": 6180
     }
   ],
   "selected_design": "Read manifest and full source archive for only the selected design.",

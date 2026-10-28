@@ -512,7 +512,8 @@ Mahalliy batafsil texnik mezonlar PDFi tasdiqqa taqdim etilgan loyiha edi;
 hozir berilgan bilet va reglamentga amal qil.
 Sen asosiy kod yozuvchi va tekshiruvchi, men vazifa va himoyani boshqaraman.
 Avval majburiy ishlaydigan amallar, keyin dizayn va foydali kreativ detal.
-Mavjud fayllarni o‘qi, qisqa reja tuz va ishni boshlagin.
+Haqiqiy bilet berilgan bo‘lsa, mavjud fayllarni o‘qi, reja tuz va ishni boshlagin.
+Bilet hali berilmagan bo‘lsa uni so‘ra; demo yoki manba namunasidan vazifa chiqarma.
 Har muhim bosqichda ishlaydigan holat va qolgan ishni qisqa ayt.
 Bilmagan faktni yoki o‘tkazilmagan sinovni bajarilgan deb ko‘rsatma.
 ```

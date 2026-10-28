@@ -117,6 +117,7 @@ def verify():
                         assert target in names or target.rstrip('/')+'/index.html' in names, f'{template["slug"]}!{name}: missing package link {url}'
                         count += 1
             package_plan = json.loads(archive.read('READING-PLAN.json'))
+            assert [entry['path'] for entry in package_plan['documents'][:2]] == ['CURRENT-TASK.md', 'HANDOFF.md']
             assert json.loads(archive.read('TASK-BOUNDARY.json')) == boundary
             assert 'TASK-BOUNDARY.json' in {entry['path'] for entry in package_plan['documents']}
             for entry in package_plan['documents']:
@@ -136,6 +137,10 @@ def verify():
     with zipfile.ZipFile(SITE/'design/kit.zip') as library:
         assert json.loads(library.read('TASK-BOUNDARY.json')) == boundary
         assert 'TASK-BOUNDARY.json' in {entry['path'] for entry in json.loads(library.read('READING-PLAN.json'))['documents']}
+        assert 'REGULATIONS.md' in library.namelist() and 'CONTEXT-STATUS.md' in library.namelist()
+        assert library.read('REGULATIONS.md') == library.read('competition/REGULATIONS.md')
+        assert library.read('CONTEXT-STATUS.md') == library.read('competition/CONTEXT-STATUS.md')
+        assert 'Umumiy kit ildizida preview server yo‘q' in library.read('index.html').decode('utf-8')
 
     evidence = json.loads((SITE/'api/verification.json').read_text(encoding='utf-8'))
     assert evidence['tested_on'] == '2026-10-18', 'Document review must not silently redate old API probes'

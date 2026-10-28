@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "74b7ae8c6bf7f8e08f8934340e95b6de6fbe3c5fcaa45fc4737faf9034373eff",
-  "archive_bytes": 267951,
+  "archive_sha256": "79d12ac6bcc5620676f368710d44da5e9d9dbe6498bcd6a07563195f5a310f92",
+  "archive_bytes": 268093,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -144,8 +144,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 199716,
-      "sha256": "b69e945a1f02cc15248119d3e2f9c93d5d69d2afcdf582f2c48843d4f39c4d85"
+      "bytes": 199832,
+      "sha256": "a01c5fd806b9f5ce3c77ec00ba573dce61bc6b24b30b8fd43b90eb709a7e5db9"
     },
     {
       "path": "GEMINI.md",
@@ -180,7 +180,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8001,
-      "sha256": "a58adb84c9f16fab2f11a1daeaab1cc2af820cc6f12e3ffc6d0899ff12fac978"
+      "sha256": "92a7c8a14d4f05babcdea30e98068d82063763959864c63ddfabfd628a7d9a79"
     },
     {
       "path": "PREPARATION.md",
@@ -204,8 +204,8 @@
     },
     {
       "path": "READING-PLAN.json",
-      "bytes": 3148,
-      "sha256": "6092e579b7c2c1bda30e9f7288ddf0736dde9a47e9a49f118318d952e98dda92"
+      "bytes": 3442,
+      "sha256": "9bbca0fa90ad3b5f2cf7c7ef7d2c3cabbbbd0bbafd1ade11a92836d3158e183f"
     },
     {
       "path": "README.md",

@@ -22,7 +22,7 @@
 
 Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.
 
-Bu ochiq paket haqiqiy bilet bermaydi. TASK-BOUNDARY.json ni o‘qi; demo mazmun, tarixiy reja va nizom loyihasidagi namuna joriy vazifa emas. Biletni foydalanuvchi bermaguncha mavzu o‘ylab topma.
+Bu ochiq paket haqiqiy bilet bermaydi. [Topshiriq chegarasi](https://azizbeksafarov.github.io/design/handoff/task-boundary.json) ZIP ichida TASK-BOUNDARY.json; uni o‘qi; demo mazmun, tarixiy reja va nizom loyihasidagi namuna joriy vazifa emas. Biletni foydalanuvchi bermaguncha mavzu o‘ylab topma.
 
 ## Joriy ish tartibi va server rejasi
 

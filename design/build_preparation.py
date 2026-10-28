@@ -46,7 +46,7 @@ def normalized(path):
     return text if text.endswith('\n') else text+'\n'
 
 def package_plan(files):
-    names=[n for n,_ in COMMON]+['AI-BRIEF.md','AGENTS.md','README.md','CHECKLIST.md']
+    names=['CURRENT-TASK.md','HANDOFF.md']+[n for n,_ in COMMON]+['AI-BRIEF.md','AGENTS.md','README.md','CHECKLIST.md']
     return json.dumps({'schema_version':1,'mode':'full-context plus selected design',
       'meaning':'Reading map, not evidence that an agent has read these files. Current user task and local project state take priority.',
       'documents':[{'path':n,'bytes':len(files[n]),'sha256':sha256(files[n]).hexdigest()} for n in names],

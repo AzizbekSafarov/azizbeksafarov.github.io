@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "bbe4ed23f9e44333e5da4c8383f320db912d2445a92dbf3dd7a40d705326fe81",
-  "archive_bytes": 519611,
+  "archive_sha256": "4a5a2229f3063fe443127acde74a6f361dda791ab98fe4a65e12b954f73f2f38",
+  "archive_bytes": 519738,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -150,8 +150,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 199716,
-      "sha256": "b69e945a1f02cc15248119d3e2f9c93d5d69d2afcdf582f2c48843d4f39c4d85"
+      "bytes": 199832,
+      "sha256": "a01c5fd806b9f5ce3c77ec00ba573dce61bc6b24b30b8fd43b90eb709a7e5db9"
     },
     {
       "path": "GEMINI.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8469,
-      "sha256": "eb2e97aded22adc684c01bd9f90879cea5d5f91a4fde1c4f100e71080016f0b1"
+      "sha256": "59646fc3ae196d106bdb423919210573623cd3773f57379b12c1d8d65b1a7226"
     },
     {
       "path": "PREPARATION.md",
@@ -210,8 +210,8 @@
     },
     {
       "path": "READING-PLAN.json",
-      "bytes": 3148,
-      "sha256": "d9baa110727052f3885601f5b108a4c18805cd56ec40189d6db629ae70c10235"
+      "bytes": 3442,
+      "sha256": "9bdacf82fc49b9c4667937683c86b832576bacd92dd05543cb32e651bf0277ff"
     },
     {
       "path": "README.md",
