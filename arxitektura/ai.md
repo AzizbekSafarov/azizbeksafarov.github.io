@@ -216,7 +216,7 @@ Tayyor: .io dizayn kutubxonasi va ko‘chiriladigan kod; sanali rasmiy API ulani
 
 O‘qish tartibi:
 
-1. Joriy bilet va loyiha holati — Foydalanuvchining hozirgi topshirig‘i, amaldagi reglament hamda loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon; ularni joriy topshiriq deb olma.
+1. Joriy bilet va loyiha holati — Bu ochiq to‘plamda haqiqiy bilet yo‘q. /design/handoff/task-boundary.json manba rollarini ajratadi. Biletni foydalanuvchi beradi; yo‘q bo‘lsa so‘ra, mavzu o‘ylab topma. CURRENT-TASK.md / HANDOFF.md ommaviy nusxalari bo‘sh shablon. Dizayn demo yozuvlari va nizom loyihasidagi namunaviy bilet joriy topshiriq emas.
 2. [Joriy tanlov yangilanishi](https://azizbeksafarov.github.io/design/handoff/current-competition.md) — 2026-10-28: nizom, baholash, himoya, amaliy vaqt va ruxsatlar tekshiruvi. CURRENT-COMPETITION-FACTS.json qoida qaydi; loyiha yoki eski xabar yangi tasdiqlangan talab emas.
 3. [To‘liq tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.
 4. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.

@@ -54,6 +54,19 @@ def exists(target):
 
 
 def verify():
+    boundary = json.loads((SITE/'design/handoff/task-boundary.json').read_text(encoding='utf-8'))
+    assert boundary['current_ticket'] is None and boundary['authoritative_ticket_supplied'] is False
+    assert boundary['current_stage'] is None and boundary['current_build_duration_minutes'] is None
+    assert boundary['source_example']['pdf_page'] == 11
+    assert not (RESEARCH/'transcripts/initial-brief-20261018.md').exists(), 'Retired instruction copy must not reappear'
+    if RESEARCH.is_dir():
+        workflow = (RESEARCH/'02-WORKFLOW.md').read_text(encoding='utf-8')
+        assert '10–13-oktabr mashq jadvali' not in workflow
+        assert '120 daqiqalik mashq rejimi' not in workflow
+        assert not re.search(r'^\d+ daqiqa qoldi\.', workflow, re.M), 'Fixed old countdown prompt in reusable workflow'
+    full_regulations = (SITE/'design/handoff/regulations.md').read_text(encoding='utf-8')
+    assert 'MANBA IZOHI — JORIY BILET EMAS.' in full_regulations
+    assert 'Bilet 001' in full_regulations, 'Do not delete original source text to pass a cleanup scan'
     count = 0
     for root in (SITE, RESEARCH):
         if not root.is_dir():
@@ -104,10 +117,25 @@ def verify():
                         assert target in names or target.rstrip('/')+'/index.html' in names, f'{template["slug"]}!{name}: missing package link {url}'
                         count += 1
             package_plan = json.loads(archive.read('READING-PLAN.json'))
+            assert json.loads(archive.read('TASK-BOUNDARY.json')) == boundary
+            assert 'TASK-BOUNDARY.json' in {entry['path'] for entry in package_plan['documents']}
             for entry in package_plan['documents']:
                 data = archive.read(entry['path'])
                 assert len(data) == entry['bytes'] and sha256(data).hexdigest() == entry['sha256']
             assert '- Biletning aynan matni: hali berilmagan.' in archive.read('CURRENT-TASK.md').decode('utf-8')
+            assert '- Bajarilgan talablar: hali kiritilmagan.' in archive.read('HANDOFF.md').decode('utf-8')
+            assert 'JORIY BILET BU PAKETDA YO‘Q.' in archive.read('AI-BRIEF.md').decode('utf-8')
+            assert 'TASK-BOUNDARY.json' in archive.read('START-HERE.md').decode('utf-8')
+            assert 'No actual ticket is supplied' in archive.read('AGENTS.md').decode('utf-8')
+            for name in ('FULL-COMPETITION-CONTEXT.md', 'REGULATIONS.md'):
+                value = archive.read(name).decode('utf-8')
+                assert 'MANBA IZOHI — JORIY BILET EMAS.' in value
+                assert '## Fayl: transcripts/initial-brief-20261018.md' not in value
+            assert archive.read('REGULATIONS.md') == (SITE/'design/handoff/regulations.md').read_bytes()
+
+    with zipfile.ZipFile(SITE/'design/kit.zip') as library:
+        assert json.loads(library.read('TASK-BOUNDARY.json')) == boundary
+        assert 'TASK-BOUNDARY.json' in {entry['path'] for entry in json.loads(library.read('READING-PLAN.json'))['documents']}
 
     evidence = json.loads((SITE/'api/verification.json').read_text(encoding='utf-8'))
     assert evidence['tested_on'] == '2026-10-18', 'Document review must not silently redate old API probes'

@@ -22,6 +22,8 @@
 
 Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.
 
+Bu ochiq paket haqiqiy bilet bermaydi. TASK-BOUNDARY.json ni o‘qi; demo mazmun, tarixiy reja va nizom loyihasidagi namuna joriy vazifa emas. Biletni foydalanuvchi bermaguncha mavzu o‘ylab topma.
+
 ## Joriy ish tartibi va server rejasi
 
 WORKFLOW.md va PROJECT-STATUS.json dan boshlang. ARCHITECTURE.md — Render + Supabase, API-GUIDE.md va API-EVIDENCE.json — sanali sinovlar. Bular tayyorgarlik snapshot’i; joriy bilet, foydalanuvchi qarori va loyiha holati ustuvor. Tanlangan source.zip ichida ham shu hujjatlar mavjud.

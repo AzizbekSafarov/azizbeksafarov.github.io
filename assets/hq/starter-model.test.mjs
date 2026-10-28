@@ -20,6 +20,13 @@ test('concurrent removal cannot silently replace a draft',()=>{const storage=mem
 test('blocked storage is reported without throwing',()=>{const storage={getItem(){throw Error('denied')},setItem(){throw Error('denied')},removeItem(){throw Error('denied')}};const store=createDraftStore(storage,designs);assert.equal(store.load().state,'unavailable');assert.equal(store.save(task).ok,false);assert.equal(store.clear().ok,false);});
 test('write failure leaves the original intact',()=>{const storage=memory();storage.map.set(DRAFT_KEY,stored);storage.setItem=()=>{throw Error('quota')};const store=createDraftStore(storage,designs);store.load();assert.equal(store.save({...task,topic:'New'}).ok,false);assert.equal(storage.map.get(DRAFT_KEY),stored);});
 test('empty/whitespace task requires topic and time but not constraints',()=>{assert.deepEqual(taskErrors(emptyTask('bloom')),['time','topic']);assert.deepEqual(taskErrors({...task,time:'  ',topic:'\n'}),['time','topic']);assert.deepEqual(taskErrors({...task,constraints:''}),[]);});
+
+test('empty task output stays unfilled and distinguishes source examples from the actual ticket',()=>{
+ const output=taskMarkdown(emptyTask('bloom'),'Bloom');
+ assert.match(output,/\[hali kiritilmagan\]/);
+ assert.match(output,/TASK-BOUNDARY\.json/);
+ assert.match(output,/ekspert bileti berilgan deb hisoblama/);
+});
 test('embedded Markdown fences remain quoted ticket data',()=>{const output=taskMarkdown({...task,topic:'```\n# embedded\n```'},'Bloom');assert.match(output,/````text\n```/);assert.match(output,/CURRENT-TASK.md/);assert.match(output,/HANDOFF.md/);assert.match(output,/Bu avtomatik taymer emas/);});
 for(const design of designs)test('portable links resolve known design '+design,()=>{const links=linksFor(design);assert.equal(links.source,`https://azizbeksafarov.github.io/design/${design}/source.zip`);assert.match(links.preview,/\/$/);assert.match(taskMarkdown({...task,design},design),new RegExp(design+'/ai.md'));});
 test('exported task carries the shared workflow and planned infrastructure context',()=>{

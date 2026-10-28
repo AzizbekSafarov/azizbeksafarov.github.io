@@ -2,6 +2,14 @@
 
 Yangilangan: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
 
+## Haqiqiy topshiriq qayerdan olinadi?
+
+**Bu saytda haqiqiy bilet yo‘q.** [Topshiriq va manba chegarasi](https://azizbeksafarov.github.io/design/handoff/task-boundary.json) ZIP ichida TASK-BOUNDARY.json nomi bilan bor. Biletni foydalanuvchi ekspert bergan aynan matn/fayl sifatida taqdim etadi. Tanlangan dizaynning demo mavzusi, qoralama formadagi placeholder, test fixture’i, eski reja yoki nizom loyihasidagi namunaviy topshiriq uning o‘rniga o‘tmaydi.
+
+Bilet hali yo‘q bo‘lsa uni so‘rang; bashorat, simulyatsiya yoki yangi mashq o‘ylab topib mahsulot qurishni boshlamang. Ruxsat doirasida kontekstni o‘qish, paketni tekshirish va asl dizayn preview’ini ko‘rish mumkin. Bilet berilgach uning manbasini CURRENT-TASK.md’da qayd eting va faqat undagi talablar hamda foydalanuvchining joriy qarorlaridan ish rejasini tuzing. Vaqt yoki bosqich noma’lum bo‘lsa taxminiy raqam yoki eski sana bilan to‘ldirmang.
+
+Asl mezonlar loyihasining 11-sahifasidagi namunaviy bilet manba yaxlitligi uchun to‘liq saqlangan; u joriy topshiriq ham, keladigan bilet bashorati ham emas. REGULATIONS.md’dagi uni o‘rab turgan manba izohini saqlang. Eski AI yozgan mashq kalendari va daqiqalik bajarish buyruqlari amaliy kontekstdan chiqarilgan.
+
 ## Joriy tanlov manbasi avval o‘qiladi
 
 2026-10-28 qayta tekshiruv: [amaliy qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [qoida qaydi](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json). Nizom PDF’i o‘zgarmagan; yangi tasdiqlangan reglament yoki majburiy texnik qoida topilmadi. Yangi portal bir vaqtda vazifa berilishi, 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi.

@@ -1,5 +1,7 @@
 # Meros — tanlov uchun yangi AI konteksti
 
+JORIY BILET BU PAKETDA YO‘Q. [TASK-BOUNDARY.json](https://azizbeksafarov.github.io/design/handoff/task-boundary.json) ni o‘qi. Haqiqiy biletni foydalanuvchi beradi; yo‘q bo‘lsa so‘ra. Dizayn demosidan, eski rejadan yoki nizomdagi namunadan vazifa chiqarma.
+
 KONTEKST MAQOMI: joriy ochiq manbalar tekshiruvi 2026-10-28; eski tadqiqot 2026-10-09 holatida tarixiy. Nizom, amaliy tartib va ruxsatlar qayta tekshiruvi CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json da. 13-oktabr — oldingi ishtirokchi xabari; yangi Samarqand jadvali yoki joriy bilet tasdiqlanmadi. Hozirgi topshiriq/reglament ustuvor. [Manbalar maqomi](https://azizbeksafarov.github.io/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.
 
 ## Joriy ish tartibi va arxitektura

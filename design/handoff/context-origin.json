@@ -9,31 +9,31 @@
       "source": "00-START-HERE.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/00-START-HERE.md",
       "target": "competition.md",
-      "sha256": "c0ad3e05914caea00ec3a8dbbbf0e9764195e9bd6ac91c04f34c88575e6f72a0"
+      "sha256": "6e02ab525c991de13d2b6ff929bb1a9442c39297847e2c16a335a7249515c398"
     },
     {
       "source": "ai.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/ai.md",
       "target": "competition-full.md",
-      "sha256": "ee36d03cf6ef126a53f9d2904ebaad0e3bd87216ed29ab9cdf822f06e7b355d5"
+      "sha256": "ad48df8b35da1d6d3bc09bb91e50fbc3c7f737d19e248deab92cdd285177ae14"
     },
     {
       "source": "nizom.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/nizom.md",
       "target": "regulations.md",
-      "sha256": "9a7dd40a059eb1fb3fa0b10ebf8e83bce3f0848126fe4587494ecd92a62ee949"
+      "sha256": "6d0abf160a76c8d40820b84bdb37c3b3b33990320168a828cf603eb8ccff8698"
     },
     {
       "source": "CONTEXT-STATUS.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md",
       "target": "context-status.md",
-      "sha256": "9fa0df1fd597d44dbf18ae02a61cf32b47107523eff2ee518f6c294ff6760cc7"
+      "sha256": "5989d180ea93b48851465d1bd8c4fa831c622c26f7f49272d3900a673f0142f2"
     },
     {
       "source": "06-SCORE-WORKPLAN.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/06-SCORE-WORKPLAN.md",
       "target": "score-workplan.md",
-      "sha256": "69a83fa4798578ed182a9e0c5bfa32331501329fcc0e34dcba2aa749ba9f8765"
+      "sha256": "ab33ffc47492a1f72c9b3bf710cee2ef52522a71e9b7a3b90a72ad78a73cda8b"
     },
     {
       "source": "08-CURRENT.md",
@@ -46,6 +46,12 @@
       "source_url": "https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json",
       "target": "current-competition-facts.json",
       "sha256": "c6d2a85ed67f541a284df6116075e8bbd881601abffb69c185c650b24f98b810"
+    },
+    {
+      "source": "10-TASK-BOUNDARY.json",
+      "source_url": "https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json",
+      "target": "task-boundary.json",
+      "sha256": "85146fe6408205c41a12dda2a997b8f818688f2d7f6ed8b1a0dfb9213a187995"
     }
   ]
 }

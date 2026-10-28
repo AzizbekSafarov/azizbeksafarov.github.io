@@ -9,7 +9,8 @@ DEST=ROOT/'handoff'
 MAPPING={'00-START-HERE.md':'competition.md','ai.md':'competition-full.md',
          'nizom.md':'regulations.md','CONTEXT-STATUS.md':'context-status.md',
          '06-SCORE-WORKPLAN.md':'score-workplan.md',
-         '08-CURRENT.md':'current-competition.md','09-CURRENT-FACTS.json':'current-competition-facts.json'}
+         '08-CURRENT.md':'current-competition.md','09-CURRENT-FACTS.json':'current-competition-facts.json',
+         '10-TASK-BOUNDARY.json':'task-boundary.json'}
 BASE='https://azizbeksafarov.github.io/ustoz/'
 
 def fingerprint(data):return sha256(data).hexdigest()

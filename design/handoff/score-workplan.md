@@ -36,13 +36,13 @@ Jami: **100 ball**. Funksiya 30 + mazmun 20 + texnologiya 20 = **70 ball**; ish 
 
 Har talab uchun jadval: **bilet talabi → foydalanuvchi amali → amalga oshirilgan joy → qabul sinovi → natija/ochiq xato**. Sinov o‘tkazilmagan bo‘lsa, bajarilgan deb yozilmaydi. Backend yoki saqlash biletda kerak bo‘lsa quriladi; faqat tasdiq ekrani kerak bo‘lsa ortiqcha tizim vaqtni egallamaydi.
 
-Kurslar portali misolida: topish → tanlash → forma → natija. To‘g‘ri qiymat, bo‘sh forma, noto‘g‘ri format va topilmagan qidiruv tekshiriladi. Saqlash talab qilinganida qayta ochish/yangilashdan keyingi holat ham sinovdan o‘tadi. Bu mashq misoli, haqiqiy bilet bashorati emas.
+Talabdagi haqiqiy amal uchun to‘g‘ri qiymat, mos noto‘g‘ri kiritish va tegishli bo‘sh holat tekshiriladi. Saqlash talab qilinganida qayta ochish/yangilashdan keyingi holat ham sinovdan o‘tadi. Bu fayl mahsulot mavzusi yoki bilet belgilamaydi.
 
 ## Rol va vaqt
 
 AI asosiy kod yozish va tekshiruvni olib boradi. Ishtirokchi talabga moslikni, foydalanuvchi tajribasini va himoyani boshqaradi, kichik tahrirlarni bilib oladi. Bitta asosiy yozuvchi; bitta fayl ikki vosita tomonidan bir paytda o‘zgartirilmaydi.
 
-120 daqiqalik mashq: 0–10 reja, 10–25 asos/navigatsiya, 25–65 majburiy oqim, 65–90 mazmun/UI/mobil, 90–110 sinov va tuzatish, 110–120 topshirish. Bu tasdiqlangan hududiy limit emas. Haqiqiy vaqtga moslanadi.
+Amaliy vaqt joriy bilet yoki tashkilotchi ko‘rsatmasidan olinadi. Reja → ishlaydigan asosiy oqim → qolgan majburiy amallar → tegishli tekshiruv/tuzatish → topshirish. Har bosqichga vaqt haqiqiy qolgan muddatga qarab ajratiladi; bu faylda oldindan daqiqalik limit berilmagan.
 
 ## Himoya va topshirish
 

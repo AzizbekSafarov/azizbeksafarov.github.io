@@ -2,7 +2,7 @@
 from html import escape
 URL = 'https://azizbeksafarov.github.io'
 STEPS = [
- ('Joriy bilet va loyiha holati', None, 'Foydalanuvchining hozirgi topshirig‘i, amaldagi reglament hamda loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon; ularni joriy topshiriq deb olma.'),
+ ('Joriy bilet va loyiha holati', None, 'Bu ochiq to‘plamda haqiqiy bilet yo‘q. /design/handoff/task-boundary.json manba rollarini ajratadi. Biletni foydalanuvchi beradi; yo‘q bo‘lsa so‘ra, mavzu o‘ylab topma. CURRENT-TASK.md / HANDOFF.md ommaviy nusxalari bo‘sh shablon. Dizayn demo yozuvlari va nizom loyihasidagi namunaviy bilet joriy topshiriq emas.'),
  ('Joriy tanlov yangilanishi', '/design/handoff/current-competition.md', '2026-10-28: nizom, baholash, himoya, amaliy vaqt va ruxsatlar tekshiruvi. CURRENT-COMPETITION-FACTS.json qoida qaydi; loyiha yoki eski xabar yangi tasdiqlangan talab emas.'),
  ('To‘liq tayyorgarlik', '/tayyorgarlik/ai.md', 'START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.'),
  ('Markaziy kontekst', '/ai.md', 'Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.'),
@@ -12,6 +12,7 @@ STEPS = [
  ('Bitta tanlangan dizayn va kod', '/design/', 'Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.'),
 ]
 MACHINE_ORDER = [
+ '/design/handoff/task-boundary.json; this public package supplies no actual ticket',
  'current user ticket and project-local CURRENT-TASK.md / HANDOFF.md; public copies are templates',
  '/design/handoff/current-competition.md and current-competition-facts.json',
  '/tayyorgarlik/ai.md; full-context.md or reading-plan.json for full reading',

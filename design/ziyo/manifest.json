@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "29e23620461ce6aee87e594262ec5087477c098127e128308816913a9e03a8c7",
-  "archive_bytes": 516601,
+  "archive_sha256": "7d6f4585240c32f596cdb2605dcdabb039c9e25a8d9125d7e0ae205b4c528a09",
+  "archive_bytes": 519183,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4345,
-      "sha256": "f95597330cd1f537c2ee720d45fcf45d504cdb8aecc313fa0e002bc7e885c3ee"
+      "bytes": 4772,
+      "sha256": "3e389b2d496cf2ec32dc9dd2a290942ea7ae3b2d801661d2c27308d5e234c884"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7821,
-      "sha256": "8ba0a3eccc9e6c8d8473e00cf93a70d56c62dea7f4552afbfa28612d58ce5aa4"
+      "bytes": 8089,
+      "sha256": "0e1681a0dd23b682de4ffe224fa395f09e822ac909ee7e835455444c3cf0caef"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -100,8 +100,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28869,
-      "sha256": "d9469675f177103022bb9373cf39e2bf6c39505116dbcc5e994db81558369723"
+      "bytes": 28992,
+      "sha256": "4109338977c08ef4ec639ab6455bc1c2dc9f1dc011e97911b2ba77c16859eb03"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -120,13 +120,13 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 1898,
-      "sha256": "c0ad3e05914caea00ec3a8dbbbf0e9764195e9bd6ac91c04f34c88575e6f72a0"
+      "bytes": 2202,
+      "sha256": "6e02ab525c991de13d2b6ff929bb1a9442c39297847e2c16a335a7249515c398"
     },
     {
       "path": "CONTEXT-STATUS.md",
-      "bytes": 3300,
-      "sha256": "9fa0df1fd597d44dbf18ae02a61cf32b47107523eff2ee518f6c294ff6760cc7"
+      "bytes": 3855,
+      "sha256": "5989d180ea93b48851465d1bd8c4fa831c622c26f7f49272d3900a673f0142f2"
     },
     {
       "path": "CURRENT-COMPETITION-FACTS.json",
@@ -150,8 +150,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 203309,
-      "sha256": "ee36d03cf6ef126a53f9d2904ebaad0e3bd87216ed29ab9cdf822f06e7b355d5"
+      "bytes": 199133,
+      "sha256": "ad48df8b35da1d6d3bc09bb91e50fbc3c7f737d19e248deab92cdd285177ae14"
     },
     {
       "path": "GEMINI.md",
@@ -165,8 +165,8 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 1193,
-      "sha256": "20a735b154b38676a377af0abbcdab17dc9b7154d55fd0d50687913e6ab0dad9"
+      "bytes": 1309,
+      "sha256": "a9eca2475d51221dd80cf8bd26a15caa97b72da359794ad68e4da6ffc048f2a2"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -185,18 +185,18 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 8316,
-      "sha256": "9783ebd9e2e69a7c823e0a399d6a859484d965557e191621d92a9cd88c2c1e0a"
+      "bytes": 8469,
+      "sha256": "6cee58175eea4a1a58bdd9d2295dd3c029471864cbf09c785293d7f22e9bddf5"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 14209,
-      "sha256": "c62d33312e2d0b408f8cd871ac514b97bc35d7b890191c516f2c956c0e7924cd"
+      "bytes": 15468,
+      "sha256": "eb9910ff1dfb59f79866aa8ab5827f036788e635572f46138a1d9187a5bf3e18"
     },
     {
       "path": "PROJECT-STATUS.json",
-      "bytes": 3147,
-      "sha256": "64117a801c595d91b4c8b8c16fb7bda46d82b869cef4fb6c29be35b603126a2d"
+      "bytes": 3236,
+      "sha256": "f00b562a0c864cbf7f30710bd2967857f379141444e5e613bc3bb6acc0c211a1"
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
@@ -210,8 +210,8 @@
     },
     {
       "path": "READING-PLAN.json",
-      "bytes": 2995,
-      "sha256": "367ba5c808e0e32bfa4ebba7370ae672beabf60718a876b2c6fcd28e61e1f674"
+      "bytes": 3148,
+      "sha256": "3b4584879331eb93e08c2c0920fcdcb79a168e26f02b0727f3283b8d09ff7b07"
     },
     {
       "path": "README.md",
@@ -220,23 +220,28 @@
     },
     {
       "path": "REGULATIONS.md",
-      "bytes": 117626,
-      "sha256": "9a7dd40a059eb1fb3fa0b10ebf8e83bce3f0848126fe4587494ecd92a62ee949"
+      "bytes": 118270,
+      "sha256": "6d0abf160a76c8d40820b84bdb37c3b3b33990320168a828cf603eb8ccff8698"
     },
     {
       "path": "SCORING-WORKPLAN.md",
-      "bytes": 5954,
-      "sha256": "69a83fa4798578ed182a9e0c5bfa32331501329fcc0e34dcba2aa749ba9f8765"
+      "bytes": 5979,
+      "sha256": "ab33ffc47492a1f72c9b3bf710cee2ef52522a71e9b7a3b90a72ad78a73cda8b"
     },
     {
       "path": "START-HERE.md",
-      "bytes": 2036,
-      "sha256": "513de69dd18ffb3591589335d674b972aecf93ae5462fdf59b95ba2ae5601e45"
+      "bytes": 2195,
+      "sha256": "c8da912c134efcfc3e5a26eb23364afa611497efb25acbfba28d70b50a572ebd"
+    },
+    {
+      "path": "TASK-BOUNDARY.json",
+      "bytes": 2461,
+      "sha256": "85146fe6408205c41a12dda2a997b8f818688f2d7f6ed8b1a0dfb9213a187995"
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 27700,
-      "sha256": "677511dc1ed1fac73fcdb5be72c737e5dcee7582f666144309fd0ec10c7d8db3"
+      "bytes": 27823,
+      "sha256": "8fd0bed2c82db888ea3c18bf8ef8a6e55bbe51b9b0d6a74d98291f482b7c8b5f"
     },
     {
       "path": "kit.json",

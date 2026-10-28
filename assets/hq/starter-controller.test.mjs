@@ -104,6 +104,8 @@ function application({draft = null, query = '', values = new Map(), clipboardDen
 
 test('controller restores exact draft text after reload and lets a valid URL select its design', () => {
   const app = application({draft: original, query: '?design=si'});
+  assert.match(app.element('draft-status').textContent, /2026-10-17/);
+  assert.match(app.element('draft-status').textContent, /eski ish bo‘lishi mumkin/);
   assert.deepEqual(app.task(), {...original, design: 'si'});
   assert.match(app.element('ai-prompt').value, /Hozirgi topshiriq — Yuksal/);
   assert.equal(app.element('selected-kit').href, 'https://azizbeksafarov.github.io/design/si/source.zip');

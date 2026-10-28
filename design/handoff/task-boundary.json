@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-28",
+  "scope": "Public preparation and starter packages; no competition assignment is supplied here",
+  "current_ticket": null,
+  "current_stage": null,
+  "current_build_duration_minutes": null,
+  "authoritative_ticket_supplied": false,
+  "ticket_sources": [
+    "The current user's actual expert-issued ticket, supplied in the current conversation or identified current project file"
+  ],
+  "not_ticket_sources": [
+    "Public CURRENT-TASK.md, HANDOFF.md, task forms and bracketed placeholders",
+    "Historical research, old dates, account assumptions or previous plans",
+    "Design demonstration names, sample records, courses, products, articles, forms and localStorage data",
+    "Source tests, QA fixtures and expected test outputs",
+    "Example ticket and acceptance tests reproduced inside the unapproved scoring draft",
+    "Generic architecture routes, suggested features, risk scenarios and conditional recommendations"
+  ],
+  "source_example": {
+    "document": "Eng_yaxshi_veb_sayt_baholash_mezonlari.pdf",
+    "document_status": "Draft submitted for approval; approval not established",
+    "pdf_page": 11,
+    "classification": "Quoted source-document example only; not the current task or predicted competition ticket",
+    "preservation": "Original PDF and full transcription remain intact"
+  },
+  "before_implementation": [
+    "Identify the actual ticket source and distinguish its exact requirements from implementation choices",
+    "Do not infer a ticket from an example, a selected design, old HANDOFF text or a file being called CURRENT-TASK",
+    "If no actual ticket is supplied, ask for it; inspect sources and preview the selected starter without inventing a product task",
+    "Do not assume a stage or build duration. Ask for essential missing time or rules without inventing a numeric limit",
+    "Once a real ticket is provided, map only its requirements and current user decisions to the implementation"
+  ],
+  "current_project_state": "Public templates start unfilled. Filled task and handoff files belong in the separate competition project, never automatically in this public headquarters.",
+  "default_architecture": "User-approved preparation plan, not a mandatory organizer requirement or proof of deployed infrastructure",
+  "limits": "This document describes source roles. It neither grants account access nor guarantees that another AI will follow the guidance."
+}

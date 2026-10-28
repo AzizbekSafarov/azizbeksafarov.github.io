@@ -1,5 +1,7 @@
 # Tanlov uchun joriy qoidalar va ishga kirish
 
+Bu ochiq to‘plamda haqiqiy bilet yo‘q. [Topshiriq chegarasi](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json): biletni foydalanuvchi beradi; dizayn demo mavzusi, eski reja yoki nizom loyihasidagi namuna joriy topshiriq emas. Bilet berilmagan bo‘lsa so‘rang, mavzu o‘ylab topmang.
+
 Tekshiruv: **2026-10-28**. [Qoidalar holati](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md), [tuzilgan qoida qaydi](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json).
 
 **Yangi tasdiqlangan nizom yoki yangi majburiy texnik qoida topilmadi.** Ustoz AI saytidagi nizom PDF’i avvalgi nusxa bilan bir xil. Yangi portal vazifa bir vaqtda berilishi, 15 daqiqalik himoya va 6 mezon/100 ball tartibini takrorlaydi. Bu yangi amaliy vaqt yoki akkaunt siyosati tasdiqlandi degani emas.

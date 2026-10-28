@@ -7,6 +7,7 @@ from html import escape
 ROOT = Path(__file__).resolve().parent
 SITE = ROOT.parent
 COMMON = [
+ ('TASK-BOUNDARY.json','design/handoff/task-boundary.json'),
  ('CURRENT-COMPETITION.md','design/handoff/current-competition.md'),
  ('CURRENT-COMPETITION-FACTS.json','design/handoff/current-competition-facts.json'),
  ('PREPARATION.md','design/preparation-guide.md'),
@@ -54,7 +55,7 @@ def package_plan(files):
 
 def build():
     folder=SITE/'tayyorgarlik';folder.mkdir(exist_ok=True)
-    intro='# Tanlov uchun to‘liq umumiy kontekst\n\nBu yig‘ma nusxa asl manbalarni qisqartirmaydi. Ularning maqomi va sanasi o‘z bo‘limida saqlanadi. Eski reja joriy vazifa emas. Tanlangan dizayn source’i alohida ZIPda. Bo‘limlar reading-plan.json bilan xaritalangan.\n\n'
+    intro='# Tanlov uchun to‘liq umumiy kontekst\n\nBu yerda joriy bilet yo‘q. Haqiqiy topshiriqni foydalanuvchi beradi; namuna yoki demo mavzudan vazifa chiqarma. Birinchi TASK-BOUNDARY.json manba rollarini ajratadi. Bu yig‘ma nusxa asl manbalarni qisqartirmaydi. Ularning maqomi va sanasi o‘z bo‘limida saqlanadi. Eski reja joriy vazifa emas. Tanlangan dizayn source’i alohida ZIPda. Bo‘limlar reading-plan.json bilan xaritalangan.\n\n'
     parts=[intro];entries=[];line=len(intro.splitlines())+1
     for name,path in COMMON:
         text=normalized(path);header=f'\n# MANBA: {name}\n\nAsl fayl: {path}\n\n'

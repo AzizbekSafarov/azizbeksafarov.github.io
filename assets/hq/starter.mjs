@@ -1,4 +1,4 @@
-import {DRAFT_KEY,MAX_IMPORT_BYTES,emptyTask,parseDraft,serializeDraft,createDraftStore,taskMarkdown,taskErrors,linksFor} from './starter-model.mjs?v=0ffcc38986';
+import {DRAFT_KEY,MAX_IMPORT_BYTES,emptyTask,parseDraft,serializeDraft,createDraftStore,taskMarkdown,taskErrors,linksFor} from './starter-model.mjs?v=4ec2bf652a';
 const $=id=>document.getElementById(id), form=$('starter');
 if(form){
  const fields=form.elements, designs=[...fields.design.options].map(o=>o.value);
@@ -26,7 +26,7 @@ if(form){
  }
  function restore(){
   const result=store.load();
-  if(result.ok){blocked=false;$('draft-conflict').hidden=true;apply(result.draft||emptyTask(fields.design.value));say(result.draft?'Saqlangan qoralama tiklandi.':'Yangi topshiriq. Yozganingiz shu brauzerda saqlanadi.');}
+  if(result.ok){blocked=false;$('draft-conflict').hidden=true;apply(result.draft||emptyTask(fields.design.value));say(result.draft?'Saqlangan qoralama tiklandi ('+result.draft.savedAt+'). Bu eski ish bo‘lishi mumkin: matn va vaqtni hozirgi biletga solishtiring.':'Yangi topshiriq. Yozganingiz shu brauzerda saqlanadi.');}
   else if(result.state==='unavailable')say('Brauzer xotirasi ishlamayapti. JSON nusxa orqali saqlang.');
   else showConflict();
  }
