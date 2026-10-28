@@ -1,6 +1,6 @@
 # Mezonlar bo‘yicha professional ish va dalil rejasi
 
-2026-10-28 tekshiruvi: 6 mezon/100 ball amaliyotiga yangi rasmiy xabar bor; aniq kichik mezonlar loyihasining tasdig‘i topilmadi. Asl PDFlar o‘zgarmagan. [Joriy holat](08-CURRENT.md).
+2026-10-28 tekshiruvi: yangi portalning tushuntirish matni 6 mezon/100 ballni takrorlaydi; bu yangi tasdiqlangan baholash hujjati emas. Kichik mezonlar loyihasining tasdig‘i topilmadi. Saytdagi nizom PDF’i saqlangan nusxa bilan bir xil; boshqa asl PDFlar mahalliy manba sifatida saqlanadi. [Joriy holat](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md).
 
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 

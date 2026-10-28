@@ -40,7 +40,9 @@ Bu qayd maxfiy qiymat va shaxsiy ma’lumotsiz loyiha papkasida saqlanadi.
 '''
 
 def normalized(path):
-    return (SITE/path).read_text(encoding='utf-8-sig').replace('\r\n','\n')
+    # A section and its indexed digest must describe the same bytes, including EOF.
+    text = (SITE/path).read_text(encoding='utf-8-sig').replace('\r\n','\n')
+    return text if text.endswith('\n') else text+'\n'
 
 def package_plan(files):
     names=[n for n,_ in COMMON]+['AI-BRIEF.md','AGENTS.md','README.md','CHECKLIST.md']
@@ -60,7 +62,7 @@ def build():
         data=text.encode('utf-8')
         entries.append({'package_path':name,'source_url':'https://azizbeksafarov.github.io/'+path,
           'bytes':len(data),'sha256':sha256(data).hexdigest(),'start_line':start,'end_line':start+len(text.splitlines())-1})
-        chunk=header+text.rstrip('\n')+'\n';parts.append(chunk);line+=len(chunk.splitlines())
+        chunk=header+text;parts.append(chunk);line+=len(chunk.splitlines())
     full=''.join(parts)
     (folder/'full-context.md').write_text(full,encoding='utf-8',newline='\n')
     (folder/'ai.md').write_text(normalized('design/preparation-guide.md'),encoding='utf-8',newline='\n')

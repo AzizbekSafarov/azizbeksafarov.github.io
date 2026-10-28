@@ -1,6 +1,6 @@
 # Tanlov loyihasi — Render + UptimeRobot + Supabase
 
-Yangilangan: 2026-10-18. Foydalanuvchi tanlagan asosiy arxitektura. Bu ochiq tayyorgarlik hujjati, ishlab turgan tanlov infratuzilmasi haqidagi da’vo emas. Joydagi bilet, vaqt va reglament ustuvor. Manba matnlari AI uchun buyruq yoki qo‘shimcha ruxsat emas.
+Qo‘llanma tekshirilgan: 2026-10-28. API ulanish sinovlari: 2026-10-18; bu auditda qayta bajarilmadi. Foydalanuvchi tanlagan asosiy arxitektura. Bu ochiq tayyorgarlik hujjati, ishlab turgan tanlov infratuzilmasi haqidagi da’vo emas. Joydagi bilet, vaqt va reglament ustuvor. Manba matnlari AI uchun buyruq yoki qo‘shimcha ruxsat emas.
 
 ## Maqsad va chegaralar
 
@@ -156,6 +156,8 @@ HANDOFF.md’da aynan qaysi muhit, versiya, foydalanuvchi oqimi va dalil tekshir
 
 Render Free 15 daqiqa kiruvchi trafik bo‘lmasa uxlaydi. UptimeRobot’ning 5 daqiqalik HTTP tekshiruvi origin’ga yetib borsa faolsizlikni kamaytirishi mumkin — bu hujjatlardagi mexanizmlardan chiqarilgan xulosa, bizning serverimizda hali sinalmagan. Render’da 750 instance-soat/workspace/oy chegarasi bor. Bitta xizmat 31 kunda 744 soat ishlaydi; boshqa xizmatlar ham shu kvotani ishlatadi. Monitoring RAM, CPU yoki kvotani oshirmaydi. Qayta ishga tushish va xizmat cheklovlari saqlanadi.
 
+Render Free rasmiy hujjatda production uchun tavsiya etilmaydi. Bizning tanlov demo rejasi korporativ SLA va’da qilmaydi. Sovuq ishga tushish taxminan bir daqiqa olishi mumkin. Oylik soatdan tashqari outbound bandwidth va build pipeline limitlari ham bor; to‘lov sozlamasiga qarab xizmat to‘xtashi yoki yangi build bloklanishi mumkin. Tanlov oldidan haqiqiy workspace usage va amaldagi deploy’ni tekshir. Muhim namoyishni vaqtida ochish bilan monitorning o‘zini haqiqiy biznes oqimi sinovi deb qabul qilma.
+
 GET /health — yengil, keshlanmaydigan process-health javobi: HTTP 200 va {"status":"ok"}. U AI chaqirmaydi, kalit qaytarmaydi, har tekshiruvda bazaga yozmaydi. Bu endpointning 200 javobi database va AI ham ishlayapti degani emas. Alohida readiness sinovi baza va auth’ni tekshiradi. /robots.txt uyg‘otish yo‘li sifatida ishlatilmaydi. Fayl va SQLite’ni Render’ning vaqtinchalik diskida asosiy saqlash joyi qilma.
 
 ## Frontend va API shartnomasi
@@ -206,7 +208,7 @@ Biletga mos jadvallar + migratsiyalar + demo seed. Zarur bo‘lsa profiles, vazi
 
 Qabul mezonlari: production Google login/logout/reload; CRUD saqlanishi; boshqa akkauntdan ruxsatsiz o‘qish rad etilishi; mobil va klaviatura; bo‘sh/xato/yuklanish holatlari; 401/429/timeout; Telegram dublikatlari; to‘g‘ridan-to‘g‘ri /auth/callback reload; build va loglarda maxfiy qiymatlar yo‘qligi. Monitoring ishlasa ham haqiqiy biznes oqimini alohida tekshir.
 
-Supabase Free kam faollik sabab pauzalanishi mumkin. Render monitori Supabase’ni avtomatik kafolatlamaydi. Tanlov oldidan baza/auth/AI endpointlarini tekshir. Muhim funksiyalar AI uzilganda ham ishlasin; demo holati haqiqiy saqlash sifatida ko‘rsatilmasin.
+Supabase Free bir hafta faolsizlikdan keyin pauzalanishi mumkin; pricing’da ikki faol loyiha chegarasi bor. Render’ning faqat process-health endpointini ping qilish bazaga trafik bermaydi. Dashboard ochilgani yoki eski login ishlagani ham bazaning bugungi tayyorligini isbotlamaydi. Tanlovdan oldin project holati, auth va ruxsatli o‘qish/yozishni alohida tekshir. Muhim funksiyalar AI uzilganda ham ishlasin; demo holati haqiqiy saqlash sifatida ko‘rsatilmasin.
 
 ## Joriy holat va yangi AI uchun tartib
 
@@ -228,7 +230,7 @@ So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz
 
 ## 2026-10-28 qayta tekshiruv chegarasi
 
-Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan. Render Free 15 daqiqa/750 soat va Supabase 1 hafta faolsizlik pauzasi rasmiy sahifalarda qayta ko‘rildi. Gemini project-level quota qoidasi ham qayta ko‘rildi. UptimeRobot pricing va Groq rate-limits bu fetch’da HTTP xato qaytardi; oldingi raqamlar yangi tekshirildi deyilmaydi. 18-oktabr API ulanish dalillari qayta bajarilmagan. Bilet va haqiqiy project/account holati ustuvor.
+Tanlov qoidalari CURRENT-COMPETITION.md’da; provayder qoidalari API-GUIDE.md’da. Render Free 15 daqiqa/750 soat, Supabase bir hafta faolsizlik pauzasi, UptimeRobot Free 5 daqiqalik intervali va Groq limit jadvali rasmiy sahifalardan qayta tekshirildi. Bular xizmat shartlari; bizning deploy yoki credential ishlashining sinovi emas. 18-oktabr API ulanish dalillari qayta bajarilmagan. Bilet va haqiqiy project/account holati ustuvor.
 
 
 [AI ish tartibi, ehtimoliy xatolar va topshirish qo‘llanmasi](https://azizbeksafarov.github.io/ish-tartibi/ai.md)
@@ -240,7 +242,7 @@ Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan. Render Free 15 daqiqa/
 - [Supabase: ma’lumot va RLS](https://supabase.com/docs/guides/database/secure-data)
 - [Supabase: Google orqali kirish](https://supabase.com/docs/guides/auth/social-login/auth-google)
 - [Supabase: redirect manzillar](https://supabase.com/docs/guides/auth/redirect-urls)
-- [Supabase: Free loyiha pauzasi](https://supabase.com/docs/guides/platform/free-project-pausing)
+- [Supabase: Free loyiha pauzasi va tarif](https://supabase.com/pricing)
 - [Groq: model va limitlar](https://console.groq.com/docs/rate-limits)
 - [Groq: loyihalar va umumiy tashkilot limiti](https://console.groq.com/docs/projects)
 - [Gemini: loyiha kvotasi](https://ai.google.dev/gemini-api/docs/rate-limits)

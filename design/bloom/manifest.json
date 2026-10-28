@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "5044d5b637169bbc7012f9272d93784d198f94b838f3838b049476af0af1ed68",
-  "archive_bytes": 1002106,
+  "archive_sha256": "1ebbbc2ec82a18db065ea41ca56496e31092f1a7c0c48ed286e6edb656222277",
+  "archive_bytes": 1002916,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -90,18 +90,18 @@
     },
     {
       "path": "API-EVIDENCE.json",
-      "bytes": 1286,
-      "sha256": "8c0a16d6256372b078562e3f7ac6ea6e89da3b2c34d0afc927c6f3b5c51b7912"
+      "bytes": 1431,
+      "sha256": "078a4540f16722e75cd8dbee4513406c48f177d45aed200f70db45c7a8834572"
     },
     {
       "path": "API-GUIDE.md",
-      "bytes": 5205,
-      "sha256": "e2666fb29a9c2bd121451398889f46a7c6a6896283a8462deb9d22b7c05d6bd1"
+      "bytes": 6377,
+      "sha256": "7959f06f4ca25bad1729795135801fb0a9ebdc1d7a544e424bf679fae3c5b831"
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28093,
-      "sha256": "310d44e24ac1fd9013d938ca868bb6d38138bf99dab7ef22228f730a637be072"
+      "bytes": 28869,
+      "sha256": "d9469675f177103022bb9373cf39e2bf6c39505116dbcc5e994db81558369723"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -125,8 +125,8 @@
     },
     {
       "path": "CONTEXT-STATUS.md",
-      "bytes": 3222,
-      "sha256": "95850e902b7e65d11a13bfd872d66f628c36a5fc97fbebf572d2a531f2a04b3c"
+      "bytes": 3300,
+      "sha256": "9fa0df1fd597d44dbf18ae02a61cf32b47107523eff2ee518f6c294ff6760cc7"
     },
     {
       "path": "CURRENT-COMPETITION-FACTS.json",
@@ -150,8 +150,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 202970,
-      "sha256": "f3d95251e2b1c051f147a4cea3d3cf6a783dd1178f7c552e6298b09fe23deb16"
+      "bytes": 203309,
+      "sha256": "ee36d03cf6ef126a53f9d2904ebaad0e3bd87216ed29ab9cdf822f06e7b355d5"
     },
     {
       "path": "GEMINI.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 13205,
-      "sha256": "3fb9fb00995395db8ebf49b19a1a02718ef288faa06801f6b8fea944f0119321"
+      "sha256": "697ec96d00dba425c828e931f7cacda7ef67ef0b89e4d81bc7e065cd215ce6f3"
     },
     {
       "path": "PREPARATION.md",
@@ -195,8 +195,8 @@
     },
     {
       "path": "PROJECT-STATUS.json",
-      "bytes": 3059,
-      "sha256": "fbbde5a382f7c5c64dbd941c6f38a2fb75732d3d65aae2b5a14d381557eff566"
+      "bytes": 3147,
+      "sha256": "64117a801c595d91b4c8b8c16fb7bda46d82b869cef4fb6c29be35b603126a2d"
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 2996,
-      "sha256": "72bebf4651d92e9af678edbaacd9d748e73c85707032f8b89ec93c1a49d69204"
+      "sha256": "1488fa652d7be62c52aa28323fc52582e5a4a45720c72100298f1e3d35f641b7"
     },
     {
       "path": "README.md",
@@ -220,13 +220,13 @@
     },
     {
       "path": "REGULATIONS.md",
-      "bytes": 117630,
-      "sha256": "050c6302e57e14ef6901870456cf191fc7b23ffef3220678ef38497d170f7a89"
+      "bytes": 117626,
+      "sha256": "9a7dd40a059eb1fb3fa0b10ebf8e83bce3f0848126fe4587494ecd92a62ee949"
     },
     {
       "path": "SCORING-WORKPLAN.md",
-      "bytes": 5779,
-      "sha256": "f92dd5e2f05abb585fbe6b7b7cb8d2d6ba760b475c9b458de23745a32fcd1477"
+      "bytes": 5954,
+      "sha256": "69a83fa4798578ed182a9e0c5bfa32331501329fcc0e34dcba2aa749ba9f8765"
     },
     {
       "path": "START-HERE.md",

@@ -1,5 +1,8 @@
 {
   "tested_on": "2026-10-18",
+  "documentation_reviewed_on": "2026-10-28",
+  "live_connectivity_retested": false,
+  "current_credentials_and_remaining_quota_verified": false,
   "scope": "Single connectivity probes; not live uptime or quality benchmarks",
   "billing_tier_verified": false,
   "tests": [

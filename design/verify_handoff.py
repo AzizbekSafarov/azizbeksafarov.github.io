@@ -122,6 +122,8 @@ def verify():
         # /ustoz/ is a separate Pages repository, not a missing local route.
         html=(SITE_ROOT/path).read_text(encoding='utf-8')
         for template in archived:assert f'href="/design/{template["file"]}"' not in html
+    from verify_context import verify as verify_context_links
+    verify_context_links()
     print(f'PASS: {len(catalog)} active briefs, SHA-256 manifests, portable assets; curated kit excludes retired templates and includes complete competition text.')
 
 if __name__=='__main__':verify()

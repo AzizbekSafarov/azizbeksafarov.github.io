@@ -44,7 +44,9 @@ Asosiy tugmadagi rang va nur birgalikda 6 soniyada to‘liq aylanadi. Buning uch
 
 Oldingi 2026-10-18 upgrade snapshot’i: `design/QA-UPGRADE.md`, `design/QA-UPGRADE-BROWSER.json`. 613 avtomatik test, ZIPlardan 488 test (shu to‘plamning bir qismi), 60 jonli responsive holat. `python design/verify_site.py` barcha HTML, redirect, alias va sahifalararo anchorlarni tekshiradi.
 
-Joriy to‘liq audit: [AUDIT-20261018.md](design/AUDIT-20261018.md). 614 avtomatik test va 45 local browser o‘lchovi. `python -B design/verify_public.py` public fayl va ichma-ich ZIP’larni maxfiy qiymatlarni chiqarmasdan skanerlaydi.
+Tarixiy to‘liq audit: [AUDIT-20261018.md](design/AUDIT-20261018.md). Undagi testlar va browser o‘lchovlari 18-oktabr versiyasiga tegishli; keyingi o‘zgarish tekshirilganining dalili emas. `python -B design/verify_public.py` public fayl va ichma-ich ZIP’larni maxfiy qiymatlarni chiqarmasdan skanerlaydi.
+
+2026-10-28 kontekst auditi: ko‘chirilgan Markdown havolalari, to‘liq o‘qish xaritasining aynan matn oraliqlari va hashlar, paket konteksti, eski/yangi qoida maqomi tekshirildi. `python -B design/verify_context.py` online matnlar va to‘qqiz ZIP ichidagi havola/o‘qish xaritalarini tekshiradi. API hujjatini qayta ko‘rish eski ulanish sinovini yangilamaydi: `/api/verification.json` sinov sanasini 18-oktabr sifatida saqlaydi. Bu audit barcha dizayn interaksiyalari yoki maxfiy ombor backendining yangi xavfsizlik auditi emas.
 
 Har bir alohida source ZIP ham to‘liq tadqiqot (`FULL-COMPETITION-CONTEXT.md`), 39 sahifalik nizom (`REGULATIONS.md`) va baholash/taqdimot ish rejasini (`SCORING-WORKPLAN.md`) olib yuradi. AI `START-HERE.md`dan boshlaydi. Original paketni tahrirlashdan oldin `node verify-package.mjs` ichki `PACKAGE-MANIFEST.json` bilan hajm va SHA-256’ni tekshiradi; build verifikatori CRC, UTF-8 va takror yo‘llarni ham tekshiradi. Hash boshlang‘ich nusxa uchun; foydalanuvchi tahriridan so‘ng farq bo‘lishi tabiiy.
 

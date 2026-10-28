@@ -321,10 +321,10 @@ Asosiy foydalanuvchi oqimi haqiqiy muhitda ishlaydi; ma’lumot saqlanishi tasdi
     state = {
       'schema_version': 1, 'snapshot_date': DATE, 'scope': 'Public preparation snapshot, not live infrastructure status',
       'approved_stack': {'hosting': 'Render Web Service: frontend + Node.js API', 'monitoring': 'UptimeRobot GET /health every 5 minutes', 'backend': 'Supabase PostgreSQL/Auth/RLS/Storage', 'login': 'Google OAuth through Supabase', 'ai': ['Groq', 'Gemini'], 'messaging': 'Telegram Bot API'},
-      'verified': [{'item': 'Published design library', 'evidence': '/design/catalog.json'}, {'item': 'Dated provider connectivity probes only', 'evidence': '/api/verification.json'}],
+      'verified': [{'item': 'Published design library', 'evidence': '/design/catalog.json'}, {'item': 'Historical provider connectivity probes (2026-10-18), not retested today', 'evidence': '/api/verification.json'}],
       'competition_source_update': {'as_of':'2026-10-28','report':'/design/handoff/current-competition.md','facts':'/design/handoff/current-competition-facts.json','not_live':True,'provider_connectivity_evidence_date':'2026-10-18'},
       'planned': ['competition Render service', 'UptimeRobot monitor', 'competition Supabase project', 'Google OAuth client/redirect setup', 'end-to-end app/AI/Telegram integration'],
-      'unknown': ['current ticket', 'remaining competition time', 'on-site account/template permissions', 'final product domain', 'provider billing tiers', 'whether backup keys have independent quotas'],
+      'unknown': ['current ticket', 'remaining competition time', 'on-site account/template permissions', 'final product domain', 'provider billing tiers', 'current credential validity and remaining quota', 'whether backup keys have independent quotas'],
       'historical_alternatives': ['Cloudflare frontend hosting', 'Vercel competition frontend hosting'],
       'reading_order': MACHINE_ORDER,
       'required_test_layers': ['happy path', 'failure scenarios', 'clean environment'],

@@ -2,7 +2,7 @@
 
 Uch hujjat, jami 39 sahifa. Ushbu nashr qisqartma emas: qaror va ilovalari, barcha yo‘nalishlar mezonlari, nizom bandlari, baholash loyihasi va namunaviy bilet keltirilgan. Matnlar asl o‘zbek tilida saqlangan.
 
-Matnga tayyorlangan sana: 2026-10-28. Asl manbalar 2026-10-09 holatida saqlangan. 2026-10-28 tekshiruvida sayt PDF’i o‘sha nusxa ekani tasdiqlandi; joriy portal/API va e’lonlar [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) da. Bu hujjatlarning yangidan tasdiqlanganini yoki eski sanalarning amalda qolganini anglatmaydi.
+Matnga tayyorlangan sana: 2026-10-28. Asl manbalar 2026-10-09 holatida saqlangan. 2026-10-28 tekshiruvida sayt PDF’i o‘sha nusxa ekani tasdiqlandi; amaliy qoidalar tekshiruvi [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) da. Bu hujjatlarning yangidan tasdiqlanganini yoki eski sanalarning amalda qolganini anglatmaydi.
 
 ## Hujjatni to‘g‘ri o‘qish
 

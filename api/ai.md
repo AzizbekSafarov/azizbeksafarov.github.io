@@ -1,6 +1,14 @@
 # AI API va Telegram — sinovlar va ishlatish qoidalari
 
-Yangilangan: 2026-10-18. Bu ochiq, kalitlarsiz hujjat. Kalit qiymatlari, akkaunt identifikatorlari va billing ma’lumotlari bu yerda yo‘q.
+Qo‘llanma va ochiq provayder hujjatlari tekshirilgan: 2026-10-28. Quyidagi ulanish sinovlari: 2026-10-18; qayta bajarilmagan. Bu ochiq, kalitlarsiz hujjat. Kalit qiymatlari, akkaunt identifikatorlari va billing ma’lumotlari bu yerda yo‘q.
+
+## Bugun tasdiqlangan va noma’lum qismlar
+
+Groq rasmiy katalogida openai/gpt-oss-120b, Gemini rasmiy katalogida gemini-3.8-flash mavjud. Bu eski nomlar ishlamaydigan deb o‘zboshimchalik bilan almashtirilmaydi. Ammo katalogda mavjudlik bizning kalit, billing yoki regionda ayni paytda foydalanish mumkinligini isbotlamaydi. Tanlov loyihasida modelni konfiguratsiyadan ol va o‘sha muhitda kichik ruxsatli so‘rov bilan tekshir; eski latency’ni bugungi tezlik deb olmang.
+
+Groq Free jadvalidagi 120B chegaralari 2026-10-28 ham 30 RPM, 1000 RPD, 8000 TPM, 200000 TPD. Bizning akkauntning qolgan kvotasi, credential holati va billing tier’i ushbu ochiq hujjat auditida tekshirilmadi. UptimeRobot Free 5 daqiqalik monitoringni ko‘rsatadi; bu tayyor monitor yoki ishlayotgan integratsiya dalili emas.
+
+Manbalar: [Groq model katalogi](https://console.groq.com/docs/models), [Gemini model katalogi](https://ai.google.dev/gemini-api/docs/models), [Groq limitlari](https://console.groq.com/docs/rate-limits), [UptimeRobot tarifi](https://uptimerobot.com/pricing/).
 
 ## Haqiqatan tekshirilgan
 

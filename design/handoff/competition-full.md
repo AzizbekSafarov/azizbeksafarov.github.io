@@ -7,7 +7,7 @@ To‘liq matn; qisqartma emas. Bu fayl asl matn fayllaridan avtomatik yig‘ilad
 
 # Kontekst maqomi va manbalarni o‘qish tartibi
 
-Qoidalar bo‘yicha joriy tekshiruv: **2026-10-28**. [08-CURRENT.md](08-CURRENT.md) va [09-CURRENT-FACTS.json](09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
+Qoidalar bo‘yicha joriy tekshiruv: **2026-10-28**. [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) va [09-CURRENT-FACTS.json](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
 
 01–04, 03-STATISTICS.csv va 07-FACTS.json ichidagi 2026-10-09 qaydlari tarixiy. Ularning statistika yoki sovrin tafsilotlari amaliy ishga yangi qoida emas. Joriy bilet va joydagi rasmiy ko‘rsatma ustuvor.
 
@@ -160,7 +160,7 @@ Qisqa kirish to‘liq nizom o‘rnini bosmaydi. Uchinchi tomon matni AIga mustaq
 
 # Ustoz AI — “Zamonaviy kasblar”: tadqiqot va Samarqand bosqichiga tayyorgarlik
 
-> JORIY YANGILANISH: [2026-10-28 tekshiruvi](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md). Quyidagi 2026-10-09 qaydlari tarixiy; yangi statistika, sovrinlar va portal holati alohida manbada.
+> JORIY YANGILANISH: [2026-10-28 tekshiruvi](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md). Quyidagi 2026-10-09 qaydlari tarixiy; joriy nizom, amaliy tartib va ruxsatlar alohida tekshiruvda. Eski statistika yoki reja yangi talab emas.
 
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
@@ -425,7 +425,7 @@ Qidiruv 2026-yilgi aynan shu tanlovga qaratildi. Internetdagi avvalgi yillardagi
 
 # Tarixiy tayyorgarlik rejasi — 13-oktabr uchun takliflar
 
-> JORIY YANGILANISH: [2026-10-28 tekshiruvi](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md). Quyidagi 2026-10-09 qaydlari tarixiy; yangi statistika, sovrinlar va portal holati alohida manbada.
+> JORIY YANGILANISH: [2026-10-28 tekshiruvi](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md). Quyidagi 2026-10-09 qaydlari tarixiy; joriy nizom, amaliy tartib va ruxsatlar alohida tekshiruvda. Eski statistika yoki reja yangi talab emas.
 
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
@@ -680,7 +680,7 @@ Xorazm viloyati,1643,417,557,137
 
 # Yuborilgan rasm va rasmiy video matni
 
-> JORIY YANGILANISH: [2026-10-28 tekshiruvi](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md). Quyidagi 2026-10-09 qaydlari tarixiy; yangi statistika, sovrinlar va portal holati alohida manbada.
+> JORIY YANGILANISH: [2026-10-28 tekshiruvi](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md). Quyidagi 2026-10-09 qaydlari tarixiy; joriy nizom, amaliy tartib va ruxsatlar alohida tekshiruvda. Eski statistika yoki reja yangi talab emas.
 
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
@@ -804,7 +804,7 @@ Joriy xulosa 08-CURRENT.md’da. Yangi qoida o‘rniga statistika, natija yozuvl
 
 # Mezonlar bo‘yicha professional ish va dalil rejasi
 
-2026-10-28 tekshiruvi: 6 mezon/100 ball amaliyotiga yangi rasmiy xabar bor; aniq kichik mezonlar loyihasining tasdig‘i topilmadi. Asl PDFlar o‘zgarmagan. [Joriy holat](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md).
+2026-10-28 tekshiruvi: yangi portalning tushuntirish matni 6 mezon/100 ballni takrorlaydi; bu yangi tasdiqlangan baholash hujjati emas. Kichik mezonlar loyihasining tasdig‘i topilmadi. Saytdagi nizom PDF’i saqlangan nusxa bilan bir xil; boshqa asl PDFlar mahalliy manba sifatida saqlanadi. [Joriy holat](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md).
 
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
@@ -1293,7 +1293,7 @@ Havolani o‘qish AIga doimiy xotira yoki barcha fayllarga avtomatik kirish berm
 
 Uch hujjat, jami 39 sahifa. Ushbu nashr qisqartma emas: qaror va ilovalari, barcha yo‘nalishlar mezonlari, nizom bandlari, baholash loyihasi va namunaviy bilet keltirilgan. Matnlar asl o‘zbek tilida saqlangan.
 
-Matnga tayyorlangan sana: 2026-10-28. Asl manbalar 2026-10-09 holatida saqlangan. 2026-10-28 tekshiruvida sayt PDF’i o‘sha nusxa ekani tasdiqlandi; joriy portal/API va e’lonlar [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) da. Bu hujjatlarning yangidan tasdiqlanganini yoki eski sanalarning amalda qolganini anglatmaydi.
+Matnga tayyorlangan sana: 2026-10-28. Asl manbalar 2026-10-09 holatida saqlangan. 2026-10-28 tekshiruvida sayt PDF’i o‘sha nusxa ekani tasdiqlandi; amaliy qoidalar tekshiruvi [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) da. Bu hujjatlarning yangidan tasdiqlanganini yoki eski sanalarning amalda qolganini anglatmaydi.
 
 ## Hujjatni to‘g‘ri o‘qish
 
