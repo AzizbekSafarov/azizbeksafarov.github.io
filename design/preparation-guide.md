@@ -1,6 +1,6 @@
 # Tanlovda boshlash va to‘liq kontekstni ishlatish
 
-Yangilangan: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
+Paketdan foydalanish qo‘llanmasi yangilangan: 2026-10-29. Tanlov qoidalarining oxirgi tekshiruvi: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
 
 ## Haqiqiy topshiriq qayerdan olinadi?
 
@@ -49,6 +49,8 @@ AI vazifasi: manbani olish, biletni amallarga ajratish, to‘liq kodni moslashti
 Avval tanlangan `/design/SLUG/manifest.json` ni oling. SLUG faol katalogdagi nom: bloom, si, ziyo, samar, forma, meros, orbita, hisob yoki nashr. Manifestdagi archive_url va archive_sha256 joriy ZIPga tegishli. Boshqa uslubdan fayl nomini ko‘chirmang; masalan, har dizaynda layout.css yoki identity.js bo‘lishi shart emas.
 
 Tavsiya etilgan yo‘l: source.zip’ni to‘liq oling, arxiv hashi/hajmini tekshiring, yangi bo‘sh papkaga oching, `node verify-package.mjs` bilan ichki manifestni tekshiring. So‘ng `node serve.mjs` bilan asl nusxani ko‘ring. Python preview muqobili paket README’sida. Tekshirilmagan buzilgan yuklamani qo‘lda “to‘ldirib” ishlatmang: manifest/ZIPni bir snapshotdan qayta oling yoki GitHub raw fallback’dan foydalaning. SHA-256 buzilish/versiya farqini aniqlaydi; bu mustaqil raqamli imzo emas.
+
+Paketni tekshirish tahrir va `npm install`dan oldin bajariladi: qo‘shimcha eski fayl ham aralashgan papka hisoblanadi. Tekshiruvdan o‘tkazish uchun mavjud ishni o‘chirmang; asl ZIPni yangi bo‘sh papkada tekshiring. Ish boshlangach CURRENT-TASK.md, HANDOFF.md va source o‘zgarishi tabiiy. READING-PLAN.json hashlarining eski bo‘lishi yangi vazifani bekor qilmaydi; ularni ommaviy bo‘sh shablon bilan ustidan yozmang. Mahalliy preview server backend emas va haqiqiy secret saqlash joyi emas.
 
 Python 3.10+ mavjud bo‘lsa, ochiq `https://azizbeksafarov.github.io/design/get_starter.py` faylini yuklab, manbasini ko‘rib, quyidagicha ishlating:
 

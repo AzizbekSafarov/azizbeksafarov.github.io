@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "source_fingerprint": "219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97",
   "name": "Ziyo",
   "slug": "ziyo",
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "4a5a2229f3063fe443127acde74a6f361dda791ab98fe4a65e12b954f73f2f38",
-  "archive_bytes": 519738,
+  "archive_sha256": "13b2ccc590484419e2384a30ba43a360019bcaecd065f1a80a82fb388efcd930",
+  "archive_bytes": 520380,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -86,7 +86,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8089,
-      "sha256": "0e1681a0dd23b682de4ffe224fa395f09e822ac909ee7e835455444c3cf0caef"
+      "sha256": "8108758b215caebaed990d037b71e461e27db5cea052a238ef237b295fbccbbc"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1309,
-      "sha256": "a9eca2475d51221dd80cf8bd26a15caa97b72da359794ad68e4da6ffc048f2a2"
+      "sha256": "83c30615b03f128af5d47f56e60c10afbb6e3ad5fb217759f444c2141cc487a2"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,12 +186,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8469,
-      "sha256": "59646fc3ae196d106bdb423919210573623cd3773f57379b12c1d8d65b1a7226"
+      "sha256": "5e729beb2c46d8e1d42c3a3ea9ee541c4f4d9ce837163605326965958ddf05a6"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15468,
-      "sha256": "eb9910ff1dfb59f79866aa8ab5827f036788e635572f46138a1d9187a5bf3e18"
+      "bytes": 16060,
+      "sha256": "7202216aae84e593496ed09c18f246c27a035f6a09ed89af86137e260f2659e3"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "9bdacf82fc49b9c4667937683c86b832576bacd92dd05543cb32e651bf0277ff"
+      "sha256": "3cb5b6272566ba290821e94947d7bd2911590ca4debc537398c60b09ab59b10e"
     },
     {
       "path": "README.md",
@@ -250,8 +250,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2054,
-      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+      "bytes": 2402,
+      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
     },
     {
       "path": "site/CREDITS.md",
@@ -350,8 +350,8 @@
     },
     {
       "path": "verify-package.mjs",
-      "bytes": 1781,
-      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
+      "bytes": 2509,
+      "sha256": "e959ed03517535b34dd8da8291e324556ff6d7035ebbb3c2bb760337e1486adc"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/ziyo-site/QA-REPORT.md",

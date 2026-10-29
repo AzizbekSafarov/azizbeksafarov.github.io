@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "source_fingerprint": "aa93600ac56e3855f80f816cb6766b3d2c6e3c9d07e76698df14751d46122b03",
   "name": "Hisob",
   "slug": "hisob",
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "b78d5381f8e8483de5ddee3af97140978580e35495cb1e686effe1c986613e88",
-  "archive_bytes": 278027,
+  "archive_sha256": "b3445265cf99f1ce124772bcb0a92dd948207d431a4344592d744af2886b1558",
+  "archive_bytes": 278665,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 7998,
-      "sha256": "b059525c49a42cce2346022adc8b51dbb35adc57cd02005b13142cd18504e684"
+      "sha256": "6d4feccc382120cb74d527bd213dacf9fd80c4a1d0d4e1d90ce3b9ab474bc654"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "eef604ffe3dc384c97138818b6631765a5a68fd2beb85b3b5722c84d43ef8e7f"
+      "sha256": "0b63c416e5a82a89a01660202c273e3017fc8d73491ee021b931251cc112432d"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -180,12 +180,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8029,
-      "sha256": "ab29fb238325c38d751fbc329d30cb5eefbd51b2f1530b0cb2bf2e498cf8a44f"
+      "sha256": "d0cc3274138226765b07e572d75525ad4672773c52ca63ea509a77708d6238e8"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15468,
-      "sha256": "eb9910ff1dfb59f79866aa8ab5827f036788e635572f46138a1d9187a5bf3e18"
+      "bytes": 16060,
+      "sha256": "7202216aae84e593496ed09c18f246c27a035f6a09ed89af86137e260f2659e3"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "59c39d7d5e439454d4ef69547c39193eae0ad9ea4516535a322fee0de193cb16"
+      "sha256": "e2aa20a4243c36ed9dd05adb2143b4d04ae30ee6d428b29937ba1dc82765199d"
     },
     {
       "path": "README.md",
@@ -244,8 +244,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2054,
-      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+      "bytes": 2402,
+      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
     },
     {
       "path": "site/CREDITS.md",
@@ -329,8 +329,8 @@
     },
     {
       "path": "verify-package.mjs",
-      "bytes": 1781,
-      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
+      "bytes": 2509,
+      "sha256": "e959ed03517535b34dd8da8291e324556ff6d7035ebbb3c2bb760337e1486adc"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/hisob-site/QA-REPORT.md",

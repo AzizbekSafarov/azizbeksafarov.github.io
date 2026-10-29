@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "source_fingerprint": "d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "e38dbc7b7a9c55a76e9e869bfe404281285c426ed797a2ca6f7a3fa44ef39d02",
-  "archive_bytes": 619445,
+  "archive_sha256": "8815524a274e724f0805b0e6f55b32bdfa568dadd69282ee3f395cb73a4528f8",
+  "archive_bytes": 620085,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 9095,
-      "sha256": "af06c2640a04e2b8e87fb57c9fbbb0a1f69f96039f0996569f7722234a479e6d"
+      "sha256": "86b09d20fd717fbdd0ce569dd41869dd838c1381f93236d6b75454b73c763eb4"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "e13ab44a7379c6931d4427d9f910b495f04d83e343b42c1f5822253028fd8989"
+      "sha256": "1085ec8d41ab4ba9e150fc5983dedd1424af992317af088333d79f9ce221898b"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -180,12 +180,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8150,
-      "sha256": "c71ce5762c81b37551a663029a74f6ac80143a889f6f9eebe7597071e67b3c3d"
+      "sha256": "fb765f11325d3d103a5def6fb3871f45037509c40a2e8f2f63883c6e758df738"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15468,
-      "sha256": "eb9910ff1dfb59f79866aa8ab5827f036788e635572f46138a1d9187a5bf3e18"
+      "bytes": 16060,
+      "sha256": "7202216aae84e593496ed09c18f246c27a035f6a09ed89af86137e260f2659e3"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "071c734f7e104759a685d98aa18997d9ca66353f4979187db8b8d48c57610a68"
+      "sha256": "8a30fdb57b70fa02af3d184e692ff6b8cb655aa59135832a7f5e77900dcfe34d"
     },
     {
       "path": "README.md",
@@ -244,8 +244,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2054,
-      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+      "bytes": 2402,
+      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
     },
     {
       "path": "site/CREDITS.md",
@@ -334,8 +334,8 @@
     },
     {
       "path": "verify-package.mjs",
-      "bytes": 1781,
-      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
+      "bytes": 2509,
+      "sha256": "e959ed03517535b34dd8da8291e324556ff6d7035ebbb3c2bb760337e1486adc"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/forma-site/QA-REPORT.md",

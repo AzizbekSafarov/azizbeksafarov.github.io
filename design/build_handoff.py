@@ -14,7 +14,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
-DATE = '2026-10-28'
+DATE = '2026-10-29'
 CONTEXT_FILES = {
     'TASK-BOUNDARY.json': 'design/handoff/task-boundary.json',
     'CURRENT-COMPETITION.md': 'design/handoff/current-competition.md',
@@ -310,21 +310,33 @@ def package_manifest(files, name, slug):
 
 def source_files(t,templates):
     files={}
+    def include(path,base):
+        relative=path.relative_to(base)
+        # Fail closed: a local secret, dependency tree or leftover log must never
+        # silently become a public source download.
+        forbidden={'.git','node_modules','__pycache__','.venv','venv'}
+        if any(part in forbidden for part in relative.parts):return
+        if path.name=='.env' or path.name.startswith('.env.') and path.name!='.env.example':
+            raise ValueError('Refusing environment file in public package: '+relative.as_posix())
+        if path.suffix.lower() in {'.log','.tmp','.temp','.pyc','.pem','.key'}:
+            raise ValueError('Refusing local-only file in public package: '+relative.as_posix())
+        if path.is_symlink():raise ValueError('Refusing linked source: '+relative.as_posix())
+        if path.is_file():files['site/'+relative.as_posix()]=path.read_bytes()
     if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:
         base=ROOT/(t['slug']+'-site')
         for path in sorted(base.rglob('*')):
-            if path.is_file() and '__pycache__' not in path.parts:files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
+            include(path,base)
     elif t['id']=='11':
         base=ROOT/'si-site'
         for path in sorted(base.rglob('*')):
-            if path.is_file() and '__pycache__' not in path.parts:files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
+            include(path,base)
     elif t['id']=='10':
         base=ROOT/'material-expressive'
         for name in ['package.json','package-lock.json','index.html','vite.config.js','README.md','QA-REPORT.md','AGENTS.md','download_symbols.py','.gitignore']:
-            files['site/'+name]=(base/name).read_bytes()
+            include(base/name,base)
         for folder in ['src','public','dist']:
             for path in sorted((base/folder).rglob('*')):
-                if path.is_file():files['site/'+path.relative_to(base).as_posix()]=path.read_bytes()
+                include(path,base)
     return {path:portable_bytes(path,data) for path,data in files.items()}
 
 def code_names(t,files):

@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "source_fingerprint": "deb074c142f1e0bc00b30136816895bddbc5b43bb283493025a00edb2d7a23f7",
   "name": "Samar",
   "slug": "samar",
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "b60c84b3a7b53fc26a464d6ca4596ef9dc714460ca4c350540de6fcec935d48e",
-  "archive_bytes": 1794098,
+  "archive_sha256": "259e68859c255b5aadbd8fa6bbd381e7e5ecb8e3c9d8ac97a27d1314320e386a",
+  "archive_bytes": 1794742,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 9121,
-      "sha256": "92c60cace116acac981cdade8021507af629032ffacdaabdf61fb98408b934cb"
+      "sha256": "0f33cd495fb06f9161fba279510e1f20e032e86d48eb20b2ed54321e5741b115"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "394f276b895b47d0706e6e9d9ef8bec53ca8cc83a8c443252458bcf7a02241cb"
+      "sha256": "8231087045239b1e6cde6b8ff8de3459657f47de2aba291626e9001b18e88fe1"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -180,12 +180,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8489,
-      "sha256": "10f8654495e19148a4786457d636e905a7fcb768622169b117fb078208653300"
+      "sha256": "cb3f2f86546fac3f848594399f34b947d508caf7bfbf39e43bd951dccdc3da79"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15468,
-      "sha256": "eb9910ff1dfb59f79866aa8ab5827f036788e635572f46138a1d9187a5bf3e18"
+      "bytes": 16060,
+      "sha256": "7202216aae84e593496ed09c18f246c27a035f6a09ed89af86137e260f2659e3"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "21273157a086d787ab272fd609279c71c6c6b2716ae34100be1f6cc737685aa6"
+      "sha256": "835a72048c9a0d0ac2e28b573e0f60e2d18bf2dca93bf56b477536ed379e991c"
     },
     {
       "path": "README.md",
@@ -244,8 +244,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2054,
-      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+      "bytes": 2402,
+      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
     },
     {
       "path": "site/CREDITS.md",
@@ -344,8 +344,8 @@
     },
     {
       "path": "verify-package.mjs",
-      "bytes": 1781,
-      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
+      "bytes": 2509,
+      "sha256": "e959ed03517535b34dd8da8291e324556ff6d7035ebbb3c2bb760337e1486adc"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/samar-site/QA-REPORT.md",

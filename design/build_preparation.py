@@ -68,7 +68,7 @@ def build():
     (folder/'full-context.md').write_text(full,encoding='utf-8',newline='\n')
     (folder/'ai.md').write_text(normalized('design/preparation-guide.md'),encoding='utf-8',newline='\n')
     (folder/'READ-RECEIPT.md').write_text(RECEIPT,encoding='utf-8',newline='\n')
-    (folder/'reading-plan.json').write_text(json.dumps({'schema_version':1,'updated':'2026-10-28',
+    (folder/'reading-plan.json').write_text(json.dumps({'schema_version':1,'updated':'2026-10-29',
         'full_context_url':'https://azizbeksafarov.github.io/tayyorgarlik/full-context.md',
         'full_context_sha256':sha256(full.encode()).hexdigest(),'full_context_bytes':len(full.encode()),
         'documents':entries,'selected_design':'Read manifest and full source archive for only the selected design.',

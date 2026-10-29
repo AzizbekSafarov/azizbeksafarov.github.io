@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "source_fingerprint": "2c81c476f8d81d8fceb80e8442d656fc57fe818c0df1c1bab23963fc63bfb732",
   "name": "Nashr",
   "slug": "nashr",
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "08251cdd68f00fa8be1378e8e97943c63d95d6cd8b192a3ce3df4cbd2dfd932a",
-  "archive_bytes": 1747419,
+  "archive_sha256": "5b34c3d600c2ed1cbe3fcf8c678fbd3411cd72db245e53a260844347791793db",
+  "archive_bytes": 1748052,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 7922,
-      "sha256": "e347210bad3ed66db1b4ebd4b0dd76baa42eade14dd878afe85cff191d7301a0"
+      "sha256": "269688e328df74b7b307044d5610f700ca4c169c4dda6e55f4b79cb5a7836534"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "c2d9f1f274a1cfb51a0ba9835efafab422d08ded2ee5dc9f2f7e15fdd0842165"
+      "sha256": "eef50cb106b29790f18fccadc944b713d860f8f2a1252bdd7c0651c0ec51437a"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -180,12 +180,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 8630,
-      "sha256": "e461a371fc0abd6a55cae17328b3fdee3349aa0b802297b51c6fa8fe033cba4d"
+      "sha256": "a212f94728231ccc5d043e47edb6bb8a5050ad947f667b3a781a8a59cc69eca0"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15468,
-      "sha256": "eb9910ff1dfb59f79866aa8ab5827f036788e635572f46138a1d9187a5bf3e18"
+      "bytes": 16060,
+      "sha256": "7202216aae84e593496ed09c18f246c27a035f6a09ed89af86137e260f2659e3"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "8ba5fefa0d935fb017fbb39dd917f9e345cdcfaba7691c7438fa042b9695b2fd"
+      "sha256": "e69b642dc81711c9be006f0c39e2dc95a43cc875d9d006a02ede81a78c24a135"
     },
     {
       "path": "README.md",
@@ -244,8 +244,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2054,
-      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+      "bytes": 2402,
+      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
     },
     {
       "path": "site/CREDITS.md",
@@ -349,8 +349,8 @@
     },
     {
       "path": "verify-package.mjs",
-      "bytes": 1781,
-      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
+      "bytes": 2509,
+      "sha256": "e959ed03517535b34dd8da8291e324556ff6d7035ebbb3c2bb760337e1486adc"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/nashr-site/QA-REPORT.md",

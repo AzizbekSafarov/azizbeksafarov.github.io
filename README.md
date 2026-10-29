@@ -1,5 +1,7 @@
 # Azizbek Safarov — ochiq ish maydoni
 
+2026-10-29 paket auditi: original ZIP tekshiruvchisi endi ortiqcha eski fayllarni ham rad etadi; `npm install` yoki tahrirdan oldin yangi bo‘sh papkada ishlatiladi. Source yig‘ishda dependency papkalari chiqariladi, `.env` va mahalliy log/kalit fayllari nashrni to‘xtatadi. Lokal preview yashirin fayllar/dependency yo‘llarini xizmat qilmaydi. Regressiya: `python -B design/test_package_boundary.py`. Bu tanlov qoidalarining yangi tekshiruvi yoki maxfiy ombor auditi emas.
+
 https://azizbeksafarov.github.io/
 
 To‘qqiz faol dizayn: Bloom, Yuksal, Orbita, Nashr, Hisob, Ziyo, Meros, Samar va Forma. Bosh sahifa — yirik haqiqiy ko‘rinishlar, vazifaga mos tavsiflar, qidirish/filtr va tanlangan dizayn uchun alohida tafsilot. Tanlash holati URLda saqlanadi; tanlangan namuna havolasini nusxalash mumkin.

@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "source_fingerprint": "36aa144427df8d89269c3a36a46d1f1ed320ebfb167173e46158f32f7ae022db",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "7816e7e76088adbeb88fa500122d116e75abe5ae7bd87550c4b0efd2df466c85",
-  "archive_bytes": 1006034,
+  "archive_sha256": "0cb64bb65a6d7bb462eedc04d65d28c005f3f9c0f76be3f978db06c05b835b6d",
+  "archive_bytes": 1006673,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -86,7 +86,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 13822,
-      "sha256": "5cb508943188a97a33a64a6b94af580d639a3261b9d0554a3a965652cda1efee"
+      "sha256": "d8905e748bf505646206d9b5cd59d3217bc807b5ced4998f7d318d402f0603cb"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1332,
-      "sha256": "9679d7e0316e56b6e8c4f43b6a21fbac917833c689898063a32cf81ac9e1a701"
+      "sha256": "778a592ed55f426b7cac2248758713c34d71d046dacca3e729cc918646296091"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,12 +186,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 13358,
-      "sha256": "44bd00bfe168a7c0e364957fd849fad94383e87cb04c13f34137d60c92337089"
+      "sha256": "0070c00fbdd845ec64b8a5116cbf2bfae91551f4f5add0552270ce50567f1ae7"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15468,
-      "sha256": "eb9910ff1dfb59f79866aa8ab5827f036788e635572f46138a1d9187a5bf3e18"
+      "bytes": 16060,
+      "sha256": "7202216aae84e593496ed09c18f246c27a035f6a09ed89af86137e260f2659e3"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "1bccb6115d00c8e5eab018f8c076b1de37bdaaea080bea7618d4e0077d3fde83"
+      "sha256": "53aae59bbe338bc3f8ac7ecf80e514c4930283df0c3614dd00fa5b9e7cc9c296"
     },
     {
       "path": "README.md",
@@ -250,8 +250,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2054,
-      "sha256": "9b00c669789110f66989290943545f69aa47de9239192991bb052c86f5fe6042"
+      "bytes": 2402,
+      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
     },
     {
       "path": "site/.gitignore",
@@ -490,8 +490,8 @@
     },
     {
       "path": "verify-package.mjs",
-      "bytes": 1781,
-      "sha256": "eeacb819d61589627ae71767e7d6165d4820477fac1b33814b98c3c973fa108d"
+      "bytes": 2509,
+      "sha256": "e959ed03517535b34dd8da8291e324556ff6d7035ebbb3c2bb760337e1486adc"
     }
   ],
   "baseline_qa_url": "https://azizbeksafarov.github.io/design/material-expressive/QA-REPORT.md",
