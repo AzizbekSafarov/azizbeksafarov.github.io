@@ -1,0 +1,46 @@
+name: Verify competition packages
+
+# Pages still publishes from main/root; this only reports broken builds, packages or tests.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: internet-bosh-sahifa
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: internet-bosh-sahifa
+      # Canonical competition context lives in the separate /ustoz/ repository.
+      - uses: actions/checkout@v4
+        with:
+          repository: AzizbekSafarov/ustoz
+          path: internet-kontekst
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests
+        run: node design/qa/run.mjs
+      - name: Packages, context and links
+        run: |
+          python -B design/verify_handoff.py
+          python -B design/verify_site.py
+          python -B design/verify_public.py
+          python -B design/test_package_boundary.py
+          python -B design/test_get_starter.py
+      - name: Original regulations and research manifest
+        working-directory: internet-kontekst
+        run: python -B verify_transcripts.py
