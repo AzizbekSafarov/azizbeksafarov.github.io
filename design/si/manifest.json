@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-30",
-  "source_fingerprint": "0e9919fe2f5f5c84c1a9ed7e59d665e2fc33a98481d56c20063943f127125695",
+  "source_fingerprint": "b76f004bb4741906ff7db1720c06d92adfb0b9ba2eacdf8e681cb395cb0a6c67",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "e83e5f07eac8c2ae943977cdee8045370fd2eb39687198f77fd69b4b3f70ff41",
-  "archive_bytes": 374978,
+  "archive_sha256": "da609e6227646c2ed036177e1f7dd7c7603f7881774bc4fb0c24d7516f92338c",
+  "archive_bytes": 374985,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -67,7 +67,7 @@
     {
       "path": "uzbekistan.svg",
       "url": "https://azizbeksafarov.github.io/design/si/files/uzbekistan.svg.txt",
-      "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35",
+      "sha256": "d68b293229ceac5cff626e92c6433bd55059e9b93c8a8801ac79388f6e7ca95f",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/uzbekistan.svg.txt"
     },
     {
@@ -86,7 +86,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 13937,
-      "sha256": "56ccfb4d1a384c8f23b18dc51cba7f256751a742d269c561fcc0ca725ffb8dc8"
+      "sha256": "7f39c45d42e8c4b967271fcb13e743ec684df9e1ac71fa95f0c448eb7e584027"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1315,
-      "sha256": "f8186c2039255981a79cb961358fa9233eeec958e187d1fb871dac7d7388cd8d"
+      "sha256": "dd0d6975a42604b06aa8ed3c6fe34517fedd07473993c0711cfea98fcc02087f"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 12302,
-      "sha256": "c920c39defbee085925f3e9b976ff6333d30e188ad75f6c249c10bf19e80740a"
+      "sha256": "91c4f40cf9500c527b367b525229492cafe2b22f190e98fd30a4e4c3a8f438f8"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "3b07ecc1a0e64a111a9dff5b4dfc60931c7dd2604e871bd0362a82aff1cb0b54"
+      "sha256": "c6062374680ffb06bba1222e1458c27ff30889d5e58354e3541da8b910739075"
     },
     {
       "path": "README.md",
@@ -321,7 +321,7 @@
     {
       "path": "kit.json",
       "bytes": 294,
-      "sha256": "6dce1ddc647ddb17f796af28ad9b3c6eec1a52cf78762dc32d0e63b4cad48e58"
+      "sha256": "abbeb3e444c3b11d28c57b2c820f5c38bca8a0f99340394555c4c004a6072729"
     },
     {
       "path": "serve.mjs",
@@ -465,8 +465,8 @@
     },
     {
       "path": "site/uzbekistan.svg",
-      "bytes": 998,
-      "sha256": "609ed64400adb0c4ac52ec6b79d812d096401c6a8ff4e75ebc27af046b87db35"
+      "bytes": 997,
+      "sha256": "d68b293229ceac5cff626e92c6433bd55059e9b93c8a8801ac79388f6e7ca95f"
     },
     {
       "path": "verify-package.mjs",

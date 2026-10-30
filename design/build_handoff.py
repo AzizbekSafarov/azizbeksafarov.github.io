@@ -83,7 +83,7 @@ def digest(data):
 
 def portable_bytes(path,data):
     # GitHub serves LF-normalized text. Make archives/exports deterministic on Windows too.
-    if Path(path).suffix.lower() in {'.html','.css','.js','.mjs','.jsx','.json','.md','.txt','.py','.ps1','.cjs'} or Path(path).name=='.gitignore':
+    if Path(path).suffix.lower() in {'.html','.css','.js','.mjs','.jsx','.json','.md','.txt','.py','.ps1','.cjs','.svg'} or Path(path).name=='.gitignore':
         return data.decode('utf-8-sig').replace('\r\n','\n').encode('utf-8')
     return data
 
