@@ -8,7 +8,7 @@ Matnga tayyorlangan sana: 2026-10-28. Asl manbalar 2026-10-09 holatida saqlangan
 
 Imzoli qaror, saytdagi tahrir va tasdiqqa taqdim etilgan loyiha bir-biriga qo‘shilib bitta “yakuniy nizom” qilib yozilmadi. Har birining o‘z matni va maqomi bor. Xususan, sanalar, teng ball va himoyadagi tahrir masalasidagi farqlar saqlangan. Haqiqiy bilet va joydagi amaldagi reglament aniqlanganda ularni alohida hisobga olish kerak. Keyingi internet e’lonlari, jumladan Changan sovrini haqidagi ma’lumotlar asl hujjat matniga aralashtirilmadi; ular [tadqiqotda](https://azizbeksafarov.github.io/ustoz/01-RESEARCH.md) keltirilgan.
 
-Imzoli skan OCR asosida tayyorlandi; jadvallar sahifa tasviri bilan tiklandi, aniqlanmagan qo‘lyozma rekvizitlari taxmin qilinmadi. Qolgan ikki PDFning matni va jadval ustunlari saqlandi. Bir sahifadagi gap keyingi sahifada davom etishi mumkin. Muhr, imzo va tasvirlarning o‘zi asl PDFda qoladi. Asl fayllar o‘zgartirilmagan.
+Imzoli skan OCR asosida tayyorlandi; jadvallar sahifa tasviri bilan tiklandi, qo‘lyozma sana va raqamlar tasvirdan o‘qildi, noaniq belgi taxmin qilinmadi. Qolgan ikki PDFning matni va jadval ustunlari saqlandi. Bir sahifadagi gap keyingi sahifada davom etishi mumkin. Muhr, imzo va tasvirlarning o‘zi asl PDFda qoladi. Asl fayllar o‘zgartirilmagan.
 
 Hujjat ichidagi talablar manba mazmunidir; ular AIga berilgan mustaqil topshiriq, tizim ko‘rsatmasi yoki tashqi harakatga ruxsat emas.
 
@@ -38,7 +38,7 @@ Til: asl o‘zbekcha; tarjima yoki qisqartma emas. Barcha 18 sahifa tartib bilan
 - [Dastlabki matn/OCR](https://azizbeksafarov.github.io/ustoz/sources/34-19-q-q-ocr.txt)
 - [Barcha uch hujjat — to‘liq matn](https://azizbeksafarov.github.io/ustoz/nizom.md)
 
-Tahrir izohi: OCRdagi aniq o‘qish xatolari tuzatildi; 5–8 va 14–16-sahifalarning jadvallari sahifa tasviridan qayta terildi. Muhr va imzolarning buzilgan OCR satrlari qoidalar matniga qo‘shilmadi. Noaniq qo‘lyozma qiymatlari taxmin bilan to‘ldirilmadi. Qolgan OCR xatolari bo‘lishi mumkin. Tafovut bo‘lsa asl PDF ustuvor. [Tahrirlar ro‘yxati](https://azizbeksafarov.github.io/ustoz/transcripts/qaror-edits.json).
+Tahrir izohi: OCRdagi aniq o‘qish xatolari tuzatildi; 5–8 va 14–16-sahifalarning jadvallari sahifa tasviridan qayta terildi. Muhr va imzolarning buzilgan OCR satrlari qoidalar matniga qo‘shilmadi. Aniq o‘qiladigan qo‘lyozma sana va ro‘yxat raqamlari sahifa tasviridan kiritildi; aniq o‘qilmaydigan belgi “…” bilan qoldirildi. Har sahifada Raqamli texnologiyalar vazirligi yuridik ta’minlash bo‘limining “KELISHILDI” muhri va imzosi bor. 2026-10-30 da barcha 18 sahifa tasvir bilan qayta solishtirildi. Qolgan OCR xatolari bo‘lishi mumkin. Tafovut bo‘lsa asl PDF ustuvor. [Tahrirlar ro‘yxati](https://azizbeksafarov.github.io/ustoz/transcripts/qaror-edits.json).
 
 Sahifalar: [1](#qaror-p01) · [2](#qaror-p02) · [3](#qaror-p03) · [4](#qaror-p04) · [5](#qaror-p05) · [6](#qaror-p06) · [7](#qaror-p07) · [8](#qaror-p08) · [9](#qaror-p09) · [10](#qaror-p10) · [11](#qaror-p11) · [12](#qaror-p12) · [13](#qaror-p13) · [14](#qaror-p14) · [15](#qaror-p15) · [16](#qaror-p16) · [17](#qaror-p17) · [18](#qaror-p18)
 
@@ -48,7 +48,13 @@ Sahifalar: [1](#qaror-p01) · [2](#qaror-p02) · [3](#qaror-p03) · [4](#qaror-p
 
 [Asl sahifa](https://azizbeksafarov.github.io/ustoz/sources/34-19-q-q.pdf#page=1)
 
-O'ZBEKISTON RESPUBLIKASI RAQAMLI TEXNOLOGIYALAR VAZIRLIGI, O'ZBEKISTON RESPUBLIKASI YOSHLAR ISHLARI AGENTLIGI, O'ZBEKISTON RESPUBLIKASI OLIY TA'LIM, FAN VA INNOVATSIYALAR VAZIRLIGI HUZURIDAGI KASBIY TA'LIM AGENTLIGI, O'ZBEKISTON YOSHLAR TADBIRKORLIGINI QO'LLAB-QUVVATLASH MARKAZINING QARORI "Besh tashabbus olimpiadasi" doirasida "Zamonaviy kasblar" tanlovini o'tkazish tartibi to'g'risida O'zbekiston Respublikasi Prezidentining "O'zbekiston - 2030" strategiyasini "Yoshlar va biznesni qo'llab-quvvatlash yili"da amalga oshirishga oid davlat dasturi to'g'risida" 2024-yil 21-fevraldagi PF-37-son Farmoni, O'zbekiston Respublikasi Prezidenti Administratsiyasi rahbarining 2026-yil 23-maydagi 02-PA 1/1-2736-son topshirig'i hamda O'zbekiston Respublikasi Bosh vaziri rahbarligida 2026-yil 19-martda o'tkazilgan majlisning 43-son bayoni ijrosini ta'minlash maqsadida Raqamli texnologiyalar vazirligi, Yoshlar ishlari agentligi, Oliy ta'lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta'lim agentligi, O'zbekiston yoshlar tadbirkorligini qo'llab-quvvatlash markazi qaror qiladi:
+O'ZBEKISTON RESPUBLIKASI RAQAMLI TEXNOLOGIYALAR VAZIRLIGI, O'ZBEKISTON RESPUBLIKASI YOSHLAR ISHLARI AGENTLIGI, O'ZBEKISTON RESPUBLIKASI OLIY TA'LIM, FAN VA INNOVATSIYALAR VAZIRLIGI HUZURIDAGI KASBIY TA'LIM AGENTLIGI, O'ZBEKISTON YOSHLAR TADBIRKORLIGINI QO'LLAB-QUVVATLASH MARKAZINING
+
+QARORI
+
+"Besh tashabbus olimpiadasi" doirasida "Zamonaviy kasblar" tanlovini o'tkazish tartibi to'g'risida
+
+O'zbekiston Respublikasi Prezidentining "O'zbekiston - 2030" strategiyasini "Yoshlar va biznesni qo'llab-quvvatlash yili"da amalga oshirishga oid davlat dasturi to'g'risida" 2024-yil 21-fevraldagi PF-37-son Farmoni, O'zbekiston Respublikasi Prezidenti Administratsiyasi rahbarining 2026-yil 23-maydagi 02-PA 1/1-2736-son topshirig'i hamda O'zbekiston Respublikasi Bosh vaziri rahbarligida 2026-yil 19-martda o'tkazilgan majlisning 43-son bayoni ijrosini ta'minlash maqsadida Raqamli texnologiyalar vazirligi, Yoshlar ishlari agentligi, Oliy ta'lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta'lim agentligi, O'zbekiston yoshlar tadbirkorligini qo'llab-quvvatlash markazi qaror qiladi:
 
 1. 2026-yilning iyul-avgust oylarida 14 yoshga to'lgan va 30 yoshdan oshmagan yoshlar o'rtasida "Besh tashabbus olimpiadasi" doirasida uch bosqichda (tuman (shahar), hududiy, respublika) quyidagi yo'nalishlarda "Zamonaviy kasblar" tanlovi (keyingi o'rinlarda — Tanlov) tashkil etilsin:
 
@@ -60,7 +66,7 @@ O'ZBEKISTON RESPUBLIKASI RAQAMLI TEXNOLOGIYALAR VAZIRLIGI, O'ZBEKISTON RESPUBLIK
 
 2. Quyidagilar:
 
-Tanlovni tashkil etish va o'tkazish bo'yicha Respublika tashkiliy qo'mitasi tarkibi I-ilovaga;
+Tanlovni tashkil etish va o'tkazish bo'yicha Respublika tashkiliy qo'mitasi tarkibi 1-ilovaga;
 
 ---
 
@@ -74,7 +80,7 @@ Tanlovni tashkil etish va o'tkazish bo'yicha Respublika ishchi guruhi a'zolari t
 
 Tegishli yo'nalishlar bo'yicha ekspertlar guruhining namunaviy tarkibi 3-ilovaga;
 
-' 'Besh tashabbus olimpiadasi" doirasida "Eng yaxshi veb-sayt", "Eng yaxshi grafik dizayn" va "Eng yaxshi mobilografiya ishi" yo'nalishlarida "Zamonaviy kasblar" tanlovini o'tkazish tartibi to'g'risidagi nizom (keyingi o'rinlarda — Nizom) 4-ilovaga muvofiq tasdiqlansin.
+"Besh tashabbus olimpiadasi" doirasida "Eng yaxshi veb-sayt", "Eng yaxshi grafik dizayn" va "Eng yaxshi mobilografiya ishi" yo'nalishlarida "Zamonaviy kasblar" tanlovini o'tkazish tartibi to'g'risidagi nizom (keyingi o'rinlarda — Nizom) 4-ilovaga muvofiq tasdiqlansin.
 
 3. Tanlovni tashkil etish va o'tkazish uchun Raqamli texnologiyalar vazirligi, Yoshlar ishlari agentligi, Kasbiy ta'lim agentligi, O'zbekiston yoshlar tadbirkorligini qo'llab-quvvatlash markazi, Qoraqalpog'iston Respublikasi Vazirlar Kengashi, viloyatlar, Toshkent shahar hokimliklari (keyingi o'rinlarda Tashkilotchilar) mas'ullar etib belgilansin.
 
@@ -152,20 +158,20 @@ Tanlovning barcha bosqichlarini ommaviy axborot vositalari va ijtimoiy tarmoqlar
 
 tajribasi, zamonaviy texnologiyalarni bilishi, xolislik) asosida shakllantirishni hamda ularni Tanlov bosqichlari boshlanishidan kamida 10 kun oldin tasdiqlashni ta'minlasin.
 
-7. "Besh tashabbus olimpiadasi" doirasida "Zamonaviy kasblar" tanlovini tashkil etish bilan bog' liq xarajatlar Yoshlarga oid davlat siyosatini qo'llab-quvvatlash jamg'armasidan moliyalashtirilishi ma'lumot uchun qabul qilinsin.
+7. "Besh tashabbus olimpiadasi" doirasida "Zamonaviy kasblar" tanlovini tashkil etish bilan bog'liq xarajatlar Yoshlarga oid davlat siyosatini qo'llab-quvvatlash jamg'armasidan moliyalashtirilishi ma'lumot uchun qabul qilinsin.
 
 8. Belgilansinki, Tanlovni sifatli va shaffof o'tkazilishini nazorat qilish, shuningdek, apellyatsiya arizalarini ko'rib chiqish uchun Apellyatsiya hay'atini tashkil etish Yoshlar ishlari agentligi tomonidan amalga oshiriladi.
 
 9. Mazkur qaror imzolangan kundan e'tiboran kuchga kiradi.
 
-| Imzolovchining lavozimi | Ism-sharifi |
-| --- | --- |
-| Raqamli texnologiyalar vaziri birinchi o‘rinbosari | A. Sultonov |
-| Yoshlar ishlari agentligi direktori o‘rinbosari | F. Ablayarov |
-| Kasbiy ta’lim agentligi direktori o‘rinbosari | A. Abdullaxonov |
-| O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazi direktori | M. Rashidov |
+| Imzolovchining lavozimi | Ism-sharifi | Sana (qo‘lyozma) | Ro‘yxat raqami (qo‘lyozma) |
+| --- | --- | --- | --- |
+| Raqamli texnologiyalar vaziri birinchi o‘rinbosari | A. Sultonov | 2026-yil 13-iyul | 34/19-q-q |
+| Yoshlar ishlari agentligi direktori o‘rinbosari | F. Ablayarov | 2026-yil 13-iyul | 01-07/42 |
+| Kasbiy ta’lim agentligi direktori o‘rinbosari | A. Abdullaxonov | 2026-yil 13-iyul | 3/3-6…/8 (o‘rta belgi aniq emas) |
+| O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazi direktori | M. Rashidov | 2026-yil 13-iyul | 01-07/42 |
 
-[Imzolar, muhrlar, qo‘lyozma sanalar va qaror raqamlari: asl 4-sahifada. Noaniq rekvizitlar taxmin bilan terilmadi.]
+[Imzolar va muhrlar asl 4-sahifada. Sana va ro‘yxat raqamlari qo‘lyozmadan o‘qildi; aniq o‘qilmaydigan belgi “…” bilan qoldirildi.]
 
 ---
 
@@ -175,9 +181,9 @@ tajribasi, zamonaviy texnologiyalarni bilishi, xolislik) asosida shakllantirishn
 
 [Asl sahifa](https://azizbeksafarov.github.io/ustoz/sources/34-19-q-q.pdf#page=5)
 
-O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil iyuldagi qaroriga
+O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil 13-iyuldagi qaroriga
 
-[Tahrir izohi: qo‘lyozma kun va ro‘yxat raqamlari asl PDFda; noaniq belgilar taxmin bilan kiritilmadi.]
+[Qo‘lyozma rekvizitlar sahifa tasviridan o‘qildi: sana — 13-iyul; ro‘yxat raqamlari — 34/19-q-q, 01-07/42 va 3/3-6…/8 (oxirgisining o‘rta belgisi aniq o‘qilmaydi). Asl PDF ustuvor.]
 
 1-ilova
 
@@ -198,9 +204,9 @@ O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respu
 
 [Asl sahifa](https://azizbeksafarov.github.io/ustoz/sources/34-19-q-q.pdf#page=6)
 
-O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil iyuldagi qaroriga
+O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil 13-iyuldagi qaroriga
 
-[Tahrir izohi: qo‘lyozma kun va ro‘yxat raqamlari asl PDFda; noaniq belgilar taxmin bilan kiritilmadi.]
+[Qo‘lyozma rekvizitlar sahifa tasviridan o‘qildi: sana — 13-iyul; ro‘yxat raqamlari — 34/19-q-q, 01-07/42 va 3/3-6…/8 (oxirgisining o‘rta belgisi aniq o‘qilmaydi). Asl PDF ustuvor.]
 
 2-ilova
 
@@ -245,9 +251,9 @@ Izoh.
 
 [Asl sahifa](https://azizbeksafarov.github.io/ustoz/sources/34-19-q-q.pdf#page=7)
 
-O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil iyuldagi qaroriga
+O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil 13-iyuldagi qaroriga
 
-[Tahrir izohi: qo‘lyozma kun va ro‘yxat raqamlari asl PDFda; noaniq belgilar taxmin bilan kiritilmadi.]
+[Qo‘lyozma rekvizitlar sahifa tasviridan o‘qildi: sana — 13-iyul; ro‘yxat raqamlari — 34/19-q-q, 01-07/42 va 3/3-6…/8 (oxirgisining o‘rta belgisi aniq o‘qilmaydi). Asl PDF ustuvor.]
 
 3-ilova
 
@@ -321,13 +327,15 @@ Izoh: Ekspertlar nizomning 3-bandida belgilangan mezonlar (kasbiy tajriba, portf
 
 [Asl sahifa](https://azizbeksafarov.github.io/ustoz/sources/34-19-q-q.pdf#page=9)
 
-O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil iyuldagi qaroriga
+O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi, O‘zbekiston Respublikasi Yoshlar ishlari agentligi, O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Kasbiy ta’lim agentligi, O‘zbekiston yoshlar tadbirkorligini qo‘llab-quvvatlash markazining 2026-yil 13-iyuldagi qaroriga
 
-[Tahrir izohi: qo‘lyozma kun va ro‘yxat raqamlari asl PDFda; noaniq belgilar taxmin bilan kiritilmadi.]
+[Qo‘lyozma rekvizitlar sahifa tasviridan o‘qildi: sana — 13-iyul; ro‘yxat raqamlari — 34/19-q-q, 01-07/42 va 3/3-6…/8 (oxirgisining o‘rta belgisi aniq o‘qilmaydi). Asl PDF ustuvor.]
 
 4-ilova
 
-"Besh tashabbus olimpiadasi" doirasida "Eng yaxshi veb-sayt", "Eng yaxshi grafik dizayn" va "Eng yaxshi mobilografiya ishi" yo'nalishlarida "Zamonaviy kasblar" tanlovini o'tkazish tartibi to'g'risida NIZOM
+"Besh tashabbus olimpiadasi" doirasida "Eng yaxshi veb-sayt", "Eng yaxshi grafik dizayn" va "Eng yaxshi mobilografiya ishi" yo'nalishlarida "Zamonaviy kasblar" tanlovini o'tkazish tartibi to'g'risida
+
+NIZOM
 
 1-bob. Umumiy qoidalar
 
@@ -341,7 +349,7 @@ Tanlov ishtirokchisi — Tanlovda ishtirok etish uchun "5tashabbus.uz" veb-sayti
 
 "Eng yaxshi veb-sayt" — Ustoz AI platformasida "Saytlar yasash" (No-Code, Tilda), "AI orqali dasturlar yasash" (Lovable, Cursor, Replit, Claude va h.k), "Mobil ilova yasash" kursidan sertifikat olgan yoshlar o'rtasida tashkil etiladigan Tanlov yo'nalishi;
 
-"Eng yaxshi grafik dizayn" — Ustoz AI platformasida "Grafik dizayn", "Boshlang'ich dizayn" kursidan sertifikat olgan yoshlar o'rtasida tashkil etiladigan Tanlov yo' nalishi;
+"Eng yaxshi grafik dizayn" — Ustoz AI platformasida "Grafik dizayn", "Boshlang'ich dizayn" kursidan sertifikat olgan yoshlar o'rtasida tashkil etiladigan Tanlov yo'nalishi;
 
 "Eng yaxshi mobilografiya ishi" — Ustoz AI platformasida "Mobilografiya ishi" kursidan sertifikat olgan yoshlar o'rtasida tashkil etiladigan Tanlov yo'nalishi;
 
@@ -361,25 +369,35 @@ ekspertlar — Tanlov yo'nalishlari bo'yicha zarur bilim, ko'nikma va amaliy taj
 
 3. Ekspertlar quyidagi mezonlar asosida aniqlanadi:
 
-a) Kasbiy tajriba Ekspert Tanlov yo'nalishiga mos ravishda (veb-sayt yaratish, grafik dizayn yoki mobilografiya ishi) kamida 3 yillik amaliy ish tajribasiga ega bo'lishi.
+a) Kasbiy tajriba
 
-b) Amaliy ishlar (portfolio) veb-sayt yo'nalishida — ishlab chiqilgan va ishga tushirilgan veb-saytlar yoki onlayn platformalar;
+Ekspert Tanlov yo'nalishiga mos ravishda (veb-sayt yaratish, grafik dizayn yoki mobilografiya ishi) kamida 3 yillik amaliy ish tajribasiga ega bo'lishi.
+
+b) Amaliy ishlar (portfolio)
+
+veb-sayt yo'nalishida — ishlab chiqilgan va ishga tushirilgan veb-saytlar yoki onlayn platformalar;
 
 grafik dizayn yo'nalishida — brend identifikatsiyasi, vizual materiallar yoki raqamli dizayn ishlari;
 
 mobilografiya ishi yo'nalishida — mobil qurilmalar yordamida videoga olingan va montaj qilingan videomateriallar bo'yicha kamida 5 ta muvaffaqiyatli loyiha (portfolio)ga ega bo'lishi.
 
-d) Baholash tajribasi Tanlovlar, ko'rik-tanlovlar, festival yoki professional loyihalarda ekspert, hakam yoki mentor sifatida ishtirok etgan bo'lishi (afzallik beriladi).
+d) Baholash tajribasi
 
-e) Zamonaviy texnologiyalarni bilishi Tanlov yo'nalishiga mos ravishda zamonaviy dasturlar, platformalar va texnik vositalardan samarali foydalana olishi:
+Tanlovlar, ko'rik-tanlovlar, festival yoki professional loyihalarda ekspert, hakam yoki mentor sifatida ishtirok etgan bo'lishi (afzallik beriladi).
+
+e) Zamonaviy texnologiyalarni bilishi
+
+Tanlov yo'nalishiga mos ravishda zamonaviy dasturlar, platformalar va texnik vositalardan samarali foydalana olishi:
 
 veb-sayt yo'nalishida — veb-texnologiyalar va CMS platformalar;
 
 grafik dizayn yo'nalishida — dizayn dasturlari va vizual tendensiyalar;
 
-mobilografiya ishi yo'nalishida mobil suratga olish va montaj texnologiyalari.
+mobilografiya ishi yo'nalishida — mobil suratga olish va montaj texnologiyalari.
 
-f) Xolislik va mustaqillik Ekspert Tanlov ishtirokchilari loyihalariga nisbatan xolis va mustaqil baholashni ta'minlashi shart.
+f) Xolislik va mustaqillik
+
+Ekspert Tanlov ishtirokchilari loyihalariga nisbatan xolis va mustaqil baholashni ta'minlashi shart.
 
 Ekspertlar, ularning affillangan shaxslari Tanlovda ishtirokchi sifatida qatnashishlari mumkin emas.
 
@@ -419,7 +437,7 @@ Ustoz AI mobil ilovasi, veb-sayti yoki "Besh tashabbus olimpiadasi" Telegram bot
 
 Ekspertlar 2026-yil 30-iyulga qadar Ustoz AI mobil ilovasi, veb-sayti yoki "Besh tashabbus olimpiadasi" Telegram boti orqali kelib tushgan ariza va unga ilova qilingan materiallarning to'liqligi hamda mazkur Nizom talablariga mosligini tekshiradi.
 
-Bunda, 2026-yil 30-iyulga qadar ariza beruvchilarning keyingi bosqichga o'tganligi (yoki mazkur Nizom talablariga mos emasligi aniqlanganda o'tmaganligi) haqida xabarnoma SMS yoki email shaklida yuboriladi. Keyingi bosqichga o'tgan ariza beruvchilarga "ishtirokchi" maqomi beriladi.
+Bunda, 2026-yil 30-iyulga qadar ariza beruvchilarning keyingi bosqichga o'tganligi (yoki mazkur Nizom talablariga mos emasligi aniqlanganda — o'tmaganligi) haqida xabarnoma SMS yoki email shaklida yuboriladi. Keyingi bosqichga o'tgan ariza beruvchilarga "ishtirokchi" maqomi beriladi.
 
 7. Birinchi bosqich (tuman/shahar bosqichi)da 2026-yil 7-avgustga qadar Respublika ishchi guruhi tomonidan belgilagan sanada o'tkaziladi.
 
@@ -630,13 +648,15 @@ Jami ballar yig‘indisining eng yuqori ko‘rsatkichi: 100.
 
 20. Tanlovning tuman (shahar) va hududiy bosqichlarida umumiy ball sifatida har bir mezon bo'yicha olingan jami ballar yig'indisi olinadi. Respublika bosqichida yakuniy qaror umumiy ball natijalari va ekspertlar xulosasi asosida qabul qilinadi.
 
-20¹. Tenglashgan ball holati Agar ikki yoki undan ortiq ishtirokchi tuman (shahar), hududiy yoki respublika bosqichining yakunida teng miqdorda ball to'plasa, quyidagi ketma-ketlikda ustunlik belgilanadi:
+20¹. Tenglashgan ball holati
 
-"Veb-sayt sifati va funksionalligi", "Dizayn sifati va vizual jozibadorligi" yoki "Video sifati va texnik darajasi" mezoni (1-mezon) bo'yicha yuqori ball to 'plagan ishtirokchi ustun hisoblanadi;
+Agar ikki yoki undan ortiq ishtirokchi tuman (shahar), hududiy yoki respublika bosqichining yakunida teng miqdorda ball to'plasa, quyidagi ketma-ketlikda ustunlik belgilanadi:
+
+"Veb-sayt sifati va funksionalligi", "Dizayn sifati va vizual jozibadorligi" yoki "Video sifati va texnik darajasi" mezoni (1-mezon) bo'yicha yuqori ball to'plagan ishtirokchi ustun hisoblanadi;
 
 Mazkur mezon bo'yicha ham tenglik saqlansa, "Zamonaviy texnologiyalardan foydalanish" mezoni (5-mezon) bo'yicha yuqori ball to'plagan ishtirokchi ustun hisoblanadi;
 
-Tenglashgan ball holati barcha mezonlar bo'yicha saqlanib qolsa, ekspertlar yopiq ovoz berish orqali g'olibni aniqlaydi. Ovozlar teng bo'linsa, ekspertlar hay' ati raisi hal qiluvchi ovoz beradi.
+Tenglashgan ball holati barcha mezonlar bo'yicha saqlanib qolsa, ekspertlar yopiq ovoz berish orqali g'olibni aniqlaydi. Ovozlar teng bo'linsa, ekspertlar hay'ati raisi hal qiluvchi ovoz beradi.
 
 Ushbu tartib Tanlovning barcha bosqichlari va yo'nalishlarida bir xil qo'llaniladi.
 

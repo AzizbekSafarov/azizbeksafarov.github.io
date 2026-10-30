@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "ab77e04529237d6818dfb5106359e597a4fb1a920ce8aa3a5e14791bad7c8f9a",
-  "archive_bytes": 2317047,
+  "archive_sha256": "730f609ae794cbfa4e72aa7732dc200b1f79f0f277bb4e1ca090e246c0dba5b9",
+  "archive_bytes": 2317460,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -144,8 +144,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 199832,
-      "sha256": "a01c5fd806b9f5ce3c77ec00ba573dce61bc6b24b30b8fd43b90eb709a7e5db9"
+      "bytes": 200750,
+      "sha256": "0eb73225213e0eccc5aaa69be27d00d7c6b64bee5f4fb265e30bee90f06abdcc"
     },
     {
       "path": "GEMINI.md",
@@ -180,7 +180,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 11185,
-      "sha256": "27fe5cfdf4cfdce53ddb0e1c81235f68e57effe2e11ff3c5f76f8a3054cae4b3"
+      "sha256": "048cc1756e56b4de7a9381333e7cf16f9366d27420da86b65b7bc253cf5b5e97"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "6aad9bf8b6f43b65cf3d0636086b1692b8be92b4f37ec9d9734e00fb8761444d"
+      "sha256": "b923603b5c6d7a46b178638cfa991150a3a159fc2841eab8ea62d131a4402be9"
     },
     {
       "path": "README.md",
@@ -214,8 +214,8 @@
     },
     {
       "path": "REGULATIONS.md",
-      "bytes": 118270,
-      "sha256": "6d0abf160a76c8d40820b84bdb37c3b3b33990320168a828cf603eb8ccff8698"
+      "bytes": 119188,
+      "sha256": "46eed7a693766f1de875b99ba99ec97de138b75545b3d02ce6ccf2b7859732b5"
     },
     {
       "path": "SCORING-WORKPLAN.md",

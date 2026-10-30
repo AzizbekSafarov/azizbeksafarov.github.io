@@ -15,13 +15,13 @@
       "source": "ai.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/ai.md",
       "target": "competition-full.md",
-      "sha256": "a01c5fd806b9f5ce3c77ec00ba573dce61bc6b24b30b8fd43b90eb709a7e5db9"
+      "sha256": "0eb73225213e0eccc5aaa69be27d00d7c6b64bee5f4fb265e30bee90f06abdcc"
     },
     {
       "source": "nizom.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/nizom.md",
       "target": "regulations.md",
-      "sha256": "6d0abf160a76c8d40820b84bdb37c3b3b33990320168a828cf603eb8ccff8698"
+      "sha256": "46eed7a693766f1de875b99ba99ec97de138b75545b3d02ce6ccf2b7859732b5"
     },
     {
       "source": "CONTEXT-STATUS.md",

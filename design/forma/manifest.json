@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "b1ea6d43cd8704bf6f4321ef3c3bd94b5c3803b4866cc0aa334641b6ef799288",
-  "archive_bytes": 672969,
+  "archive_sha256": "e083aa4adbabf4675167dce439256617b0cf93adf98215d80a9b7e598af05330",
+  "archive_bytes": 673385,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -144,8 +144,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 199832,
-      "sha256": "a01c5fd806b9f5ce3c77ec00ba573dce61bc6b24b30b8fd43b90eb709a7e5db9"
+      "bytes": 200750,
+      "sha256": "0eb73225213e0eccc5aaa69be27d00d7c6b64bee5f4fb265e30bee90f06abdcc"
     },
     {
       "path": "GEMINI.md",
@@ -180,7 +180,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 10521,
-      "sha256": "b762ec9b9af1dd3214b0bc63420541edb23174b211a62278a421e270143ea876"
+      "sha256": "1d6d9b178aa4dd9722a46ec05a948bf8e03296365ebf9ca37a95eaef39511f6a"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "71385198f3e003ab2ea439d777fc98aa503be5b1a1bed0dbab51982af5da0e3c"
+      "sha256": "22589ed4b27e98c066d6359312d2b44c28e7067cbb8e661311e437d5b50171ff"
     },
     {
       "path": "README.md",
@@ -214,8 +214,8 @@
     },
     {
       "path": "REGULATIONS.md",
-      "bytes": 118270,
-      "sha256": "6d0abf160a76c8d40820b84bdb37c3b3b33990320168a828cf603eb8ccff8698"
+      "bytes": 119188,
+      "sha256": "46eed7a693766f1de875b99ba99ec97de138b75545b3d02ce6ccf2b7859732b5"
     },
     {
       "path": "SCORING-WORKPLAN.md",

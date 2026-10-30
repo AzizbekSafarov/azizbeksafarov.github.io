@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "4c62eec9ebca5df53997675f1021a9fe835270a24f20d9dae2fe4418fbbc281d",
-  "archive_bytes": 331558,
+  "archive_sha256": "6fe4601c1bd8e6d8b31c0029450f2922b864bd2abf999749fa6b2a9a7c96da3c",
+  "archive_bytes": 331974,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -144,8 +144,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 199832,
-      "sha256": "a01c5fd806b9f5ce3c77ec00ba573dce61bc6b24b30b8fd43b90eb709a7e5db9"
+      "bytes": 200750,
+      "sha256": "0eb73225213e0eccc5aaa69be27d00d7c6b64bee5f4fb265e30bee90f06abdcc"
     },
     {
       "path": "GEMINI.md",
@@ -180,7 +180,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 10400,
-      "sha256": "9e1c34884a179d85a67cc0b01285d96fad60f2a230e9a91776263999332223e5"
+      "sha256": "73d9ea3aafadd62fba061367055395abe7070382f754e01a21884adcd4cf84a3"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "37e3aa9584cdd7b2a3f83738ccef66fbd614b9ceb6128d99058fe051958bb5ea"
+      "sha256": "c0718435a4f5988365e6efd6ca0f8a6d23b0724fd66cf2fced2f6e33cfdda579"
     },
     {
       "path": "README.md",
@@ -214,8 +214,8 @@
     },
     {
       "path": "REGULATIONS.md",
-      "bytes": 118270,
-      "sha256": "6d0abf160a76c8d40820b84bdb37c3b3b33990320168a828cf603eb8ccff8698"
+      "bytes": 119188,
+      "sha256": "46eed7a693766f1de875b99ba99ec97de138b75545b3d02ce6ccf2b7859732b5"
     },
     {
       "path": "SCORING-WORKPLAN.md",
