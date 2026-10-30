@@ -4,6 +4,9 @@ from html import escape
 from hashlib import sha256
 import json,re
 ROOT=Path(__file__).resolve().parent;SITE=ROOT.parent
+def text_digest(path):
+ """Hash text assets as Git publishes them, so a CRLF checkout yields the same ?v= as LF."""
+ return sha256(path.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
 GROUPS={'10':'app','14':'app','15':'app','04':'shop'}
 def item(t):
  name=t['name'].split(' · ')[0]
@@ -21,19 +24,19 @@ def library(catalog):
 
 def frame(title,content,active='library'):
  for script,model in [('starter.mjs','starter-model.mjs'),('workspace.js','library-model.mjs')]:
-  path=SITE/'assets/hq'/script;source=path.read_text(encoding='utf-8');version=sha256((SITE/'assets/hq'/model).read_bytes()).hexdigest()[:10]
+  path=SITE/'assets/hq'/script;source=path.read_text(encoding='utf-8');version=text_digest(SITE/'assets/hq'/model)[:10]
   updated=re.sub(re.escape(model)+r'\?v=[^\']+',model+'?v='+version,source)
   if updated!=source:path.write_text(updated,encoding='utf-8',newline='\n')
- aurora=sha256((SITE/'assets/hq/aurora.css').read_bytes()).hexdigest()[:10]
- geometry=sha256((SITE/'assets/hq/geometry.css').read_bytes()).hexdigest()[:10]
- css=sha256((SITE/'assets/hq/workspace.css').read_bytes()).hexdigest()[:10];js=sha256((SITE/'assets/hq/site.js').read_bytes()).hexdigest()[:10]
- extra=''.join(f'<link rel="stylesheet" href="/assets/hq/{name}.css?v={sha256((SITE/("assets/hq/"+name+".css")).read_bytes()).hexdigest()[:10]}">' for name in (['exhibition'] if active=='library' else ['preparation'] if active=='preparation' else ['starter'] if active=='start' else []))
- if active=='start':extra+=f'<script type="module" src="/assets/hq/starter.mjs?v={sha256((SITE/"assets/hq/starter.mjs").read_bytes()).hexdigest()[:10]}"></script>'
+ aurora=text_digest(SITE/'assets/hq/aurora.css')[:10]
+ geometry=text_digest(SITE/'assets/hq/geometry.css')[:10]
+ css=text_digest(SITE/'assets/hq/workspace.css')[:10];js=text_digest(SITE/'assets/hq/site.js')[:10]
+ extra=''.join(f'<link rel="stylesheet" href="/assets/hq/{name}.css?v={text_digest(SITE/("assets/hq/"+name+".css"))[:10]}">' for name in (['exhibition'] if active=='library' else ['preparation'] if active=='preparation' else ['starter'] if active=='start' else []))
+ if active=='start':extra+=f'<script type="module" src="/assets/hq/starter.mjs?v={text_digest(SITE/"assets/hq/starter.mjs")[:10]}"></script>'
  if active in ('architecture','api','workflow'):
-  extra+=f'<link rel="stylesheet" href="/assets/hq/architecture.css?v={sha256((SITE/"assets/hq/architecture.css").read_bytes()).hexdigest()[:10]}">'
- if active=='architecture':extra+=f'<script type="module" src="/assets/hq/architecture.mjs?v={sha256((SITE/"assets/hq/architecture.mjs").read_bytes()).hexdigest()[:10]}"></script>'
- module=sha256((SITE/'assets/hq/workspace.js').read_bytes()).hexdigest()[:10]
- nav=[('library','/','▦','Dizayn kutubxonasi'),('preparation','/tayyorgarlik/','◎','Tanlovga tayyorgarlik'),('architecture','/arxitektura/','⌘','Loyiha arxitekturasi'),('workflow','/ish-tartibi/','↳','AI bilan ish tartibi'),('api','/api/','⇄','API va sinovlar'),('start','/design/start/','↗','AIga topshiriq'),('research','/ustoz/','≡','Tanlov materiallari'),('context','/ai/','⊞','AI konteksti'),('quality','/design/standart/','✓','Sifat mezonlari'),('keys','/keys/','◇','Kalitlar ombori')]
+  extra+=f'<link rel="stylesheet" href="/assets/hq/architecture.css?v={text_digest(SITE/"assets/hq/architecture.css")[:10]}">'
+ if active=='architecture':extra+=f'<script type="module" src="/assets/hq/architecture.mjs?v={text_digest(SITE/"assets/hq/architecture.mjs")[:10]}"></script>'
+ module=text_digest(SITE/'assets/hq/workspace.js')[:10]
+ nav=[('library','/','▦','Dizayn kutubxonasi'),('preparation','/tayyorgarlik/','◎','Tanlovga tayyorgarlik'),('architecture','/arxitektura/','⌘','Loyiha arxitekturasi'),('workflow','/ish-tartibi/','↳','AI bilan ish tartibi'),('api','/api/','⇄','API va sinovlar'),('start','/design/start/','↗','AIga topshiriq'),('zaxira','/zaxira/','◐','Zaxira rejasi'),('research','/ustoz/','≡','Tanlov materiallari'),('context','/ai/','⊞','AI konteksti'),('quality','/design/standart/','✓','Sifat mezonlari'),('keys','/keys/','◇','Kalitlar ombori')]
  links=''.join(f'<a href="{url}"'+(' aria-current="page"' if key==active else '')+f'><span aria-hidden="true">{icon}</span>{text}</a>' for key,url,icon,text in nav)
  size=(ROOT/'kit.zip').stat().st_size/1024/1024
  kit_version=sha256((ROOT/'kit.zip').read_bytes()).hexdigest()[:12]
@@ -41,7 +44,7 @@ def frame(title,content,active='library'):
 
 def build_library(catalog):
  content=library(catalog)
- content='<p class="context-explainer" style="margin:20px 28px;line-height:1.8"><strong>Tanlov qoidalari tekshirildi · 28-oktabr.</strong> <a href="/design/handoff/current-competition.md">Nizom va amaliy tartibdagi o‘zgarishlar →</a>. Nizom PDF’i o‘zgarmagan; yangi ish vaqti va akkaunt qoidasi tasdiqlanmadi.</p>'+content
+ content='<p class="context-explainer" style="margin:20px 28px;line-height:1.8"><strong>Tanlov qoidalari tekshirildi · 28-oktabr.</strong> <a href="/design/handoff/current-competition.md">Nizom va amaliy tartibdagi o‘zgarishlar →</a>. Nizom PDF’i o‘zgarmagan; yangi ish vaqti va akkaunt qoidasi tasdiqlanmadi. <a href="/zaxira/">AI kuchsiz bo‘lsa: zaxira reja va jonli o‘zgarish →</a></p>'+content
  # Keep real navigation actions above the preview, visible before scrolling.
  summary=re.search(r'<p id="selected-summary">.*?</p>',content).group()
  content=content.replace(summary,'',1)

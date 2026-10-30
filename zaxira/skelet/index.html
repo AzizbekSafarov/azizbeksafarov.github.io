@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sayt</title>
+  <meta name="description" content="Tanlov uchun tez moslashtiriladigan sayt skeleti.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d4ed8'/%3E%3Cpath d='M9 22l7-12 7 12z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="uslub.css">
+  <!-- Tartib muhim: tekshir → malumot → mantiq → ilova. Oddiy script: fayl ikki marta bosib ochilganda ham ishlaydi. -->
+  <script src="tekshir.js"></script>
+  <script src="malumot.js" defer></script>
+  <script src="mantiq.js" defer></script>
+  <script src="ilova.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#asosiy" data-skip>Asosiy mazmunga o‘tish</a>
+  <p class="namuna-belgi" id="namuna-belgi" hidden>NAMUNA MA’LUMOT — biletdagi ma’lumot bilan almashtiring (malumot.js)</p>
+
+  <header class="sarlavha-qator">
+    <div class="ichki">
+      <a class="logo" href="#bosh" data-sayt="nomi">Sayt</a>
+      <button class="menyu-tugma" type="button" aria-expanded="false" aria-controls="menyu">Menyu</button>
+      <nav id="menyu" class="menyu" aria-label="Asosiy menyu"></nav>
+    </div>
+  </header>
+
+  <main id="asosiy" tabindex="-1">
+    <noscript><p class="ogoh">Sayt ishlashi uchun JavaScript yoqilgan bo‘lishi kerak.</p></noscript>
+
+    <!-- 1. BOSH SAHIFA -->
+    <section class="sahifa" id="bosh" data-sahifa="bosh" aria-labelledby="bosh-h">
+      <div class="ichki qahramon">
+        <p class="kichik" data-sayt="shior"></p>
+        <h1 id="bosh-h" data-matn="bosh.sarlavha"></h1>
+        <p class="katta-matn" data-matn="bosh.matn"></p>
+        <div class="amallar">
+          <a class="tugma" href="#royxat" data-matn="bosh.asosiyTugma"></a>
+          <a class="tugma ikkinchi" href="#ariza" data-matn="bosh.ikkinchiTugma"></a>
+        </div>
+        <dl class="raqamlar">
+          <div><dt>Jami</dt><dd id="son-jami">0</dd></div>
+          <div><dt>Arizalarim</dt><dd id="son-ariza">0</dd></div>
+        </dl>
+      </div>
+      <div class="ichki afzalliklar" id="afzalliklar"></div>
+      <!-- QO'SHIMCHA BLOK: yangi bo'lim kerak bo'lsa shu blokni nusxalang va matnini yozing.
+      <div class="ichki blok">
+        <h2>Yangi bo‘lim sarlavhasi</h2>
+        <p>Yangi bo‘lim matni.</p>
+      </div>
+      -->
+    </section>
+
+    <!-- 2. RO'YXAT: qidiruv, filtr, kartalar, bo'sh holat -->
+    <section class="sahifa" id="royxat" data-sahifa="royxat" aria-labelledby="royxat-h" hidden>
+      <div class="ichki">
+        <h1 id="royxat-h" data-matn="royxat.sarlavha"></h1>
+        <p data-matn="royxat.matn"></p>
+        <form class="filtr" id="filtr" role="search">
+          <label>Qidiruv <input type="search" id="qidiruv" autocomplete="off" placeholder="Nomi, joyi yoki tavsifi"></label>
+          <label>Turi <select id="tur-filtr"><option value="hammasi">Hammasi</option></select></label>
+          <button type="reset" class="tugma ikkinchi">Tozalash</button>
+        </form>
+        <p class="holat" id="royxat-holat" role="status" aria-live="polite"></p>
+        <div class="kartalar" id="kartalar"></div>
+        <div class="bosh-holat" id="royxat-bosh" hidden>
+          <p data-matn="royxat.bosh"></p>
+          <button type="button" class="tugma ikkinchi" id="filtr-tozala">Filtrni tozalash</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TAFSILOT: #element-<id> -->
+    <section class="sahifa" data-sahifa="element" aria-labelledby="element-h" hidden>
+      <div class="ichki tafsilot" id="tafsilot"></div>
+    </section>
+
+    <!-- 4. ARIZA FORMASI: maydonlar FORMA.maydonlar dan chiziladi -->
+    <section class="sahifa" id="ariza" data-sahifa="ariza" aria-labelledby="ariza-h" hidden>
+      <div class="ichki tor">
+        <h1 id="ariza-h" data-matn="FORMA.sarlavha"></h1>
+        <p data-matn="FORMA.matn"></p>
+        <div class="xato-xulosa" id="xato-xulosa" role="alert" tabindex="-1" hidden></div>
+        <form id="ariza-forma" novalidate></form>
+        <div class="muvaffaqiyat" id="muvaffaqiyat" tabindex="-1" hidden></div>
+      </div>
+    </section>
+
+    <!-- 5. SAQLANGAN ARIZALAR: ro'yxat, o'chirish, CSV/JSON -->
+    <section class="sahifa" id="saqlangan" data-sahifa="saqlangan" aria-labelledby="saqlangan-h" hidden>
+      <div class="ichki">
+        <h1 id="saqlangan-h">Arizalarim</h1>
+        <p class="ogoh" id="ombor-ogoh" role="status" hidden></p>
+        <div class="amallar" id="saqlangan-amallar">
+          <button type="button" class="tugma ikkinchi" id="csv-yukla">CSV yuklab olish</button>
+          <button type="button" class="tugma ikkinchi" id="json-yukla">JSON yuklab olish</button>
+          <button type="button" class="tugma xavfli" id="hammasini-ochir">Hammasini o‘chirish</button>
+        </div>
+        <p class="holat" id="saqlangan-holat" role="status" aria-live="polite"></p>
+        <ul class="yozuvlar" id="yozuvlar"></ul>
+        <div class="bosh-holat" id="saqlangan-bosh" hidden>
+          <p>Hali ariza yo‘q.</p>
+          <a class="tugma" href="#ariza">Ariza qoldirish</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. BIZ HAQIMIZDA -->
+    <section class="sahifa" id="haqida" data-sahifa="haqida" aria-labelledby="haqida-h" hidden>
+      <div class="ichki tor">
+        <h1 id="haqida-h" data-matn="haqida.sarlavha"></h1>
+        <div id="haqida-matn"></div>
+        <dl class="aloqa" id="aloqa"></dl>
+      </div>
+    </section>
+
+    <!-- Noma'lum manzil -->
+    <section class="sahifa" data-sahifa="topilmadi" aria-labelledby="topilmadi-h" hidden>
+      <div class="ichki tor">
+        <h1 id="topilmadi-h">Sahifa topilmadi</h1>
+        <p>Bu manzil mavjud emas yoki o‘chirilgan.</p>
+        <a class="tugma" href="#bosh">Bosh sahifaga qaytish</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pastki">
+    <div class="ichki"><p data-sayt="pastki"></p><p class="kichik">© <span id="yil"></span> <span data-sayt="nomi"></span></p></div>
+  </footer>
+  <div class="xabar" id="xabar" role="status" aria-live="polite"></div>
+</body>
+</html>

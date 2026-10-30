@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-29",
+  "snapshot_date": "2026-10-30",
   "source_fingerprint": "d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "8815524a274e724f0805b0e6f55b32bdfa568dadd69282ee3f395cb73a4528f8",
-  "archive_bytes": 620085,
+  "archive_sha256": "c14712c6bdb347d350ab83ff239e2e59a62b559c5e0e2b126bab9c2d910d9710",
+  "archive_bytes": 670230,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -74,13 +74,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4913,
-      "sha256": "0bfb5ffafdedc7bc06bacf2ac59732cbb64ca688a185200bc9afa40fc9a0d348"
+      "bytes": 5334,
+      "sha256": "2ef83baa81fb5ace4b0f5b9f9ec83af4519f78550d6600b55b6bb7c36fceb005"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 9095,
-      "sha256": "86b09d20fd717fbdd0ce569dd41869dd838c1381f93236d6b75454b73c763eb4"
+      "sha256": "6c15c9e91dec8ae55f4cb00e9ecd8ee66d9de23edde1db3103955bf0a9c21807"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -109,8 +109,8 @@
     },
     {
       "path": "CLAUDE.md",
-      "bytes": 194,
-      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+      "bytes": 284,
+      "sha256": "50fb395c5bbdab4b6e85214a8f7eb5df74290c5965fc2d6bb125bce9d4cd05f3"
     },
     {
       "path": "COMPETITION.md",
@@ -149,8 +149,8 @@
     },
     {
       "path": "GEMINI.md",
-      "bytes": 194,
-      "sha256": "b1b8dd9c50751049bafd276b6b43542f45b6da1eea86a22a7d53beb81d38dc9f"
+      "bytes": 284,
+      "sha256": "50fb395c5bbdab4b6e85214a8f7eb5df74290c5965fc2d6bb125bce9d4cd05f3"
     },
     {
       "path": "HANDOFF-TEMPLATE.md",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "1085ec8d41ab4ba9e150fc5983dedd1424af992317af088333d79f9ce221898b"
+      "sha256": "a5ddeb2635c67a3419b3cc161f8667efcf7e5f1cd62fd9273a1e4d1dde392ba9"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -179,8 +179,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 8150,
-      "sha256": "fb765f11325d3d103a5def6fb3871f45037509c40a2e8f2f63883c6e758df738"
+      "bytes": 10521,
+      "sha256": "571ca72c0fd6216e4d31c08dc2a4e39d9a428e10148574e0bb5f133b4b98947a"
     },
     {
       "path": "PREPARATION.md",
@@ -205,12 +205,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "8a30fdb57b70fa02af3d184e692ff6b8cb655aa59135832a7f5e77900dcfe34d"
+      "sha256": "71385198f3e003ab2ea439d777fc98aa503be5b1a1bed0dbab51982af5da0e3c"
     },
     {
       "path": "README.md",
-      "bytes": 1648,
-      "sha256": "0e1fbdfdc0caaae13251f3a7e3933e5144b1575fcca56698abe6401d3ce67304"
+      "bytes": 1809,
+      "sha256": "4d7cb07f43eca71647351b6a0d1bf6fa368729c8fdbe4b16398022e86c6a3d5f"
     },
     {
       "path": "REGULATIONS.md",
@@ -224,8 +224,8 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 2197,
-      "sha256": "40b4496a09143d563c6629291864a2f72eb76579f1a38ad8b8f8d2105af5c58b"
+      "bytes": 2467,
+      "sha256": "44110086f9aacc6eaaa6de3841ffe958b93e237dd47cc70f1705e8d46b5822d2"
     },
     {
       "path": "TASK-BOUNDARY.json",
@@ -236,6 +236,81 @@
       "path": "WORKFLOW.md",
       "bytes": 27823,
       "sha256": "8fd0bed2c82db888ea3c18bf8ef8a6e55bbe51b9b0d6a74d98291f482b7c8b5f"
+    },
+    {
+      "path": "ZAXIRA/JONLI-OZGARISH.md",
+      "bytes": 5629,
+      "sha256": "642a0e38bd0614da2b4d0a7206a3d811305b0cc90295bdb70a2026803f330403"
+    },
+    {
+      "path": "ZAXIRA/PROMPTLAR.md",
+      "bytes": 5150,
+      "sha256": "0af5082961bd886f7cdff123205b95a1b207aef9983d423018e8ebc4a7c44c1e"
+    },
+    {
+      "path": "ZAXIRA/ZAXIRA.md",
+      "bytes": 12163,
+      "sha256": "cf36e54b81fdbe020b3dd4a07c6a389456f731340b225a7b4c4152c3e4b4d5c5"
+    },
+    {
+      "path": "ZAXIRA/skelet/README.md",
+      "bytes": 2865,
+      "sha256": "8d7624f35757232dd12ee55dd6bcb40c0268fb2c5055d03177ab9883406d7971"
+    },
+    {
+      "path": "ZAXIRA/skelet/ilova.js",
+      "bytes": 22763,
+      "sha256": "0f81fd5e340e6a7cacfd7a3378d0f6c99eae5d8e943974796f4218a5f3a6d9fe"
+    },
+    {
+      "path": "ZAXIRA/skelet/index.html",
+      "bytes": 6201,
+      "sha256": "c05cb20b44ebd7ed5e28b75637b45b770c027fe132df8cb69145dffa7066bb37"
+    },
+    {
+      "path": "ZAXIRA/skelet/kit.json",
+      "bytes": 99,
+      "sha256": "7a8f9acbb262bba76e6ba198a5dac90121dd6d6d0103ce6ac4f70b220ff6666a"
+    },
+    {
+      "path": "ZAXIRA/skelet/malumot.js",
+      "bytes": 5457,
+      "sha256": "35a97f99b0c18600e35fe377cf3d3e82fd2c39e677b0364323fed6dd45420089"
+    },
+    {
+      "path": "ZAXIRA/skelet/mantiq.js",
+      "bytes": 14137,
+      "sha256": "bdd6515f3270744baf91222c3dd3cfc6a6cdd077b105c9c0d5e000758160a99c"
+    },
+    {
+      "path": "ZAXIRA/skelet/mantiq.test.mjs",
+      "bytes": 8466,
+      "sha256": "0193c07811d56a73218288b7c2c644ff9f395f58518bf89323bceff06a7e49f7"
+    },
+    {
+      "path": "ZAXIRA/skelet/serve.mjs",
+      "bytes": 2402,
+      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
+    },
+    {
+      "path": "ZAXIRA/skelet/tahrir.html",
+      "bytes": 4839,
+      "sha256": "f598aab7d43c76f88d4ede250d4376966e3b4a6b96786dd2dbc1343913e46849"
+    },
+    {
+      "path": "ZAXIRA/skelet/tahrir.js",
+      "bytes": 20482,
+      "sha256": "565cedc483c9b96015d6b75e50dfa7e706e0fdae66a33c0fd0f5571f7dc6efc6"
+    },
+    {
+      "path": "ZAXIRA/skelet/tekshir.js",
+      "bytes": 8916,
+      "sha256": "13c92a29c49fe1198c9bcb530203d09a2fdcad426cbde694465936a5686ee18a"
+    },
+    {
+      "path": "ZAXIRA/skelet/uslub.css",
+      "bytes": 9185,
+      "sha256": "5d7356b49d359678e0023c06f0fa058306f0af1b96f4dfb944c835c23de1203e"
     },
     {
       "path": "kit.json",

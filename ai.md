@@ -77,3 +77,8 @@ Foydalanuvchi to‘liq o‘qishni so‘rasa [to‘liq umumiy matn](https://azizb
 ## 28-oktabr qoidalar tekshiruvi
 
 [Amaliy qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [qoida qaydi](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json): nizom PDF’i o‘zgarmagan, yangi tasdiqlangan reglament/texnik qoida topilmadi. Yangi portal 15 daqiqalik himoya, bir vaqtda vazifa berilishi va 6 mezon/100 ballni takrorlaydi. Yangi ish davomiyligi, akkaunt/tarif, jonli tahrir va tayyor kod/backend bo‘yicha ruxsatlar tasdiqlanmadi; bilet va joydagi ko‘rsatma ustuvor.
+
+
+## Kuchli AI bo‘lmasa — zaxira reja
+
+AI kontekst/limiti kichik, internet sekin yoki AI ishlamasa katta fayllarni o‘qimang: [ZAXIRA.md](https://azizbeksafarov.github.io/zaxira/ZAXIRA.md) — qoidalardan asosiy faktlar, vaqt rejasi, 21 ko‘rsatkich bo‘yicha sinov va himoya ssenariysi; [PROMPTLAR.md](https://azizbeksafarov.github.io/zaxira/PROMPTLAR.md) — bitta faylga mo‘ljallangan qisqa so‘rovlar; [JONLI-OZGARISH.md](https://azizbeksafarov.github.io/zaxira/JONLI-OZGARISH.md) — himoyada matn/rang/elementni AI’siz o‘zgartirish. [Build’siz zaxira skelet](https://azizbeksafarov.github.io/zaxira/skelet/) va [zaxira.zip](https://azizbeksafarov.github.io/zaxira/zaxira.zip). Har source.zip ichida ham ZAXIRA/ papkasi bor. Skelet ochiq shablon, bilet emas.

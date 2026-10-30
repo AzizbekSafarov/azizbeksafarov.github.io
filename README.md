@@ -1,65 +1,67 @@
 # Azizbek Safarov — ochiq ish maydoni
 
-2026-10-29 paket auditi: original ZIP tekshiruvchisi endi ortiqcha eski fayllarni ham rad etadi; `npm install` yoki tahrirdan oldin yangi bo‘sh papkada ishlatiladi. Source yig‘ishda dependency papkalari chiqariladi, `.env` va mahalliy log/kalit fayllari nashrni to‘xtatadi. Lokal preview yashirin fayllar/dependency yo‘llarini xizmat qilmaydi. Regressiya: `python -B design/test_package_boundary.py`. Bu tanlov qoidalarining yangi tekshiruvi yoki maxfiy ombor auditi emas.
+https://azizbeksafarov.github.io/ — Ustoz AI “Eng yaxshi veb-sayt” tanloviga tayyorgarlik: 9 ta dizayn starteri, AI uchun to‘liq kontekst va kuchsiz AI uchun zaxira reja. Ochiq paket joriy bilet bermaydi; haqiqiy bilet, vaqt va joydagi qoida ustuvor.
 
-https://azizbeksafarov.github.io/
+## Bo‘limlar
 
-To‘qqiz faol dizayn: Bloom, Yuksal, Orbita, Nashr, Hisob, Ziyo, Meros, Samar va Forma. Bosh sahifa — yirik haqiqiy ko‘rinishlar, vazifaga mos tavsiflar, qidirish/filtr va tanlangan dizayn uchun alohida tafsilot. Tanlash holati URLda saqlanadi; tanlangan namuna havolasini nusxalash mumkin.
+| Manzil | Nima bor |
+|---|---|
+| `/`, `/design/` | Dizayn kutubxonasi: Bloom, Yuksal, Orbita, Nashr, Hisob, Ziyo, Meros, Samar, Forma. URLdagi `design`, `q`, `type`, `view` holatni tiklaydi. |
+| `/design/<slug>/` | Har dizayn: AI yo‘riqnomasi (`ai.md`), o‘qiladigan kod, `source.zip`, `manifest.json`. `/dezayn/<slug>/` — o‘zbekcha manzil, bir xil mazmun (generator yaratadi). |
+| `/design/start/` | Bilet, vaqt va dizayndan AI topshirig‘i (`CURRENT-TASK.md`). Qoralama brauzerda saqlanadi, serverga yuborilmaydi; bilet va vaqt kiritilmaguncha nusxalanmaydi. |
+| `/zaxira/` | **Kuchli AI bo‘lmasa:** build’siz sayt skeleti, kichik AI uchun so‘rovlar, himoyadagi jonli o‘zgarish qo‘llanmasi, `zaxira.zip`. |
+| `/tayyorgarlik/` | To‘liq o‘qish yo‘riqnomasi: `full-context.md`, `reading-plan.json`. |
+| `/ish-tartibi/` | AI bilan ish tartibi, fakt maqomi, ehtimoliy xavflar, `status.json`, CURRENT-TASK/HANDOFF shablonlari. |
+| `/arxitektura/`, `/api/` | Render + UptimeRobot + Supabase + Google Auth + AI + Telegram rejasi va sanali API sinovlari (18-oktabr). Reja — hali ishga tushgan infratuzilma emas. |
+| `/ai/`, `/ai.md`, `/llms.txt` | Markaziy AI konteksti. |
+| `/design/kit.zip` | 9 ta kod paketi + to‘liq tanlov konteksti + ZAXIRA. |
+| `/design/standart/` | Sifat mezonlari. |
+| `/ustoz/` | Alohida repozitoriy (`internet-kontekst`): tadqiqot, 39 sahifalik nizom matni. |
+| `/keys/` | Alohida himoyalangan kalitlar omboriga yo‘naltirish; bu repozitoriyda kalit yo‘q. |
 
-Barcha ekranlarda avval namunalar, tanlangach tafsilot ochiladi. URLdagi `design`, `q`, `type`, `view` parametrlari tanlov, qidiruv, filtr va ro‘yxat holatini tiklaydi. “AI bilan boshlash” tanlangan dizaynni formaga uzatadi; bilet va vaqt kiritilmaguncha topshiriq nusxalanmaydi. Maydonlar serverga yuborilmaydi.
+## Har bir `source.zip` ichida
 
-Topshiriq qoralamasi brauzer xotirasida saqlanadi. JSON orqali boshqa kompyuterda tiklash, import/tozalashni qaytarish va CURRENT-TASK.md yuklash bor. Ikki tab bir-birining matnini ogohlantirishsiz almashtirmaydi. Bu avtomatik taymer yoki AI integratsiyasi emas. Model `assets/hq/starter-model.mjs`, controller `starter.mjs`, uslub `starter.css`, markup `design/starter_page.py` ichida.
+- `START-HERE.md` — kirish; `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` — AI qoidalari (kichik kontekstli AI uchun “SMALL-CONTEXT MODE”).
+- `site/` — tahrirlanadigan kod; `node serve.mjs` → http://127.0.0.1:8080/ (npm shart emas).
+- `ZAXIRA/` — `ZAXIRA.md`, `PROMPTLAR.md`, `JONLI-OZGARISH.md`, `skelet/`.
+- `FULL-COMPETITION-CONTEXT.md`, `REGULATIONS.md` (39 sahifa), `SCORING-WORKPLAN.md`, `TASK-BOUNDARY.json`, `CURRENT-COMPETITION*.md/json`.
+- `node verify-package.mjs` — tahrirdan oldin original paketni hajm, SHA-256 va ortiqcha fayl bo‘yicha tekshiradi. Keyingi tahrir hashni tabiiy ravishda o‘zgartiradi.
 
-- `/` va `/design/` — dizayn kutubxonasi.
-- `/ai/` — brauzerda o‘qiladigan AI konteksti; `/ai.md` — asl matn.
-- `/design/start/` — bilet/vaqt/dizayndan aniq AI topshirig‘i.
-- `/design/kit.zip` — to‘qqiz kod paketi va tanlov konteksti.
-- `/design/standart/` — sifat mezonlari.
-- `/ustoz/` — alohida research Pages repozitoriysi.
-- `/arxitektura/` — foydalanuvchi tanlagan Render + UptimeRobot + Supabase + Google Auth + AI + Telegram rejasining interaktiv xaritasi; `/arxitektura/ai.md` — to‘liq texnik kontekst.
-- `/api/` — sanali rasmiy API sinovlari, tier/kvota va xatolar; `/api/verification.json` — kalitlarsiz natijalar. Hosting va monitor hali reja ekanligi aniq belgilangan.
-- `/ish-tartibi/` — yangi AI uchun o‘qish tartibi, fakt maqomi, son bilan cheklanmagan ehtimoliy xavflar, alohida ko‘rsatmalar/tavsiyalar va uch qatlamli sinov xaritasi. To‘liq `ai.md`, sanali `status.json`, CURRENT-TASK.md va HANDOFF.md shablonlari bor. Manba: `design/build_workflow.py`; umumiy HQ build bilan qayta yaratiladi.
-
-Arxitektura va API bo‘limlari `design/build_architecture.py`dan, `python design/build_hq.py` orqali yaratiladi. `assets/hq/architecture.mjs` faqat izohli oqimlarni almashtiradi; hech qanday haqiqiy AI yoki shaxsiy API’ni chaqirmaydi. Shaxsiy kalit omborining fayllari bu repozitoriyga ko‘chirilmaydi.
-
-HQ: `design/workspace_hq.py`, `assets/hq/workspace.css`, `exhibition.css`, `workspace.js`, `library-model.mjs`. `design/build_hq.py` yordamchi sahifalar va markaziy kontekstni bevosita joriy qobiq bilan yaratadi. Eski bosh sahifa generatori ishlatilmaydi. Barcha shriftlar lokal. Generator CSS/JS va import qilingan model URLlarini content hash bilan yangilaydi.
-
-Bosh sahifaning shakl tizimi `assets/hq/geometry.css`da, faqat `body[data-page="library"]`ga qo‘llanadi: ochiq qidiruv chizig‘i, tagchiziqli tablar, yon belgili namuna qatorlari, alohida asosiy/ikkinchi amal shakllari va asimmetrik namuna foni. Rasmlar maska bilan kesilmaydi. Ranglar va shrift oilasi workspace.cssdan olinadi.
-
-Kutubxonaning grafit rang mavzusi `assets/hq/aurora.css`da: foydalanuvchi bergan AI tugmasi rasmini rang namunasi qilib, asosiy amalda iliq pushti/sariq va sovuq ko‘k/binafsha chegara, yumshoq nur hamda och matn ishlatilgan. Shu fayl kutubxona uchun workspace.css ranglarini almashtiradi; shakllar geometry.cssda qoladi. Demo saytlarning ranglari alohida saqlanadi.
+## Build va tekshiruv
 
 ```text
-python design/build_hq.py
-node design/qa/run.mjs
-python design/build_handoff.py
-python design/verify_handoff.py
+python design/build_handoff.py      # barcha paket, manifest, ZIP, so‘ng HQ sahifalari
+python design/build_hq.py           # faqat HQ ko‘rinishi o‘zgarsa
+node design/qa/run.mjs              # model, storage, starter va zaxira testlari
+python -B design/verify_handoff.py  # paketlar manba bilan mos (ZAXIRA ham)
+python -B design/verify_site.py     # HTML, redirect, alias, anchorlar
+python -B design/verify_public.py   # maxfiy qiymat naqshlari (ichma-ich ZIP ham)
+python -B design/test_package_boundary.py
 python -m http.server 8770 --bind 127.0.0.1
 ```
 
-Faqat HQ ko‘rinishi o‘zgarsa build_hq yetadi. Source, DESIGN-STANDARD yoki ish tartibi/arxitektura/API konteksti o‘zgarsa build_handoff barcha manifest/ZIPni yangilaydi. verify_handoff paketdagi hujjat va runtime’ni amaldagi manba bilan ham solishtiradi. Bloomning o‘z AGENTS.md qoidalariga rioya qiling; minified distni patch qilmang. Yuksalning oq foni va brend faviconi saqlanadi.
+`?v=` keshlash hashlari Git nashr qiladigan LF baytlardan olinadi, shuning uchun CRLF va LF checkout bir xil build beradi. Generatorlar bevosita tahrirni qayta yozadi — manbani o‘zgartiring:
 
-GitHub Pages main/rootdan nashr qiladi. Pushdan keyin deployment, ochiq HTML va muhim UI amallari tekshirilsin. Eski QA keyingi tahrirlar uchun dalil emas. HQ tekshiruvlari: `design/QA-HQ-FLOWS.json`, `design/QA-HQ-WORKSPACE.json`, `design/HQ-QA.md`.
+| Qism | Manba |
+|---|---|
+| HQ qobig‘i va kutubxona | `design/workspace_hq.py`, `assets/hq/workspace.css`, `geometry.css` (shakl), `aurora.css` (rang), `exhibition.css`, `workspace.js`, `library-model.mjs` |
+| Topshiriq formasi | `assets/hq/starter-model.mjs`, `starter.mjs`, `starter.css`, `design/starter_page.py` |
+| Zaxira | `zaxira/ZAXIRA.md`, `zaxira/PROMPTLAR.md`, `zaxira/skelet/*` (qo‘lda); `design/build_zaxira.py` jonli o‘zgarish jadvali, `zaxira.zip` va sahifani yaratadi |
+| Ish tartibi, arxitektura, API | `design/build_workflow.py`, `design/build_architecture.py`, `design/product_quality.py` |
+| Tayyorgarlik | `design/preparation-guide.md`, `design/build_preparation.py` |
+| Tanlov konteksti | `../internet-kontekst` (canonical), `design/sync_context.py` |
 
-Joriy kod yagona manba: shu repozitoriy. `design/verify_clean.py` arxivdagi starterlar, ishlatilmaydigan build chunklari va eski readable source nusxalarini rad etadi; `verify_handoff.py` ham shu tekshiruvni bajaradi. Mahalliy nusxani yangilash uchun `pwsh -File design/sync_local.ps1 -Apply`: avvalgi QA uchun ochilgan kod nusxalari va mirrorda manbada yo‘q fayllarni o‘chirib, `design-shablonlar` va `TANLOV-KIT.zip`ni sinxronlaydi. `-Apply` berilmasa faqat reja ko‘rsatiladi. Asl tanlov hujjatlari va research papkalari tozalanmaydi. `02-samar.html` / `04-forma.html` eski shablonlarni saqlamaydi: ular amaldagi saytga qisqa redirect havolalaridir.
+Bloom: `design/material-expressive/src/` ni tahrirlang, minified `dist`ni emas; o‘z `AGENTS.md` qoidalariga amal qiling. Yuksalning oq foni va brend faviconi saqlanadi. Mahalliy nusxani sinxronlash: `pwsh -File design/sync_local.ps1 -Apply` (`-Apply`siz faqat reja).
 
-Asosiy tugmadagi rang va nur birgalikda 6 soniyada to‘liq aylanadi. Buning uchun aurora.cssdagi `--aurora-angle` ro‘yxatdan o‘tgan CSS xususiyati ishlatiladi. Tugma matni va shakli aylanmaydi. `prefers-reduced-motion` yoqilganida rangli chegara harakatsiz qoladi.
+## Nashr
 
-Oldingi 2026-10-18 upgrade snapshot’i: `design/QA-UPGRADE.md`, `design/QA-UPGRADE-BROWSER.json`. 613 avtomatik test, ZIPlardan 488 test (shu to‘plamning bir qismi), 60 jonli responsive holat. `python design/verify_site.py` barcha HTML, redirect, alias va sahifalararo anchorlarni tekshiradi.
+GitHub Pages `main`/rootdan nashr qiladi. Pushdan keyin deployment, ochiq HTML va muhim UI amallari tekshiriladi. Eski QA keyingi tahrirlar dalili emas.
 
-Tarixiy to‘liq audit: [AUDIT-20261018.md](design/AUDIT-20261018.md). Undagi testlar va browser o‘lchovlari 18-oktabr versiyasiga tegishli; keyingi o‘zgarish tekshirilganining dalili emas. `python -B design/verify_public.py` public fayl va ichma-ich ZIP’larni maxfiy qiymatlarni chiqarmasdan skanerlaydi.
+## Tarixiy qaydlar
 
-2026-10-28 kontekst auditi: ko‘chirilgan Markdown havolalari, to‘liq o‘qish xaritasining aynan matn oraliqlari va hashlar, paket konteksti, eski/yangi qoida maqomi tekshirildi. `python -B design/verify_context.py` online matnlar va to‘qqiz ZIP ichidagi havola/o‘qish xaritalarini tekshiradi. API hujjatini qayta ko‘rish eski ulanish sinovini yangilamaydi: `/api/verification.json` sinov sanasini 18-oktabr sifatida saqlaydi. Bu audit barcha dizayn interaksiyalari yoki maxfiy ombor backendining yangi xavfsizlik auditi emas.
+- 2026-10-30: kuchsiz AI uchun zaxira to‘plami (`/zaxira/`, har ZIPda `ZAXIRA/`); topshiriq eksportidagi buzilgan havola tuzatildi; build CRLF/LF’dan mustaqil; mobil filtr tablari bir qatorda.
+- 2026-10-29: original ZIP tekshiruvchisi ortiqcha fayllarni rad etadi; source yig‘ishda dependency papkalari chiqariladi, `.env`/log/kalit fayllari nashrni to‘xtatadi; lokal preview yashirin fayllarni xizmat qilmaydi.
+- 2026-10-28: nizom va amaliy qoidalar qayta tekshirildi (`design/handoff/current-competition.md`); kontekst havolalari va o‘qish xaritasi auditi (`design/verify_context.py`).
+- 2026-10-18: to‘liq audit — [AUDIT-20261018.md](design/AUDIT-20261018.md), [QA-UPGRADE.md](design/QA-UPGRADE.md), [ZIP-CONTEXT-QA.md](design/ZIP-CONTEXT-QA.md). Undagi o‘lchovlar o‘sha versiyaga tegishli.
 
-Har bir alohida source ZIP ham to‘liq tadqiqot (`FULL-COMPETITION-CONTEXT.md`), 39 sahifalik nizom (`REGULATIONS.md`) va baholash/taqdimot ish rejasini (`SCORING-WORKPLAN.md`) olib yuradi. AI `START-HERE.md`dan boshlaydi. Original paketni tahrirlashdan oldin `node verify-package.mjs` ichki `PACKAGE-MANIFEST.json` bilan hajm va SHA-256’ni tekshiradi; build verifikatori CRC, UTF-8 va takror yo‘llarni ham tekshiradi. Hash boshlang‘ich nusxa uchun; foydalanuvchi tahriridan so‘ng farq bo‘lishi tabiiy.
-
-ZIP/kontekst to‘liqligi dalili: [ZIP-CONTEXT-QA.md](design/ZIP-CONTEXT-QA.md), [tekshiruv natijalari](design/qa/zip-context-20261018.json).
-
-Arxitekturada `/arxitektura/#sahifalar` mahsulot xaritasi mavjud: landing/animatsiya, ochiq mazmun, login, dashboard va workspace rollari; route, kirish huquqi, data saqlanishi, responsive va xato holatlari. Ko‘rsatmalar ZIP ichidagi ARCHITECTURE.md va PROJECT-TASK-TEMPLATE.md bilan birga yangilanadi. Route nomlari namunaviy, joriy ishlaydigan mahsulot deb ko‘rsatilmaydi.
-
-Professional mahsulot sifati `/arxitektura/#sifat` va ARCHITECTURE.md’da: UI/component tizimi, WCAG maqsadlari, ruxsatlar, ma’lumot va tiklash, API, resiliency/budget, Web Vitals, observability, release va rollback. Birlamchi manbalar va qabul dalillari bilan; korporativ sertifikat yoki allaqachon bajarilgan nazorat deb ko‘rsatilmaydi. Yagona tahrirlanadigan manba: design/product_quality.py.
-
-Tanlovga tayyorgarlik: `/tayyorgarlik/`, qisqartirilmagan yig‘ma `/tayyorgarlik/full-context.md` va `reading-plan.json`. Har starterda PREPARATION.md, READING-PLAN.json, READ-RECEIPT.md va BRAND-ASSETS.json. `design/get_starter.py` katalog/ZIP/ichki manifestni tekshirib yangi papkaga oladi; kodni ishga tushirmaydi. Yagona tahrir manbasi `design/preparation-guide.md`; build_handoff.py barcha paketlarni yangilaydi.
-
-Topshiriq chegarasi: `/design/handoff/task-boundary.json` va har ZIP’dagi TASK-BOUNDARY.json. Ochiq tayyorgarlik joriy bilet, bosqich yoki amaliy vaqt bermaydi. Demo yozuvi, QA fixture’i va asl loyiha hujjatidagi namuna foydalanuvchining haqiqiy topshirig‘i emas. Eskirgan mashq kalendari, tayyor daqiqalik buyruqlar va takroriy eski kirish matni amaliy kontekstdan chiqarilgan. Asl PDFdagi namuna o‘chirilmagan: uning oldida joriy topshiriq emasligi yozilgan, asl 39 sahifa saqlangan. `verify_context.py` bu chegarani, bo‘sh task/handoff shablonlarini va barcha paketdagi mos nusxalarni tekshiradi.
-
-2026-10-28: nizom va amaliy qoidalar tekshiruvi `design/handoff/current-competition.md` / `current-competition-facts.json` orqali tarqatiladi. 2026-10-09 qaydlari tarixiy; 18-oktabr provider probeslari qayta bajarilmagan. Barcha yangi nashr/paketlar canonical `internet-kontekst` hashlariga bog‘langan.
+Demo yozuvlari, QA fixture’lari va nizom loyihasidagi namunaviy bilet joriy topshiriq emas (`design/handoff/task-boundary.json`). Shaxsiy kalit omborining fayllari bu repozitoriyga ko‘chirilmaydi.

@@ -86,3 +86,5 @@ body[data-page="library"] .no-results>.button{border-radius:28px}
 @media(prefers-reduced-motion:reduce){
  body[data-page="library"] .selected-image-link:hover,body[data-page="library"] #selected-demo:hover>span,body[data-page="library"] #selected-start:hover>span,body[data-page="library"] .preview-bar>a:hover{transform:none}
 }
+@media (max-width:420px){body[data-page="library"] .library-filters{gap:4px;justify-content:space-between}}
+@media (hover:none),(pointer:coarse){body[data-page="library"] .search kbd{display:none}}

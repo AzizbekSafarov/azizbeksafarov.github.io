@@ -44,6 +44,16 @@ def check_runtime(z,root):
             target=posixpath.normpath(posixpath.join(posixpath.dirname(name),unquote(parts.path)))
             assert target in names,f'{name}: missing runtime resource {value}'
 
+def check_zaxira(z):
+    # Every package must carry the current weak-AI kit unchanged, with its runtime resources.
+    from build_zaxira import KIT
+    names=set(z.namelist())
+    expected={'ZAXIRA/'+n:(KIT/n).read_bytes().replace(b'\r\n',b'\n') for n in ('ZAXIRA.md','PROMPTLAR.md','JONLI-OZGARISH.md')}
+    expected.update({'ZAXIRA/skelet/'+p.relative_to(KIT/'skelet').as_posix():p.read_bytes().replace(b'\r\n',b'\n') for p in (KIT/'skelet').rglob('*') if p.is_file()})
+    assert {n for n in names if n.startswith('ZAXIRA/')}==set(expected),'Stale or missing ZAXIRA files'
+    for name,data in expected.items():assert z.read(name)==data,f'Stale {name}'
+    check_runtime(z,'ZAXIRA/skelet')
+
 def check_package(z):
     paths=z.namelist()
     assert len(paths)==len({p.casefold() for p in paths}),'Duplicate/case-colliding archive paths'
@@ -104,6 +114,8 @@ def verify():
                 assert actual==z.read('site/'+entry['path']) and sha256(actual).hexdigest()==entry['sha256']
             kit=json.loads(z.read('kit.json'));assert kit['serve_root']+'/'+kit['entry'] in z.namelist()
             check_runtime(z,kit['serve_root'])
+            check_zaxira(z)
+            assert 'ZAXIRA/ZAXIRA.md' in z.read('START-HERE.md').decode() and 'SMALL-CONTEXT MODE' in z.read('AGENTS.md').decode()
         for name in ('index.html','source.html'):check_links(folder/name)
         check_links(SITE_ROOT/'dezayn'/template['slug']/'index.html')
     check_links(ROOT/'start/index.html');check_links(ROOT/'index.html')
@@ -112,6 +124,7 @@ def verify():
         assert z.testzip() is None
         check_package(z)
         assert 'competition/FULL-CONTEXT.md' in z.namelist()
+        check_zaxira(z)
         assert z.read('competition/REGULATIONS.md')==(ROOT/'handoff/regulations.md').read_bytes()
         assert z.read('LIBRARY-AUDIT.md')==(ROOT/'AUDIT-20261018.md').read_bytes()
         for name, source in CONTEXT_FILES.items():

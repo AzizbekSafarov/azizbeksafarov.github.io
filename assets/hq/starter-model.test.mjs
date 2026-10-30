@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {existsSync} from 'node:fs';
 import {DRAFT_KEY,MAX_IMPORT_BYTES,LIMITS,emptyTask,parseDraft,serializeDraft,createDraftStore,taskMarkdown,taskErrors,linksFor} from './starter-model.mjs';
 const designs=['bloom','si','forma','samar','orbita','meros','nashr','ziyo','hisob'];
 const task={design:'bloom',topic:'O‘quv markazi uchun sayt',time:'85 daqiqa',constraints:'Server yo‘q'};
@@ -38,4 +39,16 @@ test('exported task carries the shared workflow and planned infrastructure conte
  assert.match(output,/verify-package\.mjs/);
  assert.match(output,/hali tayyor integratsiya degani emas/);
  assert.ok(output.includes(task.topic));
+});
+test('every exported headquarters link ends cleanly and resolves to a published file',()=>{
+ const root=new URL('../../',import.meta.url),origin='https://azizbeksafarov.github.io/';
+ for(const design of designs){
+  const urls=taskMarkdown({...task,design},design).match(/https:\/\/azizbeksafarov\.github\.io\/[^\s)]*/g);
+  for(const url of urls){
+   assert.match(url,/[\w\/]$/,'trailing punctuation would break autolinks: '+url);
+   const rel=url.slice(origin.length);
+   if(rel.startsWith('ustoz/'))continue; // separate internet-kontekst Pages repository
+   assert.ok(existsSync(new URL(rel.endsWith('/')?rel+'index.html':rel,root)),'missing public file: '+url);
+  }
+ }
 });

@@ -25,5 +25,7 @@ User ticket, time and on-site rules take priority. These resources do not guaran
 - [Approved Render + UptimeRobot plan](https://azizbeksafarov.github.io/arxitektura/ai.md)
 - [API integration and dated probe evidence](https://azizbeksafarov.github.io/api/ai.md)
 - [Credential-free probe data](https://azizbeksafarov.github.io/api/verification.json)
+- [Weak or limited AI fallback: short plan, one-file prompts, live-edit guide](https://azizbeksafarov.github.io/zaxira/ZAXIRA.md)
+- [Build-free fallback site skeleton](https://azizbeksafarov.github.io/zaxira/skelet/)
 
 Planned infrastructure is explicitly distinguished from deployed services. Never treat these public documents as a source of credentials.

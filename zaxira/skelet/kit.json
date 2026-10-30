@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "name": "Zaxira skelet",
+  "serve_root": ".",
+  "entry": "index.html"
+}

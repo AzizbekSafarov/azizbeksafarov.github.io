@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kodsiz tahrirlash — sayt mazmuni</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="uslub.css">
+  <style>
+    body { background: #eef0f3; }
+    .t-bosh { position: sticky; top: 0; z-index: 5; background: #15181e; color: #fff; }
+    .t-bosh .ichki { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; }
+    .t-bosh h1 { font-size: 1.1rem; margin: 0 auto 0 0; }
+    .t-bosh .tugma { min-height: 40px; padding: 6px 14px; }
+    .t-bosh .tugma.ikkinchi { color: #fff; border-color: #fff; }
+    .t-holat { width: 100%; margin: 0; font-size: .9rem; color: #cfd3da; min-height: 1.4em; }
+    .t-joy { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; padding: 20px 0 60px; align-items: start; }
+    .t-panel { display: grid; gap: 16px; }
+    .t-blok { background: #fff; border: 1px solid var(--rang-chiziq); border-radius: 12px; padding: 16px; }
+    .t-blok > h2 { font-size: 1.1rem; margin: 0 0 4px; }
+    .t-blok > p { color: var(--rang-yumshoq); font-size: .9rem; }
+    .t-blok label { margin-bottom: 12px; font-size: .95rem; }
+    .t-qator { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0 12px; }
+    .t-kartochka { border: 1px solid var(--rang-chiziq); border-radius: 10px; padding: 12px; margin-bottom: 12px; background: #fafbfc; }
+    .t-kartochka-bosh { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .t-kartochka-bosh strong { margin-right: auto; }
+    .t-kichik { min-height: 36px; padding: 4px 10px; font-size: .85rem; }
+    .t-belgi { display: flex !important; align-items: center; gap: 8px; font-weight: 500; }
+    .t-belgi input { width: 20px; min-height: 20px; height: 20px; }
+    .t-rang { display: flex; gap: 10px; align-items: center; }
+    .t-rang input[type=color] { width: 56px; padding: 2px; }
+    .t-korish { position: sticky; top: 76px; }
+    .t-korish iframe { width: 100%; height: calc(100vh - 150px); border: 1px solid var(--rang-chiziq); border-radius: 12px; background: #fff; display: block; margin-inline: auto; }
+    .t-kenglik { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+    .t-kenglik button[aria-pressed=true] { background: var(--rang-asosiy); color: #fff; }
+    .t-xatolar { border: 2px solid var(--rang-xato); background: var(--rang-xato-och); border-radius: 10px; padding: 10px 14px; }
+    @media (max-width: 900px) { .t-joy { grid-template-columns: 1fr; } .t-korish { position: static; } .t-korish iframe { height: 70vh; } }
+  </style>
+  <script src="malumot.js" defer></script>
+  <script src="mantiq.js" defer></script>
+  <script src="tahrir.js" defer></script>
+</head>
+<body>
+  <header class="t-bosh">
+    <div class="ichki">
+      <h1>Kodsiz tahrirlash</h1>
+      <button type="button" class="tugma" id="t-saqla">Faylga saqlash</button>
+      <button type="button" class="tugma ikkinchi" id="t-och">Saytni ochish ↗</button>
+      <button type="button" class="tugma ikkinchi" id="t-qaytar">Fayldagi holatga qaytish</button>
+      <p class="t-holat" id="t-holat" role="status" aria-live="polite"></p>
+    </div>
+  </header>
+  <main class="ichki t-joy" id="asosiy">
+    <div class="t-panel" id="t-panel">
+      <section class="t-blok">
+        <h2>Qanday ishlatiladi</h2>
+        <ol>
+          <li>Quyidagi maydonlarni biletga moslab o‘zgartiring. O‘ng tomonda natija darhol ko‘rinadi.</li>
+          <li><strong>Faylga saqlash</strong> ni bosing va shu papkadagi <code>malumot.js</code> ni tanlab ustidan yozing. Brauzer so‘ramasa, fayl “Yuklanmalar” papkasiga tushadi — uni shu papkaga ko‘chirib, eskisini almashtiring.</li>
+          <li><strong>Saytni ochish</strong> → sahifani <strong>Ctrl+Shift+R</strong> bilan yangilang.</li>
+        </ol>
+        <p>Yozganingiz shu brauzerda avtomatik saqlanadi. Faylga saqlanmaguncha sayt eski holatda qoladi.</p>
+      </section>
+      <div class="t-xatolar" id="t-xatolar" role="alert" hidden></div>
+      <div id="t-maydonlar"></div>
+    </div>
+    <aside class="t-korish" aria-label="Oldindan ko‘rish">
+      <div class="t-kenglik" role="group" aria-label="Ekran kengligi">
+        <button type="button" class="tugma ikkinchi t-kichik" data-kenglik="390">Telefon 390</button>
+        <button type="button" class="tugma ikkinchi t-kichik" data-kenglik="768">Planshet 768</button>
+        <button type="button" class="tugma ikkinchi t-kichik" data-kenglik="" aria-pressed="true">To‘liq</button>
+        <button type="button" class="tugma ikkinchi t-kichik" id="t-yangila">Yangilash</button>
+      </div>
+      <iframe id="t-iframe" title="Saytning qoralama ko‘rinishi"></iframe>
+    </aside>
+  </main>
+</body>
+</html>
