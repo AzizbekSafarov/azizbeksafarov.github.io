@@ -46,8 +46,13 @@ window.SAYT = {
   royxat: {
     sarlavha: "Ro‘yxat",
     matn: "Qidiring yoki turini tanlang. Batafsil ma’lumot uchun kartani oching.",
-    bosh: "Hech narsa topilmadi. Boshqa so‘z bilan qidiring yoki filtrni tozalang."
+    bosh: "Hech narsa topilmadi. Boshqa so‘z bilan qidiring yoki filtrni tozalang.",
+    // Mavzuga mos so'zlar (bo'sh qolsa standart). Masalan mahsulotlar: turi "Kategoriya", joylar "Omborda".
+    yorliqlar: { turi: "Turi", joylar: "Qolgan joy", toldi: "Joy qolmagan", tanlash: "Tanlash" }
   },
+
+  // "Saqlanganlar" sahifasi matnlari (sarlavha bo'sh qolsa menyudagi nom olinadi)
+  saqlangan: { bosh: "Hali ariza yo‘q.", ochirish: "O‘chirish" },
 
   haqida: {
     sarlavha: "Biz haqimizda",
@@ -68,9 +73,10 @@ window.SAYT = {
 /* Ro'yxatdagi elementlar (kurs, tadbir, mahsulot, xizmat...).
    Majburiy: id (takrorlanmas, bo'sh joysiz), nom.
    Ixtiyoriy: turi, sana (YYYY-MM-DD), vaqt, joy, narx (so'm, 0 = Bepul),
-   joylar (sig'im; berilsa to'lganda ariza yopiladi), tavsif, rasm (fayl yo'li). */
+   joylar (sig'im; berilsa to'lganda ariza yopiladi), tavsif, rasm (fayl yo'li),
+   qoshimcha: { "Muallif": "...", "Davomiyligi": "..." } — biletdagi boshqa ustunlar. */
 window.ELEMENTLAR = [
-  { id: "n1", nom: "Namuna element 1", turi: "1-tur", sana: "2026-12-01", vaqt: "10:00", joy: "Namuna manzil", narx: 0, joylar: 12, tavsif: "Bu yerga biletdagi tavsif yoziladi." },
+  { id: "n1", nom: "Namuna element 1", turi: "1-tur", sana: "2026-12-01", vaqt: "10:00", joy: "Namuna manzil", narx: 0, joylar: 12, tavsif: "Bu yerga biletdagi tavsif yoziladi.", qoshimcha: { "Mas’ul": "Namuna mas’ul" } },
   { id: "n2", nom: "Namuna element 2", turi: "1-tur", sana: "2026-12-02", vaqt: "14:00", joy: "Namuna manzil", narx: 0, joylar: 2, tavsif: "Sig‘imi kichik: ikki ariza bilan to‘ladi." },
   { id: "n3", nom: "Namuna element 3", turi: "2-tur", sana: "2026-12-03", vaqt: "11:00", joy: "Namuna manzil", narx: 50000, joylar: 0, tavsif: "joylar: 0 — cheklov yo‘q." },
   { id: "n4", nom: "Namuna element 4", turi: "2-tur", sana: "2026-12-04", vaqt: "16:00", joy: "Namuna manzil", narx: 0, joylar: 20, tavsif: "Qisqa tavsif." },

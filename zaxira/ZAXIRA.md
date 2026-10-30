@@ -14,11 +14,11 @@ Kod faylini ochish shart emas. AI bo‘lsa, unga faqat `PROMPTLAR.md` dagi so‘
 
 ## 1. Qoidalardan kelib chiqadigan 8 ta asosiy fakt
 
-Manba maqomi: **[Nizom]** — imzolangan qo‘shma qaror (2026-yil iyul), **[Loyiha]** — 11 betlik “tasdiqqa taqdim etiladigan” baholash hujjati (tasdig‘i topilmagan), **[Video]** — Ustoz AI’ning 5-oktabrdagi rasmiy videosi.
+Manba maqomi: **[Nizom]** — imzolangan qo‘shma qaror (2026-yil iyul), **[Sayt]** — Ustoz AI saytidagi nizom PDF’i (boshqa tahrir; 28- va 30-oktabrda o‘zgarmagani tekshirilgan), **[Loyiha]** — 11 betlik “tasdiqqa taqdim etiladigan” baholash hujjati (tasdig‘i topilmagan), **[Video]** — Ustoz AI’ning 5-oktabrdagi rasmiy videosi. Manbalar bir-biridan farq qilsa, joydagi tashkilotchi ko‘rsatmasi hal qiladi.
 
-1. **Jonli o‘zgarish — eng katta xavf. [Nizom 7–9-band]** Himoyada ekspert matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Bajarilmasa ish baholanmaydi va ishtirokchi chetlashtiriladi. Buni AI’siz, qo‘lda, 1 daqiqada qila olish shart → `JONLI-OZGARISH.md`.
-2. **Ball: 30 / 20 / 10 / 10 / 20 / 10 = 100. [Nizom 19-band]** Sifat va funksionallik 30, dolzarblik va mazmun 20, dizayn/UX 10, taqdimot 10, zamonaviy texnologiyalar 20, kreativlik 10. Funksiya, mazmun va texnologiya birga 70 ball.
-3. **Teng ballda avval 1-mezon (sifat), keyin 5-mezon (texnologiya) hal qiladi. [Nizom 20¹-band]** Ishlaydigan asosiy oqim va sinov dalili eng qimmat.
+1. **Jonli o‘zgarish — eng katta xavf, manbalar esa har xil.** [Nizom 7–9-band]: ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin; o‘z qurilmasida bajara olmagan ishtirokchining ishi baholanmaydi va u chetlashtiriladi. [Sayt] nusxasida bu band yo‘q. [Loyiha]: topshirilgan loyihani himoyada o‘zgartirish mumkin emas. Eng qattiq holatga tayyorlaning: o‘zgarishni AI’siz, qo‘lda, 1 daqiqada qila oling → `JONLI-OZGARISH.md`. Topshirilgan nusxa alohida saqlanib qolsin (o‘zgarishni nusxada qiling, agar joyda shunday so‘ralsa).
+2. **Ball: 30 / 20 / 10 / 10 / 20 / 10 = 100. [Nizom 19-band; Sayt]** Sifat va funksionallik 30, dolzarblik va mazmun 20, dizayn/UX 10, taqdimot 10, zamonaviy texnologiyalar 20, kreativlik 10 (ikki tahrirda mezonlar tartibi farqli, vaznlar bir xil). Funksiya, mazmun va texnologiya birga 70 ball.
+3. **Teng ballda avval sifat va funksionallik hal qiladi. [Nizom va Sayt 20¹-band]** Ikkinchi mezon farq qiladi: [Nizom] — zamonaviy texnologiyalar, [Sayt] — kreativlik va originallik. Demak ishlaydigan asosiy oqim va sinov dalili eng qimmat, keyin vosita va o‘ziga xos yechim.
 4. **Himoya 15 daqiqa: 5 taqdimot + 5 namoyish + 5 savol. Qo‘shimcha vaqt berilmaydi. [Nizom]**
 5. **Shablon va g‘oya olish mumkin. [Video; Loyiha]** Ammo avval tayyorlangan to‘liq loyihani topshirish taqiqlanadi [Loyiha]. Skeletni biletga moslashtiring va README’da manba hamda o‘zgartirilgan qismlarni yozing (5.2 va 6.1 ko‘rsatkichlari).
 6. **Kompyuter tashkilotchiniki; Antigravity va Codex o‘rnatilgan; akkaunt ulash uchun 15 daqiqa. [Video]** 2026-10-09 tekshiruvida Antigravity Google FAQ’i xizmat 18 yoshdan kichiklarga ochiq emasligini aytgan; Codex limiti tarifga bog‘liq. AI kuchsiz yoki limitli bo‘lishiga tayyor turing.
@@ -56,8 +56,8 @@ Tugashiga 30, 10 va 5 daqiqa qolgani e’lon qilinadi [Loyiha]. **30 daqiqa qolg
 - **1. Asosiy** — sayt nomi, shior, asosiy rang. Tayyor bo‘lgach “Namuna ma’lumot ogohlantirishi” belgisini olib tashlang;
 - **2. Sahifalar** — biletga keraksiz sahifani o‘chiring, menyu nomlarini biletga moslang;
 - **3. Bosh sahifa** — sarlavha va matn: kim uchun, nima qiladi, keyingi qadam;
-- **4. Ro‘yxat** — biletdagi jadval. Jadval Word/Excel/PDF’da bo‘lsa: nusxalang → “Jadvaldan qo‘shish” → “Ro‘yxatni almashtirish”. Birinchi qatorda ustun nomlari bo‘lsin (Nomi, Sana, Vaqt, Joy, Narx, Joylar, Tavsif). Sana, manzil va nomlarni biletdagidek aynan qoldiring (2.4 izchillik). “Joylar soni” — sig‘im (to‘lganda forma yopiladi), kerak bo‘lmasa 0;
-- **5. Ariza formasi** — biletdagi maydonlar va “Majburiy” belgisi. Turlar: qisqa/uzun matn, telefon, email, son (chegarasi bilan), sana, ro‘yxatdan tanlash, o‘z variantlari, rozilik;
+- **4. Ro‘yxat** — biletdagi jadval. Jadval Word/Excel/PDF’da bo‘lsa: nusxalang → “Jadvaldan qo‘shish” → “Ro‘yxatni almashtirish”. Birinchi qatorda ustun nomlari bo‘lsin (Nomi, Turi/Kategoriya, Sana, Vaqt, Joy, Narx, Joylar/Soni, Tavsif). Boshqa ustunlar (Muallif, O‘qituvchi, Davomiyligi…) avtomatik “qo‘shimcha ustun” bo‘ladi va qidiruvda topiladi. Sana, manzil va nomlarni biletdagidek aynan qoldiring (2.4 izchillik). “Sig‘im / soni” — to‘lganda forma yopiladi, kerak bo‘lmasa 0. **“Ustun nomlari va tugma matnlari”** da so‘zlarni mavzuga moslang: masalan mahsulotlar uchun Turi → Kategoriya, Qolgan joy → Omborda, Tanlash → Buyurtma berish. Qidiruv maslahatini ham yozing;
+- **5. Ariza formasi** — biletdagi maydonlar va “Majburiy” belgisi. Turlar: qisqa/uzun matn, telefon, email, son (chegarasi bilan), sana, ro‘yxatdan tanlash, o‘z variantlari, rozilik. Rozilik va boshqa matnlardagi “ariza” so‘zini mavzuga moslang (masalan “buyurtma”). “Saqlanganlar sahifasi matnlari” da sarlavha (“Mening buyurtmalarim”) va o‘chirish tugmasi (“Bekor qilish”);
 - **6. Biz haqimizda** — kerak bo‘lsa.
 
 Har o‘zgarishdan keyin **Ctrl+S**. Qizil “Saqlashdan oldin tuzating” chiqsa, ro‘yxatdagi xatoni tuzating.

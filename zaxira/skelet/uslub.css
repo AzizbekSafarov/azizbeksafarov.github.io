@@ -88,6 +88,7 @@ textarea { min-height: 110px; resize: vertical; }
 .karta { display: flex; flex-direction: column; background: var(--rang-yuza); border: 1px solid var(--rang-chiziq); border-radius: var(--burchak); overflow: hidden; }
 .karta-rasm { aspect-ratio: 16 / 9; background: var(--rang-asosiy-och); color: var(--rang-asosiy); display: grid; place-items: center; font-size: 2.4rem; font-weight: 800; }
 .karta-rasm img { width: 100%; height: 100%; object-fit: cover; }
+.karta-rasm:not(:has(img)) { aspect-ratio: auto; height: 64px; font-size: 1.6rem; } /* rasm yo'q bo'lsa joy egallamasin */
 .karta-ichi { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .karta h2 { font-size: 1.15rem; margin: 0; }
 .karta .amallar { margin: auto 0 0; padding-top: 10px; }

@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "89665e3b79614a29a3fa56cae6e872b2d37ce64be423fd5805648d75e093bf35",
-  "archive_bytes": 1056828,
+  "archive_sha256": "8247e284434a9277c3a909a35268d1379240416bf52b9f70c85f05ffd2c28fe0",
+  "archive_bytes": 1059563,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 15729,
-      "sha256": "2b8d45556244377a5a15a1dd4e371158a89ecc318c3518bb71429af9db0cd01b"
+      "sha256": "07eac0139b074232e563b2122c4f1d43690d4dfa8e08aa1edad4fcc1e76b61d4"
     },
     {
       "path": "PREPARATION.md",
@@ -245,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 5629,
-      "sha256": "642a0e38bd0614da2b4d0a7206a3d811305b0cc90295bdb70a2026803f330403"
+      "bytes": 5815,
+      "sha256": "7995952038d2765f19f1f9b3dd5d19c2e214d28656da3742d781fec0d12e5092"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -255,8 +255,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 12163,
-      "sha256": "cf36e54b81fdbe020b3dd4a07c6a389456f731340b225a7b4c4152c3e4b4d5c5"
+      "bytes": 13409,
+      "sha256": "3e7c59de2f4dd2ad798f32b3085cc0f424f145df19a4fac871bd4961fa9cdcb1"
     },
     {
       "path": "ZAXIRA/skelet/README.md",
@@ -265,13 +265,13 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 22763,
-      "sha256": "0f81fd5e340e6a7cacfd7a3378d0f6c99eae5d8e943974796f4218a5f3a6d9fe"
+      "bytes": 24352,
+      "sha256": "1b7d2c744462cfb219279b98b58ec59c6896b71bfc7290912eb6de2e00d127a5"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
-      "bytes": 6201,
-      "sha256": "c05cb20b44ebd7ed5e28b75637b45b770c027fe132df8cb69145dffa7066bb37"
+      "bytes": 6287,
+      "sha256": "09b6059141caf443cf1e85212cccd985bf9734885325ff0e23344851666e4f9b"
     },
     {
       "path": "ZAXIRA/skelet/kit.json",
@@ -280,18 +280,18 @@
     },
     {
       "path": "ZAXIRA/skelet/malumot.js",
-      "bytes": 5457,
-      "sha256": "35a97f99b0c18600e35fe377cf3d3e82fd2c39e677b0364323fed6dd45420089"
+      "bytes": 5952,
+      "sha256": "970f2cc5301b7ba12af506876745caf8d70179b49ece843e30828c7da61974ed"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
-      "bytes": 14137,
-      "sha256": "bdd6515f3270744baf91222c3dd3cfc6a6cdd077b105c9c0d5e000758160a99c"
+      "bytes": 14605,
+      "sha256": "3551be764eda6e26d72d75084a48ee797ed2e2328155500aa7f4bcc7df0f1c97"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.test.mjs",
-      "bytes": 8466,
-      "sha256": "0193c07811d56a73218288b7c2c644ff9f395f58518bf89323bceff06a7e49f7"
+      "bytes": 9131,
+      "sha256": "537f782f6aabc97a648240cad96a5c28f01fb91ed7979d4885734e8b582712e1"
     },
     {
       "path": "ZAXIRA/skelet/serve.mjs",
@@ -305,8 +305,8 @@
     },
     {
       "path": "ZAXIRA/skelet/tahrir.js",
-      "bytes": 20482,
-      "sha256": "565cedc483c9b96015d6b75e50dfa7e706e0fdae66a33c0fd0f5571f7dc6efc6"
+      "bytes": 24380,
+      "sha256": "6df4820b45b522f4735f0f766c2acfab6234e9348660c850b7be150738fb7d33"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",
@@ -315,8 +315,8 @@
     },
     {
       "path": "ZAXIRA/skelet/uslub.css",
-      "bytes": 9185,
-      "sha256": "5d7356b49d359678e0023c06f0fa058306f0af1b96f4dfb944c835c23de1203e"
+      "bytes": 9308,
+      "sha256": "afb45f20a530a5891842b7a1fdb3e92b2461396079d9c179c2a440fc1281c963"
     },
     {
       "path": "kit.json",

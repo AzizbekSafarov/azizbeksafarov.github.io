@@ -117,7 +117,8 @@
     return (elementlar || []).filter(function (e) {
       if (tur && e.turi !== tur) return false;
       if (!soz) return true;
-      var matn = normal([e.nom, e.turi, e.joy, e.tavsif].join(' '));
+      var q = e.qoshimcha && typeof e.qoshimcha === 'object' ? e.qoshimcha : {};
+      var matn = normal([e.nom, e.turi, e.joy, e.tavsif].concat(Object.keys(q).map(function (k) { return q[k]; })).join(' '));
       return soz.split(' ').every(function (bolak) { return matn.indexOf(bolak) !== -1; });
     });
   }
@@ -223,7 +224,7 @@
 
   /** Matnni forma maydoni nomiga aylantiradi: "Telefon raqami" -> "telefonraqami". */
   function nomYasa(matn, band) {
-    var s = normal(matn).replace(/o'/g, 'o').replace(/g'/g, 'g').replace(/[^a-z0-9]/g, '');
+    var s = normal(matn).replace(/o'/g, 'o').replace(/g'/g, 'g').replace(/[^a-z0-9]/g, '').slice(0, 24);
     if (!/^[a-z]/.test(s)) s = 'maydon' + s;
     var natija = s, i = 2;
     while ((band || []).indexOf(natija) !== -1) natija = s + i++;
@@ -232,12 +233,12 @@
 
   var USTUNLAR = {
     nom: ['nom', 'nomi', 'name', 'mavzu', 'kurs', 'dars', 'tadbir', 'mahsulot', 'xizmat'],
-    turi: ['turi', 'tur', "yo'nalish", 'yonalish', 'kategoriya', 'category', 'type'],
+    turi: ['turi', 'tur', "yo'nalish", 'yonalish', 'kategoriya', 'category', 'type', 'janr', 'janri', 'turkum', "bo'lim", 'bolim'],
     sana: ['sana', 'date', 'kun'],
     vaqt: ['vaqt', 'soat', 'time'],
     joy: ['joy', 'joyi', 'manzil', 'address', 'xona'],
     narx: ['narx', 'narxi', 'price', 'summa'],
-    joylar: ['joylar', "sig'im", 'sigim', 'orinlar', "o'rinlar", 'soni', 'capacity'],
+    joylar: ['joylar', "sig'im", 'sigim', 'orinlar', "o'rinlar", 'soni', 'capacity', 'nusxa', 'nusxalar', 'nusxasi', 'miqdor', 'miqdori', 'qoldiq'],
     tavsif: ['tavsif', 'izoh', 'description', 'malumot', "ma'lumot"]
   };
 
@@ -275,7 +276,9 @@
       var e = { id: 'e' + (i + 1) };
       bolak(q).forEach(function (qiymat, j) {
         var maydon = xarita[j];
-        if (!maydon || qiymat === '') return;
+        if (qiymat === '' || j >= sarlavha.length) return;
+        // Tanilmagan ustun (Muallif, O'qituvchi...) yo'qolmaydi: qo'shimcha maydon bo'ladi.
+        if (!maydon) { e.qoshimcha = e.qoshimcha || {}; e.qoshimcha[sarlavha[j]] = qiymat; return; }
         if (maydon === 'narx' || maydon === 'joylar') { var n = Number(qiymat.replace(/[^\d.,]/g, '').replace(',', '.')); e[maydon] = isFinite(n) ? n : 0; }
         else if (maydon === 'sana') e.sana = sanaIso(qiymat);
         else e[maydon] = qiymat;

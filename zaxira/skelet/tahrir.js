@@ -104,14 +104,14 @@
     if (o.tur === 'checkbox') e.checked = !!olish(); else e.value = olish() == null ? '' : olish();
     e.addEventListener(o.tur === 'checkbox' || o.tur === 'select' ? 'change' : 'input', function () {
       var q = o.tur === 'checkbox' ? e.checked : e.value;
-      if (o.tur === 'number') q = e.value === '' ? 0 : Number(e.value);
+      if (o.tur === 'number') q = e.value === '' ? null : Number(e.value);
       qoyish(q); ozgardi(); if (o.keyin) o.keyin(q);
     });
     if (o.tur === 'checkbox') return el('label', { for: id, class: 't-belgi' }, [e, yorliq]);
     return el('label', { for: id }, [yorliq, o.maslahat ? el('span', { class: 'kichik', matn: o.maslahat }) : null, e]);
   }
   function maydon(obyekt, kalit, yorliq, o) {
-    return kirish(yorliq, function () { return obyekt[kalit]; }, function (q) { obyekt[kalit] = q; }, o);
+    return kirish(yorliq, function () { return obyekt[kalit]; }, function (q) { if (q === null) delete obyekt[kalit]; else obyekt[kalit] = q; }, o);
   }
   function blok(sarlavha, izoh, bolalar) {
     return el('section', { class: 't-blok' }, [el('h2', { matn: sarlavha }), izoh ? el('p', { matn: izoh }) : null].concat(bolalar));
@@ -135,6 +135,26 @@
     return joy;
   }
 
+  /** Qo'shimcha ustunlar (Muallif, O'qituvchi...): ro'yxat sozlamasi + elementlarda uchraganlari. */
+  function ustunlar() {
+    var r = d.SAYT.royxat, natija = (r.ustunlar || []).slice();
+    d.ELEMENTLAR.forEach(function (e) { Object.keys(e.qoshimcha || {}).forEach(function (k) { if (natija.indexOf(k) === -1) natija.push(k); }); });
+    return natija;
+  }
+  /** Ustunlar ro'yxati o'zgarganda: o'chganini olib tashlaydi, o'rni bo'yicha nomi o'zgarganini ko'chiradi. */
+  function ustunlarniOzgartir(yangi) {
+    var eski = ustunlar();
+    d.ELEMENTLAR.forEach(function (e) {
+      var q = e.qoshimcha || {}, t = {};
+      yangi.forEach(function (nom, i) {
+        if (nom in q) t[nom] = q[nom];
+        else if (eski.length === yangi.length && eski[i] in q && yangi.indexOf(eski[i]) === -1) t[nom] = q[eski[i]];
+      });
+      if (Object.keys(t).length) e.qoshimcha = t; else delete e.qoshimcha;
+    });
+    d.SAYT.royxat.ustunlar = yangi;
+  }
+
   function yangiId() {
     var n = d.ELEMENTLAR.length + 1, band = d.ELEMENTLAR.map(function (e) { return String(e.id); });
     while (band.indexOf('e' + n) !== -1) n++;
@@ -152,7 +172,9 @@
     var rang = el('input', { type: 'color', value: /^#[0-9a-f]{6}$/i.test(S.rang || '') ? S.rang : '#1d4ed8', 'aria-label': 'Asosiy rangni tanlash',
       oninput: function () { S.rang = rang.value; rangMatn.querySelector('input').value = rang.value; ozgardi(); } });
     joy.appendChild(blok('1. Asosiy', 'Sayt nomi, qisqa shior va asosiy rang.', [
-      maydon(S, 'nomi', 'Sayt nomi'), maydon(S, 'shior', 'Shior (bir jumla)'), maydon(S, 'tavsif', 'Tavsif', { tur: 'textarea' }),
+      // Har sayt o'z xotira kalitini oladi: bir kompyuterdagi mashq saytlarining yozuvlari aralashmaydi.
+      maydon(S, 'nomi', 'Sayt nomi', { keyin: function (q) { if (!S.omborKaliti || /^(zaxira|sayt)-/.test(S.omborKaliti)) S.omborKaliti = 'sayt-' + M.nomYasa(q); } }),
+      maydon(S, 'shior', 'Shior (bir jumla)'), maydon(S, 'tavsif', 'Tavsif', { tur: 'textarea' }),
       el('div', { class: 't-rang' }, [rang, rangMatn]),
       maydon(S, 'namuna', '“Namuna ma’lumot” ogohlantirishi ko‘rinsin (tayyor bo‘lganda o‘chiring)', { tur: 'checkbox' }),
       maydon(S, 'saqlash', 'Arizalar brauzerda saqlansin (“Arizalarim” sahifasi ishlaydi)', { tur: 'checkbox' }),
@@ -189,11 +211,26 @@
       if (almashtir) d.ELEMENTLAR.length = 0;
       n.elementlar.forEach(function (e) { e.id = yangiId(); d.ELEMENTLAR.push(e); });
       jadval.value = ''; ozgardi(); chiz();
-      holat(n.elementlar.length + ' ta element qo‘shildi.' + (n.tanilmagan.length ? ' Tanilmagan ustunlar: ' + n.tanilmagan.join(', ') + ' — ularni “Tavsif” ga qo‘lda yozing.' : ''));
+      holat(n.elementlar.length + ' ta element qo‘shildi.' + (n.tanilmagan.length ? ' Qo‘shimcha ustun sifatida qo‘shildi: ' + n.tanilmagan.join(', ') + '.' : ''));
     };
-    joy.appendChild(blok('4. Ro‘yxat', 'Biletdagi jadval (kurslar, tadbirlar, mahsulotlar…). Sana va narxni biletdagidek aynan yozing.', [
+    S.royxat.yorliqlar = S.royxat.yorliqlar || {};
+    var Y = S.royxat.yorliqlar, ust = ustunlar();
+    var ustunMaydoni = kirish('Qo‘shimcha ustunlar (har qatorda bittasi: Muallif, O‘qituvchi, Davomiyligi…)',
+      function () { return ust.join('\n'); },
+      function (q) { ustunlarniOzgartir(q.split('\n').map(function (s) { return s.trim(); }).filter(Boolean)); },
+      { tur: 'textarea', qator: 2 });
+    ustunMaydoni.querySelector('textarea').addEventListener('change', chiz);
+    joy.appendChild(blok('4. Ro‘yxat', 'Biletdagi jadval (kurslar, tadbirlar, mahsulotlar, xizmatlar…). Nom, sana va narxni biletdagidek aynan yozing.', [
       maydon(S.royxat, 'sarlavha', 'Sahifa sarlavhasi'), maydon(S.royxat, 'matn', 'Sarlavha ostidagi matn'),
       maydon(S.royxat, 'bosh', 'Hech narsa topilmaganda chiqadigan matn'),
+      maydon(S.royxat, 'qidiruvMaslahat', 'Qidiruv maydonidagi maslahat', { maslahat: 'masalan: Mahsulot nomi yoki kalit so‘z' }),
+      el('details', {}, [el('summary', { matn: 'Ustun nomlari va tugma matnlari (mavzuga moslash)' }),
+        el('p', { class: 'kichik', matn: 'Masalan mahsulotlar uchun: Turi → Kategoriya, Qolgan joy → Omborda, Joy qolmagan → Tugagan, Tanlash → Buyurtma berish.' }),
+        el('div', { class: 't-qator' }, [maydon(Y, 'turi', 'Turi', { maslahat: 'standart: Turi' }), maydon(Y, 'joy', 'Joy', { maslahat: 'standart: Joy' })]),
+        el('div', { class: 't-qator' }, [maydon(Y, 'sana', 'Sana', { maslahat: 'standart: Sana' }), maydon(Y, 'vaqt', 'Vaqt', { maslahat: 'standart: Vaqt' })]),
+        el('div', { class: 't-qator' }, [maydon(Y, 'narx', 'Narx', { maslahat: 'standart: Narx' }), maydon(Y, 'joylar', 'Qolgan joy', { maslahat: 'standart: Qolgan joy' })]),
+        el('div', { class: 't-qator' }, [maydon(Y, 'toldi', 'Joy qolmagan', { maslahat: 'standart: Joy qolmagan' }), maydon(Y, 'tanlash', 'Tanlash tugmasi', { maslahat: 'standart: Tanlash' })])]),
+      ustunMaydoni,
       el('details', {}, [el('summary', { matn: 'Jadvaldan qo‘shish (Word/Excel’dan nusxalab qo‘ying)' }),
         el('p', { class: 'kichik', matn: 'Birinchi qatorda ustun nomlari bo‘lsin: Nomi, Turi, Sana, Vaqt, Joy, Narx, Joylar, Tavsif. Ajratuvchi: Tab, ; yoki |.' }),
         el('label', { for: 't-jadval' }, ['Jadval matni', jadval]),
@@ -202,13 +239,20 @@
           el('button', { type: 'button', class: 'tugma xavfli', matn: 'Ro‘yxatni almashtirish', onclick: function () { jadvalQosh(true); } })]),
         jadvalHolat]),
       royxat(d.ELEMENTLAR, function (e, i) { return (i + 1) + '. ' + (e.nom || '(nomsiz)'); },
-        function () { return { id: yangiId(), nom: 'Yangi element', turi: '', sana: '', vaqt: '', joy: '', narx: 0, joylar: 0, tavsif: '' }; },
+        function () { return { id: yangiId(), nom: 'Yangi element', turi: '', sana: '', vaqt: '', joy: '', joylar: 0, tavsif: '' }; },
         function (e) {
-          return [maydon(e, 'nom', 'Nomi'),
-            el('div', { class: 't-qator' }, [maydon(e, 'turi', 'Turi (filtr uchun)'), maydon(e, 'joy', 'Joy / manzil')]),
-            el('div', { class: 't-qator' }, [maydon(e, 'sana', 'Sana', { tur: 'date' }), maydon(e, 'vaqt', 'Vaqt', { tur: 'time' })]),
-            el('div', { class: 't-qator' }, [maydon(e, 'narx', 'Narx, so‘m (0 = Bepul)', { tur: 'number', min: 0 }),
-              maydon(e, 'joylar', 'Joylar soni (0 = cheklanmagan)', { tur: 'number', min: 0 })]),
+          var qosh = ust.length ? el('div', { class: 't-qator' }, ust.map(function (k) {
+            return kirish(k, function () { return (e.qoshimcha || {})[k]; }, function (q) {
+              e.qoshimcha = e.qoshimcha || {}; if (q === '') delete e.qoshimcha[k]; else e.qoshimcha[k] = q;
+              var tartib = {}; ust.forEach(function (u) { if (u in e.qoshimcha) tartib[u] = e.qoshimcha[u]; });
+              if (Object.keys(tartib).length) e.qoshimcha = tartib; else delete e.qoshimcha;
+            });
+          })) : null;
+          return [maydon(e, 'nom', 'Nomi'), qosh,
+            el('div', { class: 't-qator' }, [maydon(e, 'turi', (Y.turi || 'Turi') + ' (filtr uchun)'), maydon(e, 'joy', Y.joy || 'Joy / manzil')]),
+            el('div', { class: 't-qator' }, [maydon(e, 'sana', Y.sana || 'Sana', { tur: 'date' }), maydon(e, 'vaqt', Y.vaqt || 'Vaqt', { tur: 'time' })]),
+            el('div', { class: 't-qator' }, [maydon(e, 'narx', (Y.narx || 'Narx') + ', so‘m (bo‘sh = ko‘rsatilmaydi, 0 = Bepul)', { tur: 'number', min: 0 }),
+              maydon(e, 'joylar', 'Sig‘im / soni (0 = cheklanmagan)', { tur: 'number', min: 0 })]),
             maydon(e, 'tavsif', 'Tavsif', { tur: 'textarea', qator: 2 }),
             maydon(e, 'rasm', 'Rasm fayli (ixtiyoriy)', { maslahat: 'masalan: rasmlar/1.jpg — rasmni sayt papkasidagi “rasmlar” ichiga qo‘ying' }),
             e.rasm ? maydon(e, 'rasmIzoh', 'Rasmda nima bor (ko‘rmaydiganlar uchun)') : null];
@@ -218,7 +262,11 @@
     joy.appendChild(blok('5. Ariza formasi', 'Biletdagi majburiy maydonlarni “Majburiy” deb belgilang. Bo‘sh yoki noto‘g‘ri yuborilsa sayt o‘zi xato ko‘rsatadi.', [
       maydon(F, 'sarlavha', 'Forma sarlavhasi'), maydon(F, 'matn', 'Forma ostidagi matn'),
       el('div', { class: 't-qator' }, [maydon(F, 'tugma', 'Yuborish tugmasi'), maydon(F, 'muvaffaqiyat', 'Muvaffaqiyat xabari')]),
-      el('div', { class: 't-qator' }, [maydon(F, 'takrorXato', 'Takror ariza xabari'), maydon(F, 'toldiXato', 'Joy qolmaganda xabar')]),
+      el('div', { class: 't-qator' }, [maydon(F, 'takrorXato', 'Takror yuborilganda xabar'), maydon(F, 'toldiXato', 'Joy/nusxa qolmaganda xabar')]),
+      el('details', {}, [el('summary', { matn: 'Saqlanganlar sahifasi matnlari' }),
+        el('div', { class: 't-qator' }, [maydon(S.saqlangan = S.saqlangan || {}, 'sarlavha', 'Sarlavha', { maslahat: 'bo‘sh bo‘lsa menyudagi nom' }),
+          maydon(S.saqlangan, 'ochirish', 'O‘chirish tugmasi', { maslahat: 'masalan: Bekor qilish' })]),
+        maydon(S.saqlangan, 'bosh', 'Hali yozuv bo‘lmaganda matn')]),
       royxat(F.maydonlar, function (m, i) { return (i + 1) + '. ' + (m.yorliq || '(nomsiz)') + (m.majburiy ? ' *' : ''); },
         function () { var band = F.maydonlar.map(function (x) { return x.nom; }); return { nom: M.nomYasa('Yangi maydon', band), yorliq: 'Yangi maydon', tur: 'matn', majburiy: false }; },
         function (m) {

@@ -126,6 +126,8 @@
     var select = $('#tur-filtr');
     M.turlar(ELEMENTLAR).forEach(function (t) { select.appendChild(el('option', { value: t, matn: t })); });
     select.closest('label').hidden = M.turlar(ELEMENTLAR).length < 2;
+    select.closest('label').firstChild.textContent = yorliq('turi') + ' ';
+    $('#qidiruv').placeholder = (SAYT.royxat && SAYT.royxat.qidiruvMaslahat) || 'Nomi yoki kalit so‘z';
     $('#qidiruv').addEventListener('input', function (e) { holat.qidiruv = e.target.value; royxatChiz(); });
     select.addEventListener('change', function (e) { holat.turi = e.target.value; royxatChiz(); });
     $('#filtr').addEventListener('submit', function (e) { e.preventDefault(); });
@@ -133,11 +135,22 @@
     $('#filtr-tozala').addEventListener('click', function () { $('#filtr').reset(); $('#qidiruv').focus(); });
   }
 
+  /** Ro'yxatdagi so'zlar (malumot.js → royxat.yorliqlar); berilmagani standart. */
+  var YORLIQ = { turi: 'Turi', sana: 'Sana', vaqt: 'Vaqt', joy: 'Joy', narx: 'Narx', joylar: 'Qolgan joy', toldi: 'Joy qolmagan', tanlash: 'Tanlash' };
+  function yorliq(k) { var y = SAYT.royxat && SAYT.royxat.yorliqlar; return (y && y[k]) || YORLIQ[k]; }
+  function borNarx(e) { return e.narx !== undefined && e.narx !== null && e.narx !== ''; }
+  /** Qo'shimcha maydonlar: { "Muallif": "...", "Davomiyligi": "..." } */
+  function qoshimcha(e) {
+    var q = e.qoshimcha && typeof e.qoshimcha === 'object' ? e.qoshimcha : {};
+    return Object.keys(q).filter(function (k) { return q[k] !== '' && q[k] != null; }).map(function (k) { return [k, String(q[k])]; });
+  }
+
   function karta(e) {
     var joy = qolgan(e);
     var toldi = joy === 0;
     var rasm = e.rasm ? el('img', { src: e.rasm, alt: e.rasmIzoh || '', loading: 'lazy' }) : String(e.nom || '?').charAt(0).toUpperCase();
-    var meta = [e.sana ? M.sanaMatn(e.sana) + (e.vaqt ? ', ' + e.vaqt : '') : null, e.joy, e.narx != null ? M.pul(e.narx) : null]
+    var meta = qoshimcha(e).slice(0, 2).map(function (q) { return q[1]; })
+      .concat([e.sana ? M.sanaMatn(e.sana) + (e.vaqt ? ', ' + e.vaqt : '') : null, e.joy, borNarx(e) ? M.pul(e.narx) : null])
       .filter(Boolean).join(' · ');
     return el('article', { class: 'karta' }, [
       el('div', { class: 'karta-rasm', 'aria-hidden': e.rasm ? null : 'true' }, [rasm]),
@@ -145,12 +158,12 @@
         e.turi ? el('span', { class: 'belgi', matn: e.turi }) : null,
         el('h2', { matn: e.nom }),
         meta ? el('p', { class: 'kichik', matn: meta }) : null,
-        isFinite(joy) ? el('span', { class: 'belgi' + (toldi ? ' toldi' : ''), matn: toldi ? 'Joy qolmagan' : 'Qolgan joy: ' + joy }) : null,
+        isFinite(joy) ? el('span', { class: 'belgi' + (toldi ? ' toldi' : ''), matn: toldi ? yorliq('toldi') : yorliq('joylar') + ': ' + joy }) : null,
         el('div', { class: 'amallar' }, [
           el('a', { class: 'tugma ikkinchi', href: '#element-' + encodeURIComponent(e.id), matn: 'Batafsil', 'aria-label': e.nom + ' — batafsil' }),
           'ariza' in SAYT.sahifalar ? (toldi
-            ? el('button', { class: 'tugma', type: 'button', disabled: true, matn: 'Joy qolmagan' })
-            : el('a', { class: 'tugma', href: '#ariza-' + encodeURIComponent(e.id), matn: 'Tanlash', 'aria-label': e.nom + ' — tanlash va ariza berish' })) : null
+            ? el('button', { class: 'tugma', type: 'button', disabled: true, matn: yorliq('toldi') })
+            : el('a', { class: 'tugma', href: '#ariza-' + encodeURIComponent(e.id), matn: yorliq('tanlash'), 'aria-label': e.nom + ' — ' + yorliq('tanlash') })) : null
         ])
       ])
     ]);
@@ -167,8 +180,8 @@
   /* ---------- 5. Tafsilot ---------- */
   function tafsilotChiz(e) {
     var joy = qolgan(e);
-    var qatorlar = [['Turi', e.turi], ['Sana', e.sana && M.sanaMatn(e.sana)], ['Vaqt', e.vaqt], ['Joy', e.joy],
-      ['Narx', e.narx != null ? M.pul(e.narx) : null], ['Qolgan joy', isFinite(joy) ? String(joy) : null]];
+    var qatorlar = qoshimcha(e).concat([[yorliq('turi'), e.turi], [yorliq('sana'), e.sana && M.sanaMatn(e.sana)], [yorliq('vaqt'), e.vaqt], [yorliq('joy'), e.joy],
+      [yorliq('narx'), borNarx(e) ? M.pul(e.narx) : null], [yorliq('joylar'), isFinite(joy) ? String(joy) : null]]);
     var dl = el('dl');
     qatorlar.forEach(function (q) { if (q[1]) { dl.appendChild(el('dt', { matn: q[0] })); dl.appendChild(el('dd', { matn: q[1] })); } });
     tozala($('#tafsilot')).appendChild(el('div', {}, [
@@ -178,8 +191,8 @@
       e.tavsif ? el('p', { class: 'katta-matn', matn: e.tavsif }) : null,
       dl,
       'ariza' in SAYT.sahifalar ? el('div', { class: 'amallar' }, [joy === 0
-        ? el('button', { class: 'tugma', type: 'button', disabled: true, matn: 'Joy qolmagan' })
-        : el('a', { class: 'tugma', href: '#ariza-' + encodeURIComponent(e.id), matn: 'Tanlash va ariza berish' })]) : null
+        ? el('button', { class: 'tugma', type: 'button', disabled: true, matn: yorliq('toldi') })
+        : el('a', { class: 'tugma', href: '#ariza-' + encodeURIComponent(e.id), matn: yorliq('tanlash') })]) : null
     ]));
   }
 
@@ -292,11 +305,11 @@
     panel.appendChild(el('h2', { matn: FORMA.muvaffaqiyat || 'Qabul qilindi!' }));
     panel.appendChild(dl);
     panel.appendChild(el('p', { class: 'kichik', matn: SAYT.saqlash
-      ? (saqlandi.ok ? 'Ariza shu brauzerda saqlandi.' : 'Ariza faqat sahifa ochiq turganda saqlanadi — brauzer xotirasi yopiq.')
+      ? (saqlandi.ok ? 'Shu brauzerda saqlandi.' : 'Faqat sahifa ochiq turganda saqlanadi — brauzer xotirasi yopiq.')
       : 'Sinov rejimi: ma’lumot hech qayerga yuborilmadi.' }));
     panel.appendChild(el('div', { class: 'amallar' }, [
-      'saqlangan' in SAYT.sahifalar && SAYT.saqlash ? el('a', { class: 'tugma', href: '#saqlangan', matn: 'Arizalarimni ko‘rish' }) : null,
-      el('button', { class: 'tugma ikkinchi', type: 'button', matn: 'Yana ariza', onclick: function () { arizaOch(null, true); $('#f-' + FORMA.maydonlar[0].nom).focus(); } })
+      'saqlangan' in SAYT.sahifalar && SAYT.saqlash ? el('a', { class: 'tugma', href: '#saqlangan', matn: SAYT.saqlangan.sarlavha + ' →' }) : null,
+      el('button', { class: 'tugma ikkinchi', type: 'button', matn: 'Yana yuborish', onclick: function () { arizaOch(null, true); $('#f-' + FORMA.maydonlar[0].nom).focus(); } })
     ]));
     $('#ariza-forma').hidden = true; panel.hidden = false; panel.focus();
   }
@@ -317,7 +330,7 @@
         var e = elementTop(o.value);
         if (!e) return;
         var toldi = qolgan(e) === 0;
-        o.disabled = toldi; o.textContent = e.nom + (toldi ? ' (joy qolmagan)' : '');
+        o.disabled = toldi; o.textContent = e.nom + (toldi ? ' (' + yorliq('toldi').toLowerCase() + ')' : '');
       });
       if (id && elementTop(id) && qolgan(elementTop(id)) !== 0) select.value = String(id);
     }
@@ -335,21 +348,23 @@
     ogoh.textContent = h.ogohlantirish; ogoh.hidden = !h.ogohlantirish;
     $('#saqlangan-amallar').hidden = hammasi.length === 0;
     $('#saqlangan-bosh').hidden = hammasi.length > 0;
-    $('#saqlangan-holat').textContent = hammasi.length ? hammasi.length + ' ta ariza' : '';
+    $('#saqlangan-holat').textContent = hammasi.length ? hammasi.length + ' ta yozuv' : '';
     var royxat = tozala($('#yozuvlar'));
-    var ismNomi = birinchi(['matn']), aloqaNomi = birinchi(['telefon']) || birinchi(['email']);
+    var ismNomi = birinchi(['matn']);
     hammasi.slice().reverse().forEach(function (y) {
       var e = elementTop(y.element);
       var vaqt = new Date(y.vaqt);
       royxat.appendChild(el('li', { class: 'yozuv' }, [
         el('div', {}, [
           el('p', {}, [el('strong', { matn: e ? e.nom : 'O‘chirilgan element' })]),
-          el('p', { class: 'kichik', matn: [y[ismNomi], y[aloqaNomi], isNaN(vaqt) ? '' : vaqt.toLocaleString('uz-UZ')].filter(Boolean).join(' · ') })
+          el('p', { matn: maydonlar().filter(function (m) { return m.nom !== 'element' && m.tur !== 'belgi' && y[m.nom] !== '' && y[m.nom] != null; })
+            .map(function (m) { return m.tur === 'sana' ? m.yorliq + ': ' + M.sanaMatn(y[m.nom]) : String(y[m.nom]); }).join(' · ') }),
+          el('p', { class: 'kichik', matn: isNaN(vaqt) ? '' : 'Yuborilgan: ' + vaqt.toLocaleString('uz-UZ') })
         ]),
-        el('button', { class: 'tugma xavfli', type: 'button', matn: 'O‘chirish', 'aria-label': (y[ismNomi] || 'Ariza') + ' arizasini o‘chirish',
+        el('button', { class: 'tugma xavfli', type: 'button', matn: SAYT.saqlangan.ochirish, 'aria-label': (y[ismNomi] || (e ? e.nom : 'Yozuv')) + ' — ' + SAYT.saqlangan.ochirish,
           onclick: function () {
-            if (!confirm('Bu arizani o‘chirasizmi?')) return;
-            ombor.ochir(y.id); saqlanganChiz(); xabar('Ariza o‘chirildi');
+            if (!confirm('Bu yozuvni o‘chirasizmi?')) return;
+            ombor.ochir(y.id); saqlanganChiz(); xabar('O‘chirildi');
             var keyingi = $('#yozuvlar button') || $('#saqlangan-bosh a'); if (keyingi) keyingi.focus();
           } })
       ]));
@@ -366,8 +381,8 @@
       yuklab('arizalar.json', JSON.stringify({ versiya: 1, yozuvlar: yozuvlar() }, null, 2), 'application/json');
     });
     $('#hammasini-ochir').addEventListener('click', function () {
-      if (!confirm('Barcha arizalarni o‘chirasizmi? Buni qaytarib bo‘lmaydi.')) return;
-      ombor.tozala(); saqlanganChiz(); xabar('Barcha arizalar o‘chirildi');
+      if (!confirm('Barcha yozuvlarni o‘chirasizmi? Buni qaytarib bo‘lmaydi.')) return;
+      ombor.tozala(); saqlanganChiz(); xabar('Hammasi o‘chirildi');
     });
   }
 
@@ -406,6 +421,9 @@
       return;
     }
     ombor = M.ombor(safeStorage(), SAYT.omborKaliti || 'zaxira-arizalar-v1');
+    var saq = { sarlavha: (SAYT.sahifalar || {}).saqlangan || 'Saqlanganlar', bosh: 'Hali hech narsa yo‘q.', ochirish: 'O‘chirish' };
+    Object.keys(saq).forEach(function (k) { if (SAYT.saqlangan && SAYT.saqlangan[k]) saq[k] = SAYT.saqlangan[k]; });
+    SAYT.saqlangan = saq;
     document.querySelectorAll('[data-sayt]').forEach(function (n) { n.textContent = yol(SAYT, n.getAttribute('data-sayt')) || ''; });
     document.querySelectorAll('[data-matn]').forEach(function (n) {
       var k = n.getAttribute('data-matn');

@@ -53,7 +53,7 @@ def live_edit_map():
 
 HEADER='''# Jonli o‘zgarish — himoyada 1 daqiqada, AI’siz
 
-Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Ishtirokchi buni o‘z qurilmasida bajara olmasa, ish baholanmaydi. Shuning uchun quyidagilarni AI’siz bajarishni oldindan mashq qiling.
+Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Ishtirokchi buni o‘z qurilmasida bajara olmasa, ish baholanmaydi. Ustoz AI saytidagi nizom nusxasida bu band yo‘q, baholash loyihasi esa topshirilgan loyihani o‘zgartirmaslikni aytadi — joydagi ko‘rsatma hal qiladi. Eng qattiq holatga tayyor bo‘lish uchun quyidagilarni AI’siz bajarishni oldindan mashq qiling.
 
 ## Dizayn starterida yoki boshqa loyihada — umumiy usul
 
@@ -134,7 +134,7 @@ def page():
     content=f'''<div class="wrap"><section class="page-hero"><p class="eyebrow">KUCHLI AI BO‘LMASA HAM</p><h1>Zaxira rejasi.<br>Qo‘lda ham ishlaydi.</h1><p class="lead">Tanlov kuni AI limitli, sekin yoki umuman ishlamasligi mumkin. Bu to‘plam build talab qilmaydigan sayt skeleti, kichik AI uchun qisqa so‘rovlar va himoyadagi jonli o‘zgarish qo‘llanmasini beradi.</p><div class="hero-actions"><a class="button dark" href="/zaxira/zaxira.zip" download>Zaxira paketini olish ↓ <small>{size:.0f} KB</small></a><a class="button" href="/zaxira/skelet/">Skeletni ochish ↗</a><a class="button" href="/zaxira/skelet/tahrir.html">Kodsiz tahrirlash ↗</a><a class="button" href="/zaxira/skelet/?tekshir">Tekshiruv paneli bilan ↗</a></div></section>
 <article class="prose">
 <h2>Nima uchun kerak</h2>
-<p>Imzolangan nizomga ko‘ra ekspert himoyada <strong>matn, rang, element yoki kontentni</strong> jonli o‘zgartirishni so‘rashi mumkin. Bajarilmasa ish baholanmaydi. Teng ballda avval sifat va funksionallik, keyin zamonaviy texnologiyalar mezoni hal qiladi. Shuning uchun ishlaydigan oddiy sayt va uni qo‘lda boshqara olish chiroyli, lekin tugallanmagan saytdan qimmatroq.</p>
+<p>Imzolangan nizomga ko‘ra ekspert himoyada <strong>matn, rang, element yoki kontentni</strong> jonli o‘zgartirishni so‘rashi mumkin; bajarilmasa ish baholanmaydi (saytdagi nizom nusxasida bu band yo‘q — joydagi ko‘rsatma hal qiladi, lekin eng qattiq holatga tayyorlangan ma’qul). Teng ballda avval sifat va funksionallik hal qiladi; ikkinchi mezon imzolangan qarorda zamonaviy texnologiyalar, sayt nusxasida kreativlik. Shuning uchun ishlaydigan oddiy sayt va uni qo‘lda boshqara olish chiroyli, lekin tugallanmagan saytdan qimmatroq.</p>
 <h2>Paket ichida</h2>
 <ul>
 <li><a href="/zaxira/ZAXIRA.md">ZAXIRA.md</a> — qoidalardan 8 ta asosiy fakt, qaysi yo‘lni tanlash, vaqt rejasi, qadamma-qadam ish, 21 ko‘rsatkich bo‘yicha sinov ro‘yxati, himoya ssenariysi va favqulodda holatlar.</li>

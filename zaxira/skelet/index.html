@@ -40,7 +40,7 @@
         </div>
         <dl class="raqamlar">
           <div><dt>Jami</dt><dd id="son-jami">0</dd></div>
-          <div><dt>Arizalarim</dt><dd id="son-ariza">0</dd></div>
+          <div><dt data-matn="saqlangan.sarlavha">Saqlanganlar</dt><dd id="son-ariza">0</dd></div>
         </dl>
       </div>
       <div class="ichki afzalliklar" id="afzalliklar"></div>
@@ -58,7 +58,7 @@
         <h1 id="royxat-h" data-matn="royxat.sarlavha"></h1>
         <p data-matn="royxat.matn"></p>
         <form class="filtr" id="filtr" role="search">
-          <label>Qidiruv <input type="search" id="qidiruv" autocomplete="off" placeholder="Nomi, joyi yoki tavsifi"></label>
+          <label>Qidiruv <input type="search" id="qidiruv" autocomplete="off" placeholder="Nomi yoki kalit so‘z"></label>
           <label>Turi <select id="tur-filtr"><option value="hammasi">Hammasi</option></select></label>
           <button type="reset" class="tugma ikkinchi">Tozalash</button>
         </form>
@@ -90,7 +90,7 @@
     <!-- 5. SAQLANGAN ARIZALAR: ro'yxat, o'chirish, CSV/JSON -->
     <section class="sahifa" id="saqlangan" data-sahifa="saqlangan" aria-labelledby="saqlangan-h" hidden>
       <div class="ichki">
-        <h1 id="saqlangan-h">Arizalarim</h1>
+        <h1 id="saqlangan-h" data-matn="saqlangan.sarlavha">Saqlanganlar</h1>
         <p class="ogoh" id="ombor-ogoh" role="status" hidden></p>
         <div class="amallar" id="saqlangan-amallar">
           <button type="button" class="tugma ikkinchi" id="csv-yukla">CSV yuklab olish</button>
@@ -100,8 +100,8 @@
         <p class="holat" id="saqlangan-holat" role="status" aria-live="polite"></p>
         <ul class="yozuvlar" id="yozuvlar"></ul>
         <div class="bosh-holat" id="saqlangan-bosh" hidden>
-          <p>Hali ariza yo‘q.</p>
-          <a class="tugma" href="#ariza">Ariza qoldirish</a>
+          <p data-matn="saqlangan.bosh"></p>
+          <a class="tugma" href="#ariza" data-matn="FORMA.sarlavha"></a>
         </div>
       </div>
     </section>

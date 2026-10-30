@@ -134,7 +134,7 @@ test('Word/Excel jadvali (Tab) elementlarga aylanadi',()=>{
  const n=M.jadvalOqi('Nomi\tYo‘nalish\tSana\tVaqt\tJoyi\tNarxi\tO‘rinlar\tRang\nBirinchi\tIT\t05.12.2026\t10:00\t1-xona\t120 000 so‘m\t15\tqizil\n\nIkkinchi\tDizayn\t2026-12-06\t11:00\t2-xona\t0\t\t');
  assert.equal(n.xato,'');
  assert.deepEqual(n.tanilmagan,['Rang']);
- assert.deepEqual(n.elementlar[0],{id:'e1',nom:'Birinchi',turi:'IT',sana:'2026-12-05',vaqt:'10:00',joy:'1-xona',narx:120000,joylar:15});
+ assert.deepEqual(n.elementlar[0],{id:'e1',nom:'Birinchi',turi:'IT',sana:'2026-12-05',vaqt:'10:00',joy:'1-xona',narx:120000,joylar:15,qoshimcha:{Rang:'qizil'}});
  assert.equal(n.elementlar.length,2);
 });
 test('Markdown | jadvali va ; ajratuvchi ham o‘qiladi',()=>{
@@ -150,4 +150,13 @@ test('malumotYoz har doim qayta o‘qiladigan fayl yozadi (qo‘shtirnoq, yangi 
  const d={SAYT:{...oyna.SAYT,nomi:'Sayt "nomi"\nO‘quv </script>'},ELEMENTLAR:oyna.ELEMENTLAR,FORMA:oyna.FORMA};
  const yangi={};vm.runInNewContext(M.malumotYoz(d),{window:yangi});
  assert.deepEqual(JSON.parse(JSON.stringify(yangi)),JSON.parse(JSON.stringify(d)));
+});
+test('Janr turi, Nusxa sig‘im, tanilmagan ustun qo‘shimcha maydon bo‘ladi va qidiruvda topiladi',()=>{
+ const n=M.jadvalOqi('Nomi\tJanr\tMuallif\tNusxa\nElement A\tX\tMuallif Bir\t3\nElement B\tY\tMuallif Ikki\t1');
+ assert.deepEqual(n.elementlar[1],{id:'e2',nom:'Element B',turi:'Y',qoshimcha:{Muallif:'Muallif Ikki'},joylar:1});
+ assert.deepEqual(M.filtrla(n.elementlar,{qidiruv:'ikki'}).map(e=>e.nom),['Element B']);
+});
+test('uzun yorliqdan ham qisqa ichki nom yasaladi',()=>{
+ const n=M.nomYasa('Ma’lumotlarim faqat shu so‘rov uchun ishlatilishiga roziman');
+ assert.ok(n.length<=24); assert.match(n,/^[a-z][a-z0-9]*$/);
 });

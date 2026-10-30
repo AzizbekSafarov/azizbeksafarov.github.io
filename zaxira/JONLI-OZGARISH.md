@@ -1,6 +1,6 @@
 # Jonli o‘zgarish — himoyada 1 daqiqada, AI’siz
 
-Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Ishtirokchi buni o‘z qurilmasida bajara olmasa, ish baholanmaydi. Shuning uchun quyidagilarni AI’siz bajarishni oldindan mashq qiling.
+Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Ishtirokchi buni o‘z qurilmasida bajara olmasa, ish baholanmaydi. Ustoz AI saytidagi nizom nusxasida bu band yo‘q, baholash loyihasi esa topshirilgan loyihani o‘zgartirmaslikni aytadi — joydagi ko‘rsatma hal qiladi. Eng qattiq holatga tayyor bo‘lish uchun quyidagilarni AI’siz bajarishni oldindan mashq qiling.
 
 ## Dizayn starterida yoki boshqa loyihada — umumiy usul
 
