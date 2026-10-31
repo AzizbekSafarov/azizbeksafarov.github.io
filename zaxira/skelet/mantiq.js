@@ -289,9 +289,13 @@
   /** Bind a draft to the original file snapshot and its containing URL path. */
   function qoralamaKaliti(manzil, data) {
     var joy = String(manzil || '').split(/[?#]/)[0].replace(/[^/]*$/, '');
-    var source = JSON.stringify([joy, data]), a = 2166136261, b = 5381;
-    for (var i = 0; i < source.length; i++) { a = Math.imul(a ^ source.charCodeAt(i), 16777619); b = Math.imul(b, 33) ^ source.charCodeAt(i); }
-    return 'zaxira-tahrir-qoralama:' + (a >>> 0).toString(36) + '-' + (b >>> 0).toString(36);
+    function hash(source) {
+      var a = 2166136261, b = 5381;
+      for (var i = 0; i < source.length; i++) { a = Math.imul(a ^ source.charCodeAt(i), 16777619); b = Math.imul(b, 33) ^ source.charCodeAt(i); }
+      return (a >>> 0).toString(36) + '-' + (b >>> 0).toString(36);
+    }
+    var prefix = 'zaxira-tahrir-qoralama:' + hash(joy) + ':';
+    return data === undefined ? prefix : prefix + hash(JSON.stringify(data));
   }
 
   /** Matnni forma maydoni nomiga aylantiradi: "Telefon raqami" -> "telefonraqami". */

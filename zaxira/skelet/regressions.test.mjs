@@ -89,13 +89,14 @@ test('preview reads the editor draft and cannot pick another project key',()=>{
  const source=readFileSync(new URL('./ilova.js',import.meta.url),'utf8');
  const marker="  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boshla); else boshla();";
  assert.ok(source.includes(marker));
- function preview(requested){
+ function preview(requested,loadedFile=file){
   const url=new URL('index.html?qoralama&qoralamaKey='+encodeURIComponent(requested),editorUrl);
-  const win={...structuredClone(file),Mantiq:M,localStorage:s};
+  const win={...structuredClone(loadedFile),Mantiq:M,localStorage:s};
   vm.runInNewContext(source.replace(marker,'  window.auditRead=qoralama;'),{window:win,document:{},URLSearchParams,location:{href:url.href,search:url.search}});
   return win.auditRead();
  }
  assert.equal(preview(alternate).SAYT.nomi,'Project A');
- const foreign=M.qoralamaKaliti(editorUrl,draft)+':yangi:fixture';s.setItem(foreign,JSON.stringify(draft));
+ assert.equal(preview(alternate,{...file,SAYT:{...file.SAYT,nomi:'Saved version'}}).SAYT.nomi,'Project A','live preview continues after a file save');
+ const foreign=M.qoralamaKaliti('http://localhost:8080/other/tahrir.html',draft)+':yangi:fixture';s.setItem(foreign,JSON.stringify(draft));
  assert.equal(preview(foreign),null);
 });

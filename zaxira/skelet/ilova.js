@@ -466,7 +466,9 @@
     try {
       var key = M.qoralamaKaliti(location.href, { SAYT: window.SAYT, ELEMENTLAR: window.ELEMENTLAR, FORMA: window.FORMA });
       var previewKey = new URLSearchParams(location.search).get('qoralamaKey');
-      if (previewKey && previewKey.indexOf(key + ':yangi:') === 0) key = previewKey;
+      // The editor may still be open after saving a changed malumot.js. Its
+      // explicit preview key stays valid within this folder, across file saves.
+      if (previewKey && previewKey.indexOf(M.qoralamaKaliti(location.href)) === 0) key = previewKey;
       var d = JSON.parse(safeStorage().getItem(key));
       return d && d.SAYT && Array.isArray(d.ELEMENTLAR) && d.FORMA ? d : null;
     } catch (e) { return null; }

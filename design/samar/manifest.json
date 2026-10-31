@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "2c552799021461f8832c68589037b482bf5462317ea09b75f9202eba06f27eb3",
-  "archive_bytes": 2340446,
+  "archive_sha256": "c4c8ad5694a0339a7ec27450813f1deb4d635a12b731b2ba48e46cd790b1fe89",
+  "archive_bytes": 2340624,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -180,7 +180,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16456,
-      "sha256": "d61fc465a4e6ffaf4ed7c26887af8ecd12f64da5ef534b991c205381b9484ea1"
+      "sha256": "9d40538a8123aece0087516027fff30b5bdac3b9296f08b81673bcbc3aa1cc63"
     },
     {
       "path": "PREPARATION.md",
@@ -264,8 +264,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 29948,
-      "sha256": "fcc753ca53f30ab4ffb3871d64c787fa80747bd7ed06577bf4da4eaf0c4c7f70"
+      "bytes": 30122,
+      "sha256": "e28ebab3ebbbf26152f553f63d7224fd54fc92a32183a2d6441807b3eda3be2e"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -284,8 +284,8 @@
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
-      "bytes": 19681,
-      "sha256": "2f5c0ed902d4edde0d89f0bbe5eed451391487e8725f9f578bb2bd6638e7abd8"
+      "bytes": 19795,
+      "sha256": "1a4db200ff62ab066453f605e695d95aae476cd51aaf80d875d83bec0dcf518a"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.test.mjs",
@@ -439,8 +439,8 @@
     },
     {
       "path": "ZAXIRA/skelet/regressions.test.mjs",
-      "bytes": 7231,
-      "sha256": "4b5d3416fb8e7dfd4dc602401cf364044b20090f654cd5b9e680667d4557d6a7"
+      "bytes": 7436,
+      "sha256": "482e3cdb4bce5b18a1e7df0c222bda6ddc6e1ed53cc8172a20b12420d6308b5c"
     },
     {
       "path": "ZAXIRA/skelet/serve.mjs",
