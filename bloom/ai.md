@@ -16,7 +16,7 @@ Tanlov ishida [baholashdan ish va dalil rejasiga](https://azizbeksafarov.github.
 
 START-HERE — mundarija, to‘liq o‘qish o‘rnini bosmaydi. [Tanlovga tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) va [yig‘ma to‘liq matn](https://azizbeksafarov.github.io/tayyorgarlik/full-context.md). Paket ichida PREPARATION.md, READING-PLAN.json, READ-RECEIPT.md va BRAND-ASSETS.json bor. Fayl yo‘llarini manifestdan oling; boshqa dizayndagi nomni taxmin qilmang. To‘liq source ZIPni oling va hashini tekshiring; faqat HTML parchasidan qayta qurish ishlaydigan dizaynni yo‘qotishi mumkin.
 
-Snapshot: 2026-10-30; source fingerprint: `36aa144427df8d89`. Readable page: https://azizbeksafarov.github.io/design/bloom/
+Snapshot: 2026-10-31; source fingerprint: `36aa144427df8d89`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
 ## O‘qish vositasi uchun zaxira
 

@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-30",
+  "snapshot_date": "2026-10-31",
   "source_fingerprint": "d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "d2caa2e15b60c7adcd9cae3f0d213899f15d97f0494bb49650afdede312d5544",
-  "archive_bytes": 1161733,
+  "archive_sha256": "b07df7a234e2dbabd4022de5082ba66189e988e8af0c85b102c33dbb65d2dfb8",
+  "archive_bytes": 1165840,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 9095,
-      "sha256": "6c15c9e91dec8ae55f4cb00e9ecd8ee66d9de23edde1db3103955bf0a9c21807"
+      "sha256": "25bbf84f14bf3388137eb99f69a3acc62cd7576ef434780f880a1ca23bfad058"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "a5ddeb2635c67a3419b3cc161f8667efcf7e5f1cd62fd9273a1e4d1dde392ba9"
+      "sha256": "88c2f41ac901b6b35d48a3a987bdc554cf4b6ade98f2c3e392bddf35201c7859"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -179,8 +179,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 15948,
-      "sha256": "ece83d10fae5c8d8655ad0b83d154998bfb29506c1131a9cfba436ce71b2459a"
+      "bytes": 16117,
+      "sha256": "af5ed1f738ce566e15c2a8c0dee4999547785ce8193fde77a320a9d06ec1d5dd"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "22589ed4b27e98c066d6359312d2b44c28e7067cbb8e661311e437d5b50171ff"
+      "sha256": "81e8aa33a6a0816e792eafac5ec4add50c17d7e336beb7ba8db24b519a65153d"
     },
     {
       "path": "README.md",
@@ -264,8 +264,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 29591,
-      "sha256": "b9bbcc7cc06a0eb1fad66367fb13f240714fda379d8652fb75001a9c4e544da0"
+      "bytes": 29948,
+      "sha256": "fcc753ca53f30ab4ffb3871d64c787fa80747bd7ed06577bf4da4eaf0c4c7f70"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -284,8 +284,8 @@
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
-      "bytes": 17224,
-      "sha256": "2723fabb1b506c0042f1298490a98631a33a94da9573ac8c9fe1e29264756917"
+      "bytes": 19681,
+      "sha256": "2f5c0ed902d4edde0d89f0bbe5eed451391487e8725f9f578bb2bd6638e7abd8"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.test.mjs",
@@ -438,6 +438,11 @@
       "sha256": "e9edd0e4596111c07e88bebc7a85773c0f0d335d7bc2273b55abbbb8afddf1d5"
     },
     {
+      "path": "ZAXIRA/skelet/regressions.test.mjs",
+      "bytes": 7231,
+      "sha256": "4b5d3416fb8e7dfd4dc602401cf364044b20090f654cd5b9e680667d4557d6a7"
+    },
+    {
       "path": "ZAXIRA/skelet/serve.mjs",
       "bytes": 2402,
       "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
@@ -449,8 +454,8 @@
     },
     {
       "path": "ZAXIRA/skelet/tahrir.js",
-      "bytes": 26508,
-      "sha256": "58c6a4ee8f41a7d63e5c343350edf2424c65d68ac52735323785f8643c42c1a1"
+      "bytes": 27079,
+      "sha256": "c51194a437f6ea11cd496d1a137500fd14ce1d07c0f9e847d0dd50ff92e0c905"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",

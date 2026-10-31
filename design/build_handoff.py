@@ -14,7 +14,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
-DATE = '2026-10-30'
+DATE = '2026-10-31'
 CONTEXT_FILES = {
     'TASK-BOUNDARY.json': 'design/handoff/task-boundary.json',
     'CURRENT-COMPETITION.md': 'design/handoff/current-competition.md',

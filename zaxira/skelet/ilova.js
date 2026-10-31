@@ -265,7 +265,7 @@
         var turlar = { telefon: 'tel', email: 'email', son: 'number', sana: 'date', matn: 'text' };
         kirish = el('input', Object.assign({ type: turlar[m.tur] || 'text', autocomplete: m.avto || null,
           inputmode: m.tur === 'telefon' ? 'tel' : null, maxlength: m.tur === 'matn' && m.max ? m.max : null,
-          min: m.tur === 'sana' && m.otmishEmas ? M.bugun() : (m.tur === 'son' ? m.min : null), max: m.tur === 'son' ? m.max : null }, umumiy));
+          min: m.tur === 'sana' && m.otmishEmas ? M.bugun() : (m.tur === 'son' ? (m.soni ? Math.max(1, m.min || 1) : m.min) : null), step: m.tur === 'son' && m.soni ? 1 : null, max: m.tur === 'son' ? m.max : null }, umumiy));
       }
       kirish.addEventListener(m.tur === 'belgi' || m.tur === 'tanlash' ? 'change' : 'input', function () { if (kirish.getAttribute('aria-invalid')) maydonTekshir(m.nom); });
       var label = m.tur === 'belgi' ? el('label', { for: id }, [kirish, el('span', {}, yorliq)]) : el('label', { for: id }, [el('span', {}, yorliq)]);
@@ -464,7 +464,10 @@
   function qoralama() {
     if (!/[?&]qoralama\b/.test(location.search) || !M) return null;
     try {
-      var d = JSON.parse(safeStorage().getItem(M.QORALAMA_KALIT));
+      var key = M.qoralamaKaliti(location.href, { SAYT: window.SAYT, ELEMENTLAR: window.ELEMENTLAR, FORMA: window.FORMA });
+      var previewKey = new URLSearchParams(location.search).get('qoralamaKey');
+      if (previewKey && previewKey.indexOf(key + ':yangi:') === 0) key = previewKey;
+      var d = JSON.parse(safeStorage().getItem(key));
       return d && d.SAYT && Array.isArray(d.ELEMENTLAR) && d.FORMA ? d : null;
     } catch (e) { return null; }
   }

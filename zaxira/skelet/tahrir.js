@@ -8,7 +8,7 @@
   'use strict';
   var M = window.Mantiq;
   var $ = function (s) { return document.querySelector(s); };
-  var d, fayl = null, kechikish = null, ochirilganNomlar = {};
+  var d, draftKalit, fayl = null, kechikish = null, ochirilganNomlar = {};
 
   var SAHIFALAR = [['bosh', 'Bosh sahifa'], ['royxat', 'Ro‘yxat'], ['ariza', 'Ariza'], ['saqlangan', 'Arizalarim'], ['statistika', 'Statistika'], ['haqida', 'Biz haqimizda']];
   var MAVZULAR = [['toza', 'Toza — oddiy, universal'], ['forma', 'Forma — do‘kon, mahsulot, qora-oq'], ['samar', 'Samar — sayohat, madaniyat, iliq'],
@@ -37,7 +37,7 @@
 
   /* ---------- Saqlash va oldindan ko'rish ---------- */
   function ozgardi() {
-    try { localStorage.setItem(M.QORALAMA_KALIT, JSON.stringify(d)); } catch (e) { /* ko'rish yangilanmasa ham ish davom etadi */ }
+    try { localStorage.setItem(draftKalit, JSON.stringify(d)); } catch (e) { /* ko'rish yangilanmasa ham ish davom etadi */ }
     holat('Saqlanmagan o‘zgarishlar bor — “Faylga saqlash” ni bosing.');
     clearTimeout(kechikish); kechikish = setTimeout(korish, 500);
   }
@@ -45,7 +45,7 @@
   function korish() {
     var f = $('#t-iframe'), hash = '';
     try { hash = f.contentWindow.location.hash; } catch (e) { /* fayl rejimida o'qib bo'lmaydi */ }
-    f.src = 'index.html?qoralama&t=' + Date.now() + (hash || '');
+    f.src = 'index.html?qoralama&qoralamaKey=' + encodeURIComponent(draftKalit) + '&t=' + Date.now() + (hash || '');
   }
 
   function xatolar() {
@@ -65,6 +65,7 @@
     F.maydonlar.forEach(function (m, i) {
       if (!String(m.yorliq || '').trim()) x.push('Forma ' + (i + 1) + '-maydon: nomi bo‘sh.');
       if (nomlar[m.nom]) x.push('Forma: ikki maydonning ichki nomi bir xil (' + m.nom + ').'); nomlar[m.nom] = true;
+      if (M.ichkiNom(m.nom)) x.push('Forma: “' + m.yorliq + '” ichki nomi band (' + m.nom + '). Maydon nomini panelda qayta yozing.');
       if (m.tur === 'tanlash' && m.nom !== 'element' && !(m.variantlar || []).length) x.push((m.yorliq || 'Tanlash') + ': variantlar yozilmagan.');
       if (m.nom === 'element' && !d.ELEMENTLAR.length) x.push('“Ro‘yxatdan tanlash” maydoni bor, lekin ro‘yxat bo‘sh.');
     });
@@ -332,22 +333,30 @@
       return;
     }
     d = fayldagi();
+    draftKalit = M.qoralamaKaliti(location.href, d);
     try {
-      var q = JSON.parse(localStorage.getItem(M.QORALAMA_KALIT));
-      if (q && q.SAYT && Array.isArray(q.ELEMENTLAR) && q.FORMA && JSON.stringify(q) !== JSON.stringify(d)) { d = q; holat('Avvalgi saqlanmagan ish tiklandi. Kerak bo‘lmasa “Fayldagi holatga qaytish” ni bosing.'); }
+      var q = JSON.parse(localStorage.getItem(draftKalit));
+      if (q && q.SAYT && Array.isArray(q.ELEMENTLAR) && q.FORMA && JSON.stringify(q) !== JSON.stringify(d)) {
+        if (confirm('“' + (q.SAYT.nomi || 'Nomsiz') + '” qoralamasi topildi. Hozirgi loyiha: “' + (d.SAYT.nomi || 'Nomsiz') + '”. Qoralamani tiklaysizmi? Bekor qilish fayldagi holatni ochadi; qoralama saqlanadi.')) {
+          d = q; holat('Avvalgi saqlanmagan ish tiklandi.');
+        } else {
+          // Keep the declined draft intact. This editor starts a separate draft.
+          draftKalit += ':yangi:' + M.yangiId();
+        }
+      }
     } catch (e) { /* qoralama yo'q */ }
     if (typeof d.SAYT.rang !== 'string') d.SAYT.rang = '';
     if (!d.SAYT.mavzu) d.SAYT.mavzu = 'toza';
     d.SAYT.sahifalar = d.SAYT.sahifalar || {};
     chiz(); korish();
-    try { localStorage.setItem(M.QORALAMA_KALIT, JSON.stringify(d)); } catch (e) { /* xotira yopiq */ }
+    try { localStorage.setItem(draftKalit, JSON.stringify(d)); } catch (e) { /* xotira yopiq */ }
 
     $('#t-saqla').addEventListener('click', saqla);
     $('#t-och').addEventListener('click', function () { window.open('index.html', '_blank'); });
     $('#t-yangila').addEventListener('click', korish);
     $('#t-qaytar').addEventListener('click', function () {
       if (!confirm('Saqlanmagan o‘zgarishlar o‘chib, malumot.js dagi holat qaytariladi. Davom etasizmi?')) return;
-      d = fayldagi(); try { localStorage.removeItem(M.QORALAMA_KALIT); } catch (e) { /* */ }
+      d = fayldagi(); try { localStorage.removeItem(draftKalit); } catch (e) { /* */ }
       chiz(); korish(); holat('Fayldagi holat qaytarildi.');
     });
     document.querySelectorAll('[data-kenglik]').forEach(function (b) {

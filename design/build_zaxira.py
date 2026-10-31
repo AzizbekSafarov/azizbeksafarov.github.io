@@ -11,7 +11,7 @@ import io,json,re,zipfile
 ROOT=Path(__file__).resolve().parent
 SITE=ROOT.parent
 KIT=SITE/'zaxira'
-DATE=(2026,10,30,0,0,0)
+DATE=(2026,10,31,0,0,0)
 STARTERS=[('forma','Forma'),('samar','Samar'),('orbita','Orbita'),('nashr','Nashr'),('hisob','Hisob'),('ziyo','Ziyo'),('meros','Meros'),('si','Yuksal · SI')]
 SKIP={'.DS_Store'}
 

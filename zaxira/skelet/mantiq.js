@@ -62,6 +62,7 @@
     var toza = {};
     var hozir = (variantlar && variantlar.bugun) || bugun();
     (maydonlar || []).forEach(function (m) {
+      if (ichkiNom(m.nom)) { xatolar[m.nom] = 'Maydonning ichki nomi band: ' + m.nom + '. Tahrir panelida nomini o‘zgartiring.'; return; }
       var xom = qiymatlar ? qiymatlar[m.nom] : undefined;
       var nomi = m.yorliq || m.nom;
       if (m.tur === 'belgi') {
@@ -92,6 +93,7 @@
       } else if (m.tur === 'son') {
         var n = Number(q.replace(',', '.'));
         if (!isFinite(n)) { xatolar[m.nom] = nomi + ' son bo‘lishi kerak.'; return; }
+        if (m.soni && (n < 1 || Math.floor(n) !== n)) { xatolar[m.nom] = nomi + ' musbat butun son bo‘lsin.'; return; }
         if (m.min != null && n < m.min) { xatolar[m.nom] = nomi + ' kamida ' + m.min + ' bo‘lsin.'; return; }
         if (m.max != null && n > m.max) { xatolar[m.nom] = nomi + ' ' + m.max + ' dan oshmasin.'; return; }
         toza[m.nom] = n;
@@ -136,7 +138,7 @@
   function yozuvSoni(yozuv, sonMaydon) {
     if (!sonMaydon) return 1;
     var n = Number(yozuv && yozuv[sonMaydon]);
-    return isFinite(n) && n > 0 ? Math.floor(n) : 1;
+    return isFinite(n) && n >= 1 && Math.floor(n) === n ? n : 1;
   }
 
   /** Element uchun qolgan joy. joylar berilmagan bo'lsa cheklov yo'q (Infinity).
@@ -169,7 +171,7 @@
     var n = Number(element && element.narx);
     if (!element || element.narx == null || element.narx === '' || !isFinite(n)) return null;
     var s = Number(soni);
-    return n * (isFinite(s) && s > 0 ? Math.floor(s) : 1);
+    return n * (isFinite(s) && s >= 1 && Math.floor(s) === s ? s : 1);
   }
 
   /** Statistika: har element bo'yicha yozuvlar (soni bilan), to'lganlik foizi va jami. */
@@ -205,14 +207,28 @@
         ishlaydi = false; ogohlantirish = 'Brauzer xotirasi yopiq. Yozuvlar sahifa yopilguncha saqlanadi.';
         return xotira.slice();
       }
-      if (xom == null) return [];
+      if (xom == null) { xotira = []; return []; }
       try {
         var data = JSON.parse(xom);
-        if (data && data.versiya === 1 && Array.isArray(data.yozuvlar)) { xotira = data.yozuvlar; return xotira.slice(); }
+        var idlar = Object.create(null);
+        if (data && data.versiya === 1 && Array.isArray(data.yozuvlar) && data.yozuvlar.every(function (y) {
+          if (!y || typeof y !== 'object' || Array.isArray(y) || typeof y.id !== 'string' || !y.id || idlar[y.id] || typeof y.vaqt !== 'string' || !isFinite(Date.parse(y.vaqt))) return false;
+          idlar[y.id] = true;
+          return Object.keys(y).every(function (k) { return y[k] === null || ['string', 'number', 'boolean'].indexOf(typeof y[k]) !== -1; });
+        })) { xotira = data.yozuvlar; return xotira.slice(); }
         throw new Error('format');
       } catch (e) {
-        try { storage.setItem(kalit + ':buzilgan', xom); storage.removeItem(kalit); } catch (e2) { /* nusxa olinmasa ham davom etamiz */ }
-        ogohlantirish = 'Eski yozuvlar o‘qilmadi va alohida nusxaga olindi.';
+        try {
+          var backup = kalit + ':buzilgan', i = 1;
+          while (storage.getItem(backup) !== null && storage.getItem(backup) !== xom) backup = kalit + ':buzilgan:' + i++;
+          storage.setItem(backup, xom);
+          if (storage.getItem(backup) !== xom) throw new Error('Backup verification failed');
+          storage.removeItem(kalit);
+          ogohlantirish = 'Eski yozuvlar o‘qilmadi va alohida nusxaga olindi.';
+        } catch (e2) {
+          ishlaydi = false;
+          ogohlantirish = 'Eski yozuvlar o‘qilmadi. Zaxira nusxa yozilmadi; asl ma’lumot saqlandi. Yangi yozuvlar faqat sahifa xotirasida — CSV yuklab oling.';
+        }
         xotira = [];
         return [];
       }
@@ -232,7 +248,7 @@
     return {
       oqi: oqi,
       qosh: function (yozuv) {
-        var y = Object.assign({ id: yangiId(), vaqt: new Date().toISOString() }, yozuv);
+        var y = Object.assign({}, yozuv, { id: yangiId(), vaqt: new Date().toISOString() });
         var hammasi = oqi(); hammasi.push(y);
         return Object.assign({ yozuv: y }, yoz(hammasi));
       },
@@ -263,13 +279,26 @@
     var n = parseInt(m[1], 16);
     var kanal = function (c) { c /= 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
     var L = 0.2126 * kanal(n >> 16 & 255) + 0.7152 * kanal(n >> 8 & 255) + 0.0722 * kanal(n & 255);
-    return (1.05) / (L + 0.05) >= (L + 0.05) / 0.05 ? '#ffffff' : '#111111';
+    var oq = 1.05 / (L + 0.05), qora = (L + 0.05) / (kanal(17) + 0.05);
+    if (oq < 4.5 && qora < 4.5) return '#000000';
+    return oq >= qora ? '#ffffff' : '#111111';
+  }
+
+  function ichkiNom(nom) { return ['id', 'vaqt', 'jami'].indexOf(nom) !== -1; }
+
+  /** Bind a draft to the original file snapshot and its containing URL path. */
+  function qoralamaKaliti(manzil, data) {
+    var joy = String(manzil || '').split(/[?#]/)[0].replace(/[^/]*$/, '');
+    var source = JSON.stringify([joy, data]), a = 2166136261, b = 5381;
+    for (var i = 0; i < source.length; i++) { a = Math.imul(a ^ source.charCodeAt(i), 16777619); b = Math.imul(b, 33) ^ source.charCodeAt(i); }
+    return 'zaxira-tahrir-qoralama:' + (a >>> 0).toString(36) + '-' + (b >>> 0).toString(36);
   }
 
   /** Matnni forma maydoni nomiga aylantiradi: "Telefon raqami" -> "telefonraqami". */
   function nomYasa(matn, band) {
     var s = normal(matn).replace(/o'/g, 'o').replace(/g'/g, 'g').replace(/[^a-z0-9]/g, '').slice(0, 24);
     if (!/^[a-z]/.test(s)) s = 'maydon' + s;
+    if (ichkiNom(s)) s = 'maydon' + s;
     var natija = s, i = 2;
     while ((band || []).indexOf(natija) !== -1) natija = s + i++;
     return natija;
@@ -299,8 +328,8 @@
    * Birinchi qator — sarlavhalar (Nomi, Sana, Vaqt, Joy, Narx...). Ajratuvchi: Tab, ; yoki |.
    */
   function jadvalOqi(matn) {
-    var qatorlar = String(matn || '').split(/\r?\n/).map(function (q) { return q.trim(); })
-      .filter(function (q) { return q && !/^[|\s:-]+$/.test(q); });
+    var qatorlar = String(matn || '').split(/\r?\n/)
+      .filter(function (q) { return q.trim() && !/^[|\s:-]+$/.test(q); });
     if (qatorlar.length < 2) return { elementlar: [], tanilmagan: [], xato: 'Kamida sarlavha qatori va bitta ma’lumot qatori kerak.' };
     var ajr = qatorlar[0].indexOf('\t') !== -1 ? '\t' : qatorlar[0].indexOf('|') !== -1 ? '|' : ';';
     var bolak = function (q) {
@@ -316,20 +345,28 @@
       tanilmagan.push(s); return null;
     });
     if (xarita.indexOf('nom') === -1) return { elementlar: [], tanilmagan: tanilmagan, xato: 'Sarlavhada “Nomi” ustuni topilmadi.' };
+    var xatolar = [];
     var elementlar = qatorlar.slice(1).map(function (q, i) {
       var e = { id: 'e' + (i + 1) };
+      if (bolak(q).length !== sarlavha.length) xatolar.push((i + 2) + '-qator: ustunlar soni mos emas.');
       bolak(q).forEach(function (qiymat, j) {
         var maydon = xarita[j];
         if (qiymat === '' || j >= sarlavha.length) return;
         // Tanilmagan ustun (Muallif, O'qituvchi...) yo'qolmaydi: qo'shimcha maydon bo'ladi.
         if (!maydon) { e.qoshimcha = e.qoshimcha || {}; e.qoshimcha[sarlavha[j]] = qiymat; return; }
-        if (maydon === 'narx' || maydon === 'joylar') { var n = Number(qiymat.replace(/[^\d.,]/g, '').replace(',', '.')); e[maydon] = isFinite(n) ? n : 0; }
+        if (maydon === 'narx' || maydon === 'joylar') {
+          var son = qiymat.replace(/\s/g, '').replace(/(?:so[‘’ʻʼ']?m|uzs)$/i, '').replace(',', '.');
+          var n = Number(son);
+          if (!/^\d+(?:\.\d+)?$/.test(son) || !isFinite(n) || n < 0 || (maydon === 'joylar' && Math.floor(n) !== n)) xatolar.push((i + 2) + '-qator: ' + sarlavha[j] + ' noto‘g‘ri son.');
+          else e[maydon] = n;
+        }
         else if (maydon === 'sana') e.sana = sanaIso(qiymat);
         else e[maydon] = qiymat;
       });
+      if (!e.nom) xatolar.push((i + 2) + '-qator: nomi bo‘sh.');
       return e;
     }).filter(function (e) { return e.nom; });
-    return { elementlar: elementlar, tanilmagan: tanilmagan, xato: '' };
+    return { elementlar: xatolar.length ? [] : elementlar, tanilmagan: tanilmagan, xato: xatolar.join(' ') };
   }
 
   /** {SAYT, ELEMENTLAR, FORMA} dan har doim to'g'ri yozilgan malumot.js matnini yasaydi. */
@@ -349,7 +386,7 @@
     tekshir: tekshir, filtrla: filtrla, turlar: turlar, qolganJoy: qolganJoy, yozuvSoni: yozuvSoni,
     saralash: saralash, jamiNarx: jamiNarx, statistika: statistika,
     ombor: ombor, csv: csv, yangiId: yangiId,
-    matnRangi: matnRangi, nomYasa: nomYasa, jadvalOqi: jadvalOqi, sanaIso: sanaIso, malumotYoz: malumotYoz,
+    matnRangi: matnRangi, nomYasa: nomYasa, ichkiNom: ichkiNom, qoralamaKaliti: qoralamaKaliti, jadvalOqi: jadvalOqi, sanaIso: sanaIso, malumotYoz: malumotYoz,
     QORALAMA_KALIT: 'zaxira-tahrir-qoralama'
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = Mantiq;

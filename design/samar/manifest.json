@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-30",
+  "snapshot_date": "2026-10-31",
   "source_fingerprint": "deb074c142f1e0bc00b30136816895bddbc5b43bb283493025a00edb2d7a23f7",
   "name": "Samar",
   "slug": "samar",
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "d6f36541dd42f24ac898329b9341341ce0e2be12b3a19d44eef46bcd76620730",
-  "archive_bytes": 2336340,
+  "archive_sha256": "2c552799021461f8832c68589037b482bf5462317ea09b75f9202eba06f27eb3",
+  "archive_bytes": 2340446,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 9121,
-      "sha256": "d1ba367507ce055df6ce397636a31589ec0f4c9fc020bab6f5a890dd12b3c58d"
+      "sha256": "f0652faca534ca7e46574dfc07040b4daed4d918a3bf376d6731fda9d6f7ef88"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "301a9180495a695990600204c2e180051482e22f6d39b450ce9aca9059a1c9bb"
+      "sha256": "faafc269f4d1a1bfd9ddadcb6edf58d1631d3496fb037ad6817812a0ed71800b"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -179,8 +179,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16287,
-      "sha256": "8b81046d33a099b5f4282a3068d24b123e064fb5cd49a74852be83d78e06d196"
+      "bytes": 16456,
+      "sha256": "d61fc465a4e6ffaf4ed7c26887af8ecd12f64da5ef534b991c205381b9484ea1"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "d4be384144bbbb55274fbb69597700dea8749cd0b364db9831ed92082bc5c1d2"
+      "sha256": "0e2f360e1b771e2b7bd7bd6a2efd00530bd61202e462f99443e38fd6e34fc816"
     },
     {
       "path": "README.md",
@@ -264,8 +264,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 29591,
-      "sha256": "b9bbcc7cc06a0eb1fad66367fb13f240714fda379d8652fb75001a9c4e544da0"
+      "bytes": 29948,
+      "sha256": "fcc753ca53f30ab4ffb3871d64c787fa80747bd7ed06577bf4da4eaf0c4c7f70"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -284,8 +284,8 @@
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
-      "bytes": 17224,
-      "sha256": "2723fabb1b506c0042f1298490a98631a33a94da9573ac8c9fe1e29264756917"
+      "bytes": 19681,
+      "sha256": "2f5c0ed902d4edde0d89f0bbe5eed451391487e8725f9f578bb2bd6638e7abd8"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.test.mjs",
@@ -438,6 +438,11 @@
       "sha256": "e9edd0e4596111c07e88bebc7a85773c0f0d335d7bc2273b55abbbb8afddf1d5"
     },
     {
+      "path": "ZAXIRA/skelet/regressions.test.mjs",
+      "bytes": 7231,
+      "sha256": "4b5d3416fb8e7dfd4dc602401cf364044b20090f654cd5b9e680667d4557d6a7"
+    },
+    {
       "path": "ZAXIRA/skelet/serve.mjs",
       "bytes": 2402,
       "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
@@ -449,8 +454,8 @@
     },
     {
       "path": "ZAXIRA/skelet/tahrir.js",
-      "bytes": 26508,
-      "sha256": "58c6a4ee8f41a7d63e5c343350edf2424c65d68ac52735323785f8643c42c1a1"
+      "bytes": 27079,
+      "sha256": "c51194a437f6ea11cd496d1a137500fd14ce1d07c0f9e847d0dd50ff92e0c905"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",

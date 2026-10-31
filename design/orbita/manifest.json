@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-30",
+  "snapshot_date": "2026-10-31",
   "source_fingerprint": "5bbe54ec986d84b0d7416ba6d5afbeaea646f9f1bd38ce21758c99b188deb438",
   "name": "Orbita",
   "slug": "orbita",
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "303b6fd4048684289f73829975589705bc0865cee95020af20fbe0a09c6a22fe",
-  "archive_bytes": 810332,
+  "archive_sha256": "7c466455455908cd6691f1bf17b4f2452962bf624464091966cba83bd75d4d25",
+  "archive_bytes": 814433,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 7973,
-      "sha256": "eb49577b9813a4fc4f7740b270df97333ba6699b262bc792d2c6b6ee1afbf115"
+      "sha256": "3f7a3cd705aa5205440f3e647ba09a2178b01ba4b0301f78d570dcb7935b19a4"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1313,
-      "sha256": "b2ab1c753b81313de5ed6b82c1c987f8c41de169d2f1dd3e0fba6b94379212df"
+      "sha256": "9e8aed78d0b8a10224a4f4de37f6174d4b6eac19925d499732afde6351d91564"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -179,8 +179,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 15799,
-      "sha256": "6a893765adf307477b3563985ffabb4f4e474436c9342a6ec356a4558b9337f3"
+      "bytes": 15968,
+      "sha256": "76b22638f08456afb05fc15fc4c8b2effe4848de31647059c96f8937b4dda74f"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "4d06654d9cf697ce45d11c3c61c9e9e1b9c984b254b1e9b706d8a20c29a5bf5b"
+      "sha256": "77bb15462fed2c6cd270cb8f5ef9fd5ce3fa125770793d0007de374fa1af340c"
     },
     {
       "path": "README.md",
@@ -264,8 +264,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 29591,
-      "sha256": "b9bbcc7cc06a0eb1fad66367fb13f240714fda379d8652fb75001a9c4e544da0"
+      "bytes": 29948,
+      "sha256": "fcc753ca53f30ab4ffb3871d64c787fa80747bd7ed06577bf4da4eaf0c4c7f70"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -284,8 +284,8 @@
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
-      "bytes": 17224,
-      "sha256": "2723fabb1b506c0042f1298490a98631a33a94da9573ac8c9fe1e29264756917"
+      "bytes": 19681,
+      "sha256": "2f5c0ed902d4edde0d89f0bbe5eed451391487e8725f9f578bb2bd6638e7abd8"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.test.mjs",
@@ -438,6 +438,11 @@
       "sha256": "e9edd0e4596111c07e88bebc7a85773c0f0d335d7bc2273b55abbbb8afddf1d5"
     },
     {
+      "path": "ZAXIRA/skelet/regressions.test.mjs",
+      "bytes": 7231,
+      "sha256": "4b5d3416fb8e7dfd4dc602401cf364044b20090f654cd5b9e680667d4557d6a7"
+    },
+    {
       "path": "ZAXIRA/skelet/serve.mjs",
       "bytes": 2402,
       "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
@@ -449,8 +454,8 @@
     },
     {
       "path": "ZAXIRA/skelet/tahrir.js",
-      "bytes": 26508,
-      "sha256": "58c6a4ee8f41a7d63e5c343350edf2424c65d68ac52735323785f8643c42c1a1"
+      "bytes": 27079,
+      "sha256": "c51194a437f6ea11cd496d1a137500fd14ce1d07c0f9e847d0dd50ff92e0c905"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",

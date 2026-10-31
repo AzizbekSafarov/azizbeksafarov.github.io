@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-30",
+  "snapshot_date": "2026-10-31",
   "source_fingerprint": "dd4fcdcad021b0ed36f24dff0b57de15deeb53b0ea1aaeee467929ab5450c8ac",
   "name": "Meros",
   "slug": "meros",
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "db535e39af6292a5317a1df0b97cad562a23bd2c17ff45afa7d470069355e1d9",
-  "archive_bytes": 2805746,
+  "archive_sha256": "ad7347ff492f0e27f546121845d09fe89471d4b64939d4c73b63872190d34c54",
+  "archive_bytes": 2809856,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,7 +80,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 8069,
-      "sha256": "c9092d4f6f990846eea63644aea1f0f114c0b1d8057fc77b46798b0f952a3bac"
+      "sha256": "668c001cad3501280f7bed8c7be71ca4e6608c0a886ecad4c4a57820025c0f92"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -160,7 +160,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1311,
-      "sha256": "093f235cf8061361c1852cde7e2c8db0f112bad0eb39831a81638d055468aa0b"
+      "sha256": "dfcb061a1df99bba7f951699b3db08c55028b152193a190181795355e31db33f"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -179,8 +179,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16612,
-      "sha256": "14d7d19940516a3cfa0dc93456cf21708c300cee7eb5a6945a6acc51f5e237b1"
+      "bytes": 16781,
+      "sha256": "0ab2edc1af5333dafd9c70e24f9ee971d4e697bbd142156703d8de532f192149"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +205,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "b923603b5c6d7a46b178638cfa991150a3a159fc2841eab8ea62d131a4402be9"
+      "sha256": "72f252f584d503f69a9e7f784aab31cb7029f99bddcb3b69f741bdb554149d79"
     },
     {
       "path": "README.md",
@@ -264,8 +264,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 29591,
-      "sha256": "b9bbcc7cc06a0eb1fad66367fb13f240714fda379d8652fb75001a9c4e544da0"
+      "bytes": 29948,
+      "sha256": "fcc753ca53f30ab4ffb3871d64c787fa80747bd7ed06577bf4da4eaf0c4c7f70"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -284,8 +284,8 @@
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
-      "bytes": 17224,
-      "sha256": "2723fabb1b506c0042f1298490a98631a33a94da9573ac8c9fe1e29264756917"
+      "bytes": 19681,
+      "sha256": "2f5c0ed902d4edde0d89f0bbe5eed451391487e8725f9f578bb2bd6638e7abd8"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.test.mjs",
@@ -438,6 +438,11 @@
       "sha256": "e9edd0e4596111c07e88bebc7a85773c0f0d335d7bc2273b55abbbb8afddf1d5"
     },
     {
+      "path": "ZAXIRA/skelet/regressions.test.mjs",
+      "bytes": 7231,
+      "sha256": "4b5d3416fb8e7dfd4dc602401cf364044b20090f654cd5b9e680667d4557d6a7"
+    },
+    {
       "path": "ZAXIRA/skelet/serve.mjs",
       "bytes": 2402,
       "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
@@ -449,8 +454,8 @@
     },
     {
       "path": "ZAXIRA/skelet/tahrir.js",
-      "bytes": 26508,
-      "sha256": "58c6a4ee8f41a7d63e5c343350edf2424c65d68ac52735323785f8643c42c1a1"
+      "bytes": 27079,
+      "sha256": "c51194a437f6ea11cd496d1a137500fd14ce1d07c0f9e847d0dd50ff92e0c905"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",
