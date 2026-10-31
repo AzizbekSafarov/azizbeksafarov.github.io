@@ -22,7 +22,8 @@
 |---|---|
 | `tahrir.html`, `tahrir.js` | Kodsiz tahrirlash paneli: mazmunni formalar orqali o‘zgartiradi va `malumot.js` ni yozadi |
 | `malumot.js` | Barcha matn, rang, ro‘yxat elementlari va forma maydonlari |
-| `uslub.css` | Ko‘rinish (asosiy rang `malumot.js` dagi `rang` dan olinadi) |
+| `uslub.css` | Asosiy ko‘rinish va o‘zgaruvchilar |
+| `mavzular/mavzular.css`, `mavzular/shrift/` | 9 ta mavzu (`malumot.js`: `mavzu`) va ularning shriftlari (SIL OFL litsenziyasi bilan) |
 | `index.html` | Sahifalar tuzilishi |
 | `ilova.js` | Sahifalar, qidiruv, forma, saqlash mantig‘i |
 | `mantiq.js` | Tekshirish, filtr, saqlash funksiyalari (testlangan) |

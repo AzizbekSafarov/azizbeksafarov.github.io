@@ -132,12 +132,56 @@
     return natija;
   }
 
-  /** Element uchun qolgan joy. joylar berilmagan bo'lsa cheklov yo'q (Infinity). */
-  function qolganJoy(element, yozuvlar, maydon) {
+  /** Yozuvning "soni" (masalan 3 kishi / 2 dona). Berilmagan yoki noto'g'ri bo'lsa 1. */
+  function yozuvSoni(yozuv, sonMaydon) {
+    if (!sonMaydon) return 1;
+    var n = Number(yozuv && yozuv[sonMaydon]);
+    return isFinite(n) && n > 0 ? Math.floor(n) : 1;
+  }
+
+  /** Element uchun qolgan joy. joylar berilmagan bo'lsa cheklov yo'q (Infinity).
+      sonMaydon berilsa har yozuv o'sha maydondagi son qadar joy egallaydi. */
+  function qolganJoy(element, yozuvlar, maydon, sonMaydon) {
     if (!element || !(element.joylar > 0)) return Infinity;
     var kalit = maydon || 'element';
-    var band = (yozuvlar || []).filter(function (y) { return y[kalit] === element.id; }).length;
+    var band = (yozuvlar || []).reduce(function (s, y) {
+      return String(y[kalit]) === String(element.id) ? s + yozuvSoni(y, sonMaydon) : s;
+    }, 0);
     return Math.max(0, element.joylar - band);
+  }
+
+  /** Ro'yxatni tartiblaydi: tavsiya (asl tartib), nom, sana, narx-osish, narx-kamayish. */
+  function saralash(elementlar, tartib) {
+    var r = (elementlar || []).map(function (e, i) { return { e: e, i: i }; });
+    var narx = function (e) { var n = Number(e.narx); return isFinite(n) ? n : Infinity; };
+    var cmp = {
+      nom: function (a, b) { return String(a.e.nom || '').localeCompare(String(b.e.nom || ''), 'uz'); },
+      sana: function (a, b) { return String(a.e.sana || '9999') < String(b.e.sana || '9999') ? -1 : String(a.e.sana || '9999') > String(b.e.sana || '9999') ? 1 : 0; },
+      'narx-osish': function (a, b) { return narx(a.e) - narx(b.e); },
+      'narx-kamayish': function (a, b) { return (narx(b.e) === Infinity ? -Infinity : narx(b.e)) - (narx(a.e) === Infinity ? -Infinity : narx(a.e)); }
+    }[tartib];
+    if (cmp) r.sort(function (a, b) { return cmp(a, b) || a.i - b.i; });
+    return r.map(function (x) { return x.e; });
+  }
+
+  /** Jami narx = elementning narxi × soni. Narx yo'q bo'lsa null. */
+  function jamiNarx(element, soni) {
+    var n = Number(element && element.narx);
+    if (!element || element.narx == null || element.narx === '' || !isFinite(n)) return null;
+    var s = Number(soni);
+    return n * (isFinite(s) && s > 0 ? Math.floor(s) : 1);
+  }
+
+  /** Statistika: har element bo'yicha yozuvlar (soni bilan), to'lganlik foizi va jami. */
+  function statistika(elementlar, yozuvlar, sonMaydon) {
+    var qatorlar = (elementlar || []).map(function (e) {
+      var band = (yozuvlar || []).reduce(function (s, y) { return String(y.element) === String(e.id) ? s + yozuvSoni(y, sonMaydon) : s; }, 0);
+      var arizalar = (yozuvlar || []).filter(function (y) { return String(y.element) === String(e.id); }).length;
+      return { id: e.id, nom: e.nom, arizalar: arizalar, band: band, joylar: e.joylar > 0 ? e.joylar : null,
+        foiz: e.joylar > 0 ? Math.min(100, Math.round(band * 100 / e.joylar)) : null };
+    });
+    return { qatorlar: qatorlar, jamiArizalar: (yozuvlar || []).length,
+      jamiBand: qatorlar.reduce(function (s, q) { return s + q.band; }, 0) };
   }
 
   function yangiId() {
@@ -302,7 +346,8 @@
 
   var Mantiq = {
     normal: normal, sanaMatn: sanaMatn, bugun: bugun, pul: pul, telefon: telefon,
-    tekshir: tekshir, filtrla: filtrla, turlar: turlar, qolganJoy: qolganJoy,
+    tekshir: tekshir, filtrla: filtrla, turlar: turlar, qolganJoy: qolganJoy, yozuvSoni: yozuvSoni,
+    saralash: saralash, jamiNarx: jamiNarx, statistika: statistika,
     ombor: ombor, csv: csv, yangiId: yangiId,
     matnRangi: matnRangi, nomYasa: nomYasa, jadvalOqi: jadvalOqi, sanaIso: sanaIso, malumotYoz: malumotYoz,
     QORALAMA_KALIT: 'zaxira-tahrir-qoralama'

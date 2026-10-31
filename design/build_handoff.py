@@ -454,6 +454,8 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
 
 Tanlangan dizayn: {t['slug']}. Kod: site/. Bu faqat shu dizayn paketi.
 
+**Codex (ChatGPT desktop) bilan kod yozmasdan ishlash:** `ZAXIRA/CODEX.md` — tayyor so‘rovlar ketma-ketligi.
+
 **AI kuchsiz, limitli yoki vaqt kam bo‘lsa:** katta kontekst fayllarini o‘qimang. Faqat `ZAXIRA/ZAXIRA.md` → `ZAXIRA/PROMPTLAR.md`. Build’siz zaxira sayt: `ZAXIRA/skelet/index.html`. Himoyadagi jonli o‘zgarish (matn/rang/element): `ZAXIRA/JONLI-OZGARISH.md`.
 
 Bu fayl mundarija. PREPARATION.md va READING-PLAN.json to‘liq o‘qiladigan manbalarni sanaydi; READ-RECEIPT.md o‘qilganlikni halol qayd qilish uchun bo‘sh shablon. START-HERE yoki AI-BRIEF bilan cheklanib to‘liq o‘qidim demang.

@@ -42,7 +42,12 @@
     return null;
   }
   function yozuvlar() { return SAYT.saqlash ? ombor.oqi() : []; }
-  function qolgan(element) { return M.qolganJoy(element, yozuvlar()); }
+  /** "Soni" maydoni (FORMA.maydonlar da soni: true) — joy va jami narxga ta'sir qiladi. */
+  function soniNomi() {
+    for (var i = 0; i < FORMA.maydonlar.length; i++) if (FORMA.maydonlar[i].soni && FORMA.maydonlar[i].tur === 'son') return FORMA.maydonlar[i].nom;
+    return null;
+  }
+  function qolgan(element) { return M.qolganJoy(element, yozuvlar(), 'element', soniNomi()); }
   function yuklab(nom, matn, tur) {
     var blob = new Blob([matn], { type: tur });
     var a = el('a', { href: URL.createObjectURL(blob), download: nom });
@@ -101,6 +106,7 @@
     if (sahifa === 'element') tafsilotChiz(elementTop(m.id));
     if (sahifa === 'ariza') arizaOch(m.id);
     if (sahifa === 'saqlangan') saqlanganChiz();
+    if (sahifa === 'statistika') statistikaChiz();
 
     var h1 = document.querySelector('[data-sahifa="' + sahifa + '"] h1');
     var nomi = (h1 && h1.textContent) || '';
@@ -111,6 +117,34 @@
   }
 
   /* ---------- 3. Bosh sahifa ---------- */
+  function savollarChiz() {
+    var r = Array.isArray(SAYT.savollar) ? SAYT.savollar.filter(function (q) { return q && q.savol; }) : [];
+    $('#savollar').hidden = !r.length;
+    var joy = tozala($('#savollar-royxat'));
+    r.forEach(function (q) { joy.appendChild(el('details', {}, [el('summary', { matn: q.savol }), el('p', { matn: q.javob || '' })])); });
+  }
+
+  /** Statistika: arizalar va band joylar har element bo'yicha (admin ko'rinishi). */
+  function statistikaChiz() {
+    var s = M.statistika(ELEMENTLAR, yozuvlar(), soniNomi());
+    var dl = tozala($('#stat-raqamlar'));
+    [['Jami arizalar', s.jamiArizalar], [soniNomi() ? 'Band joylar' : null, s.jamiBand], ['Elementlar', ELEMENTLAR.length]].forEach(function (q) {
+      if (q[0]) dl.appendChild(el('div', {}, [el('dt', { matn: q[0] }), el('dd', { matn: String(q[1]) })]));
+    });
+    var t = tozala($('#stat-jadval'));
+    t.appendChild(el('thead', {}, [el('tr', {}, [el('th', { scope: 'col', matn: 'Nomi' }), el('th', { scope: 'col', matn: 'Arizalar' }),
+      el('th', { scope: 'col', matn: 'Band / sig‘im' }), el('th', { scope: 'col', matn: 'To‘lganlik' })])]));
+    var tb = el('tbody');
+    s.qatorlar.slice().sort(function (a, b) { return b.band - a.band; }).forEach(function (q) {
+      tb.appendChild(el('tr', {}, [el('td', { matn: q.nom }), el('td', { class: 'son', matn: String(q.arizalar) }),
+        el('td', { class: 'son', matn: q.band + (q.joylar ? ' / ' + q.joylar : '') }),
+        el('td', {}, [q.foiz === null ? el('span', { class: 'kichik', matn: 'cheklanmagan' })
+          : el('div', { class: 'stat-chiziq', role: 'img', 'aria-label': q.foiz + '%' }, [el('span', { style: 'width:' + q.foiz + '%' })])])]));
+    });
+    t.appendChild(tb);
+    $('#stat-bosh').hidden = s.jamiArizalar > 0;
+  }
+
   function boshChiz() {
     $('#son-jami').textContent = ELEMENTLAR.length;
     $('#son-ariza').textContent = yozuvlar().length;
@@ -129,9 +163,18 @@
     select.closest('label').firstChild.textContent = yorliq('turi') + ' ';
     $('#qidiruv').placeholder = (SAYT.royxat && SAYT.royxat.qidiruvMaslahat) || 'Nomi yoki kalit so‘z';
     $('#qidiruv').addEventListener('input', function (e) { holat.qidiruv = e.target.value; royxatChiz(); });
+    // Saralash (malumot.js: royxat.saralash = true). Ma'lumotda yo'q mezonlar yashiriladi.
+    var sar = $('#saralash');
+    $('#saralash-yorliq').hidden = !(SAYT.royxat && SAYT.royxat.saralash);
+    var bor = function (k) { return ELEMENTLAR.some(function (e) { return e[k] !== undefined && e[k] !== '' && e[k] !== null; }); };
+    Array.prototype.forEach.call(sar.options, function (o) {
+      if (/^narx/.test(o.value) && !bor('narx')) o.remove();
+      else if (o.value === 'sana' && !bor('sana')) o.remove();
+    });
+    sar.addEventListener('change', function () { holat.saralash = sar.value; royxatChiz(); });
     select.addEventListener('change', function (e) { holat.turi = e.target.value; royxatChiz(); });
     $('#filtr').addEventListener('submit', function (e) { e.preventDefault(); });
-    $('#filtr').addEventListener('reset', function () { setTimeout(function () { holat.qidiruv = ''; holat.turi = 'hammasi'; royxatChiz(); }, 0); });
+    $('#filtr').addEventListener('reset', function () { setTimeout(function () { holat.qidiruv = ''; holat.turi = 'hammasi'; holat.saralash = 'tavsiya'; royxatChiz(); }, 0); });
     $('#filtr-tozala').addEventListener('click', function () { $('#filtr').reset(); $('#qidiruv').focus(); });
   }
 
@@ -170,7 +213,7 @@
   }
 
   function royxatChiz() {
-    var natija = M.filtrla(ELEMENTLAR, holat);
+    var natija = M.saralash(M.filtrla(ELEMENTLAR, holat), holat.saralash);
     var joy = tozala($('#kartalar'));
     natija.forEach(function (e) { joy.appendChild(karta(e)); });
     $('#royxat-bosh').hidden = natija.length > 0;
@@ -233,8 +276,24 @@
         el('p', { class: 'xato', id: xatoId, hidden: true })
       ]));
     });
+    if (FORMA.jamiKorsat) {
+      forma.appendChild(el('p', { class: 'jami', id: 'jami', 'aria-live': 'polite' }));
+      forma.addEventListener('input', jamiYangila); forma.addEventListener('change', jamiYangila);
+    }
     forma.appendChild(el('div', { class: 'amallar' }, [el('button', { class: 'tugma', type: 'submit', matn: FORMA.tugma || 'Yuborish' })]));
     forma.addEventListener('submit', yuborish);
+  }
+
+  /** Tanlangan element narxi × soni. */
+  function jamiHisobla() {
+    var e = elementTop(($('#f-element') || {}).value);
+    var sn = soniNomi();
+    return M.jamiNarx(e, sn && $('#f-' + sn) ? $('#f-' + sn).value : 1);
+  }
+  function jamiYangila() {
+    var p = $('#jami'); if (!p) return;
+    var j = jamiHisobla();
+    p.textContent = j === null ? '' : (FORMA.jamiYorliq || 'Jami') + ': ' + M.pul(j);
   }
 
   function qiymatlar() {
@@ -257,7 +316,10 @@
     var n = M.tekshir(maydonlar(), qiymatlar());
     var tanlangan = elementTop(n.toza.element);
     var aloqa = birinchi(['telefon']) || birinchi(['email']);
-    if (tanlangan && !n.xatolar.element && qolgan(tanlangan) === 0) n.xatolar.element = FORMA.toldiXato;
+    var kerak = M.yozuvSoni(n.toza, soniNomi());
+    var qoldi = tanlangan ? qolgan(tanlangan) : Infinity;
+    if (tanlangan && !n.xatolar.element && qoldi === 0) n.xatolar.element = FORMA.toldiXato;
+    else if (tanlangan && !n.xatolar.element && qoldi < kerak) n.xatolar[soniNomi()] = 'Faqat ' + qoldi + ' ta joy qolgan.';
     if (SAYT.saqlash && tanlangan && aloqa && n.toza[aloqa] && !n.xatolar[aloqa] && !n.xatolar.element) {
       var bor = yozuvlar().some(function (y) { return M.normal(y[aloqa]) === M.normal(n.toza[aloqa]) && String(y.element) === String(tanlangan.id); });
       if (bor) n.xatolar.element = FORMA.takrorXato;
@@ -292,6 +354,7 @@
     }
     xulosa.hidden = true;
     var yozuv = Object.assign({}, n.toza);
+    if (FORMA.jamiKorsat) { var jm = jamiHisobla(); if (jm !== null) yozuv.jami = jm; }
     var saqlandi = { ok: false };
     if (SAYT.saqlash) saqlandi = ombor.qosh(yozuv);
     var tanlangan = elementTop(yozuv.element);
@@ -303,6 +366,7 @@
     });
     var panel = tozala($('#muvaffaqiyat'));
     panel.appendChild(el('h2', { matn: FORMA.muvaffaqiyat || 'Qabul qilindi!' }));
+    if (yozuv.jami != null) { dl.appendChild(el('dt', { matn: FORMA.jamiYorliq || 'Jami' })); dl.appendChild(el('dd', { matn: M.pul(yozuv.jami) })); }
     panel.appendChild(dl);
     panel.appendChild(el('p', { class: 'kichik', matn: SAYT.saqlash
       ? (saqlandi.ok ? 'Shu brauzerda saqlandi.' : 'Faqat sahifa ochiq turganda saqlanadi — brauzer xotirasi yopiq.')
@@ -373,7 +437,8 @@
 
   function saqlanganTayyorla() {
     $('#csv-yukla').addEventListener('click', function () {
-      var ustunlar = [{ nom: 'vaqt', yorliq: 'Vaqt' }].concat(maydonlar().map(function (m) { return { nom: m.nom, yorliq: m.yorliq }; }));
+      var ustunlar = [{ nom: 'vaqt', yorliq: 'Vaqt' }].concat(maydonlar().map(function (m) { return { nom: m.nom, yorliq: m.yorliq }; }))
+        .concat(FORMA.jamiKorsat ? [{ nom: 'jami', yorliq: FORMA.jamiYorliq || 'Jami' }] : []);
       var qatorlar = yozuvlar().map(function (y) { var e = elementTop(y.element); return Object.assign({}, y, { element: e ? e.nom : y.element }); });
       yuklab('arizalar.csv', M.csv(qatorlar, ustunlar), 'text/csv;charset=utf-8');
     });
@@ -408,10 +473,7 @@
     var q = qoralama();
     SAYT = q ? q.SAYT : window.SAYT; ELEMENTLAR = q ? q.ELEMENTLAR : window.ELEMENTLAR; FORMA = q ? q.FORMA : window.FORMA;
     if (q) document.body.insertBefore(el('p', { class: 'namuna-belgi', matn: 'QORALAMA KO‘RINISHI — hali faylga saqlanmagan (tahrir.html → “Faylga saqlash”)' }), document.body.firstChild);
-    if (SAYT && /^#[0-9a-f]{6}$/i.test(SAYT.rang || '')) {
-      document.documentElement.style.setProperty('--rang-asosiy', SAYT.rang);
-      document.documentElement.style.setProperty('--rang-asosiy-ustida', M.matnRangi(SAYT.rang));
-    }
+    mavzuQolla(SAYT);
     if (!M || !SAYT || !Array.isArray(ELEMENTLAR) || !FORMA || !Array.isArray(FORMA.maydonlar)) {
       var main = $('#asosiy');
       tozala(main).appendChild(el('div', { class: 'ichki tor ogoh', role: 'alert' }, [
@@ -421,6 +483,7 @@
       return;
     }
     ombor = M.ombor(safeStorage(), SAYT.omborKaliti || 'zaxira-arizalar-v1');
+    if (!SAYT.savollarSarlavha) SAYT.savollarSarlavha = 'Ko‘p beriladigan savollar';
     var saq = { sarlavha: (SAYT.sahifalar || {}).saqlangan || 'Saqlanganlar', bosh: 'Hali hech narsa yo‘q.', ochirish: 'O‘chirish' };
     Object.keys(saq).forEach(function (k) { if (SAYT.saqlangan && SAYT.saqlangan[k]) saq[k] = SAYT.saqlangan[k]; });
     SAYT.saqlangan = saq;
@@ -437,13 +500,39 @@
     });
     if (!SAYT.saqlash) $('#son-ariza').parentNode.hidden = true;
     $('#yil').textContent = new Date().getFullYear();
-    menyuChiz(); royxatTayyorla(); formaChiz(); saqlanganTayyorla(); haqidaChiz();
+    boshRasm(); savollarChiz(); menyuChiz(); royxatTayyorla(); formaChiz(); saqlanganTayyorla(); haqidaChiz();
     window.addEventListener('hashchange', ochish);
     // Boshqa tabda ariza qo'shilsa/o'chsa ro'yxat yangilanadi.
     window.addEventListener('storage', function (e) { if (e.key === (SAYT.omborKaliti || 'zaxira-arizalar-v1')) ochish(); });
     ochish();
   }
   function safeStorage() { try { return window.localStorage || null; } catch (e) { return null; } }
+
+  /** Mavzu (SAYT.mavzu) va ixtiyoriy asosiy rang (SAYT.rang). Rang bo'sh bo'lsa mavzu rangi qoladi. */
+  function mavzuQolla(sayt) {
+    var html = document.documentElement;
+    var mavzu = sayt && /^[a-z]+$/.test(sayt.mavzu || '') ? sayt.mavzu : 'toza';
+    html.setAttribute('data-mavzu', mavzu);
+    if (M && sayt && /^#[0-9a-f]{6}$/i.test(sayt.rang || '')) {
+      html.style.setProperty('--rang-asosiy', sayt.rang);
+      html.style.setProperty('--rang-asosiy-ustida', M.matnRangi(sayt.rang));
+      html.style.setProperty('--rang-asosiy-och', 'color-mix(in srgb, ' + sayt.rang + ' 16%, var(--rang-fon))');
+    }
+    // Shriftlar yuklanishini kutib, sahifani ko'rsatamiz (ko'pi bilan 1,5 soniya).
+    var korsat = function () { html.classList.remove('kutish'); };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(korsat, korsat); else korsat();
+    setTimeout(korsat, 600);
+  }
+
+  /** Bosh sahifa rasmi (SAYT.bosh.rasm): matn rasm ustida, kartasiz. */
+  function boshRasm() {
+    var rasm = SAYT.bosh && SAYT.bosh.rasm;
+    var q = $('.qahramon');
+    var eski = q.querySelector('img.qahramon-rasm');
+    if (eski) eski.remove();
+    q.classList.toggle('rasmli', !!rasm);
+    if (rasm) q.insertBefore(el('img', { class: 'qahramon-rasm', src: rasm, alt: SAYT.bosh.rasmIzoh || '' }), q.firstChild);
+  }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boshla); else boshla();
 })();

@@ -109,17 +109,24 @@ def write_if_changed(path,data):
     if not path.exists() or path.read_bytes()!=data:
         path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
 
+TEXT={'.md','.js','.mjs','.json','.css','.html','.txt'}
+
+def portable(path):
+    """Text as Git publishes it (LF); binary files such as fonts stay byte-exact."""
+    data=path.read_bytes()
+    return data.replace(b'\r\n',b'\n') if path.suffix.lower() in TEXT else data
+
 def prepare():
     """Generate derived files; return the portable file map used by every package."""
     write_if_changed(KIT/'JONLI-OZGARISH.md',HEADER+live_edit_map()+FOOTER)
     write_if_changed(KIT/'skelet/serve.mjs',(ROOT/'handoff/serve.mjs').read_bytes())
     write_if_changed(KIT/'skelet/kit.json',json.dumps({'schema_version':1,'name':'Zaxira skelet','serve_root':'.','entry':'index.html'},ensure_ascii=False,indent=2)+'\n')
     files={}
-    for name in ('ZAXIRA.md','PROMPTLAR.md','JONLI-OZGARISH.md'):
-        files[name]=(KIT/name).read_bytes().replace(b'\r\n',b'\n')
+    for name in ('ZAXIRA.md','CODEX.md','PROMPTLAR.md','JONLI-OZGARISH.md'):
+        files[name]=portable(KIT/name)
     for path in sorted((KIT/'skelet').rglob('*')):
         if path.is_file() and path.name not in SKIP:
-            files['skelet/'+path.relative_to(KIT/'skelet').as_posix()]=path.read_bytes().replace(b'\r\n',b'\n')
+            files['skelet/'+path.relative_to(KIT/'skelet').as_posix()]=portable(path)
     buffer=io.BytesIO()
     with zipfile.ZipFile(buffer,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for name,data in sorted(files.items()):
@@ -137,11 +144,12 @@ def page():
 <p>Imzolangan nizomga ko‘ra ekspert himoyada <strong>matn, rang, element yoki kontentni</strong> jonli o‘zgartirishni so‘rashi mumkin; bajarilmasa ish baholanmaydi (saytdagi nizom nusxasida bu band yo‘q — joydagi ko‘rsatma hal qiladi, lekin eng qattiq holatga tayyorlangan ma’qul). Teng ballda avval sifat va funksionallik hal qiladi; ikkinchi mezon imzolangan qarorda zamonaviy texnologiyalar, sayt nusxasida kreativlik. Shuning uchun ishlaydigan oddiy sayt va uni qo‘lda boshqara olish chiroyli, lekin tugallanmagan saytdan qimmatroq.</p>
 <h2>Paket ichida</h2>
 <ul>
+<li><a href="/zaxira/CODEX.md">CODEX.md</a> — <strong>kuchli AI bo‘lsa, asosiy yo‘l</strong>: Codex (ChatGPT desktop ilovasi) bilan kod yozmasdan professional sayt yasash. Sozlash, asos tanlash, 6 ta tayyor so‘rov (reja → qurish → sinov → ko‘rinish → hujjatlar → jonli o‘zgarish), xatoda nima deyish, vaqt va limit nazorati.</li>
 <li><a href="/zaxira/ZAXIRA.md">ZAXIRA.md</a> — qoidalardan 8 ta asosiy fakt, qaysi yo‘lni tanlash, vaqt rejasi, qadamma-qadam ish, 21 ko‘rsatkich bo‘yicha sinov ro‘yxati, himoya ssenariysi va favqulodda holatlar.</li>
 <li><a href="/zaxira/PROMPTLAR.md">PROMPTLAR.md</a> — kichik AI uchun bitta faylga mo‘ljallangan tayyor so‘rovlar: biletdan ma’lumot, forma, matn, rang, xato, qo‘shimcha funksiya, README va himoya matni.</li>
 <li><a href="/zaxira/JONLI-OZGARISH.md">JONLI-OZGARISH.md</a> — skelet va har bir dizayn uchun sarlavha va rang qayerda turgani. Kod asosida avtomatik yaratiladi.</li>
 <li><a href="/zaxira/skelet/tahrir.html">skelet/tahrir.html</a> — <strong>kodsiz tahrirlash paneli</strong>: matn, rang, ro‘yxat (Word/Excel jadvalidan nusxalab qo‘yish mumkin), forma maydonlari va sahifalarni katakchalarda o‘zgartirasiz, natijani darhol ko‘rasiz, Ctrl+S bilan faylga saqlaysiz. Kod yozish kerak emas.</li>
-<li><a href="/zaxira/skelet/">skelet/</a> — 6 sahifali sayt: ro‘yxat, qidiruv/filtr, tafsilot, tekshiriladigan ariza formasi, saqlangan arizalar, CSV, bo‘sh/xato holatlari. Barcha mazmun bitta <code>malumot.js</code> faylida. Fayl ikki marta bosilganda ham ochiladi; internet, npm va build kerak emas.</li>
+<li><a href="/zaxira/skelet/">skelet/</a> — tanlov ishining ~90% i tayyor: ro‘yxat, qidiruv, filtr, saralash, tafsilot, tekshiriladigan ariza formasi, saqlangan arizalar, statistika sahifasi, savol-javob, jami narx (narx × soni, sig‘imni hisobga oladi), CSV, bo‘sh/xato holatlari. <strong>9 ta professional mavzu</strong> (dizayn kutubxonasidagi starterlar uslubida) — panelda bir tugma bilan. Barcha mazmun bitta <code>malumot.js</code> faylida. Fayl ikki marta bosilganda ham ochiladi; internet, npm va build kerak emas.</li>
 </ul>
 <h2>Skeletning kafolatlangan qismi</h2>
 <ul>

@@ -1,0 +1,134 @@
+/* =====================================================================
+   MAVZULAR — skeletning professional ko'rinishlari.
+   malumot.js: SAYT.mavzu = "forma" | "samar" | "orbita" | "nashr" |
+   "hisob" | "ziyo" | "meros" | "yuksal" | "toza". tahrir.html da tanlanadi.
+   Har mavzu dizayn kutubxonasidagi shu nomli starterning uslubidan olingan.
+   Shriftlar: mavzular/shrift/ (SIL Open Font License, *-OFL.txt).
+   SAYT.rang berilsa, mavzuning asosiy rangini almashtiradi.
+   ===================================================================== */
+@font-face { font-family: "Z Manrope"; src: url("shrift/manrope.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "Z Lora"; src: url("shrift/lora.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Z Source Sans"; src: url("shrift/sourcesans3.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Z Chakra"; src: url("shrift/chakrapetch.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Z News"; src: url("shrift/news.woff2") format("woff2"); font-weight: 400 800; font-display: swap; }
+@font-face { font-family: "Z PT Serif"; src: url("shrift/ptserif.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Z Public Sans"; src: url("shrift/publicsans.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Z Plex Condensed"; src: url("shrift/plexcondensed.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Z Bree"; src: url("shrift/breeserif.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Z Nunito Sans"; src: url("shrift/nunitosans.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "Z Alfa Slab"; src: url("shrift/alfaslabone.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Z Archivo"; src: url("shrift/archivo.woff2") format("woff2"); font-weight: 400 800; font-display: swap; }
+@font-face { font-family: "Z Instrument Sans"; src: url("shrift/instrumentsans.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Z Instrument Serif"; src: url("shrift/instrumentserif.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+/* ---------- FORMA — zamonaviy do'kon: oq-grafit, qattiq qora tugmalar ---------- */
+html[data-mavzu="forma"] {
+  --rang-asosiy: #25251f; --rang-asosiy-ustida: #ffffff; --rang-asosiy-och: #ecebe4;
+  --rang-fon: #faf9f5; --rang-yuza: #ffffff; --rang-matn: #25251f; --rang-yumshoq: #55564e;
+  --rang-chiziq: #d6d5cc; --rang-kiritish-chiziq: #8f8e84;
+  --shrift: "Z Manrope", system-ui, sans-serif; --shrift-sarlavha: "Z Manrope", system-ui, sans-serif;
+  --sarlavha-vazn: 780; --h1: 3.2rem; --tugma-burchak: 0; --karta-burchak: 0; --burchak: 0;
+  --karta-chiziq: 1px solid transparent;
+}
+html[data-mavzu="forma"] .karta { box-shadow: 0 1px 0 var(--rang-chiziq); }
+html[data-mavzu="forma"] .karta-rasm { background: #efede6; color: #25251f; }
+html[data-mavzu="forma"] .menyu a[aria-current="page"] { background: transparent; color: var(--rang-matn); box-shadow: inset 0 -2px 0 var(--rang-matn); border-radius: 0; }
+html[data-mavzu="forma"] .qahramon .kichik { color: var(--rang-yumshoq); }
+
+/* ---------- SAMAR — sayohat va madaniyat: iliq terrakota, serif sarlavha ---------- */
+html[data-mavzu="samar"] {
+  --rang-asosiy: #a14f1d; --rang-asosiy-ustida: #ffffff; --rang-asosiy-och: #f6e6da;
+  --rang-fon: #f1f4f3; --rang-yuza: #fffdf7; --rang-matn: #173952; --rang-yumshoq: #49616f;
+  --rang-chiziq: #c3d1d8; --rang-kiritish: #fffdf7; --rang-kiritish-matn: #173952; --rang-kiritish-chiziq: #8aa2ae;
+  --shrift: "Z Source Sans", system-ui, sans-serif; --shrift-sarlavha: "Z Lora", Georgia, serif;
+  --sarlavha-vazn: 600; --h1: 3.1rem; --tugma-burchak: 999px; --karta-burchak: 18px; --burchak: 18px;
+}
+html[data-mavzu="samar"] .karta { box-shadow: 0 10px 30px -18px rgba(23,57,82,.35); }
+html[data-mavzu="samar"] .karta-rasm { background: #e3ece9; color: #173952; }
+
+/* ---------- ORBITA — ilmiy/texnik: qorong'i, yashil urg'u, aniq geometriya ---------- */
+html[data-mavzu="orbita"] {
+  --rang-asosiy: #b1f56a; --rang-asosiy-ustida: #071215; --rang-asosiy-och: #1b2e22;
+  --rang-fon: #071215; --rang-yuza: #0d1d21; --rang-matn: #e6eef0; --rang-yumshoq: #a3bcc1;
+  --rang-chiziq: #294046; --rang-kiritish: #0a181b; --rang-kiritish-matn: #e6eef0; --rang-kiritish-chiziq: #4a6a71;
+  --rang-xato: #ff9b8f; --rang-xato-och: #3a1714; --rang-yaxshi: #9be59b; --rang-yaxshi-och: #12301a;
+  --shrift: system-ui, "Segoe UI", sans-serif; --shrift-sarlavha: "Z Chakra", system-ui, sans-serif; --shrift-ui: "Z Chakra", system-ui, sans-serif;
+  --sarlavha-vazn: 600; --h1: 3rem; --tugma-burchak: 2px; --karta-burchak: 2px; --burchak: 2px;
+  color-scheme: dark;
+}
+html[data-mavzu="orbita"] h1, html[data-mavzu="orbita"] .logo { text-transform: uppercase; }
+html[data-mavzu="orbita"] .karta-rasm { background: #13262b; color: #b1f56a; }
+html[data-mavzu="orbita"] .namuna-belgi { background: #2a3a12; color: #e9ffc9; }
+
+/* ---------- NASHR — gazeta/yangiliklar: qog'oz foni, qizil urg'u, ingichka chiziqlar ---------- */
+html[data-mavzu="nashr"] {
+  --rang-asosiy: #a3271e; --rang-asosiy-ustida: #ffffff; --rang-asosiy-och: #efdcd6;
+  --rang-fon: #eeebde; --rang-yuza: #f7f5ec; --rang-matn: #20201c; --rang-yumshoq: #4f4d44;
+  --rang-chiziq: #a3a094; --rang-kiritish: #fbfaf4; --rang-kiritish-chiziq: #7d7a6f;
+  --shrift: "Z PT Serif", Georgia, serif; --shrift-sarlavha: "Z News", Georgia, serif; --shrift-ui: system-ui, "Segoe UI", sans-serif;
+  --sarlavha-vazn: 760; --h1: 3.4rem; --tugma-burchak: 0; --karta-burchak: 0; --burchak: 0;
+  --karta-chiziq: 1px solid var(--rang-chiziq);
+}
+html[data-mavzu="nashr"] .sarlavha-qator { border-top: 4px solid var(--rang-matn); border-bottom: 1px solid var(--rang-matn); }
+html[data-mavzu="nashr"] .karta { border-width: 1px 0 0; background: transparent; }
+html[data-mavzu="nashr"] .karta-rasm { background: #e2ddcb; color: #20201c; }
+
+/* ---------- HISOB — hisobot/xizmat: sokin, aniq raqamlar, po'lat-ko'k ---------- */
+html[data-mavzu="hisob"] {
+  --rang-asosiy: #275d86; --rang-asosiy-ustida: #ffffff; --rang-asosiy-och: #e2ebf3;
+  --rang-fon: #edf0f2; --rang-yuza: #ffffff; --rang-matn: #26313a; --rang-yumshoq: #55626b;
+  --rang-chiziq: #d4d9de; --rang-kiritish-chiziq: #8b9aa5;
+  --shrift: "Z Public Sans", system-ui, sans-serif; --shrift-sarlavha: "Z Plex Condensed", "Z Public Sans", sans-serif;
+  --sarlavha-vazn: 600; --h1: 2.6rem; --matn-olcham: 16px; --tugma-burchak: 6px; --karta-burchak: 8px; --burchak: 8px;
+}
+html[data-mavzu="hisob"] .raqamlar dd, html[data-mavzu="hisob"] .belgi { font-variant-numeric: tabular-nums; }
+html[data-mavzu="hisob"] .karta-rasm { background: #e7ecf0; color: #275d86; }
+
+/* ---------- ZIYO — ta'lim: iliq, do'stona, yumaloq shakllar ---------- */
+html[data-mavzu="ziyo"] {
+  --rang-asosiy: #b23f2a; --rang-asosiy-ustida: #ffffff; --rang-asosiy-och: #fbe2d8;
+  --rang-fon: #fff6ea; --rang-yuza: #fffdf8; --rang-matn: #402d26; --rang-yumshoq: #6b5248;
+  --rang-chiziq: #ecd8c4; --rang-kiritish: #fffdf8; --rang-kiritish-chiziq: #b49a86;
+  --shrift: "Z Nunito Sans", system-ui, sans-serif; --shrift-sarlavha: "Z Bree", Georgia, serif;
+  --sarlavha-vazn: 400; --h1: 3rem; --tugma-burchak: 999px; --karta-burchak: 20px; --burchak: 20px;
+}
+html[data-mavzu="ziyo"] .karta-rasm { background: #ffe3c4; color: #b23f2a; }
+html[data-mavzu="ziyo"] .belgi { background: #e3ecff; color: #2451ad; }
+
+/* ---------- MEROS — madaniyat/ko'rgazma: ko'k-sariq plakat, qalin slab sarlavha ---------- */
+html[data-mavzu="meros"] {
+  --rang-asosiy: #e5f344; --rang-asosiy-ustida: #1524b3; --rang-asosiy-och: #2c3be0;
+  --rang-fon: #1d2ed8; --rang-yuza: #f2f1df; --rang-yuza-matn: #141a6b; --rang-matn: #f4f8c8; --rang-yumshoq: #d7dcff;
+  --rang-chiziq: #6573e9; --rang-kiritish: #f2f1df; --rang-kiritish-matn: #141a6b; --rang-kiritish-chiziq: #f2f1df;
+  --rang-xato: #ffd0c8; --rang-xato-och: #5a1430; --rang-yaxshi: #d6f5a0; --rang-yaxshi-och: #23336f;
+  --shrift: "Z Archivo", system-ui, sans-serif; --shrift-sarlavha: "Z Alfa Slab", Georgia, serif;
+  --sarlavha-vazn: 400; --h1: 3.4rem; --matn-olcham: 18px; --tugma-burchak: 0; --karta-burchak: 0; --burchak: 0;
+  --karta-chiziq: 0 solid transparent;
+}
+html[data-mavzu="meros"] .sarlavha-qator, html[data-mavzu="meros"] .pastki { background: #1524b3; color: #f4f8c8; border-color: #6573e9; }
+html[data-mavzu="meros"] .menyu a[aria-current="page"] { background: #e5f344; color: #1524b3; }
+html[data-mavzu="meros"] .menyu { background: #1524b3; }
+html[data-mavzu="meros"] .karta-rasm { background: #e5f344; color: #1524b3; }
+html[data-mavzu="meros"] .karta .belgi, html[data-mavzu="meros"] .yozuv .belgi { background: #1d2ed8; color: #f4f8c8; }
+html[data-mavzu="meros"] .karta .tugma.ikkinchi, html[data-mavzu="meros"] .blok .tugma.ikkinchi, html[data-mavzu="meros"] .bosh-holat .tugma.ikkinchi { color: #1524b3; border-color: #1524b3; }
+html[data-mavzu="meros"] .karta .tugma:not(.ikkinchi):not(.xavfli), html[data-mavzu="meros"] .bosh-holat .tugma:not(.ikkinchi) { background: #1524b3; border-color: #1524b3; color: #f4f8c8; }
+html[data-mavzu="meros"] .yozuv .tugma.xavfli { color: #9b1c2c; border-color: #9b1c2c; }
+html[data-mavzu="meros"] .xato-xulosa, html[data-mavzu="meros"] .muvaffaqiyat { color: #f4f8c8; }
+html[data-mavzu="meros"] .afzalliklar article { color: var(--rang-yuza-matn); }
+
+/* ---------- YUKSAL — rasmiy/tashkilot: to'q dengiz ko'ki, nafis serif ---------- */
+html[data-mavzu="yuksal"] {
+  --rang-asosiy: #71d9e6; --rang-asosiy-ustida: #062c35; --rang-asosiy-och: #0e4250;
+  --rang-fon: #062c35; --rang-yuza: #0b3a45; --rang-matn: #f8fcfb; --rang-yumshoq: #b6d3d8;
+  --rang-chiziq: #24515c; --rang-kiritish: #052129; --rang-kiritish-matn: #f8fcfb; --rang-kiritish-chiziq: #4d7a84;
+  --rang-xato: #ffab9f; --rang-xato-och: #3d1b1a; --rang-yaxshi: #8fe3a5; --rang-yaxshi-och: #0f3b2a;
+  --shrift: "Z Instrument Sans", system-ui, sans-serif; --shrift-sarlavha: "Z Instrument Serif", Georgia, serif;
+  --sarlavha-vazn: 400; --h1: 3.6rem; --tugma-burchak: 999px; --karta-burchak: 16px; --burchak: 16px;
+  color-scheme: dark;
+}
+html[data-mavzu="yuksal"] .karta-rasm { background: #0e4250; color: #71d9e6; }
+html[data-mavzu="yuksal"] .namuna-belgi { background: #20444b; color: #e9fbff; }
+
+@media (max-width: 760px) {
+  html[data-mavzu] { --h1: 2.1rem; }
+}

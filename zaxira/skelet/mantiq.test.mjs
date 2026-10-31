@@ -160,3 +160,30 @@ test('uzun yorliqdan ham qisqa ichki nom yasaladi',()=>{
  const n=M.nomYasa('Ma’lumotlarim faqat shu so‘rov uchun ishlatilishiga roziman');
  assert.ok(n.length<=24); assert.match(n,/^[a-z][a-z0-9]*$/);
 });
+test('sig‘im: yozuv soni hisobga olinadi (3 kishilik ariza 3 joy egallaydi)',()=>{
+ const y=[{element:'a',soni:3},{element:'a',soni:'2'},{element:'a'},{element:'b',soni:5}];
+ assert.equal(M.qolganJoy({id:'a',joylar:10},y,'element','soni'),4);
+ assert.equal(M.qolganJoy({id:'a',joylar:10},y),7);
+ assert.equal(M.yozuvSoni({soni:-2},'soni'),1);
+ assert.equal(M.yozuvSoni({soni:'abc'},'soni'),1);
+});
+test('saralash: nom, sana, narx; narxsizlar oxirida; asl tartib o‘zgarmaydi',()=>{
+ const e=[{id:1,nom:'Vaza',sana:'2026-12-03',narx:50},{id:2,nom:'Anor',sana:'2026-12-01'},{id:3,nom:'Olma',sana:'2026-12-02',narx:10}];
+ assert.deepEqual(M.saralash(e,'nom').map(x=>x.id),[2,3,1]);
+ assert.deepEqual(M.saralash(e,'sana').map(x=>x.id),[2,3,1]);
+ assert.deepEqual(M.saralash(e,'narx-osish').map(x=>x.id),[3,1,2]);
+ assert.deepEqual(M.saralash(e,'narx-kamayish').map(x=>x.id),[1,3,2]);
+ assert.deepEqual(M.saralash(e,'tavsiya').map(x=>x.id),[1,2,3]);
+ assert.deepEqual(e.map(x=>x.id),[1,2,3]);
+});
+test('jami narx: narx × soni, narx yo‘q bo‘lsa null',()=>{
+ assert.equal(M.jamiNarx({narx:15000},3),45000);
+ assert.equal(M.jamiNarx({narx:15000},''),15000);
+ assert.equal(M.jamiNarx({narx:0},4),0);
+ assert.equal(M.jamiNarx({},2),null);
+});
+test('statistika: har element bo‘yicha band joy va foiz',()=>{
+ const s=M.statistika([{id:'a',nom:'A',joylar:4},{id:'b',nom:'B'}],[{element:'a',soni:2},{element:'a'},{element:'b',soni:3}],'soni');
+ assert.deepEqual(s.qatorlar.map(q=>[q.id,q.arizalar,q.band,q.foiz]),[['a',2,3,75],['b',1,3,null]]);
+ assert.equal(s.jamiArizalar,3); assert.equal(s.jamiBand,6);
+});

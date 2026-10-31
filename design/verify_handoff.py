@@ -46,10 +46,10 @@ def check_runtime(z,root):
 
 def check_zaxira(z):
     # Every package must carry the current weak-AI kit unchanged, with its runtime resources.
-    from build_zaxira import KIT
+    from build_zaxira import KIT, portable
     names=set(z.namelist())
-    expected={'ZAXIRA/'+n:(KIT/n).read_bytes().replace(b'\r\n',b'\n') for n in ('ZAXIRA.md','PROMPTLAR.md','JONLI-OZGARISH.md')}
-    expected.update({'ZAXIRA/skelet/'+p.relative_to(KIT/'skelet').as_posix():p.read_bytes().replace(b'\r\n',b'\n') for p in (KIT/'skelet').rglob('*') if p.is_file()})
+    expected={'ZAXIRA/'+n:portable(KIT/n) for n in ('ZAXIRA.md','CODEX.md','PROMPTLAR.md','JONLI-OZGARISH.md')}
+    expected.update({'ZAXIRA/skelet/'+p.relative_to(KIT/'skelet').as_posix():portable(p) for p in (KIT/'skelet').rglob('*') if p.is_file()})
     assert {n for n in names if n.startswith('ZAXIRA/')}==set(expected),'Stale or missing ZAXIRA files'
     for name,data in expected.items():assert z.read(name)==data,f'Stale {name}'
     check_runtime(z,'ZAXIRA/skelet')

@@ -17,7 +17,8 @@ window.SAYT = {
   nomi: "Sayt nomi",                         // logo, sarlavha, brauzer tabida
   shior: "Bir jumlada: kim uchun va qanday foyda beradi.",
   tavsif: "Bu yerga saytning maqsadi yoziladi: foydalanuvchi kim, qaysi muammo hal bo‘ladi va u saytda nima qila oladi.",
-  rang: "#1d4ed8",                           // ASOSIY RANG: tugma, havola, faol menyu (#RRGGBB)
+  mavzu: "toza",                             // KO'RINISH: toza, forma, samar, orbita, nashr, hisob, ziyo, meros, yuksal
+  rang: "",                                  // ASOSIY RANG (#RRGGBB). Bo'sh qolsa mavzuning o'z rangi
   namuna: true,                              // true — sahifada "Namuna ma'lumot" ogohlantirishi chiqadi
   saqlash: true,                             // true — arizalar brauzer xotirasiga saqlanadi va "Arizalarim" ishlaydi
   omborKaliti: "zaxira-arizalar-v1",          // boshqa loyiha bilan aralashmasligi uchun nomini o'zgartirish mumkin
@@ -29,11 +30,14 @@ window.SAYT = {
     ariza: "Ariza",
     saqlangan: "Arizalarim",
     haqida: "Biz haqimizda"
+    // statistika: "Statistika"            // yoqsangiz: arizalar soni va to'lganlik jadvali
   },
 
   bosh: {
     sarlavha: "Asosiy sarlavha shu yerda",
     matn: "Ikki-uch jumla: foydalanuvchi bu saytda nima qila oladi va keyingi qadam nima.",
+    rasm: "",                                // ixtiyoriy: "rasmlar/bosh.jpg" — bosh ekran rasm ustida chiqadi
+    rasmIzoh: "",
     asosiyTugma: "Ro‘yxatni ko‘rish",
     ikkinchiTugma: "Ariza qoldirish",
     afzalliklar: [
@@ -47,6 +51,7 @@ window.SAYT = {
     sarlavha: "Ro‘yxat",
     matn: "Qidiring yoki turini tanlang. Batafsil ma’lumot uchun kartani oching.",
     bosh: "Hech narsa topilmadi. Boshqa so‘z bilan qidiring yoki filtrni tozalang.",
+    saralash: true,                          // nom / sana / narx bo'yicha saralash tanlovi
     // Mavzuga mos so'zlar (bo'sh qolsa standart). Masalan mahsulotlar: turi "Kategoriya", joylar "Omborda".
     yorliqlar: { turi: "Turi", joylar: "Qolgan joy", toldi: "Joy qolmagan", tanlash: "Tanlash" }
   },
@@ -66,6 +71,11 @@ window.SAYT = {
       { nom: "Ish vaqti", qiymat: "Dushanba–shanba, 09:00–18:00" }
     ]
   },
+
+  // Bosh sahifadagi savol-javob (bo'sh ro'yxat bo'lsa ko'rinmaydi)
+  savollar: [
+    { savol: "Namuna savol?", javob: "Namuna javob." }
+  ],
 
   pastki: "Sinov uchun yaratilgan sayt. Forma ma’lumotlari hech qayerga yuborilmaydi."
 };
@@ -96,6 +106,8 @@ window.FORMA = {
   muvaffaqiyat: "Arizangiz qabul qilindi!",
   takrorXato: "Bu telefon raqami bilan shu tanlovga ariza allaqachon bor.",
   toldiXato: "Bu tanlovda joy qolmagan. Boshqasini tanlang.",
+  jamiKorsat: false,                         // true: "Jami: narx × soni" formada va arizada
+  jamiYorliq: "Jami",
   maydonlar: [
     { nom: "ism", yorliq: "Ism va familiya", tur: "matn", majburiy: true, min: 2, max: 60, avto: "name" },
     { nom: "telefon", yorliq: "Telefon", tur: "telefon", majburiy: true, maslahat: "Masalan: +998 90 123 45 67", avto: "tel" },

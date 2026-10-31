@@ -10,7 +10,10 @@
   var $ = function (s) { return document.querySelector(s); };
   var d, fayl = null, kechikish = null, ochirilganNomlar = {};
 
-  var SAHIFALAR = [['bosh', 'Bosh sahifa'], ['royxat', 'Ro‘yxat'], ['ariza', 'Ariza'], ['saqlangan', 'Arizalarim'], ['haqida', 'Biz haqimizda']];
+  var SAHIFALAR = [['bosh', 'Bosh sahifa'], ['royxat', 'Ro‘yxat'], ['ariza', 'Ariza'], ['saqlangan', 'Arizalarim'], ['statistika', 'Statistika'], ['haqida', 'Biz haqimizda']];
+  var MAVZULAR = [['toza', 'Toza — oddiy, universal'], ['forma', 'Forma — do‘kon, mahsulot, qora-oq'], ['samar', 'Samar — sayohat, madaniyat, iliq'],
+    ['orbita', 'Orbita — texnika, IT, qorong‘i'], ['nashr', 'Nashr — yangilik, gazeta'], ['hisob', 'Hisob — xizmat, hisobot, raqamlar'],
+    ['ziyo', 'Ziyo — ta’lim, bolalar, iliq'], ['meros', 'Meros — muzey, tadbir, yorqin plakat'], ['yuksal', 'Yuksal — rasmiy tashkilot, to‘q ko‘k']];
   var TURLAR = [['matn', 'Qisqa matn'], ['matnmaydon', 'Uzun matn'], ['telefon', 'Telefon'], ['email', 'Email'], ['son', 'Son'],
     ['sana', 'Sana'], ['element', 'Ro‘yxatdan tanlash'], ['tanlash', 'O‘z variantlari'], ['belgi', 'Belgilash (rozilik)']];
 
@@ -49,7 +52,7 @@
     var x = [];
     var S = d.SAYT, F = d.FORMA;
     if (!String(S.nomi || '').trim()) x.push('Sayt nomi bo‘sh.');
-    if (!/^#[0-9a-f]{6}$/i.test(S.rang || '')) x.push('Asosiy rang #RRGGBB ko‘rinishida bo‘lsin.');
+    if (S.rang && !/^#[0-9a-f]{6}$/i.test(S.rang)) x.push('O‘z rangingiz #RRGGBB ko‘rinishida bo‘lsin yoki bo‘sh qolsin.');
     if (!Object.keys(S.sahifalar || {}).length) x.push('Kamida bitta sahifa yoqilgan bo‘lsin.');
     var idlar = {};
     d.ELEMENTLAR.forEach(function (e, i) {
@@ -168,14 +171,17 @@
     while (joy.firstChild) joy.removeChild(joy.firstChild);
     S.bosh = S.bosh || { afzalliklar: [] }; S.royxat = S.royxat || {}; S.haqida = S.haqida || { matnlar: [], aloqa: [] };
 
-    var rangMatn = maydon(S, 'rang', 'Rang kodi', { maslahat: '#RRGGBB', keyin: function (q) { if (/^#[0-9a-f]{6}$/i.test(q)) rang.value = q; } });
+    var rangMatn = maydon(S, 'rang', 'O‘z rangingiz', { maslahat: '#RRGGBB; bo‘sh = mavzu rangi', keyin: function (q) { if (/^#[0-9a-f]{6}$/i.test(q)) rang.value = q; } });
     var rang = el('input', { type: 'color', value: /^#[0-9a-f]{6}$/i.test(S.rang || '') ? S.rang : '#1d4ed8', 'aria-label': 'Asosiy rangni tanlash',
       oninput: function () { S.rang = rang.value; rangMatn.querySelector('input').value = rang.value; ozgardi(); } });
-    joy.appendChild(blok('1. Asosiy', 'Sayt nomi, qisqa shior va asosiy rang.', [
+    var rangTozala = el('button', { type: 'button', class: 'tugma ikkinchi t-kichik', matn: 'Mavzu rangiga qaytish',
+      onclick: function () { S.rang = ''; rangMatn.querySelector('input').value = ''; ozgardi(); } });
+    joy.appendChild(blok('1. Asosiy', 'Sayt nomi, shior va ko‘rinish (mavzu).', [
       // Har sayt o'z xotira kalitini oladi: bir kompyuterdagi mashq saytlarining yozuvlari aralashmaydi.
       maydon(S, 'nomi', 'Sayt nomi', { keyin: function (q) { if (!S.omborKaliti || /^(zaxira|sayt)-/.test(S.omborKaliti)) S.omborKaliti = 'sayt-' + M.nomYasa(q); } }),
       maydon(S, 'shior', 'Shior (bir jumla)'), maydon(S, 'tavsif', 'Tavsif', { tur: 'textarea' }),
-      el('div', { class: 't-rang' }, [rang, rangMatn]),
+      maydon(S, 'mavzu', 'Mavzu (ko‘rinish)', { tur: 'select', variantlar: MAVZULAR }),
+      el('div', { class: 't-rang' }, [rang, rangMatn, rangTozala]),
       maydon(S, 'namuna', '“Namuna ma’lumot” ogohlantirishi ko‘rinsin (tayyor bo‘lganda o‘chiring)', { tur: 'checkbox' }),
       maydon(S, 'saqlash', 'Arizalar brauzerda saqlansin (“Arizalarim” sahifasi ishlaydi)', { tur: 'checkbox' }),
       maydon(S, 'pastki', 'Sahifa pastidagi matn', { tur: 'textarea', qator: 2 })
@@ -196,6 +202,8 @@
     S.bosh.afzalliklar = S.bosh.afzalliklar || [];
     joy.appendChild(blok('3. Bosh sahifa', null, [
       maydon(S.bosh, 'sarlavha', 'Katta sarlavha'), maydon(S.bosh, 'matn', 'Sarlavha ostidagi matn', { tur: 'textarea' }),
+      el('div', { class: 't-qator' }, [maydon(S.bosh, 'rasm', 'Bosh ekran rasmi (ixtiyoriy)', { maslahat: 'masalan: rasmlar/bosh.jpg' }),
+        maydon(S.bosh, 'rasmIzoh', 'Rasmda nima bor')]),
       el('div', { class: 't-qator' }, [maydon(S.bosh, 'asosiyTugma', 'Birinchi tugma'), maydon(S.bosh, 'ikkinchiTugma', 'Ikkinchi tugma')]),
       el('h3', { matn: 'Afzalliklar (kartochkalar)' }),
       royxat(S.bosh.afzalliklar, function (a, i) { return (i + 1) + '. ' + (a.sarlavha || ''); }, function () { return { sarlavha: 'Yangi afzallik', matn: '' }; },
@@ -224,6 +232,7 @@
       maydon(S.royxat, 'sarlavha', 'Sahifa sarlavhasi'), maydon(S.royxat, 'matn', 'Sarlavha ostidagi matn'),
       maydon(S.royxat, 'bosh', 'Hech narsa topilmaganda chiqadigan matn'),
       maydon(S.royxat, 'qidiruvMaslahat', 'Qidiruv maydonidagi maslahat', { maslahat: 'masalan: Mahsulot nomi yoki kalit so‘z' }),
+      maydon(S.royxat, 'saralash', 'Saralash tanlovini ko‘rsatish (nom, sana, narx)', { tur: 'checkbox' }),
       el('details', {}, [el('summary', { matn: 'Ustun nomlari va tugma matnlari (mavzuga moslash)' }),
         el('p', { class: 'kichik', matn: 'Masalan mahsulotlar uchun: Turi → Kategoriya, Qolgan joy → Omborda, Joy qolmagan → Tugagan, Tanlash → Buyurtma berish.' }),
         el('div', { class: 't-qator' }, [maydon(Y, 'turi', 'Turi', { maslahat: 'standart: Turi' }), maydon(Y, 'joy', 'Joy', { maslahat: 'standart: Joy' })]),
@@ -263,6 +272,7 @@
       maydon(F, 'sarlavha', 'Forma sarlavhasi'), maydon(F, 'matn', 'Forma ostidagi matn'),
       el('div', { class: 't-qator' }, [maydon(F, 'tugma', 'Yuborish tugmasi'), maydon(F, 'muvaffaqiyat', 'Muvaffaqiyat xabari')]),
       el('div', { class: 't-qator' }, [maydon(F, 'takrorXato', 'Takror yuborilganda xabar'), maydon(F, 'toldiXato', 'Joy/nusxa qolmaganda xabar')]),
+      el('div', { class: 't-qator' }, [maydon(F, 'jamiKorsat', 'Jami narxni hisoblash (narx × soni)', { tur: 'checkbox' }), maydon(F, 'jamiYorliq', 'Jami yozuvi', { maslahat: 'masalan: Jami / To‘lov' })]),
       el('details', {}, [el('summary', { matn: 'Saqlanganlar sahifasi matnlari' }),
         el('div', { class: 't-qator' }, [maydon(S.saqlangan = S.saqlangan || {}, 'sarlavha', 'Sarlavha', { maslahat: 'bo‘sh bo‘lsa menyudagi nom' }),
           maydon(S.saqlangan, 'ochirish', 'O‘chirish tugmasi', { maslahat: 'masalan: Bekor qilish' })]),
@@ -283,7 +293,8 @@
             if (m.nom !== 'element') m.nom = M.nomYasa(q, F.maydonlar.filter(function (x) { return x !== m; }).map(function (x) { return x.nom; }));
           }), el('div', { class: 't-qator' }, [turTanla, maydon(m, 'majburiy', 'Majburiy', { tur: 'checkbox' })])];
           if (tur === 'matn' || tur === 'matnmaydon') qism.push(el('div', { class: 't-qator' }, [maydon(m, 'min', 'Kamida belgi', { tur: 'number', min: 0 }), maydon(m, 'max', 'Ko‘pi bilan belgi', { tur: 'number', min: 0 })]));
-          if (tur === 'son') qism.push(el('div', { class: 't-qator' }, [maydon(m, 'min', 'Eng kichik son', { tur: 'number' }), maydon(m, 'max', 'Eng katta son', { tur: 'number' })]));
+          if (tur === 'son') qism.push(el('div', { class: 't-qator' }, [maydon(m, 'min', 'Eng kichik son', { tur: 'number' }), maydon(m, 'max', 'Eng katta son', { tur: 'number' })]),
+            maydon(m, 'soni', 'Bu “soni” (kishi/dona): joy va jami narxni hisoblaydi', { tur: 'checkbox' }));
           if (tur === 'sana') qism.push(maydon(m, 'otmishEmas', 'O‘tib ketgan sanani tanlab bo‘lmasin', { tur: 'checkbox' }));
           if (tur === 'tanlash') qism.push(kirish('Variantlar (har qatorda bittasi)', function () { return (m.variantlar || []).map(function (v) { return v.matn; }).join('\n'); },
             function (q) { m.variantlar = q.split('\n').map(function (s) { return s.trim(); }).filter(Boolean).map(function (s) { return { qiymat: s, matn: s }; }); }, { tur: 'textarea' }));
@@ -293,8 +304,15 @@
         }, chiz)
     ]));
 
+    S.savollar = Array.isArray(S.savollar) ? S.savollar : [];
+    joy.appendChild(blok('6. Savol-javob', 'Bosh sahifa pastida. Bo‘sh bo‘lsa ko‘rinmaydi.', [
+      maydon(S, 'savollarSarlavha', 'Bo‘lim sarlavhasi', { maslahat: 'standart: Ko‘p beriladigan savollar' }),
+      royxat(S.savollar, function (q, i) { return (i + 1) + '. ' + (q.savol || ''); }, function () { return { savol: 'Yangi savol?', javob: '' }; },
+        function (q) { return [maydon(q, 'savol', 'Savol'), maydon(q, 'javob', 'Javob', { tur: 'textarea', qator: 2 })]; }, chiz)
+    ]));
+
     S.haqida.matnlar = S.haqida.matnlar || []; S.haqida.aloqa = S.haqida.aloqa || [];
-    joy.appendChild(blok('6. Biz haqimizda', null, [
+    joy.appendChild(blok('7. Biz haqimizda', null, [
       maydon(S.haqida, 'sarlavha', 'Sarlavha'),
       kirish('Matn (xatboshilar orasida bo‘sh qator)', function () { return S.haqida.matnlar.join('\n\n'); },
         function (q) { S.haqida.matnlar = q.split(/\n\s*\n/).map(function (s) { return s.trim(); }).filter(Boolean); }, { tur: 'textarea', qator: 5 }),
@@ -318,7 +336,8 @@
       var q = JSON.parse(localStorage.getItem(M.QORALAMA_KALIT));
       if (q && q.SAYT && Array.isArray(q.ELEMENTLAR) && q.FORMA && JSON.stringify(q) !== JSON.stringify(d)) { d = q; holat('Avvalgi saqlanmagan ish tiklandi. Kerak bo‘lmasa “Fayldagi holatga qaytish” ni bosing.'); }
     } catch (e) { /* qoralama yo'q */ }
-    if (!d.SAYT.rang) d.SAYT.rang = '#1d4ed8';
+    if (typeof d.SAYT.rang !== 'string') d.SAYT.rang = '';
+    if (!d.SAYT.mavzu) d.SAYT.mavzu = 'toza';
     d.SAYT.sahifalar = d.SAYT.sahifalar || {};
     chiz(); korish();
     try { localStorage.setItem(M.QORALAMA_KALIT, JSON.stringify(d)); } catch (e) { /* xotira yopiq */ }

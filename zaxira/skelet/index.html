@@ -7,6 +7,9 @@
   <meta name="description" content="Tanlov uchun tez moslashtiriladigan sayt skeleti.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d4ed8'/%3E%3Cpath d='M9 22l7-12 7 12z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="uslub.css">
+  <link rel="stylesheet" href="mavzular/mavzular.css">
+  <!-- Mavzu qo'llanguncha sahifa bir lahza yashirin turadi; JavaScript bo'lmasa bu ishlamaydi va sahifa ko'rinadi. -->
+  <script>document.documentElement.classList.add('kutish');setTimeout(function(){document.documentElement.classList.remove('kutish');},1500);</script>
   <!-- Tartib muhim: tekshir → malumot → mantiq → ilova. Oddiy script: fayl ikki marta bosib ochilganda ham ishlaydi. -->
   <script src="tekshir.js"></script>
   <script src="malumot.js" defer></script>
@@ -44,6 +47,11 @@
         </dl>
       </div>
       <div class="ichki afzalliklar" id="afzalliklar"></div>
+      <!-- Savol-javob (malumot.js: savollar) -->
+      <div class="ichki savollar" id="savollar" hidden>
+        <h2 data-matn="savollarSarlavha">Ko‘p beriladigan savollar</h2>
+        <div id="savollar-royxat"></div>
+      </div>
       <!-- QO'SHIMCHA BLOK: yangi bo'lim kerak bo'lsa shu blokni nusxalang va matnini yozing.
       <div class="ichki blok">
         <h2>Yangi bo‘lim sarlavhasi</h2>
@@ -60,6 +68,10 @@
         <form class="filtr" id="filtr" role="search">
           <label>Qidiruv <input type="search" id="qidiruv" autocomplete="off" placeholder="Nomi yoki kalit so‘z"></label>
           <label>Turi <select id="tur-filtr"><option value="hammasi">Hammasi</option></select></label>
+          <label id="saralash-yorliq" hidden>Saralash <select id="saralash">
+            <option value="tavsiya">Tavsiya</option><option value="nom">Nomi (A–Z)</option>
+            <option value="sana">Sanasi (yaqinroq)</option><option value="narx-osish">Narxi (arzonroq)</option>
+            <option value="narx-kamayish">Narxi (qimmatroq)</option></select></label>
           <button type="reset" class="tugma ikkinchi">Tozalash</button>
         </form>
         <p class="holat" id="royxat-holat" role="status" aria-live="polite"></p>
@@ -106,7 +118,17 @@
       </div>
     </section>
 
-    <!-- 6. BIZ HAQIMIZDA -->
+    <!-- 6. STATISTIKA: har element bo'yicha arizalar va to'lganlik -->
+    <section class="sahifa" id="statistika" data-sahifa="statistika" aria-labelledby="statistika-h" hidden>
+      <div class="ichki">
+        <h1 id="statistika-h" data-matn="sahifalar.statistika">Statistika</h1>
+        <dl class="raqamlar" id="stat-raqamlar"></dl>
+        <div class="stat-jadval-ora"><table class="stat-jadval" id="stat-jadval"></table></div>
+        <div class="bosh-holat" id="stat-bosh" hidden><p>Hali ma’lumot yo‘q.</p></div>
+      </div>
+    </section>
+
+    <!-- 7. BIZ HAQIMIZDA -->
     <section class="sahifa" id="haqida" data-sahifa="haqida" aria-labelledby="haqida-h" hidden>
       <div class="ichki tor">
         <h1 id="haqida-h" data-matn="haqida.sarlavha"></h1>

@@ -6,7 +6,7 @@ Haqiqiy bilet, tashkilotchi aytgan vaqt va joydagi qoida hamma narsadan ustun. B
 
 ## Kod yozishni bilmasangiz — faqat shu 3 narsa
 
-1. **`skelet/tahrir.html`** — kodsiz tahrirlash paneli. Brauzerda oching (ikki marta bosing). Matn, rang, ro‘yxat, forma maydonlari va sahifalarni oddiy katakchalarda o‘zgartirasiz, o‘ng tomonda natija darhol ko‘rinadi. **Faylga saqlash** (yoki **Ctrl+S**) birinchi marta so‘raganda papkadagi `malumot.js` ni tanlang — keyingi saqlashlar so‘ramasdan yoziladi. Panel faylni har doim to‘g‘ri yozadi: vergul yoki qo‘shtirnoq xatosi bo‘lmaydi.
+1. **`skelet/tahrir.html`** — kodsiz tahrirlash paneli. **1. Asosiy → Mavzu** da 9 ta professional ko‘rinishdan birini tanlang (Forma, Samar, Orbita, Nashr, Hisob, Ziyo, Meros, Yuksal, Toza); kerak bo‘lsa bosh ekranga rasm qo‘ying. Tayyor modullar: saralash, jami narx (narx × soni), statistika sahifasi, savol-javob. Brauzerda oching (ikki marta bosing). Matn, rang, ro‘yxat, forma maydonlari va sahifalarni oddiy katakchalarda o‘zgartirasiz, o‘ng tomonda natija darhol ko‘rinadi. **Faylga saqlash** (yoki **Ctrl+S**) birinchi marta so‘raganda papkadagi `malumot.js` ni tanlang — keyingi saqlashlar so‘ramasdan yoziladi. Panel faylni har doim to‘g‘ri yozadi: vergul yoki qo‘shtirnoq xatosi bo‘lmaydi.
 2. **`skelet/index.html`** — saytning o‘zi. Saqlagandan keyin **Ctrl+Shift+R** bilan yangilang.
 3. **`skelet/index.html?tekshir`** — o‘z-o‘zini tekshirish paneli; natijani “Nusxalash” bilan README’ga qo‘ying.
 
@@ -29,7 +29,7 @@ Manba maqomi: **[Nizom]** — imzolangan qo‘shma qaror (2026-yil iyul), **[Say
 
 | Holat | Yo‘l |
 |---|---|
-| Kuchli AI ishlayapti, internet yaxshi | Tanlangan dizayn starteri + oddiy ish tartibi. Bu papka zaxira sifatida turadi. |
+| Kuchli AI ishlayapti (masalan Codex, Plus) | Tanlangan dizayn starteri + **`CODEX.md`** dagi so‘rovlar ketma-ketligi. Skelet zaxira sifatida turadi. |
 | AI bor, lekin kontekst/limit kichik | **Skelet** + `PROMPTLAR.md` dagi qisqa so‘rovlar. AI faqat `malumot.js` ni to‘ldiradi. |
 | AI umuman yo‘q yoki limit tugadi | **Skelet** + `tahrir.html` paneli. Kod yozish shart emas. |
 | Starter boshlangan, lekin AI to‘xtadi | Qolgan vaqt 60 daqiqadan kam bo‘lsa, starterni tugatishga urinmang: ishlaydigan qismini saqlang va skeletga o‘ting. |
