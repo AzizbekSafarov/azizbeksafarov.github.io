@@ -74,6 +74,17 @@ def check_design_complete(z,manifest,brief,slug):
     for url in re.findall(r'\[yuklash\]\((https://azizbeksafarov\.github\.io/[^)]+)\)',brief):
         assert (SITE_ROOT/url.split('.io/',1)[1]).is_file(),f'{slug}: asset link has no published file {url}'
 
+def check_text_rebuild(z,folder,slug):
+    """Rebuild site/ from source.md plus its asset links alone; it must match the ZIP."""
+    import re
+    md=(folder/'source.md').read_text(encoding='utf-8')
+    files={m[1]:m[3].encode() for m in re.finditer(r'^## site/(\S+)\n\n(`{3,})[a-z]*\n(.*?)\n\2\n',md,re.S|re.M)}
+    for rel,url in re.findall(r'^\| `([^`]+)` \| [^|]+ \| \[yuklash\]\((https://azizbeksafarov\.github\.io/[^)]+)\) \|',md,re.M):
+        files[rel]=(SITE_ROOT/url.split('.io/',1)[1]).read_bytes()
+    assert files,f'{slug}: source.md has no files'
+    for rel,data in files.items():
+        assert data.replace(b'\r\n',b'\n').rstrip()==z.read('site/'+rel).replace(b'\r\n',b'\n').rstrip(),f'{slug}: text rebuild differs for {rel}'
+
 def check_zaxira(z):
     # Every package must carry the current weak-AI kit unchanged, with its runtime resources.
     from build_zaxira import KIT, portable
@@ -146,6 +157,7 @@ def verify():
             check_runtime(z,kit['serve_root'])
             check_zaxira(z)
             check_design_complete(z,manifest,brief,template['slug'])
+            check_text_rebuild(z,folder,template['slug'])
             import re
             for ref in set(re.findall(r'`([A-Za-z0-9_./-]+\.(?:md|json|mjs|js))`',z.read('AGENTS.md').decode())):
                 if '*' in ref or ref.startswith(('site/','src/')) and '/' in ref and not ref.endswith('.md'):continue
