@@ -9,6 +9,7 @@ from html.parser import HTMLParser
 from hashlib import sha256
 import json
 import entry_text
+from workspace_hq import text_digest
 import re
 import zipfile
 
@@ -327,7 +328,7 @@ def code_text(t,files):
     return text
 
 def page_shell(title,content,css='../handoff/styles.css',description='Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi',extra=''):
-    css += '?v='+digest((ROOT/'handoff/styles.css').read_bytes())[:12]
+    css += '?v='+text_digest(ROOT/'handoff/styles.css')[:12]
     return f'<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{escape(description)}"><title>{escape(title)}</title><link rel="icon" href="/assets/hq/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="{css}">{extra}</head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="/">← Bosh qarorgoh</a><a href="/design/start/">AI bilan boshlash</a><a href="/design/">Tanlangan dizaynlar</a></nav></header><main id="main" class="wrap">{content}</main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · {DATE}</div></footer></body></html>'
 
 def template_page(t,brief):
@@ -344,7 +345,7 @@ def template_page(t,brief):
 <script type="application/json" id="prompt-config">{config}</script><script src="../handoff/prompt.js" defer></script>'''
     if t.get('archived'):
         content='<aside class="quiet"><strong>Tarixiy arxiv.</strong> Bu variant faol tavsiyadan chiqarilgan. '+escape(t['archived'])+' <a href="/design/">Bloom yoki Yuksalni tanlang →</a></aside>'+content
-    content=content.replace('<script src="../handoff/prompt.js" defer></script>',f'<script src="../handoff/prompt.js?v={digest((ROOT/"handoff/prompt.js").read_bytes())[:12]}" defer></script>',1)
+    content=content.replace('<script src="../handoff/prompt.js" defer></script>',f'<script src="../handoff/prompt.js?v={text_digest(ROOT/"handoff/prompt.js")[:12]}" defer></script>',1)
     content=content.replace('<a href="ai.md">AI uchun qisqa matn</a>',f'<a href="ai.md">AI uchun boshlash qo‘llanmasi</a><a href="{RAW}/design/{t["slug"]}/ai.md">AI o‘qiy olmasa: GitHub matni</a>',1)
     return page_shell(t['name']+' — tanlov uchun AI paketi',content,extra=f'<link rel="canonical" href="{url}"><link rel="alternate" type="text/markdown" href="ai.md" title="AI brief">')
 
