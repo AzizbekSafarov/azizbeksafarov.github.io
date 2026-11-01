@@ -13,7 +13,8 @@ MAPPING={'00-START-HERE.md':'competition.md','ai.md':'competition-full.md',
          '10-TASK-BOUNDARY.json':'task-boundary.json'}
 BASE='https://azizbeksafarov.github.io/ustoz/'
 
-def fingerprint(data):return sha256(data).hexdigest()
+# Text copies are compared as LF bytes, so a Windows (CRLF) checkout verifies the same way as CI.
+def fingerprint(data):return sha256(data.replace(b'\r\n',b'\n')).hexdigest()
 
 def verify():
     origin=json.loads((DEST/'context-origin.json').read_text(encoding='utf-8'))
