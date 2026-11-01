@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-31",
-  "source_fingerprint": "dd4fcdcad021b0ed36f24dff0b57de15deeb53b0ea1aaeee467929ab5450c8ac",
+  "source_fingerprint": "acf972dcb0eff92570708ca03545607980992a61d99501672f71c80125ac6119",
   "name": "Meros",
   "slug": "meros",
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "27c6d0b989a050f8cfc45583d5d8f8739c1684454441dd8bdcabe9c123abba1d",
-  "archive_bytes": 2811675,
+  "archive_sha256": "908b6808b41fffc8e8b4da56267f6ccfe508b0a1fafa9a67337aa0af8931ea62",
+  "archive_bytes": 2811542,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -85,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 8347,
-      "sha256": "4b3d7ab7eccf9fa73b3e1e11ccab4a4b05c0a9cdbf06ff15d442bd7b9d97b259"
+      "bytes": 8191,
+      "sha256": "dc30a46878a6b633fd5c1f05c776f6b9519495281b36831cf21307d6037286f2"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1219,
-      "sha256": "4507c1dc54c096f3b05b38a31767d5b6772b13aa93845bf828c8dfc236554991"
+      "sha256": "1d6f636f707f93015adb493602b6689c192d1afcca793a9bfa4d627193448011"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16782,
-      "sha256": "fb214235b7dd2fe05e0b9c6de76f8526cdc67f1b85c73f51218eee36ecf7cbe2"
+      "sha256": "8c2a045c78131a30780cdb8a74590cb9cd18b96e7006a09d1bda4edb3367f5ad"
     },
     {
       "path": "PREPARATION.md",
@@ -211,12 +211,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "5094970527693fb2a835b5a785f563fe48a5b97c1c97fc3bbb9246f6778a533a"
+      "sha256": "a469abd8dce58972606cadc2982a8b6da13b56b3ee0afa881b4e1e1552e5d128"
     },
     {
       "path": "README.md",
-      "bytes": 1405,
-      "sha256": "9b373d98e1443a289cbf11855bc55f715d62f4731d8099b47ca8418d0d626b6d"
+      "bytes": 1347,
+      "sha256": "0dc6c95ff12edcf5cd03707323a5403ed91b37f8ac24b4ba328a8f1430ee787c"
     },
     {
       "path": "REGULATIONS.md",
@@ -476,7 +476,7 @@
     {
       "path": "kit.json",
       "bytes": 290,
-      "sha256": "6c75fb31f764b2206bd8d1e1ac7a0c00b5aa7400bd8d5bc4ad8318e87734cbbe"
+      "sha256": "fd07c51017b978ab437908fbee8471a09295e2ded4fa8b4ecc3f508323948c80"
     },
     {
       "path": "serve.mjs",
@@ -495,8 +495,8 @@
     },
     {
       "path": "site/README.md",
-      "bytes": 1180,
-      "sha256": "2a1ccb8385bbdf84b86b694a2edbbeb54ca3fa8188a004c2fe28ca128e2543a1"
+      "bytes": 1122,
+      "sha256": "ea5af5449a8d529445fd86d02af06156c2e11a4bfaea71c027587fbd2f16ab8c"
     },
     {
       "path": "site/app.js",

@@ -2,7 +2,7 @@
 
 An independent project workspace using Google's official Material Web components and Material Color Utilities. Its reference is the Material Design 3 design system. Updated 2026-10-13.
 
-Competition AI entry: [Bloom starter](https://azizbeksafarov.github.io/design/bloom/). It provides a short context brief, readable source, downloadable editable project and continuation files. After publishing-source updates, run `python design/build_handoff.py` and `python design/verify_handoff.py` from repository root so these exports stay current.
+Competition AI entry: [Bloom starter](https://azizbeksafarov.github.io/design/bloom/). It provides a short context brief, readable source, downloadable editable project and continuation files. In a competition copy, edit `src/` and rebuild with `npm run build`; the publishing repository refreshes its downloadable exports with its own scripts.
 
 ## Implementation
 

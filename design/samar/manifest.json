@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-31",
-  "source_fingerprint": "deb074c142f1e0bc00b30136816895bddbc5b43bb283493025a00edb2d7a23f7",
+  "source_fingerprint": "5aab28e6d8e1db89de5e1705d238178f5aa2ef8daca525f6c5ee8e1c112f7da4",
   "name": "Samar",
   "slug": "samar",
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "d8ec3bdc0253b319f2937e54f4a8049070ce37aa57144296e8f815490f0a8417",
-  "archive_bytes": 2342181,
+  "archive_sha256": "d1aa1bee06ab2fcba7c20ca696fcf09d32ff236191fa8cc0b0815d0398a2932a",
+  "archive_bytes": 2342008,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -85,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 9223,
-      "sha256": "dfed06452667c2c839fa6c477aff83f89536098cd756012f8f785d605084fdfa"
+      "bytes": 9036,
+      "sha256": "5dfcaff3c7979f3c082e8128c7451054f072bd86c0d868341726ae008d8d4699"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1219,
-      "sha256": "632d4d0b70adb341982b0854741ded669d2229554ee2ecaff9a8cc9978c6cf3f"
+      "sha256": "6f0e8590602c25dc3b468dd37793b8206e617077eda33183e6c622b4bb1dd0b2"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16457,
-      "sha256": "91ace0d27bc930a415b2654cb0c4b1f9be4c6920357a47152dac498bbe79d867"
+      "sha256": "2d062012bdd1899f2c5d1283500851e61912e39440d6d5a0a74a96f25f2d7b88"
     },
     {
       "path": "PREPARATION.md",
@@ -211,12 +211,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "822a1edb092fcf4caf9f8940040f2bfe679915d6d2a080baba3db1f03a129261"
+      "sha256": "7a975ca2338cf3251fdd0d555b4647280af7f1b7cb5e37fc41ef8a2c3927028f"
     },
     {
       "path": "README.md",
-      "bytes": 1422,
-      "sha256": "b302fee3c56f10f24750b5078b38376c97dc01a13b1f053ccefc97482880b727"
+      "bytes": 1364,
+      "sha256": "8739fafe8844cc449e7933715eca2d806f79b86278d844934735799c40e2a17c"
     },
     {
       "path": "REGULATIONS.md",
@@ -476,7 +476,7 @@
     {
       "path": "kit.json",
       "bytes": 290,
-      "sha256": "c430f6c5af2fe0ba157327a638b2f715602da77028692c1e97afa248777d414a"
+      "sha256": "c9e4997445dd7cf40b273ddc59df3195adbfa19563f628898e783114aeb7ce06"
     },
     {
       "path": "serve.mjs",
@@ -495,8 +495,8 @@
     },
     {
       "path": "site/README.md",
-      "bytes": 1197,
-      "sha256": "abcd9aece4836efc8f0861670772c08553c4943af5200cb7bf4a5b816f074354"
+      "bytes": 1139,
+      "sha256": "7b1ed2c92e99a7ea06342987668f0d6040435953f9147c0129aa9cc6a6f37808"
     },
     {
       "path": "site/app.js",

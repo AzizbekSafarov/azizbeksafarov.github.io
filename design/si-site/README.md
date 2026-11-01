@@ -25,6 +25,6 @@ Canvas is decorative, fixed across the entire viewport and capped at 2× pixel r
 
 Plans use `ustoz.yuksal.plan.v1`. Only unique known initiative IDs are accepted. Storage failures show a warning; downloads remain available. No account, email collection or external form submission exists.
 
-AI entry: https://azizbeksafarov.github.io/design/si/ . After library changes run `python design/build_handoff.py` then `python design/verify_handoff.py` from publishing repository root.
+AI entry: https://azizbeksafarov.github.io/design/si/ . In a competition copy, edit these files directly; no build step is needed. (The publishing repository rebuilds its downloadable packages with its own scripts.)
 
 Site identity: `brand-icon.svg`, `favicon-32.png`, `apple-touch-icon.png` and legacy `mark.svg` are Yuksal’s blue/green asterisk, not the national flag. `uzbekistan.svg` belongs only to the decorative flag content. Saved plans synchronize through storage events and each edit re-reads the latest valid plan. Download anchors are connected to the document for browser compatibility.

@@ -1,6 +1,6 @@
 # Nashr — editable source snapshot
 
-Source fingerprint: `2c81c476f8d81d8fceb80e8442d656fc57fe818c0df1c1bab23963fc63bfb732`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `9d2719046bd7971f9826848a55d09b451d7403a554ae31a9fe10d09739aed27e`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 

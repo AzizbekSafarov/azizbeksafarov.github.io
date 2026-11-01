@@ -1,6 +1,6 @@
 # Hisob — editable source snapshot
 
-Source fingerprint: `aa93600ac56e3855f80f816cb6766b3d2c6e3c9d07e76698df14751d46122b03`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `412ebe8be311767df82789ba35e945876980dbd7687f618c07211f21320a8be0`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 

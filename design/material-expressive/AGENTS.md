@@ -8,4 +8,4 @@ Preserve the approved M3 identity, local fonts/variable Material Symbols, matche
 
 Use `npm ci`, `npm run test`, `npm run build`; `npm run dev` for source preview. Change the validated three-step/category model together when requirements change. Version/migrate changed local storage, without clearing unrelated data. Reproduce an issue, fix its cause and retest its affected flow. Old QA is baseline evidence, not proof of new work.
 
-Portable AI entry: https://azizbeksafarov.github.io/design/bloom/ . After publishing-source changes, run `python design/build_handoff.py` from repository root and `python design/verify_handoff.py` to refresh downloadable code, context and hashes. In an isolated competition ZIP, record task/progress in root `CURRENT-TASK.md` and `HANDOFF.md`; gallery regeneration is not needed there.
+In a competition copy, the root `AGENTS.md` holds the reading order; record task and progress in root `CURRENT-TASK.md` and `HANDOFF.md`. No gallery regeneration is needed there. (Only in the publishing repository, at https://azizbeksafarov.github.io/design/bloom/ , are downloadable packages rebuilt by its own scripts.)

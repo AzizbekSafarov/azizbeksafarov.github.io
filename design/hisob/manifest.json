@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-31",
-  "source_fingerprint": "aa93600ac56e3855f80f816cb6766b3d2c6e3c9d07e76698df14751d46122b03",
+  "source_fingerprint": "412ebe8be311767df82789ba35e945876980dbd7687f618c07211f21320a8be0",
   "name": "Hisob",
   "slug": "hisob",
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "bcbedbc9921f748252ab633e1b405aa6d4a9d6e6cbbf227049582288b03223d3",
-  "archive_bytes": 826178,
+  "archive_sha256": "7723c5af930d253a4a93b15770ff9bf3421539c9856e23add1997de5b6550383",
+  "archive_bytes": 826044,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -85,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7819,
-      "sha256": "9d0ecba6c21ca28c6fdbfc61fd035cdcad1bac3b9a3004bf6cba0f7d27a42f9d"
+      "bytes": 7663,
+      "sha256": "de3ca4af3e120ceddb980249ec49abb25dabca5093d6bbe7b2dd6f7f2c1c2bf0"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1219,
-      "sha256": "fd771728742f99f0f09ad07e762362902177ea5e1a0f563e9e193aadd6cb19e6"
+      "sha256": "de476ad326d79d0b5cc8cb800e99abe8149b8073eadd5c6ca9f261d248b73a28"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 15997,
-      "sha256": "6a5904d2c1b88de0007e7a4657c1e1d17168dc2530badd01d03359d41f08891d"
+      "sha256": "b34cfad3407d56971ca9a7baf4e83db998a41a8fdaf6f6b4660ba00f31046dd3"
     },
     {
       "path": "PREPARATION.md",
@@ -211,12 +211,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "6ff3ae7c2b059a603b99ef76b96d2dde0e94b08cadb37b67ad86cccede410ef0"
+      "sha256": "d79de628065c62d310709cce2cf0ad1d7de8dcd4c3087f49cc5947315a0574d6"
     },
     {
       "path": "README.md",
-      "bytes": 1307,
-      "sha256": "eddd3f31001bc77791eb3772c97418b02492b6d7742b517bbabf25060128189a"
+      "bytes": 1249,
+      "sha256": "7fc791867b7532f1325784bb70eb36c02e26002f0359689f8f800a1dc7b27780"
     },
     {
       "path": "REGULATIONS.md",
@@ -476,7 +476,7 @@
     {
       "path": "kit.json",
       "bytes": 290,
-      "sha256": "163e81cdf8c532c0987ab881b004b151994952e6ed0156cec056a574f4cf2d73"
+      "sha256": "5a082eddbfd17c95d0fe4d076a5f0f00de312e525619827627f1fe5ab83e539e"
     },
     {
       "path": "serve.mjs",
@@ -495,8 +495,8 @@
     },
     {
       "path": "site/README.md",
-      "bytes": 1082,
-      "sha256": "808a76893b34dd983e3e86ff306b35b6ab580545cbe77d3fc1830a3a9194a4db"
+      "bytes": 1024,
+      "sha256": "2f4467aeb28778e62410250573e391769a0565138823fa667532dd423d24323a"
     },
     {
       "path": "site/app.js",

@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-10-31",
-  "source_fingerprint": "219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97",
+  "source_fingerprint": "4fbb686b87cf64c42642b6702ec8241bb4767989b630f36d520a18fa609db4fc",
   "name": "Ziyo",
   "slug": "ziyo",
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "f40e9a908d50f45e06ce25e0be22471d67605319d3ad03259fcc4a1284d52f8c",
-  "archive_bytes": 1067884,
+  "archive_sha256": "b62e98aec500f02f0790c74d266f2fd2c38edeb7c58f7d5228827ff43cfc8d60",
+  "archive_bytes": 1067756,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -91,8 +91,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7991,
-      "sha256": "2cd5d56061981ed04e6d2c3b5ede7ec73cdeef3b0cb0041f77bfbe6650d42103"
+      "bytes": 7835,
+      "sha256": "25a8301e30d2022060ff1cf23edd27b2061a0ebd3704a78c61bf0ae573dd494e"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -172,7 +172,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1217,
-      "sha256": "83cf292280d51f63edbf37f5048cf0a7ae6e0c3038d895c29fbffb5b4d761259"
+      "sha256": "d9f609da9508cbf720c4cca5fcb0025758fd456eec0a5357288ea6a7843c1de1"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -192,7 +192,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16437,
-      "sha256": "f725050e942e0b421ba971e9092387c863abbad52ba25405769f08babd2636c4"
+      "sha256": "9da9ce9ad099568eef44a06311da901612286ac28c91e791b83467b4f0c4527c"
     },
     {
       "path": "PREPARATION.md",
@@ -217,12 +217,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "324c9f045babd4c7ad32a0b9f9b938db7901ba74559997e2747de02213ecd327"
+      "sha256": "20ba8307bc76ff6288d80f52743cb5723746f43f0fd31fe171f3c9c9dd992d38"
     },
     {
       "path": "README.md",
-      "bytes": 1318,
-      "sha256": "ecb4786c6b96c92df0be65cc0e15cdbb5b53f7608c71350f2c9a45ee152fe247"
+      "bytes": 1260,
+      "sha256": "86568e14bec4d8fa51f492a748d24257e4c1fe4389eec9c99ef1bfec8555dac2"
     },
     {
       "path": "REGULATIONS.md",
@@ -482,7 +482,7 @@
     {
       "path": "kit.json",
       "bytes": 288,
-      "sha256": "24d4326e1500d7e8e340b276cff063b5755df4a228d3bc50321e57be607f9c2e"
+      "sha256": "dd98c6dcae1d1aa3e891ba511a5ef503dbf3dfd6108ceb121b51800ecc597ae8"
     },
     {
       "path": "serve.mjs",
@@ -501,8 +501,8 @@
     },
     {
       "path": "site/README.md",
-      "bytes": 1093,
-      "sha256": "5aeb07b60a2d592cb480d2c69b55a9884adb651a2f0218e58d5a32a4ae731df6"
+      "bytes": 1035,
+      "sha256": "82ae110d735af4cb35e03dcb96ab5c1fcc47d6016ad7468c93ef646e27231a77"
     },
     {
       "path": "site/app.js",

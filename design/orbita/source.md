@@ -1,6 +1,6 @@
 # Orbita — editable source snapshot
 
-Source fingerprint: `5bbe54ec986d84b0d7416ba6d5afbeaea646f9f1bd38ce21758c99b188deb438`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `236e17bab5847f6f48eeaf110a433a8dbf618933b56a9e27bade1c18a3c9fea6`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 

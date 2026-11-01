@@ -6,4 +6,4 @@ Standalone HTML/CSS/JavaScript; no npm install. Preview: `python -m http.server 
 
 index.html: markup and IDs. style.css: local fonts and accessible mechanics. layout.css: this sector’s full art direction and responsive rules. app.js: existing flows, storage and focus. model.js: data/validation. Read CREDITS.md and bundled font licenses. Preserve model IDs and validated storage keys when changing layout.
 
-Original library: identity-styles/*.css and identities_v4.py apply last after build_collection.py / build_refined.py. In the isolated competition ZIP, edit runtime files directly. After gallery changes regenerate previews, metadata and build_handoff.py.
+In a competition copy, edit these files directly; no build step is needed. (The publishing repository regenerates its gallery copy with its own scripts, which are not part of a competition copy.)

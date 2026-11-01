@@ -1,6 +1,6 @@
 # Forma — editable source snapshot
 
-Source fingerprint: `d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `ad4bccfcf7c87ad2bc887aa871b1ede0ee3313292eed11437c6ce4ef81e310e7`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 

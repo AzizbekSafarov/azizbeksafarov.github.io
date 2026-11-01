@@ -158,6 +158,12 @@ def verify():
             check_zaxira(z)
             check_design_complete(z,manifest,brief,template['slug'])
             check_text_rebuild(z,folder,template['slug'])
+            # Guidance a new AI reads first must not send it to library generators that a competition copy lacks.
+            for doc in ('AGENTS.md','AI-BRIEF.md','START-HERE.md','README.md','site/README.md','site/AGENTS.md'):
+                if doc in z.namelist():
+                    text=z.read(doc).decode('utf-8')
+                    for name in ('identities_v4.py','diversity_v3.py','build_collection.py','build_refined.py','build_handoff.py','identity-styles/'):
+                        assert name not in text,f"{template['slug']}!{doc}: names absent generator {name}"
             import re
             for ref in set(re.findall(r'`([A-Za-z0-9_./-]+\.(?:md|json|mjs|js))`',z.read('AGENTS.md').decode())):
                 if '*' in ref or ref.startswith(('site/','src/')) and '/' in ref and not ref.endswith('.md'):continue

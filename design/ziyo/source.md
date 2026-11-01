@@ -1,6 +1,6 @@
 # Ziyo — editable source snapshot
 
-Source fingerprint: `219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `4fbb686b87cf64c42642b6702ec8241bb4767989b630f36d520a18fa609db4fc`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 

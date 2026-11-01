@@ -1,6 +1,6 @@
 # Samar — editable source snapshot
 
-Source fingerprint: `deb074c142f1e0bc00b30136816895bddbc5b43bb283493025a00edb2d7a23f7`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `5aab28e6d8e1db89de5e1705d238178f5aa2ef8daca525f6c5ee8e1c112f7da4`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
