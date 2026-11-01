@@ -1,20 +1,10 @@
 # Bloom · Material Design 3 — tanlovda yangi AI uchun boshlash
 
-JORIY BILET BU PAKETDA YO‘Q. [TASK-BOUNDARY.json](https://azizbeksafarov.github.io/design/handoff/task-boundary.json) ni o‘qi. Haqiqiy biletni foydalanuvchi beradi; yo‘q bo‘lsa so‘ra. Dizayn demosidan, eski rejadan yoki nizomdagi namunadan vazifa chiqarma.
+Bu — Bloom · Material Design 3 dizaynini tanlov biletiga moslashtiradigan AI uchun qo‘llanma. Foydalanuvchi bilan o‘zbekcha, sodda tilda gaplash: u kod yozmaydi.
 
-KONTEKST MAQOMI: joriy ochiq manbalar tekshiruvi 2026-10-28; eski tadqiqot 2026-10-09 holatida tarixiy. Nizom, amaliy tartib va ruxsatlar qayta tekshiruvi CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json da. 13-oktabr — oldingi ishtirokchi xabari; yangi Samarqand jadvali yoki joriy bilet tasdiqlanmadi. Hozirgi topshiriq/reglament ustuvor. [Manbalar maqomi](https://azizbeksafarov.github.io/design/handoff/context-status.md). ZIPda `CONTEXT-STATUS.md`; to‘liq nizomlar `REGULATIONS.md`.
+Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu ochiq paketda bilet yo‘q. Ikkala joyda ham bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Dizayn namunasi, test ma’lumoti va nizomdagi namunaviy bilet vazifa hisoblanmaydi.
 
-## Joriy ish tartibi va arxitektura
-
-Avval joriy bilet va loyiha CURRENT-TASK.md / HANDOFF.md’ini tekshir. [Ish tartibi](https://azizbeksafarov.github.io/ish-tartibi/ai.md) hamda [holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/status.json) qaror, dalil, reja va noma’lumlarni ajratadi. Tasdiqlangan reja: Render frontend + Node API, Supabase Auth/DB/RLS, zaruratga mos AI/Telegram va UptimeRobot monitoringi. Xizmatlar hali yaratilgan deb hisoblanmaydi. ZIP ichida WORKFLOW.md, ARCHITECTURE.md, API-GUIDE.md va PROJECT-STATUS.json bor. Uslub demo source’da; backendni bilet va foydalanuvchining joriy topshirig‘iga mos qur.
-
-## Mezon va to‘liq manbani o‘tkazib yuborma
-
-Tanlov ishida [baholashdan ish va dalil rejasiga](https://azizbeksafarov.github.io/design/handoff/score-workplan.md) hamda qisqa tanlov kontekstini o‘qi. Talab → amal → qabul sinovi → taqdimot dalilini yoz. 21 kichik ko‘rsatkich loyiha tahriridan; amaldagi reglament deb taxmin qilma. ZIP ichida SCORING-WORKPLAN.md, qisqartirilmagan FULL-COMPETITION-CONTEXT.md va uch hujjatning to‘liq REGULATIONS.md matni mavjud. Ushbu boshlash yo‘riqnomasi ularning o‘rnini bosmaydi. To‘liq o‘qish so‘ralganda manbani bo‘limlar bo‘yicha to‘liq o‘qi, o‘qilmay qolganini yashirma.
-
-## To‘liq kontekst va kamchiliksiz paket
-
-START-HERE — mundarija, to‘liq o‘qish o‘rnini bosmaydi. [Tanlovga tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) va [yig‘ma to‘liq matn](https://azizbeksafarov.github.io/tayyorgarlik/full-context.md). Paket ichida PREPARATION.md, READING-PLAN.json, READ-RECEIPT.md va BRAND-ASSETS.json bor. Fayl yo‘llarini manifestdan oling; boshqa dizayndagi nomni taxmin qilmang. To‘liq source ZIPni oling va hashini tekshiring; faqat HTML parchasidan qayta qurish ishlaydigan dizaynni yo‘qotishi mumkin.
+ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.
 
 Snapshot: 2026-10-31; source fingerprint: `36aa144427df8d89`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
@@ -22,18 +12,17 @@ Snapshot: 2026-10-31; source fingerprint: `36aa144427df8d89`. Readable page: htt
 
 GitHub Pages brauzerda ishlashi, lekin ayrim AI veb-o‘qish vositalarida ochilmasligi mumkin. [Ushbu AI matnining GitHub nusxasi](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/ai.md), [o‘qiladigan source](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/source.md) va [kod ZIP](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/source.zip) bir xil paketdir. `.io` havolalari o‘qilmasa, ushbu raw nusxalar va quyidagi alohida fayllardan foydalan. [Qisqa tanlov konteksti raw](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/handoff/competition.md); [to‘liq tanlov tadqiqoti raw](https://raw.githubusercontent.com/AzizbekSafarov/ustoz/main/ai.md). Matn yoki ZIP chatga berilgan bo‘lsa, yana internetdan hammasini yuklash shart emas.
 
-## 1. Vazifa va ustuvorlik
+## 1. Tanlov
 
-Azizbek Safarov bilan Ustoz AI “Eng yaxshi veb-sayt” tanlovi uchun ishlaysan. O‘zbekcha muloqot qil. Hozirgi bilet, qolgan vaqt va joydagi reglament bu tayyorgarlik nusxasidan ustuvor. Bilet mavjud bo‘lsa, ishni davom ettir; yo‘q bo‘lsa, aynan bilet va haqiqiy vaqtni bitta qisqa savolda so‘ra. Mavzuni yoki rasmiy muddatni uydirma. Foydalanuvchi ushbu dizaynni tanlagan: uslubini saqla, sample mazmun va amallarni vazifaga mazmunli moslashtir.
+Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Ekspert amaliy vazifani (biletni) hammaga bir vaqtda beradi. Ishdan oldin hisob va dasturni sozlash uchun 15 daqiqa bor, u amaliy vaqtga kirmaydi. Ishdan keyin 15 daqiqalik himoya bo‘ladi: taqdimot, namoyish va savollar.
 
-## 2. Tanlov haqida yetarli kontekst
+- Baholash 6 mezon, jami 100 ball. Imzoli qarordagi vaznlar: funksionallik 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. Shuning uchun avval biletdagi majburiy funksiyalar oxirigacha ishlashi kerak, keyin bezak.
+- Mezonlar loyihasida viloyat (hududiy) bosqichi uchun: kamida 3 sahifa yoki teng hajmli ekran, noto‘g‘ri kiritishni tekshiradigan 2 ta bog‘liq amal va natija, taxminan 2 soat. Faqat biletdagi majburiy imkoniyatlar talab qilinadi; qo‘shimcha funksiya asosiy kamchilikni qoplamaydi. Saqlash usuli (brauzer yoki server) biletda yoziladi.
+- AI, no-code, shablon va ochiq materiallar ruxsat etilgan; moslashtirish va natija baholanadi. Oldindan tayyorlangan to‘liq loyihani topshirish taqiqlangan, shuning uchun starter biletdagi mahsulotga aylantiriladi.
+- Himoyada jonli o‘zgartirish masalasida manbalar farq qiladi: imzoli qarorda so‘ralishi mumkin, mezonlar loyihasida esa topshirilgan loyihani o‘zgartirib bo‘lmaydi. Joyda aniqlanadi; tayyor qo‘llanma `ZAXIRA/JONLI-OZGARISH.md` da.
+- 21 batafsil ko‘rsatkich hali tasdiqlanmagan loyihadan olingan. Imzoli qaror va joydagi ko‘rsatma ustun turadi. Amaliy vaqtni tashkilotchi belgilaydi: foydalanuvchi aytgan qolgan vaqt bilan ishla.
 
-2026-10-09 tarixiy xabarida Urgut → Samarqand viloyat bosqichi 2026-10-13 uchun rejalashtirilgani aytilgan. Yig‘ilgan mahalliy qarordagi mezonlar: funksiya 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. Avval majburiy oqim, mazmun va texnologiyaning ishlash dalili; keyin bezak. Batafsil mezonlar PDFi tasdiqqa taqdim etilgan loyiha: uni yakuniy reglament deb olma. Amaliy vaqt tasdiqlanmagan; 120 daqiqa faqat mashq bo‘lgan. Video transkriptida tashkilotchi kompyuteri, Antigravity/Codex, ulash uchun 15 daqiqa, shablonlardan foydalanish va 15 daqiqa himoya aytilgan. Joydagi qoidalar ustuvor.
-
-- [Manbalar maqomi va qisqa tanlov konteksti](https://azizbeksafarov.github.io/design/handoff/competition.md)
-- [Uch nizom hujjati — qisqartirilmagan 39 sahifa](https://azizbeksafarov.github.io/ustoz/nizom.md); offline ZIP ichida `REGULATIONS.md`.
-- [Barcha yig‘ilgan local + web ma’lumotlari](https://azizbeksafarov.github.io/ustoz/ai.md)
-- [Mezonlar bo‘yicha ish rejasi](https://azizbeksafarov.github.io/ustoz/06-SCORE-WORKPLAN.md)
+Qoidalar oxirgi marta 2026-10-28 da tekshirilgan: [qisqa kontekst](https://azizbeksafarov.github.io/design/handoff/competition.md), [qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md), [mezon → ish → dalil rejasi](https://azizbeksafarov.github.io/design/handoff/score-workplan.md), [to‘liq nizomlar, 39 sahifa](https://azizbeksafarov.github.io/ustoz/nizom.md).
 
 ## 3. Tanlangan dizayn
 
@@ -50,7 +39,7 @@ Asosiy amallar: Rasmiy M3 komponentlari · dinamik rang · native ripple · form
 - [Jonli namuna](https://azizbeksafarov.github.io/design/material-expressive/dist/index.html)
 - [GitHub source papkasi](https://github.com/AzizbekSafarov/azizbeksafarov.github.io/tree/main/design/material-expressive)
 
-Source archive va matn bir snapshotdan yaratilgan. ZIPni ochgach `AGENTS.md`, `AI-BRIEF.md`, `CURRENT-TASK.md`, `HANDOFF.md` ni o‘qi. Ish papkasi `site/`. Internet faylni o‘qish imkoniyati bo‘lmasa, foydalanuvchi AI matnini nusxalaydi yoki ZIPni beradi; havola o‘z-o‘zidan xotira, kodni tahrirlash yoki brauzer imkoniyatini yaratmaydi.
+Source archive va matn bir snapshotdan yaratilgan. Ish papkasi `site/`. Internet faylni o‘qish imkoniyati bo‘lmasa, foydalanuvchi AI matnini nusxalaydi yoki ZIPni beradi; havola o‘z-o‘zidan xotira, kodni tahrirlash yoki brauzer imkoniyatini yaratmaydi.
 
 ## 5. Fayl xaritasi va ishga tushirish
 
@@ -90,7 +79,7 @@ npm run dev
 
 - Biletni “talab → foydalanuvchi amali → kod joyi → qabul sinovi” jadvaliga aylantir. Vazifaga mos navigatsiya, nomlar, ma’lumot va asosiy natijani yoz.
 - Haqiqiy source fayllarini o‘qi; mavjud ishga tushirishni tekshir. Kichik xato uchun butun saytni boshqa framework/dizaynga qayta qurma. Oddiy tanlov va qaytariladigan tuzatishlarni mustaqil bajar.
-- Dizayn rang/shrift/masofa iyerarxiyasini saqla. Bo‘limlarni va modelni vazifaga moslashtir; backend foydalanuvchining joriy Render + Supabase rejasi va biletga mos quriladi. Ma’lumot modeli o‘zgarsa storage keyni versiyala/migratsiya qil; boshqa brauzer ma’lumotini tozalama.
+- Dizayn rang/shrift/masofa iyerarxiyasini saqla. Bo‘limlarni va modelni vazifaga moslashtir. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Ma’lumot modeli o‘zgarsa storage keyni versiyala/migratsiya qil; boshqa brauzer ma’lumotini tozalama.
 - Xatoda: aniq holatni takrorla → konsol/resurs va tegishli kodni tekshir → sababni tuzat → shu oqimni qayta sina. Xatoni yashirish yoki tugmani olib tashlash yechim emas.
 - Bitta asosiy yozuvchi ishlasin. Limitni asra: avval shu qisqa kontekst va tegishli fayllar, katta minified vendor JS yoki barcha tarixni birga yuklama.
 
@@ -107,7 +96,7 @@ Quyidagi baseline amallarni yangi bilet oqimiga moslab tekshir. Eski QA bugungi 
 - Karta/ro‘yxat, bookmark, detail uch checkbox → progress → reload.
 - Palitra label/ArrowRight/Space → bitta radio; light/dark; qisqa oynada Tayyor doim ko‘rinadi.
 - Escape → opener; filtrdan yo‘qolgan karta uchun fokus loyiha sarlavhasiga qaytadi.
-- 320/390, 768, 1024, 1440 px: asosiy CTA va yozuvlar kesilmaydi; sahifa bo‘ylab keraksiz horizontal scroll yo‘q. Jadvalning belgilangan ichki scrolli mumkin.
+- 390, 768 va 1366 px (mezonlardagi kengliklar), qo‘shimcha 320 va 1440 px: asosiy CTA va yozuvlar kesilmaydi; sahifa bo‘ylab keraksiz horizontal scroll yo‘q. Jadvalning belgilangan ichki scrolli mumkin.
 - Bo‘sh/noto‘g‘ri ma’lumot, topilmagan natija, uzun matn, klaviatura Tab/Enter/Escape, ko‘rinadigan fokus va qo‘llangan light/dark rang juftlari.
 - Tegishli saqlanishni reload bilan tekshir; shrift/JS/CSS 404lari va ishlashga ta’sir qiladigan konsol xatolari qolmasin.
 

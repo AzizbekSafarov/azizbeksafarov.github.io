@@ -54,4 +54,4 @@ Ko‘p dizaynda kartalar ham `site/index.html` da, ham `site/model.js` dagi ro�
 
 Taymer qo‘ying va 2 daqiqada bajaring: sarlavha matni → asosiy rang → yangi element → Ctrl+Shift+R bilan ko‘rsatish. Ikki marta muvaffaqiyatli bajarilmaguncha takrorlang.
 
-Kod yozmasangiz: tanlov uchun skelet + `tahrir.html` eng xavfsiz yo‘l — jonli o‘zgarishning hammasi panelda. Dizayn starterini tanlasangiz, yuqoridagi umumiy usulni (Ctrl+Shift+F → o‘zgartirish → Ctrl+S → Ctrl+Shift+R) oldindan kamida ikki marta mashq qiling.
+Asosiy ish Codex bilan tanlangan starterda bo‘ladi: yuqoridagi umumiy usulni (Ctrl+Shift+F → o‘zgartirish → Ctrl+S → Ctrl+Shift+R) oldindan kamida ikki marta mashq qiling. AI ishlamay qolib sayt skeletda yig‘ilgan bo‘lsa, jonli o‘zgarishning hammasi `tahrir.html` panelida.

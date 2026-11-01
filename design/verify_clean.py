@@ -1,6 +1,7 @@
 """Reject retired starters and stale build chunks in the active tree and ZIPs."""
 from pathlib import Path
 import json,re,zipfile
+import entry_text
 
 ROOT=Path(__file__).resolve().parent
 SITE=ROOT.parent
@@ -31,7 +32,8 @@ def verify():
         assert asset.name in references,f'Unreferenced build artifact: {asset.name}'
     for item in catalog:
         brief=(ROOT/item['slug']/'ai.md').read_bytes()
-        assert 'KONTEKST MAQOMI'.encode() in brief
+        # Every brief carries the shared ticket rule and competition facts verbatim.
+        assert entry_text.TICKET_UZ.encode() in brief and entry_text.FACTS_UZ.encode() in brief,item['slug']
         assert (SITE/'dezayn'/item['slug']/'ai.md').read_bytes()==brief,'Alias context drift'
         if item['slug']=='bloom':assert (SITE/'bloom/ai.md').read_bytes()==brief
         manifest=json.loads((ROOT/item['slug']/'manifest.json').read_text(encoding='utf-8'))

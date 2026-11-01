@@ -16,6 +16,22 @@ RESEARCH = SITE.parent / 'internet-kontekst'
 HOST = 'azizbeksafarov.github.io'
 
 
+# Entry files state each rule once and calmly: repetition or shouting makes a
+# new AI over-weight one rule (e.g. keep asking for a ticket it already has).
+TICKET_PHRASES = ('bilet yo‘q', 'no ticket', 'bilet bu paketda yo‘q', 'haqiqiy bilet bermaydi')
+
+
+def check_entry_tone(slug, entry):
+    for name, text in entry.items():
+        for line in text.splitlines():
+            if line.lstrip().startswith(('#', '|', '```', '- [')):
+                continue
+            assert not re.search(r"[A-ZʻʼО‘’ʻ]{4,}(?:\s+[A-ZʻʼО‘’ʻ]{2,}){3,}", line), f'{slug}!{name}: shouted line: {line[:80]}'
+        lowered = text.lower()
+        assert sum(lowered.count(p) for p in TICKET_PHRASES) <= 1, f'{slug}!{name}: ticket rule repeated'
+    assert entry['AGENTS.md'].count('## Read in this order') == 1
+
+
 def links(text):
     # Source transcripts and example snippets inside fences are not authored links.
     fence = None
@@ -125,9 +141,10 @@ def verify():
                 assert len(data) == entry['bytes'] and sha256(data).hexdigest() == entry['sha256']
             assert '- Biletning aynan matni: hali berilmagan.' in archive.read('CURRENT-TASK.md').decode('utf-8')
             assert '- Bajarilgan talablar: hali kiritilmagan.' in archive.read('HANDOFF.md').decode('utf-8')
-            assert 'JORIY BILET BU PAKETDA YO‘Q.' in archive.read('AI-BRIEF.md').decode('utf-8')
-            assert 'TASK-BOUNDARY.json' in archive.read('START-HERE.md').decode('utf-8')
-            assert 'No actual ticket is supplied' in archive.read('AGENTS.md').decode('utf-8')
+            entry = {name: archive.read(name).decode('utf-8') for name in ('AGENTS.md', 'AI-BRIEF.md', 'START-HERE.md', 'HANDOFF.md', 'README.md')}
+            assert 'This public package contains no ticket.' in entry['AGENTS.md']
+            assert 'TASK-BOUNDARY.json' in entry['START-HERE.md'] and 'TASK-BOUNDARY.json' in entry['AGENTS.md']
+            check_entry_tone(template['slug'], entry)
             for name in ('FULL-COMPETITION-CONTEXT.md', 'REGULATIONS.md'):
                 value = archive.read(name).decode('utf-8')
                 assert 'MANBA IZOHI — JORIY BILET EMAS.' in value

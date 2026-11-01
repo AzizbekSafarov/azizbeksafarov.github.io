@@ -1,6 +1,6 @@
 # Tanlov uchun joriy qoidalar va ishga kirish
 
-Bu ochiq to‘plamda haqiqiy bilet yo‘q. [Topshiriq chegarasi](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json): biletni foydalanuvchi beradi; dizayn demo mavzusi, eski reja yoki nizom loyihasidagi namuna joriy topshiriq emas. Bilet berilmagan bo‘lsa so‘rang, mavzu o‘ylab topmang.
+Biletni foydalanuvchi beradi; bu ochiq to‘plamda bilet yo‘q. Dizayn demo mavzusi, eski reja va nizom loyihasidagi namuna vazifa hisoblanmaydi ([topshiriq chegarasi](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json)).
 
 Tekshiruv: **2026-10-28**. [Qoidalar holati](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md), [tuzilgan qoida qaydi](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json).
 

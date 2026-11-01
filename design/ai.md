@@ -1,6 +1,8 @@
-# Azizbek — tanlov dizaynlarini yangi AI bilan ishlatish
+# Azizbek — tanlov dizaynlari
 
-2026-10-31. Faol dizaynlar: 9. Faqat tanlangan dizaynning sahifasi yoki ai.md faylini o‘qi. Unda tanlov konteksti, visual contract, run, haqiqiy source, oldingi tuzatishlar va xatoni tekshirish/tuzatish tartibi bor.
+2026-10-31. Faol dizaynlar: 9. Ustoz AI “Eng yaxshi veb-sayt” tanlovida foydalanuvchi bitta dizaynni tanlaydi, AI uni ekspert biletidagi mahsulotga aylantiradi. Tanlangan dizaynning ai.md fayli va source ZIPi yetarli boshlash nuqtasi: ularda vizual kontrakt, fayl xaritasi, ishga tushirish, saqlanadigan oqimlar va tekshiruv tartibi bor. ZIP ichida ish qoidalari `AGENTS.md` da.
+
+Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu ochiq paketda bilet yo‘q. Ikkala joyda ham bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Dizayn namunasi, test ma’lumoti va nizomdagi namunaviy bilet vazifa hisoblanmaydi.
 
 - [Orbita](https://azizbeksafarov.github.io/design/orbita/) — /design/orbita/; Qorong‘i texnik observatoriya: Chakra Petch, monospace yozuv, orbital asbob oynasi va vertikal missiya registri.
 - [Nashr](https://azizbeksafarov.github.io/design/nashr/) — /design/nashr/; Bosma gazeta: Newsreader masthead, PT Serif maqola, Archivo xizmat yozuvi, oq-qora suratlar va zich tahririy ustunlar.
@@ -12,24 +14,24 @@
 - [Bloom · Material Design 3](https://azizbeksafarov.github.io/design/bloom/) — /design/bloom/; Rasmiy Material Web komponentlari, Material Symbols va dinamik rang tizimi. Ishlaydigan loyiha maydoni.
 - [Yuksal · SI](https://azizbeksafarov.github.io/design/si/) — /design/si/; Oq asosiy fon, O‘zbekistonning moviy va yashil aksentlari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, serif va jonli shakl almashishi.
 
+## Tanlov
+
+Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Ekspert amaliy vazifani (biletni) hammaga bir vaqtda beradi. Ishdan oldin hisob va dasturni sozlash uchun 15 daqiqa bor, u amaliy vaqtga kirmaydi. Ishdan keyin 15 daqiqalik himoya bo‘ladi: taqdimot, namoyish va savollar.
+
+- Baholash 6 mezon, jami 100 ball. Imzoli qarordagi vaznlar: funksionallik 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. Shuning uchun avval biletdagi majburiy funksiyalar oxirigacha ishlashi kerak, keyin bezak.
+- Mezonlar loyihasida viloyat (hududiy) bosqichi uchun: kamida 3 sahifa yoki teng hajmli ekran, noto‘g‘ri kiritishni tekshiradigan 2 ta bog‘liq amal va natija, taxminan 2 soat. Faqat biletdagi majburiy imkoniyatlar talab qilinadi; qo‘shimcha funksiya asosiy kamchilikni qoplamaydi. Saqlash usuli (brauzer yoki server) biletda yoziladi.
+- AI, no-code, shablon va ochiq materiallar ruxsat etilgan; moslashtirish va natija baholanadi. Oldindan tayyorlangan to‘liq loyihani topshirish taqiqlangan, shuning uchun starter biletdagi mahsulotga aylantiriladi.
+- Himoyada jonli o‘zgartirish masalasida manbalar farq qiladi: imzoli qarorda so‘ralishi mumkin, mezonlar loyihasida esa topshirilgan loyihani o‘zgartirib bo‘lmaydi. Joyda aniqlanadi; tayyor qo‘llanma `ZAXIRA/JONLI-OZGARISH.md` da.
+- 21 batafsil ko‘rsatkich hali tasdiqlanmagan loyihadan olingan. Imzoli qaror va joydagi ko‘rsatma ustun turadi. Amaliy vaqtni tashkilotchi belgilaydi: foydalanuvchi aytgan qolgan vaqt bilan ishla.
+
+Qoidalar oxirgi marta 2026-10-28 da tekshirilgan: [qisqa kontekst](https://azizbeksafarov.github.io/design/handoff/competition.md), [qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md), [mezon → ish → dalil rejasi](https://azizbeksafarov.github.io/design/handoff/score-workplan.md), [to‘liq nizomlar, 39 sahifa](https://azizbeksafarov.github.io/ustoz/nizom.md).
+
+## Manbalar
+
 - [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md)
-- [Qisqa tanlov konteksti](https://azizbeksafarov.github.io/design/handoff/competition.md)
 - [Barcha yig‘ilgan tanlov ma’lumoti](https://azizbeksafarov.github.io/ustoz/ai.md)
 - [Tanlangan 9 source ZIP va tanlov matnlari](https://azizbeksafarov.github.io/design/kit.zip)
 - [Machine-readable faol katalog](https://azizbeksafarov.github.io/design/catalog.json)
 - [Sifat standarti](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md)
 - [Kengaytirilgan testlar](https://azizbeksafarov.github.io/design/QA-EXPANDED.md)
-
-Foydalanuvchi bilet, vaqt va joydagi talabni beradi. AI tanlangan uslubni saqlab mavzuga moslashtiradi, amallarni tekshiradi, xatoni tuzatib qayta sinaydi va HANDOFF.md ga holatni yozadi. Link doimiy xotira yoki avtomatik bajarishni kafolatlamaydi.
-
-Bu ochiq paket haqiqiy bilet bermaydi. [Topshiriq chegarasi](https://azizbeksafarov.github.io/design/handoff/task-boundary.json) ZIP ichida TASK-BOUNDARY.json; uni o‘qi; demo mazmun, tarixiy reja va nizom loyihasidagi namuna joriy vazifa emas. Biletni foydalanuvchi bermaguncha mavzu o‘ylab topma.
-
-## Joriy ish tartibi va server rejasi
-
-WORKFLOW.md va PROJECT-STATUS.json dan boshlang. ARCHITECTURE.md — Render + Supabase, API-GUIDE.md va API-EVIDENCE.json — sanali sinovlar. Bular tayyorgarlik snapshot’i; joriy bilet, foydalanuvchi qarori va loyiha holati ustuvor. Tanlangan source.zip ichida ham shu hujjatlar mavjud.
-
-To‘liq o‘qish uchun PREPARATION.md ga amal qiling. START-HERE mundarija; to‘liq manba o‘rnini bosmaydi. Online yig‘ma: https://azizbeksafarov.github.io/tayyorgarlik/full-context.md .
-
-AI kuchsiz, limitli yoki vaqt kam bo‘lsa: ZAXIRA/ZAXIRA.md — qisqa reja, kichik AI so‘rovlari, build’siz zaxira sayt (ZAXIRA/skelet/) va himoyadagi jonli o‘zgarish qo‘llanmasi. Online: https://azizbeksafarov.github.io/zaxira/
-
-Original umumiy paketni node verify-package.mjs bilan tekshiring. Tanlangan source.zip ichida START-HERE.md birinchi o‘qish tartibini beradi; to‘liq tadqiqot, mezon/dalil rejasi va barcha nizom matni ham o‘sha paketning o‘zida.
+- [Codex bilan ishlash tartibi](https://azizbeksafarov.github.io/zaxira/CODEX.md); AI ishlamasa, foydalanuvchining AI’siz yo‘li: [ZAXIRA.md](https://azizbeksafarov.github.io/zaxira/ZAXIRA.md)

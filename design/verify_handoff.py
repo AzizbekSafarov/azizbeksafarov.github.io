@@ -5,6 +5,7 @@ from urllib.parse import urlsplit, unquote
 from hashlib import sha256
 from io import BytesIO
 import json
+import entry_text
 import zipfile
 
 ROOT=Path(__file__).resolve().parent
@@ -81,7 +82,7 @@ def verify():
     for template in catalog+archived:
         folder=ROOT/template['slug'];manifest=json.loads((folder/'manifest.json').read_text(encoding='utf-8'));archive=(folder/'source.zip').read_bytes()
         brief=(folder/'ai.md').read_text(encoding='utf-8')
-        assert '/ish-tartibi/ai.md' in brief and 'PROJECT-STATUS.json' in brief, f'{template["slug"]}: missing current workflow entry'
+        assert entry_text.ZIP_ENTRY_UZ in brief and entry_text.FACTS_UZ in brief, f'{template["slug"]}: brief lost the shared entry text'
         assert sha256(archive).hexdigest()==manifest['archive_sha256']
         assert len(archive)==manifest['archive_bytes']
         assert 0<len((folder/'ai.md').read_bytes())<24000,'Starter brief should link to shared context rather than embed the whole research archive'
@@ -115,7 +116,8 @@ def verify():
             kit=json.loads(z.read('kit.json'));assert kit['serve_root']+'/'+kit['entry'] in z.namelist()
             check_runtime(z,kit['serve_root'])
             check_zaxira(z)
-            assert 'ZAXIRA/ZAXIRA.md' in z.read('START-HERE.md').decode() and 'SMALL-CONTEXT MODE' in z.read('AGENTS.md').decode()
+            assert 'ZAXIRA/ZAXIRA.md' in z.read('START-HERE.md').decode() and 'ZAXIRA/CODEX.md' in z.read('AGENTS.md').decode()
+            assert z.read('CLAUDE.md')==z.read('GEMINI.md')==entry_text.CLAUDE.encode(),'Tool entry files must defer to AGENTS.md'
         for name in ('index.html','source.html'):check_links(folder/name)
         check_links(SITE_ROOT/'dezayn'/template['slug']/'index.html')
     check_links(ROOT/'start/index.html');check_links(ROOT/'index.html')

@@ -1,13 +1,13 @@
 # Ustoz — barcha yig‘ilgan tanlov ma’lumotlari
 
-To‘liq manba matnlari va joriy tayyorgarlik. Bu yerda haqiqiy bilet yo‘q. Asl hujjatdagi namuna, dizayn demo ma’lumoti va eski reja joriy topshiriq bo‘lmaydi. Faqat foydalanuvchi bergan haqiqiy bilet bo‘yicha mahsulot quriladi. Alohida faylni tahrirlang va build_transcripts.py ni qayta ishga tushiring.
+To‘liq manba matnlari va joriy tayyorgarlik. Bilet bu yerda yo‘q, uni foydalanuvchi beradi; asl hujjatdagi namuna va dizayn demo ma’lumoti vazifa hisoblanmaydi. Alohida faylni tahrirlang va build_transcripts.py ni qayta ishga tushiring.
 
 
 ---
 
 # Kontekst maqomi va manbalarni o‘qish tartibi
 
-**Bu ochiq to‘plamda joriy bilet berilmagan.** [10-TASK-BOUNDARY.json](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json) manbalarni ajratadi. Haqiqiy biletni faqat foydalanuvchi alohida beradi. Dizayn demosini, tarixiy rejani, tekshiruv fixture’ini yoki nizom loyihasining 11-sahifasidagi namunaviy biletni bajariladigan vazifa deb olmang. Bilet yo‘q bo‘lsa uni so‘rang; mavzu o‘ylab topmang.
+Bu ochiq to‘plamda joriy bilet yo‘q; uni foydalanuvchi beradi. Dizayn demosi, tarixiy reja, tekshiruv fixture’i va nizom loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi ([10-TASK-BOUNDARY.json](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json)).
 
 Qoidalar bo‘yicha joriy tekshiruv: **2026-10-28**. [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) va [09-CURRENT-FACTS.json](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
 
@@ -186,7 +186,7 @@ Biletning aynan matni; tanlangan dizayn; haqiqiy qolgan vaqt; akkaunt/internet/t
 
 # Tanlov uchun joriy qoidalar va ishga kirish
 
-Bu ochiq to‘plamda haqiqiy bilet yo‘q. [Topshiriq chegarasi](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json): biletni foydalanuvchi beradi; dizayn demo mavzusi, eski reja yoki nizom loyihasidagi namuna joriy topshiriq emas. Bilet berilmagan bo‘lsa so‘rang, mavzu o‘ylab topmang.
+Biletni foydalanuvchi beradi; bu ochiq to‘plamda bilet yo‘q. Dizayn demo mavzusi, eski reja va nizom loyihasidagi namuna vazifa hisoblanmaydi ([topshiriq chegarasi](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json)).
 
 Tekshiruv: **2026-10-28**. [Qoidalar holati](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md), [tuzilgan qoida qaydi](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json).
 

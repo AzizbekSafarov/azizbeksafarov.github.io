@@ -51,19 +51,12 @@
     "Vercel competition frontend hosting"
   ],
   "reading_order": [
-    "/design/handoff/task-boundary.json; this public package supplies no actual ticket",
-    "current user ticket and project-local CURRENT-TASK.md / HANDOFF.md; public copies are templates",
-    "/design/handoff/current-competition.md and current-competition-facts.json",
-    "/tayyorgarlik/ai.md; full-context.md or reading-plan.json for full reading",
-    "/ai.md",
+    "current user ticket (chat or project-local CURRENT-TASK.md) and HANDOFF.md; this public package supplies no ticket",
+    "/design/handoff/competition.md, current-competition.md, score-workplan.md",
+    "/design/SELECTED-SLUG/ai.md and the selected package AGENTS.md / source",
     "/ish-tartibi/ai.md",
-    "/ish-tartibi/status.json",
-    "/design/handoff/competition.md",
-    "/design/handoff/score-workplan.md",
-    "/ustoz/CONTEXT-STATUS.md and full regulations as needed",
-    "/arxitektura/ai.md",
-    "/api/ai.md",
-    "/design/SELECTED-SLUG/ai.md and selected package instructions/source"
+    "/arxitektura/ai.md; /api/ai.md only when the ticket needs a server, login or database",
+    "full sources as needed: /ustoz/nizom.md, /ustoz/ai.md, /tayyorgarlik/full-context.md, reading-plan.json"
   ],
   "required_test_layers": [
     "happy path",

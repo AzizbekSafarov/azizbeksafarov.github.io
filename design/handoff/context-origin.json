@@ -9,13 +9,13 @@
       "source": "00-START-HERE.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/00-START-HERE.md",
       "target": "competition.md",
-      "sha256": "6e02ab525c991de13d2b6ff929bb1a9442c39297847e2c16a335a7249515c398"
+      "sha256": "dc8b72bcaeb934e6161d35b13ac7e5b4f730d5e60b2f15724d3514fcfd870578"
     },
     {
       "source": "ai.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/ai.md",
       "target": "competition-full.md",
-      "sha256": "0eb73225213e0eccc5aaa69be27d00d7c6b64bee5f4fb265e30bee90f06abdcc"
+      "sha256": "4ac35bcc2efd57d2676998e704ce29acd675114573d84ffbc8c30899f198c5ff"
     },
     {
       "source": "nizom.md",
@@ -27,7 +27,7 @@
       "source": "CONTEXT-STATUS.md",
       "source_url": "https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md",
       "target": "context-status.md",
-      "sha256": "5989d180ea93b48851465d1bd8c4fa831c622c26f7f49272d3900a673f0142f2"
+      "sha256": "51acf2698558fee01061ab4f06fe8bc9171ac2e1b353b5ecefb7550730e740ea"
     },
     {
       "source": "06-SCORE-WORKPLAN.md",

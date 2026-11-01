@@ -151,11 +151,7 @@ Paketdan foydalanish qo‘llanmasi yangilangan: 2026-10-29. Tanlov qoidalarining
 
 ## Haqiqiy topshiriq qayerdan olinadi?
 
-**Bu saytda haqiqiy bilet yo‘q.** [Topshiriq va manba chegarasi](https://azizbeksafarov.github.io/design/handoff/task-boundary.json) ZIP ichida TASK-BOUNDARY.json nomi bilan bor. Biletni foydalanuvchi ekspert bergan aynan matn/fayl sifatida taqdim etadi. Tanlangan dizaynning demo mavzusi, qoralama formadagi placeholder, test fixture’i, eski reja yoki nizom loyihasidagi namunaviy topshiriq uning o‘rniga o‘tmaydi.
-
-Bilet hali yo‘q bo‘lsa uni so‘rang; bashorat, simulyatsiya yoki yangi mashq o‘ylab topib mahsulot qurishni boshlamang. Ruxsat doirasida kontekstni o‘qish, paketni tekshirish va asl dizayn preview’ini ko‘rish mumkin. Bilet berilgach uning manbasini CURRENT-TASK.md’da qayd eting va faqat undagi talablar hamda foydalanuvchining joriy qarorlaridan ish rejasini tuzing. Vaqt yoki bosqich noma’lum bo‘lsa taxminiy raqam yoki eski sana bilan to‘ldirmang.
-
-Asl mezonlar loyihasining 11-sahifasidagi namunaviy bilet manba yaxlitligi uchun to‘liq saqlangan; u joriy topshiriq ham, keladigan bilet bashorati ham emas. REGULATIONS.md’dagi uni o‘rab turgan manba izohini saqlang. Eski AI yozgan mashq kalendari va daqiqalik bajarish buyruqlari amaliy kontekstdan chiqarilgan.
+Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu saytda bilet yo‘q. Bilet berilgach uning manbasini CURRENT-TASK.md’da qayd eting va ish rejasini faqat undagi talablar hamda foydalanuvchining qarorlaridan tuzing. Dizayn demo mavzusi, test fixture’i, eski reja va mezonlar loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi; namunaviy bilet manba yaxlitligi uchun REGULATIONS.md’da o‘z izohi bilan saqlangan. Qaysi matn bilet hisoblanishi mashina o‘qiydigan ko‘rinishda: [TASK-BOUNDARY.json](https://azizbeksafarov.github.io/design/handoff/task-boundary.json).
 
 ## Joriy tanlov manbasi avval o‘qiladi
 
@@ -277,14 +273,12 @@ Havolani ochganing avtomatik doimiy xotira, akkauntga kirish yoki fayl tahrirlas
 
 ## 2. O‘qish tartibi
 
-1. Joriy bilet va loyiha holati — Bu ochiq to‘plamda haqiqiy bilet yo‘q. /design/handoff/task-boundary.json manba rollarini ajratadi. Biletni foydalanuvchi beradi; yo‘q bo‘lsa so‘ra, mavzu o‘ylab topma. CURRENT-TASK.md / HANDOFF.md ommaviy nusxalari bo‘sh shablon. Dizayn demo yozuvlari va nizom loyihasidagi namunaviy bilet joriy topshiriq emas.
-2. [Joriy tanlov yangilanishi](https://azizbeksafarov.github.io/design/handoff/current-competition.md) — 2026-10-28: nizom, baholash, himoya, amaliy vaqt va ruxsatlar tekshiruvi. CURRENT-COMPETITION-FACTS.json qoida qaydi; loyiha yoki eski xabar yangi tasdiqlangan talab emas.
-3. [To‘liq tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.
-4. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
-5. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
-6. [Tanlov konteksti va mezonlar](https://azizbeksafarov.github.io/design/handoff/competition.md) — /design/handoff/score-workplan.md bilan talab → qabul dalilini bog‘la. /ustoz/CONTEXT-STATUS.md va to‘liq nizom /ustoz/nizom.md manba maqomini tushuntiradi; to‘liq matn kerak bo‘lsa qisqa kirish bilan almashtirma.
-7. [Arxitektura va API](https://azizbeksafarov.github.io/arxitektura/ai.md) — /api/ai.md bilan birga sahifa rollari, server chegarasi, kvota, xavfsizlik va sifat mezonlarini o‘qi. Rejalashtirilgan xizmatni yaratilgan deb hisoblama.
-8. [Bitta tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.
+1. Bilet — Chatda yoki loyihadagi CURRENT-TASK.md da. Bu ochiq to‘plamda bilet yo‘q; ikkalasida ham bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Loyiha davom etayotgan bo‘lsa, HANDOFF.md ni ham o‘qi.
+2. [Tanlov qoidalari va baholash](https://azizbeksafarov.github.io/design/handoff/competition.md) — Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.
+3. [Tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.
+4. [Ish usuli](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).
+5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas.
+6. [To‘liq manbalar](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — Nizomlarning to‘liq matni /ustoz/nizom.md, barcha tadqiqot /ustoz/ai.md, yig‘ma /tayyorgarlik/full-context.md. Qoida savoli tug‘ilsa tegishli bo‘limni to‘liq o‘qi; foydalanuvchi so‘rasa reading-plan.json bo‘yicha hammasini.
 
 Tanlov loyihasini boshlashda qisqa tanlov konteksti va /design/handoff/score-workplan.md’ni ham o‘qi. ZIP ichida SCORING-WORKPLAN.md va FULL-COMPETITION-CONTEXT.md mavjud. Mezonlar, himoya va topshirish dalillari faqat dizayn kodi o‘qilgani bilan qamrab olinmaydi. To‘liq manba so‘ralganda qisqa boshlash matni bilan almashtirma; uzun manbani bo‘limlar bo‘yicha to‘liq o‘qi va o‘qilmagan qismini ochiq ayt.
 
@@ -614,19 +608,12 @@ Asl fayl: ish-tartibi/status.json
     "Vercel competition frontend hosting"
   ],
   "reading_order": [
-    "/design/handoff/task-boundary.json; this public package supplies no actual ticket",
-    "current user ticket and project-local CURRENT-TASK.md / HANDOFF.md; public copies are templates",
-    "/design/handoff/current-competition.md and current-competition-facts.json",
-    "/tayyorgarlik/ai.md; full-context.md or reading-plan.json for full reading",
-    "/ai.md",
+    "current user ticket (chat or project-local CURRENT-TASK.md) and HANDOFF.md; this public package supplies no ticket",
+    "/design/handoff/competition.md, current-competition.md, score-workplan.md",
+    "/design/SELECTED-SLUG/ai.md and the selected package AGENTS.md / source",
     "/ish-tartibi/ai.md",
-    "/ish-tartibi/status.json",
-    "/design/handoff/competition.md",
-    "/design/handoff/score-workplan.md",
-    "/ustoz/CONTEXT-STATUS.md and full regulations as needed",
-    "/arxitektura/ai.md",
-    "/api/ai.md",
-    "/design/SELECTED-SLUG/ai.md and selected package instructions/source"
+    "/arxitektura/ai.md; /api/ai.md only when the ticket needs a server, login or database",
+    "full sources as needed: /ustoz/nizom.md, /ustoz/ai.md, /tayyorgarlik/full-context.md, reading-plan.json"
   ],
   "required_test_layers": [
     "happy path",
@@ -890,14 +877,12 @@ Tayyor: .io dizayn kutubxonasi va ko‘chiriladigan kod; sanali rasmiy API ulani
 
 O‘qish tartibi:
 
-1. Joriy bilet va loyiha holati — Bu ochiq to‘plamda haqiqiy bilet yo‘q. /design/handoff/task-boundary.json manba rollarini ajratadi. Biletni foydalanuvchi beradi; yo‘q bo‘lsa so‘ra, mavzu o‘ylab topma. CURRENT-TASK.md / HANDOFF.md ommaviy nusxalari bo‘sh shablon. Dizayn demo yozuvlari va nizom loyihasidagi namunaviy bilet joriy topshiriq emas.
-2. [Joriy tanlov yangilanishi](https://azizbeksafarov.github.io/design/handoff/current-competition.md) — 2026-10-28: nizom, baholash, himoya, amaliy vaqt va ruxsatlar tekshiruvi. CURRENT-COMPETITION-FACTS.json qoida qaydi; loyiha yoki eski xabar yangi tasdiqlangan talab emas.
-3. [To‘liq tayyorgarlik](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — START-HERE mundarija. To‘liq o‘qish so‘ralganda full-context.md yoki reading-plan.json dagi barcha manbalar; o‘qish qaydida to‘liq/qisman/ochilmadi holati. Ishtirokchi vazifalari, to‘liq paket va shaffof brend qoidalari.
-4. [Markaziy kontekst](https://azizbeksafarov.github.io/ai.md) — Umumiy tayyorgarlik va tegishli havolalar. Hozir ochiq/o‘qilgan hujjatni qayta ochish shart emas.
-5. [Ish tartibi va holat snapshot’i](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Shu qo‘llanma bilan /ish-tartibi/status.json ni o‘qi. Snapshot jonli xizmat holati emas; loyiha dalillari va joriy foydalanuvchi qarori ustuvor.
-6. [Tanlov konteksti va mezonlar](https://azizbeksafarov.github.io/design/handoff/competition.md) — /design/handoff/score-workplan.md bilan talab → qabul dalilini bog‘la. /ustoz/CONTEXT-STATUS.md va to‘liq nizom /ustoz/nizom.md manba maqomini tushuntiradi; to‘liq matn kerak bo‘lsa qisqa kirish bilan almashtirma.
-7. [Arxitektura va API](https://azizbeksafarov.github.io/arxitektura/ai.md) — /api/ai.md bilan birga sahifa rollari, server chegarasi, kvota, xavfsizlik va sifat mezonlarini o‘qi. Rejalashtirilgan xizmatni yaratilgan deb hisoblama.
-8. [Bitta tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va source ZIP. ZIP ichida START-HERE.md → AGENTS.md / AI-BRIEF.md → kerakli source; joriy vazifa va holat birinchi qadamdayoq tekshiriladi. Barcha dizaynlarni birdan yuklama.
+1. Bilet — Chatda yoki loyihadagi CURRENT-TASK.md da. Bu ochiq to‘plamda bilet yo‘q; ikkalasida ham bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Loyiha davom etayotgan bo‘lsa, HANDOFF.md ni ham o‘qi.
+2. [Tanlov qoidalari va baholash](https://azizbeksafarov.github.io/design/handoff/competition.md) — Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.
+3. [Tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.
+4. [Ish usuli](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).
+5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas.
+6. [To‘liq manbalar](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — Nizomlarning to‘liq matni /ustoz/nizom.md, barcha tadqiqot /ustoz/ai.md, yig‘ma /tayyorgarlik/full-context.md. Qoida savoli tug‘ilsa tegishli bo‘limni to‘liq o‘qi; foydalanuvchi so‘rasa reading-plan.json bo‘yicha hammasini.
 
 So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
 
@@ -1062,7 +1047,7 @@ Asl fayl: design/handoff/context-status.md
 
 # Kontekst maqomi va manbalarni o‘qish tartibi
 
-**Bu ochiq to‘plamda joriy bilet berilmagan.** [10-TASK-BOUNDARY.json](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json) manbalarni ajratadi. Haqiqiy biletni faqat foydalanuvchi alohida beradi. Dizayn demosini, tarixiy rejani, tekshiruv fixture’ini yoki nizom loyihasining 11-sahifasidagi namunaviy biletni bajariladigan vazifa deb olmang. Bilet yo‘q bo‘lsa uni so‘rang; mavzu o‘ylab topmang.
+Bu ochiq to‘plamda joriy bilet yo‘q; uni foydalanuvchi beradi. Dizayn demosi, tarixiy reja, tekshiruv fixture’i va nizom loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi ([10-TASK-BOUNDARY.json](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json)).
 
 Qoidalar bo‘yicha joriy tekshiruv: **2026-10-28**. [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) va [09-CURRENT-FACTS.json](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
 
@@ -1164,14 +1149,14 @@ Asl fayl: design/handoff/competition-full.md
 
 # Ustoz — barcha yig‘ilgan tanlov ma’lumotlari
 
-To‘liq manba matnlari va joriy tayyorgarlik. Bu yerda haqiqiy bilet yo‘q. Asl hujjatdagi namuna, dizayn demo ma’lumoti va eski reja joriy topshiriq bo‘lmaydi. Faqat foydalanuvchi bergan haqiqiy bilet bo‘yicha mahsulot quriladi. Alohida faylni tahrirlang va build_transcripts.py ni qayta ishga tushiring.
+To‘liq manba matnlari va joriy tayyorgarlik. Bilet bu yerda yo‘q, uni foydalanuvchi beradi; asl hujjatdagi namuna va dizayn demo ma’lumoti vazifa hisoblanmaydi. Alohida faylni tahrirlang va build_transcripts.py ni qayta ishga tushiring.
 
 
 ---
 
 # Kontekst maqomi va manbalarni o‘qish tartibi
 
-**Bu ochiq to‘plamda joriy bilet berilmagan.** [10-TASK-BOUNDARY.json](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json) manbalarni ajratadi. Haqiqiy biletni faqat foydalanuvchi alohida beradi. Dizayn demosini, tarixiy rejani, tekshiruv fixture’ini yoki nizom loyihasining 11-sahifasidagi namunaviy biletni bajariladigan vazifa deb olmang. Bilet yo‘q bo‘lsa uni so‘rang; mavzu o‘ylab topmang.
+Bu ochiq to‘plamda joriy bilet yo‘q; uni foydalanuvchi beradi. Dizayn demosi, tarixiy reja, tekshiruv fixture’i va nizom loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi ([10-TASK-BOUNDARY.json](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json)).
 
 Qoidalar bo‘yicha joriy tekshiruv: **2026-10-28**. [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) va [09-CURRENT-FACTS.json](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
 
@@ -1350,7 +1335,7 @@ Biletning aynan matni; tanlangan dizayn; haqiqiy qolgan vaqt; akkaunt/internet/t
 
 # Tanlov uchun joriy qoidalar va ishga kirish
 
-Bu ochiq to‘plamda haqiqiy bilet yo‘q. [Topshiriq chegarasi](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json): biletni foydalanuvchi beradi; dizayn demo mavzusi, eski reja yoki nizom loyihasidagi namuna joriy topshiriq emas. Bilet berilmagan bo‘lsa so‘rang, mavzu o‘ylab topmang.
+Biletni foydalanuvchi beradi; bu ochiq to‘plamda bilet yo‘q. Dizayn demo mavzusi, eski reja va nizom loyihasidagi namuna vazifa hisoblanmaydi ([topshiriq chegarasi](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json)).
 
 Tekshiruv: **2026-10-28**. [Qoidalar holati](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md), [tuzilgan qoida qaydi](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json).
 

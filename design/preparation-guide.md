@@ -4,11 +4,7 @@ Paketdan foydalanish qo‘llanmasi yangilangan: 2026-10-29. Tanlov qoidalarining
 
 ## Haqiqiy topshiriq qayerdan olinadi?
 
-**Bu saytda haqiqiy bilet yo‘q.** [Topshiriq va manba chegarasi](https://azizbeksafarov.github.io/design/handoff/task-boundary.json) ZIP ichida TASK-BOUNDARY.json nomi bilan bor. Biletni foydalanuvchi ekspert bergan aynan matn/fayl sifatida taqdim etadi. Tanlangan dizaynning demo mavzusi, qoralama formadagi placeholder, test fixture’i, eski reja yoki nizom loyihasidagi namunaviy topshiriq uning o‘rniga o‘tmaydi.
-
-Bilet hali yo‘q bo‘lsa uni so‘rang; bashorat, simulyatsiya yoki yangi mashq o‘ylab topib mahsulot qurishni boshlamang. Ruxsat doirasida kontekstni o‘qish, paketni tekshirish va asl dizayn preview’ini ko‘rish mumkin. Bilet berilgach uning manbasini CURRENT-TASK.md’da qayd eting va faqat undagi talablar hamda foydalanuvchining joriy qarorlaridan ish rejasini tuzing. Vaqt yoki bosqich noma’lum bo‘lsa taxminiy raqam yoki eski sana bilan to‘ldirmang.
-
-Asl mezonlar loyihasining 11-sahifasidagi namunaviy bilet manba yaxlitligi uchun to‘liq saqlangan; u joriy topshiriq ham, keladigan bilet bashorati ham emas. REGULATIONS.md’dagi uni o‘rab turgan manba izohini saqlang. Eski AI yozgan mashq kalendari va daqiqalik bajarish buyruqlari amaliy kontekstdan chiqarilgan.
+Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu saytda bilet yo‘q. Bilet berilgach uning manbasini CURRENT-TASK.md’da qayd eting va ish rejasini faqat undagi talablar hamda foydalanuvchining qarorlaridan tuzing. Dizayn demo mavzusi, test fixture’i, eski reja va mezonlar loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi; namunaviy bilet manba yaxlitligi uchun REGULATIONS.md’da o‘z izohi bilan saqlangan. Qaysi matn bilet hisoblanishi mashina o‘qiydigan ko‘rinishda: [TASK-BOUNDARY.json](https://azizbeksafarov.github.io/design/handoff/task-boundary.json).
 
 ## Joriy tanlov manbasi avval o‘qiladi
 

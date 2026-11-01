@@ -22,10 +22,10 @@ User ticket, time and on-site rules take priority. These resources do not guaran
 - [Practical competition rules review, 2026-10-28](https://azizbeksafarov.github.io/design/handoff/current-competition.md)
 - [AI workflow and possible failure scenarios](https://azizbeksafarov.github.io/ish-tartibi/ai.md)
 - [Dated public status snapshot](https://azizbeksafarov.github.io/ish-tartibi/status.json)
-- [Approved Render + UptimeRobot plan](https://azizbeksafarov.github.io/arxitektura/ai.md)
+- [Server plan (Render + Supabase), used only when a ticket needs a server, login or database](https://azizbeksafarov.github.io/arxitektura/ai.md)
 - [API integration and dated probe evidence](https://azizbeksafarov.github.io/api/ai.md)
 - [Credential-free probe data](https://azizbeksafarov.github.io/api/verification.json)
-- [Weak or limited AI fallback: short plan, one-file prompts, live-edit guide](https://azizbeksafarov.github.io/zaxira/ZAXIRA.md)
-- [Build-free fallback site skeleton](https://azizbeksafarov.github.io/zaxira/skelet/)
+- [Codex prompt sequence for the user on the selected starter](https://azizbeksafarov.github.io/zaxira/CODEX.md)
+- [User’s AI-free fallback: build-free skeleton and no-code editor](https://azizbeksafarov.github.io/zaxira/ZAXIRA.md)
 
 Planned infrastructure is explicitly distinguished from deployed services. Never treat these public documents as a source of credentials.

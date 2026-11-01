@@ -9,76 +9,35 @@ Codex ishlamasa, limit tugasa yoki ruxsat berilmasa: `ZAXIRA.md` → skelet + `t
 1. **ChatGPT** desktop ilovasini oching → hisobingizga kiring → yuqoridan **Codex** ni tanlang.
 2. Yozish oynasi ostini tekshiring:
    - model: **Sol** (asosiy). **Astra** eng kuchli, lekin limitni juda tez yeydi — faqat qiyin bitta muammo uchun;
-   - fikrlash darajasi: **Medium** (qiyin xatoda High);
+   - fikrlash darajasi: **High** reja uchun, keyin **Medium** (qiyin xatoda yana High);
    - ruxsat: **Default permissions** yoki **Ask for approval** (Full access emas).
-3. Brauzerda `https://azizbeksafarov.github.io/` → dizaynni tanlang → **Kod ZIP** ni yuklang. Internet bo‘lmasa yoki sayt ochilmasa: oldindan berilgan nusxa yoki `ZAXIRA/skelet/`.
+3. Brauzerda `https://azizbeksafarov.github.io/` → dizaynni tanlang → **Kod ZIP** ni yuklang. Internet bo‘lmasa yoki sayt ochilmasa: oldindan olib kelingan ZIP nusxasi (`design/kit.zip` ichida hamma starter bor).
 4. ZIP’ni ish stolida bilet formatidagi papkaga oching (masalan `hududiy_017_003`). Ichki ZIP’ni yana ochish shart emas — ichida `site/`, `START-HERE.md`, `ZAXIRA/` bo‘lsa to‘g‘ri.
 5. Codex’da **Add new project** (yoki **Ctrl+O**) → shu papkani tanlang → **New chat**.
 6. Sinov xabari: `Salom. Papkadagi fayllar ro‘yxatini qisqa ayt.` — javob kelsa, hammasi ishlayapti.
 7. **Settings → Usage & billing** da limit qancha qolganini bir marta ko‘rib qo‘ying.
 
-## 1. Qaysi yo‘l — limitni tejash
+## 1. Asosni tanlash
 
-**A. Tezkor yo‘l (tavsiya, limit kam bo‘lsa albatta):** `ZAXIRA/skelet/` + mavzu. Ishning ~90% tayyor: ro‘yxat, qidiruv, filtr, saralash, tafsilot, tekshiriladigan forma, saqlash, arizalarim, statistika, savol-javob, bo‘sh/xato holatlar, mobil, 9 ta professional mavzu (Forma, Samar, Orbita, Nashr, Hisob, Ziyo, Meros, Yuksal, Toza). Codex faqat **ma’lumotni biletdan to‘ldiradi** va **biletga xos 1–2 qo‘shimchani** yozadi: odatda 4–6 ta xabar.
+Codex bilan ish **tanlangan professional starter** ustida boradi: ZIP’dagi `site/` — tayyor dizayn, ishlaydigan oqimlar va testlar. Codex uni biletdagi mahsulotga aylantiradi (pastdagi C1–C6). Tanlov qoidasi bo‘yicha oldindan tayyorlangan to‘liq loyiha topshirilmaydi, shuning uchun starter biletga haqiqatan moslashtiriladi.
 
-**B. To‘liq starter yo‘li:** bilet bitta dizayn starterining mavzusiga juda mos kelsa (masalan do‘kon → Forma savati) va limit yetarli bo‘lsa. 10–20 ta xabar. Pastdagi C1–C5.
-
-| Bilet turi | Yo‘l / mavzu |
+| Bilet turi | Starter |
 |---|---|
-| Kurs, tadbir, xizmat, kitob, navbat — ro‘yxat + ariza/band qilish | **A** — mavzu: ta’lim → Ziyo, rasmiy → Yuksal, xizmat/hisobot → Hisob, madaniyat → Meros, sayohat → Samar |
-| Do‘kon, savat, mahsulot | B — Forma starteri, yoki A + Forma mavzusi (savat biletda majburiy bo‘lmasa) |
-| Yangiliklar, maqolalar | A + Nashr mavzusi, yoki B — Nashr |
-| Bloom (React) | Faqat internet va npm ishlasa |
+| Kurs, dars, ta’lim | Ziyo |
+| Davlat yoki rasmiy xizmat | Yuksal |
+| Xizmat, hisobot, jadval, ma’lumotlar | Hisob |
+| Muzey, madaniyat, ko‘rgazma | Meros |
+| Sayohat, bron, joy | Samar |
+| Do‘kon, savat, mahsulot | Forma |
+| Yangiliklar, maqolalar | Nashr |
+| Texnik, ilmiy, monitoring | Orbita |
+| React kerak bo‘lsa (internet va npm ishlasa) | Bloom |
 
-Model: ma’lumot to‘ldirish va matn uchun **Luna** (limiti juda katta) yetadi; kod yozish uchun **Sol**. Astra faqat boshqasi uddalamagan bitta muammo uchun.
+Starterni bir daqiqada tanlang va keyin almashtirmang: vaqt ishlaydigan oqimga ketsin.
 
-## 1A. Tezkor yo‘l — so‘rovlar
+Model: **Sol** — asosiy; reja (C1) va qiyin xato uchun fikrlash darajasini **High** qiling. **Astra** — faqat Sol uddalamagan bitta muammo uchun. Matn yozish uchun **Luna** yetadi.
 
-Sozlash: `ZAXIRA/skelet/` papkasini bilet nomidagi papkaga nusxalang va Codex’da **o‘sha papkani** oching. `tahrir.html` ni brauzerda ham oching.
-
-**T1 — biletdan ma’lumot (Luna yetadi, 1 xabar):**
-
-```text
-Men bilan o'zbekcha gaplash. Faqat malumot.js faylini o'zgartir, boshqa faylga tegma.
-Quyidagi biletga moslab malumot.js ni to'ldir:
-- SAYT: nomi, shior, tavsif, bosh sahifa matnlari, menyu nomlari (keraksiz sahifani o'chir), namuna: false,
-  mavzu: [toza|forma|samar|orbita|nashr|hisob|ziyo|meros|yuksal dan biri — mavzuga eng mosi].
-- ELEMENTLAR: biletdagi jadvalni aynan ko'chir (nom, turi, sana YYYY-MM-DD, vaqt, joy, narx, joylar).
-  Boshqa ustunlar (muallif, o'qituvchi...) qoshimcha: { "Ustun nomi": "qiymat" } ga.
-- royxat.yorliqlar: so'zlarni mavzuga moslab (turi, joylar, toldi, tanlash).
-- FORMA.maydonlar: biletdagi majburiy maydonlar; turlar: matn, matnmaydon, telefon, email, son, sana, tanlash, belgi.
-  "Necha kishi/dona" bo'lsa: tur "son" va soni: true. Narx × soni kerak bo'lsa FORMA.jamiKorsat: true.
-- Statistika kerak bo'lsa sahifalar.statistika qo'sh. savollar: biletga mos 3 ta savol-javob.
-Tuzilma va kalit nomlarini saqla. Faylni to'liq yoz. Tugagach 3 qatorda nima qilganingni ayt.
-
-BILET:
-[biletni to'liq qo'ying]
-```
-
-Codex kichik xato qilsa ham (`type: "text"`, `"Bepul"`, takror id, `vaqt`/`id`/`jami` maydon nomi, sana `05.11.2026`) sayt va panel uni **o‘zi tuzatadi** — buning uchun qayta xabar yubormang. `index.html?tekshir` → “Tekshirish” nimalar tuzatilganini ko‘rsatadi; `tahrir.html` → **Faylga saqlash** ularni faylga yozadi.
-
-Keyin: `index.html` ni brauzerda **Ctrl+Shift+R**. Qolgan matn/rang/mavzu tuzatishlarini **`tahrir.html` panelida o‘zingiz** qiling — limit sarflanmaydi.
-
-**T2 — biletga xos qo‘shimcha (faqat skeletda yo‘q talab bo‘lsa, Sol):**
-
-```text
-Biletda shu talab bor, skeletda yo'q: [talabni aynan yozing].
-Uni ilova.js va index.html ga qo'sh. Mavjud funksiyalarni buzma; matnni faqat textContent bilan qo'y;
-mavjud CSS o'zgaruvchilaridan (--rang-asosiy va h.k.) foydalan; bo'sh va noto'g'ri qiymatda buzilmasin.
-Keyin o'zing sinab, natijani 5 qatorda ayt.
-```
-
-**T3 — sinov (Sol, 1 xabar):** pastdagi C3 so‘rovi (tekshir.js skeletda allaqachon bor — 1-bandni o‘tkazib yuboring).
-
-**T4 — hujjatlar (Luna yetadi):** pastdagi C5 so‘rovi. README skeletda shablon sifatida tayyor — Codex faqat to‘ldiradi.
-
-Tezkor yo‘lda jonli o‘zgarish: `tahrir.html` → o‘zgartiring → **Ctrl+S** → saytda **Ctrl+Shift+R** (`JONLI-OZGARISH.md`).
-
-Agar biletga mos mavzu topilmasa yoki ko‘rinish o‘ziga xos bo‘lishi kerak bo‘lsa, T3 dan keyin pastdagi **C4** so‘rovini skelet uchun ishlating (“mavzular/mavzular.css dagi tanlangan mavzuni biletga moslab boyit”).
-
-## 1B. To‘liq starter yo‘li
-
-Tanlangan dizaynni 1 daqiqada tanlang va o‘zgartirmang. Vaqtni dizayn almashtirishga emas, ishlaydigan oqimga sarflang.
+`ZAXIRA/skelet/` va `tahrir.html` — siz uchun, AI’siz zaxira: Codex ishlamay qolsa yoki limit tugasa, saytni o‘zingiz panelda yig‘asiz (`ZAXIRA.md`). Codex’ga skeletdan qurishni buyurmang.
 
 ## 2. So‘rovlar ketma-ketligi (120 daqiqalik ish uchun)
 
@@ -88,8 +47,8 @@ Har birini **alohida xabar** qilib yuboring. Kvadrat qavslarni to‘ldiring. Har
 
 ```text
 Men bilan o'zbekcha gaplash. Men kod yozmayman: sen kod yozasan, men talab qo'yaman va natijani tekshiraman.
-Faqat shularni o'qi: AGENTS.md, AI-BRIEF.md, CURRENT-COMPETITION.md, SCORING-WORKPLAN.md va site/ ichidagi fayllar.
-FULL-COMPETITION-CONTEXT.md va REGULATIONS.md ni o'qima — limitni tejaymiz.
+AGENTS.md dagi tartib bilan o'qi: AI-BRIEF.md, tanlov qoidalari (COMPETITION.md, CURRENT-COMPETITION.md, SCORING-WORKPLAN.md) va site/ ichidagi kod.
+REGULATIONS.md va FULL-COMPETITION-CONTEXT.md dan biletga tegishli savol tug'ilsa, o'sha bo'limni o'qi.
 
 Quyida tanlov bileti. Hali kod yozma. Faqat:
 1) biletning har talabini jadval qil: talab → foydalanuvchi amali → qaysi sahifa/fayl → qanday sinaladi;
@@ -103,14 +62,14 @@ BILET:
 QOLGAN VAQT: [masalan 110 daqiqa]
 ```
 
-Rejani o‘qing. Biletdagi biror talab tushib qolgan bo‘lsa, ayting: `T3 rejada yo‘q, qo‘sh.`
+Rejani o‘qing. Biletdagi biror talab tushib qolgan bo‘lsa, ayting: `Biletdagi [talab] rejada yo‘q, qo‘sh.`
 
 ### C2 — Qurish (35–50 daqiqa)
 
 ```text
 Rejani tasdiqlayman. Endi qur. Qoidalar:
 - Tanlangan dizaynning uslubini (shrift, kompozitsiya, rang tili) saqla, mazmun va funksiyalarni biletga moslashtir.
-- Oddiy HTML/CSS/JS. Yangi framework, npm paket yoki tashqi CDN qo'shma. Internetsiz ham ishlasin.
+- Starterning texnologiyasida qol (HTML starterlarda oddiy HTML/CSS/JS, Bloom'da mavjud React loyihasi). Yangi framework, npm paket yoki tashqi CDN qo'shma. Internetsiz ham ishlasin.
 - Barcha ko'rinadigan matnlar, ro'yxat ma'lumotlari va asosiy rang oson topilsin:
   ma'lumot bitta faylda (mavjud model.js yoki yangi content.js), asosiy rang CSS o'zgaruvchisida.
 - Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Saqlash kerak bo'lsa localStorage.
@@ -189,7 +148,7 @@ Ochiq parol yoki kalit qolmaganini tekshir.
 - **Settings → Usage & billing**: limit 30% dan kam qolsa, qisqa va aniq so‘rovlarga o‘ting, Astra’ni ishlatmang.
 - **Banked reset** (Usage sahifasida “Available” ostida, muddati bilan) 5 soatlik va haftalik limitni 100% ga qaytaradi. U faqat shu ikkisidan **biri 80% dan kam qolganda** ishlaydi: haftalik 90% qolgan bo‘lsa ham, 5 soatlik 80% dan kam bo‘lsa — ishlaydi. Ikkalasi ham 80% va undan ko‘p bo‘lsa, rad etiladi va reset sarflanmaydi. Erta ishlatmang: 5 soatlik limit deyarli tugaganda bosing yoki **“Allow your assistant to use resets”** ni yoqing — limit 10% ga tushganda o‘zi ishlatadi. Ishlatgandan keyin keyingi tiklanish vaqti siljiydi. Muddati tanlov kunidan keyin ekanini oldindan tekshiring.
 - Bitta topshiriq — bitta akkaunt. Ikkinchi akkaunt faqat birinchisi umuman ishlamay qolsa; almashtirishdan oldin tashkilotchidan so‘rang.
-- Limit tugasa: ishlaydigan holatni saqlang. Qolgan matn/rang ishlarini qo‘lda (`JONLI-OZGARISH.md`) yoki skelet panelida bajaring.
+- Limit tugasa: ishlaydigan holatni saqlang. Qolgan matn/rang ishlarini qo‘lda bajaring (`JONLI-OZGARISH.md`). Hali sayt bo‘lmasa — `ZAXIRA.md` dagi AI’siz yo‘l.
 
 ## 5. Himoyada AI haqida to‘g‘ri gapirish
 
