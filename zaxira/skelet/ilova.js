@@ -477,6 +477,13 @@
   function boshla() {
     var q = qoralama();
     SAYT = q ? q.SAYT : window.SAYT; ELEMENTLAR = q ? q.ELEMENTLAR : window.ELEMENTLAR; FORMA = q ? q.FORMA : window.FORMA;
+    // AI yozgan kichik xatolar (type: "text", "Bepul", takror id, band nom...) sayt buzilmasligi uchun shu yerda tuzatiladi.
+    if (M && M.moslash && SAYT && typeof SAYT === 'object') {
+      var mos = M.moslash({ SAYT: SAYT, ELEMENTLAR: ELEMENTLAR, FORMA: FORMA });
+      window.MOSLASH_TUZATISHLAR = mos.tuzatishlar;
+      window.SAYT = SAYT = mos.SAYT; window.ELEMENTLAR = ELEMENTLAR = mos.ELEMENTLAR; window.FORMA = FORMA = mos.FORMA;
+      if (mos.tuzatishlar.length && window.console) console.info('malumot.js avtomatik tuzatildi:\n- ' + mos.tuzatishlar.join('\n- '));
+    }
     if (q) document.body.insertBefore(el('p', { class: 'namuna-belgi', matn: 'QORALAMA KO‘RINISHI — hali faylga saqlanmagan (tahrir.html → “Faylga saqlash”)' }), document.body.firstChild);
     mavzuQolla(SAYT);
     if (!M || !SAYT || !Array.isArray(ELEMENTLAR) || !FORMA || !Array.isArray(FORMA.maydonlar)) {

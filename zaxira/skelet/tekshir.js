@@ -34,6 +34,8 @@
       });
     }
     n.push(en > oyna + 1 ? ['xato', 'Gorizontal surish bor (' + en + ' > ' + oyna + ' px): ' + keng.join(', ')] : ['ok', 'Gorizontal surish yo‘q (' + oyna + ' px)']);
+    var tuz = win.MOSLASH_TUZATISHLAR || [];
+    if (tuz.length) n.push(['ogoh', 'malumot.js da ' + tuz.length + ' ta kichik xato avtomatik tuzatildi (sayt ishlaydi). Faylga yozish uchun tahrir.html → “Faylga saqlash”: ' + tuz.slice(0, 3).join(' ')]);
     var h1 = Array.prototype.filter.call(doc.querySelectorAll('h1'), korinadi).length;
     n.push(h1 === 1 ? ['ok', 'Sahifada bitta asosiy sarlavha (h1)'] : ['ogoh', 'Ko‘rinadigan h1 soni: ' + h1 + ' (1 ta bo‘lishi kerak)']);
     var rasmlar = Array.prototype.filter.call(doc.images, function (i) { return i.complete && i.naturalWidth === 0 && i.getAttribute('src'); });

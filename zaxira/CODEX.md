@@ -55,6 +55,8 @@ BILET:
 [biletni to'liq qo'ying]
 ```
 
+Codex kichik xato qilsa ham (`type: "text"`, `"Bepul"`, takror id, `vaqt`/`id`/`jami` maydon nomi, sana `05.11.2026`) sayt va panel uni **o‘zi tuzatadi** — buning uchun qayta xabar yubormang. `index.html?tekshir` → “Tekshirish” nimalar tuzatilganini ko‘rsatadi; `tahrir.html` → **Faylga saqlash** ularni faylga yozadi.
+
 Keyin: `index.html` ni brauzerda **Ctrl+Shift+R**. Qolgan matn/rang/mavzu tuzatishlarini **`tahrir.html` panelida o‘zingiz** qiling — limit sarflanmaydi.
 
 **T2 — biletga xos qo‘shimcha (faqat skeletda yo‘q talab bo‘lsa, Sol):**
@@ -185,6 +187,8 @@ Ochiq parol yoki kalit qolmaganini tekshir.
 
 - 30 daqiqa qolganda yangi funksiya boshlanmaydi.
 - **Settings → Usage & billing**: limit 30% dan kam qolsa, qisqa va aniq so‘rovlarga o‘ting, Astra’ni ishlatmang.
+- **Banked reset** (Usage sahifasida “Available” ostida, muddati bilan) 5 soatlik va haftalik limitni 100% ga qaytaradi. U faqat shu ikkisidan **biri 80% dan kam qolganda** ishlaydi: haftalik 90% qolgan bo‘lsa ham, 5 soatlik 80% dan kam bo‘lsa — ishlaydi. Ikkalasi ham 80% va undan ko‘p bo‘lsa, rad etiladi va reset sarflanmaydi. Erta ishlatmang: 5 soatlik limit deyarli tugaganda bosing yoki **“Allow your assistant to use resets”** ni yoqing — limit 10% ga tushganda o‘zi ishlatadi. Ishlatgandan keyin keyingi tiklanish vaqti siljiydi. Muddati tanlov kunidan keyin ekanini oldindan tekshiring.
+- Bitta topshiriq — bitta akkaunt. Ikkinchi akkaunt faqat birinchisi umuman ishlamay qolsa; almashtirishdan oldin tashkilotchidan so‘rang.
 - Limit tugasa: ishlaydigan holatni saqlang. Qolgan matn/rang ishlarini qo‘lda (`JONLI-OZGARISH.md`) yoki skelet panelida bajaring.
 
 ## 5. Himoyada AI haqida to‘g‘ri gapirish

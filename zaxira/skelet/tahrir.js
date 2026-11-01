@@ -19,6 +19,21 @@
 
   function nusxa(q) { return JSON.parse(JSON.stringify(q)); }
   function fayldagi() { return nusxa({ SAYT: window.SAYT, ELEMENTLAR: window.ELEMENTLAR, FORMA: window.FORMA }); }
+  /** Fayldagi holat, kichik xatolari tuzatilgan (sayt ham xuddi shunday tuzatadi). */
+  function moslangan(q) {
+    var m = M.moslash(q);
+    return { d: { SAYT: m.SAYT, ELEMENTLAR: m.ELEMENTLAR, FORMA: m.FORMA }, tuzatishlar: m.tuzatishlar };
+  }
+  /** Saqlangandan keyin qoralama yangi fayl holatiga bog'lanadi: qayta ochilganda yo'qolmaydi. */
+  function qoralamaKochir(eskisiniOchir) {
+    var yangi = M.qoralamaKaliti(location.href, nusxa(d));
+    if (yangi === draftKalit) return;
+    try {
+      localStorage.setItem(yangi, JSON.stringify(d));
+      if (eskisiniOchir) localStorage.removeItem(draftKalit);
+    } catch (e) { /* xotira yopiq */ }
+    draftKalit = yangi;
+  }
 
   function el(teg, xossalar, bolalar) {
     var e = document.createElement(teg);
@@ -86,11 +101,12 @@
     var yuklab = function () {
       var a = el('a', { href: URL.createObjectURL(new Blob([matn], { type: 'text/javascript' })), download: 'malumot.js' });
       document.body.appendChild(a); a.click(); a.remove();
+      qoralamaKochir(false);
       holat('“Yuklanmalar” papkasiga malumot.js tushdi. Uni shu sayt papkasiga ko‘chirib, eskisini almashtiring.');
     };
     var yoz = function (h) {
       return h.createWritable().then(function (w) { return w.write(matn).then(function () { return w.close(); }); })
-        .then(function () { fayl = h; holat('Saqlandi: ' + h.name + ' — saytni Ctrl+Shift+R bilan yangilang.'); });
+        .then(function () { fayl = h; qoralamaKochir(true); holat('Saqlandi: ' + h.name + ' — saytni Ctrl+Shift+R bilan yangilang.'); });
     };
     if (fayl) { yoz(fayl).catch(function () { fayl = null; saqla(); }); return; }
     if (!window.showSaveFilePicker) { yuklab(); return; }
@@ -332,13 +348,14 @@
       holat('malumot.js o‘qilmadi: faylda yozuv xatosi bor. Toza nusxadagi malumot.js ni qo‘ying yoki F12 → Console ni ko‘ring.');
       return;
     }
-    d = fayldagi();
-    draftKalit = M.qoralamaKaliti(location.href, d);
+    var asl = fayldagi(), mos = moslangan(asl);
+    draftKalit = M.qoralamaKaliti(location.href, asl);
+    d = mos.d;
     try {
       var q = JSON.parse(localStorage.getItem(draftKalit));
       if (q && q.SAYT && Array.isArray(q.ELEMENTLAR) && q.FORMA && JSON.stringify(q) !== JSON.stringify(d)) {
         if (confirm('“' + (q.SAYT.nomi || 'Nomsiz') + '” qoralamasi topildi. Hozirgi loyiha: “' + (d.SAYT.nomi || 'Nomsiz') + '”. Qoralamani tiklaysizmi? Bekor qilish fayldagi holatni ochadi; qoralama saqlanadi.')) {
-          d = q; holat('Avvalgi saqlanmagan ish tiklandi.');
+          d = moslangan(q).d; mos.tuzatishlar = []; holat('Avvalgi saqlanmagan ish tiklandi.');
         } else {
           // Keep the declined draft intact. This editor starts a separate draft.
           draftKalit += ':yangi:' + M.yangiId();
@@ -348,6 +365,7 @@
     if (typeof d.SAYT.rang !== 'string') d.SAYT.rang = '';
     if (!d.SAYT.mavzu) d.SAYT.mavzu = 'toza';
     d.SAYT.sahifalar = d.SAYT.sahifalar || {};
+    if (mos.tuzatishlar.length) holat('malumot.js dagi ' + mos.tuzatishlar.length + ' ta kichik xato avtomatik tuzatildi (masalan: ' + mos.tuzatishlar[0] + ') — “Faylga saqlash” bilan faylga yozing.');
     chiz(); korish();
     try { localStorage.setItem(draftKalit, JSON.stringify(d)); } catch (e) { /* xotira yopiq */ }
 
@@ -356,7 +374,7 @@
     $('#t-yangila').addEventListener('click', korish);
     $('#t-qaytar').addEventListener('click', function () {
       if (!confirm('Saqlanmagan o‘zgarishlar o‘chib, malumot.js dagi holat qaytariladi. Davom etasizmi?')) return;
-      d = fayldagi(); try { localStorage.removeItem(draftKalit); } catch (e) { /* */ }
+      d = moslangan(fayldagi()).d; try { localStorage.removeItem(draftKalit); } catch (e) { /* */ }
       chiz(); korish(); holat('Fayldagi holat qaytarildi.');
     });
     document.querySelectorAll('[data-kenglik]').forEach(function (b) {

@@ -61,12 +61,12 @@ test('foreground selection measures the actual returned foreground',()=>{
 const file={SAYT:{nomi:'Project B',rang:'',sahifalar:{}},ELEMENTLAR:[],FORMA:{maydonlar:[]}};
 const draft={SAYT:{...file.SAYT,nomi:'Project A'},ELEMENTLAR:[],FORMA:{maydonlar:[]}};
 const editorUrl='http://localhost:8080/project/tahrir.html';
-function startup(storage,accept){
+function startup(storage,accept,loaded=file){
  const source=readFileSync(new URL('./tahrir.js',import.meta.url),'utf8');
  const marker='    chiz(); korish();\n    try { localStorage.setItem';assert.ok(source.includes(marker));
- const modified=source.replace(marker,'    window.audit={data:d,key:draftKalit,preview:korish}; return;\n    try { localStorage.setItem');
- const frame={contentWindow:{location:{hash:'#royxat'}}},win={...structuredClone(file),Mantiq:M};let prompts=0;
- vm.runInNewContext(modified,{window:win,location:{href:editorUrl},document:{readyState:'complete',querySelector:s=>s==='#t-iframe'?frame:{}},localStorage:storage,confirm:()=>{prompts++;return accept;}});
+ const modified=source.replace(marker,'    window.audit={data:d,key:()=>draftKalit,preview:korish,kochir:qoralamaKochir,edit:f=>f(d)}; return;\n    try { localStorage.setItem');
+ const frame={contentWindow:{location:{hash:'#royxat'}}},win={...structuredClone(loaded),Mantiq:M};let prompts=0;
+ vm.runInNewContext(modified,{window:win,location:{href:editorUrl},document:{readyState:'complete',querySelector:s=>s==='#t-iframe'?frame:{}},console,localStorage:storage,confirm:()=>{prompts++;return accept;}});
  return {win,frame,prompts};
 }
 test('editor ignores unscoped or other-project drafts and preserves them',()=>{
@@ -79,9 +79,9 @@ test('editor ignores unscoped or other-project drafts and preserves them',()=>{
 test('matching draft requires consent; declined draft and preview remain separate',()=>{
  const s=memory(),key=M.qoralamaKaliti(editorUrl,file),raw=JSON.stringify(draft);s.setItem(key,raw);
  const rejected=startup(s,false);assert.equal(rejected.prompts,1);assert.equal(rejected.win.audit.data.SAYT.nomi,'Project B');
- assert.notEqual(rejected.win.audit.key,key);assert.equal(s.getItem(key),raw);
- rejected.win.audit.preview();const url=new URL(rejected.frame.src,editorUrl);assert.equal(url.searchParams.get('qoralamaKey'),rejected.win.audit.key);
- const accepted=startup(s,true);assert.equal(accepted.prompts,1);assert.equal(accepted.win.audit.data.SAYT.nomi,'Project A');assert.equal(accepted.win.audit.key,key);
+ assert.notEqual(rejected.win.audit.key(),key);assert.equal(s.getItem(key),raw);
+ rejected.win.audit.preview();const url=new URL(rejected.frame.src,editorUrl);assert.equal(url.searchParams.get('qoralamaKey'),rejected.win.audit.key());
+ const accepted=startup(s,true);assert.equal(accepted.prompts,1);assert.equal(accepted.win.audit.data.SAYT.nomi,'Project A');assert.equal(accepted.win.audit.key(),key);
 });
 
 test('preview reads the editor draft and cannot pick another project key',()=>{
@@ -99,4 +99,43 @@ test('preview reads the editor draft and cannot pick another project key',()=>{
  assert.equal(preview(alternate,{...file,SAYT:{...file.SAYT,nomi:'Saved version'}}).SAYT.nomi,'Project A','live preview continues after a file save');
  const foreign=M.qoralamaKaliti('http://localhost:8080/other/tahrir.html',draft)+':yangi:fixture';s.setItem(foreign,JSON.stringify(draft));
  assert.equal(preview(foreign),null);
+});
+
+test('loader repairs common AI data mistakes without touching the original',()=>{
+ const raw={SAYT:{nomi:'Fixture',mavzu:'Samar',rang:'#abc',sahifalar:['bosh','royxat','ariza']},
+  ELEMENTLAR:[{id:'a',title:'One',price:'Bepul',capacity:'20',date:'05.11.2026',reyting:5},{id:'a',nom:'Two',joylar:'—',narx:'12 000 so‘m'},{nom:'Three'}],
+  FORMA:{maydonlar:[{name:'vaqt',label:'Time',type:'time',required:'true'},{nom:'jami',yorliq:'Count',tur:'number',soni:true},{nom:'Phone',tur:'phone'},{nom:'element',tur:'select'},{nom:'ism',yorliq:'A'},{nom:'ism',yorliq:'B'},{nom:'x',tur:'weird'}]}};
+ const before=JSON.stringify(raw),r=M.moslash(raw);
+ assert.equal(JSON.stringify(raw),before,'original unchanged');
+ assert.equal(r.SAYT.mavzu,'samar');assert.equal(r.SAYT.rang,'#aabbcc');assert.deepEqual(Object.keys(r.SAYT.sahifalar),['bosh','royxat','ariza']);
+ const [a,b,c]=r.ELEMENTLAR;
+ assert.deepEqual([a.nom,a.narx,a.joylar,a.sana,a.reyting],['One',0,20,'2026-11-05',5]);
+ assert.deepEqual([b.id,b.narx,'joylar' in b],['a-2',12000,false]);assert.equal(c.id,'e3');
+ assert.equal(new Set(r.ELEMENTLAR.map(e=>e.id)).size,3);
+ const f=r.FORMA.maydonlar,names=f.map(m=>m.nom);
+ assert.equal(new Set(names).size,names.length);assert.ok(names.every(n=>!M.ichkiNom(n)));
+ assert.deepEqual(f.map(m=>m.tur),['matn','son','telefon','tanlash','matn','matn','matn']);
+ assert.equal(f[0].majburiy,true);assert.ok(new RegExp(f[0].naqsh).test('14:30'));assert.ok(!new RegExp(f[0].naqsh).test('25:00'));
+ assert.equal(f[1].soni,true);assert.equal(f[3].nom,'element');assert.equal(f[2].nom,'phone');
+ assert.equal(M.tekshir(f.filter(m=>m.tur!=='tanlash'),{[f[0].nom]:'14:30',[f[1].nom]:'2',phone:'+998901234567'}).ok,true,'renamed reserved fields can be submitted');
+ assert.ok(r.tuzatishlar.length>5);
+ const clean=M.moslash({SAYT:{nomi:'C',mavzu:'toza',rang:'',sahifalar:{bosh:'Bosh'}},ELEMENTLAR:[{id:'k1',nom:'K',narx:5}],FORMA:{maydonlar:[{nom:'ism',yorliq:'Ism',tur:'matn'}]}});
+ assert.deepEqual(clean.tuzatishlar,[],'clean data needs no repair');
+ const sample=vm.runInNewContext(readFileSync(new URL('./malumot.js',import.meta.url),'utf8')+';({SAYT:window.SAYT,ELEMENTLAR:window.ELEMENTLAR,FORMA:window.FORMA})',{window:{}});
+ assert.deepEqual(M.moslash(sample).tuzatishlar,[],'bundled sample is already clean');
+});
+test('table import accepts free and unlimited markers',()=>{
+ const r=M.jadvalOqi('Nomi;Narx;Joylar\nA;Bepul;—\nB;tekin;cheksiz\nC;0;-');
+ assert.equal(r.xato,'');assert.deepEqual(r.elementlar.map(e=>[e.narx,'joylar' in e]),[[0,false],[0,false],[0,false]]);
+});
+test('saving moves the draft to the new file version so later edits survive reload',()=>{
+ const s=memory(),first=startup(s,true),oldKey=first.win.audit.key();
+ first.win.audit.edit(d=>{d.SAYT.nomi='Saved';});
+ const saved=vm.runInNewContext(M.malumotYoz(first.win.audit.data)+';({SAYT:window.SAYT,ELEMENTLAR:window.ELEMENTLAR,FORMA:window.FORMA})',{window:{}});
+ first.win.audit.kochir(true);
+ const newKey=first.win.audit.key();
+ assert.notEqual(newKey,oldKey);assert.equal(newKey,M.qoralamaKaliti(editorUrl,saved));assert.equal(s.getItem(oldKey),null);
+ first.win.audit.edit(d=>{d.SAYT.nomi='After save';});s.setItem(newKey,JSON.stringify(first.win.audit.data));
+ const reopened=startup(s,true,saved);
+ assert.equal(reopened.prompts,1);assert.equal(reopened.win.audit.data.SAYT.nomi,'After save');
 });

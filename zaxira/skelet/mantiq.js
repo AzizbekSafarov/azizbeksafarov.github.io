@@ -359,10 +359,10 @@
         // Tanilmagan ustun (Muallif, O'qituvchi...) yo'qolmaydi: qo'shimcha maydon bo'ladi.
         if (!maydon) { e.qoshimcha = e.qoshimcha || {}; e.qoshimcha[sarlavha[j]] = qiymat; return; }
         if (maydon === 'narx' || maydon === 'joylar') {
-          var son = qiymat.replace(/\s/g, '').replace(/(?:so[‘’ʻʼ']?m|uzs)$/i, '').replace(',', '.');
-          var n = Number(son);
-          if (!/^\d+(?:\.\d+)?$/.test(son) || !isFinite(n) || n < 0 || (maydon === 'joylar' && Math.floor(n) !== n)) xatolar.push((i + 2) + '-qator: ' + sarlavha[j] + ' noto‘g‘ri son.');
-          else e[maydon] = n;
+          // "Bepul" -> 0; "—", "cheksiz" -> cheklanmagan (maydon yozilmaydi).
+          var son = sonOqi(qiymat, maydon === 'joylar');
+          if (!son.ok) xatolar.push((i + 2) + '-qator: ' + sarlavha[j] + ' noto‘g‘ri son.');
+          else if (son.qiymat !== null) e[maydon] = son.qiymat;
         }
         else if (maydon === 'sana') e.sana = sanaIso(qiymat);
         else e[maydon] = qiymat;
@@ -371,6 +371,130 @@
       return e;
     }).filter(function (e) { return e.nom; });
     return { elementlar: xatolar.length ? [] : elementlar, tanilmagan: tanilmagan, xato: xatolar.join(' ') };
+  }
+
+  /**
+   * Biletdagi son matnini o'qiydi: "120 000 so'm" -> 120000, "Bepul" -> 0.
+   * Natija: { ok, qiymat } ; qiymat null — cheklanmagan ("—", "cheksiz").
+   */
+  function sonOqi(qiymat, butun) {
+    var s = normal(qiymat).replace(/\s/g, '');
+    if (s === '' || /^(-|—|–|cheksiz|cheklanmagan|∞|yo'q)$/.test(s)) return { ok: true, qiymat: null };
+    if (/^(bepul|tekin|free)$/.test(s)) return { ok: true, qiymat: 0 };
+    s = s.replace(/(so'm|som|sum|uzs)$/, '').replace(',', '.');
+    if (!/^\d+(\.\d+)?$/.test(s)) return { ok: false, qiymat: null };
+    var n = Number(s);
+    if (!isFinite(n) || (butun && Math.floor(n) !== n)) return { ok: false, qiymat: null };
+    return { ok: true, qiymat: n };
+  }
+
+  var MAVZU_NOMLARI = ['toza', 'forma', 'samar', 'orbita', 'nashr', 'hisob', 'ziyo', 'meros', 'yuksal'];
+  var TUR_MOS = { matn: 'matn', text: 'matn', string: 'matn', input: 'matn', name: 'matn',
+    matnmaydon: 'matnmaydon', textarea: 'matnmaydon', longtext: 'matnmaydon', izoh: 'matnmaydon',
+    telefon: 'telefon', tel: 'telefon', phone: 'telefon',
+    email: 'email', 'e-mail': 'email', pochta: 'email',
+    son: 'son', number: 'son', int: 'son', integer: 'son', raqam: 'son',
+    sana: 'sana', date: 'sana',
+    tanlash: 'tanlash', select: 'tanlash', dropdown: 'tanlash', choice: 'tanlash', radio: 'tanlash',
+    belgi: 'belgi', checkbox: 'belgi', boolean: 'belgi', bool: 'belgi', consent: 'belgi', rozilik: 'belgi' };
+  var ELEMENT_KALIT = { name: 'nom', nomi: 'nom', title: 'nom', category: 'turi', type: 'turi', tur: 'turi', janr: 'turi',
+    date: 'sana', time: 'vaqt', place: 'joy', location: 'joy', manzil: 'joy', address: 'joy', price: 'narx', narxi: 'narx',
+    capacity: 'joylar', seats: 'joylar', orinlar: 'joylar', description: 'tavsif', izoh: 'tavsif', image: 'rasm', img: 'rasm', photo: 'rasm' };
+  var MAYDON_KALIT = { name: 'nom', label: 'yorliq', title: 'yorliq', type: 'tur', required: 'majburiy', options: 'variantlar', hint: 'maslahat', placeholder: 'maslahat' };
+  function rost(q) { return q === true || q === 'true' || q === 'ha' || q === 1; }
+
+  /**
+   * malumot.js ni AI yoki qo'lda yozilgandagi kichik xatolardan tozalaydi.
+   * Asl obyekt o'zgarmaydi. Natija: { SAYT, ELEMENTLAR, FORMA, tuzatishlar: [matn] }.
+   * Sayt ham, tahrir paneli ham yuklashda shu funksiyadan o'tkazadi.
+   */
+  function moslash(d) {
+    var t = [];
+    var S = d && d.SAYT && typeof d.SAYT === 'object' ? JSON.parse(JSON.stringify(d.SAYT)) : d && d.SAYT;
+    var E = d ? d.ELEMENTLAR : undefined;
+    var F = d && d.FORMA && typeof d.FORMA === 'object' ? JSON.parse(JSON.stringify(d.FORMA)) : d && d.FORMA;
+    if (E && !Array.isArray(E) && typeof E === 'object') { E = Object.keys(E).map(function (k) { return E[k]; }); t.push('ELEMENTLAR obyektdan ro‘yxatga o‘tkazildi.'); }
+    E = Array.isArray(E) ? JSON.parse(JSON.stringify(E)) : E;
+
+    if (S && typeof S === 'object') {
+      var mv = normal(S.mavzu || 'toza');
+      if (MAVZU_NOMLARI.indexOf(mv) === -1) { if (S.mavzu) t.push('Noma’lum mavzu “' + S.mavzu + '” → toza.'); mv = 'toza'; }
+      else if (S.mavzu !== mv) t.push('Mavzu nomi kichik harfga o‘tkazildi: ' + mv + '.');
+      S.mavzu = mv;
+      var r = String(S.rang == null ? '' : S.rang).trim();
+      if (/^#[0-9a-f]{3}$/i.test(r)) r = '#' + r.slice(1).split('').map(function (c) { return c + c; }).join('');
+      if (r && !/^#[0-9a-f]{6}$/i.test(r)) { t.push('Rang “' + S.rang + '” #RRGGBB emas — mavzu rangi ishlatiladi.'); r = ''; }
+      S.rang = r;
+      if (Array.isArray(S.sahifalar)) {
+        var nomlar = { bosh: 'Bosh sahifa', royxat: 'Ro‘yxat', ariza: 'Ariza', saqlangan: 'Arizalarim', statistika: 'Statistika', haqida: 'Biz haqimizda' };
+        var ob = {}; S.sahifalar.forEach(function (k) { k = normal(k); if (nomlar[k]) ob[k] = nomlar[k]; });
+        S.sahifalar = ob; t.push('sahifalar ro‘yxatdan obyektga o‘tkazildi.');
+      }
+      ['namuna', 'saqlash'].forEach(function (k) { if (typeof S[k] === 'string') S[k] = rost(S[k]); });
+    }
+
+    if (Array.isArray(E)) {
+      var idlar = {};
+      E = E.filter(function (e) { return e && typeof e === 'object' && !Array.isArray(e); }).map(function (e, i) {
+        var x = {};
+        Object.keys(e).forEach(function (k) {
+          var kk = ELEMENT_KALIT[normal(k)] && !(ELEMENT_KALIT[normal(k)] in e) ? ELEMENT_KALIT[normal(k)] : k;
+          if (kk !== k) t.push('Element kaliti “' + k + '” → ' + kk + '.');
+          x[kk] = e[k];
+        });
+        var id = String(x.id == null ? '' : x.id).trim().replace(/[^\w-]+/g, '-').replace(/^-+|-+$/g, '');
+        if (!id) id = 'e' + (i + 1);
+        var asl = id, n = 2;
+        while (idlar[id]) id = asl + '-' + n++;
+        if (String(x.id) !== id) t.push('Element id “' + (x.id == null ? '' : x.id) + '” → ' + id + '.');
+        idlar[id] = true; x.id = id;
+        if (x.nom != null) x.nom = String(x.nom);
+        if (x.sana) { var iso = sanaIso(x.sana); if (iso !== x.sana) { x.sana = iso; } }
+        ['narx', 'joylar'].forEach(function (k) {
+          if (x[k] === undefined || typeof x[k] === 'number') return;
+          var s = sonOqi(x[k], k === 'joylar');
+          if (!s.ok) { t.push((x.nom || id) + ': ' + k + ' “' + x[k] + '” son emas — olib tashlandi.'); delete x[k]; }
+          else if (s.qiymat === null) delete x[k];
+          else x[k] = s.qiymat;
+        });
+        return x;
+      });
+    }
+
+    if (F && typeof F === 'object' && Array.isArray(F.maydonlar)) {
+      var band = [];
+      F.maydonlar = F.maydonlar.filter(function (m) { return m && typeof m === 'object'; }).map(function (m0) {
+        var m = {};
+        Object.keys(m0).forEach(function (k) { var kk = MAYDON_KALIT[k] && !(MAYDON_KALIT[k] in m0) ? MAYDON_KALIT[k] : k; m[kk] = m0[k]; });
+        var tur = TUR_MOS[normal(m.tur || 'matn')];
+        if (normal(m.tur) === 'time' || normal(m.tur) === 'vaqt') {
+          tur = 'matn'; m.naqsh = m.naqsh || '^([01]\\d|2[0-3]):[0-5]\\d$'; m.naqshXato = m.naqshXato || 'Vaqtni SS:DD ko‘rinishida kiriting, masalan 14:30';
+          if (!m.maslahat) m.maslahat = 'Masalan: 14:30';
+        }
+        if (!tur) { t.push('Maydon turi “' + m.tur + '” noma’lum → matn.'); tur = 'matn'; }
+        else if (m.tur != null && tur !== m.tur) t.push('Maydon turi “' + m.tur + '” → ' + tur + '.');
+        m.tur = tur;
+        if (typeof m.majburiy === 'string') m.majburiy = rost(m.majburiy);
+        if (typeof m.soni === 'string') m.soni = rost(m.soni);
+        if (Array.isArray(m.variantlar)) m.variantlar = m.variantlar.map(function (v) {
+          return v && typeof v === 'object' ? { qiymat: String(v.qiymat != null ? v.qiymat : v.matn), matn: String(v.matn != null ? v.matn : v.qiymat) } : { qiymat: String(v), matn: String(v) };
+        });
+        ['min', 'max'].forEach(function (k) { if (typeof m[k] === 'string' && m[k] !== '' && isFinite(Number(m[k]))) m[k] = Number(m[k]); });
+        if (m.yorliq == null) m.yorliq = m.nom || 'Maydon';
+        var nom = m.nom === 'element' ? 'element' : String(m.nom || '').toLowerCase().replace(/[^a-z0-9_]/g, '');
+        if (!/^[a-z]/.test(nom) || ichkiNom(nom)) {
+          var yangi = nomYasa(nom && !ichkiNom(nom) ? nom : (ichkiNom(nom) ? nom + 'maydoni' : m.yorliq), band);
+          if (m.nom) t.push('Maydon nomi “' + m.nom + '” → ' + yangi + (ichkiNom(nom) ? ' (ichki nom band edi).' : '.'));
+          nom = yangi;
+        }
+        var asl = nom, n = 2;
+        while (band.indexOf(nom) !== -1) nom = asl + n++;
+        if (nom !== asl) t.push('Takror maydon nomi “' + asl + '” → ' + nom + '.');
+        band.push(nom); m.nom = nom;
+        return m;
+      });
+    }
+    return { SAYT: S, ELEMENTLAR: E, FORMA: F, tuzatishlar: t };
   }
 
   /** {SAYT, ELEMENTLAR, FORMA} dan har doim to'g'ri yozilgan malumot.js matnini yasaydi. */
@@ -390,7 +514,7 @@
     tekshir: tekshir, filtrla: filtrla, turlar: turlar, qolganJoy: qolganJoy, yozuvSoni: yozuvSoni,
     saralash: saralash, jamiNarx: jamiNarx, statistika: statistika,
     ombor: ombor, csv: csv, yangiId: yangiId,
-    matnRangi: matnRangi, nomYasa: nomYasa, ichkiNom: ichkiNom, qoralamaKaliti: qoralamaKaliti, jadvalOqi: jadvalOqi, sanaIso: sanaIso, malumotYoz: malumotYoz,
+    matnRangi: matnRangi, nomYasa: nomYasa, ichkiNom: ichkiNom, sonOqi: sonOqi, moslash: moslash, qoralamaKaliti: qoralamaKaliti, jadvalOqi: jadvalOqi, sanaIso: sanaIso, malumotYoz: malumotYoz,
     QORALAMA_KALIT: 'zaxira-tahrir-qoralama'
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = Mantiq;
