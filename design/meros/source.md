@@ -1,6 +1,6 @@
 # Meros — editable source snapshot
 
-Source fingerprint: `dd4fcdcad021b0ed36f24dff0b57de15deeb53b0ea1aaeee467929ab5450c8ac`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `dd4fcdcad021b0ed36f24dff0b57de15deeb53b0ea1aaeee467929ab5450c8ac`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -239,6 +239,12 @@ test('all content IDs, images and answers are internally consistent',()=>{
 
 ```
 
+## site/mark.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" fill="#1d2ed8"/><path d="M5 31V9H12L20 20L28 9H35V31H27V22L20 30L13 22V31Z" fill="#e5f344"/></svg>
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -285,3 +291,16 @@ alfa-slab-one, archivo, literata. Acquired from the official google/fonts reposi
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `fonts/alfaslabone.ttf` | 95 KB | [yuklash](https://azizbeksafarov.github.io/design/meros-site/fonts/alfaslabone.ttf) |
+| `fonts/archivo.ttf` | 643 KB | [yuklash](https://azizbeksafarov.github.io/design/meros-site/fonts/archivo.ttf) |
+| `fonts/literata.ttf` | 932 KB | [yuklash](https://azizbeksafarov.github.io/design/meros-site/fonts/literata.ttf) |
+| `images/guri-amir.jpg` | 474 KB | [yuklash](https://azizbeksafarov.github.io/design/meros-site/images/guri-amir.jpg) |
+| `images/registan.jpg` | 382 KB | [yuklash](https://azizbeksafarov.github.io/design/meros-site/images/registan.jpg) |
+| `images/shohi-zinda.jpg` | 385 KB | [yuklash](https://azizbeksafarov.github.io/design/meros-site/images/shohi-zinda.jpg) |

@@ -1,6 +1,6 @@
 # Samar — editable source snapshot
 
-Source fingerprint: `deb074c142f1e0bc00b30136816895bddbc5b43bb283493025a00edb2d7a23f7`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `deb074c142f1e0bc00b30136816895bddbc5b43bb283493025a00edb2d7a23f7`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -303,6 +303,12 @@ test('duplicate, unknown and object stops are sanitized without mutation',()=>{c
 
 ```
 
+## site/mark.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="20" fill="#e9e3d0"/><path d="M20 5L29 30L20 26L11 30Z" fill="#173952"/><path d="M20 5V26L11 30Z" fill="#5794aa"/></svg>
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -341,3 +347,15 @@ lora, source-sans-3. Acquired from the official google/fonts repository under th
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `fonts/lora.ttf` | 207 KB | [yuklash](https://azizbeksafarov.github.io/design/samar-site/fonts/lora.ttf) |
+| `fonts/sourcesans3.ttf` | 631 KB | [yuklash](https://azizbeksafarov.github.io/design/samar-site/fonts/sourcesans3.ttf) |
+| `images/guri-amir.jpg` | 474 KB | [yuklash](https://azizbeksafarov.github.io/design/samar-site/images/guri-amir.jpg) |
+| `images/registan.jpg` | 382 KB | [yuklash](https://azizbeksafarov.github.io/design/samar-site/images/registan.jpg) |
+| `images/shohi-zinda.jpg` | 385 KB | [yuklash](https://azizbeksafarov.github.io/design/samar-site/images/shohi-zinda.jpg) |

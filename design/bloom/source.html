@@ -1,5 +1,8 @@
 <!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi"><title>Bloom · Material Design 3 — source</title><link rel="icon" href="/assets/hq/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../handoff/styles.css?v=560965086502"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="/">← Bosh qarorgoh</a><a href="/design/start/">AI bilan boshlash</a><a href="/design/">Tanlangan dizaynlar</a></nav></header><main id="main" class="wrap"><h1>Bloom · Material Design 3 — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content"><h2>Bloom · Material Design 3 — editable source snapshot</h2>
-<p>Source fingerprint: <code>36aa144427df8d89269c3a36a46d1f1ed320ebfb167173e46158f32f7ae022db</code>. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.</p>
+<p>Source fingerprint: <code>36aa144427df8d89269c3a36a46d1f1ed320ebfb167173e46158f32f7ae022db</code>. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under <code>site/</code> and listed with download links at the end of this file. Work from source.zip when you can.</p>
+<h3>site/index.html</h3>
+<pre><code>&lt;!doctype html&gt;&lt;html lang=&quot;uz&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#fdf7ff&quot;&gt;&lt;title&gt;Bloom — Material Design 3&lt;/title&gt;&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;./bloom.svg&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;&lt;script type=&quot;module&quot; src=&quot;/src/main.jsx&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre>
 <h3>site/src/main.jsx</h3>
 <pre><code>import React,{useState,useEffect,useRef} from &#x27;react&#x27;;
 import {createRoot} from &#x27;react-dom/client&#x27;;
@@ -194,6 +197,79 @@ body{font-size:16px;line-height:24px}
 .palette-modal [slot=content]{padding-bottom:8px}.palette-modal .palette-samples{margin-bottom:0}
 @media(max-width:460px){.palette-options{grid-template-columns:1fr;gap:8px}.palette-option{min-height:68px}.palette-option&gt;.palette-name{font-size:16px;line-height:24px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
+</code></pre>
+<h3>site/src/fonts/google-sans-flex.css</h3>
+<pre><code>@font-face {
+  font-family: &#x27;Google Sans Flex&#x27;;
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(google-sans-flex-latin-ext.woff2) format(&#x27;woff2&#x27;);
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: &#x27;Google Sans Flex&#x27;;
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(google-sans-flex-latin.woff2) format(&#x27;woff2&#x27;);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+</code></pre>
+<h3>site/src/fonts/roboto.css</h3>
+<pre><code>@font-face {
+  font-family: &#x27;Roboto&#x27;;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./roboto-400.ttf) format(&#x27;truetype&#x27;);
+}
+@font-face {
+  font-family: &#x27;Roboto&#x27;;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./roboto-500.ttf) format(&#x27;truetype&#x27;);
+}
+@font-face {
+  font-family: &#x27;Roboto&#x27;;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./roboto-600.ttf) format(&#x27;truetype&#x27;);
+}
+
+</code></pre>
+<h3>site/src/fonts/material-symbols.css</h3>
+<pre><code>@font-face {
+  font-family: &#x27;Material Symbols Rounded&#x27;;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(./material-symbols.woff2) format(&#x27;woff2&#x27;);
+}
+
+.material-symbols-rounded {
+  font-family: &#x27;Material Symbols Rounded&#x27;;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: &#x27;liga&#x27;;
+  -webkit-font-smoothing: antialiased;
+}
 </code></pre>
 <h3>site/src/persistence.js</h3>
 <pre><code>import {initialProjects, validateProjects} from &#x27;./model.js&#x27;;
@@ -460,6 +536,9 @@ test(&#x27;Bloom persisted tasks must have readable bounded labels&#x27;,()=&gt;
   }
 });
 </code></pre>
+<h3>site/public/bloom.svg</h3>
+<pre><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 64 64&quot;&gt;&lt;rect width=&quot;64&quot; height=&quot;64&quot; rx=&quot;22&quot; fill=&quot;#dce6ff&quot;/&gt;&lt;g fill=&quot;#174ea6&quot;&gt;&lt;ellipse cx=&quot;32&quot; cy=&quot;20&quot; rx=&quot;10&quot; ry=&quot;16&quot;/&gt;&lt;ellipse cx=&quot;32&quot; cy=&quot;44&quot; rx=&quot;10&quot; ry=&quot;16&quot;/&gt;&lt;ellipse cx=&quot;20&quot; cy=&quot;32&quot; rx=&quot;16&quot; ry=&quot;10&quot;/&gt;&lt;ellipse cx=&quot;44&quot; cy=&quot;32&quot; rx=&quot;16&quot; ry=&quot;10&quot;/&gt;&lt;/g&gt;&lt;circle cx=&quot;32&quot; cy=&quot;32&quot; r=&quot;8&quot; fill=&quot;#dce6ff&quot;/&gt;&lt;/svg&gt;
+</code></pre>
 <h3>site/package.json</h3>
 <pre><code>{&quot;name&quot;:&quot;bloom-material-expressive&quot;,&quot;version&quot;:&quot;1.0.0&quot;,&quot;private&quot;:true,&quot;type&quot;:&quot;module&quot;,&quot;scripts&quot;:{&quot;dev&quot;:&quot;vite --host 127.0.0.1 --port 8767 --strictPort&quot;,&quot;build&quot;:&quot;vite build&quot;,&quot;preview&quot;:&quot;vite preview --host 127.0.0.1 --port 8767 --strictPort&quot;,&quot;test&quot;:&quot;node --test src/*.test.js&quot;},&quot;dependencies&quot;:{&quot;@material/material-color-utilities&quot;:&quot;^0.4.0&quot;,&quot;@material/web&quot;:&quot;^2.5.0&quot;,&quot;motion&quot;:&quot;^12.35.0&quot;,&quot;react&quot;:&quot;^19.2.0&quot;,&quot;react-dom&quot;:&quot;^19.2.0&quot;},&quot;devDependencies&quot;:{&quot;vite&quot;:&quot;^7.3.1&quot;}}
 </code></pre>
@@ -483,4 +562,7 @@ root = Path(__file__).parent / &#x27;src/fonts&#x27;
 (root/&#x27;material-symbols.woff2&#x27;).write_bytes(font)
 (root/&#x27;material-symbols.css&#x27;).write_text(css.replace(font_url, &#x27;./material-symbols.woff2&#x27;), encoding=&#x27;utf-8&#x27;)
 print(&#x27;Updated Material Symbols subset:&#x27;, len(font), &#x27;bytes&#x27;)
-</code></pre></article></main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · 2026-10-31</div></footer></body></html>
+</code></pre>
+<h3>Shrift va rasmlar</h3>
+<p>Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular <code>source.zip</code> ichidagi <code>site/</code> da bor, lekin matn eksportida (<code>source.md</code>, <code>files/*.txt</code>) yo‘q. Bloom’da <code>site/dist/</code> — ulardan yig‘ilgan tayyor build. To‘liq dizayn uchun ZIP ichidagi <code>site/</code> bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.</p>
+<div class="table-wrap"><table><thead><tr><th>Fayl (<code>site/</code> ichida)</th><th>Hajm</th><th>Havola</th></tr></thead><tbody><tr><td><code>src/fonts/google-sans-flex-latin-ext.woff2</code></td><td>18 KB</td><td><a href="https://azizbeksafarov.github.io/design/material-expressive/src/fonts/google-sans-flex-latin-ext.woff2">yuklash</a></td></tr><tr><td><code>src/fonts/google-sans-flex-latin.woff2</code></td><td>35 KB</td><td><a href="https://azizbeksafarov.github.io/design/material-expressive/src/fonts/google-sans-flex-latin.woff2">yuklash</a></td></tr><tr><td><code>src/fonts/material-symbols.woff2</code></td><td>5 KB</td><td><a href="https://azizbeksafarov.github.io/design/material-expressive/src/fonts/material-symbols.woff2">yuklash</a></td></tr><tr><td><code>src/fonts/roboto-400.ttf</code></td><td>120 KB</td><td><a href="https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-400.ttf">yuklash</a></td></tr><tr><td><code>src/fonts/roboto-500.ttf</code></td><td>121 KB</td><td><a href="https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-500.ttf">yuklash</a></td></tr><tr><td><code>src/fonts/roboto-600.ttf</code></td><td>121 KB</td><td><a href="https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-600.ttf">yuklash</a></td></tr></tbody></table></div></article></main><footer><div class="wrap">Azizbek Safarov · Tanlov uchun tayyorgarlik paketi · 2026-10-31</div></footer></body></html>

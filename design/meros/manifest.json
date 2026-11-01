@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "560aa655078fc323a07ebdf82e487ac810174b8c58c10e27e80597d972317505",
-  "archive_bytes": 2811271,
+  "archive_sha256": "27c6d0b989a050f8cfc45583d5d8f8739c1684454441dd8bdcabe9c123abba1d",
+  "archive_bytes": 2811675,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -59,6 +59,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/combinations.test.mjs.txt"
     },
     {
+      "path": "mark.svg",
+      "url": "https://azizbeksafarov.github.io/design/meros/files/mark.svg.txt",
+      "sha256": "c11c9da4cbf33acf4182dcdb40849c6b1ef8af194bd68af18e4bdbe8c22880a3",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/mark.svg.txt"
+    },
+    {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/meros/files/CREDITS.md.txt",
       "sha256": "ea76ca71dd714f48f2c65625e2d60056ff37a95818e4e8c936bf550571830be6",
@@ -79,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7003,
-      "sha256": "649359c3ca126e54302c7b52406d8158b209af9c6173fbc824df3fa0fb3f5687"
+      "bytes": 8347,
+      "sha256": "4b3d7ab7eccf9fa73b3e1e11ccab4a4b05c0a9cdbf06ff15d442bd7b9d97b259"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -180,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16782,
-      "sha256": "afd7c55584c95d9285ef96c18549c67bf324fef7c3a8702c5ac02246d76cdeab"
+      "sha256": "fb214235b7dd2fe05e0b9c6de76f8526cdc67f1b85c73f51218eee36ecf7cbe2"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "749e05b7946031f9e0beac58ee5858bdaad992a5e94d689eacd95af40efa6f42"
+      "sha256": "5094970527693fb2a835b5a785f563fe48a5b97c1c97fc3bbb9246f6778a533a"
     },
     {
       "path": "README.md",
@@ -239,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10743,
-      "sha256": "b85e6c645ba3a717d238d453685426b6abfc4c9b01ebfa586ee9f2d93838d3a7"
+      "bytes": 10770,
+      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -254,8 +260,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13711,
-      "sha256": "f243e1c2b09de15d8fd9f6951019a2fae430e6ae5b8dd4a7836601eedba7a4df"
+      "bytes": 13742,
+      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

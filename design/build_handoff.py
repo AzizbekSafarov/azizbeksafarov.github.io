@@ -123,7 +123,7 @@ def render_md(md):
     return '\n'.join(output)
 
 def prompt(t):
-    return f"{SITE}/design/{t['slug']}/\nShu sahifadagi AI yo‘riqnomasini va {t['name']} kodini o‘qi. Sahifa o‘qilmasa, to‘g‘ridan-to‘g‘ri AI matni: {RAW}/design/{t['slug']}/ai.md\nUstoz AI tanlovi uchun birga ishlaymiz.\nBilet: [ekspert bergan topshiriq]\nQolgan vaqt: [haqiqiy vaqt]\nUslubni saqla, mazmun va funksiyalarni biletga moslashtir. Xatolarni tekshirib tuzat va qayta sina. Ishni HANDOFF.md ga yoz. Men bilan o‘zbekcha gaplash."
+    return f"{SITE}/design/{t['slug']}/\nShu sahifadagi AI yo‘riqnomasini o‘qi; {t['name']} kodini shrift va rasmlari bilan source.zip dan ol. Sahifa o‘qilmasa, to‘g‘ridan-to‘g‘ri AI matni: {RAW}/design/{t['slug']}/ai.md\nUstoz AI tanlovi uchun birga ishlaymiz.\nBilet: [ekspert bergan topshiriq]\nQolgan vaqt: [haqiqiy vaqt]\nUslubni saqla, mazmun va funksiyalarni biletga moslashtir. Xatolarni tekshirib tuzat va qayta sina. Ishni HANDOFF.md ga yoz. Men bilan o‘zbekcha gaplash."
 
 def rules(t):
     return entry_text.agents(t)
@@ -315,17 +315,43 @@ def source_files(t,templates):
     return {path:portable_bytes(path,data) for path,data in files.items()}
 
 def code_names(t,files):
-    if t['id']=='10':return ['src/main.jsx','src/style.css','src/persistence.js','src/persistence.test.js','src/model.js','src/model.test.js','src/combinations.test.js','package.json','vite.config.js','download_symbols.py']
-    if t['id']=='11':return ['index.html','style.css','app.js','motion.js','motion.test.mjs','model.js','model.test.mjs','combinations.test.mjs','uzbekistan.svg','brand-icon.svg']
-    return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','combinations.test.mjs','CREDITS.md','package.json']
+    # Every text file that shapes the rendered design is readable here; binaries are listed by assets().
+    if t['id']=='10':return ['index.html','src/main.jsx','src/style.css','src/fonts/google-sans-flex.css','src/fonts/roboto.css','src/fonts/material-symbols.css','src/persistence.js','src/persistence.test.js','src/model.js','src/model.test.js','src/combinations.test.js','public/bloom.svg','package.json','vite.config.js','download_symbols.py']
+    if t['id']=='11':return ['index.html','style.css','fonts/fonts.css','app.js','motion.js','MOTION.md','motion.test.mjs','model.js','model.test.mjs','combinations.test.mjs','uzbekistan.svg','brand-icon.svg']
+    return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','combinations.test.mjs','mark.svg','CREDITS.md','package.json']
+
+TEXT_SUFFIXES={'.html','.css','.js','.mjs','.jsx','.json','.md','.svg','.txt','.py'}
+
+def source_base(t):
+    if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:return ROOT/(t['slug']+'-site')
+    if t['id']=='11':return ROOT/'si-site'
+    return ROOT/'material-expressive'
+
+def assets(t,files):
+    """Binary files the design needs (fonts, photos, icons) with a published URL each."""
+    base=source_base(t);rows=[]
+    for path,data in sorted(files.items()):
+        rel=path[5:]
+        if not path.startswith('site/') or Path(rel).suffix.lower() in TEXT_SUFFIXES or Path(rel).name.startswith('.'):continue
+        if t['id']=='10' and rel.startswith('dist/'):continue
+        if not (base/rel).is_file():raise ValueError('Asset without published copy: '+rel)
+        rows.append((rel,len(data),f'{SITE}/design/{base.name}/{rel}'))
+    return rows
+
+def asset_section(t,files):
+    rows=assets(t,files)
+    built=' Bloom’da `site/dist/` — ulardan yig‘ilgan tayyor build.' if t['id']=='10' else ''
+    return ('\n## Shrift va rasmlar\n\nDizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q.'
+        +built+' To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.\n\n'
+        '| Fayl (`site/` ichida) | Hajm | Havola |\n|---|---|---|\n'+''.join(f'| `{rel}` | {size//1024 or 1} KB | [yuklash]({url}) |\n' for rel,size,url in rows))
 
 def code_text(t,files):
     names=code_names(t,files)
-    text=f"# {t['name']} — editable source snapshot\n\nSource fingerprint: `{t['fingerprint']}`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.\n\n"
+    text=f"# {t['name']} — editable source snapshot\n\nSource fingerprint: `{t['fingerprint']}`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.\n\n"
     for name in names:
         language={'.html':'html','.css':'css','.json':'json','.jsx':'jsx','.py':'python'}.get(Path(name).suffix,'javascript')
         text+=f'## site/{name}\n\n```{language}\n{files["site/"+name].decode("utf-8-sig")}\n```\n\n'
-    return text
+    return text+asset_section(t,files)
 
 def page_shell(title,content,css='../handoff/styles.css',description='Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi',extra=''):
     css += '?v='+text_digest(ROOT/'handoff/styles.css')[:12]
@@ -378,7 +404,7 @@ def build():
         t['fingerprint']=digest(''.join(path+':'+digest(data)+'\n' for path,data in sorted(files.items())).encode())
         brief=ai_brief(t);folder=ROOT/t['slug']
         heading,body=brief.split('\n',1)
-        brief=heading+'\n\n'+entry_text.brief_intro(t['name'])+body
+        brief=heading+'\n\n'+entry_text.brief_intro(t['name'])+body.rstrip('\n')+'\n'+asset_section(t,files)
         if t['archived']:brief='# TARIXIY ARXIV — faol starter sifatida tavsiya etilmaydi\n\nYangi ish: '+SITE+'/design/\n\n'+brief
         for name in code_names(t,files):
             target=folder/'files'/f'{name}.txt';target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(files['site/'+name])

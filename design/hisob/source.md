@@ -1,6 +1,6 @@
 # Hisob — editable source snapshot
 
-Source fingerprint: `aa93600ac56e3855f80f816cb6766b3d2c6e3c9d07e76698df14751d46122b03`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `aa93600ac56e3855f80f816cb6766b3d2c6e3c9d07e76698df14751d46122b03`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -174,6 +174,12 @@ test('report operations do not mutate the baseline dataset',()=>{const saved=JSO
 
 ```
 
+## site/mark.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="4" fill="#252d35"/><path d="M8 31V22H14V31ZM17 31V15H23V31ZM26 31V7H32V31Z" fill="#ffbd59"/></svg>
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -198,3 +204,12 @@ public-sans, ibm-plex-sans-condensed. Acquired from the official google/fonts re
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `fonts/ibmplexsanscondensed.ttf` | 108 KB | [yuklash](https://azizbeksafarov.github.io/design/hisob-site/fonts/ibmplexsanscondensed.ttf) |
+| `fonts/publicsans.ttf` | 100 KB | [yuklash](https://azizbeksafarov.github.io/design/hisob-site/fonts/publicsans.ttf) |

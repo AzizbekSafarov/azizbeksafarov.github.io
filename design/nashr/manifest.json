@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "272ce9a567762a7a4428ebcab51827a5708ee483c7d195dd91adcf2bbaeaa895",
-  "archive_bytes": 2295205,
+  "archive_sha256": "458f66266eef38f7f0ef5dccb1a5db25d12f00f4f181bc77a63676b441c06079",
+  "archive_bytes": 2295596,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -59,6 +59,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/combinations.test.mjs.txt"
     },
     {
+      "path": "mark.svg",
+      "url": "https://azizbeksafarov.github.io/design/nashr/files/mark.svg.txt",
+      "sha256": "41463dc5a6064c18123ccd40f3fd27a0f80f46253a328083d88abe5dcfc46728",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/nashr/files/mark.svg.txt"
+    },
+    {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/nashr/files/CREDITS.md.txt",
       "sha256": "18ed6920837047390742939ebd7171a5b151b41e4db2b2059278123e6abb2b43",
@@ -79,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6856,
-      "sha256": "4a4c12a17a1e9be6e57f2ce457e8401694a6b5f77320c7448e21d1396a32978e"
+      "bytes": 8050,
+      "sha256": "8fdf2539a69ca88080670cd32893d524edf8e59d1b8fb7919e4a6922d3e0acdc"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -180,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16598,
-      "sha256": "dfe6aa4c0a28ba5db011c2c8d65d5609b2c8d62b9ab9e8929a88cc5a91cd86b2"
+      "sha256": "895b627f55663b7a580c26bdcfc39f274cdc9816e9c0d0fe07e2fb8f8d9d352d"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "a645519ca03fd15c287dd3519f2363568a697d171ff90f7b59f859ef9bc3be7f"
+      "sha256": "ff447681d0685c8d751d52f85deddd2b7600ef103fab94039522b250bf436da1"
     },
     {
       "path": "README.md",
@@ -239,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10743,
-      "sha256": "b85e6c645ba3a717d238d453685426b6abfc4c9b01ebfa586ee9f2d93838d3a7"
+      "bytes": 10770,
+      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -254,8 +260,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13711,
-      "sha256": "f243e1c2b09de15d8fd9f6951019a2fae430e6ae5b8dd4a7836601eedba7a4df"
+      "bytes": 13742,
+      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

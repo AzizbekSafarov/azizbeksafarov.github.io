@@ -14,7 +14,7 @@ GitHub Pages brauzerda ishlashi, lekin ayrim AI veb-o‘qish vositalarida ochilm
 
 ## 1. Tanlov
 
-Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Ekspert amaliy vazifani (biletni) hammaga bir vaqtda beradi. Ishdan oldin hisob va dasturni sozlash uchun 15 daqiqa bor, u amaliy vaqtga kirmaydi. Ishdan keyin 15 daqiqalik himoya bo‘ladi: taqdimot, namoyish va savollar.
+Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Ekspert amaliy vazifani (biletni) hammaga bir vaqtda beradi; ishdan keyin 15 daqiqalik himoya bo‘ladi: taqdimot, namoyish va savollar. Mezonlar loyihasi va tashkilotchi videosiga ko‘ra, ishdan oldin hisob va dasturni sozlash uchun 15 daqiqa beriladi va u amaliy vaqtga kirmaydi.
 
 - Baholash 6 mezon, jami 100 ball. Imzoli qarordagi vaznlar: funksionallik 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. Shuning uchun avval biletdagi majburiy funksiyalar oxirigacha ishlashi kerak, keyin bezak.
 - Mezonlar loyihasida viloyat (hududiy) bosqichi uchun: kamida 3 sahifa yoki teng hajmli ekran, noto‘g‘ri kiritishni tekshiradigan 2 ta bog‘liq amal va natija, taxminan 2 soat. Faqat biletdagi majburiy imkoniyatlar talab qilinadi; qo‘shimcha funksiya asosiy kamchilikni qoplamaydi. Saqlash usuli (brauzer yoki server) biletda yoziladi.
@@ -57,8 +57,10 @@ Source archive va matn bir snapshotdan yaratilgan. Ish papkasi `site/`. Internet
 Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [index.html](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt)
 - [style.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt)
+- [fonts/fonts.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/fonts/fonts.css.txt)
 - [app.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/app.js.txt)
 - [motion.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.js.txt)
+- [MOTION.md](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/MOTION.md.txt)
 - [motion.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.test.mjs.txt)
 - [model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.js.txt)
 - [model.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.test.mjs.txt)
@@ -105,3 +107,18 @@ Quyidagi baseline amallarni yangi bilet oqimiga moslab tekshir. Eski QA bugungi 
 ## 9. Davom ettirish va topshirish
 
 `CURRENT-TASK.md` ga bilet, vaqt va cheklovni yoz. `HANDOFF.md` ga fayllar, bajarilgan/qolgan ish, haqiqiy tekshiruv, ochiq xato va keyingi bitta amalni yozib bor. Shu faylni yangi AIga berish davom ettirishni osonlashtiradi. Oxirida ishlaydigan link/local run, editable source, talablarga mos test qaydi va himoya uchun muammo → yechim → to‘liq oqim → texnologiya → cheklov izohini tayyorla. “Xatosiz”, “to‘liq testlangan” yoki ball kafolatini dalilsiz aytma.
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `apple-touch-icon.png` | 11 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/apple-touch-icon.png) |
+| `favicon-32.png` | 1 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/favicon-32.png) |
+| `fonts/instrument-0.woff2` | 10 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-0.woff2) |
+| `fonts/instrument-1.woff2` | 29 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-1.woff2) |
+| `fonts/instrument-2.woff2` | 12 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-2.woff2) |
+| `fonts/instrument-3.woff2` | 21 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-3.woff2) |
+| `fonts/instrument-4.woff2` | 11 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-4.woff2) |
+| `fonts/instrument-5.woff2` | 20 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-5.woff2) |

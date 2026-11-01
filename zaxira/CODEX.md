@@ -84,7 +84,7 @@ Keyin oching: `site/index.html` ni ikki marta bosing yoki Codex’dan so‘rang:
 
 ```text
 Endi o'zing sina va tuzat:
-1) ZAXIRA/skelet/tekshir.js ni site/ ga nusxala va index.html <head> ga birinchi script qilib ula;
+1) ZAXIRA/skelet/tekshir.js ni site/ ga nusxala (Bloom'da site/public/ ga) va index.html <head> ga birinchi script qilib ula;
    saytni ?tekshir bilan ochib "Tekshirish" natijasini o'qi.
 2) Biletdagi har talabni boshidan oxirigacha bajar: to'g'ri qiymat, bo'sh forma, noto'g'ri qiymat, takror, saqlangan holat qayta ochilganda.
 3) 390, 768 va 1366 px kenglikda gorizontal surish, kesilgan matn, ustma-ust tushish yo'qligini tekshir.

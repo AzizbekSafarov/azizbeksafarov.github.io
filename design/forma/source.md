@@ -1,6 +1,6 @@
 # Forma — editable source snapshot
 
-Source fingerprint: `d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `d5993c8e42927726404c04b0a14ebf7a4dd592a78b322dc51e627d805bb9d9f5`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -266,6 +266,12 @@ test('export follows selected quantities without unknown or undefined items',()=
 
 ```
 
+## site/mark.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" fill="#faf9f5"/><path d="M12 35H27M17 35V12Q17 4 27 7M11 17H27" fill="none" stroke="#29261f" stroke-width="2"/></svg>
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -297,3 +303,14 @@ manrope. Acquired from the official google/fonts repository under the individual
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `fonts/manrope.ttf` | 160 KB | [yuklash](https://azizbeksafarov.github.io/design/forma-site/fonts/manrope.ttf) |
+| `images/chair.jpg` | 81 KB | [yuklash](https://azizbeksafarov.github.io/design/forma-site/images/chair.jpg) |
+| `images/lamp.jpg` | 144 KB | [yuklash](https://azizbeksafarov.github.io/design/forma-site/images/lamp.jpg) |
+| `images/vase.jpg` | 147 KB | [yuklash](https://azizbeksafarov.github.io/design/forma-site/images/vase.jpg) |

@@ -14,7 +14,7 @@ GitHub Pages brauzerda ishlashi, lekin ayrim AI veb-o‘qish vositalarida ochilm
 
 ## 1. Tanlov
 
-Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Ekspert amaliy vazifani (biletni) hammaga bir vaqtda beradi. Ishdan oldin hisob va dasturni sozlash uchun 15 daqiqa bor, u amaliy vaqtga kirmaydi. Ishdan keyin 15 daqiqalik himoya bo‘ladi: taqdimot, namoyish va savollar.
+Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Ekspert amaliy vazifani (biletni) hammaga bir vaqtda beradi; ishdan keyin 15 daqiqalik himoya bo‘ladi: taqdimot, namoyish va savollar. Mezonlar loyihasi va tashkilotchi videosiga ko‘ra, ishdan oldin hisob va dasturni sozlash uchun 15 daqiqa beriladi va u amaliy vaqtga kirmaydi.
 
 - Baholash 6 mezon, jami 100 ball. Imzoli qarordagi vaznlar: funksionallik 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. Shuning uchun avval biletdagi majburiy funksiyalar oxirigacha ishlashi kerak, keyin bezak.
 - Mezonlar loyihasida viloyat (hududiy) bosqichi uchun: kamida 3 sahifa yoki teng hajmli ekran, noto‘g‘ri kiritishni tekshiradigan 2 ta bog‘liq amal va natija, taxminan 2 soat. Faqat biletdagi majburiy imkoniyatlar talab qilinadi; qo‘shimcha funksiya asosiy kamchilikni qoplamaydi. Saqlash usuli (brauzer yoki server) biletda yoziladi.
@@ -52,13 +52,18 @@ Source archive va matn bir snapshotdan yaratilgan. Ish papkasi `site/`. Internet
 - `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.
 
 Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
+- [index.html](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/index.html.txt)
 - [src/main.jsx](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt)
 - [src/style.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/style.css.txt)
+- [src/fonts/google-sans-flex.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/google-sans-flex.css.txt)
+- [src/fonts/roboto.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/roboto.css.txt)
+- [src/fonts/material-symbols.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/material-symbols.css.txt)
 - [src/persistence.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/persistence.js.txt)
 - [src/persistence.test.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/persistence.test.js.txt)
 - [src/model.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.js.txt)
 - [src/model.test.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.test.js.txt)
 - [src/combinations.test.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/combinations.test.js.txt)
+- [public/bloom.svg](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/public/bloom.svg.txt)
 - [package.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package.json.txt)
 - [vite.config.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/vite.config.js.txt)
 - [download_symbols.py](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/download_symbols.py.txt)
@@ -103,3 +108,16 @@ Quyidagi baseline amallarni yangi bilet oqimiga moslab tekshir. Eski QA bugungi 
 ## 9. Davom ettirish va topshirish
 
 `CURRENT-TASK.md` ga bilet, vaqt va cheklovni yoz. `HANDOFF.md` ga fayllar, bajarilgan/qolgan ish, haqiqiy tekshiruv, ochiq xato va keyingi bitta amalni yozib bor. Shu faylni yangi AIga berish davom ettirishni osonlashtiradi. Oxirida ishlaydigan link/local run, editable source, talablarga mos test qaydi va himoya uchun muammo → yechim → to‘liq oqim → texnologiya → cheklov izohini tayyorla. “Xatosiz”, “to‘liq testlangan” yoki ball kafolatini dalilsiz aytma.
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. Bloom’da `site/dist/` — ulardan yig‘ilgan tayyor build. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `src/fonts/google-sans-flex-latin-ext.woff2` | 18 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/google-sans-flex-latin-ext.woff2) |
+| `src/fonts/google-sans-flex-latin.woff2` | 35 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/google-sans-flex-latin.woff2) |
+| `src/fonts/material-symbols.woff2` | 5 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/material-symbols.woff2) |
+| `src/fonts/roboto-400.ttf` | 120 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-400.ttf) |
+| `src/fonts/roboto-500.ttf` | 121 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-500.ttf) |
+| `src/fonts/roboto-600.ttf` | 121 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-600.ttf) |

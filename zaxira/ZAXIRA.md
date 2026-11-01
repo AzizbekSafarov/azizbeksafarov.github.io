@@ -30,7 +30,7 @@ Manba maqomi: **[Nizom]** — imzolangan qo‘shma qaror (2026-yil iyul), **[Say
 | Holat | Yo‘l |
 |---|---|
 | Kuchli AI ishlayapti (masalan Codex, Plus) | Tanlangan dizayn starteri + **`CODEX.md`** dagi so‘rovlar ketma-ketligi. Skelet zaxira sifatida turadi. |
-| AI bor, lekin kontekst/limit kichik | **Skelet** + `PROMPTLAR.md` dagi qisqa so‘rovlar. AI faqat `malumot.js` ni to‘ldiradi. |
+| AI bor, lekin limit kam qolgan | Starterda qoling: `CODEX.md` dagi so‘rovlarni qisqa va aniq yuboring, bir xabarda bitta ish. Limit tugasa — keyingi qator. |
 | AI umuman yo‘q yoki limit tugadi | **Skelet** + `tahrir.html` paneli. Kod yozish shart emas. |
 | Starter boshlangan, lekin AI to‘xtadi | Qolgan vaqt 60 daqiqadan kam bo‘lsa, starterni tugatishga urinmang: ishlaydigan qismini saqlang va skeletga o‘ting. |
 

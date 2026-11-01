@@ -181,7 +181,7 @@ Rootda `node serve.mjs`; http://127.0.0.1:8080/ . Python fallback: `python -m ht
 index.html — mazmun va tuzilma. style.css — lokal fontlar va accessibility mexanikasi. layout.css — tanlangan sohaning to‘liq kompozitsiyasi, tipografika va responsive. identities_v4.py hamda identity-styles/ yakuniy generator manbasi; oldingi diversity_v3.py yakuniy uslub emas. {identity_note}app.js — event, dialog/fokus, filtr, saqlash, download. model.js — data va hisob/validatsiya. model.test.mjs — meaningful model checks. Paketdagi font va rasmlar lokal. CREDITS.md litsenziyalar. Original kutubxonada build_collection.py generator; tanlovdagi alohida ZIP runtime fayllari to‘g‘ridan-to‘g‘ri tahrirlanadi.
 
 Source faylni alohida o‘qish:
-'''+ '\n'.join(f'- [{name}]({raw}/design/{slug}/files/{name}.txt)' for name in ['index.html','style.css','layout.css','app.js']+(['identity.js'] if slug=='ziyo' else [])+['model.js','model.test.mjs','CREDITS.md','package.json'])+f'''
+'''+ '\n'.join(f'- [{name}]({raw}/design/{slug}/files/{name}.txt)' for name in ['index.html','style.css','layout.css','app.js']+(['identity.js'] if slug=='ziyo' else [])+['model.js','model.test.mjs','mark.svg','CREDITS.md','package.json'])+f'''
 
 ## Asosiy oqim va tekshiruv
 {spec['flow']}

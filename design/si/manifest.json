@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "ea470a2033b441ef54c767bc69ab9c1ca04f76fbb2e05bcb6aef8040760b998e",
-  "archive_bytes": 871618,
+  "archive_sha256": "677038236fc6b293d9dd403305511fddcfcc1831ea5df8c23f9fd71fcf4f5523",
+  "archive_bytes": 872035,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -29,6 +29,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt"
     },
     {
+      "path": "fonts/fonts.css",
+      "url": "https://azizbeksafarov.github.io/design/si/files/fonts/fonts.css.txt",
+      "sha256": "1151f124106f94cba7bb1231ad880ac47253cf6f226ab684b6907680726211ed",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/fonts/fonts.css.txt"
+    },
+    {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/app.js.txt",
       "sha256": "10a540602fb77f64265bf360c7991805f1c0e8a60807bbcd1dfa69de792f0929",
@@ -39,6 +45,12 @@
       "url": "https://azizbeksafarov.github.io/design/si/files/motion.js.txt",
       "sha256": "95243ed0a663d97795b1c6f5c8fc7715a5527eec61f8da35516d15373776ddd3",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.js.txt"
+    },
+    {
+      "path": "MOTION.md",
+      "url": "https://azizbeksafarov.github.io/design/si/files/MOTION.md.txt",
+      "sha256": "15047a788c27093ea02feebe33848700211dd5f35503c7fc87cd1a33660c7079",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/MOTION.md.txt"
     },
     {
       "path": "motion.test.mjs",
@@ -85,8 +97,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 12348,
-      "sha256": "3ac9b4cb53d8de1eda958e065e3aaab9304e3824a2979c9e136ffdc200246e4b"
+      "bytes": 14079,
+      "sha256": "9733213959ac60c60678d550e39589faacd3e11733aa20140d2bb9de771bf1a2"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -186,7 +198,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17899,
-      "sha256": "b350c73d64f59889acb33839b5b8d17335b825bf208414e7563982acf2126853"
+      "sha256": "c062ba56d936d29bba0bb608e4da35d4a45650f24d0d8a99556cf982d4130827"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +223,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "7aaae150871b9b3894e5650f1dd4986ecf4324caa39924726dfaec6041d51c39"
+      "sha256": "b81587f560bd7299536997979c48df81c294d60f5e9c7ab82c6909f977417e8c"
     },
     {
       "path": "README.md",
@@ -245,8 +257,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10743,
-      "sha256": "b85e6c645ba3a717d238d453685426b6abfc4c9b01ebfa586ee9f2d93838d3a7"
+      "bytes": 10770,
+      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -260,8 +272,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13711,
-      "sha256": "f243e1c2b09de15d8fd9f6951019a2fae430e6ae5b8dd4a7836601eedba7a4df"
+      "bytes": 13742,
+      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

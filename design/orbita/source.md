@@ -1,6 +1,6 @@
 # Orbita — editable source snapshot
 
-Source fingerprint: `5bbe54ec986d84b0d7416ba6d5afbeaea646f9f1bd38ce21758c99b188deb438`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `5bbe54ec986d84b0d7416ba6d5afbeaea646f9f1bd38ce21758c99b188deb438`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -145,6 +145,12 @@ test('all content IDs, images and answers are internally consistent',()=>{
 
 ```
 
+## site/mark.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" fill="#071215"/><circle cx="20" cy="20" r="8" fill="#b1f56a"/><ellipse cx="20" cy="20" rx="18" ry="9" transform="rotate(-35 20 20)" fill="none" stroke="#b1f56a" stroke-width="2"/></svg>
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -175,3 +181,12 @@ chakra-petch, ibm-plex-mono. Acquired from the official google/fonts repository 
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `fonts/chakrapetch.ttf` | 76 KB | [yuklash](https://azizbeksafarov.github.io/design/orbita-site/fonts/chakrapetch.ttf) |
+| `fonts/mono.ttf` | 132 KB | [yuklash](https://azizbeksafarov.github.io/design/orbita-site/fonts/mono.ttf) |

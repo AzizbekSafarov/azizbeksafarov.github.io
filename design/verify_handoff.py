@@ -45,6 +45,35 @@ def check_runtime(z,root):
             target=posixpath.normpath(posixpath.join(posixpath.dirname(name),unquote(parts.path)))
             assert target in names,f'{name}: missing runtime resource {value}'
 
+def check_design_complete(z,manifest,brief,slug):
+    """A text-only reader must still get the whole design: every resource the
+    source pages use is either in the readable export or in the asset table."""
+    import re,posixpath
+    names=set(z.namelist())
+    readable={'site/'+e['path'] for e in manifest['readable_source_files']}
+    listed={'site/'+m for m in re.findall(r'^\| `([^`]+)` \|',brief,re.M)}
+    used=set()
+    for name in names:
+        if not name.startswith('site/') or name.startswith('site/dist/') or not name.endswith(('.html','.css')):continue
+        data=z.read(name).decode('utf-8-sig')
+        if name.endswith('.html'):
+            parser=References();parser.feed(data)
+            refs=[value for tag,key,value in parser.refs if key=='src' or (tag=='link' and key=='href')]
+        else:
+            refs=re.findall(r'url\([\s\'\"]*([^\s\'\")]+)',data)+re.findall(r'@import\s+[\'\"]([^\'\"]+)',data)
+        for value in refs:
+            parts=urlsplit(value)
+            if parts.scheme or parts.netloc or not parts.path:continue
+            base='site' if parts.path.startswith('/') else posixpath.dirname(name)
+            target=posixpath.normpath(posixpath.join(base,unquote(parts.path).lstrip('/')))
+            if target in names:used.add(target)
+    for target in used:
+        assert target in readable or target in listed,f'{slug}: {target} is used by the design but neither readable nor listed as an asset'
+    for rel in listed:
+        assert rel in names,f'{slug}: listed asset missing from ZIP {rel}'
+    for url in re.findall(r'\[yuklash\]\((https://azizbeksafarov\.github\.io/[^)]+)\)',brief):
+        assert (SITE_ROOT/url.split('.io/',1)[1]).is_file(),f'{slug}: asset link has no published file {url}'
+
 def check_zaxira(z):
     # Every package must carry the current weak-AI kit unchanged, with its runtime resources.
     from build_zaxira import KIT, portable
@@ -116,6 +145,11 @@ def verify():
             kit=json.loads(z.read('kit.json'));assert kit['serve_root']+'/'+kit['entry'] in z.namelist()
             check_runtime(z,kit['serve_root'])
             check_zaxira(z)
+            check_design_complete(z,manifest,brief,template['slug'])
+            import re
+            for ref in set(re.findall(r'`([A-Za-z0-9_./-]+\.(?:md|json|mjs|js))`',z.read('AGENTS.md').decode())):
+                if '*' in ref or ref.startswith(('site/','src/')) and '/' in ref and not ref.endswith('.md'):continue
+                assert ref in z.namelist() or ref.rstrip('/')+'/' in {n[:len(ref)+1] for n in z.namelist()},f"{template['slug']}: AGENTS.md names missing file {ref}"
             assert 'ZAXIRA/ZAXIRA.md' in z.read('START-HERE.md').decode() and 'ZAXIRA/CODEX.md' in z.read('AGENTS.md').decode()
             assert z.read('CLAUDE.md')==z.read('GEMINI.md')==entry_text.CLAUDE.encode(),'Tool entry files must defer to AGENTS.md'
         for name in ('index.html','source.html'):check_links(folder/name)

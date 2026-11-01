@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "cc1008180e78a5766923c847e5604caabb38b8b0856c2fa27dad279921f32cce",
-  "archive_bytes": 815901,
+  "archive_sha256": "c464ed30c4f291b3edab765788ed36afba1d8517df185c67ecc209fa4f6016fd",
+  "archive_bytes": 816234,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -59,6 +59,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/combinations.test.mjs.txt"
     },
     {
+      "path": "mark.svg",
+      "url": "https://azizbeksafarov.github.io/design/orbita/files/mark.svg.txt",
+      "sha256": "3986cb32f9328af318ead5ed6976fa41a8a91189bb014aeca5d461548c680073",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/mark.svg.txt"
+    },
+    {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/CREDITS.md.txt",
       "sha256": "9594fe1001cecf663d13de51d3b6e1266316e0f29e95947eb14da70a422f14b8",
@@ -79,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6908,
-      "sha256": "f01cf0cd57e6f288a9f76f1992869e5e483a4ce611437a346726a1e897231dee"
+      "bytes": 7767,
+      "sha256": "183fd83b5da2a5cdbeed251a2dfbd688cae08ecba93e66014b5b4fc12e9704f9"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -180,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 15969,
-      "sha256": "27ed25671c0f987de77b2957fc466bf5b8d849d1857906225792c8eef83b1658"
+      "sha256": "41408c6e6091230235785910188de2e56ad9be251f2469959981da9a0f2b2c51"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "fe1ce4e215e26fa89265832e6a0d37de625ea4aae725c5a9a9065e85eec8f4c3"
+      "sha256": "410f2865826ceb45e5caab1aa9840159580890d606009952c549b33d39ce6d6d"
     },
     {
       "path": "README.md",
@@ -239,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10743,
-      "sha256": "b85e6c645ba3a717d238d453685426b6abfc4c9b01ebfa586ee9f2d93838d3a7"
+      "bytes": 10770,
+      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -254,8 +260,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13711,
-      "sha256": "f243e1c2b09de15d8fd9f6951019a2fae430e6ae5b8dd4a7836601eedba7a4df"
+      "bytes": 13742,
+      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

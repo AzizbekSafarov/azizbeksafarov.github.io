@@ -11,11 +11,17 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "5aae209f21a3e471d281291a8d53febe46cf8d5a035a578a3f7076a74aa2cdcd",
-  "archive_bytes": 1553845,
+  "archive_sha256": "f0674602a083bd6f6468db7789bce7517e1d1c043ec12570fc50991d2e387afb",
+  "archive_bytes": 1554313,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
+    {
+      "path": "index.html",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/index.html.txt",
+      "sha256": "79abd14e43911916acb48432e7d215db93ede2b74f56927cad5b181f45daaeb8",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/index.html.txt"
+    },
     {
       "path": "src/main.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
@@ -27,6 +33,24 @@
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/style.css.txt",
       "sha256": "10df8944a8c55ea9c2db30d4e7d2ed2b7b8bcc9373ddf434d94fd0bf3ccd69ad",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/style.css.txt"
+    },
+    {
+      "path": "src/fonts/google-sans-flex.css",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/fonts/google-sans-flex.css.txt",
+      "sha256": "8d0543ee14ee4ca1d81dd8e04e9b34aea5ca2adf4b7d25300a09258618f3a185",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/google-sans-flex.css.txt"
+    },
+    {
+      "path": "src/fonts/roboto.css",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/fonts/roboto.css.txt",
+      "sha256": "1090450825f6d43ed242c687dba63c6f59fad9d19ea29f7c4351d93d9a21422d",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/roboto.css.txt"
+    },
+    {
+      "path": "src/fonts/material-symbols.css",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/src/fonts/material-symbols.css.txt",
+      "sha256": "e89e154fda3e5bf138736536982f005ac8dfb1587600f56fc9072023efed7142",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/material-symbols.css.txt"
     },
     {
       "path": "src/persistence.js",
@@ -59,6 +83,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/combinations.test.js.txt"
     },
     {
+      "path": "public/bloom.svg",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/public/bloom.svg.txt",
+      "sha256": "b35b0ca499608b995d454cfa533ae250cc4f7d7af3e28f908eae71979d5673eb",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/public/bloom.svg.txt"
+    },
+    {
       "path": "package.json",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/package.json.txt",
       "sha256": "8ab8c0621312aa8b382e3ec105871259d24ead1b86cc9167c236a6036662644f",
@@ -85,8 +115,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 12247,
-      "sha256": "417a23c877e8bd4a5c9a49f8be73726b5a38d4a2fc81863ecc23650f0bb6ee76"
+      "bytes": 14470,
+      "sha256": "fe2804ddfcd631e075ea7ed4aef2b61f34a45c40fc8489501207afc790b851c3"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -186,7 +216,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 21326,
-      "sha256": "c2889a4bd92de3a69a37564736178864db3c1ecc28ed0ff1e2c48d05d22ea179"
+      "sha256": "a9d73da8fcdfed0f95852524cf27820754887221f94e39ce5cbb4241833c5e53"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +241,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "5103e673efaf614d5dee159a56779979ca50f71b0cfffd2947979ee1e4ffbd19"
+      "sha256": "8764b4c96418ceebafea4fb4d3179260c13c2a0490ad6aa4975cfe35fe3e47c4"
     },
     {
       "path": "README.md",
@@ -245,8 +275,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10743,
-      "sha256": "b85e6c645ba3a717d238d453685426b6abfc4c9b01ebfa586ee9f2d93838d3a7"
+      "bytes": 10770,
+      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -260,8 +290,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13711,
-      "sha256": "f243e1c2b09de15d8fd9f6951019a2fae430e6ae5b8dd4a7836601eedba7a4df"
+      "bytes": 13742,
+      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "b5df4664bb059314323f972f6145aa6127348ccebe3d7032b060dd49c43376ec",
-  "archive_bytes": 825834,
+  "archive_sha256": "bcbedbc9921f748252ab633e1b405aa6d4a9d6e6cbbf227049582288b03223d3",
+  "archive_bytes": 826178,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -59,6 +59,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/hisob/files/combinations.test.mjs.txt"
     },
     {
+      "path": "mark.svg",
+      "url": "https://azizbeksafarov.github.io/design/hisob/files/mark.svg.txt",
+      "sha256": "9320b39c9ac606819c4ad82fafae2eea53d062b8bbdedf724f97c6036d758ae8",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/hisob/files/mark.svg.txt"
+    },
+    {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/hisob/files/CREDITS.md.txt",
       "sha256": "2fd26bb806148b14460d77e7864e99c02aa53318a7ef7d0691df070506f6775c",
@@ -79,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 6932,
-      "sha256": "94568785405e1a35c1274ea605a0b748b474ecc7266b5a8c8d13884580f281dc"
+      "bytes": 7819,
+      "sha256": "9d0ecba6c21ca28c6fdbfc61fd035cdcad1bac3b9a3004bf6cba0f7d27a42f9d"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -180,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 15997,
-      "sha256": "a20ea1ad938a6c0bf716109c93b92a400cbcab139cccc96d31b36d8a43d8d871"
+      "sha256": "6a5904d2c1b88de0007e7a4657c1e1d17168dc2530badd01d03359d41f08891d"
     },
     {
       "path": "PREPARATION.md",
@@ -205,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "3e6bb59f1b55c7d34791176ab2d4e736c50b1effc3fbb0d074debd77ed264c59"
+      "sha256": "6ff3ae7c2b059a603b99ef76b96d2dde0e94b08cadb37b67ad86cccede410ef0"
     },
     {
       "path": "README.md",
@@ -239,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10743,
-      "sha256": "b85e6c645ba3a717d238d453685426b6abfc4c9b01ebfa586ee9f2d93838d3a7"
+      "bytes": 10770,
+      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -254,8 +260,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13711,
-      "sha256": "f243e1c2b09de15d8fd9f6951019a2fae430e6ae5b8dd4a7836601eedba7a4df"
+      "bytes": 13742,
+      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

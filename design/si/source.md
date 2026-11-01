@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `b76f004bb4741906ff7db1720c06d92adfb0b9ba2eacdf8e681cb395cb0a6c67`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `b76f004bb4741906ff7db1720c06d92adfb0b9ba2eacdf8e681cb395cb0a6c67`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -96,6 +96,128 @@ em{color:var(--blue)}.hero-aside>p,.hero-edition,.art-coordinate,.vision-bottom>
 .footer-bottom{color:var(--muted)}.storage-warning{color:#8d4b00}
 .menu-dialog{overflow-y:auto;overscroll-behavior:contain}.menu-heading{position:sticky;top:0;z-index:5;background:#ffffff}
 @media(prefers-reduced-motion:reduce){body:not(.motion-paused) .orb-ring{animation:orb-spin 36s linear infinite!important}}
+
+```
+
+## site/fonts/fonts.css
+
+```css
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(./instrument-1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./instrument-2.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./instrument-3.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./instrument-4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./instrument-5.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 ```
 
@@ -359,6 +481,64 @@ export class ParticleField{
 
 ```
 
+## site/MOTION.md
+
+```javascript
+# SI.gov motion contract — inspected 2026-10-15
+
+The previous red jittering SI was insufficient. Preserve the reference's actual interaction structure rather than replacing it with a decorative bobbing logo. This is an independent implementation; reference observed at https://www.si.gov/ . Content, layout and initiative functions remain this project's own.
+
+## Persistent field
+
+One fixed viewport canvas, 1800 particles on desktop / 1500 below 700 px, DPR capped at 2. Particles retain identity, position and velocity while targets change. The palette is Uzbekistan blue #0099b5, white #ffffff and green #1eb53a on a white #ffffff page with deep teal #062c35 text. Moving particles turn blue and grow; flag particles retain their assigned national colors even while moving. Light surfaces use dark teal instead of the white particle role for contrast. Red #ce1126 is reserved for the flag’s two narrow separators.
+
+Spring attraction .045, velocity damping .84 at 60 Hz; long frames are substepped. Pointer repels within 120 px. Pointer-down on decorative space sends a circular shockwave out at 16 px per 60 Hz frame; interactive controls keep their normal behavior. Pointer position also rotates the sphere. Hidden document and explicit pause cancel the animation frame; returning starts one loop.
+
+## Hero
+
+- On arrival particles fly from scattered positions into a grid-sampled Instrument Serif SI mask.
+- Enter the SI bounds: on desktop the same particles progressively write `Super` / `Intelligence`, along vertical serpentine columns over approximately 2.4 seconds.
+- Leave the enlarged bounds: they return to SI. Hysteresis prevents flickering between targets.
+- Below 900 px, a tap instead assembles `SUPER INTELLIGENCE` around a rotating circle. Another tap returns to SI. The transparent hero control supports keyboard Enter/Space and exposes its pressed state.
+- Pointer force, target movement and click wave are physical effects, not CSS text transforms.
+
+## Scroll chapters
+
+The section at viewport midpoint controls the target; nested step chapters take priority over the parent.
+
+| Chapter | Target |
+| --- | --- |
+| Hero | SI / serpentine words / mobile text circle |
+| Qarash | Rotating 3D point sphere with a blue elliptical orbit |
+| Anglang | Rising double helix with connecting rungs |
+| Sinab ko‘ring | 36 animated columns |
+| Ulashtiring | Orbital sphere |
+| G‘oyalar signali | Nine expanding elliptical signal rings |
+| Tashabbuslar | Low-opacity drifting scatter |
+| Shaxsiy reja | Uzbekistan flag: blue/white/green bands, two red separators, white crescent, 12 five-pointed stars in 3/4/5 rows |
+
+Footer fades the field. Do not stop the field when the hero leaves view. Keep particles behind content, pointer-events none, and the existing filter/plan/dialog functions usable. Do not introduce forced scroll snapping.
+
+## Accessibility and verification
+
+Pause freezes the current physics state and the circular menu lettering. Reduced motion snaps to a static target, ignores repulsion and click waves, and preserves ordinary navigation. Initialization failure leaves serif SI visible. Text content remains HTML.
+
+Run `node --test model.test.mjs motion.test.mjs`. Browser checks must also verify visible movement, hero hover/keyboard/tap, every scroll target, pause/resume, narrow screens, dialog focus and no missing motion module. A passing physics test does not prove pixel identity to the reference or replace a visual check.
+
+## Uzbekistan identity — user requirement
+
+Do not restore the US 13-stripe field or red/white/blue branding when adjusting reference motion. `FLAG_STARS`, `uzbekFlagPoints` and `uzbekistan.svg` share the 12-star composition. The flag keeps a 2:1 cloth aspect ratio before its wave deformation. The SVG is the static failure fallback; the live canvas renders the cloth, separators, crescent and all stars as particles. Identity reference: https://gov.uz/oz/narpay/news/view/103093 .
+
+## White surface — latest user requirement
+
+The main background must stay pure white, including hero, vision, signal, plan, menu and footer. Preserve dark readable text and blue/green accents. Surface brightness is read from computed CSS, rather than assuming the legacy `section-dark` class means a dark background. White flag particles get a thin neutral outline on pale backgrounds so the white band, crescent and stars remain visible. Do not restore the deep teal page background.
+
+## Interaction repairs
+
+Wait for all active fonts before measuring text masks; initialize visibility from `document.hidden`. Touch toggling remembers `pointerdown.pointerType` because older click MouseEvents may not expose pointerType. Initial OS reduced motion remains respected; pressing the explicit Continue control enables the field even under that preference. Physical touch and OS preference switching require device-level verification. Site icons must remain the Yuksal asterisk; the national flag is content, not the favicon.
+
+```
+
 ## site/motion.test.mjs
 
 ```javascript
@@ -478,3 +658,18 @@ for(let mask=0;mask<16;mask++)test('Yuksal plan subset '+mask,()=>{
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `apple-touch-icon.png` | 11 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/apple-touch-icon.png) |
+| `favicon-32.png` | 1 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/favicon-32.png) |
+| `fonts/instrument-0.woff2` | 10 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-0.woff2) |
+| `fonts/instrument-1.woff2` | 29 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-1.woff2) |
+| `fonts/instrument-2.woff2` | 12 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-2.woff2) |
+| `fonts/instrument-3.woff2` | 21 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-3.woff2) |
+| `fonts/instrument-4.woff2` | 11 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-4.woff2) |
+| `fonts/instrument-5.woff2` | 20 KB | [yuklash](https://azizbeksafarov.github.io/design/si-site/fonts/instrument-5.woff2) |

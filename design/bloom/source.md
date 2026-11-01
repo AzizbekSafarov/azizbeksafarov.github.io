@@ -1,6 +1,13 @@
 # Bloom · Material Design 3 — editable source snapshot
 
-Source fingerprint: `36aa144427df8d89269c3a36a46d1f1ed320ebfb167173e46158f32f7ae022db`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `36aa144427df8d89269c3a36a46d1f1ed320ebfb167173e46158f32f7ae022db`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+
+## site/index.html
+
+```html
+<!doctype html><html lang="uz"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fdf7ff"><title>Bloom — Material Design 3</title><link rel="icon" type="image/svg+xml" href="./bloom.svg"></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>
+
+```
 
 ## site/src/main.jsx
 
@@ -202,6 +209,91 @@ body{font-size:16px;line-height:24px}
 .palette-modal [slot=content]{padding-bottom:8px}.palette-modal .palette-samples{margin-bottom:0}
 @media(max-width:460px){.palette-options{grid-template-columns:1fr;gap:8px}.palette-option{min-height:68px}.palette-option>.palette-name{font-size:16px;line-height:24px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
+
+```
+
+## site/src/fonts/google-sans-flex.css
+
+```css
+@font-face {
+  font-family: 'Google Sans Flex';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(google-sans-flex-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Google Sans Flex';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(google-sans-flex-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+```
+
+## site/src/fonts/roboto.css
+
+```css
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./roboto-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./roboto-500.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./roboto-600.ttf) format('truetype');
+}
+
+
+```
+
+## site/src/fonts/material-symbols.css
+
+```css
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(./material-symbols.woff2) format('woff2');
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
 
 ```
 
@@ -490,6 +582,13 @@ test('Bloom persisted tasks must have readable bounded labels',()=>{
 
 ```
 
+## site/public/bloom.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="22" fill="#dce6ff"/><g fill="#174ea6"><ellipse cx="32" cy="20" rx="10" ry="16"/><ellipse cx="32" cy="44" rx="10" ry="16"/><ellipse cx="20" cy="32" rx="16" ry="10"/><ellipse cx="44" cy="32" rx="16" ry="10"/></g><circle cx="32" cy="32" r="8" fill="#dce6ff"/></svg>
+
+```
+
 ## site/package.json
 
 ```json
@@ -526,3 +625,16 @@ print('Updated Material Symbols subset:', len(font), 'bytes')
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. Bloom’da `site/dist/` — ulardan yig‘ilgan tayyor build. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `src/fonts/google-sans-flex-latin-ext.woff2` | 18 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/google-sans-flex-latin-ext.woff2) |
+| `src/fonts/google-sans-flex-latin.woff2` | 35 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/google-sans-flex-latin.woff2) |
+| `src/fonts/material-symbols.woff2` | 5 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/material-symbols.woff2) |
+| `src/fonts/roboto-400.ttf` | 120 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-400.ttf) |
+| `src/fonts/roboto-500.ttf` | 121 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-500.ttf) |
+| `src/fonts/roboto-600.ttf` | 121 KB | [yuklash](https://azizbeksafarov.github.io/design/material-expressive/src/fonts/roboto-600.ttf) |

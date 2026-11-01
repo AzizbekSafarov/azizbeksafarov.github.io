@@ -1,6 +1,6 @@
 # Nashr — editable source snapshot
 
-Source fingerprint: `2c81c476f8d81d8fceb80e8442d656fc57fe818c0df1c1bab23963fc63bfb732`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `2c81c476f8d81d8fceb80e8442d656fc57fe818c0df1c1bab23963fc63bfb732`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -150,6 +150,12 @@ test('all content IDs, images and answers are internally consistent',()=>{
 
 ```
 
+## site/mark.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" fill="#eeebde"/><path d="M8 31V9L31 31V9M5 9H14M27 9H35M5 31H12M27 31H35" fill="none" stroke="#20201c" stroke-width="2.5"/></svg>
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -178,3 +184,15 @@ newsreader, pt-serif, archivo. Acquired from the official google/fonts repositor
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `fonts/archivo.ttf` | 643 KB | [yuklash](https://azizbeksafarov.github.io/design/nashr-site/fonts/archivo.ttf) |
+| `fonts/news.ttf` | 441 KB | [yuklash](https://azizbeksafarov.github.io/design/nashr-site/fonts/news.ttf) |
+| `fonts/ptserif.ttf` | 350 KB | [yuklash](https://azizbeksafarov.github.io/design/nashr-site/fonts/ptserif.ttf) |
+| `images/craft.jpg` | 628 KB | [yuklash](https://azizbeksafarov.github.io/design/nashr-site/images/craft.jpg) |
+| `images/reading.jpg` | 223 KB | [yuklash](https://azizbeksafarov.github.io/design/nashr-site/images/reading.jpg) |

@@ -1,6 +1,6 @@
 # Ziyo — editable source snapshot
 
-Source fingerprint: `219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97`. Binary fonts, licenses, lockfile and complete project are in source.zip. Change original source, then rebuild; this export is regenerated from those files.
+Source fingerprint: `219ef192045287143509439d6a80fe5fad376ffb433802393d878b08d2196e97`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -164,6 +164,12 @@ test('unknown lesson cannot be graded',()=>{for(const id of ['',null,undefined,'
 
 ```
 
+## site/mark.svg
+
+```javascript
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="#772c3c"/><path d="M8 10Q14 8 20 12Q26 8 32 10V29Q26 27 20 31Q14 27 8 29ZM20 12V31" fill="#ffca7c" stroke="#fff3d9" stroke-width="1.5"/></svg>
+```
+
 ## site/CREDITS.md
 
 ```javascript
@@ -188,3 +194,13 @@ bree-serif, nunito-sans, ibm-plex-mono. Acquired from the official google/fonts 
 
 ```
 
+
+## Shrift va rasmlar
+
+Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
+
+| Fayl (`site/` ichida) | Hajm | Havola |
+|---|---|---|
+| `fonts/breeserif.ttf` | 45 KB | [yuklash](https://azizbeksafarov.github.io/design/ziyo-site/fonts/breeserif.ttf) |
+| `fonts/mono.ttf` | 132 KB | [yuklash](https://azizbeksafarov.github.io/design/ziyo-site/fonts/mono.ttf) |
+| `fonts/nunitosans.ttf` | 557 KB | [yuklash](https://azizbeksafarov.github.io/design/ziyo-site/fonts/nunitosans.ttf) |
