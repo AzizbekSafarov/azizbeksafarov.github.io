@@ -63,6 +63,8 @@ Telefonda navigatsiya va ish amallari qulay joylashadi. Keng ekranli workspace p
 
 ### Holat, ma’lumot va route chegaralari
 
+Quyidagi auth/RLS/Supabase bandlari serverli variant uchun. Faqat frontend biletida uning o‘rniga haqiqiy lokal holat, saqlash chegarasi va reload tekshiriladi.
+
 - Har asosiy ekranda kerakli loading, empty, error, success, 404 va ruxsat yetishmasligi holati belgilanadi. Bu holatlar alohida sahifa bo‘lishi shart emas.
 - /app va workspace uchun sessiya tekshiriladi; API va Supabase RLS har yozuvga vakolatni alohida tekshiradi. Frontend route guard ma’lumot xavfsizligini o‘zi ta’minlamaydi. Begona yozuv mavjudligini ortiqcha oshkor qilma.
 - Ma’lumotning asosiy manbasi Supabase; public katalog bilan private yozuvni ajrat. localStorage demo holatini serverda saqlangan deb ko‘rsatma. Qoralama bo‘lsa, saqlangan/qoralama/saqlanmoqda/xato holatlari tushunarli bo‘lsin.
@@ -72,7 +74,7 @@ Telefonda navigatsiya va ish amallari qulay joylashadi. Keng ekranli workspace p
 ### Yangi AI bajaradigan tartib
 
 1. Biletdagi foydalanuvchi, asosiy natija va kerakli sahifalarni yoz. Route → kirish huquqi → asosiy amal → data manbasi → muhim holatlar jadvalini CURRENT-TASK.md’da saqla.
-2. Tanlangan dizayn asosida public/app qobiqlarini va bitta to‘liq vertikal oqimni qur: kirish → obyekt → saqlash → reload → davom etish. Erta local/production ishga tushirish bilan route va callback’ni tekshir.
+2. Biletga zarur bo‘lgan public/app qobiqlarini tanlangan dizayn asosida va bitta to‘liq vertikal oqimni qur: kirish → obyekt → saqlash → reload → davom etish. Erta local/production ishga tushirish bilan route va callback’ni tekshir.
 3. Asosiy oqim ishlagach landing mazmuni, foydali animatsiya, qolgan amallar va mos AI/Telegram ulanishini yakunla. Animatsiya deb backend ishini oxirga surma.
 4. Bilet talab qilgan oqimni mehmon, o‘z akkaunti va ruxsatsiz akkaunt holatlarida tekshir. Telefon/klaviatura, to‘g‘ridan-to‘g‘ri route, reload, bekor login, save xatosi va reduced-motion holatini qamra. Test sonini sifat bahosi qilma.
 5. HANDOFF.md’da haqiqiy route’lar, tayyor/reja qismlar, data saqlanishi va tekshirilmagan holatlarni yoz. Yangi AI generic sahifa ro‘yxatini amaldagi ishlaydigan mahsulot deb qabul qilmasin.
@@ -87,7 +89,7 @@ Qo‘llanma tekshirilgan: 2026-10-28. API ulanish sinovlari: 2026-10-18; bu audi
 
 ## Maqsad va chegaralar
 
-Ochiq .io — dizaynlar, tanlov konteksti va ushbu qo‘llanma uchun. Tanlov sayti alohida repo, Render xizmati va Supabase loyihasiga ega bo‘ladi. Shaxsiy kalit ombori tanlov saytining ishlashiga doimiy bog‘lanmaydi. Ochiq fayllarda haqiqiy API kalit, OAuth secret, bot token, parol yoki shaxsiy identifikator bo‘lmaydi.
+Ochiq .io — dizaynlar, tanlov konteksti va ushbu qo‘llanma uchun. Tanlov sayti alohida repoda yuritiladi. Bilet server, login, umumiy baza yoki maxfiy API integratsiyasini talab qilsa va joyda ruxsat bo‘lsa Render + Supabase rejasi qo‘llanadi. Oddiy frontend biletiga server, OAuth, AI yoki Telegram majburan qo‘shilmaydi. Shaxsiy kalit ombori tanlov saytining ishlashiga doimiy bog‘lanmaydi. Ochiq fayllarda haqiqiy API kalit, OAuth secret, bot token, parol yoki shaxsiy identifikator bo‘lmaydi.
 
 ## Asosiy joylashtirish
 
@@ -174,9 +176,9 @@ API_MD = '''# AI API va Telegram — sinovlar va ishlatish qoidalari
 
 Qo‘llanma va ochiq provayder hujjatlari tekshirilgan: 2026-10-28. Quyidagi ulanish sinovlari: 2026-10-18; qayta bajarilmagan. Bu ochiq, kalitlarsiz hujjat. Kalit qiymatlari, akkaunt identifikatorlari va billing ma’lumotlari bu yerda yo‘q.
 
-## Bugun tasdiqlangan va noma’lum qismlar
+## 2026-10-28 qaydida tasdiqlangan va hozir noma’lum qismlar
 
-Groq rasmiy katalogida openai/gpt-oss-120b, Gemini rasmiy katalogida gemini-3.8-flash mavjud. Bu eski nomlar ishlamaydigan deb o‘zboshimchalik bilan almashtirilmaydi. Ammo katalogda mavjudlik bizning kalit, billing yoki regionda ayni paytda foydalanish mumkinligini isbotlamaydi. Tanlov loyihasida modelni konfiguratsiyadan ol va o‘sha muhitda kichik ruxsatli so‘rov bilan tekshir; eski latency’ni bugungi tezlik deb olmang.
+2026-10-28 qaydida Groq uchun openai/gpt-oss-120b va Gemini uchun gemini-3.8-flash yozilgan. Bu 2026-11-02 dagi yangi katalog tekshiruvi emas. Bu eski nomlar ishlamaydigan deb o‘zboshimchalik bilan almashtirilmaydi. Ammo katalogda mavjudlik bizning kalit, billing yoki regionda ayni paytda foydalanish mumkinligini isbotlamaydi. Tanlov loyihasida modelni konfiguratsiyadan ol va o‘sha muhitda kichik ruxsatli so‘rov bilan tekshir; eski latency’ni bugungi tezlik deb olmang.
 
 Groq Free jadvalidagi 120B chegaralari 2026-10-28 ham 30 RPM, 1000 RPD, 8000 TPM, 200000 TPD. Bizning akkauntning qolgan kvotasi, credential holati va billing tier’i ushbu ochiq hujjat auditida tekshirilmadi. UptimeRobot Free 5 daqiqalik monitoringni ko‘rsatadi; bu tayyor monitor yoki ishlayotgan integratsiya dalili emas.
 
@@ -207,7 +209,7 @@ Gemini limitlari model va loyiha tier’iga bog‘liq. Bir Google Cloud project�
 
 ## Backend integratsiyasi
 
-Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash hozir sinalgan nomlar; amaliy vazifada qayta bahola.
+Bu bo‘lim faqat bilet AI/Telegram integratsiyasini talab qilsa qo‘llanadi. Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash 2026-10-18 sinov qaydidagi nomlar; amaliy vazifada qayta bahola.
 
 Groq OpenAI-compatible endpoint: POST https://api.groq.com/openai/v1/chat/completions, Authorization Bearer serverda. Gemini rasmiy API endpointi yoki SDK, API kaliti serverda x-goog-api-key sarlavhasida. Kalitni URL query’sida saqlama/loglama. Gemini 3.8 Flash uchun minimal thinking qo‘llanmaydi; oldingi qisqa sinov low bilan bajarilgan. Bu parametrni boshqa modellarga avtomatik ko‘chirma.
 

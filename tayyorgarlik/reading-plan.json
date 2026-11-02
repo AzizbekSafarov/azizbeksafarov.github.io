@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-31",
+  "updated": "2026-11-02",
   "full_context_url": "https://azizbeksafarov.github.io/tayyorgarlik/full-context.md",
-  "full_context_sha256": "0acd1cc8c7218bf37cf60e3a88d23dd4b67d98e84f5dcc3c6ce7c198f2e4bd86",
-  "full_context_bytes": 429479,
+  "full_context_sha256": "d21898d0d010e899dc5a43963570c1a238c5e615e183dd34139992267763aea3",
+  "full_context_bytes": 430761,
   "documents": [
     {
       "package_path": "TASK-BOUNDARY.json",
@@ -32,90 +32,90 @@
     {
       "package_path": "PREPARATION.md",
       "source_url": "https://azizbeksafarov.github.io/design/preparation-guide.md",
-      "bytes": 15460,
-      "sha256": "d6a265f7da3d3f4972685cfecdd70e36f3c0a038f996326e3efc0eb683191f03",
+      "bytes": 15907,
+      "sha256": "c3256c5e82029b93d445976dc9c2a69bb5663beb1d1383617b63e39eeabd777f",
       "start_line": 148,
-      "end_line": 258
+      "end_line": 262
     },
     {
       "package_path": "WORKFLOW.md",
       "source_url": "https://azizbeksafarov.github.io/ish-tartibi/ai.md",
-      "bytes": 27136,
-      "sha256": "05b37c954bf6cba38e9ecf0f0d137092317b8b298c6c9152b63a9cb138e4c206",
-      "start_line": 264,
-      "end_line": 552
+      "bytes": 27441,
+      "sha256": "39aebb69bc4d20d518a4447bea481ef3b197ff726ed8f11ba4ab00128e2280f0",
+      "start_line": 268,
+      "end_line": 558
     },
     {
       "package_path": "PROJECT-STATUS.json",
       "source_url": "https://azizbeksafarov.github.io/ish-tartibi/status.json",
       "bytes": 3059,
       "sha256": "b4ce7aefd3086f897522258dbe7c887e6e72e2d8c8dc55fe4075a39cbc81d23b",
-      "start_line": 558,
-      "end_line": 656
+      "start_line": 564,
+      "end_line": 662
     },
     {
       "package_path": "ARCHITECTURE.md",
       "source_url": "https://azizbeksafarov.github.io/arxitektura/ai.md",
-      "bytes": 28305,
-      "sha256": "d1406f723a955e2a951de73bbb64d96aa944062da5487a6ff68edf586c0cdb82",
-      "start_line": 662,
-      "end_line": 909
+      "bytes": 28676,
+      "sha256": "63a39a0d504e940d71e65586bad1c8d5d3c000a3b87bab69a6677a80916fc87f",
+      "start_line": 668,
+      "end_line": 917
     },
     {
       "package_path": "API-GUIDE.md",
       "source_url": "https://azizbeksafarov.github.io/api/ai.md",
-      "bytes": 6377,
-      "sha256": "7959f06f4ca25bad1729795135801fb0a9ebdc1d7a544e424bf679fae3c5b831",
-      "start_line": 915,
-      "end_line": 979
+      "bytes": 6536,
+      "sha256": "f6f0564aaf3c7f124a543e47387b47b9c6dee26dc58db59f32c11162d41ce810",
+      "start_line": 923,
+      "end_line": 987
     },
     {
       "package_path": "API-EVIDENCE.json",
       "source_url": "https://azizbeksafarov.github.io/api/verification.json",
       "bytes": 1431,
       "sha256": "078a4540f16722e75cd8dbee4513406c48f177d45aed200f70db45c7a8834572",
-      "start_line": 985,
-      "end_line": 1042
+      "start_line": 993,
+      "end_line": 1050
     },
     {
       "package_path": "CONTEXT-STATUS.md",
       "source_url": "https://azizbeksafarov.github.io/design/handoff/context-status.md",
       "bytes": 3720,
       "sha256": "51acf2698558fee01061ab4f06fe8bc9171ac2e1b353b5ecefb7550730e740ea",
-      "start_line": 1048,
-      "end_line": 1075
+      "start_line": 1056,
+      "end_line": 1083
     },
     {
       "package_path": "SCORING-WORKPLAN.md",
       "source_url": "https://azizbeksafarov.github.io/design/handoff/score-workplan.md",
       "bytes": 5979,
       "sha256": "ab33ffc47492a1f72c9b3bf710cee2ef52522a71e9b7a3b90a72ad78a73cda8b",
-      "start_line": 1081,
-      "end_line": 1144
+      "start_line": 1089,
+      "end_line": 1152
     },
     {
       "package_path": "FULL-COMPETITION-CONTEXT.md",
       "source_url": "https://azizbeksafarov.github.io/design/handoff/competition-full.md",
       "bytes": 200474,
       "sha256": "4ac35bcc2efd57d2676998e704ce29acd675114573d84ffbc8c30899f198c5ff",
-      "start_line": 1150,
-      "end_line": 4249
+      "start_line": 1158,
+      "end_line": 4257
     },
     {
       "package_path": "REGULATIONS.md",
       "source_url": "https://azizbeksafarov.github.io/design/handoff/regulations.md",
       "bytes": 119188,
       "sha256": "46eed7a693766f1de875b99ba99ec97de138b75545b3d02ce6ccf2b7859732b5",
-      "start_line": 4255,
-      "end_line": 6133
+      "start_line": 4263,
+      "end_line": 6141
     },
     {
       "package_path": "DESIGN-STANDARD.md",
       "source_url": "https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md",
       "bytes": 7444,
       "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6",
-      "start_line": 6139,
-      "end_line": 6207
+      "start_line": 6147,
+      "end_line": 6215
     }
   ],
   "selected_design": "Read manifest and full source archive for only the selected design.",

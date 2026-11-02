@@ -39,7 +39,9 @@ Model: **Sol** — asosiy; reja (C1) va qiyin xato uchun fikrlash darajasini **H
 
 `ZAXIRA/skelet/` va `tahrir.html` — siz uchun, AI’siz zaxira: Codex ishlamay qolsa yoki limit tugasa, saytni o‘zingiz panelda yig‘asiz (`ZAXIRA.md`). Codex’ga skeletdan qurishni buyurmang.
 
-## 2. So‘rovlar ketma-ketligi (120 daqiqalik ish uchun)
+## 2. So‘rovlar ketma-ketligi (120 daqiqa — faqat rejalash misoli)
+
+120 daqiqa tasdiqlangan umumiy limit emas. C1–C6 vaqtlarini haqiqiy qolgan vaqtga moslang; majburiy oqim va tekshiruv ustuvor.
 
 Har birini **alohida xabar** qilib yuboring. Kvadrat qavslarni to‘ldiring. Har javobdan keyin natijani **o‘zingiz brauzerda ko‘ring** — Codex “tayyor” desa ham.
 
@@ -72,13 +74,13 @@ Rejani tasdiqlayman. Endi qur. Qoidalar:
 - Starterning texnologiyasida qol (HTML starterlarda oddiy HTML/CSS/JS, Bloom'da mavjud React loyihasi). Yangi framework, npm paket yoki tashqi CDN qo'shma. Internetsiz ham ishlasin.
 - Barcha ko'rinadigan matnlar, ro'yxat ma'lumotlari va asosiy rang oson topilsin:
   ma'lumot bitta faylda (mavjud model.js yoki yangi content.js), asosiy rang CSS o'zgaruvchisida.
-- Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Saqlash kerak bo'lsa localStorage.
+- Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Biletda lokal saqlash yetarli bo'lsa localStorage; server/login/umumiy baza yoki maxfiy API talab qilinsa va ruxsat bo'lsa ARCHITECTURE.md bo'yicha backend qur. Lokal natijani serverga yuborildi dema.
 - Bo'sh holat, xato holati, mobil menyu, klaviatura va ko'rinadigan fokus.
 - Demo ma'lumot haqiqiy deb ko'rsatilmasin.
 Tugagach: qaysi fayllar o'zgardi va qanday ochiladi — 5 qatorda.
 ```
 
-Keyin oching: `site/index.html` ni ikki marta bosing yoki Codex’dan so‘rang: `Saytni brauzerda och va asosiy sahifani ko'rsat.` (Codex ichidagi brauzer bor.)
+Keyin ZIP ildizida `node serve.mjs` bilan oching (Bloom source tahriridan keyin avval build). HTML starterlarning ES modullari file:// orqali ishlamasligi mumkin; yoki Codex’dan so‘rang: `Saytni brauzerda och va asosiy sahifani ko'rsat.` (Codex ichidagi brauzer bor.)
 
 ### C3 — Sinov va tuzatish (15–20 daqiqa)
 
@@ -97,13 +99,13 @@ Jadvaldagi har “o‘tdi”ni **o‘zingiz** bir marta bosib ko‘ring. Ko‘rm
 ### C4 — Professional ko‘rinish (10–15 daqiqa, majburiy talablar ishlagandan keyin)
 
 ```text
-Funksiyalarga tegma. Faqat ko'rinishni professional qil:
-- Birinchi ekran reklama emas, foydalanuvchi ishini boshlaydigan sahifa bo'lsin; sarlavha mavzuni aniq aytsin.
+Tanlangan starter uslubini saqla. Funksiyalarni va kompozitsiyani qayta qurma; faqat aniqlangan ko'rinish kamchiliklarini tuzat:
+- Birinchi ekran bilet va tanlangan dizayn vazifasiga mos bo'lsin; sarlavha mavzuni aniq aytsin.
 - Mavzuga mos haqiqiy rasm bo'lsa ishlat (berilgan materiallar yoki papkadagi rasmlar); dekorativ "orb", gradient bloblar yo'q.
 - Bir xil rangdagi zerikarli palitra emas: 1 asosiy + 1 urg'u rang, matn kontrasti kamida 4.5:1.
 - Kartochka ichida kartochka yo'q; bo'limlar keng polosa, kartochka faqat takrorlanuvchi elementlar uchun.
 - Matn telefonda sig'sin, shrift o'lchami ekran kengligiga qarab sakramasin.
-- Bitta o'ziga xos foydali detal qo'sh: [masalan qolgan joy ko'rsatkichi / saralash / jami hisob].
+- Faqat bilet va qolgan vaqtga mos bo'lsa foydali detalni ko'rib chiq: [masalan qolgan joy ko'rsatkichi / saralash / jami hisob].
 Keyin 390 va 1366 px da skrinshot olib, ko'rinishni o'zing baholab, bitta eng katta kamchilikni tuzat.
 ```
 

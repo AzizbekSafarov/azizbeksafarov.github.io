@@ -48,7 +48,7 @@ RISKS = [
   'Amal → database tasdig‘i → reload → yangi sessiya. Internet uzilganda yolg‘on muvaffaqiyat bo‘lmasin.'),
  ('context','Yangi AI eski qaror bo‘yicha ishlaydi','Cloudflare’ni majburiy host qiladi, barcha dizaynlarni aralashtiradi yoki hali ulanmagan xizmatni tayyor deb aytadi.',
   'Joriy foydalanuvchi ko‘rsatmasi, /ai.md, /ish-tartibi/status.json va loyiha ichidagi CURRENT-TASK.md/HANDOFF.md sanalarini solishtir.',
-  'Qarama-qarshilikni ochiq yoz. Tarixiy variantni joriy qaror deb ishlatma. Faol tanlov Render + UptimeRobot + Supabase; joriy foydalanuvchi uni o‘zgartirsa qarorni yangila.',
+  'Qarama-qarshilikni ochiq yoz. Tarixiy variantni joriy qaror deb ishlatma. Server zarur bo‘lgan bilet uchun reja Render + UptimeRobot + Supabase; joriy foydalanuvchi uni o‘zgartirsa qarorni yangila.',
   'Ish boshlashdan oldin AI tanlangan dizayn, bilet, stack, real tayyor qismlar va navbatdagi amalni o‘zbekcha qisqa qayta aytsin.')
 ]
 
@@ -142,9 +142,9 @@ Migration/backup/restore va deploy/rollback yo‘li: [...]
 Holat: [tekshirildi / ochiq muammo / hali tekshirilmadi / tatbiq etilmaydi + sabab]
 
 ## Joriy texnik qaror
-- Hosting: Render Web Service — [haqiqiy loyiha/manzil yoki hali yaratilmagan]
+- Hosting: [lokal/statik yoki bilet talab qilgan server; haqiqiy manzil yoki hali yaratilmagan]
 - Monitoring: UptimeRobot — [haqiqiy holat]
-- Backend: Supabase — [loyiha referensi maxfiy bo‘lmasa; secret yozma]
+- Backend: [talab qilinmaydi yoki Supabase; holati va sababi, secret yozma]
 - Google OAuth: [client/redirect sozlanganmi; secret yozma]
 - AI: [provayder, model, limit bo‘yicha tasdiqlangan fakt]
 - Telegram: [webhook va test holati; token/shaxsiy chat ID yozma]
@@ -200,7 +200,7 @@ Secret, session cookie, haqiqiy request body yoki shaxsiy ma’lumotni log/namun
 
 INTRO = '''# AI bilan ish tartibi va ehtimoliy muammolar
 
-Snapshot: 2026-10-28. Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
+Yo‘riqnoma tahriri: 2026-11-02; tashqi manbalar tekshiruvi: 2026-10-28. Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
 
 ## 1. Avval joriy vazifani bil
 
@@ -217,6 +217,8 @@ Tanlov loyihasini boshlashda qisqa tanlov konteksti va /design/handoff/score-wor
 Hammasini birdan yuklab kontekstni to‘ldirma; kerakli qatlamni o‘qi. O‘qilmagan faylni o‘qidim deb aytma. Pages ochilmasa raw GitHub URL yoki foydalanuvchi bergan fayldan foydalan. Raw ham ochilmasa aniq qaysi hujjat yetishmayotganini bildir.
 
 ## 3. Joriy qarorlar va almashtirilgan variantlar
+
+Backend faqat bilet server, login, umumiy baza yoki maxfiy API integratsiyasini talab qilsa va joyda ruxsat bo‘lsa qo‘shiladi. Quyidagi server/integratsiya bandlari shartli reja; frontend biletiga avtomatik vazifa emas.
 
 - .io — ochiq tayyorgarlik markazi; tanlov mahsuloti alohida joylashtiriladi.
 - Asosiy hosting: bitta Render Web Service frontend build va Node.js API’ni beradi.

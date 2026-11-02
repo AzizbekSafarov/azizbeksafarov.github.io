@@ -1,6 +1,6 @@
 # Tanlovda boshlash va to‘liq kontekstni ishlatish
 
-Paketdan foydalanish qo‘llanmasi yangilangan: 2026-10-29. Tanlov qoidalarining oxirgi tekshiruvi: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
+Paketdan foydalanish qo‘llanmasi yangilangan: 2026-11-02. Tanlov qoidalarining oxirgi tekshiruvi: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
 
 ## Haqiqiy topshiriq qayerdan olinadi?
 
@@ -11,6 +11,10 @@ Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu sa
 2026-10-28 qayta tekshiruv: [amaliy qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [qoida qaydi](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json). Nizom PDF’i o‘zgarmagan; yangi tasdiqlangan reglament yoki majburiy texnik qoida topilmadi. Yangi portal bir vaqtda vazifa berilishi, 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi.
 
 Yangi amaliy ish davomiyligi, akkaunt/tarif, himoyada tahrir va oldindan tayyor backend ruxsati tasdiqlanmadi. 120 daqiqa eski loyiha/mashq; 13-oktabr eski ishtirokchi xabari. Bilet, haqiqiy qolgan vaqt va joydagi qoidalar bilan ishlaymiz.
+
+## Asosiy va zaxira yo‘l
+
+AI tanlangan starterdagi site/ kodidan quradi. AI’siz skelet va tahrir.html foydalanuvchi uchun zaxira, avtomatik almashtirish yo‘li emas. Backend faqat bilet server, umumiy saqlash, login yoki maxfiy API integratsiyasini talab qilsa va tashqi xizmatlarga ruxsat bo‘lsa quriladi. Batafsil qaror va texnik oqim ARCHITECTURE.md da; kerak bo‘lmagan backend bandlari tatbiq etilmaydi.
 
 ## START-HERE nimaga xizmat qiladi?
 
@@ -96,7 +100,7 @@ Haqiqiy biletdan oldin o‘ylab topilmaydiganlar: yakuniy domen/nom, ma’lumot 
 2. Ishga tushadigan asl paketni saqlang, bitta ishlaydigan vertikal oqimni yarating. Baza/login kerak bo‘lsa uni dizaynning oxiriga qoldirmang.
 3. Tanlangan dizaynni yangi mazmun, sahifa rollari va zarur integratsiyalarga moslashtiring. Landing, kabinet va workspace uchun bir xil brend, vazifaga mos tuzilma.
 4. O‘zgarish va muhim xavfga mos tekshiruv: oddiy oqim; tegishli xato; boshqa user/ruxsat; reload; telefon/klaviatura; toza run. Bir xil testni son uchun qayta bajarmang.
-5. Ishlaydigan manzil/local run, source, env.example, migration, run yo‘riqnomasi va HANDOFF. Tekshirilmagan servis, ma’lum xato va qolgan ish aniq yoziladi.
+5. Ishlaydigan manzil/local run, source, run yo‘riqnomasi va HANDOFF. Backend kerak bo‘lsa env.example va migration ham. Tekshirilmagan servis, ma’lum xato va qolgan ish aniq yoziladi.
 
 ## Keyingi chatga aytiladigan topshiriq
 

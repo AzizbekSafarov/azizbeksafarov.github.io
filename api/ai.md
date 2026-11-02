@@ -2,9 +2,9 @@
 
 Qo‘llanma va ochiq provayder hujjatlari tekshirilgan: 2026-10-28. Quyidagi ulanish sinovlari: 2026-10-18; qayta bajarilmagan. Bu ochiq, kalitlarsiz hujjat. Kalit qiymatlari, akkaunt identifikatorlari va billing ma’lumotlari bu yerda yo‘q.
 
-## Bugun tasdiqlangan va noma’lum qismlar
+## 2026-10-28 qaydida tasdiqlangan va hozir noma’lum qismlar
 
-Groq rasmiy katalogida openai/gpt-oss-120b, Gemini rasmiy katalogida gemini-3.8-flash mavjud. Bu eski nomlar ishlamaydigan deb o‘zboshimchalik bilan almashtirilmaydi. Ammo katalogda mavjudlik bizning kalit, billing yoki regionda ayni paytda foydalanish mumkinligini isbotlamaydi. Tanlov loyihasida modelni konfiguratsiyadan ol va o‘sha muhitda kichik ruxsatli so‘rov bilan tekshir; eski latency’ni bugungi tezlik deb olmang.
+2026-10-28 qaydida Groq uchun openai/gpt-oss-120b va Gemini uchun gemini-3.8-flash yozilgan. Bu 2026-11-02 dagi yangi katalog tekshiruvi emas. Bu eski nomlar ishlamaydigan deb o‘zboshimchalik bilan almashtirilmaydi. Ammo katalogda mavjudlik bizning kalit, billing yoki regionda ayni paytda foydalanish mumkinligini isbotlamaydi. Tanlov loyihasida modelni konfiguratsiyadan ol va o‘sha muhitda kichik ruxsatli so‘rov bilan tekshir; eski latency’ni bugungi tezlik deb olmang.
 
 Groq Free jadvalidagi 120B chegaralari 2026-10-28 ham 30 RPM, 1000 RPD, 8000 TPM, 200000 TPD. Bizning akkauntning qolgan kvotasi, credential holati va billing tier’i ushbu ochiq hujjat auditida tekshirilmadi. UptimeRobot Free 5 daqiqalik monitoringni ko‘rsatadi; bu tayyor monitor yoki ishlayotgan integratsiya dalili emas.
 
@@ -35,7 +35,7 @@ Gemini limitlari model va loyiha tier’iga bog‘liq. Bir Google Cloud project�
 
 ## Backend integratsiyasi
 
-Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash hozir sinalgan nomlar; amaliy vazifada qayta bahola.
+Bu bo‘lim faqat bilet AI/Telegram integratsiyasini talab qilsa qo‘llanadi. Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash 2026-10-18 sinov qaydidagi nomlar; amaliy vazifada qayta bahola.
 
 Groq OpenAI-compatible endpoint: POST https://api.groq.com/openai/v1/chat/completions, Authorization Bearer serverda. Gemini rasmiy API endpointi yoki SDK, API kaliti serverda x-goog-api-key sarlavhasida. Kalitni URL query’sida saqlama/loglama. Gemini 3.8 Flash uchun minimal thinking qo‘llanmaydi; oldingi qisqa sinov low bilan bajarilgan. Bu parametrni boshqa modellarga avtomatik ko‘chirma.
 

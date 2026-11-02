@@ -25,9 +25,9 @@ Migration/backup/restore va deploy/rollback yo‘li: [...]
 Holat: [tekshirildi / ochiq muammo / hali tekshirilmadi / tatbiq etilmaydi + sabab]
 
 ## Joriy texnik qaror
-- Hosting: Render Web Service — [haqiqiy loyiha/manzil yoki hali yaratilmagan]
+- Hosting: [lokal/statik yoki bilet talab qilgan server; haqiqiy manzil yoki hali yaratilmagan]
 - Monitoring: UptimeRobot — [haqiqiy holat]
-- Backend: Supabase — [loyiha referensi maxfiy bo‘lmasa; secret yozma]
+- Backend: [talab qilinmaydi yoki Supabase; holati va sababi, secret yozma]
 - Google OAuth: [client/redirect sozlanganmi; secret yozma]
 - AI: [provayder, model, limit bo‘yicha tasdiqlangan fakt]
 - Telegram: [webhook va test holati; token/shaxsiy chat ID yozma]

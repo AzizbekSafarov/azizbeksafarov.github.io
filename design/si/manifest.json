@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "dae30fcc00d33b5562c45135039e53e32ccba7e6401420136a87b5785c5eb35d",
-  "archive_bytes": 873868,
+  "archive_sha256": "eb0c4a33283d67e6cac46a1dcbdfb4a5c391352b247f9dcdd0e1c02b2ed7ed19",
+  "archive_bytes": 874492,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -107,13 +107,13 @@
     },
     {
       "path": "API-GUIDE.md",
-      "bytes": 6377,
-      "sha256": "7959f06f4ca25bad1729795135801fb0a9ebdc1d7a544e424bf679fae3c5b831"
+      "bytes": 6536,
+      "sha256": "f6f0564aaf3c7f124a543e47387b47b9c6dee26dc58db59f32c11162d41ce810"
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28305,
-      "sha256": "d1406f723a955e2a951de73bbb64d96aa944062da5487a6ff68edf586c0cdb82"
+      "bytes": 28676,
+      "sha256": "63a39a0d504e940d71e65586bad1c8d5d3c000a3b87bab69a6677a80916fc87f"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -198,12 +198,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 18050,
-      "sha256": "7e9ffd5b2cc28d5b0f5435b8341741984c233a727652a234aa5655fec25e1630"
+      "sha256": "a07ca53c28dfa2faa76dcbb8ef7a208d6a8a05ef7aaa36af4f82d205820dd89f"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15460,
-      "sha256": "d6a265f7da3d3f4972685cfecdd70e36f3c0a038f996326e3efc0eb683191f03"
+      "bytes": 15907,
+      "sha256": "c3256c5e82029b93d445976dc9c2a69bb5663beb1d1383617b63e39eeabd777f"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -212,8 +212,8 @@
     },
     {
       "path": "PROJECT-TASK-TEMPLATE.md",
-      "bytes": 2033,
-      "sha256": "1f5b66364d316394a8534a04941a0c96b92bfe21de3f226fea6622093a24d47b"
+      "bytes": 2049,
+      "sha256": "ed23b0222ce99c5b8d1145b2d2a7e7b6aa1dc8565c3a0767b2ab0b6b521aa9e2"
     },
     {
       "path": "READ-RECEIPT.md",
@@ -223,7 +223,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "f1f3d18c51e5eab483873026e4287c360d597611f9f0a03711ce95ea147c0603"
+      "sha256": "de5d32eb561275135feb0e0280861a9097bfb07c2f03275523ee3938827e151b"
     },
     {
       "path": "README.md",
@@ -252,13 +252,13 @@
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 27136,
-      "sha256": "05b37c954bf6cba38e9ecf0f0d137092317b8b298c6c9152b63a9cb138e4c206"
+      "bytes": 27441,
+      "sha256": "39aebb69bc4d20d518a4447bea481ef3b197ff726ed8f11ba4ab00128e2280f0"
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10874,
-      "sha256": "02c1b2e1f4897e66931328449b63572763a5f6ac314ee5236a0699617fa54fd5"
+      "bytes": 11382,
+      "sha256": "94100c43dd2ad31672faf8c54b1f1cc211d903e101bab5e91715e7f2f3ab6949"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
