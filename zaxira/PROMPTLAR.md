@@ -2,7 +2,7 @@
 
 Bu so‘rovlar faqat foydalanuvchi AI’siz zaxira skeletini tanlab, keyin kichik tahrirga AI yordamini so‘rasa ishlatiladi. Asosiy yo‘l — tanlangan starter va CODEX.md. Natija model va vazifaga bog‘liq; kichik fayl ham tekshiriladi. Shuning uchun:
 
-- har safar faqat **bitta fayl** bering va o‘sha faylni **to‘liq** qaytarishni so‘rang;
+- har safar odatda **bitta fayl** bering va uni **to‘liq** qaytarishni so‘rang; P2–P4 kabi aniq blok so‘ralgan bo‘lsa faqat o‘sha blokni almashtiring;
 - javobni faylga qo‘yishdan oldin Ctrl+A bilan eski matnni tanlab almashtiring, saqlang, brauzerda **Ctrl+Shift+R** bosing;
 - buzilsa — Ctrl+Z; ikki urinishdan keyin ham bo‘lmasa, o‘sha qismni qo‘lda yozing;
 - AI javobini tekshirmasdan qabul qilmang: `index.html?tekshir` va qo‘lda sinov.
@@ -15,7 +15,7 @@ Kvadrat qavsdagi joylarni almashtiring. Har so‘rov alohida, yangi chatda ham i
 
 ```text
 Sen kichik statik veb loyihada yordamchisan. Loyiha build'siz: index.html, uslub.css, malumot.js, ilova.js, mantiq.js.
-Qoidalar: faqat men bergan faylni o'zgartir; faylni boshidan oxirigacha to'liq qaytar; yangi kutubxona, framework yoki npm qo'shma;
+Qoidalar: so'ralgan scope'da ishlagin; to'liq fayl so'ralsagina uni boshidan oxirigacha qaytar, aniq blok so'ralsa faqat shu blokni qaytar; yangi kutubxona, framework yoki npm qo'shma;
 tuzilishni, o'zgaruvchi nomlarini va funksiya nomlarini saqlab qol; tushuntirishni 3 qatordan oshirma. O'zbek tilida yoz.
 ```
 
@@ -28,7 +28,7 @@ Quyida tanlov bileti va malumot.js fayli. malumot.js ni biletga moslab to'liq qa
 - id: lotin harf/raqam, takrorlanmasin. Sig'im biletda yo'q bo'lsa joylar: 0.
 - FORMA.maydonlar: biletdagi majburiy maydonlar majburiy: true. Turlar faqat: matn, matnmaydon, telefon, email, son, sana, tanlash, belgi.
 - "element" nomli tanlash maydoni qolsin (ro'yxatdan tanlash uchun).
-- Sahifalardan biletga keraksizini o'chir. namuna: false qil.
+- Faqat biletga keraksiz sahifalarni o'chir. namuna: false faqat vaqtinchalik mazmun to'liq almashtirilganida; sintetik dataset bo'lsa foydalanuvchiga bu haqda rost izoh qoldir.
 - Matnlar qisqa, aniq, o'zbekcha; foydalanuvchiga keyingi qadamni aytsin.
 
 BILET:
@@ -86,7 +86,7 @@ Konsol xatosi bo‘lmasa, xatoni aniq tasvirlang: “[qaysi tugmani bosdim] → 
 ## P6 — Bitta qo‘shimcha funksiya (kreativlik 6.1–6.2)
 
 ```text
-ilova.js ga quyidagi funksiyani qo'sh: [masalan: ro'yxatni sana yoki narx bo'yicha saralash tanlovi / tanlangan element uchun jami narx = narx × soni].
+Avval panel va mavjud kodda shu imkoniyat borligini tekshir: saralash va jami narx allaqachon tayyor. Haqiqatan yetishmasa so'ralgan funksiyani ilova.js ga qo'sh: [aniq imkoniyat].
 Mavjud funksiyalarni o'chirma. Matnni faqat textContent bilan qo'y (innerHTML ishlatma). Kerak bo'lsa index.html ga qo'shiladigan aniq qatorni alohida ber.
 Funksiya bo'sh va noto'g'ri qiymatda buzilmasin.
 
@@ -119,4 +119,4 @@ Faqat quyidagi faktlardan foydalan, o'ylab topma:
 
 Kod bilmasangiz, AI’dan `malumot.js` so‘ramang — `skelet/tahrir.html` panelida o‘zingiz to‘ldiring: matn, rang, ro‘yxat (jadvalni nusxalab qo‘yish mumkin), forma maydonlari, sahifalar. Panel sintaksisni yaratadi; saqlash natijasi va mazmunni tekshiring.
 
-AI P1 bo‘yicha `malumot.js` bersa: faylni papkaga qo‘ying, `tahrir.html` ni oching. Panel ochilib, qizil xato ko‘rsatmasa, AI javobi to‘g‘ri. Panel “malumot.js o‘qilmadi” desa, AI faylni buzgan: toza nusxani qaytaring.
+AI P1 bo‘yicha `malumot.js` bersa: faylni papkaga qo‘ying, `tahrir.html` ni oching. Panel ochilishi sintaksis va ayrim tuzilish tekshiruvlari o‘tganini bildiradi. Bu mazmun, sana/narx, biletga moslik yoki foydalanuvchi oqimi to‘g‘riligini isbotlamaydi; ularni bilet va haqiqiy amal bilan tekshiring. Panel “malumot.js o‘qilmadi” desa, avval fayl yo‘li va konsolni tekshiring; sababni avtomatik AI xatosi deb olmang. Joriy faylni saqlab qo‘yib, o‘zingizning oldingi ishlaydigan nusxangizdan tiklang.

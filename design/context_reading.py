@@ -2,7 +2,7 @@
 from html import escape
 URL = 'https://azizbeksafarov.github.io'
 STEPS = [
- ('Bilet', None, 'Chatda yoki loyihadagi CURRENT-TASK.md da. Bu ochiq to‘plamda bilet yo‘q; ikkalasida ham bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Loyiha davom etayotgan bo‘lsa, HANDOFF.md ni ham o‘qi.'),
+ ('Bilet', None, 'Chatda yoki loyihadagi CURRENT-TASK.md da. Bu ochiq to‘plamda bilet yo‘q; tanlov mahsulotini qurish so‘ralib, ikkalasida ham bilet bo‘lmasa bir marta so‘ra. Audit/tayyorgarlik vazifasida joriy foydalanuvchi topshirig‘i yetarli, bilet talab qilma. Loyiha davom etayotgan bo‘lsa, HANDOFF.md ni ham o‘qi.'),
  ('Tanlov qoidalari va baholash', '/design/handoff/competition.md', 'Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.'),
  ('Tanlangan dizayn va kod', '/design/', 'Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.'),
  ('Ish usuli', '/ish-tartibi/ai.md', 'Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).'),

@@ -246,7 +246,7 @@ AI foydalanuvchiga 5 nuqtani aytsin: bilet/maqsad; tanlangan dizayn; joriy stack
 
 ## 6. Uchta sinov qatlami
 
-ODDIY HOLAT: production login → asosiy amal → database tasdig‘i → reload → kerak bo‘lsa AI/Telegram natijasi. Foydalanuvchi ko‘radigan natijani tekshir.
+ODDIY HOLAT: asosiy amal → talabdagi natija → saqlash kerak bo‘lsa reload. Server/login talab qilingandagina production sessiyasi va database tasdig‘i; kerak bo‘lsa AI/Telegram natijasi. Foydalanuvchi ko‘radigan natijani tekshir.
 NOSOZ HOLAT: bekor login, yaroqsiz/eskirgan sessiya, ruxsatsiz yozuv, timeout, 429, takror bosish, takror webhook va uzilgan internet. Sintetik nosozlikni haqiqiy provayder outage’i deb yozma.
 YANGI MUHIT: toza checkout/ZIP → kerakli runtime → install/build → secrets → migratsiya → deploy → callback → asosiy oqim. Testni aslida shu eski muhitda bajargan bo‘lsang “yangi PC’da sinaldi” demagin.
 
@@ -262,7 +262,7 @@ Quyidagi katalog ehtimoliy muammolarni ko‘rsatadi. Biror bandning mavjudligi a
 
 Foydalanuvchining talabi: testmaxing yoki benchmaxing qilma. Test soni, ball, tezlik yoki ko‘rinish uchun natijani sun’iy bezama. Tekshiruv xatoni topish va foydalanuvchining haqiqiy oqimini tasdiqlash uchun bajariladi. Yangi o‘zgarish yoki ochiq xavf bo‘lmasa bir xil tekshiruvni son uchun takrorlama.
 
-- Parametrli/kombinatsiya testlari umumiy test sonining ichida ekanini ayt; bir to‘plamni qayta ishga tushirib yangi mustaqil dalil deb qo‘shma. ZIP’dagi 488 test to‘liq repodagi to‘plamning bir qismi, qo‘shimcha 488 emas. Test sonidan mahsulot sifati yoki xatosizlik darajasi chiqarilmaydi.
+- Parametrli/kombinatsiya testlari umumiy test sonining ichida ekanini ayt; bir to‘plamni qayta ishga tushirib yangi mustaqil dalil deb qo‘shma. ZIP ichidagi testlar to‘liq repo to‘plamining qismi bo‘lishi mumkin; ularni umumiy songa ikkinchi marta qo‘shmang. Test sonidan mahsulot sifati yoki xatosizlik darajasi chiqarilmaydi.
 - Asosiy oqim, muhit, kutilgan va haqiqiy natijani yoz. FAIL va NOT RUN’ni yashirma. Test o‘tishi uchun talabni pasaytirma yoki noto‘g‘ri natijani kutilgan deb almashtirma. Ataylab buzilgan fayl rad etilishi kabi salbiy sinovning maqsadini ochiq tushuntir.
 - Bir so‘zli API javobi faqat ulanishni ko‘rsatadi; model sifati, tizimning to‘liq ishlashi yoki production barqarorligini isbotlamaydi. Fixture testi brauzer sinovi emas; toza papka yangi jismoniy PC emas; manba hashi mosligi yangi OCR ekspertizasi emas.
 - O‘qilmagan manbani o‘qilgan, rejalashtirilgan xizmatni ishga tushgan, demo ma’lumotni haqiqiy foydalanuvchi natijasi deb ko‘rsatma. Soxta statistika, mijoz fikri, ekspert tasdig‘i yoki “100% xavfsiz/xatosiz” kafolati bo‘lmasin.
@@ -285,7 +285,7 @@ def build():
 - KO‘RSATMA: ishni tartibli bajarish qadami; foydalanuvchi topshirig‘i va amaldagi reglament doirasida qo‘llanadi.
 - TAVSIYA: sharoitga qarab foydali tanlov; barchasi majburiy funksiya emas.
 
-Ushbu snapshot’da tanlov mahsulotiga oid dalilli ochiq bug qaydi kiritilmagan: mahsulot hali birgalikda qurilib sinalmagan. Bu “xatolar yo‘q” yoki “auditdan o‘tgan” degani emas. Oldingi dizayn/vault muammolarini dalilsiz joriy mahsulot xatosi deb ko‘chirma. Yangi aniqlangan muammo loyiha HANDOFF.md’ida qayd etiladi.
+Ushbu snapshot’da tanlov mahsulotiga oid dalilli ochiq bug qaydi kiritilmagan: bu ochiq qo‘llanma noma’lum kelajak bileti uchun yozilgan; alohida mavjud loyihangizning tayyorligi shu matndan chiqarilmaydi. Bu “xatolar yo‘q” yoki “auditdan o‘tgan” degani emas. Oldingi dizayn/vault muammolarini dalilsiz joriy mahsulot xatosi deb ko‘chirma. Yangi aniqlangan muammo loyiha HANDOFF.md’ida qayd etiladi.
 
 ## Ishni bajarish ko‘rsatmalari va tavsiyalar
 
@@ -301,7 +301,7 @@ Ochiq .io snapshot’ini har bir tanlovdagi private loyiha holati bilan avtomati
 
 ## 9. Ishni tugatish dalili
 
-Asosiy foydalanuvchi oqimi haqiqiy muhitda ishlaydi; ma’lumot saqlanishi tasdiqlangan; ruxsat chegaralari sinalgan; muhim xato/bo‘sh/yuklanish holatlari mavjud; mobil va klaviatura ishlaydi; deploy URL va commit tekshirilgan; bajarilmagan testlar aniq aytilgan. Shundan keyin ish tugallangan deb ayt.
+Asosiy foydalanuvchi oqimi haqiqiy muhitda ishlaydi; talab qilingan saqlash va mavjud ruxsat chegaralari sinalgan; muhim xato/bo‘sh/yuklanish holatlari mavjud; mobil va klaviatura ishlaydi; deploy URL va commit tekshirilgan; bajarilmagan testlar aniq aytilgan. Shundan keyin ish tugallangan deb ayt.
 
 ## Bog‘liq hujjatlar
 

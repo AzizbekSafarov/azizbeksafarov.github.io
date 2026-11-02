@@ -1,5 +1,7 @@
 # Seven independent sector identities — 2026-10-16
 
+MAQOM: 2026-10-16 tarixiy snapshot. Jadval va natijalar shu versiyaga tegishli; hozirgi tavsif uchun DESIGN-STANDARD.md, amaldagi runtime va SCREENS.json ni o‘qing.
+
 The user requested distinct typography, shapes, compositions, imagery and domain interactions. The earlier art-direction research is applied in this snapshot.
 
 | Design | Visual language | Primary typography |

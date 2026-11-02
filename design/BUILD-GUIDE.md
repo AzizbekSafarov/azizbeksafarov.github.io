@@ -2,7 +2,11 @@
 
 Bu kutubxonani saqlash uchun yo‘riqnoma. Tanlov uchun ochilgan alohida ZIPda `site/` ichidagi runtime fayllarini tahrirlang; kutubxona generatorlarini u yerda ishga tushirmang.
 
-## Dizayn manbalari
+## Amaldagi kodni saqlash
+
+Paketlash uchun build_handoff.py amaldagi starter papkalaridagi runtime fayllarni oladi. HTML konstruksiya generatorlari tarixiy boshlang‘ich maketni qayta yozishi mumkin; ularni odatiy bugfixdan keyin ko‘r-ko‘rona qayta ishga tushirmang. Xususan app.js’dagi keyingi saqlash/fokus tuzatishlari saqlanganini diff bilan tekshirish kerak. Yakuniy CSS — identity-styles, Bloom source — material-expressive/src. ZIPdan olingan loyihada publishing generatorlari umuman ishlatilmaydi.
+
+## Dizaynlarning dastlabki qurilish manbalari
 
 - Samar / Forma: `build_refined.py` → ichki tuzilma bosqichlari → `identities_v4.py` va `identity-styles/` yakuniy uslubi.
 - Orbita / Nashr / Hisob / Ziyo / Meros: `build_collection.py` → kerakli ichki kompozitsiya bosqichi → `identities_v4.py` va `identity-styles/` yakuniy uslubi.

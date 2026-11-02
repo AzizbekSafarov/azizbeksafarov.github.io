@@ -1,5 +1,7 @@
 # Component-level design research and correction — 2026-10-16
 
+MAQOM: 2026-10-16 research/QA snapshot. “Current” shu sanani bildiradi; keyingi o‘lcham, shakl va motion tuzatishlarini bekor qilish uchun ishlatilmaydi. Hozirgi source va DESIGN-STANDARD.md ustuvor.
+
 ## Problem identified by the user
 
 The previous templates changed hero typography and color, yet their inner components repeated small, delicate text, fine separators and weak outlined actions. Meros exhibition-index rows, Samar destinations and Forma prices/cart controls were the concrete examples. A working layout and absence of overflow did not prove the visual distinction requested by the user. The previous review missed this.

@@ -23,7 +23,7 @@ FACTS_UZ = f'''Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi.
 Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar oxirgi tekshirilgan sana: {REVIEWED}; bugun yangi hujjat yuklangani anglatilmaydi. Haqiqiy bilet, amaldagi reglament va joydagi ko‘rsatma ustuvor. Manbalar: [qisqa kontekst]({SITE}/design/handoff/competition.md), [qoidalar holati]({SITE}/design/handoff/current-competition.md), [mezon → ish → dalil]({SITE}/design/handoff/score-workplan.md), [to‘liq nizomlar, 39 sahifa]({SITE}/ustoz/nizom.md).'''
 
 TICKET_UZ = ('Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu ochiq paketda bilet yo‘q. '
-             'Ikkala joyda ham bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Dizayn namunasi, test ma’lumoti va nizomdagi namunaviy bilet vazifa hisoblanmaydi.')
+             'Tanlov mahsulotini qurish so‘ralib, ikkala joyda ham bilet bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Tayyorgarlik, audit yoki kutubxonani saqlash so‘rovida biletni to‘siq qilma; foydalanuvchining aniq ish doirasini bajar. Dizayn namunasi, test ma’lumoti va nizomdagi namunaviy bilet vazifa hisoblanmaydi.')
 
 BACKEND_UZ = ('Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, '
               '`ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.')
@@ -48,7 +48,7 @@ You are helping Azizbek Safarov in the Ustoz AI "Eng yaxshi veb-sayt" (best webs
 
 ## Read in this order
 
-1. **The ticket** — in the chat or in `CURRENT-TASK.md`. This public package contains no ticket. If neither place has one, ask once for the ticket text and the remaining time. Design samples, test fixtures and the example ticket quoted in the regulations are not the task.
+1. **The ticket** — in the chat or in `CURRENT-TASK.md`. This public package contains no ticket. When asked to build the competition product and neither place has a ticket, ask once for its text and the remaining time. Preparation, audits and library maintenance use the current user request; do not block those tasks on a missing ticket. Design samples, test fixtures and the example ticket quoted in the regulations are not the task.
 2. `HANDOFF.md` — work already done in this project.
 3. `AI-BRIEF.md` — this design: visual contract, file map, run and test commands, flows to keep working.
 4. `COMPETITION.md`, `CURRENT-COMPETITION.md`, `SCORING-WORKPLAN.md` — rules and scoring. Use them to turn the ticket into acceptance checks and defence evidence.

@@ -21,9 +21,9 @@ https://azizbeksafarov.github.io/ — Ustoz AI “Eng yaxshi veb-sayt” tanlovi
 
 ## Har bir `source.zip` ichida
 
-- `START-HERE.md` — kirish; `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` — AI qoidalari (kichik kontekstli AI uchun “SMALL-CONTEXT MODE”).
+- `START-HERE.md` — kirish; `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` — AI qoidalari; tanlangan starter asosiy yo‘l, skelet AI’siz zaxira.
 - `site/` — tahrirlanadigan kod; `node serve.mjs` → http://127.0.0.1:8080/ (npm shart emas).
-- `ZAXIRA/` — `ZAXIRA.md`, `PROMPTLAR.md`, `JONLI-OZGARISH.md`, `skelet/`.
+- `ZAXIRA/` — `CODEX.md`, `ZAXIRA.md`, `PROMPTLAR.md`, `HIMOYA.md`, `JONLI-OZGARISH.md`, `skelet/`.
 - `FULL-COMPETITION-CONTEXT.md`, `REGULATIONS.md` (39 sahifa), `SCORING-WORKPLAN.md`, `TASK-BOUNDARY.json`, `CURRENT-COMPETITION*.md/json`.
 - `node verify-package.mjs` — tahrirdan oldin original paketni hajm, SHA-256 va ortiqcha fayl bo‘yicha tekshiradi. Keyingi tahrir hashni tabiiy ravishda o‘zgartiradi.
 
@@ -51,7 +51,7 @@ python -m http.server 8770 --bind 127.0.0.1
 | Tayyorgarlik | `design/preparation-guide.md`, `design/build_preparation.py` |
 | Tanlov konteksti | `../internet-kontekst` (canonical), `design/sync_context.py` |
 
-Bloom: `design/material-expressive/src/` ni tahrirlang, minified `dist`ni emas; o‘z `AGENTS.md` qoidalariga amal qiling. Yuksalning oq foni va brend faviconi saqlanadi. Mahalliy nusxani sinxronlash: `pwsh -File design/sync_local.ps1 -Apply` (`-Apply`siz faqat reja).
+Bloom: `design/material-expressive/src/` ni tahrirlang, minified `dist`ni emas; o‘z `AGENTS.md` qoidalariga amal qiling. Yuksalning oq foni va brend faviconi saqlanadi. Mahalliy tarqatish nusxasi kerak bo‘lsa design/kit.zip dan yangi bo‘sh joyga ko‘chiring. sync_local.ps1 eski mahalliy oynalarni qayta yaratishi mumkin; uni zaruratsiz ishlatmang.
 
 ## Nashr
 

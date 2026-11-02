@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "29be8bc1bbdb35201d05a0d24f4cbf7a3aa8fc5ce41ebd17901727db7620ad4a",
-  "archive_bytes": 829333,
+  "archive_sha256": "982ad0131a0567b134337310d9ffa0ee07d4d8c04887a00813d5bc40cf9efc2f",
+  "archive_bytes": 830940,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 5505,
-      "sha256": "83a21a900b238b237ea75326c4a4111fa55330fe1f44cdf999540e76966ee54c"
+      "bytes": 5668,
+      "sha256": "b00840d8664f299a3ea548ec871835bd2a706810c85823418637fb9c80f26fee"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 12255,
-      "sha256": "e8eee3b1f294c58e76e4760a29ff9e8e0e5d707c95454115d5e9f960393b9199"
+      "bytes": 12424,
+      "sha256": "f1e35fc345f6dcfd65dc323531fd2ded9071eb4da59f71053d1c59c3d81edf5c"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -95,13 +95,13 @@
     },
     {
       "path": "API-GUIDE.md",
-      "bytes": 6536,
-      "sha256": "f6f0564aaf3c7f124a543e47387b47b9c6dee26dc58db59f32c11162d41ce810"
+      "bytes": 6599,
+      "sha256": "73a17c03b12ec1e870160673c09e2c5f448303b0f2bc7cca1f2d26f8b0c257ae"
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28730,
-      "sha256": "cdfd8d1efd5b7e3c3871a86f0ae0a78a2c0f9d90b2de2b6a84063d4a2f8840b2"
+      "bytes": 29038,
+      "sha256": "28b050de09d7e13f4e99ee8c600379971dd24d123aef401a152d16c917152247"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -145,13 +145,13 @@
     },
     {
       "path": "DESIGN-STANDARD.md",
-      "bytes": 7444,
-      "sha256": "65f2b48dc3c1c196b3091c3a7bdf575d036bab8afd70f561a8428f40bd2176e6"
+      "bytes": 8817,
+      "sha256": "31596636ac22a9696171fae5c9624299557ae7ed9f119b1040d20d546d2981e5"
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 205148,
-      "sha256": "f5b324117cc73c03dd605ae26ce5848fed651af47fdf582f549ee18e45ea5b7b"
+      "bytes": 205787,
+      "sha256": "3ff8c0c58f4f975793177f112d93a8c46e3f2c298d2bbac219a793f45f2bf290"
     },
     {
       "path": "GEMINI.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16433,
-      "sha256": "7e394c3cb7bf3de498f60ba2bfa1ff1b6bb8f780eccd71086a6bbc5955a1b497"
+      "sha256": "a8e65ffb6eea96056be81b7c15affff706635da7cb2ddfdd9bc9d50f5c09b182"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "e6e1f1bb676d81014a5c71b271080e60f32fd5cbce214a5d7ba7dbe975c61749"
+      "sha256": "0a6110de2c808f50692c1d03164745d35e53e1f79cb69c49fc85505377be683e"
     },
     {
       "path": "README.md",
@@ -240,13 +240,13 @@
     },
     {
       "path": "TASK-BOUNDARY.json",
-      "bytes": 3044,
-      "sha256": "6f08fbf18e2cf75ea0cf75d20f657e9ff0bf6f59f114cc9c3b117f01955bc83c"
+      "bytes": 3388,
+      "sha256": "f073ea8e1edb28b02ce2612949d25dd0b583fc6a85c97a41c504ca9aaba2b2ee"
     },
     {
       "path": "WORKFLOW.md",
-      "bytes": 27441,
-      "sha256": "39aebb69bc4d20d518a4447bea481ef3b197ff726ed8f11ba4ab00128e2280f0"
+      "bytes": 27742,
+      "sha256": "94bb0239b7231598ab59165f29f2d2e2bb01e4ae85c66e309f62cb5526c5eb08"
     },
     {
       "path": "ZAXIRA/CODEX.md",
@@ -265,8 +265,8 @@
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
-      "bytes": 5273,
-      "sha256": "46fcbaf7bdb453fcb3aaf1792eded2240e467cc858b3c54ba76e610930a7dc1e"
+      "bytes": 5825,
+      "sha256": "80ed49e5336f04f02eb833c2ee9f1d04ed938017a49280274be9e3c91572974f"
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
