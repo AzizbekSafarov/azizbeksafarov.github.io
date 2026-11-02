@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
-  "source_fingerprint": "a7fc344648402b5c2e7fa5e97d56402d6bb211c834715a35a44b2dfbdf1cdc8d",
+  "source_fingerprint": "15bf4804de1c370804cff47882cd0c3538c623831cecb60850369fd57cfd4e6e",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "cac0d16d734b70f5b921fd793ad52ef55fdda9ce87235c0eb4673fac3212eae8",
-  "archive_bytes": 1565712,
+  "archive_sha256": "132af55fe7f68b5150dcebe38dbd64c468eea5486f23f7f76e1fdeb32371f245",
+  "archive_bytes": 1566036,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -25,7 +25,7 @@
     {
       "path": "src/main.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
-      "sha256": "c4d2e5a1d370480f6d2314342d8554b423cf009bd42791c20dd594a6e598479f",
+      "sha256": "bf1ba30644ae7bcefde832b392d4bf3599adae4e80846029e9bed5509aafcfb4",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt"
     },
     {
@@ -116,7 +116,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 18811,
-      "sha256": "8ecf6bc58dd1537d359166201743848e91069cd1f2b2044d45cc1575d0199c46"
+      "sha256": "aa2185577dd7e708f14c5b2b08dc4769ba870eef0c9685a0f2eb641c4f714ef1"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -196,7 +196,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1240,
-      "sha256": "b0a9a2305bfdaca117b05005989f067e36d57bf31e0a650a03810dc3cfbe8906"
+      "sha256": "ed2a76a721c312d372734012699722494586a7850e2fe4bbaa36767887403d58"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -216,7 +216,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 21643,
-      "sha256": "def00cc5ef3e084417bba6ffdb245a24ffacdb9ae7b938ba076356ebabe864cc"
+      "sha256": "ff4f23d0f6b860bda44ea543dd99a8fa41fcd0493ff5b66222a00fdaaf23698f"
     },
     {
       "path": "PREPARATION.md",
@@ -241,7 +241,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "4182fb6d7144a68cee6ab6a2dae6914600f3dcf4f4e9295fcf2c663f9dddec42"
+      "sha256": "d1dbece4e1e06f79c0d02aca1947eaa9595f04c7087ea2166fb5508ae3f635f6"
     },
     {
       "path": "README.md",
@@ -516,7 +516,7 @@
     {
       "path": "kit.json",
       "bytes": 316,
-      "sha256": "1791c84e9dd8e6fd2831a46587e2c6a691fd6d6c81fa9affac5d00f3de05be25"
+      "sha256": "86ea5b972e62f2f588b7228f9a016ece553d0ff6e977905949872cbc1acf9b2a"
     },
     {
       "path": "serve.mjs",
@@ -564,14 +564,14 @@
       "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
     },
     {
-      "path": "site/dist/assets/index-BCSWKaNe.js",
-      "bytes": 741706,
-      "sha256": "28dd2b495df4ec3cc500b8066301526f154430e6710bba5868db5926abc926f4"
-    },
-    {
       "path": "site/dist/assets/index-D1Rt40jH.css",
       "bytes": 34454,
       "sha256": "ef817f5c4c7660fe4ccc1d139244e21ffa78b2ebdf369c7e8e92dc9c77f8b2c1"
+    },
+    {
+      "path": "site/dist/assets/index-gk3PXxsX.js",
+      "bytes": 742332,
+      "sha256": "be52f128d3c176cf7421b5f3b0a1e6fe195fd126bd61682d3b10790c5baa1465"
     },
     {
       "path": "site/dist/assets/material-symbols-CopIADRp.woff2",
@@ -616,7 +616,7 @@
     {
       "path": "site/dist/index.html",
       "bytes": 469,
-      "sha256": "fb282b205f64ed2564af1338b83ee85f9b2fb3acb5634cbcfe5851bd84eb7fc4"
+      "sha256": "47be001fe26deefc08983271fbb26d85c6582db7fc9de55d451d2f0d6a923a84"
     },
     {
       "path": "site/download_symbols.py",
@@ -725,8 +725,8 @@
     },
     {
       "path": "site/src/main.jsx",
-      "bytes": 26712,
-      "sha256": "c4d2e5a1d370480f6d2314342d8554b423cf009bd42791c20dd594a6e598479f"
+      "bytes": 27344,
+      "sha256": "bf1ba30644ae7bcefde832b392d4bf3599adae4e80846029e9bed5509aafcfb4"
     },
     {
       "path": "site/src/model.js",
