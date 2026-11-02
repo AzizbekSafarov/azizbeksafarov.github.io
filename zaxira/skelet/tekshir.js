@@ -8,6 +8,8 @@
    ===================================================================== */
 (function () {
   'use strict';
+  // No console hooks, DOM changes or storage probes outside explicit diagnostics.
+  if (!new URLSearchParams(location.search).has('tekshir')) return;
   var xatolar = [];
   window.addEventListener('error', function (e) {
     xatolar.push((e.message || 'Resurs yuklanmadi') + (e.filename ? ' — ' + e.filename.split('/').pop() + ':' + e.lineno : (e.target && (e.target.src || e.target.href) ? ' — ' + (e.target.src || e.target.href) : '')));
@@ -15,8 +17,6 @@
   window.addEventListener('unhandledrejection', function (e) { xatolar.push('Promise xatosi: ' + (e.reason && e.reason.message || e.reason)); });
   var asl = console.error;
   console.error = function () { xatolar.push(Array.prototype.join.call(arguments, ' ')); return asl.apply(console, arguments); };
-
-  if (!/[?&]tekshir\b/.test(location.search)) return;
 
   function korinadi(e) { return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length); }
   function nomi(e) {
@@ -39,7 +39,8 @@
     var h1 = Array.prototype.filter.call(doc.querySelectorAll('h1'), korinadi).length;
     n.push(h1 === 1 ? ['ok', 'Sahifada bitta asosiy sarlavha (h1)'] : ['ogoh', 'Ko‘rinadigan h1 soni: ' + h1 + ' (1 ta bo‘lishi kerak)']);
     var rasmlar = Array.prototype.filter.call(doc.images, function (i) { return i.complete && i.naturalWidth === 0 && i.getAttribute('src'); });
-    n.push(rasmlar.length ? ['xato', 'Yuklanmagan rasm: ' + rasmlar.map(function (i) { return i.getAttribute('src'); }).join(', ')] : ['ok', 'Rasmlar yuklangan']);
+    var kutilmoqda = Array.prototype.filter.call(doc.images, function (i) { return !i.complete && i.getAttribute('src'); });
+    n.push(rasmlar.length ? ['xato', 'Yuklanmagan rasm: ' + rasmlar.map(function (i) { return i.getAttribute('src'); }).join(', ')] : kutilmoqda.length ? ['ogoh', kutilmoqda.length + ' ta rasm hali yuklanmoqda; qayta tekshiring'] : ['ok', 'Rasmlar yuklangan']);
     var altsiz = Array.prototype.filter.call(doc.images, function (i) { return !i.hasAttribute('alt'); });
     if (altsiz.length) n.push(['ogoh', altsiz.length + ' ta rasmda alt yo‘q']);
     var nomsizMaydon = Array.prototype.filter.call(doc.querySelectorAll('input:not([type=hidden]),select,textarea'), function (e) {
@@ -58,27 +59,40 @@
     var vaqtinchalik = matn.match(/lorem|ipsum|\bTODO\b|placeholder|namuna|xxx|\?\?\?/gi);
     n.push(vaqtinchalik ? ['ogoh', 'Vaqtinchalik/namuna matn qolgan: ' + Array.from(new Set(vaqtinchalik.map(function (s) { return s.toLowerCase(); }))).join(', ')] : ['ok', 'Vaqtinchalik matn topilmadi']);
     n.push(doc.documentElement.lang ? ['ok', 'Til belgilangan: ' + doc.documentElement.lang] : ['ogoh', '<html lang> yo‘q']);
-    var ombor = true; try { var k = '__tekshir'; win.localStorage.setItem(k, '1'); win.localStorage.removeItem(k); } catch (e) { ombor = false; }
-    n.push(ombor ? ['ok', 'Brauzer xotirasi ishlaydi'] : ['ogoh', 'Brauzer xotirasi yopiq: saqlash ishlamaydi']);
+    var ombor = true;
+    try {
+      var storage = win.localStorage, k = '__tekshir_probe';
+      while (storage.getItem(k) !== null) k += '_';
+      try { storage.setItem(k, '1'); ombor = storage.getItem(k) === '1'; }
+      finally { storage.removeItem(k); }
+    } catch (e) { ombor = false; }
+    n.push(ombor ? ['ok', 'localStorage yozish/o‘qish sinovi o‘tdi; ilova saqlanishini reload bilan alohida tekshiring'] : ['ogoh', 'localStorage sinovi o‘tmadi; ilovaning xotira/eksport muqobilini tekshiring']);
     return n;
   }
 
   function kengliklar(tayyor) {
-    var toza = location.href.replace(/([?&])tekshir\b[^&#]*&?/, '$1').replace(/[?&](#|$)/, '$1');
+    var url = new URL(location.href); url.searchParams.delete('tekshir');
+    var toza = url.href;
     var natija = [], qoldi = 3;
     [390, 768, 1366].forEach(function (w) {
       var f = document.createElement('iframe');
+      var tugadi = false;
+      function finish(row) {
+        if (tugadi) return;
+        tugadi = true; clearTimeout(deadline); f.remove(); natija.push(row);
+        if (--qoldi === 0) tayyor(natija.sort(function (a, b) { return parseInt(a[1], 10) - parseInt(b[1], 10); }));
+      }
+      var deadline = setTimeout(function () { finish(['ogoh', w + ' px: sahifa vaqtida yuklanmadi; brauzerda qo‘lda tekshiring']); }, 8000);
       f.style.cssText = 'position:fixed;left:-9999px;top:0;width:' + w + 'px;height:800px;border:0;visibility:hidden';
       f.setAttribute('aria-hidden', 'true'); f.tabIndex = -1;
       f.onload = function () {
         setTimeout(function () {
           try {
             var d = f.contentDocument, sw = d.documentElement.scrollWidth;
-            natija.push(sw > w + 1 ? ['xato', w + ' px: gorizontal surish bor (' + sw + ' px)'] : ['ok', w + ' px: kontent sig‘adi']);
+            finish(sw > w + 1 ? ['xato', w + ' px: gorizontal surish bor (' + sw + ' px)'] : ['ok', w + ' px: kontent sig‘adi']);
           } catch (e) {
-            natija.push(['ogoh', w + ' px: avtomatik tekshirib bo‘lmadi (fayl rejimi). F12 → Ctrl+Shift+M bilan qo‘lda tekshiring']);
+            finish(['ogoh', w + ' px: avtomatik tekshirib bo‘lmadi. F12 → Ctrl+Shift+M bilan qo‘lda tekshiring']);
           }
-          f.remove(); if (--qoldi === 0) tayyor(natija.sort(function (a, b) { return parseInt(a[1], 10) - parseInt(b[1], 10); }));
         }, 600);
       };
       f.src = toza; document.body.appendChild(f);
@@ -91,6 +105,7 @@
     p.style.cssText = 'position:fixed;right:12px;bottom:12px;z-index:9999;width:min(420px,calc(100vw - 24px));max-height:70vh;overflow:auto;background:#fff;color:#111;border:2px solid #111;border-radius:12px;font:14px/1.45 system-ui,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.25)';
     p.innerHTML = '<div style="display:flex;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid #ddd"><strong style="margin-right:auto">Tekshiruv</strong>' +
       '<button type="button" data-t="run" style="padding:8px 12px">Tekshirish</button><button type="button" data-t="copy" style="padding:8px 12px">Nusxalash</button><button type="button" data-t="close" aria-label="Yopish" style="padding:8px 10px">✕</button></div>' +
+      '<p style="padding:0 12px">Bu yordamchi to‘liq audit emas. Kenglik sinovi sahifani yana 3 marta ochadi. Haqiqiy API yoki yozish amallari bo‘lsa brauzer oynasini qo‘lda o‘zgartiring.</p><button type="button" data-t="widths" style="margin:0 12px;padding:8px">Kengliklarni 3 nusxada tekshirish</button>' +
       '<ul data-t="list" style="list-style:none;margin:0;padding:10px 12px;display:grid;gap:6px"><li>Har sahifani ochib “Tekshirish”ni bosing.</li></ul>';
     document.body.appendChild(p);
     var list = p.querySelector('[data-t=list]'), oxirgi = '';
@@ -108,8 +123,12 @@
       var q = sahifaniTekshir(document, window);
       p.style.display = '';
       q.push(xatolar.length ? ['xato', 'Konsol xatolari: ' + xatolar.slice(-5).join(' | ')] : ['ok', 'Konsol xatolari yo‘q']);
-      chiz(q.concat([['ogoh', 'Kengliklar tekshirilmoqda…']]));
-      kengliklar(function (k) { chiz(q.concat(k)); });
+      chiz(q);
+    };
+    p.querySelector('[data-t=widths]').onclick = function () {
+      var button = this; button.disabled = true;
+      chiz([['ogoh', 'Kengliklar tekshirilmoqda; bu forma, backend yoki to‘liq responsive sinovi emas.']]);
+      kengliklar(function (k) { button.disabled = false; chiz(k); });
     };
     p.querySelector('[data-t=copy]').onclick = function () {
       var t = oxirgi || list.innerText;

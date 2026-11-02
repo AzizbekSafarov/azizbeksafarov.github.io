@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "2d03ebc5091d0b57db31eeae5b8cf29869f45e746d55223fb93f24d4be361c1e",
-  "archive_bytes": 831027,
+  "archive_sha256": "43432434c5b2862c153bcce59acffa2f64270cf19058d18bca4218b2b643b484",
+  "archive_bytes": 833074,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -185,8 +185,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16149,
-      "sha256": "a58be43f240be012bb62c2ab00fd033923271e6914d9d605a9de28941aeab7ee"
+      "bytes": 16315,
+      "sha256": "f1fb8a0057c0f3575d7ff461366fa2dedee0ca01bcd407d195f548e42754a1fa"
     },
     {
       "path": "PREPARATION.md",
@@ -211,12 +211,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "7e880d5c3830904e2c725629b759d1f8ba142ee610d59700b98781a084007059"
+      "sha256": "aab5012b1dfd8a44de5e66c27a79cc63b3922fe92c02db2f3b1ef41062e90838"
     },
     {
       "path": "README.md",
-      "bytes": 1249,
-      "sha256": "7fc791867b7532f1325784bb70eb36c02e26002f0359689f8f800a1dc7b27780"
+      "bytes": 1898,
+      "sha256": "6193724392d01fef63be4293c89e37b4ca3846ec9b1fd8b8098e91f31a684579"
     },
     {
       "path": "REGULATIONS.md",
@@ -245,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11382,
-      "sha256": "94100c43dd2ad31672faf8c54b1f1cc211d903e101bab5e91715e7f2f3ab6949"
+      "bytes": 11246,
+      "sha256": "2af784dc76d3ef5083551de88e0a698712ef71eb5c44ff97301d7b3db75aead7"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -470,8 +470,13 @@
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",
-      "bytes": 9174,
-      "sha256": "a5c702e4a0ddd846a33d129a203867e687e30de8a6c284bcbdc06d69810fa6b0"
+      "bytes": 10532,
+      "sha256": "dca690f1c370bcf7deda0ab20f230d7681e2ffbc5ebb8738728efe9cc6883e8f"
+    },
+    {
+      "path": "ZAXIRA/skelet/tekshir.test.mjs",
+      "bytes": 2785,
+      "sha256": "0e79370a934e3a22d4bb57170eab05d3884edf2d7fb40ec2ff0ca9b9387f22b3"
     },
     {
       "path": "ZAXIRA/skelet/uslub.css",

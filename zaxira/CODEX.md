@@ -4,22 +4,19 @@ Bu qo‘llanma Codex (ChatGPT desktop ilovasi ichida) bilan professional sayt ya
 
 Codex ishlamasa, limit tugasa yoki ruxsat berilmasa: `ZAXIRA.md` → skelet + `tahrir.html`.
 
-## 0. Sozlash vaqtida (15 daqiqa, amaliy vaqtga kirmaydi)
+## 0. Sozlash vaqtida
 
-1. **ChatGPT** desktop ilovasini oching → hisobingizga kiring → yuqoridan **Codex** ni tanlang.
-2. Yozish oynasi ostini tekshiring:
-   - model: **Sol** (asosiy). **Astra** eng kuchli, lekin limitni juda tez yeydi — faqat qiyin bitta muammo uchun;
-   - fikrlash darajasi: **High** reja uchun, keyin **Medium** (qiyin xatoda yana High);
-   - ruxsat: **Default permissions** yoki **Ask for approval** (Full access emas).
-3. Brauzerda `https://azizbeksafarov.github.io/` → dizaynni tanlang → **Kod ZIP** ni yuklang. Internet bo‘lmasa yoki sayt ochilmasa: oldindan olib kelingan ZIP nusxasi (`design/kit.zip` ichida hamma starter bor).
-4. ZIP’ni ish stolida bilet formatidagi papkaga oching (masalan `hududiy_017_003`). Ichki ZIP’ni yana ochish shart emas — ichida `site/`, `START-HERE.md`, `ZAXIRA/` bo‘lsa to‘g‘ri.
-5. Codex’da **Add new project** (yoki **Ctrl+O**) → shu papkani tanlang → **New chat**.
-6. Sinov xabari: `Salom. Papkadagi fayllar ro‘yxatini qisqa ayt.` — javob kelsa, hammasi ishlayapti.
-7. **Settings → Usage & billing** da limit qancha qolganini bir marta ko‘rib qo‘ying.
+Video ulanish uchun 15 daqiqa deydi; amaliy vaqtga kirmasligi mezonlar loyihasida. Joydagi tartibni aniqlang.
+
+1. Tashkilotchi bergan Codex ilovasini oching va ruxsat etilgan hisobga kiring. Ilova versiyasiga qarab tugma nomlari farq qilishi mumkin.
+2. Shu hisobda mavjud model, qolgan limit va fayl/brauzer vositalarini tekshiring. Sol/Astra/Luna nomlari yoki Plus imkoniyati boshqa hisobda mavjud bo‘lishi kafolatlanmaydi. Bir kichik faylni o‘qish va preview ochish bilan muhitni tekshiring; chat javobi kelishi barcha vosita ishlaganini bildirmaydi.
+3. Tanlangan dizaynning **source.zip** faylini yangi bo‘sh papkaga oching. **kit.zip** yuklangan bo‘lsa avval uning ichidagi tanlangan dizayn/source.zip ni ham oching. Ish ildizida site/, START-HERE.md va kit.json turishi kerak.
+4. Shu ildiz papkani Codex loyihasi sifatida oching. README.md dagi buyruqlarni aynan ko‘rsatilgan papkadan bajartiring. Tahrirdan oldin node verify-package.mjs; keyin node serve.mjs.
+5. Asl preview ochilganini ko‘ring. Bloom’da tahrirdan keyin source build kerak; HTML starterlarda npm yo‘q. Ruxsatlar kerakli loyiha va vositalarga mos bo‘lsin; noma’lum amalni o‘qimasdan tasdiqlamang.
 
 ## 1. Asosni tanlash
 
-Codex bilan ish **tanlangan professional starter** ustida boradi: ZIP’dagi `site/` — tayyor dizayn, ishlaydigan oqimlar va testlar. Codex uni biletdagi mahsulotga aylantiradi (pastdagi C1–C6). Tanlov qoidasi bo‘yicha oldindan tayyorlangan to‘liq loyiha topshirilmaydi, shuning uchun starter biletga haqiqatan moslashtiriladi.
+Codex bilan ish **tanlangan professional starter** ustida boradi: ZIP’dagi `site/` — tayyor dizayn, ishlaydigan oqimlar va testlar. Codex uni biletdagi mahsulotga aylantiradi (pastdagi C1–C6). Mezonlar loyihasida oldindan tayyorlangan to‘liq loyiha topshirish taqiqlangan, shuning uchun starter biletga haqiqatan moslashtiriladi.
 
 | Bilet turi | Starter |
 |---|---|
@@ -35,7 +32,7 @@ Codex bilan ish **tanlangan professional starter** ustida boradi: ZIP’dagi `si
 
 Starterni bir daqiqada tanlang va keyin almashtirmang: vaqt ishlaydigan oqimga ketsin.
 
-Model: **Sol** — asosiy; reja (C1) va qiyin xato uchun fikrlash darajasini **High** qiling. **Astra** — faqat Sol uddalamagan bitta muammo uchun. Matn yozish uchun **Luna** yetadi.
+Modelni mavjud imkoniyat va haqiqiy sinovga qarab tanlang. Qiyin reja/xatoda chuqurroq fikrlash, oddiy tahrirda qisqaroq ish yetadi; model nomidan sifat yoki sarf kafolati chiqarmang.
 
 `ZAXIRA/skelet/` va `tahrir.html` — siz uchun, AI’siz zaxira: Codex ishlamay qolsa yoki limit tugasa, saytni o‘zingiz panelda yig‘asiz (`ZAXIRA.md`). Codex’ga skeletdan qurishni buyurmang.
 
@@ -71,7 +68,7 @@ Rejani o‘qing. Biletdagi biror talab tushib qolgan bo‘lsa, ayting: `Biletdag
 ```text
 Rejani tasdiqlayman. Endi qur. Qoidalar:
 - Tanlangan dizaynning uslubini (shrift, kompozitsiya, rang tili) saqla, mazmun va funksiyalarni biletga moslashtir.
-- Starterning texnologiyasida qol (HTML starterlarda oddiy HTML/CSS/JS, Bloom'da mavjud React loyihasi). Yangi framework, npm paket yoki tashqi CDN qo'shma. Internetsiz ham ishlasin.
+- Starterning texnologiyasida qol (HTML starterlarda oddiy HTML/CSS/JS, Bloom'da mavjud React loyihasi). Frameworkni zaruratsiz almashtirma. Bilet integratsiyasi uchun zarur SDK bo'lsa sababini yoz va mos dependency/lockfile ishlat. Lokal resurslar internet uzilganda ochilsin; haqiqiy server/API amali esa internet talab qilishini yashirma.
 - Barcha ko'rinadigan matnlar, ro'yxat ma'lumotlari va asosiy rang oson topilsin:
   ma'lumot bitta faylda (mavjud model.js yoki yangi content.js), asosiy rang CSS o'zgaruvchisida.
 - Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Biletda lokal saqlash yetarli bo'lsa localStorage; server/login/umumiy baza yoki maxfiy API talab qilinsa va ruxsat bo'lsa ARCHITECTURE.md bo'yicha backend qur. Lokal natijani serverga yuborildi dema.
@@ -86,8 +83,7 @@ Keyin ZIP ildizida `node serve.mjs` bilan oching (Bloom source tahriridan keyin 
 
 ```text
 Endi o'zing sina va tuzat:
-1) ZAXIRA/skelet/tekshir.js ni site/ ga nusxala (Bloom'da site/public/ ga) va index.html <head> ga birinchi script qilib ula;
-   saytni ?tekshir bilan ochib "Tekshirish" natijasini o'qi.
+1) Mavjud testlar va brauzer vositalaridan foydalan. tekshir.js ixtiyoriy yordamchi: u shadow DOM ichini, server ruxsatlarini va biznes oqimini to'liq tekshirmaydi. Uni ishlatsang ?tekshir rejimida och; uch nusxali kenglik sinovini haqiqiy API/yozishli sahifada ishlatma.
 2) Biletdagi har talabni boshidan oxirigacha bajar: to'g'ri qiymat, bo'sh forma, noto'g'ri qiymat, takror, saqlangan holat qayta ochilganda.
 3) 390, 768 va 1366 px kenglikda gorizontal surish, kesilgan matn, ustma-ust tushish yo'qligini tekshir.
 4) Konsolda xato bo'lmasin.
@@ -101,9 +97,8 @@ Jadvaldagi har “o‘tdi”ni **o‘zingiz** bir marta bosib ko‘ring. Ko‘rm
 ```text
 Tanlangan starter uslubini saqla. Funksiyalarni va kompozitsiyani qayta qurma; faqat aniqlangan ko'rinish kamchiliklarini tuzat:
 - Birinchi ekran bilet va tanlangan dizayn vazifasiga mos bo'lsin; sarlavha mavzuni aniq aytsin.
-- Mavzuga mos haqiqiy rasm bo'lsa ishlat (berilgan materiallar yoki papkadagi rasmlar); dekorativ "orb", gradient bloblar yo'q.
-- Bir xil rangdagi zerikarli palitra emas: 1 asosiy + 1 urg'u rang, matn kontrasti kamida 4.5:1.
-- Kartochka ichida kartochka yo'q; bo'limlar keng polosa, kartochka faqat takrorlanuvchi elementlar uchun.
+- Tanlangan dizaynning rasm, palitra, shakl va kartochka tilini saqla; hammasini bir xil uslubga keltirma.
+- Matn kontrasti, tugma/panel farqi, fokus va o'qilishdagi aniq xatoni tuzat. Mavjud foydali animatsiyani saqla, reduced-motion holatini tekshir.
 - Matn telefonda sig'sin, shrift o'lchami ekran kengligiga qarab sakramasin.
 - Faqat bilet va qolgan vaqtga mos bo'lsa foydali detalni ko'rib chiq: [masalan qolgan joy ko'rsatkichi / saralash / jami hisob].
 Keyin 390 va 1366 px da skrinshot olib, ko'rinishni o'zing baholab, bitta eng katta kamchilikni tuzat.
@@ -147,8 +142,7 @@ Ochiq parol yoki kalit qolmaganini tekshir.
 | 10 → 0 | Yangi o‘zgarish yo‘q. Papka nusxasi, topshirish |
 
 - 30 daqiqa qolganda yangi funksiya boshlanmaydi.
-- **Settings → Usage & billing**: limit 30% dan kam qolsa, qisqa va aniq so‘rovlarga o‘ting, Astra’ni ishlatmang.
-- **Banked reset** (Usage sahifasida “Available” ostida, muddati bilan) 5 soatlik va haftalik limitni 100% ga qaytaradi. U faqat shu ikkisidan **biri 80% dan kam qolganda** ishlaydi: haftalik 90% qolgan bo‘lsa ham, 5 soatlik 80% dan kam bo‘lsa — ishlaydi. Ikkalasi ham 80% va undan ko‘p bo‘lsa, rad etiladi va reset sarflanmaydi. Erta ishlatmang: 5 soatlik limit deyarli tugaganda bosing yoki **“Allow your assistant to use resets”** ni yoqing — limit 10% ga tushganda o‘zi ishlatadi. Ishlatgandan keyin keyingi tiklanish vaqti siljiydi. Muddati tanlov kunidan keyin ekanini oldindan tekshiring.
+- Hisobdagi Usage sahifasidan haqiqiy qolgan limit va reset vaqtini o‘qing. Saqlangan eski raqamga tayanmang. Reset taklifi bo‘lsa aynan shu hisobdagi shart va muddatni tekshiring; mavjudligi, chegarasi va avtomatik ishlashi oldindan kafolatlanmaydi. Buni sozlash bo‘yicha foydalanuvchi qarorini avtomatik qabul qilmang.
 - Bitta topshiriq — bitta akkaunt. Ikkinchi akkaunt faqat birinchisi umuman ishlamay qolsa; almashtirishdan oldin tashkilotchidan so‘rang.
 - Limit tugasa: ishlaydigan holatni saqlang. Qolgan matn/rang ishlarini qo‘lda bajaring (`JONLI-OZGARISH.md`). Hali sayt bo‘lmasa — `ZAXIRA.md` dagi AI’siz yo‘l.
 
@@ -157,7 +151,7 @@ Ochiq parol yoki kalit qolmaganini tekshir.
 Baholashda AI ishlatishning o‘zi minus emas, lekin **siz nimani boshqarganingiz** so‘raladi (5.2 va 4.2 ko‘rsatkichlari):
 
 - “Kodni Codex yozdi. Men biletni talablar jadvaliga aylantirdim, dizaynni tanladim, har talabni o‘zim sinadim, [xato]ni topib tuzattirdim, [matn/rang/detal]ni o‘zim o‘zgartirdim.”
-- Cheklovni ochiq ayting: “Ma’lumot brauzerda saqlanadi, server yo‘q.”
+- Cheklovni haqiqiy holatga mos ayting. Faqat lokal loyiha bo‘lsa: “Ma’lumot shu brauzerda saqlanadi”. Server ishlasa uning tekshirilgan holatini ayting.
 - Ishlamaydigan narsani “ishlaydi” demang.
 
 ## 6. Oldindan mashq qilish shart

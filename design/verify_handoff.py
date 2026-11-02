@@ -5,6 +5,7 @@ from urllib.parse import urlsplit, unquote
 from hashlib import sha256
 from io import BytesIO
 import json
+import re
 import entry_text
 import zipfile
 
@@ -36,7 +37,6 @@ def check_runtime(z,root):
             parser=References();parser.feed(data)
             refs=[value for tag,key,value in parser.refs if key=='src' or (tag=='link' and key=='href')]
         else:
-            import re
             refs=re.findall(r'url\([\s\'\"]*([^\s\'\")]+)',data)
         for value in refs:
             parts=urlsplit(value)
@@ -129,6 +129,12 @@ def verify():
         with zipfile.ZipFile(BytesIO(archive)) as z:
             assert z.testzip() is None
             check_package(z)
+            readme=z.read('README.md').decode('utf-8')
+            assert 'node verify-package.mjs' in readme and 'node serve.mjs' in readme
+            assert '9 HTML namuna' not in readme and 'shared.js' not in readme
+            assert 'localStorage ZIP bilan ko‘chmaydi' in readme
+            for match in re.findall(r'`(site/[^`\s]+)`',readme):
+                assert match in z.namelist() or any(n.startswith(match.rstrip('/')+'/') for n in z.namelist()), (template['slug'],match)
             assert 'START-HERE.md' in z.namelist() and 'verify-package.mjs' in z.namelist()
             for entry in manifest['files']:
                 name=entry['path']
@@ -164,7 +170,6 @@ def verify():
                     text=z.read(doc).decode('utf-8')
                     for name in ('identities_v4.py','diversity_v3.py','build_collection.py','build_refined.py','build_handoff.py','identity-styles/'):
                         assert name not in text,f"{template['slug']}!{doc}: names absent generator {name}"
-            import re
             for ref in set(re.findall(r'`([A-Za-z0-9_./-]+\.(?:md|json|mjs|js))`',z.read('AGENTS.md').decode())):
                 if '*' in ref or ref.startswith(('site/','src/')) and '/' in ref and not ref.endswith('.md'):continue
                 assert ref in z.namelist() or ref.rstrip('/')+'/' in {n[:len(ref)+1] for n in z.namelist()},f"{template['slug']}: AGENTS.md names missing file {ref}"

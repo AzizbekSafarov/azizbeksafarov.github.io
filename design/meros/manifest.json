@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "145281c66bd5723e522478d026cff56d01fc6ac0c54cc8a2ac19ed4e31080ef8",
-  "archive_bytes": 2816496,
+  "archive_sha256": "6689b0018ea152eba96d4ae000d05e6206f1622fd316a1c82703c74564d3806d",
+  "archive_bytes": 2818477,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -185,8 +185,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16934,
-      "sha256": "553f88a86d8a354bc8401c46b5f4c148669273a3a0f14c4570a06882281fae74"
+      "bytes": 17100,
+      "sha256": "ada5797d52be5b9961ed9419c395d9c1144e2ad6e060d5d07bc70b0404e8fee5"
     },
     {
       "path": "PREPARATION.md",
@@ -211,12 +211,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "b787da4d139228e4a19883ed345db7ac20cc513a850d9fcdb055fda934cb5db6"
+      "sha256": "44cdd1b871e95d7c312cae7630ff1cf5637cae8d24b42ce00c0bc8e8fa77cfb4"
     },
     {
       "path": "README.md",
-      "bytes": 1347,
-      "sha256": "0dc6c95ff12edcf5cd03707323a5403ed91b37f8ac24b4ba328a8f1430ee787c"
+      "bytes": 1898,
+      "sha256": "2d60c70a4947b635703211ad729e7f00846fbb45b93763315855c072e467753e"
     },
     {
       "path": "REGULATIONS.md",
@@ -245,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11382,
-      "sha256": "94100c43dd2ad31672faf8c54b1f1cc211d903e101bab5e91715e7f2f3ab6949"
+      "bytes": 11246,
+      "sha256": "2af784dc76d3ef5083551de88e0a698712ef71eb5c44ff97301d7b3db75aead7"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -470,8 +470,13 @@
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",
-      "bytes": 9174,
-      "sha256": "a5c702e4a0ddd846a33d129a203867e687e30de8a6c284bcbdc06d69810fa6b0"
+      "bytes": 10532,
+      "sha256": "dca690f1c370bcf7deda0ab20f230d7681e2ffbc5ebb8738728efe9cc6883e8f"
+    },
+    {
+      "path": "ZAXIRA/skelet/tekshir.test.mjs",
+      "bytes": 2785,
+      "sha256": "0e79370a934e3a22d4bb57170eab05d3884edf2d7fb40ec2ff0ca9b9387f22b3"
     },
     {
       "path": "ZAXIRA/skelet/uslub.css",

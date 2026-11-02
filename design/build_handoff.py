@@ -440,14 +440,17 @@ Python preview manzili: http://127.0.0.1:8080/{kit['entry']}
 
 ## Tahrirlash
 
-{'Bloom uchun `site/src/` ni tahrirlang. `cd site`, `npm ci`, `npm run test`, `npm run build`. Development: `npm run dev`. Paketda node_modules yo‘q; source build uchun Node.js 20.19+ yoki 22.12+, npm va o‘rnatilgan/cache’dagi paketlar yoki internet kerak. `dist/` esa hozirdan tayyor. Minified buildni qo‘lda tahrirlamang.' if t['id']=='10' else f'Shaxsiy tanlov nusxasida `site/{t["file"]}`, `shared.css`, `shared.js` va sahifa ishlatadigan scriptlarni tahrirlang. Paketda umumiy resurs va sahifalar orasidagi havolalar saqlanishi uchun 9 HTML namuna ham bor. Npm shart emas. Original generatorlarni ishga tushirish direct tahrirni qayta yozadi; tanlov nusxasi va kutubxona manbasini aralashtirmang.'}
+{'Bloom uchun `site/src/` ni tahrirlang. ZIP ildizidan: `npm --prefix site ci`, `npm --prefix site run test`, `npm --prefix site run build`. Development: `npm --prefix site run dev`. Paketda node_modules yo‘q; dependency o‘rnatish uchun internet yoki mos npm cache kerak. `node serve.mjs` tayyor `site/dist/` ni ochadi: source tahriri build qilinmaguncha unda ko‘rinmaydi.' if t['id']=='10' else 'ZIP ildiziga nisbatan: `site/index.html` — sahifa; `site/app.js` — amallar; `site/model.js` — ma’lumot va mantiq; `site/style.css` — uslub. Qo‘shimcha fayllar AI-BRIEF.md da. Test: `node --test site/*.test.mjs`. Npm va build shart emas. ES modullar uchun HTTP preview ishlating, file:// emas. Boshqa starterlar bu site/ papkasida yo‘q.'}
+
+## Boshqa kompyuterda davom ettirish
+
+Butun paketni yangi bo‘sh papkaga oching. Avval `node verify-package.mjs`, keyin tahrir: bu asl nusxa tekshiruvi, tahrirlangan loyihada hash farqi tabiiy. CURRENT-TASK.md va HANDOFF.md to‘ldirilgan bo‘lsa ularni ochiq saytdagi bo‘sh shablon bilan almashtirmang. Brauzerdagi localStorage ZIP bilan ko‘chmaydi; kerakli demo holatini eksport/import yoki qayta kiritish orqali tayyorlang. Maxfiy kalitlar topshiriladigan kodga kiritilmaydi.
+
 
 CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna statistika, profil, narxlar, formalar va datasetlar haqiqiy xizmat emas. Tashqi CDN runtime’da kerak emas; fonts/licenses ZIP ichida. To‘liq tanlov tadqiqoti barcha dizaynlar paketi `kit.zip` ichida va https://azizbeksafarov.github.io/ustoz/ai.md da.
 """
         extras={'README.md':intro,'AGENTS.md':rules(t),'CLAUDE.md':entry_text.CLAUDE,'AI-BRIEF.md':brief,'CURRENT-TASK.md':current,'HANDOFF.md':handoff(t),'CHECKLIST.md':checklist(t),'COMPETITION.md':read(ROOT/'handoff/competition.md'),'REGULATIONS.md':read(ROOT/'handoff/regulations.md'),'kit.json':json.dumps(kit,ensure_ascii=False,indent=2),'serve.mjs':read(ROOT/'handoff/serve.mjs')}
         extras['CONTEXT-STATUS.md']=read(ROOT/'handoff/context-status.md')
-        if t['id']=='11':extras['README.md']=read(ROOT/'si-site/README.md')+'\n\n## ZIP preview\n\nAt ZIP root run `node serve.mjs`, then http://127.0.0.1:8080/ . No npm is required. Editable source is `site/`; run `node --test site/*.test.mjs`. AI working rules and reading order: AGENTS.md.\n'
-        if t['id'] in ('02','04') or t['id'] in {s['id'] for s in SPECS}:extras['README.md']=read(ROOT/(t['slug']+'-site')/'README.md')+'\n\nAt ZIP root run node serve.mjs. Editable files are site/. AI working rules and reading order: AGENTS.md.\n'
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras.update({name: data.decode('utf-8') for name, data in context_files.items()})
         extras['START-HERE.md']=entry_text.start_here(t)
