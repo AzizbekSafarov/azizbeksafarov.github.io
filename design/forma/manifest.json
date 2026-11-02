@@ -5,21 +5,21 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
-  "source_fingerprint": "bf078fb4aa751b778e18e3a4afd245d0c10373895b6b0ce3d1a7cfe1233745a3",
+  "source_fingerprint": "60660630dcdbe49071b0c2701a38d62670fb35b1272caf72725274d49a0c1645",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "8b75c72c4dcea4878cc85962974e29590d4ca35397098e2ecc5a99d72d86201b",
-  "archive_bytes": 1178518,
+  "archive_sha256": "2daa77178b25601fbdc4fc4268894a3672e87dadde6ac3ca02fd50a3b58b9a4f",
+  "archive_bytes": 1179380,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/forma/files/index.html.txt",
-      "sha256": "d2a86fd83ba74d8d781ba45246008919a750a16fd532bf158c281b4cce30909b",
+      "sha256": "63d3c9c1bef889cf98093d43c761b62cb06b4f7fa72a2f9a01b14bc5cb07d939",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/index.html.txt"
     },
     {
@@ -37,7 +37,7 @@
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/forma/files/app.js.txt",
-      "sha256": "9e3c5943a4184eceba89e18d8d4a59f4a63becad34399314135e4397279df003",
+      "sha256": "193b9dd0ed419062f2ee7e6f2f6b3b67e8dfdd645f3b109c7e0032d439e74ad0",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/forma/files/app.js.txt"
     },
     {
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 5232,
-      "sha256": "0595088133436f6bff0e8217663541942afa128e90872609378fe0850cd4e146"
+      "bytes": 5504,
+      "sha256": "0b2125e91f5b0a5326583b3e2412042e4e45c547913a489a000cebc3fd58f37f"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 12717,
-      "sha256": "a0a23f6b4e87dd9443e76c372b2e262f6fd5288a3899eb488fae231db780d4c8"
+      "sha256": "03395909decb13c434d6076d0ec60f9ba281d4357345e2b8a58d4bbce4ed5c2f"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1219,
-      "sha256": "d98fa7dc2b6d76ad055659580d1338ad65c32e293244d82352dfb42227f62672"
+      "sha256": "c94fdc37ec6661f83d3dd452bd76f0ddcde5e4702f62def8ee8a90f91aa3e4d4"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,12 +186,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16436,
-      "sha256": "8d8ca801b2d75c590abc812afc8e14da84b8cade745e2ec274781f47a3caaf66"
+      "sha256": "415838a030d08d6d7030ec7ee9eecb3eeb623a429e163df826c3bcde95318aa0"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 15907,
-      "sha256": "c3256c5e82029b93d445976dc9c2a69bb5663beb1d1383617b63e39eeabd777f"
+      "bytes": 17613,
+      "sha256": "2e45399011951ed16f1311ca85400652f94e2da9f3e63dd1910f65d4bcf0698d"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "20cc815d1e810cc073a5b1260881559a10611412805ca63dbe2f4cbe4e178d54"
+      "sha256": "c76ace58541c3cc3b64582ac28e9c551423ae8ac0b7106053c30cfd64cc38f48"
     },
     {
       "path": "README.md",
@@ -486,7 +486,7 @@
     {
       "path": "kit.json",
       "bytes": 290,
-      "sha256": "85a2a73c346f75bee44b5d6ad78f44bf8417d06baa10a71ba0317a86c92e71d9"
+      "sha256": "fb2403c278f55d4450cadbdab014582b271551dc4c9ac23c3a45ae37f089945d"
     },
     {
       "path": "serve.mjs",
@@ -510,8 +510,8 @@
     },
     {
       "path": "site/app.js",
-      "bytes": 5138,
-      "sha256": "9e3c5943a4184eceba89e18d8d4a59f4a63becad34399314135e4397279df003"
+      "bytes": 5633,
+      "sha256": "193b9dd0ed419062f2ee7e6f2f6b3b67e8dfdd645f3b109c7e0032d439e74ad0"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -546,7 +546,7 @@
     {
       "path": "site/index.html",
       "bytes": 7415,
-      "sha256": "d2a86fd83ba74d8d781ba45246008919a750a16fd532bf158c281b4cce30909b"
+      "sha256": "63d3c9c1bef889cf98093d43c761b62cb06b4f7fa72a2f9a01b14bc5cb07d939"
     },
     {
       "path": "site/layout.css",

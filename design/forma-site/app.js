@@ -21,7 +21,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
 });
 for(const d of document.querySelectorAll('dialog'))d.addEventListener('close',()=>{if(opener?.isConnected)opener.focus();});
 $('#export-cart').addEventListener('click',()=>{cart=read();renderCart();if(!Object.keys(cart).length)return;const blob=new Blob(['\ufeff'+exportCart(cart)],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='forma-tanlovim.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);});
-window.addEventListener('storage',e=>{if(e.key===key||e.key===null){cart=read();renderCart();}});cart=read();renderCart();
+window.addEventListener('storage',e=>{if(e.key===key||e.key===null){const active=document.activeElement;const focused=active?.closest('#cart-items button');const control=focused?{change:active.dataset.change,delta:active.dataset.delta,remove:active.dataset.remove}:null;cart=read();renderCart();if(control&&!active.isConnected){const next=[...document.querySelectorAll('#cart-items button')].find(b=>!b.disabled&&(control.change?b.dataset.change===control.change&&b.dataset.delta===control.delta:b.dataset.remove===control.remove));(next||$('#cart-heading')).focus({preventScroll:true});}}});cart=read();renderCart();
 
 document.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>{a.closest('details').open=false;}));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){const menu=document.querySelector('.mobile-nav[open]');if(menu){menu.open=false;menu.querySelector('summary').focus();}}});

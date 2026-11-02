@@ -25,7 +25,7 @@ document.addEventListener('click',e=>{
 $('#detail').addEventListener('close',()=>opener?.isConnected&&opener.focus());
 $('#start-time').addEventListener('change',e=>{const start=e.target.value;update(p=>normalize({...p,start}));});
 $('#download').addEventListener('click',()=>{state=read();render();if(!state.ids.length)return;const blob=new Blob(['\ufeff'+exportPlan(state)],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='samar-kun-rejasi.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);});
-window.addEventListener('storage',e=>{if(e.key===key||e.key===null){state=read();render();}});state=read();render();
+window.addEventListener('storage',e=>{if(e.key===key||e.key===null){const active=document.activeElement;const focused=active?.closest('#plan-list button');const control=focused?{move:active.dataset.move,direction:active.dataset.direction,remove:active.dataset.remove}:null;state=read();render();if(control&&!active.isConnected){const next=[...document.querySelectorAll('#plan-list button')].find(b=>!b.disabled&&(control.move?b.dataset.move===control.move&&b.dataset.direction===control.direction:b.dataset.remove===control.remove));(next||$('#plan-heading')).focus({preventScroll:true});}}});state=read();render();
 
 document.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>{a.closest('details').open=false;}));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){const menu=document.querySelector('.mobile-nav[open]');if(menu){menu.open=false;menu.querySelector('summary').focus();}}});

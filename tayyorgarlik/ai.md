@@ -2,6 +2,17 @@
 
 Paketdan foydalanish qo‘llanmasi yangilangan: 2026-11-02. Tanlov qoidalarining oxirgi tekshiruvi: 2026-10-28. Bu qayta ishlatiladigan tayyorgarlik qo‘llanmasi. Haqiqiy bilet, amaldagi reglament va foydalanuvchining joriy qarori ustuvor. Tanlovning yangi sanasi, davomiyligi, akkaunt yoki oldindan tayyorlangan backendga ruxsat ushbu hujjat bilan tasdiqlanmaydi.
 
+## Maqsadni noto‘g‘ri qisqartirmaslik
+
+Maqsad — haqiqiy biletga mos, ishlaydigan va ishtirokchi tushuntira oladigan sifatli mahsulot yaratishni osonlashtirish. Tayyorgarlik sayti, hujjat va testlar shu maqsadga xizmat qiladi. Qo‘llanma yozilgani ishlaydigan modul yaratilganini; paket tekshirilgani tanlov mahsuloti tekshirilganini anglatmaydi.
+
+- “Uslubni saqla”: tanlangan vizual xarakter saqlanadi, lekin o‘qilmaydigan matn, noqulay navigatsiya va ma’nosiz harakat tuzatiladi. Noyoblik rang/shrift nomi bilan cheklanmaydi: kompozitsiya, matn rollari, amallar va harakat ham vazifaga mos farqlanadi.
+- “Backend bilet talab qilsa”: yakuniy mahsulotga zarur server ulanadi. Bu bilet kelguncha umumiy auth/saqlash/integratsiya asosini yaratish va sinash mumkin emas degani emas. Bunday asos hali kod yoki test bilan mavjud bo‘lmasa aniq ochiq tayyorgarlik ishi sifatida yoziladi; joydagi foydalanish ruxsati alohida.
+- “To‘liq o‘qi”: muhim qoidalarni yo‘qotmaydi; bir xil mazmunning ko‘p nusxasini qayta yuklash talab qilinmaydi. “Qisqa kirish” esa to‘liq o‘qilganlik haqidagi da’voga asos bo‘lmaydi.
+- “Audit”: maqsadga moslik, foydalanuvchi oqimi, ko‘rinish, mantiq va integratsiya ko‘riladi. Bitta bugfix yoki yashil test to‘liq audit yakuni deb ko‘rsatilmaydi. Qaysi doira tekshirildi va nimalar ochiq — hisobotda aniq aytiladi.
+
+Yangi ish boshida foydalanuvchining aynan hozirgi so‘rovi, o‘zgartirilishi kerak bo‘lgan narsa va saqlanadigan xususiyatni qisqa qayd eting. Bajarilgan ishni shu so‘rov bilan solishtiring; o‘zingiz tanlagan torroq vazifaga almashtirmang. Yetishmagan qismni hujjat, test soni yoki maqtov bilan yopmang.
+
 ## Haqiqiy topshiriq qayerdan olinadi?
 
 Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu saytda bilet yo‘q. Bilet berilgach uning manbasini CURRENT-TASK.md’da qayd eting va ish rejasini faqat undagi talablar hamda foydalanuvchining qarorlaridan tuzing. Dizayn demo mavzusi, test fixture’i, eski reja va mezonlar loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi; namunaviy bilet manba yaxlitligi uchun REGULATIONS.md’da o‘z izohi bilan saqlangan. Qaysi matn bilet hisoblanishi mashina o‘qiydigan ko‘rinishda: [TASK-BOUNDARY.json](https://azizbeksafarov.github.io/design/handoff/task-boundary.json).
