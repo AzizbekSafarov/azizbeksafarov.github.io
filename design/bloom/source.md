@@ -1,6 +1,6 @@
 # Bloom · Material Design 3 — editable source snapshot
 
-Source fingerprint: `15bf4804de1c370804cff47882cd0c3538c623831cecb60850369fd57cfd4e6e`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `b9921e6464703246fdd9316e1ae3918d7d40943197b935fec8eeb4574bb55f0d`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -12,7 +12,7 @@ Source fingerprint: `15bf4804de1c370804cff47882cd0c3538c623831cecb60850369fd57cf
 ## site/src/main.jsx
 
 ```jsx
-import React,{useState,useEffect,useRef} from 'react';
+import React,{useState,useEffect,useRef,useCallback} from 'react';
 import {createRoot} from 'react-dom/client';
 import {motion,AnimatePresence,MotionConfig,useReducedMotion} from 'motion/react';
 import '@material/web/button/filled-button.js';
@@ -34,7 +34,10 @@ import '@material/web/ripple/ripple.js';
 import {argbFromHex,hexFromArgb,Hct,SchemeTonalSpot,MaterialDynamicColors} from '@material/material-color-utilities';
 import {categories,visibleProjects,createProject,progress} from './model.js';
 import {loadProjectState,persistProjectState,exportProjects} from './persistence.js';
+import {readRoute,routeHash} from './routes.js';
+import {ProjectWorkspace} from './ProjectWorkspace.jsx';
 import './style.css';
+import './workspace.css';
 const SPRING={type:'spring',stiffness:380,damping:29,mass:1};
 function Icon({name,size=24,fill,style,...props}){return <span {...props} aria-hidden="true" className="material-symbols" style={{fontSize:size,fontVariationSettings:`'FILL' ${fill&&fill!=='none'?1:0}`, ...style}}>{name}</span>}
 function DownloadIcon({size=18,...props}){return <svg {...props} aria-hidden="true" focusable="false" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg>}
@@ -58,37 +61,59 @@ function Modal({open,onOpenChange,title,description,children,actions,opener,clas
 const SEEDS=[{color:'#6750a4',label:'Binafsha'},{color:'#1a73e8',label:'Ko‘k'},{color:'#00856a',label:'Yashil'},{color:'#ad4d25',label:'Terrakota'}];
 function applyMaterialTheme(seed,dark){const scheme=new SchemeTonalSpot(Hct.fromInt(argbFromHex(seed)),dark,0);const roles=new MaterialDynamicColors();for(const color of roles.allColors){document.documentElement.style.setProperty('--md-sys-color-'+color.name.replaceAll('_','-'),hexFromArgb(color.getArgb(scheme)))} }
 function App(){
-const reduce=useReducedMotion();const [startup]=useState(()=>loadProjectState(()=>localStorage));const [projects,setProjects]=useState(startup.projects);const [view,setView]=useState('all');const [category,setCategory]=useState('Hammasi');const [query,setQuery]=useState('');const [sort,setSort]=useState('recent');const [selected,setSelected]=useState(null);const [detailOpen,setDetailOpen]=useState(false);const [createOpen,setCreateOpen]=useState(false);const [helpOpen,setHelpOpen]=useState(false);const [theme,setTheme]=useState(()=>{try{return localStorage.getItem('ustoz.bloom.theme')==='dark'?'dark':'light'}catch{return'light'}});const [toast,setToast]=useState('');const [storageStatus,setStorageStatus]=useState(startup.status);const [formError,setFormError]=useState('');const [formVersion,setFormVersion]=useState(0);const [display,setDisplay]=useState('grid');const [paletteOpen,setPaletteOpen]=useState(false);const paletteOpener=useRef(null);const [seed,setSeed]=useState(()=>{try{const stored=localStorage.getItem('ustoz.bloom.seed');return SEEDS.some(s=>s.color===stored)?stored:SEEDS[0].color}catch{return SEEDS[0].color}});const opener=useRef(null);const createOpener=useRef(null);const helpOpener=useRef(null);const searchRef=useRef(null);const headingRef=useRef(null);
+const [route,setRoute]=useState(()=>readRoute(location.hash));
+const dirtyEditor=useRef(false),currentHash=useRef(location.hash),lastProject=useRef(null);
+const markDirty=useCallback(value=>{dirtyEditor.current=value},[]);
+useEffect(()=>{
+ function changed(){
+  if(location.hash==='#main')return;
+  if(dirtyEditor.current&&!window.confirm('Saqlanmagan tahrir bor. Bu ekrandan chiqilsinmi?')){history.replaceState(null,'',currentHash.current||location.pathname+location.search);return}
+  dirtyEditor.current=false;currentHash.current=location.hash;
+  const next=readRoute(location.hash);setRoute(next);setView(next.view);
+ }
+ window.addEventListener('hashchange',changed);return()=>window.removeEventListener('hashchange',changed);
+},[]);
+useEffect(()=>{
+ const frame=requestAnimationFrame(()=>{
+  if(route.projectId||route.invalid){document.getElementById('project-heading')?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'})}
+  else if(lastProject.current){const el=[...document.querySelectorAll('[data-project-id]')].find(e=>e.dataset.projectId===lastProject.current);(el||document.getElementById('projects-heading'))?.focus({preventScroll:true})}
+  if(route.projectId)lastProject.current=route.projectId;
+ });return()=>cancelAnimationFrame(frame);
+},[route]);
+
+const reduce=useReducedMotion();const [startup]=useState(()=>loadProjectState(()=>localStorage));const [projects,setProjects]=useState(startup.projects);const [view,setView]=useState(route.view);const [category,setCategory]=useState('Hammasi');const [query,setQuery]=useState('');const [sort,setSort]=useState('recent');const selected=route.projectId;const [createOpen,setCreateOpen]=useState(false);const [helpOpen,setHelpOpen]=useState(false);const [theme,setTheme]=useState(()=>{try{return localStorage.getItem('ustoz.bloom.theme')==='dark'?'dark':'light'}catch{return'light'}});const [toast,setToast]=useState('');const [storageStatus,setStorageStatus]=useState(startup.status);const [formError,setFormError]=useState('');const [formVersion,setFormVersion]=useState(0);const [display,setDisplay]=useState('grid');const [paletteOpen,setPaletteOpen]=useState(false);const paletteOpener=useRef(null);const [seed,setSeed]=useState(()=>{try{const stored=localStorage.getItem('ustoz.bloom.seed');return SEEDS.some(s=>s.color===stored)?stored:SEEDS[0].color}catch{return SEEDS[0].color}});const createOpener=useRef(null);const helpOpener=useRef(null);const searchRef=useRef(null);const headingRef=useRef(null);
 const lastStored=useRef(startup.raw);
 useEffect(()=>{if(projects===startup.projects)return;const result=persistProjectState(()=>localStorage,projects,{startupStatus:startup.status,expectedRaw:lastStored.current});if(result.raw!==undefined)lastStored.current=result.raw;setStorageStatus(result.status);if(result.status==='conflict')setToast('Boshqa tabdagi nusxa saqlandi. Bu tabdagi ishni faylga yuklab oling.');else if(['unavailable','invalid-current'].includes(result.status))setToast('Brauzerga saqlanmadi. Ish shu tabda; nusxani faylga yuklab oling.')},[projects,startup]);
 useEffect(()=>{try{localStorage.setItem('ustoz.bloom.theme',theme)}catch{}document.documentElement.dataset.theme=theme;applyMaterialTheme(seed,theme==='dark');try{localStorage.setItem('ustoz.bloom.seed',seed)}catch{}},[theme,seed]);
 useEffect(()=>{if(!toast)return;const timer=setTimeout(()=>setToast(''),3200);return()=>clearTimeout(timer)},[toast]);
-useEffect(()=>{function shortcut(event){if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!document.querySelector('md-dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){event.preventDefault();searchRef.current?.focus()}}window.addEventListener('keydown',shortcut);return()=>window.removeEventListener('keydown',shortcut)},[]);
+useEffect(()=>{function shortcut(event){if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!document.querySelector('md-dialog[open]')&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)&&!document.activeElement?.isContentEditable&&!document.activeElement?.tagName?.startsWith('MD-')){event.preventDefault();searchRef.current?.focus()}}window.addEventListener('keydown',shortcut);return()=>window.removeEventListener('keydown',shortcut)},[]);
 const filtered=visibleProjects(projects,{view,category,query,sort});const done=projects.filter(p=>progress(p)===1).length;const saved=projects.filter(p=>p.saved).length;const totalTasks=projects.reduce((n,p)=>n+p.tasks.length,0);const checkedTasks=projects.reduce((n,p)=>n+p.tasks.filter(t=>t.done).length,0);const selectedProject=projects.find(p=>p.id===selected);const totalPercent=totalTasks?Math.round(checkedTasks/totalTasks*100):0;
 function downloadBackup(){const url=URL.createObjectURL(new Blob([exportProjects(projects)],{type:'application/json;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='bloom-loyihalar.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);setToast('Loyihalar nusxasi yuklashga topshirildi')}
-function navigate(next){setView(next);setCategory('Hammasi');setQuery('')}
-function openProject(event,id){opener.current=event.currentTarget;setSelected(id);setDetailOpen(true)}
+function navigate(next){location.hash=routeHash(next);if(!route.projectId&&!route.invalid){setView(next);setCategory('Hammasi');setQuery('')}}
+function openProject(event,id){location.hash=routeHash(view,id)}
 function startProject(event){createOpener.current=event.currentTarget;setFormError('');setCreateOpen(true)}
-function toggleSaved(id){setProjects(prev=>prev.map(p=>p.id===id?{...p,saved:!p.saved}:p));const project=projects.find(p=>p.id===id);setToast(project.saved?'Saqlanganlar belgisi olib tashlandi':'Saqlanganlar belgisi qo‘yildi');if(view==='saved'&&project.saved&&!detailOpen)requestAnimationFrame(()=>headingRef.current?.focus({preventScroll:true}))}
+function toggleSaved(id){setProjects(prev=>prev.map(p=>p.id===id?{...p,saved:!p.saved}:p));const project=projects.find(p=>p.id===id);setToast(project.saved?'Saqlanganlar belgisi olib tashlandi':'Saqlanganlar belgisi qo‘yildi');if(view==='saved'&&project.saved&&!route.projectId)requestAnimationFrame(()=>headingRef.current?.focus({preventScroll:true}))}
+function updateProject(next){setProjects(prev=>prev.map(p=>p.id===next.id?next:p))}
 function changeTask(id,index){setProjects(prev=>prev.map(p=>p.id===id?{...p,tasks:p.tasks.map((t,i)=>i===index?{...t,done:!t.done}:t)}:p))}
 function submitProject(event){event.preventDefault();try{const project=createProject({title:String(event.currentTarget.querySelector('[name=title]').value||''),description:String(event.currentTarget.querySelector('[name=description]').value||''),category:String(event.currentTarget.querySelector('[name=category]').value||'')},crypto.randomUUID());if(projects.length>=200){setFormError('Bu demo 200 tagacha loyiha saqlaydi.');return}setProjects(prev=>[project,...prev]);navigate('all');setSort('recent');setCreateOpen(false);setToast('Yangi loyiha yaratildi');setFormVersion(v=>v+1)}catch{setFormError('Loyiha nomini yozing va yo‘nalishini tanlang.');event.currentTarget.querySelector('[name=title]')?.focus()}}
 const transition=reduce?{duration:0}:SPRING;
 return <MotionConfig reducedMotion="user" transition={transition}>
 <a className="skip-link" href="#main">Asosiy mazmunga o‘tish</a>
 <div className="app-shell">
- <aside className="sidebar"><a href="#main" className="rail-brand" aria-label="Bloom bosh sahifasi"><BloomMark/></a><Button className="new-button" onClick={startProject} aria-label="Yangi loyiha yaratish"><Plus size={24}/></Button><nav aria-label="Asosiy navigatsiya">{[{id:'all',icon:Home,label:'Loyihalar'},{id:'saved',icon:Bookmark,label:'Saqlangan'},{id:'done',icon:CheckCheck,label:'Bajarilgan'}].map(item=><button id={`nav-${item.id}`} key={item.id} className={`nav-item ${view===item.id?'active':''}`} onClick={()=>{navigate(item.id);headingRef.current?.scrollIntoView({behavior:reduce?'instant':'smooth',block:'start'})}} aria-current={view===item.id?'page':undefined}><span className="nav-icon">{view===item.id&&<motion.span className="nav-selection" layoutId="nav-selection" transition={transition}/>}<md-ripple for={`nav-${item.id}`}/><item.icon size={24} fill={view===item.id?'currentColor':'none'}/></span><span>{item.label}</span></button>)}</nav><Button className="icon-button rail-help" aria-label="Bloom haqida" onClick={event=>{helpOpener.current=event.currentTarget;setHelpOpen(true)}}><HelpCircle size={24}/></Button></aside>
+ <aside className="sidebar"><a href="#all" className="rail-brand" aria-label="Bloom bosh sahifasi"><BloomMark/></a><Button className="new-button" onClick={startProject} aria-label="Yangi loyiha yaratish"><Plus size={24}/></Button><nav aria-label="Asosiy navigatsiya">{[{id:'all',icon:Home,label:'Loyihalar'},{id:'saved',icon:Bookmark,label:'Saqlangan'},{id:'done',icon:CheckCheck,label:'Bajarilgan'}].map(item=><button id={`nav-${item.id}`} key={item.id} className={`nav-item ${view===item.id?'active':''}`} onClick={()=>{navigate(item.id);headingRef.current?.scrollIntoView({behavior:reduce?'instant':'smooth',block:'start'})}} aria-current={view===item.id?'page':undefined}><span className="nav-icon">{view===item.id&&<motion.span className="nav-selection" layoutId="nav-selection" transition={transition}/>}<md-ripple for={`nav-${item.id}`}/><item.icon size={24} fill={view===item.id?'currentColor':'none'}/></span><span>{item.label}</span></button>)}</nav><Button className="icon-button rail-help" aria-label="Bloom haqida" onClick={event=>{helpOpener.current=event.currentTarget;setHelpOpen(true)}}><HelpCircle size={24}/></Button></aside>
  <main id="main" className="workspace">
-  <header className="topbar"><a href="#main" className="wordmark">Bloom<span>Ijod maydoni</span></a><div className="search"><Search size={24}/><input ref={searchRef} value={query} onChange={e=>setQuery(e.target.value)} type="search" aria-label="Loyihalarni qidirish" placeholder="Loyihalarni qidirish" onKeyDown={e=>{if(e.key==='Escape')setQuery('');if(e.key==='Enter')headingRef.current?.focus({preventScroll:true})}}/>{query?<Button className="icon-button" onClick={()=>{setQuery('');searchRef.current?.focus()}} aria-label="Qidiruvni tozalash"><X size={24}/></Button>:<kbd>/</kbd>}</div><div className="top-actions"><Button className="icon-button top-help" aria-label="Bloom haqida" onClick={event=>{helpOpener.current=event.currentTarget;setHelpOpen(true)}}><HelpCircle size={24}/></Button><Button className="icon-button" aria-label="Rang palitrasini tanlash" onClick={event=>{paletteOpener.current=event.currentTarget;setPaletteOpen(true)}}><Palette size={24}/></Button><Button className="icon-button" aria-label={theme==='light'?'Qorong‘i rejimga o‘tish':'Yorug‘ rejimga o‘tish'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')}>{theme==='light'?<Moon size={24}/>:<Sun size={24}/>}</Button><span className="avatar" aria-label="Namuna profil: Azizbek Safarov">A</span></div></header>
-  <div className="greeting"><h1>Salom, Azizbek</h1><p>Bugun yaxshi g‘oyaga bir qadam yaqinlashing.</p></div>
+  <header className="topbar"><a href="#all" className="wordmark">Bloom<span>Ijod maydoni</span></a><div className="search" hidden={!!route.projectId||route.invalid}><Search size={24}/><input ref={searchRef} value={query} onChange={e=>setQuery(e.target.value)} type="search" aria-label="Loyihalarni qidirish" placeholder="Loyihalarni qidirish" onKeyDown={e=>{if(e.key==='Escape')setQuery('');if(e.key==='Enter')headingRef.current?.focus({preventScroll:true})}}/>{query?<Button className="icon-button" onClick={()=>{setQuery('');searchRef.current?.focus()}} aria-label="Qidiruvni tozalash"><X size={24}/></Button>:<kbd>/</kbd>}</div><div className="top-actions"><Button className="icon-button top-help" aria-label="Bloom haqida" onClick={event=>{helpOpener.current=event.currentTarget;setHelpOpen(true)}}><HelpCircle size={24}/></Button><Button className="icon-button" aria-label="Rang palitrasini tanlash" onClick={event=>{paletteOpener.current=event.currentTarget;setPaletteOpen(true)}}><Palette size={24}/></Button><Button className="icon-button" aria-label={theme==='light'?'Qorong‘i rejimga o‘tish':'Yorug‘ rejimga o‘tish'} onClick={()=>setTheme(t=>t==='light'?'dark':'light')}>{theme==='light'?<Moon size={24}/>:<Sun size={24}/>}</Button><span className="avatar" aria-label="Namuna profil: Azizbek Safarov">A</span></div></header>
+  {!route.projectId&&!route.invalid&&<div className="greeting"><h1>Salom, Azizbek</h1><p>Bugun yaxshi g‘oyaga bir qadam yaqinlashing.</p></div>}
   {['invalid','unavailable','invalid-current','recovered','conflict'].includes(storageStatus)&&<div className="storage-warning"><p role="alert">{storageStatus==='conflict'?'Boshqa tab saqlangan loyihalarni o‘zgartirdi. Bu tabdagi ish uning ustiga yozilmadi. Avval nusxani yuklab oling, so‘ng sahifani yangilang.':storageStatus==='invalid'?'Saqlangan loyihalarni o‘qib bo‘lmadi. Asl ma’lumot o‘zgartirilmadi; hozir namuna loyihalari ko‘rsatilmoqda.':storageStatus==='recovered'?'Yangi o‘zgarishlar saqlandi. Avvalgi o‘qilmagan ma’lumotning zaxira nusxasi ham saqlab qo‘yildi.':'Brauzer xotirasiga saqlab bo‘lmadi. O‘zgarishlar faqat bu ochiq sahifada qoladi. Ularni fayl sifatida yuklab olishingiz mumkin.'}</p><Button className="outlined" onClick={downloadBackup}>Loyihalarni yuklab olish <DownloadIcon size={18}/></Button></div>}
+  {route.projectId||route.invalid ? selectedProject&&!route.invalid ? <ProjectWorkspace key={selectedProject.id} project={selectedProject} view={view} onBack={()=>navigate(view)} onUpdate={updateProject} onTask={index=>changeTask(selectedProject.id,index)} onBookmark={()=>toggleSaved(selectedProject.id)} onExport={downloadBackup} storageStatus={storageStatus} onDirtyChange={markDirty} Button={Button}/> : <section className="workspace-missing"><h1 id="project-heading" tabIndex={-1}>Loyiha topilmadi</h1><p>Bu manzilga mos loyiha shu brauzerda yo‘q. Havola loyiha ma’lumotini boshqa qurilmaga ko‘chirmaydi.</p><Button className="filled" onClick={()=>navigate('all')}>Loyihalarga qaytish</Button></section> : <>
   <section className="overview"><div className="hero"><div><span className="hero-label"><Icon name="palette" size={18}/> Sizning ijodiy maydoningiz</span><h2>G‘oyangizga<br/>shakl bering.</h2><p>Yangi loyiha boshlang. Aniq qadamlar bilan uni tayyor natijaga aylantiring.</p><div className="hero-actions"><Button className="filled" onClick={startProject}><Plus size={18}/> Yangi loyiha</Button><Button className="outlined" onClick={()=>{headingRef.current?.scrollIntoView({behavior:reduce?'instant':'smooth',block:'start'});headingRef.current?.focus({preventScroll:true})}}>Loyihalarni ko‘rish</Button></div></div><div className="hero-composition" aria-hidden="true"><motion.div className="shape shape-square" initial={reduce?false:{opacity:0,scale:.85}} animate={{opacity:1,scale:1}} transition={transition}/><motion.div className="shape shape-circle" initial={reduce?false:{opacity:0,scale:.8}} animate={{opacity:1,scale:1}} transition={{...transition,delay:reduce?0:.08}}/><div className="shape shape-arch"/><span className="composition-label">B</span></div></div><aside className="progress-panel"><div className="progress-label"><CheckCheck size={24}/> Qadamlaringiz</div><strong>{totalPercent}<span>%</span></strong><p>{checkedTasks} / {totalTasks} qadam bajarildi</p><md-linear-progress value={totalPercent/100} aria-label="Umumiy loyiha progressi"/><div className="progress-counts"><span><b>{projects.length}</b>loyiha</span><span><b>{done}</b>tayyor</span><span><b>{saved}</b>saqlangan</span></div></aside></section>
   <div className="workspace-header"><h2 ref={headingRef} tabIndex={-1} id="projects-heading">{{all:'Loyihalaringiz',saved:'Saqlangan loyihalar',done:'Bajarilgan loyihalar'}[view]}</h2><div className="view-switch" role="group" aria-label="Ko‘rinish">{[{id:'list',icon:List,label:'Ro‘yxat ko‘rinishi'},{id:'grid',icon:LayoutGrid,label:'Karta ko‘rinishi'}].map(item=><button type="button" key={item.id} className={`view-segment ${display===item.id?'chosen':''}`} aria-label={item.label} title={item.label} aria-pressed={display===item.id} onClick={()=>setDisplay(item.id)}><md-ripple/>{display===item.id&&<Check size={16}/>}<item.icon size={20}/></button>)}</div></div>
   <div className="toolbar"><md-chip-set className="filters" aria-label="Loyiha yo‘nalishlari">{categories.map(c=><Button key={c} onClick={event=>{if(category===c)event.preventDefault();else setCategory(c)}} aria-pressed={category===c} className={`filter ${category===c?'selected':''}`}>{c}</Button>)}</md-chip-set><md-outlined-select className="sort" value={sort} quick={reduce} onchange={e=>setSort(e.target.value)} aria-label="Loyihalarni saralash"><md-select-option value="recent"><div slot="headline">Yangi qo‘shilgan</div></md-select-option><md-select-option value="name"><div slot="headline">Nom bo‘yicha</div></md-select-option></md-outlined-select></div>
 <section className="projects-section" aria-labelledby="projects-heading">
       {display==='list'&&filtered.length>0&&<div className="list-heading" aria-hidden="true"><span>Loyiha nomi</span><span>Yo‘nalish</span><span>Bajarilgan</span><span/></div>}
       <div className={`project-grid ${display==='list'?'project-list':''}`}><AnimatePresence mode="popLayout" initial={false}>{filtered.map(project=><motion.article layout={reduce?false:'position'} className={`project-card ${project.tone}`} key={project.id} initial={{opacity:0,y:reduce?0:10}} animate={{opacity:1,y:0}} exit={{opacity:0,scale:reduce?1:.98}} transition={transition}>
-        <div className="card-name"><span className="file-icon"><ProjectIcon category={project.category}/></span><h3><button className="project-title-button" onClick={event=>openProject(event,project.id)}>{project.title}</button></h3><Button className={`icon-button save ${project.saved?'saved':''}`} onClick={()=>toggleSaved(project.id)} aria-label={`${project.title}: ${project.saved?'saqlanganlardan olish':'saqlash'}`} aria-pressed={project.saved}><Bookmark size={24} fill={project.saved?'currentColor':'none'}/></Button></div>
-        <Button className="preview-open" onClick={event=>openProject(event,project.id)} aria-label={`${project.title} loyihasini ochish`}><Art kind={project.art} title={project.title} description={project.description} category={project.category}/><span className="preview-open-label" aria-hidden="true"><ArrowUpRight size={22}/></span></Button>
+        <div className="card-name"><span className="file-icon"><ProjectIcon category={project.category}/></span><h3><button className="project-title-button" data-project-id={project.id} onClick={event=>openProject(event,project.id)}>{project.title}</button></h3><Button className={`icon-button save ${project.saved?'saved':''}`} onClick={()=>toggleSaved(project.id)} aria-label={`${project.title}: ${project.saved?'saqlanganlardan olish':'saqlash'}`} aria-pressed={project.saved}><Bookmark size={24} fill={project.saved?'currentColor':'none'}/></Button></div>
+        <Button className="preview-open" data-project-id={project.id} onClick={event=>openProject(event,project.id)} aria-label={`${project.title} loyihasini ochish`}><Art kind={project.art} title={project.title} description={project.description} category={project.category}/><span className="preview-open-label" aria-hidden="true"><ArrowUpRight size={22}/></span></Button>
         <div className="project-category">{project.category}</div><p className="project-description">{project.description}</p>
         <div className="project-progress"><span className={progress(project)===1?'complete':''}>{progress(project)===1&&<Check size={14}/>} {project.tasks.filter(t=>t.done).length} / 3 qadam</span><md-linear-progress className="mini-progress" value={progress(project)} aria-label={`${project.title} progressi`}/></div>
         {display==='list'&&<Button className="row-open icon-button" onClick={event=>openProject(event,project.id)} aria-label={`${project.title} loyihasini ochish`}><ChevronRight size={20}/></Button>}
@@ -96,12 +121,12 @@ return <MotionConfig reducedMotion="user" transition={transition}>
       {filtered.length===0&&<motion.div className="empty-state" initial={{opacity:0,y:reduce?0:12}} animate={{opacity:1,y:0}}><span><FolderOpen size={40}/></span><h3>{query?'Hech narsa topilmadi':view==='done'?'Bajarilgan loyihalar shu yerda':view==='saved'?'Saqlangan loyihalar shu yerda':'Bu yo‘nalishda hali loyiha yo‘q'}</h3><p>{query?'Boshqa so‘z bilan qidiring yoki filtrlarni tozalang.':view==='saved'?'Loyiha kartasidagi saqlash belgisini bosing.':view==='done'?'Loyihadagi uchta qadamni bajaring va belgilang.':'Yangi loyihangizni shu yo‘nalishda boshlang.'}</p><Button className="filled" onClick={()=>navigate('all')}>Barcha loyihalarni ko‘rish</Button></motion.div>}
       <p className="results-status" role="status" aria-live="polite">{filtered.length} ta loyiha{query?` · “${query}” uchun`:''}</p>
     </section>
+    </>}
     <footer><span>Bloom · Material Design 3</span><a href="https://material-web.dev/" target="_blank" rel="noopener">Rasmiy M3 komponentlari <ExternalLink size={16}/></a></footer>
   </main>
 </div>
 <Modal open={createOpen} onOpenChange={setCreateOpen} title="Yangi loyiha" description={['unavailable','invalid-current','conflict'].includes(storageStatus)?"Hozir faqat shu tabda ishlaysiz. Yangi loyiha nusxasini faylga yuklab oling.":"Yangi loyiha yarating. Saqlash imkoni bo‘lsa shu brauzerda qoladi; xatoda ogohlantiramiz."} opener={createOpener}><form key={formVersion} onSubmit={submitProject} onInput={()=>setFormError('')} className="project-form" noValidate><md-outlined-text-field autofocus id="project-title" name="title" label="Loyiha nomi" aria-label="Loyiha nomi" maxLength={80} required error={!!formError} error-text={formError}/><md-outlined-text-field type="textarea" id="project-description" name="description" label="Qisqa g‘oya" aria-label="Qisqa g‘oya" rows={3} maxLength={200}/><md-outlined-select id="project-category" name="category" label="Yo‘nalish" aria-label="Yo‘nalish" quick={reduce}><md-select-option selected value="Ta’lim"><div slot="headline">Ta’lim</div></md-select-option>{categories.slice(2).map(c=><md-select-option key={c} value={c}><div slot="headline">{c}</div></md-select-option>)}</md-outlined-select>{formError&&<p className="sr-only" id="form-error" role="alert">{formError}</p>}<div className="form-actions"><Button className="text" onClick={()=>setCreateOpen(false)}>Bekor qilish</Button><Button type="submit" className="filled">Loyihani yaratish <Plus size={18}/></Button></div></form></Modal>
-<Modal open={detailOpen} onOpenChange={setDetailOpen} title={selectedProject?.title||'Loyiha'} description={selectedProject?.description||''} opener={opener} className="detail-modal">{selectedProject&&<><div className={`detail-art ${selectedProject.tone}`}><Art kind={selectedProject.art} title={selectedProject.title} description={selectedProject.description} category={selectedProject.category}/><span>{selectedProject.category}</span></div><div className="detail-progress"><h3>Uchta aniq qadam</h3><span>{selectedProject.tasks.filter(t=>t.done).length} / 3 bajarildi</span></div><div className="task-list">{selectedProject.tasks.map((task,index)=><div className={`task ${task.done?'checked':''}`} key={index}><md-checkbox id={`task-${index}`} checked={task.done} onchange={()=>changeTask(selectedProject.id,index)} aria-label={task.text}/><label htmlFor={`task-${index}`}><small>0{index+1}</small>{task.text}</label></div>)}</div><AnimatePresence mode="wait"><motion.div className={`detail-result ${progress(selectedProject)===1?'finished':''}`} key={progress(selectedProject)===1?'done':'in-progress'} initial={{opacity:0,y:reduce?0:8}} animate={{opacity:1,y:0}} exit={{opacity:0}}>{progress(selectedProject)===1?<><CheckCheck size={23}/><div><strong>Uchala qadam belgilandi.</strong><span>Bajarilgan loyihalar bo‘limida ham ko‘rinadi.</span></div></>:<><Leaf size={22}/><div><strong>Har bir qadam hisobga olinadi.</strong><span>{['unavailable','invalid-current','conflict'].includes(storageStatus)?'O‘zgarishlar shu tabda. Nusxani faylga yuklab oling.':'Progress shu brauzerda saqlanadi.'}</span></div></>}</motion.div></AnimatePresence><div className="detail-actions"><Button className="tonal" onClick={()=>toggleSaved(selectedProject.id)}><Bookmark size={18} fill={selectedProject.saved?'currentColor':'none'}/>{selectedProject.saved?'Saqlangan':'Saqlash'}</Button><Button className="filled" onClick={()=>setDetailOpen(false)}>Davom etamiz <ArrowRight size={18}/></Button></div></>}</Modal>
-<Modal open={helpOpen} onOpenChange={setHelpOpen} title="Bloom haqida" description="Material Design 3 komponentlari bilan yaratilgan mustaqil loyiha maydoni." opener={helpOpener}><div className="help-copy"><p>Yangi loyiha yarating, uchta qadamni belgilang va yoqqan loyihalarni saqlang. Qidiruv, filtrlar va saralash birgalikda ishlaydi.</p><p>Ma’lumotlar faqat shu brauzer xotirasida qoladi. Profil va boshlang‘ich loyihalar namuna. Serverga ma’lumot yuborilmaydi.</p><p>Loyihalar, saqlangan belgilar va bajarilgan qadamlarni JSON fayliga yuklab olishingiz mumkin.</p><Button className="outlined" onClick={downloadBackup}>Loyihalarni yuklab olish <DownloadIcon size={18}/></Button><p>Tugmalar, maydonlar, checkboxlar, filtrlar va dialoglar rasmiy Material Web komponentlaridan foydalanadi. Ranglar Google Material Color Utilities bilan hosil qilinadi. Operatsion tizimda harakatni kamaytirish yoqilsa, katta harakatlar o‘chadi.</p><a href="https://m3.material.io/styles/motion/overview/how-it-works" target="_blank" rel="noopener">Google Material motion qo‘llanmasi <ExternalLink size={15}/></a></div></Modal>
+<Modal open={helpOpen} onOpenChange={setHelpOpen} title="Bloom haqida" description="Material Design 3 komponentlari bilan yaratilgan mustaqil loyiha maydoni." opener={helpOpener}><div className="help-copy"><p>Yangi loyiha yarating, uchta qadamni belgilang va yoqqan loyihalarni saqlang. Qidiruv, filtrlar va saralash birgalikda ishlaydi.</p><p>Ma’lumotlar faqat shu brauzer xotirasida qoladi. Profil va boshlang‘ich loyihalar namuna. Serverga ma’lumot yuborilmaydi.</p><p>Loyiha kartasini ochsangiz alohida ish maydoniga o‘tasiz. Nomi, izohi va uch qadamini tahrirlash mumkin. Ichki havola va brauzerning Orqaga tugmasi ishlaydi. Havola ma’lumotni boshqa qurilmaga ko‘chirmaydi; nusxani JSON fayliga yuklab oling.</p><Button className="outlined" onClick={downloadBackup}>Loyihalarni yuklab olish <DownloadIcon size={18}/></Button><p>Tugmalar, maydonlar, checkboxlar, filtrlar va dialoglar rasmiy Material Web komponentlaridan foydalanadi. Ranglar Google Material Color Utilities bilan hosil qilinadi. Operatsion tizimda harakatni kamaytirish yoqilsa, katta harakatlar o‘chadi.</p><a href="https://m3.material.io/styles/motion/overview/how-it-works" target="_blank" rel="noopener">Google Material motion qo‘llanmasi <ExternalLink size={15}/></a></div></Modal>
 <Modal open={paletteOpen} onOpenChange={setPaletteOpen} title="O‘zingizga mos rang" description="Tugmalar va faol belgilar rangini tanlang." opener={paletteOpener} className="palette-modal" actions={<Button className="filled" onClick={()=>setPaletteOpen(false)}>Tayyor <Check size={18}/></Button>}>
  <div className="palette-options" role="radiogroup" aria-label="Asosiy rang">{SEEDS.map((item,index)=><label key={item.color} className="palette-option" data-selected={seed===item.color} htmlFor={`palette-${index}`}><span className="palette-swatch" style={{background:item.color}} aria-hidden="true"/><span className="palette-name">{item.label}<small>{seed===item.color?'Tanlangan':'Tanlash'}</small></span><md-radio id={`palette-${index}`} name="palette" value={item.color} checked={seed===item.color} aria-label={item.label} onchange={event=>{if(event.target.checked)setSeed(item.color)}}/></label>)}</div>
  <div className="palette-samples"><h3>Sahifadagi ko‘rinishi</h3><dl className="palette-preview"><div><dt>Asosiy tugma</dt><dd className="sample-primary"/></div><div><dt>Sahifa foni</dt><dd className="sample-surface"/></div><div><dt>Oddiy panel</dt><dd className="sample-panel"/></div></dl></div>
@@ -111,6 +136,140 @@ return <MotionConfig reducedMotion="user" transition={transition}>
 createRoot(document.getElementById('root')).render(<App/>);
 
 
+
+```
+
+## site/src/ProjectWorkspace.jsx
+
+```jsx
+import React,{useState,useEffect,useRef} from 'react';
+import {motion,useReducedMotion} from 'motion/react';
+import {updateProjectDetails,progress} from './model.js';
+
+export function ProjectWorkspace({project,view,onBack,onUpdate,onTask,onBookmark,onExport,storageStatus,onDirtyChange,Button}) {
+  const reduce=useReducedMotion();
+  const [editing,setEditing]=useState(false);
+  const [draft,setDraft]=useState(null);
+  const [error,setError]=useState('');
+  const [notice,setNotice]=useState('');
+  const editRef=useRef(null);
+  const dirty=editing&&draft!==null&&(draft.title!==project.title||draft.description!==project.description||draft.tasks.some((text,i)=>text!==project.tasks[i].text));
+  useEffect(()=>{onDirtyChange(dirty);return()=>onDirtyChange(false)},[dirty,onDirtyChange]);
+  useEffect(()=>{if(!dirty)return;const warn=e=>{e.preventDefault();e.returnValue=''};window.addEventListener('beforeunload',warn);return()=>window.removeEventListener('beforeunload',warn)},[dirty]);
+  const limited=['unavailable','invalid-current','conflict'].includes(storageStatus);
+  function edit(){setDraft({title:project.title,description:project.description,tasks:project.tasks.map(t=>t.text)});setEditing(true);setError('');setNotice('')}
+  function cancel(){if(dirty&&!window.confirm('O‘zgartirilgan matn saqlanmagan. Bekor qilinsin?'))return;setEditing(false);setError('');editRef.current?.focus()}
+  function save(event){event.preventDefault();try{const next=updateProjectDetails(project,draft);onUpdate(next);onDirtyChange(false);setEditing(false);setNotice('Loyiha tafsilotlari yangilandi.');requestAnimationFrame(()=>editRef.current?.focus())}catch{setError('Nom va uch qadam bo‘sh bo‘lmasin. Nom 80, izoh va har qadam 200 belgidan oshmasin.')}}
+  function field(name,value){setDraft(d=>({...d,[name]:value}));setError('')}
+  return <motion.section className="project-workspace" aria-labelledby="project-heading" initial={reduce?false:{opacity:0,x:16}} animate={{opacity:1,x:0}} transition={{duration:reduce?0:.24,ease:[.2,0,0,1]}}>
+    <nav className="project-breadcrumb" aria-label="Loyiha yo‘li"><Button onClick={onBack}>← {{all:'Loyihalar',saved:'Saqlanganlar',done:'Bajarilganlar'}[view]}</Button><span aria-current="page">Ish maydoni</span></nav>
+    <header className="project-workspace-heading"><div><span className="project-kind">{project.category}</span><h1 id="project-heading" tabIndex={-1}>{project.title}</h1><p>{project.description}</p></div><Button className="outlined" onClick={onBookmark} aria-pressed={project.saved}>{project.saved?'Belgini olib tashlash':'Saqlanganlarga belgilash'}</Button></header>
+    <div className="project-workspace-grid"><div className="project-workspace-content">
+      <div className="project-section-heading"><h2>{editing?'Loyihani tahrirlash':'Bajariladigan qadamlar'}</h2>{!editing&&<button ref={editRef} className="workspace-edit" onClick={edit}>Tahrirlash</button>}</div>
+      {editing?<form className="workspace-editor" onSubmit={save} noValidate>
+        <label>Loyiha nomi<input autoFocus value={draft.title} maxLength={80} onChange={e=>field('title',e.target.value)} required/></label>
+        <label>Qisqa izoh<textarea value={draft.description} maxLength={200} rows={3} onChange={e=>field('description',e.target.value)}/></label>
+        <fieldset><legend>Uchta aniq qadam</legend>{draft.tasks.map((text,i)=><label key={i}>{i+1}-qadam<input value={text} required maxLength={200} onChange={e=>{const tasks=[...draft.tasks];tasks[i]=e.target.value;field('tasks',tasks)}}/></label>)}</fieldset>
+        {error&&<p role="alert" className="workspace-error">{error}</p>}
+        <p className="workspace-draft-state" role="status">{dirty?'Saqlanmagan tahrir bor.':'Matnlar o‘zgartirilmagan.'}</p>
+        <div className="workspace-actions"><Button type="submit" className="filled">O‘zgarishlarni saqlash</Button><Button onClick={cancel}>Bekor qilish</Button></div>
+      </form>:<div className="workspace-checklist">{project.tasks.map((task,index)=><label className={'workspace-task '+(task.done?'is-done':'')} key={index}><input type="checkbox" checked={task.done} onChange={()=>onTask(index)}/><span className="workspace-task-number" aria-hidden="true">{String(index+1).padStart(2,'0')}</span><span>{task.text}</span></label>)}</div>}
+      {notice&&!editing&&<p role="status" className="workspace-notice">{notice}</p>}
+    </div><aside className="project-workspace-summary" aria-label="Loyiha holati"><h2>Hozirgi holat</h2><div className="workspace-progress-number">{project.tasks.filter(t=>t.done).length}<span> / 3 qadam</span></div><md-linear-progress value={progress(project)} aria-label="Loyiha qadamlari"/><p>{progress(project)===1?'Uchala qadam belgilangan. Natijani o‘zingiz tekshirib ko‘ring.':'Keyingi qadamni bajaring, so‘ng belgilab qo‘ying.'}</p><div className="workspace-storage" role="status"><strong>{limited?'Faqat shu tabda':editing&&dirty?'Saqlanmagan matn bor':'Brauzerdagi loyiha'}</strong><p>{limited?'Brauzerga yozilmadi. Joriy ish nusxasini yuklab oling.':editing&&dirty?'Tahrirni saqlashdan oldin eksportga yangi matn kirmaydi.':'Hisobga ulanmagan lokal namuna. Boshqa kompyuterga ma’lumot avtomatik ko‘chmaydi.'}</p></div><Button className="outlined" onClick={onExport}>Loyihalar nusxasini yuklash</Button></aside></div>
+  </motion.section>;
+}
+
+```
+
+## site/src/routes.js
+
+```javascript
+// Hash routes work on static hosting and in downloaded subdirectory previews.
+export function readRoute(hash = '') {
+  if (!hash || hash === '#main') return {view:'all', projectId:null, invalid:false};
+  const match = /^#(all|saved|done)(?:\/(.+))?$/.exec(hash);
+  if (!match) return {view:'all', projectId:null, invalid:true};
+  try {
+    return {view:match[1], projectId:match[2] ? decodeURIComponent(match[2]) : null, invalid:false};
+  } catch { return {view:'all', projectId:null, invalid:true}; }
+}
+export function routeHash(view, projectId = null) {
+  if (!['all','saved','done'].includes(view)) throw new Error('Unknown view');
+  return '#'+view+(projectId === null ? '' : '/'+encodeURIComponent(projectId));
+}
+
+```
+
+## site/src/workspace.css
+
+```css
+/* Project work stays in the same Material color and type system as the library. */
+.project-workspace,.workspace-missing{padding:16px 0 40px}
+.project-breadcrumb{display:flex;align-items:center;gap:12px;margin-bottom:24px;color:var(--md-sys-color-on-surface-variant);font-size:15px}
+.project-workspace-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:36px}
+.project-workspace-heading>div{min-width:0;max-width:780px}
+.project-kind{color:var(--md-sys-color-primary);font-size:15px;font-weight:500}
+.project-workspace-heading h1,.workspace-missing h1{font-family:'Google Sans Flex',Roboto,sans-serif;font-size:clamp(32px,4vw,52px);line-height:1.15;letter-spacing:-.025em;overflow-wrap:anywhere;margin:12px 0 16px}
+.project-workspace-heading p,.workspace-missing p{font-size:18px;line-height:1.7;color:var(--md-sys-color-on-surface-variant);overflow-wrap:anywhere}
+.project-workspace-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start}
+.project-workspace-content{min-width:0;background:var(--md-sys-color-surface-container-low);border:1px solid var(--md-sys-color-outline-variant);border-radius:24px;padding:28px}
+.project-section-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px}
+.project-section-heading h2,.project-workspace-summary h2{font-size:22px;line-height:1.35;font-weight:500;margin:0}
+.workspace-edit{border:1px solid var(--md-sys-color-outline);border-radius:999px;padding:10px 18px;min-height:44px;background:transparent;color:var(--md-sys-color-primary);font:500 15px Roboto,sans-serif;cursor:pointer}
+.workspace-edit:hover{background:var(--md-sys-color-surface-container-high)}
+.workspace-checklist{display:grid;gap:12px}
+.workspace-task{display:grid;grid-template-columns:24px 32px minmax(0,1fr);align-items:center;gap:14px;min-height:84px;padding:18px;background:var(--md-sys-color-surface);border-radius:16px;border:1px solid var(--md-sys-color-outline-variant);font-size:18px;line-height:1.5;cursor:pointer;overflow-wrap:anywhere;transition:background-color .18s,border-color .18s}
+.workspace-task input{width:22px;height:22px;accent-color:var(--md-sys-color-primary);cursor:pointer}
+.workspace-task-number{font-size:14px;color:var(--md-sys-color-on-surface-variant);font-variant-numeric:tabular-nums}
+.workspace-task.is-done{background:var(--md-sys-color-secondary-container);color:var(--md-sys-color-on-secondary-container);border-color:var(--md-sys-color-secondary-container)}
+.project-workspace-summary{position:sticky;top:24px;padding:24px;border-radius:24px;background:var(--md-sys-color-surface-container);min-width:0}
+.workspace-progress-number{font-size:48px;line-height:1.2;margin:22px 0 16px;font-variant-numeric:tabular-nums}
+.workspace-progress-number span{font-size:17px;color:var(--md-sys-color-on-surface-variant)}
+.project-workspace-summary>p,.workspace-storage p{font-size:15px;line-height:1.65;color:var(--md-sys-color-on-surface-variant);margin:16px 0;overflow-wrap:anywhere}
+.workspace-storage{border-top:1px solid var(--md-sys-color-outline-variant);padding-top:20px;margin-top:24px}
+.workspace-storage strong{font-size:16px;font-weight:500}
+.workspace-editor{display:grid;gap:22px}.workspace-editor label{display:grid;gap:9px;font-size:16px;font-weight:500}
+.workspace-editor input,.workspace-editor textarea{box-sizing:border-box;width:100%;border:1px solid var(--md-sys-color-outline);border-radius:8px;background:var(--md-sys-color-surface);color:var(--md-sys-color-on-surface);padding:14px 16px;font:400 17px/1.5 Roboto,sans-serif;min-height:52px}
+.workspace-editor textarea{resize:vertical;min-height:112px}
+.workspace-editor fieldset{border:0;padding:0;margin:0;display:grid;gap:18px;min-width:0}.workspace-editor legend{padding:0;margin-bottom:18px;font-size:19px;font-weight:500}
+.workspace-actions{display:flex;flex-wrap:wrap;gap:12px}.workspace-error{color:var(--md-sys-color-error);font-size:16px;line-height:1.6}.workspace-draft-state,.workspace-notice{color:var(--md-sys-color-on-surface-variant);font-size:15px;line-height:1.6}
+.project-workspace button:focus-visible,.project-workspace input:focus-visible,.project-workspace textarea:focus-visible{outline:3px solid var(--md-sys-color-primary);outline-offset:3px}
+.project-workspace h1:focus,.workspace-missing h1:focus{outline:none}
+.workspace-missing{max-width:760px}.workspace-missing p{margin-bottom:24px}
+@media(max-width:1100px){.project-workspace-grid{grid-template-columns:minmax(0,1fr) 260px;gap:20px}.project-workspace-content{padding:22px}}
+@media(max-width:820px){.project-workspace-grid{grid-template-columns:1fr}.project-workspace-summary{position:static}.project-workspace-heading{flex-direction:column}.project-workspace-heading h1{font-size:36px}.project-workspace-content{padding:20px}.workspace-task{grid-template-columns:22px 26px minmax(0,1fr);gap:10px;padding:14px;font-size:17px}.project-section-heading{flex-wrap:wrap}.project-workspace{padding-top:0}}
+@media(prefers-reduced-motion:reduce){.workspace-task{transition:none}}
+
+.topbar .search[hidden]{display:none}.topbar:has(.search[hidden]){justify-content:space-between}
+
+```
+
+## site/src/workspace.test.js
+
+```javascript
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readRoute,routeHash} from './routes.js';
+import {initialProjects,updateProjectDetails} from './model.js';
+
+test('project link preserves origin view and Unicode/escaped IDs',()=>{
+ for(const id of ['kasb','o‘z loyiha','a/b?x=#','<tag>'])assert.deepEqual(readRoute(routeHash('saved',id)),{view:'saved',projectId:id,invalid:false});
+ assert.deepEqual(readRoute('#done'),{view:'done',projectId:null,invalid:false});
+ assert.equal(readRoute('#all/%ZZ').invalid,true);
+ assert.equal(readRoute('#not-a-route').invalid,true);
+ assert.equal(readRoute('#main').view,'all');
+});
+test('editing details preserves identity, completed tasks and original data',()=>{
+ const original=structuredClone(initialProjects[0]);
+ const next=updateProjectDetails(original,{title:'  Yangi nom  ',description:'Izoh',tasks:['Bir','Ikki','Uch']});
+ assert.equal(next.title,'Yangi nom');assert.equal(next.id,original.id);assert.equal(next.tasks[0].done,true);
+ assert.equal(next.category,original.category);assert.equal(next.saved,original.saved);
+ assert.deepEqual(original,initialProjects[0]);
+});
+test('blank or oversized edits cannot replace a valid project',()=>{
+ const draft={title:'Nom',description:'',tasks:['Bir','Ikki','Uch']};
+ for(const bad of [{...draft,title:' '},{...draft,title:'x'.repeat(81)},{...draft,description:'x'.repeat(201)},{...draft,tasks:['Bir',' ','Uch']},{...draft,tasks:['Bir']},{...draft,tasks:[null,'Ikki','Uch']}])assert.throws(()=>updateProjectDetails(initialProjects[0],bad));
+});
 
 ```
 
@@ -529,6 +688,13 @@ export function validateProjects(value){if(!Array.isArray(value)||value.length>2
 export function normalizeSearch(text){return text.toLocaleLowerCase('uz').normalize('NFKC').replace(/[‘’ʻʼ`´]/g,"'").trim()}
 export function visibleProjects(projects,{view='all',category='Hammasi',query='',sort='recent'}={}){const normalized=normalizeSearch(query);const filtered=projects.filter(p=>(view!=='saved'||p.saved)&&(view!=='done'||progress(p)===1)&&(category==='Hammasi'||p.category===category)&&normalizeSearch(`${p.title} ${p.description} ${p.category}`).includes(normalized));return sort==='name'?[...filtered].sort((a,b)=>a.title.localeCompare(b.title,'uz')):filtered}
 export function createProject({title,description,category},id){const cleanTitle=title.trim(),cleanDescription=description.trim();if(!cleanTitle||cleanTitle.length>80||cleanDescription.length>200||!categories.slice(1).includes(category))throw new Error('Invalid project');const visual={'Ta’lim':['blue','orbit'],'Dizayn':['peach','flower'],'Texnologiya':['green','spark']}[category];return{id,title:cleanTitle,description:cleanDescription||'Yangi g‘oyani ishlaydigan loyihaga aylantiring.',category,tone:visual[0],art:visual[1],saved:false,tasks:[{text:'G‘oyani aniq yozish',done:false},{text:'Birinchi variantni yaratish',done:false},{text:'Natijani tekshirish',done:false}]}}
+
+export function updateProjectDetails(project, draft) {
+ if(!draft||typeof draft.title!=='string'||typeof draft.description!=='string'||!Array.isArray(draft.tasks)||draft.tasks.length!==3||draft.tasks.some(t=>typeof t!=='string'))throw new Error('Invalid project details');
+ const next={...project,title:draft.title.trim(),description:draft.description.trim(),tasks:project.tasks.map((task,index)=>({...task,text:draft.tasks[index].trim()}))};
+ if(!validateProjects([next]))throw new Error('Invalid project details');
+ return next;
+}
 
 ```
 

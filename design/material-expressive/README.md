@@ -41,3 +41,11 @@ Projects persist in this browser. Opening a page never rewrites project storage.
 - [Motion layout animations](https://motion.dev/docs/react-layout-animations): custom card reflow.
 
 Font and component licenses are included under `public/` and `src/fonts/`. Bloom is independently branded and is not an official Google product. `template.json` registers it as variant 10 in the parent gallery.
+
+## Internal project screens (2026-11-02)
+
+`#all`, `#saved`, `#done` show project lists. `#all/PROJECT_ID` (or saved/done) opens a full project workspace. `src/routes.js` parses these static-hosting hash routes; `src/ProjectWorkspace.jsx` owns editing and task controls; `src/workspace.css` uses the same Material color roles. The project ID is looked up locally, never treated as HTML. A missing project displays an explicit not-found screen.
+
+The editor changes the title, description and three task texts while preserving completed state, category and ID. Blank/oversized values are rejected. Unsaved edits trigger a leave confirmation, including browser history navigation; cancelling keeps the editor. Local persistence and multi-tab conflict handling remain in persistence.js. A link does not carry private project data to a different browser. There is no Google Auth or server sync in this starter.
+
+Motion is a short directional transition into the workspace with heading focus; list return restores the project opener where possible. Reduced-motion removes spatial animation. Create/help/palette remain dialogs; project details are now a full screen.

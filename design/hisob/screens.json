@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "slug": "hisob",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Ko‘rsatkich va davr tanlash",
+    "Grafik",
+    "Jadval: qidiruv/saralash",
+    "Filtrlangan CSV eksport"
+  ],
+  "handled_states": [
+    "Qidiruv natijasi yo‘q",
+    "Bo‘sh eksport bloklangan"
+  ],
+  "not_implemented": [
+    "Dataset tahriri",
+    "Filtrni reload orqali saqlash",
+    "Haqiqiy statistika API",
+    "Akkaunt/rol"
+  ],
+  "storage": "report UI state is not persisted",
+  "entry": "site/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

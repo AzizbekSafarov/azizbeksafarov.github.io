@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "897fa2233647c0fdfa11dd129b83dc3bffc5340d89a808d2feedadcaa73f9fd8",
-  "archive_bytes": 882569,
+  "archive_sha256": "a92026ab4311fb87564d89971b973bfca3d5ed9333ea2bb3e4bc4442b3821acd",
+  "archive_bytes": 883425,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -97,8 +97,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 18006,
-      "sha256": "eefdf0872828e9afc70e0d7849376e7d5541c0353fd1dfc65eaa20de00b0f5c5"
+      "bytes": 18554,
+      "sha256": "12be4dc3ed26c669134d3c78270cb583adf92f67eafc8cd70d00a6db93fa0960"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -197,8 +197,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 18216,
-      "sha256": "7649a13756c5673dd2cbfe76a681657fa751fe36ffb06c25156dae1a0a4616e7"
+      "bytes": 18362,
+      "sha256": "fa946dd7a556216c8cffc04a852a8a9336b8cd30b585844be70574c39a117707"
     },
     {
       "path": "PREPARATION.md",
@@ -223,7 +223,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "e8e8e65756e20fbde50b2d80716d23e50904d1f0fc11433a0ae2beaf5c565654"
+      "sha256": "ed0972deece02ab536b7839311f9ad3158456597263766ddab131c7a6f202cd4"
     },
     {
       "path": "README.md",
@@ -241,9 +241,14 @@
       "sha256": "7567762cac1498dc7309e864f91376f17bb925a6dcdb44e5941d0a1989591834"
     },
     {
+      "path": "SCREENS.json",
+      "bytes": 742,
+      "sha256": "48b645440b9500739ef7550f60cb593dddd061160036767ed04c8322f1c2f054"
+    },
+    {
       "path": "START-HERE.md",
-      "bytes": 1860,
-      "sha256": "705699be403be8c2de9211c604d834d6a53ba292fb5cfe936738e3598efdea20"
+      "bytes": 1994,
+      "sha256": "54fa6ea2074462e5f1f4ecae3396b5ff1b3cfce7acadd593383c49e92bdd0c7a"
     },
     {
       "path": "TASK-BOUNDARY.json",

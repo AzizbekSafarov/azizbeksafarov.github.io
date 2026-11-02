@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "992d8357c1260b23b3ef58518961ef3a059d518d45f996132520c18a935f02d9",
-  "archive_bytes": 1079880,
+  "archive_sha256": "ce37b0d855428626b3576a4b9366ade77cc5f39a23c40a85735eebd8b3efe760",
+  "archive_bytes": 1080762,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -91,8 +91,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 12027,
-      "sha256": "11a84f77c0bd6af7d7c71be4d5d69f593c738863328f0c5f8ab29a5568d7d3a5"
+      "bytes": 12599,
+      "sha256": "722cce6dede7acae0db941ab60a471c15cb6a0fd509b668bb29d8025c6d2a7c6"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -191,8 +191,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16755,
-      "sha256": "447da1756c1046c7a5963d872f2dd3763966620094d8be0cfb88ee218a207e5d"
+      "bytes": 16901,
+      "sha256": "b1b31cc058c9a4e271df4268e4c9324cc60da77cf7149809f1ecae2ea66de681"
     },
     {
       "path": "PREPARATION.md",
@@ -217,7 +217,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "3f5808807007d8767fbb4ce7f4a582aafd8af43e6a72f20f891e333837a63f9b"
+      "sha256": "222c60e611f166e6fe1f73cd5068f44d19371b98b50c53c4eaca267830f29c07"
     },
     {
       "path": "README.md",
@@ -235,9 +235,14 @@
       "sha256": "7567762cac1498dc7309e864f91376f17bb925a6dcdb44e5941d0a1989591834"
     },
     {
+      "path": "SCREENS.json",
+      "bytes": 774,
+      "sha256": "5caab8e01ab04853e4c69857bfbbbb4c86c4ab0bb8e8fc846badc9fb132bcfa7"
+    },
+    {
       "path": "START-HERE.md",
-      "bytes": 1844,
-      "sha256": "6fdc5371e11344c963a6b2cca23adecf65f0e28f2c1bbb9a5add377dadb5ebf6"
+      "bytes": 1978,
+      "sha256": "4473591d9c7e1e87f598f3485d282cf0869cef5efc7858cdcee3dcebe66cdda0"
     },
     {
       "path": "TASK-BOUNDARY.json",

@@ -111,6 +111,16 @@ Quyidagi baseline amallarni yangi bilet oqimiga moslab tekshir. Eski QA bugungi 
 
 `CURRENT-TASK.md` ga bilet, vaqt va cheklovni yoz. `HANDOFF.md` ga fayllar, bajarilgan/qolgan ish, haqiqiy tekshiruv, ochiq xato va keyingi bitta amalni yozib bor. Shu faylni yangi AIga berish davom ettirishni osonlashtiradi. Oxirida ishlaydigan link/local run, editable source, talablarga mos test qaydi va himoya uchun muammo → yechim → to‘liq oqim → texnologiya → cheklov izohini tayyorla. “Xatosiz”, “to‘liq testlangan” yoki ball kafolatini dalilsiz aytma.
 
+## Paketdagi ekranlar va chegaralar
+
+**Tayyor:** Zarracha animatsiyali kirish; Tashabbuslar filtri; Tashabbus tafsiloti dialogi; Shaxsiy reja va TXT eksport; Navigatsiya dialogi.
+
+**Holatlar:** Bo‘sh reja; Pause/reduced-motion; Xotira xatosi.
+
+**Hali yo‘q:** Haqiqiy ariza yuborish; Akkaunt/dashboard; AI backend.
+
+Bu imkoniyatlar bitta manba paketida. Biletga kerak bo‘ladigan yangi ichki sahifa avtomatik tayyor deb olinmaydi. Mashina o‘qiydigan xarita ZIP ildizidagi `SCREENS.json` da; bu qo‘llanma runtime sinovi o‘rnini bosmaydi.
+
 ## Yangi sahifa yoki ekran qo‘shish
 
 Fayllar: `site/index.html`, `site/app.js`; mavjud kirish funksiyasi: `renderPlan`.

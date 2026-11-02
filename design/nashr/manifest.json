@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "a21ec89bf05e862fc9a698f272b21178160b9ce1360bd79e222155e9f227a5bf",
-  "archive_bytes": 2307581,
+  "archive_sha256": "ea236eaa783be970110f2dc562f0663f1ae29774bda4a61e7a1f3bd5c58ee991",
+  "archive_bytes": 2308400,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -85,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 11987,
-      "sha256": "4af9601439bedfa1768314a0742c161fb2b64a99e8223dd308f23b75a1297399"
+      "bytes": 12475,
+      "sha256": "09cbc8351eb325a8b2eebef2df452c7ec21f2dba74763ee7d855f2ed083312ee"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -185,8 +185,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16916,
-      "sha256": "6f8d0ef7c6adba2ec9379c0a8475737f8356b2e8a6bc0940dde3ff8027494a04"
+      "bytes": 17062,
+      "sha256": "85000efc541a7d76e354ec45935fe93d17e0ed1526ff1d1d485e44b3afe655cd"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "ad0df6217b3e63a819322efe4f69104bbf2542aa83a7cfe56a617615e0c78aea"
+      "sha256": "a36bb4d4adb92dfae892399e7d17112be046a79c03a027d203408f7fa4808373"
     },
     {
       "path": "README.md",
@@ -229,9 +229,14 @@
       "sha256": "7567762cac1498dc7309e864f91376f17bb925a6dcdb44e5941d0a1989591834"
     },
     {
+      "path": "SCREENS.json",
+      "bytes": 673,
+      "sha256": "2a3883f0ce609960e17b5362afb528f6260ce385a9c29c0cc9aaa428e6f09530"
+    },
+    {
       "path": "START-HERE.md",
-      "bytes": 1846,
-      "sha256": "8b4c24d91ac4c0d9a2a2a64a11f893a07a1c45c86c9c005c2578fa08b55b497d"
+      "bytes": 1980,
+      "sha256": "70857753710ad40670a29f4551d4754b84342d77449b9b7ba3f614fbaf3a954d"
     },
     {
       "path": "TASK-BOUNDARY.json",

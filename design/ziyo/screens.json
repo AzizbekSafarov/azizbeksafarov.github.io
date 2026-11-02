@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "slug": "ziyo",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Dars tanlash",
+    "Dars mazmuni, interaktiv misol va kod",
+    "Savol, javob izohi va keyingi dars",
+    "Mahalliy progress"
+  ],
+  "handled_states": [
+    "Javob tanlanmagan",
+    "Noto‘g‘ri/to‘g‘ri javob",
+    "Oxirgi dars",
+    "Xotira xatosi"
+  ],
+  "not_implemented": [
+    "Kurs yaratish muharriri",
+    "Akkaunt/server progressi",
+    "Sertifikat",
+    "Eksport"
+  ],
+  "storage": "local browser only",
+  "entry": "site/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

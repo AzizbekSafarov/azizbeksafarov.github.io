@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "slug": "nashr",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Gazeta bosh sahifasi",
+    "Bo‘lim va saqlanganlar filtri",
+    "Maqola o‘qish dialogi"
+  ],
+  "handled_states": [
+    "Bo‘sh saqlanganlar/filtr",
+    "Xotira xatosi"
+  ],
+  "not_implemented": [
+    "Maqola yozish/CMS",
+    "Izohlar",
+    "Akkaunt/server",
+    "Eksport"
+  ],
+  "storage": "local browser only",
+  "entry": "site/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

@@ -316,7 +316,7 @@ def source_files(t,templates):
 
 def code_names(t,files):
     # Every text file that shapes the rendered design is readable here; binaries are listed by assets().
-    if t['id']=='10':return ['index.html','src/main.jsx','src/style.css','src/fonts/google-sans-flex.css','src/fonts/roboto.css','src/fonts/material-symbols.css','src/persistence.js','src/persistence.test.js','src/model.js','src/model.test.js','src/combinations.test.js','public/bloom.svg','package.json','vite.config.js','download_symbols.py']
+    if t['id']=='10':return ['index.html','src/main.jsx','src/ProjectWorkspace.jsx','src/routes.js','src/workspace.css','src/workspace.test.js','src/style.css','src/fonts/google-sans-flex.css','src/fonts/roboto.css','src/fonts/material-symbols.css','src/persistence.js','src/persistence.test.js','src/model.js','src/model.test.js','src/combinations.test.js','public/bloom.svg','package.json','vite.config.js','download_symbols.py']
     if t['id']=='11':return ['index.html','style.css','fonts/fonts.css','app.js','motion.js','MOTION.md','motion.test.mjs','model.js','model.test.mjs','combinations.test.mjs','uzbekistan.svg','brand-icon.svg']
     return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','combinations.test.mjs','mark.svg','CREDITS.md','package.json']
 
@@ -405,7 +405,8 @@ def build():
         brief=ai_brief(t);folder=ROOT/t['slug']
         heading,body=brief.split('\n',1)
         from starter_maps import page_section, verify_pages, flow_section, verify_flows
-        brief=heading+'\n\n'+entry_text.brief_intro(t['name'])+body.rstrip('\n')+'\n'+page_section(t['slug'])+flow_section(t['slug'])+asset_section(t,files)
+        from screen_inventory import inventory, section as screen_section
+        brief=heading+'\n\n'+entry_text.brief_intro(t['name'])+body.rstrip('\n')+'\n'+screen_section(t['slug'])+page_section(t['slug'])+flow_section(t['slug'])+asset_section(t,files)
         verify_pages(t['slug'], files, brief)
         verify_flows(t['slug'], files, brief)
         if t['archived']:brief='# TARIXIY ARXIV — faol starter sifatida tavsiya etilmaydi\n\nYangi ish: '+SITE+'/design/\n\n'+brief
@@ -454,6 +455,8 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras.update({name: data.decode('utf-8') for name, data in context_files.items()})
         extras['START-HERE.md']=entry_text.start_here(t)
+        extras['SCREENS.json']=json.dumps(inventory(t['slug']),ensure_ascii=False,indent=2)+'\n'
+        write(folder/'screens.json',extras['SCREENS.json'])
         extras['verify-package.mjs']=read(ROOT/'handoff/verify-package.mjs')
         extras['CURRENT-TASK.md']+='- Server, login yoki baza: biletda talab qilinsa yozing (reja: ARCHITECTURE.md); yaratilgan xizmat va URLlar shu yerga.\n\nKengroq shakl kerak bo‘lsa: PROJECT-TASK-TEMPLATE.md.\n'
         extras['READ-RECEIPT.md']=RECEIPT

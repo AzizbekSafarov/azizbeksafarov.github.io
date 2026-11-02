@@ -116,6 +116,7 @@ Kod yozmasdan Codex bilan shu starterda ishlash: `ZAXIRA/CODEX.md`. AI ishlamay 
 | `AGENTS.md` | AI uchun ish qoidalari va o‘qish tartibi (`CLAUDE.md`, `GEMINI.md` shunga yo‘naltiradi) |
 | `CURRENT-TASK.md`, `HANDOFF.md` | Bilet va bajarilgan ish — loyiha davomida to‘ldiriladi |
 | `AI-BRIEF.md` | Shu dizayn: vizual kontrakt, fayl xaritasi, ishga tushirish, saqlanadigan oqimlar |
+| `SCREENS.json` | Tayyor ekranlar, holatlar va hali qurilmagan qismlar; source to‘liqligi bilan mahsulot to‘liqligini ajratadi |
 | `CHECKLIST.md` | Qabul tekshiruvi |
 | `COMPETITION.md`, `CURRENT-COMPETITION.md`, `SCORING-WORKPLAN.md` | Tanlov qoidalari, oxirgi tekshiruv, mezon → ish → dalil |
 | `REGULATIONS.md` | Uch nizom hujjati, 39 sahifa, to‘liq |

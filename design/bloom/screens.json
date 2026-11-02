@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "slug": "bloom",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Loyihalar, saqlanganlar, bajarilganlar ro‘yxati",
+    "Alohida loyiha ish ekrani: #all/ID, #saved/ID, #done/ID",
+    "Nom, izoh va uch qadamni tahrirlash",
+    "Yangi loyiha, yordam va palitra dialoglari"
+  ],
+  "handled_states": [
+    "Topilmagan loyiha",
+    "Bo‘sh qidiruv/filtr",
+    "Noto‘g‘ri tahrir",
+    "Saqlanmagan tahrirdan chiqish",
+    "Saqlash xatosi va ikki-tab ziddiyati"
+  ],
+  "not_implemented": [
+    "Login/Google Auth",
+    "Server sinxronizatsiyasi",
+    "Jamoa rollari",
+    "JSON import"
+  ],
+  "storage": "local browser only",
+  "entry": "site/dist/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

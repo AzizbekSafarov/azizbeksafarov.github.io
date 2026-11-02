@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "slug": "forma",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Mahsulot katalogi va filtr",
+    "Mahsulot tafsiloti dialogi",
+    "Savat: miqdor, jami, TXT eksport",
+    "Yondashuv/yordam bo‘limi"
+  ],
+  "handled_states": [
+    "Bo‘sh savat",
+    "Miqdor limiti",
+    "Xotira xatosi"
+  ],
+  "not_implemented": [
+    "Checkout/to‘lov",
+    "Akkaunt",
+    "Buyurtma serveri"
+  ],
+  "storage": "local browser only",
+  "entry": "site/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

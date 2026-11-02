@@ -10,3 +10,10 @@ export function validateProjects(value){if(!Array.isArray(value)||value.length>2
 export function normalizeSearch(text){return text.toLocaleLowerCase('uz').normalize('NFKC').replace(/[‘’ʻʼ`´]/g,"'").trim()}
 export function visibleProjects(projects,{view='all',category='Hammasi',query='',sort='recent'}={}){const normalized=normalizeSearch(query);const filtered=projects.filter(p=>(view!=='saved'||p.saved)&&(view!=='done'||progress(p)===1)&&(category==='Hammasi'||p.category===category)&&normalizeSearch(`${p.title} ${p.description} ${p.category}`).includes(normalized));return sort==='name'?[...filtered].sort((a,b)=>a.title.localeCompare(b.title,'uz')):filtered}
 export function createProject({title,description,category},id){const cleanTitle=title.trim(),cleanDescription=description.trim();if(!cleanTitle||cleanTitle.length>80||cleanDescription.length>200||!categories.slice(1).includes(category))throw new Error('Invalid project');const visual={'Ta’lim':['blue','orbit'],'Dizayn':['peach','flower'],'Texnologiya':['green','spark']}[category];return{id,title:cleanTitle,description:cleanDescription||'Yangi g‘oyani ishlaydigan loyihaga aylantiring.',category,tone:visual[0],art:visual[1],saved:false,tasks:[{text:'G‘oyani aniq yozish',done:false},{text:'Birinchi variantni yaratish',done:false},{text:'Natijani tekshirish',done:false}]}}
+
+export function updateProjectDetails(project, draft) {
+ if(!draft||typeof draft.title!=='string'||typeof draft.description!=='string'||!Array.isArray(draft.tasks)||draft.tasks.length!==3||draft.tasks.some(t=>typeof t!=='string'))throw new Error('Invalid project details');
+ const next={...project,title:draft.title.trim(),description:draft.description.trim(),tasks:project.tasks.map((task,index)=>({...task,text:draft.tasks[index].trim()}))};
+ if(!validateProjects([next]))throw new Error('Invalid project details');
+ return next;
+}

@@ -59,6 +59,16 @@ Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, r
 
 HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.
 
+## Paketdagi ekranlar va chegaralar
+
+**Tayyor:** Ko‘rsatkich va davr tanlash; Grafik; Jadval: qidiruv/saralash; Filtrlangan CSV eksport.
+
+**Holatlar:** Qidiruv natijasi yo‘q; Bo‘sh eksport bloklangan.
+
+**Hali yo‘q:** Dataset tahriri; Filtrni reload orqali saqlash; Haqiqiy statistika API; Akkaunt/rol.
+
+Bu imkoniyatlar bitta manba paketida. Biletga kerak bo‘ladigan yangi ichki sahifa avtomatik tayyor deb olinmaydi. Mashina o‘qiydigan xarita ZIP ildizidagi `SCREENS.json` da; bu qo‘llanma runtime sinovi o‘rnini bosmaydi.
+
 ## Yangi sahifa yoki ekran qo‘shish
 
 Fayllar: `site/index.html`, `site/app.js`; mavjud kirish funksiyasi: `render`.

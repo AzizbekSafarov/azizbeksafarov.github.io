@@ -68,6 +68,16 @@ Talab → foydalanuvchi amali → kod joyi → qabul tekshiruvi jadvalini tuz. A
 
 HANDOFF.md ga bilet, o‘zgargan fayllar, haqiqiy buyruq/test natijasi, ochiq muammo va keyingi amalni yoz. Yangi chatga CURRENT-TASK.md va HANDOFF.md ni ber. Link o‘z-o‘zidan xotira, internet yoki fayl tahrirlash vositasini bermaydi; o‘qiy olmasa matn/ZIPni chatga bering.
 
+## Paketdagi ekranlar va chegaralar
+
+**Tayyor:** Mahsulot katalogi va filtr; Mahsulot tafsiloti dialogi; Savat: miqdor, jami, TXT eksport; Yondashuv/yordam bo‘limi.
+
+**Holatlar:** Bo‘sh savat; Miqdor limiti; Xotira xatosi.
+
+**Hali yo‘q:** Checkout/to‘lov; Akkaunt; Buyurtma serveri.
+
+Bu imkoniyatlar bitta manba paketida. Biletga kerak bo‘ladigan yangi ichki sahifa avtomatik tayyor deb olinmaydi. Mashina o‘qiydigan xarita ZIP ildizidagi `SCREENS.json` da; bu qo‘llanma runtime sinovi o‘rnini bosmaydi.
+
 ## Yangi sahifa yoki ekran qo‘shish
 
 Fayllar: `site/index.html`, `site/app.js`; mavjud kirish funksiyasi: `renderCart`.

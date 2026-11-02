@@ -60,6 +60,16 @@ Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, r
 
 HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.
 
+## Paketdagi ekranlar va chegaralar
+
+**Tayyor:** Dars tanlash; Dars mazmuni, interaktiv misol va kod; Savol, javob izohi va keyingi dars; Mahalliy progress.
+
+**Holatlar:** Javob tanlanmagan; Noto‘g‘ri/to‘g‘ri javob; Oxirgi dars; Xotira xatosi.
+
+**Hali yo‘q:** Kurs yaratish muharriri; Akkaunt/server progressi; Sertifikat; Eksport.
+
+Bu imkoniyatlar bitta manba paketida. Biletga kerak bo‘ladigan yangi ichki sahifa avtomatik tayyor deb olinmaydi. Mashina o‘qiydigan xarita ZIP ildizidagi `SCREENS.json` da; bu qo‘llanma runtime sinovi o‘rnini bosmaydi.
+
 ## Yangi sahifa yoki ekran qo‘shish
 
 Fayllar: `site/index.html`, `site/app.js`; mavjud kirish funksiyasi: `lesson`.

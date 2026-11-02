@@ -129,6 +129,11 @@ def verify():
         with zipfile.ZipFile(BytesIO(archive)) as z:
             assert z.testzip() is None
             check_package(z)
+            from screen_inventory import inventory
+            screen_map=json.loads(z.read('SCREENS.json'))
+            assert screen_map==inventory(template['slug'])
+            assert screen_map['entry'] in z.namelist()
+            assert json.loads((folder/'screens.json').read_text(encoding='utf-8'))==screen_map
             readme=z.read('README.md').decode('utf-8')
             assert 'node verify-package.mjs' in readme and 'node serve.mjs' in readme
             assert '9 HTML namuna' not in readme and 'shared.js' not in readme

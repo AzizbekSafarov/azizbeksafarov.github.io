@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "slug": "samar",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Interaktiv shartli xarita",
+    "Manzillar va tafsilot dialogi",
+    "Kun rejasi: vaqt, tartib, TXT eksport",
+    "Safarga tayyorgarlik bo‘limi"
+  ],
+  "handled_states": [
+    "Bo‘sh reja",
+    "Noto‘g‘ri vaqt normallashtirilishi",
+    "Xotira xatosi"
+  ],
+  "not_implemented": [
+    "Haqiqiy bron",
+    "Jonli xarita navigatsiyasi",
+    "Akkaunt/server"
+  ],
+  "storage": "local browser only",
+  "entry": "site/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

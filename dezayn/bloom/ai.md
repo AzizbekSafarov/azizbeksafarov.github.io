@@ -6,7 +6,7 @@ Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu o
 
 ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.
 
-Snapshot: 2026-11-02; source fingerprint: `15bf4804de1c3708`. Readable page: https://azizbeksafarov.github.io/design/bloom/
+Snapshot: 2026-11-02; source fingerprint: `b9921e6464703246`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -57,6 +57,10 @@ Source archive va matn bir snapshotdan yaratilgan. Ish papkasi `site/`. Internet
 Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [index.html](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/index.html.txt)
 - [src/main.jsx](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt)
+- [src/ProjectWorkspace.jsx](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/ProjectWorkspace.jsx.txt)
+- [src/routes.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/routes.js.txt)
+- [src/workspace.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/workspace.css.txt)
+- [src/workspace.test.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/workspace.test.js.txt)
 - [src/style.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/style.css.txt)
 - [src/fonts/google-sans-flex.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/google-sans-flex.css.txt)
 - [src/fonts/roboto.css](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/fonts/roboto.css.txt)
@@ -112,11 +116,21 @@ Quyidagi baseline amallarni yangi bilet oqimiga moslab tekshir. Eski QA bugungi 
 
 `CURRENT-TASK.md` ga bilet, vaqt va cheklovni yoz. `HANDOFF.md` ga fayllar, bajarilgan/qolgan ish, haqiqiy tekshiruv, ochiq xato va keyingi bitta amalni yozib bor. Shu faylni yangi AIga berish davom ettirishni osonlashtiradi. Oxirida ishlaydigan link/local run, editable source, talablarga mos test qaydi va himoya uchun muammo → yechim → to‘liq oqim → texnologiya → cheklov izohini tayyorla. “Xatosiz”, “to‘liq testlangan” yoki ball kafolatini dalilsiz aytma.
 
+## Paketdagi ekranlar va chegaralar
+
+**Tayyor:** Loyihalar, saqlanganlar, bajarilganlar ro‘yxati; Alohida loyiha ish ekrani: #all/ID, #saved/ID, #done/ID; Nom, izoh va uch qadamni tahrirlash; Yangi loyiha, yordam va palitra dialoglari.
+
+**Holatlar:** Topilmagan loyiha; Bo‘sh qidiruv/filtr; Noto‘g‘ri tahrir; Saqlanmagan tahrirdan chiqish; Saqlash xatosi va ikki-tab ziddiyati.
+
+**Hali yo‘q:** Login/Google Auth; Server sinxronizatsiyasi; Jamoa rollari; JSON import.
+
+Bu imkoniyatlar bitta manba paketida. Biletga kerak bo‘ladigan yangi ichki sahifa avtomatik tayyor deb olinmaydi. Mashina o‘qiydigan xarita ZIP ildizidagi `SCREENS.json` da; bu qo‘llanma runtime sinovi o‘rnini bosmaydi.
+
 ## Yangi sahifa yoki ekran qo‘shish
 
 Fayllar: `site/src/main.jsx`, `site/src/main.jsx`; mavjud kirish funksiyasi: `navigate`.
 
-App ichidagi view/setView va navigate(next), sidebar navigatsiyasidagi all/saved/done ro‘yxati hamda sarlavha xaritasini birga kengaytir. Alohida ekran uchun view bo‘yicha yangi komponentni shartli chiqar; visibleProjects filtrlari yangi ekran o‘rnini bosmaydi. src/model.js ni faqat ma’lumot modeli talab etsa o‘zgartir; npm run build bilan dist ni yangila.
+src/routes.js hash yo‘llarini boshqaradi: #all, #saved, #done va #all/ID kabi loyiha ekranlari. App ichidagi navigate(next), sidebar ro‘yxati va sarlavha xaritasini yo‘l parseri bilan birga kengaytir. src/ProjectWorkspace.jsx ichki ish ekrani va tahrir formasini, src/workspace.css uning Material ko‘rinishini boshqaradi. Alohida ekran uchun view bo‘yicha yangi komponentni shartli chiqar; visibleProjects filtrlari yangi ekran o‘rnini bosmaydi. src/model.js ni faqat ma’lumot modeli talab etsa o‘zgartir; npm run build bilan dist ni yangila.
 
 HTML starterlarda haqiqiy alohida URL talab qilinsa yangi HTML fayl yarat, umumiy shrift/CSS resurslarini nisbiy yo‘l bilan ula va barcha menyularga havola qo‘sh. app.js ni ko‘r-ko‘rona yangi sahifaga ulamang: u mavjud DOM IDlarini kutadi; shu sahifaga tegishli kodni ajrating. Bo‘lim, dialog yoki filtrning o‘zi avtomatik ravishda biletdagi “sahifa” talabini bajarmaydi — talab etilgan hajm va mustaqil vazifani tekshiring.
 
@@ -124,7 +138,7 @@ Qabul sinovi: menyudan kirish, to‘g‘ridan-to‘g‘ri URL (agar mavjud), orq
 
 ## O‘qilish va harakat xarakteri
 
-Material ish maydoni: Google Sans/Roboto va rasmiy Material komponentlarining ripple, dialog, tanlash holatlari. src/main.jsx dagi Motion layout va reduced-motion yo‘lini saqla; boshqa starter animatsiyasini ustiga qo‘shma.
+Material ish maydoni: Google Sans/Roboto va rasmiy Material komponentlarining ripple, dialog, tanlash holatlari. Ichki ekran qisqa yon o‘tish bilan ochiladi, fokus sarlavhaga o‘tadi; reduced-motion’da siljish yo‘q. src/main.jsx va ProjectWorkspace.jsx dagi Motion layout va reduced-motion yo‘lini saqla; boshqa starter animatsiyasini ustiga qo‘shma.
 
 Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o‘zbekcha matn, 320/390 px va katta zoom bilan tekshiring. Harakat holat o‘zgarishini tushuntirsin, amalni kutishga majburlamasin. prefers-reduced-motion, dialogdan fokus qaytishi va ko‘rinadigan natija saqlansin. Nusxadagi HTML starterlarda CSS site/layout.css, Bloom’da site/src/style.css; SI’da site/style.css va site/motion.js. Har starterga o‘zida mavjud faylni qo‘llang.
 
@@ -132,7 +146,7 @@ Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o
 
 | Qism | Hozirgi namuna | Kod joyi |
 |---|---|---|
-| Bog‘liq amallar | Loyiha yaratish → tafsilot → vazifani bajarish → progress/filtr. | `site/src/main.jsx` → `submitProject`, `site/src/main.jsx` → `changeTask`, `site/src/model.js` → `progress` |
+| Bog‘liq amallar | Loyiha yaratish → alohida hash ish ekrani → matn/qadam tahriri → saqlash → reload yoki Orqaga → progress/filtr. | `site/src/main.jsx` → `submitProject`, `site/src/main.jsx` → `changeTask`, `site/src/model.js` → `progress` |
 | Noto‘g‘ri kiritish | createProject nom/uzunlik/kategoriyani tekshiradi; submitProject xatoni ko‘rsatadi. validateProjects saqlangan to‘plamni tekshiradi. | `site/src/model.js` → `createProject`, `site/src/model.js` → `validateProjects` |
 | Saqlash | src/persistence.js loadProjectState/persistProjectState; App useEffect orqali yozadi. Boshqa tab yozgan holat bilan ziddiyatda yozish to‘xtaydi; foydalanuvchi JSON eksport olib keyin yangilaydi. Jonli avtomatik merge yo‘q. Recovery nusxalari oldingisini almashtirmaydi. | `site/src/persistence.js` → `loadProjectState`, `site/src/persistence.js` → `persistProjectState` |
 

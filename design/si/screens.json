@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "slug": "si",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Zarracha animatsiyali kirish",
+    "Tashabbuslar filtri",
+    "Tashabbus tafsiloti dialogi",
+    "Shaxsiy reja va TXT eksport",
+    "Navigatsiya dialogi"
+  ],
+  "handled_states": [
+    "Bo‘sh reja",
+    "Pause/reduced-motion",
+    "Xotira xatosi"
+  ],
+  "not_implemented": [
+    "Haqiqiy ariza yuborish",
+    "Akkaunt/dashboard",
+    "AI backend"
+  ],
+  "storage": "local browser only",
+  "entry": "site/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

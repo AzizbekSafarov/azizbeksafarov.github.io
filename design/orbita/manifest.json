@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "50f9d8bc8ed83df9cf10dd9c25318057c19a4bdcf8ea0b8cc4d17028a4b6ad0c",
-  "archive_bytes": 828200,
+  "archive_sha256": "b2dc5310e09fe603717ec81ae68de5db9310896c345f0d50af288c8249139d65",
+  "archive_bytes": 829062,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -85,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 11722,
-      "sha256": "fd8a6a51585607481f15aa6a31009cb8f9250cc6c257bd40a4453d0e2c393e30"
+      "bytes": 12255,
+      "sha256": "e8eee3b1f294c58e76e4760a29ff9e8e0e5d707c95454115d5e9f960393b9199"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -185,8 +185,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16287,
-      "sha256": "5d8c8715dc9a2f47233d5089bee371e31fbe596adc6e8df6cdb7915e5ca8349e"
+      "bytes": 16433,
+      "sha256": "7acdf2eb2114e9146e0fa2bbb0062493ae94203c920060a48f5ae4faac4aa0e9"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "ed3ad23652270e551a3017c7cde528ec46d74a550a331763cbdae011da1a4921"
+      "sha256": "00b5406f4ebd4c7de6d2357cf256f324946c004163225c72a6b6f22cd9771973"
     },
     {
       "path": "README.md",
@@ -229,9 +229,14 @@
       "sha256": "7567762cac1498dc7309e864f91376f17bb925a6dcdb44e5941d0a1989591834"
     },
     {
+      "path": "SCREENS.json",
+      "bytes": 725,
+      "sha256": "2d0eb7fee6e59a56ba60685d02f132feb5250b82a9a0e198916a3b966fa6778f"
+    },
+    {
       "path": "START-HERE.md",
-      "bytes": 1848,
-      "sha256": "282d50b8f6845f3101b71912a0848567f5681a2a830d47034aa5569d6779a841"
+      "bytes": 1982,
+      "sha256": "282282f9a5fe8f1d887fc4fc2725e7d4b2bb1e0e68e11c03b9eb01843f9fcc77"
     },
     {
       "path": "TASK-BOUNDARY.json",

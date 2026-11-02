@@ -2,7 +2,7 @@
 
 This is Azizbek's selected Ustoz AI competition starter. Communicate in Uzbek. The user's actual ticket, time and current organizer rules take priority over preparation documents.
 
-Read `README.md`, the affected source and `QA-REPORT.md` before changes. `src/main.jsx` owns UI and Material Web bindings; `src/style.css` owns M3 roles/responsiveness; `src/model.js` owns data/search/validation; `src/model.test.js` owns model checks. Edit source and rebuild `dist/`; never patch minified output.
+Read `README.md`, the affected source and `QA-REPORT.md` before changes. `src/main.jsx` owns UI and Material Web bindings; `src/style.css` owns M3 roles/responsiveness; `src/model.js` owns data/search/validation; `src/model.test.js` owns model checks. `src/routes.js` owns hash routes, `src/ProjectWorkspace.jsx` the full project screen/editor, and `src/workspace.css` its Material layout. Preserve route back/reload and unsaved-edit confirmation. Project details are no longer a dialog; create/help/palette still are. Edit source and rebuild `dist/`; never patch minified output.
 
 Preserve the approved M3 identity, local fonts/variable Material Symbols, matched on-color roles, neutral panels, unmistakable primary actions, visible selected states and reduced motion. Keep official Material controls, lowercase custom-element change bindings as supported by the installed library, repeat-click chip selection, live form validation/reset, palette action footer, bookmark consistency and focus restoration. Read the actual code before adapting these patterns.
 

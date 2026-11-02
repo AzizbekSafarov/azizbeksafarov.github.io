@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "slug": "meros",
+  "reviewed_on": "2026-11-02",
+  "scope": "Shipped frontend screens and states; not the unknown competition ticket.",
+  "ready_screens": [
+    "Ko‘rgazma plakati va indeks",
+    "Ekspozitsiya filtri",
+    "Asar tafsiloti dialogi",
+    "Kolleksiya filtri va TXT eksport"
+  ],
+  "handled_states": [
+    "Bo‘sh kolleksiya/filtr",
+    "Xotira xatosi"
+  ],
+  "not_implemented": [
+    "Muzey bileti/bron",
+    "Admin muharrir",
+    "Akkaunt/server"
+  ],
+  "storage": "local browser only",
+  "entry": "site/index.html",
+  "full_source": "All supplied screens share the source.zip package. Hash/file integrity does not prove every future adaptation works."
+}

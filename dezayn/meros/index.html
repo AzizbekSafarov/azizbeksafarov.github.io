@@ -28,6 +28,11 @@
 <p>Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash mavjud bo‘lgan starterlarda known unique IDlar tekshiriladi. O‘qib bo‘lmaydigan saqlangan nusxa ustiga yozilmaydi, ish shu tabda davom etadi; qayta ochilganda yangi ish tiklanishi kafolatlanmaydi. Hisob hisobotining davr/filtr holati saqlanmaydi. Nashr va Ziyo’da foydalanuvchi eksport tugmasi yo‘q; eksport bor deb va’da qilmang. Mustaqil foto ekspozitsiya; rasmiy muzey emas. Filtrda lavhaning doimiy raqami saqlansin; kolleksiya va dialog holati bir xil modeldan olinsin.</p>
 <p>Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 390, 768 va 1366 px (mezonlardagi kengliklar), qo‘shimcha 320 va 1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.</p>
 <p>HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, <code>ARCHITECTURE.md</code> dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.</p>
+<h3>Paketdagi ekranlar va chegaralar</h3>
+<p>**Tayyor:** Ko‘rgazma plakati va indeks; Ekspozitsiya filtri; Asar tafsiloti dialogi; Kolleksiya filtri va TXT eksport.</p>
+<p>**Holatlar:** Bo‘sh kolleksiya/filtr; Xotira xatosi.</p>
+<p>**Hali yo‘q:** Muzey bileti/bron; Admin muharrir; Akkaunt/server.</p>
+<p>Bu imkoniyatlar bitta manba paketida. Biletga kerak bo‘ladigan yangi ichki sahifa avtomatik tayyor deb olinmaydi. Mashina o‘qiydigan xarita ZIP ildizidagi <code>SCREENS.json</code> da; bu qo‘llanma runtime sinovi o‘rnini bosmaydi.</p>
 <h3>Yangi sahifa yoki ekran qo‘shish</h3>
 <p>Fayllar: <code>site/index.html</code>, <code>site/app.js</code>; mavjud kirish funksiyasi: <code>render</code>.</p>
 <p>index.html navigatsiyasiga yangi hash havolasi, main ichiga section qo‘sh. render #exhibit-list ni qayta chizadi; yangi ekran shu konteyner tashqarisida bo‘lsin. Kolleksiya filtri va #reader dialogi sahifa routeri emas.</p>
