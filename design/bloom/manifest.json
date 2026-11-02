@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
-  "source_fingerprint": "b9921e6464703246fdd9316e1ae3918d7d40943197b935fec8eeb4574bb55f0d",
+  "source_fingerprint": "f98668b42dd781fb5a9cc63e0a34c9a1c75f5847efe759cc8ac0676c5ed59520",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "ea2167c6cf50298aaa8ec5da32e36e2d51abf6c34fe383a2dd3a3ba3d0beabdd",
-  "archive_bytes": 1577022,
+  "archive_sha256": "811bab2a812a25d0744f4758dccc682a2439991345cf0fb07993e68699ce3d33",
+  "archive_bytes": 1577169,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -25,13 +25,13 @@
     {
       "path": "src/main.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
-      "sha256": "021f7d54b0ca6334dfc4a932345dfd5c985eb5450a922ca43596079108262214",
+      "sha256": "e94d1d3cbc92e3af98463a3a57be86de0e5d9b80477796a4bb7542dd77a2d764",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt"
     },
     {
       "path": "src/ProjectWorkspace.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/ProjectWorkspace.jsx.txt",
-      "sha256": "f52ffd8a34be65647bf48ac6081d19c5e0fd0a49bf7dfd1321912f1609c97bfc",
+      "sha256": "4349e1e60e1483e5d0d33c456500add1a24522db8bd37af6b542f367cc82c8b0",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/ProjectWorkspace.jsx.txt"
     },
     {
@@ -140,7 +140,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 20479,
-      "sha256": "75f617b2753e366ace1ec5d4a20c8b02b25fc40f0cfa12ec38f1ff7e861d327a"
+      "sha256": "fd1674195175cf5beeee129c8cd121d33b8eb23b952b9de51bd703e94aa3090a"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -220,7 +220,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1240,
-      "sha256": "dfcbcba528cd9c7b0a852b3f64d0e5a6c499c7a8d143587e4591cd615ee27f5c"
+      "sha256": "740a7d54cb3cf9ccf43e357bf96da72eabb1f37dfb3e6c73c3196f70b890ade5"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -240,7 +240,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 22423,
-      "sha256": "c922ab67d77ea3feddfcf73fea39040acd618d926149fac25315ece46bc3ea7c"
+      "sha256": "7f5063d6a53bd328650fa0d6ac3ccc8a88627717e35bee986c37a98d5dbf05d7"
     },
     {
       "path": "PREPARATION.md",
@@ -265,7 +265,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "bf21138b3ade4a4532edf11d58d737ed0074fbd789c17f8d0f66f7ff0430128b"
+      "sha256": "637444d80b27f0ea7fd14378c4adfceb9834466a80085235b1bc4232fdebbe37"
     },
     {
       "path": "README.md",
@@ -545,7 +545,7 @@
     {
       "path": "kit.json",
       "bytes": 316,
-      "sha256": "4763a69caa47b9aae612415c9c5a85c3b6b047b75adaacadd4d90c79ace2b938"
+      "sha256": "431bb5157d635594b33f141189ef84101e3fbc9000984c4ed98f3f12e40329ed"
     },
     {
       "path": "serve.mjs",
@@ -593,9 +593,9 @@
       "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
     },
     {
-      "path": "site/dist/assets/index-BhEncTvq.js",
-      "bytes": 748005,
-      "sha256": "3f3d697c7199eb09b603dcfacf6c5de3d1e2166cf4f53ef9607a3790ba131700"
+      "path": "site/dist/assets/index-CHg_d0QA.js",
+      "bytes": 748324,
+      "sha256": "0cd32e39494a72f47a3640667c02100cd855fb59de4cbbcb68967ef7e82dee5f"
     },
     {
       "path": "site/dist/assets/index-Dowag0IE.css",
@@ -645,7 +645,7 @@
     {
       "path": "site/dist/index.html",
       "bytes": 469,
-      "sha256": "d8ad09643220de0a46ac9cbf6cbb8000d17dd1fa524b79e864a1d6d10f934e19"
+      "sha256": "c89936529fe43cfd28f3ebd5c517743c86388f9f8246f7979cb89c4289138674"
     },
     {
       "path": "site/download_symbols.py",
@@ -699,8 +699,8 @@
     },
     {
       "path": "site/src/ProjectWorkspace.jsx",
-      "bytes": 5355,
-      "sha256": "f52ffd8a34be65647bf48ac6081d19c5e0fd0a49bf7dfd1321912f1609c97bfc"
+      "bytes": 5469,
+      "sha256": "4349e1e60e1483e5d0d33c456500add1a24522db8bd37af6b542f367cc82c8b0"
     },
     {
       "path": "site/src/combinations.test.js",
@@ -759,8 +759,8 @@
     },
     {
       "path": "site/src/main.jsx",
-      "bytes": 27920,
-      "sha256": "021f7d54b0ca6334dfc4a932345dfd5c985eb5450a922ca43596079108262214"
+      "bytes": 28150,
+      "sha256": "e94d1d3cbc92e3af98463a3a57be86de0e5d9b80477796a4bb7542dd77a2d764"
     },
     {
       "path": "site/src/model.js",

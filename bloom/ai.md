@@ -6,7 +6,7 @@ Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu o
 
 ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.
 
-Snapshot: 2026-11-02; source fingerprint: `b9921e6464703246`. Readable page: https://azizbeksafarov.github.io/design/bloom/
+Snapshot: 2026-11-02; source fingerprint: `f98668b42dd781fb`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
 ## O‘qish vositasi uchun zaxira
 
