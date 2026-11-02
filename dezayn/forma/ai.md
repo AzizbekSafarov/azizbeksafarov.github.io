@@ -75,6 +75,16 @@ HTML starterlarda haqiqiy alohida URL talab qilinsa yangi HTML fayl yarat, umumi
 
 Qabul sinovi: menyudan kirish, to‘g‘ridan-to‘g‘ri URL (agar mavjud), orqaga qaytish, klaviatura/fokus, 390/768/1366 px va eski asosiy oqim. Bu qo‘shish yo‘riqnomasi, yangi sahifa allaqachon qurilgan degani emas.
 
+## Tayyor amallar, validatsiya va saqlash xaritasi
+
+| Qism | Hozirgi namuna | Kod joyi |
+|---|---|---|
+| Bog‘liq amallar | Buyum → savatga qo‘shish → miqdor → jami → eksport. | `site/app.js` → `mutate`, `site/app.js` → `renderCart`, `site/model.js` → `total` |
+| Noto‘g‘ri kiritish | model.js change noma’lum ID va butun bo‘lmagan deltani rad etadi; normalize miqdorni 1–20 chegarada saqlaydi. Alohida ariza formasi yo‘q. | `site/model.js` → `change`, `site/model.js` → `normalize` |
+| Saqlash | app.js read/write, forma-cart-v2. Buyurtma yoki to‘lov serverga yuborilmaydi. | `site/app.js` → `read`, `site/app.js` → `write` |
+
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+
 ## Shrift va rasmlar
 
 Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.

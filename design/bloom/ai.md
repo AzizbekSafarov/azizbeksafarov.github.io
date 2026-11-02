@@ -119,6 +119,16 @@ HTML starterlarda haqiqiy alohida URL talab qilinsa yangi HTML fayl yarat, umumi
 
 Qabul sinovi: menyudan kirish, to‘g‘ridan-to‘g‘ri URL (agar mavjud), orqaga qaytish, klaviatura/fokus, 390/768/1366 px va eski asosiy oqim. Bu qo‘shish yo‘riqnomasi, yangi sahifa allaqachon qurilgan degani emas.
 
+## Tayyor amallar, validatsiya va saqlash xaritasi
+
+| Qism | Hozirgi namuna | Kod joyi |
+|---|---|---|
+| Bog‘liq amallar | Loyiha yaratish → tafsilot → vazifani bajarish → progress/filtr. | `site/src/main.jsx` → `submitProject`, `site/src/main.jsx` → `changeTask`, `site/src/model.js` → `progress` |
+| Noto‘g‘ri kiritish | createProject nom/uzunlik/kategoriyani tekshiradi; submitProject xatoni ko‘rsatadi. validateProjects saqlangan to‘plamni tekshiradi. | `site/src/model.js` → `createProject`, `site/src/model.js` → `validateProjects` |
+| Saqlash | src/persistence.js loadProjectState/persistProjectState; App useEffect orqali yozadi, xatoda asl nusxani saqlash va JSON eksport mavjud. | `site/src/persistence.js` → `loadProjectState`, `site/src/persistence.js` → `persistProjectState` |
+
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+
 ## Shrift va rasmlar
 
 Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. Bloom’da `site/dist/` — ulardan yig‘ilgan tayyor build. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.

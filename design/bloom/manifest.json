@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "ca17ac43b0eced8e60c926b4f1bc84ddd3bef6e4f248aa5d559ac69cbb308772",
-  "archive_bytes": 1554729,
+  "archive_sha256": "7795c043b69086e45fcee4b8a3a6f42aa48d8e704ce032c5500fe241fcbfd7e5",
+  "archive_bytes": 1555099,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -115,8 +115,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 15638,
-      "sha256": "12b30c24a9b741f87b2e5e5d5259b90da61f1316eef8bda343316d2a509b14f2"
+      "bytes": 16773,
+      "sha256": "d0822a6c3d3a7998e4d56c04b134fba72ad957dba13fd5b28823a275b079095d"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -216,7 +216,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 21326,
-      "sha256": "94073b3038f3436e6be9ddc924fa5f3d5211beb115b3b86da9497f5b53661de8"
+      "sha256": "67671e459f9e4148bc7ed2eb7e3aaa6af058965c09ead4d61d0d01907a6482c2"
     },
     {
       "path": "PREPARATION.md",
@@ -241,7 +241,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "151d802f0661b00632bf2fa9261d5ee835e87407d7b1fb2452ef3f4b190b1671"
+      "sha256": "6fbe99fc89cf55c757375a81880e260c5a239365694bc7bf98edbec468c2f9a7"
     },
     {
       "path": "README.md",

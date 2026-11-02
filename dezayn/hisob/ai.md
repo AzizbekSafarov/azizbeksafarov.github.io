@@ -66,6 +66,16 @@ HTML starterlarda haqiqiy alohida URL talab qilinsa yangi HTML fayl yarat, umumi
 
 Qabul sinovi: menyudan kirish, to‘g‘ridan-to‘g‘ri URL (agar mavjud), orqaga qaytish, klaviatura/fokus, 390/768/1366 px va eski asosiy oqim. Bu qo‘shish yo‘riqnomasi, yangi sahifa allaqachon qurilgan degani emas.
 
+## Tayyor amallar, validatsiya va saqlash xaritasi
+
+| Qism | Hozirgi namuna | Kod joyi |
+|---|---|---|
+| Bog‘liq amallar | Davr → qidiruv/saralash → ko‘rinayotgan qatorlarni CSV eksport. | `site/app.js` → `render`, `site/model.js` → `report`, `site/model.js` → `csv` |
+| Noto‘g‘ri kiritish | normalizeSearch qidiruvni bir xil yozuvga keltiradi; topilmasa bo‘sh holat. Bu ariza validatsiyasi emas. | `site/model.js` → `normalizeSearch` |
+| Saqlash | Hozir davr, qidiruv va saralash reload orqali saqlanmaydi. app.js read/commit yordamchilari bor, lekin hisobot oqimi ularni chaqirmaydi. Saqlash talab qilinsa alohida ulash va reload sinovi zarur. | Ulangan saqlash amali yo‘q. |
+
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+
 ## Shrift va rasmlar
 
 Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.
