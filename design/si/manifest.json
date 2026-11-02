@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "5bdf9eedceef3f845a7603c1d61144b0f661f300506939ea6f571d03a02aaf79",
-  "archive_bytes": 872065,
+  "archive_sha256": "25aeb3c697366202e09aa9d87cde16aea51a653f49097413b55a21fa335ab73a",
+  "archive_bytes": 872495,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -97,8 +97,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 14079,
-      "sha256": "b0c2149a56715a08a6c4c6eace5d72a197b46bf4e579072f8335c0a8e4bcb562"
+      "bytes": 15121,
+      "sha256": "3cfebaa1608efc9aecf4fb1cffe2f92ac1ee676cffdbe6c59537c21a61d6a50b"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -198,7 +198,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17899,
-      "sha256": "1b17f7333a5efac41b5ec4b535251fd35c7092bef4bc432c3cf7df78db6d08c8"
+      "sha256": "1f47e44af1e83c89579fa6d53c0f9b6fd10e8228a69432dbb943b78b31e3f582"
     },
     {
       "path": "PREPARATION.md",
@@ -223,7 +223,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "b452a76eab89fb6d87adc3fc172f630a1888c73836f96e4753e9cbae8e48481b"
+      "sha256": "30726ca667991a170e43087c45e923c35eaf010565181a132b66bd46527e81aa"
     },
     {
       "path": "README.md",

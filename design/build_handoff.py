@@ -404,7 +404,9 @@ def build():
         t['fingerprint']=digest(''.join(path+':'+digest(data)+'\n' for path,data in sorted(files.items())).encode())
         brief=ai_brief(t);folder=ROOT/t['slug']
         heading,body=brief.split('\n',1)
-        brief=heading+'\n\n'+entry_text.brief_intro(t['name'])+body.rstrip('\n')+'\n'+asset_section(t,files)
+        from starter_maps import page_section, verify_pages
+        brief=heading+'\n\n'+entry_text.brief_intro(t['name'])+body.rstrip('\n')+'\n'+page_section(t['slug'])+asset_section(t,files)
+        verify_pages(t['slug'], files, brief)
         if t['archived']:brief='# TARIXIY ARXIV — faol starter sifatida tavsiya etilmaydi\n\nYangi ish: '+SITE+'/design/\n\n'+brief
         for name in code_names(t,files):
             target=folder/'files'/f'{name}.txt';target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(files['site/'+name])

@@ -41,6 +41,8 @@ def verify():
         actual_exports={p.relative_to(ROOT/item['slug']/'files').as_posix() for p in (ROOT/item['slug']/'files').rglob('*') if p.is_file()}
         assert actual_exports==expected_exports,f'Stale readable source exports: {item["slug"]}'
         with zipfile.ZipFile(ROOT/item['slug']/'source.zip') as z:
+            from starter_maps import verify_pages
+            verify_pages(item['slug'], {n:z.read(n) for n in z.namelist() if n.startswith('site/')}, brief.decode('utf-8'))
             paths=z.namelist()
             for path in paths:
                 assert not any(part in RETIRED or part in {'archive','__pycache__','node_modules'} for part in Path(path).parts),path

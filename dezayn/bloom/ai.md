@@ -109,6 +109,16 @@ Quyidagi baseline amallarni yangi bilet oqimiga moslab tekshir. Eski QA bugungi 
 
 `CURRENT-TASK.md` ga bilet, vaqt va cheklovni yoz. `HANDOFF.md` ga fayllar, bajarilgan/qolgan ish, haqiqiy tekshiruv, ochiq xato va keyingi bitta amalni yozib bor. Shu faylni yangi AIga berish davom ettirishni osonlashtiradi. Oxirida ishlaydigan link/local run, editable source, talablarga mos test qaydi va himoya uchun muammo → yechim → to‘liq oqim → texnologiya → cheklov izohini tayyorla. “Xatosiz”, “to‘liq testlangan” yoki ball kafolatini dalilsiz aytma.
 
+## Yangi sahifa yoki ekran qo‘shish
+
+Fayllar: `site/src/main.jsx`, `site/src/main.jsx`; mavjud kirish funksiyasi: `navigate`.
+
+App ichidagi view/setView va navigate(next), sidebar navigatsiyasidagi all/saved/done ro‘yxati hamda sarlavha xaritasini birga kengaytir. Alohida ekran uchun view bo‘yicha yangi komponentni shartli chiqar; visibleProjects filtrlari yangi ekran o‘rnini bosmaydi. src/model.js ni faqat ma’lumot modeli talab etsa o‘zgartir; npm run build bilan dist ni yangila.
+
+HTML starterlarda haqiqiy alohida URL talab qilinsa yangi HTML fayl yarat, umumiy shrift/CSS resurslarini nisbiy yo‘l bilan ula va barcha menyularga havola qo‘sh. app.js ni ko‘r-ko‘rona yangi sahifaga ulamang: u mavjud DOM IDlarini kutadi; shu sahifaga tegishli kodni ajrating. Bo‘lim, dialog yoki filtrning o‘zi avtomatik ravishda biletdagi “sahifa” talabini bajarmaydi — talab etilgan hajm va mustaqil vazifani tekshiring.
+
+Qabul sinovi: menyudan kirish, to‘g‘ridan-to‘g‘ri URL (agar mavjud), orqaga qaytish, klaviatura/fokus, 390/768/1366 px va eski asosiy oqim. Bu qo‘shish yo‘riqnomasi, yangi sahifa allaqachon qurilgan degani emas.
+
 ## Shrift va rasmlar
 
 Dizaynning bir qismi binary fayllarda: shriftlar, suratlar, ikonkalar. Ular `source.zip` ichidagi `site/` da bor, lekin matn eksportida (`source.md`, `files/*.txt`) yo‘q. Bloom’da `site/dist/` — ulardan yig‘ilgan tayyor build. To‘liq dizayn uchun ZIP ichidagi `site/` bilan ishla. ZIP’ni ocha olmasang, har faylni quyidagi havoladan aynan shu yo‘lga yukla; shriftni CDN yoki boshqa shrift bilan almashtirma.

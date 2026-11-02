@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "752954e4dbfe6cc1613adfab0e2eeac88e54c2db61dbd70a319f35119383d592",
-  "archive_bytes": 2295449,
+  "archive_sha256": "8d43b2a582c3bd15bd3e205b2d8603dd07ca633942db7179e2b127054d38cdfc",
+  "archive_bytes": 2295881,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -85,8 +85,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 7894,
-      "sha256": "40c8ed518acef4096747ddc9c6881ce5719fde0771532c596bd27af27b528c91"
+      "bytes": 8930,
+      "sha256": "76a289aaa57a249aac19d4285fd008581d8e8dce7ba0e0609e22aee484615a45"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16598,
-      "sha256": "77252a7f3c35eaa71c6b76cd0e0f31f672cb30eaf75359be7fec88c8282bc191"
+      "sha256": "08bcbe3c723328f60ea7939d41d3ac6f96163c013cd8c3484d88c656e6c0928c"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3442,
-      "sha256": "a913064ecfcbcacfc177755140377f09780e7ed09af244eadb2a69a372db1d20"
+      "sha256": "112fe466f38a343c47395b2d0e1f9f2a21e3750a1577e461acc5efec47e16ee9"
     },
     {
       "path": "README.md",
