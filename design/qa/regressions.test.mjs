@@ -7,6 +7,22 @@ import * as meros from '../meros-site/model.js';
 import * as nashr from '../nashr-site/model.js';
 import * as yuksal from '../si-site/model.js';
 import {report} from '../hisob-site/model.js';
+import * as forma from '../forma-site/model.js';
+import * as samar from '../samar-site/model.js';
+
+for(const [slug,model,key,field,id] of [
+  ['forma',forma,'forma-cart-v2','add','terra'],
+  ['samar',samar,'samar-plan-v2','toggle','registan']
+])for(const raw of ['["old data"]','null','"old data"']) {
+  test(slug+' preserves syntactically valid JSON with incompatible shape: '+raw,async()=>{
+    const app=await application(new URL('../'+slug+'-site/app.js',import.meta.url),model,{values:{[key]:raw}});
+    const button=app.element('test-action');button.dataset[field]=id;
+    app.click('test-action');
+    assert.equal(app.values.get(key),raw);
+    assert.match(app.element('#storage-note').textContent,/Asl nusxa/);
+    assert.equal(String(app.element(slug==='forma'?'#cart-count':'#plan-count').textContent),'1');
+  });
+}
 
 for(const storage of [{readThrows:true,values:{'ziyo-state-v1':'["style"]'}},{values:{'ziyo-state-v1':'{unreadable original'}}]) {
   test('Ziyo unreadable storage remains untouched while session progress works '+JSON.stringify(storage),async()=>{

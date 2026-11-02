@@ -1,7 +1,7 @@
 import {places,normalize,schedule,clock,exportPlan} from './model.js?v=bcb8054ec2';
 const key='samar-plan-v2';const $=s=>document.querySelector(s);let state=normalize(null),opener;
 let storageUsable=true;
-function read(){if(!storageUsable)return normalize(state);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(state);}}
+function read(){if(!storageUsable)return normalize(state);try{const raw=localStorage.getItem(key);if(raw===null)return normalize(null);const parsed=JSON.parse(raw);if(parsed===null||typeof parsed!=='object'||Array.isArray(parsed))throw Error('Invalid saved shape');if(!Array.isArray(parsed.ids)||typeof parsed.start!=='string')throw Error('Invalid saved plan');return normalize(parsed);}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(state);}}
 function save(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(state));}catch{storageUsable=false;$('#storage-note').textContent='Brauzer saqlashga ruxsat bermadi. Rejangizni matn qilib yuklab oling.';}}
 function update(fn){state=fn(read());save();render();}
 function render(){

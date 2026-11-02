@@ -1,7 +1,7 @@
 import {products,normalize,change,total,money,exportCart} from './model.js?v=878bdb00f7';
 const $=s=>document.querySelector(s),key='forma-cart-v2';let cart=normalize(null),category='all',opener,selected;
 let storageUsable=true;
-function read(){if(!storageUsable)return normalize(cart);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(cart);}}
+function read(){if(!storageUsable)return normalize(cart);try{const raw=localStorage.getItem(key);if(raw===null)return normalize(null);const parsed=JSON.parse(raw);if(parsed===null||typeof parsed!=='object'||Array.isArray(parsed))throw Error('Invalid saved shape');return normalize(parsed);}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(cart);}}
 function write(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(cart));}catch{storageUsable=false;$('#storage-note').textContent='Saqlash cheklangan. Tanlovingizni fayl qilib yuklab oling.';}}
 function mutate(id,delta){const before=read();cart=change(before,id,delta);write();renderCart();return (before[id]||0)!==(cart[id]||0);}
 function renderCart(){
