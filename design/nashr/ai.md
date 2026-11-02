@@ -53,7 +53,7 @@ Source faylni alohida o‘qish:
 ## Asosiy oqim va tekshiruv
 Bo‘lim filtri → maqola o‘qish → saqlash → saqlanganlar → qayta ochish
 
-Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. Maqolalar original namuna matni. Filtr va saqlangan maqolalar birga ishlasin; reader yopilganda fokus ochgan tugmaga qaytsin.
+Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash mavjud bo‘lgan starterlarda known unique IDlar tekshiriladi. O‘qib bo‘lmaydigan saqlangan nusxa ustiga yozilmaydi, ish shu tabda davom etadi; qayta ochilganda yangi ish tiklanishi kafolatlanmaydi. Hisob hisobotining davr/filtr holati saqlanmaydi. Nashr va Ziyo’da foydalanuvchi eksport tugmasi yo‘q; eksport bor deb va’da qilmang. Maqolalar original namuna matni. Filtr va saqlangan maqolalar birga ishlasin; reader yopilganda fokus ochgan tugmaga qaytsin.
 
 Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 390, 768 va 1366 px (mezonlardagi kengliklar), qo‘shimcha 320 va 1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.
 
@@ -81,9 +81,9 @@ Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o
 |---|---|---|
 | Bog‘liq amallar | Maqolani ochish → saqlash → saqlanganlar filtri → qayta ochish. | `site/app.js` → `openDialog`, `site/app.js` → `toggle`, `site/app.js` → `render` |
 | Noto‘g‘ri kiritish | normalize faqat mavjud maqola IDlarini oladi. Mualliflik/ariza formasi va uning validatsiyasi yo‘q. | `site/model.js` → `normalize` |
-| Saqlash | app.js read/commit; saqlangan maqola IDlari localStorage da. | `site/app.js` → `read`, `site/app.js` → `commit` |
+| Saqlash | app.js read/commit; saqlangan maqola IDlari localStorage da. O‘qish/yozish xatosida yangi tanlov faqat tabda; eksport tugmasi yo‘q. | `site/app.js` → `read`, `site/app.js` → `commit` |
 
-Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletda berilgan amallar soni, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
 
 ## Shrift va rasmlar
 

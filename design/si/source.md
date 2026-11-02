@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `29a5e9a557012c82d166aa341579f8daa83ea10ba1c38972b9260c29e7dcd636`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `21f0c8f0859b7243a405ad6e243501e2f3a2096fa57df05708310e51eeeedd17`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -18,7 +18,7 @@ Source fingerprint: `29a5e9a557012c82d166aa341579f8daa83ea10ba1c38972b9260c29e7d
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1" sizes="180x180">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css?v=6">
-  <script type="module" src="app.js?v=4087188690"></script>
+  <script type="module" src="app.js?v=a382ef9eb6"></script>
 </head>
 <body>
 <a class="skip" href="#main">Asosiy mazmunga o‘tish</a>
@@ -243,7 +243,7 @@ function renderPlan(){
  if(currentId)syncSave();
 }
 renderPlan();
-window.addEventListener('storage',event=>{if(!storageUsable||(event.key!==key&&event.key!==null))return;const restoreFocus=document.activeElement?.closest('#plan-items button');plan=parsePlan(event.newValue);renderPlan();if(restoreFocus&&!restoreFocus.isConnected)(plan.length?$('#download-plan'):$('#reja .text-link')).focus({preventScroll:true});});
+window.addEventListener('storage',event=>{if(!storageUsable||(event.key!==key&&event.key!==null))return;const restoreFocus=document.activeElement?.closest('#plan-items button');readCurrentPlan();renderPlan();if(restoreFocus&&!restoreFocus.isConnected)(plan.length?$('#download-plan'):$('#reja .text-link')).focus({preventScroll:true});});
 const detail=$('#initiative-dialog'),menu=$('#site-menu');
 document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{
  const item=initiatives.find(entry=>entry.id===button.dataset.open);if(!item)return;

@@ -6,7 +6,7 @@ Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu o
 
 ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.
 
-Snapshot: 2026-11-02; source fingerprint: `29a5e9a557012c82`. Readable page: https://azizbeksafarov.github.io/design/si/
+Snapshot: 2026-11-02; source fingerprint: `21f0c8f0859b7243`. Readable page: https://azizbeksafarov.github.io/design/si/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -135,7 +135,7 @@ Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o
 | Noto‘g‘ri kiritish | validPlan/parsePlan shikastlangan ma’lumot va noma’lum IDlarni filtrlaydi. Bilet ariza talab qilsa maydon validatsiyasi alohida quriladi. | `site/model.js` → `validPlan`, `site/model.js` → `parsePlan` |
 | Saqlash | app.js readCurrentPlan/persist, ustoz.yuksal.plan.v1. Saqlash cheklansa xabar bor. | `site/app.js` → `readCurrentPlan`, `site/app.js` → `persist` |
 
-Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletda berilgan amallar soni, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
 
 ## Shrift va rasmlar
 

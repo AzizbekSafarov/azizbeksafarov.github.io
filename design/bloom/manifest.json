@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "42f477086891a98c7bdfb795da6510d130a7e8b00e6af63be8593d19bea66f76",
-  "archive_bytes": 1564783,
+  "archive_sha256": "cac0d16d734b70f5b921fd793ad52ef55fdda9ce87235c0eb4673fac3212eae8",
+  "archive_bytes": 1565712,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -115,8 +115,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 18674,
-      "sha256": "bc552b980d70644f9c7a0b1c5c58ffed764aa3d81eb7990156f4f2318941c5ec"
+      "bytes": 18811,
+      "sha256": "8ecf6bc58dd1537d359166201743848e91069cd1f2b2044d45cc1575d0199c46"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -216,7 +216,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 21643,
-      "sha256": "bec51a9af1df860a8efb21054ed90480aa752aec6d3d4b7b34c055d5b1405621"
+      "sha256": "def00cc5ef3e084417bba6ffdb245a24ffacdb9ae7b938ba076356ebabe864cc"
     },
     {
       "path": "PREPARATION.md",
@@ -241,7 +241,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "26dc7f29a1498bedc369a9443dc54b5d3d6b94762d2d2681bc336f8430ff309a"
+      "sha256": "4182fb6d7144a68cee6ab6a2dae6914600f3dcf4f4e9295fcf2c663f9dddec42"
     },
     {
       "path": "README.md",
@@ -275,8 +275,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11527,
-      "sha256": "c3b2da189feadfec340da76b029d503f8f53a23c501f5184066acf7504680d98"
+      "bytes": 11662,
+      "sha256": "4b8b43704ba771cd9d1c759ee29330a62fb4af63739114eb2245eec4c1b478a0"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -285,8 +285,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 5831,
-      "sha256": "09e0060f62e6113624280a46c45832b112d565fd5fda658d72219a36f540d6fa"
+      "bytes": 6818,
+      "sha256": "dc71b80dda0d9b3cb95ab3192d8b25a100124360497a448d2876b1ab92bb3415"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -295,8 +295,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13213,
-      "sha256": "d295d1749de7af3d839191cf9caf3af0cb25a8ffc770ada7ea1397f431e32ee0"
+      "bytes": 14198,
+      "sha256": "66e36edfe7cc52837c62b421eaa65efa220d92f996e11382cfc00ab6da6a50c5"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

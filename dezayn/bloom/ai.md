@@ -134,9 +134,9 @@ Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o
 |---|---|---|
 | Bog‘liq amallar | Loyiha yaratish → tafsilot → vazifani bajarish → progress/filtr. | `site/src/main.jsx` → `submitProject`, `site/src/main.jsx` → `changeTask`, `site/src/model.js` → `progress` |
 | Noto‘g‘ri kiritish | createProject nom/uzunlik/kategoriyani tekshiradi; submitProject xatoni ko‘rsatadi. validateProjects saqlangan to‘plamni tekshiradi. | `site/src/model.js` → `createProject`, `site/src/model.js` → `validateProjects` |
-| Saqlash | src/persistence.js loadProjectState/persistProjectState; App useEffect orqali yozadi, xatoda asl nusxani saqlash va JSON eksport mavjud. | `site/src/persistence.js` → `loadProjectState`, `site/src/persistence.js` → `persistProjectState` |
+| Saqlash | src/persistence.js loadProjectState/persistProjectState; App useEffect orqali yozadi. Boshqa tab yozgan holat bilan ziddiyatda yozish to‘xtaydi; foydalanuvchi JSON eksport olib keyin yangilaydi. Jonli avtomatik merge yo‘q. Recovery nusxalari oldingisini almashtirmaydi. | `site/src/persistence.js` → `loadProjectState`, `site/src/persistence.js` → `persistProjectState` |
 
-Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletda berilgan amallar soni, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
 
 ## Shrift va rasmlar
 

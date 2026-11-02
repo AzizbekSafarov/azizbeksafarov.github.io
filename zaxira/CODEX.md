@@ -2,7 +2,7 @@
 
 Bu qo‘llanma Codex (ChatGPT desktop ilovasi ichida) bilan professional sayt yasash uchun. Siz kod yozmaysiz: siz **talab qo‘yasiz, natijani tekshirasiz va qaror qilasiz**, Codex esa kod yozadi. Haqiqiy bilet, vaqt va joydagi qoida ustuvor. Bu fayl bilet bermaydi.
 
-Codex ishlamasa, limit tugasa yoki ruxsat berilmasa: `ZAXIRA.md` → skelet + `tahrir.html`.
+Codex ishlamasa yoki limit tugasa, boshlangan ishni saqlang va JONLI-OZGARISH.md orqali kerakli qo‘lda tahrirni bajaring. Loyiha hali yo‘q yoki mavjudini tugatish imkonsiz bo‘lsa, biletga mos AI’siz yo‘l ZAXIRA.md da.
 
 ## 0. Sozlash vaqtida
 

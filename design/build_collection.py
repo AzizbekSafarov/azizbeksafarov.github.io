@@ -186,7 +186,7 @@ Source faylni alohida o‘qish:
 ## Asosiy oqim va tekshiruv
 {spec['flow']}
 
-Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. {domain_note}
+Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash mavjud bo‘lgan starterlarda known unique IDlar tekshiriladi. O‘qib bo‘lmaydigan saqlangan nusxa ustiga yozilmaydi, ish shu tabda davom etadi; qayta ochilganda yangi ish tiklanishi kafolatlanmaydi. Hisob hisobotining davr/filtr holati saqlanmaydi. Nashr va Ziyo’da foydalanuvchi eksport tugmasi yo‘q; eksport bor deb va’da qilmang. {domain_note}
 
 Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 390, 768 va 1366 px (mezonlardagi kengliklar), qo‘shimcha 320 va 1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.
 

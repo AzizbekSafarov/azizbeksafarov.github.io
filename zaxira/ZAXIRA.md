@@ -6,7 +6,7 @@ Haqiqiy bilet, tashkilotchi aytgan vaqt va joydagi qoida hamma narsadan ustun. B
 
 ## Kod yozishni bilmasangiz — faqat shu 3 narsa
 
-1. **`skelet/tahrir.html`** — kodsiz tahrirlash paneli. **1. Asosiy → Mavzu** da 9 ta professional ko‘rinishdan birini tanlang (Forma, Samar, Orbita, Nashr, Hisob, Ziyo, Meros, Yuksal, Toza); kerak bo‘lsa bosh ekranga rasm qo‘ying. Tayyor modullar: saralash, jami narx (narx × soni), statistika sahifasi, savol-javob. Brauzerda oching (ikki marta bosing). Matn, rang, ro‘yxat, forma maydonlari va sahifalarni oddiy katakchalarda o‘zgartirasiz, o‘ng tomonda natija darhol ko‘rinadi. **Faylga saqlash** (yoki **Ctrl+S**) birinchi marta so‘raganda papkadagi `malumot.js` ni tanlang — keyingi saqlashlar so‘ramasdan yoziladi. Panel fayl sintaksisini o‘zi yaratadi; saqlash natijasi va kiritilgan mazmunni tekshiring.
+1. **`skelet/tahrir.html`** — kodsiz tahrirlash paneli. **1. Asosiy → Mavzu** da 9 ta professional ko‘rinishdan birini tanlang (Forma, Samar, Orbita, Nashr, Hisob, Ziyo, Meros, Yuksal, Toza); kerak bo‘lsa bosh ekranga rasm qo‘ying. Tayyor modullar: saralash, jami narx (narx × soni), statistika sahifasi, savol-javob. Brauzerda oching (ikki marta bosing). Matn, rang, ro‘yxat, forma maydonlari va sahifalarni oddiy katakchalarda o‘zgartirasiz, o‘ng tomonda natija darhol ko‘rinadi. **Faylga saqlash** (yoki **Ctrl+S**) birinchi marta so‘raganda papkadagi `malumot.js` ni tanlang — fayl yozish ruxsati saqlansa keyingi saqlash shu faylga yozadi. Fayl tanlash imkoni bo‘lmasa yuklab olingan malumot.js ni loyiha papkasiga ko‘chiring. Panel fayl sintaksisini o‘zi yaratadi; saqlash natijasi va kiritilgan mazmunni tekshiring.
 2. **`skelet/index.html`** — saytning o‘zi. Saqlagandan keyin **Ctrl+Shift+R** bilan yangilang.
 3. **`skelet/index.html?tekshir`** — o‘z-o‘zini tekshirish paneli; natijani “Nusxalash” bilan README’ga qo‘ying.
 
@@ -32,8 +32,8 @@ Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar o
 | Holat | Yo‘l |
 |---|---|
 | Kuchli AI ishlayapti (masalan Codex, Plus) | Tanlangan dizayn starteri + **`CODEX.md`** dagi so‘rovlar ketma-ketligi. Skelet zaxira sifatida turadi. |
-| AI bor, lekin limit kam qolgan | Starterda qoling: `CODEX.md` dagi so‘rovlarni qisqa va aniq yuboring, bir xabarda bitta ish. Limit tugasa — keyingi qator. |
-| AI umuman yo‘q yoki limit tugadi | **Skelet** + `tahrir.html` paneli. Kod yozish shart emas. |
+| AI bor, lekin limit kam qolgan | Starterda qoling: `CODEX.md` dagi so‘rovlarni qisqa va aniq yuboring, bir xabarda bitta ish. Limit tugasa boshlangan ishni saqlang va quyidagi tegishli holatni tanlang. |
+| AI umuman yo‘q va loyiha hali boshlanmagan | Biletga mos kelsa **skelet** + `tahrir.html`. Boshlangan loyiha bo‘lsa quyidagi qatorga qarang. |
 | Starter boshlangan, lekin AI to‘xtadi | Ishlaydigan nusxani saqlang va qolgan matn/rang ishlarini qo‘lda bajaring. Faqat mavjud ishni tugatish imkonsiz bo‘lsa va biletni skeletda bajarishga vaqt yetsa, ongli ravishda o‘ting. |
 
 Bloom tayyor dist preview uchun npm talab qilmaydi; source tahririni build qilish uchun npm va dependency kerak. HTML starterlar build’siz ishlaydi, lekin ES modullar uchun lokal server bilan ochiladi. Skelet alohida, file:// bilan ham ochiladigan zaxira.
@@ -46,7 +46,7 @@ Bloom tayyor dist preview uchun npm talab qilmaydi; source tahririni build qilis
 | 120 daq | 10 | 80 | 20 | 10 |
 | 240 daq | 25 | 155 | 40 | 20 |
 
-Tugashiga 30, 10 va 5 daqiqa qolgani e’lon qilinadi [Loyiha]. **30 daqiqa qolganda** yangi funksiya boshlanmaydi, faqat sinov va tuzatish. **10 daqiqa qolganda** README to‘ldiriladi, ekran tasvirlari olinadi. **5 daqiqa qolganda** papka nusxalanadi; boshqa tahrir qilinmaydi.
+Tugashiga 30, 10 va 5 daqiqa qolgani e’lon qilinadi [Loyiha]. Quyidagi taqsimot bizning tavsiya: 30 daqiqa qolganda yangi ixtiyoriy funksiya o‘rniga majburiy oqim va xatolarni tugatishga e’tibor bering. **10 daqiqa qolganda** README to‘ldiriladi, ekran tasvirlari olinadi. **5 daqiqa qolganda** papka nusxalanadi; boshqa tahrir qilinmaydi.
 
 ## 4. Skelet bilan ishlash — qadamma-qadam
 
@@ -66,7 +66,7 @@ Har o‘zgarishdan keyin **Ctrl+S**. Qizil “Saqlashdan oldin tuzating” chiqs
 
 **3. Rasmlar (agar berilgan bo‘lsa).** Sayt papkasida `rasmlar` papkasini yarating, rasmlarni ichiga qo‘ying va panelda elementning “Rasm fayli” katagiga `rasmlar/fayl-nomi.jpg` deb yozing.
 
-**4. Bitta o‘ziga xos foydali qo‘shimcha (6.1–6.2).** Panelning o‘zida tayyor: “Qolgan joy” (joylar soni), filtr uchun “Turi”, sanasi o‘tgan kunni tanlatmaslik, takror arizani rad etish. Kod bilan qo‘shimcha (saralash, jami narx) faqat AI bo‘lsa va majburiy talablar ishlagandan keyin: `PROMPTLAR.md` → P6.
+**4. Bitta o‘ziga xos foydali qo‘shimcha (6.1–6.2).** Panelning o‘zida tayyor: “Qolgan joy” (joylar soni), filtr uchun “Turi”, sanasi o‘tgan kunni tanlatmaslik, takror arizani rad etish. Saralash 4. Ro‘yxat bo‘limida, jami narx 5. Ariza formasi bo‘limida panel orqali yoqiladi; buning uchun AI kerak emas. Yangi kod talab qiladigan qo‘shimcha faqat biletga foydasi va vaqt yetarliligi bilan asoslanadi.
 
 **5. Sinov (20 daqiqa, 120 daqiqalik ishda).** Quyidagi ro‘yxatni oxirigacha bajaring va natijani README’ga yozing.
 
@@ -78,9 +78,9 @@ Har o‘zgarishdan keyin **Ctrl+S**. Qizil “Saqlashdan oldin tuzating” chiqs
 |---|---|---|
 | 1.1 | Biletdagi har amalni boshidan oxirigacha bosib ko‘ring | Ro‘yxat → Tanlash → Ariza → Arizalarim |
 | 1.2 | Bo‘sh forma, noto‘g‘ri telefon, takror ariza, to‘lgan joy, “hech narsa topilmadi” | Xato xulosasi, maydon xatolari, bo‘sh holatlar |
-| 1.3 | `?tekshir` → Tekshirish (390/768/1366 avtomatik, server bilan) yoki F12 → Ctrl+Shift+M | Moslashuvchan grid, mobil menyu |
+| 1.3 | `?tekshir` → Tekshirish joriy sahifani ko‘radi. Alohida “Kengliklarni 3 nusxada tekshirish” faqat yon ta’sirsiz lokal demoda; haqiqiy API/yozishda F12 → Ctrl+Shift+M | Moslashuvchan grid, mobil menyu |
 | 1.4 | Panelda “Konsol xatolari yo‘q”, rasmlar yuklangan | Tashqi CDN yo‘q, build kerak emas |
-| 2.1–2.3 | Hamma matn biletga mos, “namuna” so‘zi qolmagan, keyingi qadam aniq | Panel “namuna” matnini topadi |
+| 2.1–2.3 | Hamma matn biletga mos; vaqtinchalik placeholder qolmagan. Demo ma’lumot mavjud bo‘lsa “namuna” izohi saqlanadi; keyingi qadam aniq | Panel matn mosligini hal qilmaydi; “namuna” topilsa ma’nosini tekshirish uchun ogohlantiradi |
 | 2.4 | Nom, sana, narx hamma sahifada bir xil | Hammasi bitta `malumot.js` dan |
 | 3.1–3.3 | Menyu tushunarli, Tab bilan hamma narsa bosiladi, fokus ko‘rinadi | Faol menyu, fokus chizig‘i, nomlangan maydonlar |
 | 4.1–4.3 | 6-bo‘limdagi himoya ssenariysini 1 marta ovoz chiqarib mashq qiling | — |
@@ -99,16 +99,16 @@ Yagona ssenariy: [HIMOYA.md](HIMOYA.md). Shu tartibda o‘z loyihangizni tayyorl
 
 | Muammo | Nima qilish |
 |---|---|
-| Sahifada “Sayt ma’lumoti o‘qilmadi” | `malumot.js` qo‘lda yoki AI tomonidan buzilgan. Toza zaxira nusxadagi `malumot.js` ni papkaga qo‘ying. `tahrir.html` ishingizni brauzerda eslab qolgan: uni ochib Ctrl+S bosing — to‘g‘ri fayl qayta yoziladi. |
+| Sahifada “Sayt ma’lumoti o‘qilmadi” | `malumot.js` yuklanmagan yoki buzilgan bo‘lishi mumkin. Avval joriy fayl nusxasini saqlang, yo‘l/sintaksisni tekshiring. Oldin saqlangan o‘z nusxangiz bo‘lsa shundan tiklang. Muharrir qoralamasi fayl versiyasiga bog‘langan: boshqa/toza malumot.js qo‘yilganda oldingi qoralama avtomatik ochilishi kafolatlanmaydi. Mazmunni ko‘rmasdan Ctrl+S bilan ustidan yozmang. |
 | O‘zgarish ko‘rinmayapti | Panelda “Saqlandi” yozuvi chiqdimi? Saytda **Ctrl+Shift+R** (keshsiz yangilash). Fayl “Yuklanmalar” papkasiga tushgan bo‘lsa, uni sayt papkasiga ko‘chirib, eskisini almashtiring. |
 | Ro‘yxat bo‘sh | Sayt ichidagi qidiruv maydonini tozalang; panelning 4-bo‘limida elementlar borligini tekshiring. |
-| Forma yubormayapti | Qizil xatolarni o‘qing — bu tekshiruv ishlayapti degani. Panelning 5-bo‘limida “Majburiy” va maydon turini tekshiring. |
+| Forma yubormayapti | Maydon xabarlarini o‘qing va kiritmani tekshiring. Xabar yo‘q yoki to‘g‘ri qiymat ham rad etilsa, bu ishlamayotgan handler yoki mantiq xatosi bo‘lishi mumkin; konsol va kodni tekshiring. Panelning 5-bo‘limida “Majburiy” va maydon turini tekshiring. |
 | AI butun faylni buzdi | Ctrl+Z yoki skeletning toza nusxasidan faylni qayta oling. AI’ga faqat bitta faylni bering (`PROMPTLAR.md` P0). |
 | Kompyuter, internet yoki tashkilotchi xizmati to‘xtadi | Darhol kuzatuvchiga ayting; vaqt dalolatnoma bilan qoplanishi mumkin [Loyiha 26–27-band]. Oddiy dastur xatosi va AI navbati qoplanmaydi. |
 | Vaqt tugayapti | Ishlaydigan holatni saqlang. Majburiy talabni yashirmang; ishlamagan qismini ochiq qayd eting. Faqat ixtiyoriy tugallanmagan qo‘shimchani chiqarib tashlash mumkin. |
 
-## 8. Oldindan mashq (tanlovdan oldin, 2 marta)
+## 8. Oldingi sinovdan keyingi ixtiyoriy mashq
 
-1. Skeletni 60 daqiqada istalgan oddiy mavzuga `tahrir.html` orqali moslang (AI’siz).
-2. `JONLI-OZGARISH.md` dagi 4 ta o‘zgarishni 2 daqiqada bajaring: sarlavha matni, asosiy rang, yangi ro‘yxat elementi, yangi kartochka.
+1. AI’siz yo‘lni ilgari tekshirmagan bo‘lsangiz, panelda biletga mos matn/ro‘yxat o‘zgarishini bajaring. Oldingi to‘liq sinov bo‘lsa faqat ochiq qolgan xavfni qayta ko‘ring.
+2. `JONLI-OZGARISH.md` bo‘yicha zarur o‘zgarishni tekshiring: sarlavha matni, asosiy rang, yangi ro‘yxat elementi, yangi kartochka.
 3. Himoya ssenariysini taymer bilan ovoz chiqarib aytib chiqing.

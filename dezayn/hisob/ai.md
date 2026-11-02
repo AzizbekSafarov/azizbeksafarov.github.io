@@ -53,7 +53,7 @@ Source faylni alohida o‘qish:
 ## Asosiy oqim va tekshiruv
 7/30 kun → grafik/jami/jadval mosligi → qidiruv → saralash → ko‘rinayotgan qatorlar CSV eksporti
 
-Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. Faqat namuna dataset ishlatiladi. CSV aynan filtrlangan qatorlarni oladi; topilmagan natijada eksport o‘chiq bo‘lsin. Grafik va jami bir xil modeldan hisoblansin.
+Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash mavjud bo‘lgan starterlarda known unique IDlar tekshiriladi. O‘qib bo‘lmaydigan saqlangan nusxa ustiga yozilmaydi, ish shu tabda davom etadi; qayta ochilganda yangi ish tiklanishi kafolatlanmaydi. Hisob hisobotining davr/filtr holati saqlanmaydi. Nashr va Ziyo’da foydalanuvchi eksport tugmasi yo‘q; eksport bor deb va’da qilmang. Faqat namuna dataset ishlatiladi. CSV aynan filtrlangan qatorlarni oladi; topilmagan natijada eksport o‘chiq bo‘lsin. Grafik va jami bir xil modeldan hisoblansin.
 
 Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 390, 768 va 1366 px (mezonlardagi kengliklar), qo‘shimcha 320 va 1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.
 
@@ -83,7 +83,7 @@ Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o
 | Noto‘g‘ri kiritish | normalizeSearch qidiruvni bir xil yozuvga keltiradi; topilmasa bo‘sh holat. Bu ariza validatsiyasi emas. | `site/model.js` → `normalizeSearch` |
 | Saqlash | Hozir davr, qidiruv va saralash reload orqali saqlanmaydi. app.js read/commit yordamchilari bor, lekin hisobot oqimi ularni chaqirmaydi. Saqlash talab qilinsa alohida ulash va reload sinovi zarur. | Ulangan saqlash amali yo‘q. |
 
-Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletda berilgan amallar soni, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
 
 ## Shrift va rasmlar
 

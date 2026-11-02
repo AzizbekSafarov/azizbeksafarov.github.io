@@ -89,6 +89,17 @@ test('Yuksal does not discard unsaved memory when another tab writes after stora
   assert.match(app.element('#plan-items').children.map(row=>row.children[0].textContent).join('|'),/G‘oyalar laboratoriyasi/);
 });
 
+test('Yuksal treats corrupt cross-tab data like corrupt startup data',async()=>{
+  const key='ustoz.yuksal.plan.v1';
+  const app=await application(new URL('../si-site/app.js',import.meta.url),yuksal,{values:{[key]:'["savod"]'}});
+  app.external(key,'{broken external');
+  assert.equal(app.element('#plan-count').textContent,'1 / 4');
+  assert.equal(app.element('#storage-warning').hidden,false);
+  app.click('initiative-lab');app.click('#save-initiative');
+  assert.equal(app.element('#plan-count').textContent,'2 / 4');
+  assert.equal(app.values.get(key),'{broken external');
+});
+
 for(const [slug,model,id] of [['nashr',nashr,'city'],['meros',meros,'registan']]) {
   test(slug+' keeps the storage warning visible after a save action',async()=>{
     const app=await application(new URL('../'+slug+'-site/app.js',import.meta.url),model,{writeThrows:true});

@@ -5,21 +5,21 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
-  "source_fingerprint": "29a5e9a557012c82d166aa341579f8daa83ea10ba1c38972b9260c29e7dcd636",
+  "source_fingerprint": "21f0c8f0859b7243a405ad6e243501e2f3a2096fa57df05708310e51eeeedd17",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "28cbd9d78787e9d8f63df8fa4e4a7bee6624a52585e0a599ab725673688dfac9",
-  "archive_bytes": 880980,
+  "archive_sha256": "31dde3e4aecd5ee8cb6de9099be2bde07861a5abf08383244484b31dbae9b7ef",
+  "archive_bytes": 881857,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "8d9a9b2fb4243b45c38487826bc1d27181efb41aeec75cdd571632daaaba2566",
+      "sha256": "be40740b3bfbc9af72ab109ff91b052fc1a36c214fef734de527c525d716e940",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
@@ -37,7 +37,7 @@
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/app.js.txt",
-      "sha256": "40871886905b86d7627193af2d3dc547531966fdf687d3ce65b01662f4228588",
+      "sha256": "a382ef9eb64ac3deebcbd17335394d604f437f06bdfef270f345bee121a1d72b",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/app.js.txt"
     },
     {
@@ -98,7 +98,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 18006,
-      "sha256": "ccd728119b08d4e7c16272215258cb1b50ece507ef612a4b19f7d1f739364909"
+      "sha256": "eefdf0872828e9afc70e0d7849376e7d5541c0353fd1dfc65eaa20de00b0f5c5"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -178,7 +178,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1223,
-      "sha256": "44101e506ce90aa9011b023afbbc254eae150f6b34c1e649aea29bc29d49ccc5"
+      "sha256": "d764ed3ac5f41e213198eac1d24e1a7008c64c264186ce8ef2424edb774eabb3"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -198,7 +198,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 18216,
-      "sha256": "c4a19bb4d641e057460f2aae5c429a1207ccda9a39f7b09cc6f5c7f9eb40b0a8"
+      "sha256": "5eb07bf2be4466478769927575900f00023817da97c03d38a7a7545714d99131"
     },
     {
       "path": "PREPARATION.md",
@@ -223,7 +223,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "64869c4e49f784b6443876be9262dba42240ab64182ef652f5993a19a96e75de"
+      "sha256": "546493a13faacb155845625e979865b27414c687f523e9d97a008e795e594e21"
     },
     {
       "path": "README.md",
@@ -257,8 +257,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11527,
-      "sha256": "c3b2da189feadfec340da76b029d503f8f53a23c501f5184066acf7504680d98"
+      "bytes": 11662,
+      "sha256": "4b8b43704ba771cd9d1c759ee29330a62fb4af63739114eb2245eec4c1b478a0"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -267,8 +267,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 5831,
-      "sha256": "09e0060f62e6113624280a46c45832b112d565fd5fda658d72219a36f540d6fa"
+      "bytes": 6818,
+      "sha256": "dc71b80dda0d9b3cb95ab3192d8b25a100124360497a448d2876b1ab92bb3415"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -277,8 +277,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13213,
-      "sha256": "d295d1749de7af3d839191cf9caf3af0cb25a8ffc770ada7ea1397f431e32ee0"
+      "bytes": 14198,
+      "sha256": "66e36edfe7cc52837c62b421eaa65efa220d92f996e11382cfc00ab6da6a50c5"
     },
     {
       "path": "ZAXIRA/skelet/README.md",
@@ -498,7 +498,7 @@
     {
       "path": "kit.json",
       "bytes": 294,
-      "sha256": "90386635e67dc73a863ece0b47ea6c2728440b9eb917c980f71ff168b0272f76"
+      "sha256": "1656e7a410785e365e66669d05a9e2720f9ec385adb04878a0d478aa3729f110"
     },
     {
       "path": "serve.mjs",
@@ -522,8 +522,8 @@
     },
     {
       "path": "site/app.js",
-      "bytes": 7681,
-      "sha256": "40871886905b86d7627193af2d3dc547531966fdf687d3ce65b01662f4228588"
+      "bytes": 7668,
+      "sha256": "a382ef9eb64ac3deebcbd17335394d604f437f06bdfef270f345bee121a1d72b"
     },
     {
       "path": "site/apple-touch-icon.png",
@@ -598,7 +598,7 @@
     {
       "path": "site/index.html",
       "bytes": 13986,
-      "sha256": "8d9a9b2fb4243b45c38487826bc1d27181efb41aeec75cdd571632daaaba2566"
+      "sha256": "be40740b3bfbc9af72ab109ff91b052fc1a36c214fef734de527c525d716e940"
     },
     {
       "path": "site/mark.svg",

@@ -17,7 +17,7 @@ function renderPlan(){
  if(currentId)syncSave();
 }
 renderPlan();
-window.addEventListener('storage',event=>{if(!storageUsable||(event.key!==key&&event.key!==null))return;const restoreFocus=document.activeElement?.closest('#plan-items button');plan=parsePlan(event.newValue);renderPlan();if(restoreFocus&&!restoreFocus.isConnected)(plan.length?$('#download-plan'):$('#reja .text-link')).focus({preventScroll:true});});
+window.addEventListener('storage',event=>{if(!storageUsable||(event.key!==key&&event.key!==null))return;const restoreFocus=document.activeElement?.closest('#plan-items button');readCurrentPlan();renderPlan();if(restoreFocus&&!restoreFocus.isConnected)(plan.length?$('#download-plan'):$('#reja .text-link')).focus({preventScroll:true});});
 const detail=$('#initiative-dialog'),menu=$('#site-menu');
 document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{
  const item=initiatives.find(entry=>entry.id===button.dataset.open);if(!item)return;

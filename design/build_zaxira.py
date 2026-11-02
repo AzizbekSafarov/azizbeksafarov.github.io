@@ -11,7 +11,7 @@ import io,json,re,zipfile
 ROOT=Path(__file__).resolve().parent
 SITE=ROOT.parent
 KIT=SITE/'zaxira'
-DATE=(2026,10,31,0,0,0)
+DATE=(2026,11,2,0,0,0)
 STARTERS=[('forma','Forma'),('samar','Samar'),('orbita','Orbita'),('nashr','Nashr'),('hisob','Hisob'),('ziyo','Ziyo'),('meros','Meros'),('si','Yuksal · SI')]
 SKIP={'.DS_Store'}
 
@@ -48,28 +48,28 @@ def live_edit_map():
         where=f'`site/index.html` → “{title}”' if title else 'JavaScript chizadi: `site/model.js` yoki `site/identity.js` dan matnni qidiring'
         top=', '.join(f'`{c}` ×{n}' for c,n in colours(css))
         rows.append(f'| {name} | {where} | {", ".join("`"+t+"`" for t in tokens[:3]) or "—"} | {top} |')
-    rows.append('| Bloom (React) | `site/src/main.jsx` → `<h1>` | `site/src/style.css`: `--md-sys-color-primary` | npm kerak: o‘zgarish `npm run dev` ochiq bo‘lgandagina ko‘rinadi |')
+    rows.append('| Bloom (React) | `site/src/main.jsx` → `<h1>` | UI: rang palitrasi; source: `SEEDS` / `applyMaterialTheme` (`src/main.jsx`) | ZIP ildizidan `npm --prefix site run dev` yoki `npm --prefix site run build` → `node serve.mjs` |')
     return '\n'.join(rows)
 
-HEADER='''# Jonli o‘zgarish — himoyada 1 daqiqada, AI’siz
+HEADER='''# Jonli o‘zgarish — AI’siz tahrir qo‘llanmasi
 
 Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Ishtirokchi buni o‘z qurilmasida bajara olmasa, ish baholanmaydi. Ustoz AI saytidagi nizom nusxasida bu band yo‘q, baholash loyihasi esa topshirilgan loyihani o‘zgartirmaslikni aytadi — joydagi ko‘rsatma hal qiladi. Eng qattiq holatga tayyor bo‘lish uchun quyidagilarni AI’siz bajarishni oldindan mashq qiling.
 
 ## Dizayn starterida yoki boshqa loyihada — umumiy usul
 
 1. VS Code’da loyiha papkasini oching (File → Open Folder).
-2. **Ekranda ko‘ringan matnni** butun papkadan qidiring: **Ctrl+Shift+F** → matnning bir qismini yozing → natijani bosing.
+2. **Ekranda ko‘ringan matnni** tahrirlanadigan source ichidan qidiring: HTML starterda site/, Bloom’da site/src/. Ctrl+Shift+F → matnning bir qismini yozing. Hujjat, backup yoki minified dist nusxasini tasodifan tahrirlamang.
 3. O‘zgartiring → **Ctrl+S**.
-4. Brauzerda **Ctrl+Shift+R** (keshsiz yangilash). `node serve.mjs` keshni o‘chiradi; fayl to‘g‘ridan-to‘g‘ri ochilgan bo‘lsa Ctrl+Shift+R shart.
+4. HTML starterda lokal HTTP preview’ni yangilang. Bloom’da source tahriri uchun dev server yoki qayta build kerak: ZIP ildizidan `npm --prefix site run build`, so‘ng `node serve.mjs` oynasini yangilang. Ctrl+Shift+R eski keshni chetlab o‘tadi; source build o‘rnini bosmaydi.
 5. Ishlamasa **Ctrl+Z** → Ctrl+S → yana yangilang.
 
-Rang: CSS faylda rang kodini qidiring (**Ctrl+H** — topish va almashtirish) yoki `:root` ichidagi o‘zgaruvchini o‘zgartiring. Rang kodini tanlash: VS Code’da rang kvadratchasini bosing yoki `#d32f2f` (qizil), `#2e7d32` (yashil), `#1d4ed8` (ko‘k), `#6a1b9a` (binafsha) dan foydalaning.
+Rang: avval o‘sha elementning CSS qoidasi yoki rang tokenini toping. Bitta hex kodini butun loyihada Ctrl+H bilan ommaviy almashtirmang: matn, fon va fokus bir xil koddan foydalangan bo‘lishi mumkin. Fon bilan ustidagi matn kontrastini birga tekshiring. Bloom palitrasi JavaScript orqali Material rang rollarini hosil qiladi; faqat CSS tokenini o‘zgartirish keyingi renderda bekor bo‘lishi mumkin.
 
-Element: mavjud o‘xshash blokni (karta, tugma, bo‘lim) nusxalang, yoniga qo‘ying va matnini o‘zgartiring. Yangi kod yozishdan ko‘ra nusxalash xavfsizroq.
+Element: shu starter uchun AI-BRIEF.md dagi yangi sahifa/ekran va amal xaritasidan foydalaning. Nusxalangan blokda id, label-for, aria-labelledby va handler bog‘lanishlarini yangilang. Faqat ko‘rinadigan kartani nusxalash data va hisobga avtomatik qo‘shmaydi.
 
 ## Zaxira skeletda — kodsiz, `tahrir.html` paneli bilan
 
-Himoyadan oldin: `tahrir.html` ni oching va bir marta **Ctrl+S** bosib papkadagi `malumot.js` ni tanlang. Shundan keyin har saqlash so‘ramasdan yoziladi. Saytni yonidagi tabda oching.
+Himoyadan oldin: `tahrir.html` ni oching va bir marta **Ctrl+S** bosib papkadagi `malumot.js` ni tanlang. Fayl yozish ruxsati saqlansa keyingi saqlash shu faylga yozadi. Brauzer fayl tanlash API’sini qo‘llamasa yuklab olingan malumot.js ni loyiha papkasiga ko‘chiring. “Saqlandi” yoki yuklash xabarini tekshiring. Saytni yonidagi tabda oching.
 
 | Ekspert so‘rovi | Panelda | Keyin |
 |---|---|---|
@@ -87,7 +87,7 @@ Panelsiz (faqat zarurat bo‘lsa): `malumot.js` ni Bloknot yoki VS Code’da och
 
 ## Dizayn starterlarida qayerni o‘zgartirish kerak
 
-Jadval amaldagi kod asosida avtomatik yaratilgan. Rang ustunida CSS fayllarda eng ko‘p uchragan rang kodlari va soni berilgan: ularni **Ctrl+H** bilan almashtirish butun saytning shu rangini o‘zgartiradi. Asosiy matn fayllari ko‘pincha bir qatorga siqilgan — Ctrl+F bilan qidiring.
+Jadval amaldagi kod asosida avtomatik yaratilgan. Rang ustunida CSS fayllarda eng ko‘p uchragan rang kodlari va soni berilgan: bu sonlar rangning vazifasi yoki to‘g‘ri almashtirish ko‘rsatmasi emas. Tegishli selektor/tokenni tekshiring va faqat kerakli qoidadagi rangni o‘zgartiring. Asosiy matn fayllari ko‘pincha bir qatorga siqilgan — Ctrl+F bilan qidiring.
 
 | Dizayn | Asosiy sarlavha | `:root` rang o‘zgaruvchilari | Eng ko‘p rang kodlari (style.css + layout.css) |
 |---|---|---|---|
@@ -95,13 +95,13 @@ Jadval amaldagi kod asosida avtomatik yaratilgan. Rang ustunida CSS fayllarda en
 
 FOOTER='''
 
-Ko‘p dizaynda kartalar ham `site/index.html` da, ham `site/model.js` dagi ro‘yxatda bor. Yangi karta qo‘shilsa, ikkala joyda ham bir xil `id` bilan qo‘shing. Faqat matn yoki rang so‘ralsa, model va kodni o‘zgartirmang.
+Forma va Samar’da statik karta hamda model yozuvini bir xil ID bilan moslang; SI’da tashabbus tugmasi va model, Orbita’da model, missiya tugmasi va koordinatalar birga yangilanadi. Nashr/Meros/Ziyo mazmuni modeldan chiziladi; HTMLga ikkinchi nusxa qo‘shmang. Bloom’da src/model.js va src/main.jsx qo‘llanadi. Matn modeldan kelayotgan bo‘lsa aynan o‘sha manbani tahrirlang. Har starterning AI-BRIEF.md xaritasi ustuvor.
 
 ## Mashq (tanlovdan oldin)
 
-Taymer qo‘ying va 2 daqiqada bajaring: sarlavha matni → asosiy rang → yangi element → Ctrl+Shift+R bilan ko‘rsatish. Ikki marta muvaffaqiyatli bajarilmaguncha takrorlang.
+Taymer qo‘ying va 2 daqiqada bajaring: sarlavha matni → asosiy rang → yangi element → Ctrl+Shift+R bilan ko‘rsatish. Bu ixtiyoriy tayyorgarlik; oldingi sinovda noma’lum qolgan amalni tekshiring.
 
-Asosiy ish Codex bilan tanlangan starterda bo‘ladi: yuqoridagi umumiy usulni (Ctrl+Shift+F → o‘zgartirish → Ctrl+S → Ctrl+Shift+R) oldindan kamida ikki marta mashq qiling. AI ishlamay qolib sayt skeletda yig‘ilgan bo‘lsa, jonli o‘zgarishning hammasi `tahrir.html` panelida.
+Asosiy ish Codex bilan tanlangan starterda bo‘ladi: yuqoridagi umumiy usulni (Ctrl+Shift+F → o‘zgartirish → Ctrl+S → Ctrl+Shift+R) oldindan tushunib, zarur joyini tekshiring. AI ishlamay qolib sayt skeletda yig‘ilgan bo‘lsa, jonli o‘zgarishning hammasi `tahrir.html` panelida.
 '''
 
 def write_if_changed(path,data):

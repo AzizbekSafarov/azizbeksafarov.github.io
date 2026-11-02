@@ -92,7 +92,7 @@ Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o
 | Noto‘g‘ri kiritish | normalize noto‘g‘ri vaqtni 09:00 ga qaytaradi va noma’lum IDlarni olib tashlaydi; bu foydalanuvchiga forma xatosi chiqarish emas. | `site/model.js` → `normalize` |
 | Saqlash | app.js read/save, samar-plan-v2; reload va boshqa tab hodisasi mavjud. Bron amalga oshirilmaydi. | `site/app.js` → `read`, `site/app.js` → `save` |
 
-Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletda berilgan amallar soni, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
 
 ## Shrift va rasmlar
 

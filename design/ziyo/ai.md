@@ -54,7 +54,7 @@ Source faylni alohida o‘qish:
 ## Asosiy oqim va tekshiruv
 Modul tanlash → mazmun → javob → xato/to‘g‘ri izoh → progress → reload
 
-Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash known unique IDlarni oladi, buzilgan JSON fallback bor; storage cheklansa joriy tab davom etadi. Boshqa tab storage event orqali yangilanadi. Progress faqat to‘g‘ri javobdan keyin oshadi. Modul o‘zgarganda javob/izoh tozalansin; oxirgi modulda keyingi qadam noto‘g‘ri ochilmasin.
+Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘shma. Saqlash mavjud bo‘lgan starterlarda known unique IDlar tekshiriladi. O‘qib bo‘lmaydigan saqlangan nusxa ustiga yozilmaydi, ish shu tabda davom etadi; qayta ochilganda yangi ish tiklanishi kafolatlanmaydi. Hisob hisobotining davr/filtr holati saqlanmaydi. Nashr va Ziyo’da foydalanuvchi eksport tugmasi yo‘q; eksport bor deb va’da qilmang. Progress faqat to‘g‘ri javobdan keyin oshadi. Modul o‘zgarganda javob/izoh tozalansin; oxirgi modulda keyingi qadam noto‘g‘ri ochilmasin.
 
 Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 390, 768 va 1366 px (mezonlardagi kengliklar), qo‘shimcha 320 va 1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.
 
@@ -82,9 +82,9 @@ Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o
 |---|---|---|
 | Bog‘liq amallar | Modul tanlash → javob → xato/to‘g‘ri izoh → progress → keyingi dars. | `site/app.js` → `lesson`, `site/app.js` → `render`, `site/model.js` → `grade` |
 | Noto‘g‘ri kiritish | app.js #quiz submit javobsiz yuborishni, grade noto‘g‘ri javobni tekshiradi; noto‘g‘ri javob progress qo‘shmaydi. | `site/model.js` → `grade` |
-| Saqlash | app.js read/commit; tugallangan modul IDlari localStorage da. | `site/app.js` → `read`, `site/app.js` → `commit` |
+| Saqlash | app.js read/commit; tugallangan modul IDlari localStorage da. O‘qish/yozish xatosida yangi progress faqat tabda; eksport tugmasi yo‘q. | `site/app.js` → `read`, `site/app.js` → `commit` |
 
-Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletdagi ikki bog‘liq amal, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
+Bu mavjud kod xaritasi, biletga muvofiqlik sertifikati emas. Storage ma’lumotini tozalash foydalanuvchi formasidagi xato xabari o‘rnini bosmaydi. Biletda berilgan amallar soni, maydon validatsiyasi va saqlash talabi uchun yetishmayotgan qismlarni qurib, muvaffaqiyat/xato/reload yo‘llarini amalda tekshir.
 
 ## Shrift va rasmlar
 
