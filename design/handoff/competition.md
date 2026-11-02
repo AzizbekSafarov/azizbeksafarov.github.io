@@ -8,6 +8,15 @@ Tekshiruv: **2026-10-28**. [Qoidalar holati](https://azizbeksafarov.github.io/us
 
 Asl imzoli manbada funksiya 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10. 21 kichik ko‘rsatkich va taxminan 120 daqiqa — tasdiqlanmagan loyiha/mashq. Eski video shaxsiy akkauntga ulanish, g‘oya/shablon olish va 15 daqiqalik himoyani bildiradi; yangi joydagi cheklovlar alohida olinadi.
 
+Saqlangan asl matnlar bilan muvofiqlik tahriri: 2026-11-02; yuqoridagi 2026-10-28 tashqi tekshiruv sanasi o‘zgarmaydi.
+
+- **Himoya [imzoli qaror, 7–9-bandlar; sayt]:** 5 taqdimot + 5 namoyish + 5 savol = 15 daqiqa; qo‘shimcha vaqt yo‘q.
+- **Teng ball [20¹-band]:** avval funksionallik; keyin imzoli qarorda texnologiya, sayt nusxasida kreativlik. Bu farq hal etilgan deb olinmaydi.
+- **Hududiy ko‘lam [tasdiqlanmagan loyiha, 12–13-bandlar]:** kamida 3 sahifa yoki teng hajmli ekran, 2 bog‘liq amal, noto‘g‘ri kiritish va natija; taxminan 2 soat. Bilet saqlash usulini belgilaydi.
+- **Sozlash [video]:** tashkilotchi kompyuteri, Antigravity/Codex, akkauntga ulanishga 15 daqiqa. Amaliy vaqtga kirmasligi va sinov loyihasi ishlatilmasligi loyiha 12-bandida, videoning o‘zida emas.
+- **Shablon [video; loyiha]:** g‘oya va shablon mumkin. Oldindan tayyorlangan to‘liq loyiha taqiqi — loyiha 2-bobining 2-sahifasidagi “Taqiqlanadi” qismida; joydagi tayyor kod chegarasi aniqlanadi.
+- **Jonli tahrir:** imzoli qarorda so‘ralishi mumkin va bajara olmaslik chetlatishga olib keladi; sayt nusxasida band yo‘q; loyiha 17-bandida topshirilgan nusxani himoyada o‘zgartirish taqiqlangan.
+
 Haqiqiy bilet, qolgan vaqt va amaldagi reglament ustuvor. Himoyada tahrir, teng ball, akkaunt va tayyor backend masalasidagi manba farqlari yangi hujjatsiz yashirin birlashtirilmaydi. Samarqandning yangi sana/manzil/soati tasdiqlanmadi; eski 13-oktabr xabari tarixiy reja.
 
 Ishtirokchi: biletning aynan matni, aniq dizayn, haqiqiy vaqt va joydagi ruxsatlar. AI: manbalarni o‘qish, to‘liq source olish, majburiy oqimni bajarish, mos tekshiruv va source/run/handoff topshirish.

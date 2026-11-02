@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "670f49ca0f7dfa4b46fe8c6bcf521df97b1677a7846c7d39235ead896dddb24d",
-  "archive_bytes": 1070173,
+  "archive_sha256": "fdb2e7fc982d6e6c8b7eaa392a0ce0c3f2ff366c862950bc87a13888997bdd80",
+  "archive_bytes": 1072484,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -86,13 +86,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4616,
-      "sha256": "77b03fa3564cfb0b61ff4099af1d4d3b551c8032d09f3b248ce43af6786bb936"
+      "bytes": 4961,
+      "sha256": "9b1581c43133ba2ee17bcd4da089e3c1c3c944f59352f6465773dc7a86358b6d"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 9833,
-      "sha256": "b0ca1a73a67ca4ecf7c16163ab0597e4324dc0065306c82d3548035823c600e4"
+      "bytes": 10984,
+      "sha256": "22331377e97b23a2e393ef9895df964ecacaa2d7ac36fdd47957ac9b06a84ab6"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -126,8 +126,8 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 2132,
-      "sha256": "dc8b72bcaeb934e6161d35b13ac7e5b4f730d5e60b2f15724d3514fcfd870578"
+      "bytes": 3345,
+      "sha256": "c4401653370eeaa38964c559f59f5f606d57e053d9482f9a0977c5f823852349"
     },
     {
       "path": "CONTEXT-STATUS.md",
@@ -141,8 +141,8 @@
     },
     {
       "path": "CURRENT-COMPETITION.md",
-      "bytes": 5250,
-      "sha256": "785105abfea6cfb1e1553b548afa16eee0ff9d3a65fbee4a003248b073489979"
+      "bytes": 6317,
+      "sha256": "5f131cc90286841e844f9fa27b827ff4c0489ffb54696ddd0897fb191949bcd4"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -156,8 +156,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 200474,
-      "sha256": "4ac35bcc2efd57d2676998e704ce29acd675114573d84ffbc8c30899f198c5ff"
+      "bytes": 202754,
+      "sha256": "a13d10dfd017b0b6ed4def5a9fd29ec96c6abc2ef4d6bcda5e16fb1f60766eeb"
     },
     {
       "path": "GEMINI.md",
@@ -191,8 +191,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16588,
-      "sha256": "1466c4d17c37c77402c9f1ed52cc1aad5f91ca65a468f9da33ccaf7fa4c59f55"
+      "bytes": 16589,
+      "sha256": "66ff34a27f7bee8ce479b20e0d76604a19f0b19025ca0624dcec2580cf42b0c1"
     },
     {
       "path": "PREPARATION.md",
@@ -216,8 +216,8 @@
     },
     {
       "path": "READING-PLAN.json",
-      "bytes": 3442,
-      "sha256": "e3f6f23e3982b45e8c88343999085a0627ec72bd0fd8f8a925fae0a0eaed893a"
+      "bytes": 3443,
+      "sha256": "5f47c2eb2eed2f5dff24819ce10b6a665485d9b9760ab7cbb3d50672d833cb5d"
     },
     {
       "path": "README.md",
@@ -271,8 +271,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 12378,
-      "sha256": "0c30288c64550aaf795692d142205f1db9a432d12c9d93bf5052c3753007fdc2"
+      "bytes": 12769,
+      "sha256": "a98f076e4d48c9bca4ed8a5c450bc472a02e80224a4cd6c40e372c35fb080e7c"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

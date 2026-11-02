@@ -121,6 +121,11 @@ def prepare():
     write_if_changed(KIT/'JONLI-OZGARISH.md',HEADER+live_edit_map()+FOOTER)
     write_if_changed(KIT/'skelet/serve.mjs',(ROOT/'handoff/serve.mjs').read_bytes())
     write_if_changed(KIT/'skelet/kit.json',json.dumps({'schema_version':1,'name':'Zaxira skelet','serve_root':'.','entry':'index.html'},ensure_ascii=False,indent=2)+'\n')
+    from entry_text import FACTS_UZ
+    guide=(KIT/'ZAXIRA.md').read_text(encoding='utf-8')
+    start=guide.index('## 1. Qoidalardan')
+    end=guide.index('## 2.',start)
+    write_if_changed(KIT/'ZAXIRA.md',guide[:start]+'## 1. Qoidalardan kelib chiqadigan 8 ta asosiy fakt\n\n'+FACTS_UZ+'\n\n'+guide[end:])
     files={}
     for name in ('ZAXIRA.md','CODEX.md','PROMPTLAR.md','JONLI-OZGARISH.md','HIMOYA.md'):
         files[name]=portable(KIT/name)

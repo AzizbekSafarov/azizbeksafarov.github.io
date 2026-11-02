@@ -34,6 +34,19 @@ Bularni o‘qish oldingi manbalardagi farqlar avtomatik bekor qilindi degani ema
 | Topshirish | Joriy bilet yoki yangi topshirish kanali ushbu tekshiruvda berilmagan. | Tahrirlanadigan source, ishga tushirish yo‘riqnomasi va ishlaydigan oqimni tayyorlaymiz; yakuniy formatni tashkilotchi belgilaydi. |
 | Samarqand sana/manzil/soat | Yangilangan tasdiqlangan jadval topilmadi. 13-oktabr — oldingi ishtirokchi xabari. | Uni bugungi kelajak sana yoki yangi bosqich deb olmaymiz; joriy xabar alohida olinadi. |
 
+## Asl matndagi farqlar — 2026-11-02 muvofiqlik tahriri
+
+Bu yangi internet tekshiruvi emas; saqlangan nizomlar bilan solishtirish natijasi.
+
+| Masala | Manba va aniq mazmun |
+|---|---|
+| Teng ballning ikkinchi mezoni | Imzoli qaror 20¹: zamonaviy texnologiyalar; sayt 20¹: kreativlik. Birinchi mezon ikkala manbada funksionallik. |
+| Hududiy hajm | Tasdiqlanmagan loyiha 12–13: kamida 3 sahifa yoki teng hajmli ekran, 2 bog‘liq amal, noto‘g‘ri kiritish va natija. Taxminan 2 soat — tavsiya. |
+| Himoya | Imzoli qaror va sayt: 5 + 5 + 5 = 15 daqiqa, qo‘shimcha vaqt yo‘q. |
+| Sozlash | Video 15 daqiqa ulanishni aytadi; vaqt amaliy ishga kirmasligi va sinov loyihasi ishlatilmasligi loyiha 12-bandida. |
+| Tayyor to‘liq loyiha | Taqiq loyiha 2-bobining 2-sahifasidagi “Taqiqlanadi” qismida; shablon olish video va loyiha bilan ajratib talqin qilinadi. |
+| Jonli tahrir | Imzoli qaror 7–9: ekspert so‘rashi mumkin, bajarmasa chetlashtiriladi; sayt bandni keltirmaydi; loyiha 17: himoyada topshirilgan loyihani o‘zgartirish mumkin emas. |
+
 ## Manbalar va talqin
 
 - [Asl nizomlar — to‘liq 39 sahifa](https://azizbeksafarov.github.io/ustoz/nizom.md): imzoli qaror, sayt tahriri va mezonlar loyihasi alohida maqomda.
