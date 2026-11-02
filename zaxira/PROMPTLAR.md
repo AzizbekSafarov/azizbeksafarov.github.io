@@ -1,6 +1,6 @@
 # Kichik AI uchun tayyor so‘rovlar
 
-Kuchsiz yoki limitli AI katta loyihani bir yo‘la o‘zgartirishda adashadi, lekin **bitta kichik faylni aniq qoida bilan** yaxshi to‘ldiradi. Shuning uchun:
+Bu so‘rovlar faqat foydalanuvchi AI’siz zaxira skeletini tanlab, keyin kichik tahrirga AI yordamini so‘rasa ishlatiladi. Asosiy yo‘l — tanlangan starter va CODEX.md. Natija model va vazifaga bog‘liq; kichik fayl ham tekshiriladi. Shuning uchun:
 
 - har safar faqat **bitta fayl** bering va o‘sha faylni **to‘liq** qaytarishni so‘rang;
 - javobni faylga qo‘yishdan oldin Ctrl+A bilan eski matnni tanlab almashtiring, saqlang, brauzerda **Ctrl+Shift+R** bosing;
@@ -117,6 +117,6 @@ Faqat quyidagi faktlardan foydalan, o'ylab topma:
 
 ## AI’siz ishlash
 
-Kod bilmasangiz, AI’dan `malumot.js` so‘ramang — `skelet/tahrir.html` panelida o‘zingiz to‘ldiring: matn, rang, ro‘yxat (jadvalni nusxalab qo‘yish mumkin), forma maydonlari, sahifalar. Panel faylni har doim to‘g‘ri yozadi.
+Kod bilmasangiz, AI’dan `malumot.js` so‘ramang — `skelet/tahrir.html` panelida o‘zingiz to‘ldiring: matn, rang, ro‘yxat (jadvalni nusxalab qo‘yish mumkin), forma maydonlari, sahifalar. Panel sintaksisni yaratadi; saqlash natijasi va mazmunni tekshiring.
 
 AI P1 bo‘yicha `malumot.js` bersa: faylni papkaga qo‘ying, `tahrir.html` ni oching. Panel ochilib, qizil xato ko‘rsatmasa, AI javobi to‘g‘ri. Panel “malumot.js o‘qilmadi” desa, AI faylni buzgan: toza nusxani qaytaring.

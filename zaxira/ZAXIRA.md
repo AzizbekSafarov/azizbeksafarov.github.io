@@ -1,16 +1,16 @@
 # ZAXIRA — kuchli AI bo‘lmasa ham tanlov ishini topshirish
 
-Bu qo‘llanma qisqa kontekstli yoki limitli AI bilan, hatto AI umuman ishlamasa ham, ishlaydigan va himoya qilinadigan sayt topshirish uchun. Katta kontekst fayllarini o‘qish shart emas: shu fayl, `PROMPTLAR.md`, `JONLI-OZGARISH.md` va `skelet/` papkasi yetadi.
+Bu foydalanuvchi uchun AI’siz zaxira yo‘l. AI ishlasa tanlangan starterda CODEX.md bo‘yicha davom eting; limit kamligining o‘zi skeletga o‘tish buyrug‘i emas. Skelet tanlangan starterdan alohida kod: o‘tishdan oldin mavjud ish nusxasini saqlang va bilet talablarini solishtiring.
 
 Haqiqiy bilet, tashkilotchi aytgan vaqt va joydagi qoida hamma narsadan ustun. Bu qo‘llanma bilet bermaydi; skeletdagi “Namuna element” yozuvlari topshiriq emas.
 
 ## Kod yozishni bilmasangiz — faqat shu 3 narsa
 
-1. **`skelet/tahrir.html`** — kodsiz tahrirlash paneli. **1. Asosiy → Mavzu** da 9 ta professional ko‘rinishdan birini tanlang (Forma, Samar, Orbita, Nashr, Hisob, Ziyo, Meros, Yuksal, Toza); kerak bo‘lsa bosh ekranga rasm qo‘ying. Tayyor modullar: saralash, jami narx (narx × soni), statistika sahifasi, savol-javob. Brauzerda oching (ikki marta bosing). Matn, rang, ro‘yxat, forma maydonlari va sahifalarni oddiy katakchalarda o‘zgartirasiz, o‘ng tomonda natija darhol ko‘rinadi. **Faylga saqlash** (yoki **Ctrl+S**) birinchi marta so‘raganda papkadagi `malumot.js` ni tanlang — keyingi saqlashlar so‘ramasdan yoziladi. Panel faylni har doim to‘g‘ri yozadi: vergul yoki qo‘shtirnoq xatosi bo‘lmaydi.
+1. **`skelet/tahrir.html`** — kodsiz tahrirlash paneli. **1. Asosiy → Mavzu** da 9 ta professional ko‘rinishdan birini tanlang (Forma, Samar, Orbita, Nashr, Hisob, Ziyo, Meros, Yuksal, Toza); kerak bo‘lsa bosh ekranga rasm qo‘ying. Tayyor modullar: saralash, jami narx (narx × soni), statistika sahifasi, savol-javob. Brauzerda oching (ikki marta bosing). Matn, rang, ro‘yxat, forma maydonlari va sahifalarni oddiy katakchalarda o‘zgartirasiz, o‘ng tomonda natija darhol ko‘rinadi. **Faylga saqlash** (yoki **Ctrl+S**) birinchi marta so‘raganda papkadagi `malumot.js` ni tanlang — keyingi saqlashlar so‘ramasdan yoziladi. Panel fayl sintaksisini o‘zi yaratadi; saqlash natijasi va kiritilgan mazmunni tekshiring.
 2. **`skelet/index.html`** — saytning o‘zi. Saqlagandan keyin **Ctrl+Shift+R** bilan yangilang.
 3. **`skelet/index.html?tekshir`** — o‘z-o‘zini tekshirish paneli; natijani “Nusxalash” bilan README’ga qo‘ying.
 
-Kod faylini ochish shart emas. AI bo‘lsa, unga faqat `PROMPTLAR.md` dagi so‘rovlarni bering va javobini panel orqali tekshiring.
+Panel bilan odatiy matn/ro‘yxat tahriri uchun kod faylini ochish shart emas. Skeletni ongli ravishda tanlagan bo‘lsangiz, PROMPTLAR.md yordamchi qo‘llanma; asosiy AI yo‘li CODEX.md da.
 
 ## 1. Qoidalardan kelib chiqadigan 8 ta asosiy fakt
 
@@ -34,9 +34,9 @@ Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar o
 | Kuchli AI ishlayapti (masalan Codex, Plus) | Tanlangan dizayn starteri + **`CODEX.md`** dagi so‘rovlar ketma-ketligi. Skelet zaxira sifatida turadi. |
 | AI bor, lekin limit kam qolgan | Starterda qoling: `CODEX.md` dagi so‘rovlarni qisqa va aniq yuboring, bir xabarda bitta ish. Limit tugasa — keyingi qator. |
 | AI umuman yo‘q yoki limit tugadi | **Skelet** + `tahrir.html` paneli. Kod yozish shart emas. |
-| Starter boshlangan, lekin AI to‘xtadi | Qolgan vaqt 60 daqiqadan kam bo‘lsa, starterni tugatishga urinmang: ishlaydigan qismini saqlang va skeletga o‘ting. |
+| Starter boshlangan, lekin AI to‘xtadi | Ishlaydigan nusxani saqlang va qolgan matn/rang ishlarini qo‘lda bajaring. Faqat mavjud ishni tugatish imkonsiz bo‘lsa va biletni skeletda bajarishga vaqt yetsa, ongli ravishda o‘ting. |
 
-Bloom (React) starteri `npm` va internetni talab qiladi. Kuchsiz AI yoki sekin internetda HTML starterlar yoki skelet xavfsizroq.
+Bloom tayyor dist preview uchun npm talab qilmaydi; source tahririni build qilish uchun npm va dependency kerak. HTML starterlar build’siz ishlaydi, lekin ES modullar uchun lokal server bilan ochiladi. Skelet alohida, file:// bilan ham ochiladigan zaxira.
 
 ## 3. Vaqt rejasi [Loyiha 14-band tavsiyasi]
 
@@ -55,7 +55,7 @@ Tugashiga 30, 10 va 5 daqiqa qolgani e’lon qilinadi [Loyiha]. **30 daqiqa qolg
 **1. Biletni jadvalga aylantiring (5–10 daqiqa).** Qog‘ozga yoki README’ga: har talab (T1, T2…) → qaysi sahifa yoki maydon → qanday sinaladi. Skelet sahifalari: Bosh, Ro‘yxat (qidiruv/filtr), Tafsilot, Ariza (forma), Arizalarim (saqlangan, o‘chirish, CSV), Biz haqimizda.
 
 **2. `tahrir.html` da to‘ldiring** (bo‘limlar tartibida):
-- **1. Asosiy** — sayt nomi, shior, asosiy rang. Tayyor bo‘lgach “Namuna ma’lumot ogohlantirishi” belgisini olib tashlang;
+- **1. Asosiy** — sayt nomi, shior, asosiy rang. Faqat namuna mazmuni haqiqiy bilet materiallari bilan almashtirilgan bo‘lsa “Namuna ma’lumot ogohlantirishi”ni o‘chiring;
 - **2. Sahifalar** — biletga keraksiz sahifani o‘chiring, menyu nomlarini biletga moslang;
 - **3. Bosh sahifa** — sarlavha va matn: kim uchun, nima qiladi, keyingi qadam;
 - **4. Ro‘yxat** — biletdagi jadval. Jadval Word/Excel/PDF’da bo‘lsa: nusxalang → “Jadvaldan qo‘shish” → “Ro‘yxatni almashtirish”. Birinchi qatorda ustun nomlari bo‘lsin (Nomi, Turi/Kategoriya, Sana, Vaqt, Joy, Narx, Joylar/Soni, Tavsif). Boshqa ustunlar (Muallif, O‘qituvchi, Davomiyligi…) avtomatik “qo‘shimcha ustun” bo‘ladi va qidiruvda topiladi. Sana, manzil va nomlarni biletdagidek aynan qoldiring (2.4 izchillik). “Sig‘im / soni” — to‘lganda forma yopiladi, kerak bo‘lmasa 0. **“Ustun nomlari va tugma matnlari”** da so‘zlarni mavzuga moslang: masalan mahsulotlar uchun Turi → Kategoriya, Qolgan joy → Omborda, Tanlash → Buyurtma berish. Qidiruv maslahatini ham yozing;
@@ -105,7 +105,7 @@ Yagona ssenariy: [HIMOYA.md](HIMOYA.md). Shu tartibda o‘z loyihangizni tayyorl
 | Forma yubormayapti | Qizil xatolarni o‘qing — bu tekshiruv ishlayapti degani. Panelning 5-bo‘limida “Majburiy” va maydon turini tekshiring. |
 | AI butun faylni buzdi | Ctrl+Z yoki skeletning toza nusxasidan faylni qayta oling. AI’ga faqat bitta faylni bering (`PROMPTLAR.md` P0). |
 | Kompyuter, internet yoki tashkilotchi xizmati to‘xtadi | Darhol kuzatuvchiga ayting; vaqt dalolatnoma bilan qoplanishi mumkin [Loyiha 26–27-band]. Oddiy dastur xatosi va AI navbati qoplanmaydi. |
-| Vaqt tugayapti | Ishlaydigan holatni saqlang. Yarim ishlagan funksiyani menyudan olib tashlang. |
+| Vaqt tugayapti | Ishlaydigan holatni saqlang. Majburiy talabni yashirmang; ishlamagan qismini ochiq qayd eting. Faqat ixtiyoriy tugallanmagan qo‘shimchani chiqarib tashlash mumkin. |
 
 ## 8. Oldindan mashq (tanlovdan oldin, 2 marta)
 

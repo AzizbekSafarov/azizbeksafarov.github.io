@@ -143,24 +143,25 @@ def prepare():
 def page():
     from workspace_hq import frame
     size=(KIT/'zaxira.zip').stat().st_size/1024
-    content=f'''<div class="wrap"><section class="page-hero"><p class="eyebrow">KUCHLI AI BO‘LMASA HAM</p><h1>Zaxira rejasi.<br>Qo‘lda ham ishlaydi.</h1><p class="lead">Tanlov kuni AI limitli, sekin yoki umuman ishlamasligi mumkin. Bu to‘plam build talab qilmaydigan sayt skeleti, kichik AI uchun qisqa so‘rovlar va himoyadagi jonli o‘zgarish qo‘llanmasini beradi.</p><div class="hero-actions"><a class="button dark" href="/zaxira/zaxira.zip" download>Zaxira paketini olish ↓ <small>{size:.0f} KB</small></a><a class="button" href="/zaxira/skelet/">Skeletni ochish ↗</a><a class="button" href="/zaxira/skelet/tahrir.html">Kodsiz tahrirlash ↗</a><a class="button" href="/zaxira/skelet/?tekshir">Tekshiruv paneli bilan ↗</a></div></section>
+    content=f'''<div class="wrap"><section class="page-hero"><p class="eyebrow">AI’SIZ ISHLASH UCHUN ZAXIRA</p><h1>Zaxira rejasi.<br>Qo‘lda ham ishlaydi.</h1><p class="lead">AI ishlasa, tanlangan dizayn starteri va CODEX.md bilan davom eting. AI umuman ishlamasa, bu yerda kodsiz panel va sayt skeleti bor. Boshlangan ishni almashtirishdan oldin nusxasini saqlang.</p><div class="hero-actions"><a class="button dark" href="/zaxira/zaxira.zip" download>Zaxira paketini olish ↓ <small>{size:.0f} KB</small></a><a class="button" href="/zaxira/skelet/">Skeletni ochish ↗</a><a class="button" href="/zaxira/skelet/tahrir.html">Kodsiz tahrirlash ↗</a><a class="button" href="/zaxira/skelet/?tekshir">Tekshiruv paneli bilan ↗</a></div></section>
 <article class="prose">
-<h2>Nima uchun kerak</h2>
+<h2>Avval asosiy yo‘l</h2><p><a href="/design/">Dizayn tanlash</a> → <a href="/design/start/">biletni AIga berish</a> → tanlangan starterda ishlash. Bu sahifadagi skelet o‘sha starterlarning aynan nusxasi emas.</p><h2>Nima uchun kerak</h2>
 <p>Imzolangan nizomga ko‘ra ekspert himoyada <strong>matn, rang, element yoki kontentni</strong> jonli o‘zgartirishni so‘rashi mumkin; bajarilmasa ish baholanmaydi (saytdagi nizom nusxasida bu band yo‘q — joydagi ko‘rsatma hal qiladi, lekin eng qattiq holatga tayyorlangan ma’qul). Teng ballda avval sifat va funksionallik hal qiladi; ikkinchi mezon imzolangan qarorda zamonaviy texnologiyalar, sayt nusxasida kreativlik. Shuning uchun ishlaydigan oddiy sayt va uni qo‘lda boshqara olish chiroyli, lekin tugallanmagan saytdan qimmatroq.</p>
 <h2>Paket ichida</h2>
 <ul>
 <li><a href="/zaxira/CODEX.md">CODEX.md</a> — <strong>kuchli AI bo‘lsa, asosiy yo‘l</strong>: Codex (ChatGPT desktop ilovasi) bilan kod yozmasdan professional sayt yasash. Sozlash, asos tanlash, 6 ta tayyor so‘rov (reja → qurish → sinov → ko‘rinish → hujjatlar → jonli o‘zgarish), xatoda nima deyish, vaqt va limit nazorati.</li>
 <li><a href="/zaxira/ZAXIRA.md">ZAXIRA.md</a> — qoidalardan 8 ta asosiy fakt, qaysi yo‘lni tanlash, vaqt rejasi, qadamma-qadam ish, 21 ko‘rsatkich bo‘yicha sinov ro‘yxati, himoya ssenariysi va favqulodda holatlar.</li>
 <li><a href="/zaxira/PROMPTLAR.md">PROMPTLAR.md</a> — kichik AI uchun bitta faylga mo‘ljallangan tayyor so‘rovlar: biletdan ma’lumot, forma, matn, rang, xato, qo‘shimcha funksiya, README va himoya matni.</li>
+<li><a href="/zaxira/HIMOYA.md">HIMOYA.md</a> — 5 daqiqa taqdimot, 5 namoyish va 5 savol-javob uchun yagona ssenariy.</li>
 <li><a href="/zaxira/JONLI-OZGARISH.md">JONLI-OZGARISH.md</a> — skelet va har bir dizayn uchun sarlavha va rang qayerda turgani. Kod asosida avtomatik yaratiladi.</li>
 <li><a href="/zaxira/skelet/tahrir.html">skelet/tahrir.html</a> — <strong>kodsiz tahrirlash paneli</strong>: matn, rang, ro‘yxat (Word/Excel jadvalidan nusxalab qo‘yish mumkin), forma maydonlari va sahifalarni katakchalarda o‘zgartirasiz, natijani darhol ko‘rasiz, Ctrl+S bilan faylga saqlaysiz. Kod yozish kerak emas.</li>
-<li><a href="/zaxira/skelet/">skelet/</a> — tanlov ishining ~90% i tayyor: ro‘yxat, qidiruv, filtr, saralash, tafsilot, tekshiriladigan ariza formasi, saqlangan arizalar, statistika sahifasi, savol-javob, jami narx (narx × soni, sig‘imni hisobga oladi), CSV, bo‘sh/xato holatlari. <strong>9 ta professional mavzu</strong> (dizayn kutubxonasidagi starterlar uslubida) — panelda bir tugma bilan. Barcha mazmun bitta <code>malumot.js</code> faylida. Fayl ikki marta bosilganda ham ochiladi; internet, npm va build kerak emas.</li>
+<li><a href="/zaxira/skelet/">skelet/</a> — biletga moslashtiriladigan tayyor modullar: ro‘yxat, qidiruv, filtr, saralash, tafsilot, tekshiriladigan ariza formasi, saqlangan arizalar, statistika sahifasi, savol-javob, jami narx (narx × soni, sig‘imni hisobga oladi), CSV, bo‘sh/xato holatlari. <strong>9 ta professional mavzu</strong> (dizayn kutubxonasidagi starterlar uslubida) — panelda bir tugma bilan. Barcha mazmun bitta <code>malumot.js</code> faylida. Fayl ikki marta bosilganda ham ochiladi; internet, npm va build kerak emas.</li>
 </ul>
-<h2>Skeletning kafolatlangan qismi</h2>
+<h2>Skeletda mavjud imkoniyatlar</h2>
 <ul>
 <li>Maydon tekshiruvi: majburiy, uzunlik, telefon (+998), email, son oralig‘i, o‘tgan sana, ro‘yxatdan tanlash, rozilik.</li>
 <li>Bog‘liq amallar: ro‘yxatdan tanlash → ariza → arizalarim; joy to‘lsa yopiladi, takror ariza rad etiladi.</li>
-<li>Brauzer xotirasi buzilgan yoki yopiq bo‘lsa ham sayt ishlaydi.</li>
+<li>Brauzer xotirasi cheklansa joriy tabda ishlash va eksport yo‘li bor; reload orqali saqlanishni alohida tekshiring.</li>
 <li><code>?tekshir</code> paneli: gorizontal surish (390/768/1366), nomsiz maydon va tugma, yuklanmagan rasm, konsol xatosi, qolib ketgan namuna matn.</li>
 <li><code>node --test mantiq.test.mjs</code> — mantiq testlari.</li>
 </ul>

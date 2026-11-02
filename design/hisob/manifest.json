@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/hisob/",
   "ai_url": "https://azizbeksafarov.github.io/design/hisob/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/hisob/source.zip",
-  "archive_sha256": "193f6088da2f11e348f8a176293a7f51bab16479156fbdc77d4bc9f7e213158b",
-  "archive_bytes": 830807,
+  "archive_sha256": "2d03ebc5091d0b57db31eeae5b8cf29869f45e746d55223fb93f24d4be361c1e",
+  "archive_bytes": 831027,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16149,
-      "sha256": "08d3bd2dad876b5c9f1d2cb120c7ab8368e361562a99a9794d9aca3fdbe652bc"
+      "sha256": "a58be43f240be012bb62c2ab00fd033923271e6914d9d605a9de28941aeab7ee"
     },
     {
       "path": "PREPARATION.md",
@@ -260,13 +260,13 @@
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
-      "bytes": 5150,
-      "sha256": "0af5082961bd886f7cdff123205b95a1b207aef9983d423018e8ebc4a7c44c1e"
+      "bytes": 5273,
+      "sha256": "46fcbaf7bdb453fcb3aaf1792eded2240e467cc858b3c54ba76e610930a7dc1e"
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 12769,
-      "sha256": "a98f076e4d48c9bca4ed8a5c450bc472a02e80224a4cd6c40e372c35fb080e7c"
+      "bytes": 13199,
+      "sha256": "a97f03179991e222b88840a5b21ac1d488dbc23328d80864fea87cf77f6522d2"
     },
     {
       "path": "ZAXIRA/skelet/README.md",
