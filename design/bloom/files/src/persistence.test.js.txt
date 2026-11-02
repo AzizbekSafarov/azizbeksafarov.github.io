@@ -115,6 +115,24 @@ test('healthy edits preserve recovery backups from an earlier session', () => {
   assert.deepEqual(loadProjectState(() => storage).projects, []);
 });
 
+test('a second damaged state does not overwrite an earlier recovery backup', () => {
+  const storage = memoryStorage([[PROJECTS_KEY, '{new damaged'], [RECOVERY_KEY, '{first damaged']]);
+  assert.equal(persistProjectState(() => storage, initialProjects).status, 'recovered');
+  assert.equal(storage.values.get(RECOVERY_KEY), '{first damaged');
+  assert.equal(storage.values.get(RECOVERY_KEY + '.1'), '{new damaged');
+});
+
+test('stale tab cannot overwrite another tabs committed edit', () => {
+  const raw = JSON.stringify(initialProjects);
+  const storage = memoryStorage([[PROJECTS_KEY, raw]]);
+  const first = persistProjectState(() => storage, [], {expectedRaw: raw});
+  assert.equal(first.status, 'saved');
+  const stale = persistProjectState(() => storage, initialProjects, {expectedRaw: raw});
+  assert.equal(stale.status, 'conflict');
+  assert.equal(storage.values.get(PROJECTS_KEY), '[]');
+  assert.equal(persistProjectState(() => storage, initialProjects, {expectedRaw:first.raw}).status, 'saved');
+});
+
 test('invalid current state cannot overwrite valid stored projects', () => {
   const raw = JSON.stringify(initialProjects);
   const storage = memoryStorage([[PROJECTS_KEY, raw]]);

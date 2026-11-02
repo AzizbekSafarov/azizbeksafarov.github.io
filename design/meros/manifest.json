@@ -4,22 +4,22 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-31",
-  "source_fingerprint": "acf972dcb0eff92570708ca03545607980992a61d99501672f71c80125ac6119",
+  "snapshot_date": "2026-11-02",
+  "source_fingerprint": "20cb4923196e0b1dac34c44db2fde75db93f3b26af97388d052a52c3e5c160e5",
   "name": "Meros",
   "slug": "meros",
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "6689b0018ea152eba96d4ae000d05e6206f1622fd316a1c82703c74564d3806d",
-  "archive_bytes": 2818477,
+  "archive_sha256": "480179a939602edcc0d5a2dd38a95f6a3b2b57916339ef90acffb54128463a41",
+  "archive_bytes": 2821783,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/meros/files/index.html.txt",
-      "sha256": "0bea2b6cdf82b62b370435a39bef50ec1e0d70460d7db38a9d49b39997c0ce0f",
+      "sha256": "d2ab9333ed1585786be62b84fa7128bfa467d5d82464d1d1216da4cfb4ab0f77",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/index.html.txt"
     },
     {
@@ -31,13 +31,13 @@
     {
       "path": "layout.css",
       "url": "https://azizbeksafarov.github.io/design/meros/files/layout.css.txt",
-      "sha256": "d8469d9ee97b96e8a7f2e2255b4b73e68958e0fdf975f87e9c58f2e46bf580d2",
+      "sha256": "1e495da46b25a411231f919631b614599023a8f3eae28a7fc4d6be28c3977a65",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/layout.css.txt"
     },
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/meros/files/app.js.txt",
-      "sha256": "6861304684ccd095179a169d110be0289e5d0565a918d3beaa5d152765772b69",
+      "sha256": "256ab055a0f05276ce555a46363bb0489bdee29f6aef6970bc4ae00cb671fdfd",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/meros/files/app.js.txt"
     },
     {
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4962,
-      "sha256": "398ee412ef700ab6b65b6a59903cb6397f7a174a8128002b87536de14ac69796"
+      "bytes": 5232,
+      "sha256": "0dd05a2b80dc0f0f8f8027d8767e9b58bceb2beac964f7e7e5bbaa40af18cf4b"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 11279,
-      "sha256": "d9b0125da24359a72a49663ae18e3168cad0c3b4b876be5a55334f665ebc4d0c"
+      "bytes": 12022,
+      "sha256": "8295dd2f477a7e45009d8b7d9480373cf9d10d98308ee22428926fff7084063e"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -100,8 +100,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28676,
-      "sha256": "63a39a0d504e940d71e65586bad1c8d5d3c000a3b87bab69a6677a80916fc87f"
+      "bytes": 28730,
+      "sha256": "cdfd8d1efd5b7e3c3871a86f0ae0a78a2c0f9d90b2de2b6a84063d4a2f8840b2"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -150,8 +150,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 202754,
-      "sha256": "a13d10dfd017b0b6ed4def5a9fd29ec96c6abc2ef4d6bcda5e16fb1f60766eeb"
+      "bytes": 205148,
+      "sha256": "f5b324117cc73c03dd605ae26ce5848fed651af47fdf582f549ee18e45ea5b7b"
     },
     {
       "path": "GEMINI.md",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1219,
-      "sha256": "1d6f636f707f93015adb493602b6689c192d1afcca793a9bfa4d627193448011"
+      "sha256": "6b87cc87b31ffdfa1f0d054b0ce8c86fd35d47f9c40f97dd85c727c2bb4453f1"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -185,8 +185,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 17100,
-      "sha256": "ada5797d52be5b9961ed9419c395d9c1144e2ad6e060d5d07bc70b0404e8fee5"
+      "bytes": 17101,
+      "sha256": "c13fdf1358784a20e8d315cd02b0c99b1024d7d337d9c5ebc0ac8a7e5b897a7d"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "44cdd1b871e95d7c312cae7630ff1cf5637cae8d24b42ce00c0bc8e8fa77cfb4"
+      "sha256": "85080470295933e499ed55b891d42b52b4967e832e8d2d687bc9e920833b52a0"
     },
     {
       "path": "README.md",
@@ -225,8 +225,8 @@
     },
     {
       "path": "SCORING-WORKPLAN.md",
-      "bytes": 5979,
-      "sha256": "ab33ffc47492a1f72c9b3bf710cee2ef52522a71e9b7a3b90a72ad78a73cda8b"
+      "bytes": 8373,
+      "sha256": "7567762cac1498dc7309e864f91376f17bb925a6dcdb44e5941d0a1989591834"
     },
     {
       "path": "START-HERE.md",
@@ -245,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11246,
-      "sha256": "2af784dc76d3ef5083551de88e0a698712ef71eb5c44ff97301d7b3db75aead7"
+      "bytes": 11527,
+      "sha256": "c3b2da189feadfec340da76b029d503f8f53a23c501f5184066acf7504680d98"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -256,7 +256,7 @@
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
       "bytes": 5831,
-      "sha256": "fce635cad5c9b1609f1afa8f33258cd6a494cebc5b10d60d0f5c7815c98118a0"
+      "sha256": "09e0060f62e6113624280a46c45832b112d565fd5fda658d72219a36f540d6fa"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -265,8 +265,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13199,
-      "sha256": "a97f03179991e222b88840a5b21ac1d488dbc23328d80864fea87cf77f6522d2"
+      "bytes": 13213,
+      "sha256": "d295d1749de7af3d839191cf9caf3af0cb25a8ffc770ada7ea1397f431e32ee0"
     },
     {
       "path": "ZAXIRA/skelet/README.md",
@@ -470,13 +470,13 @@
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",
-      "bytes": 10532,
-      "sha256": "dca690f1c370bcf7deda0ab20f230d7681e2ffbc5ebb8738728efe9cc6883e8f"
+      "bytes": 11389,
+      "sha256": "a4d2f7770f74f120e126e87e04106cd2e715c47868fb555b3d0c0e241d8e2cd0"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.test.mjs",
-      "bytes": 2785,
-      "sha256": "0e79370a934e3a22d4bb57170eab05d3884edf2d7fb40ec2ff0ca9b9387f22b3"
+      "bytes": 3572,
+      "sha256": "3394078434dd3422ecbc96ed9a2eda48408665ee15a0f36831112dbfb3aafc67"
     },
     {
       "path": "ZAXIRA/skelet/uslub.css",
@@ -486,7 +486,7 @@
     {
       "path": "kit.json",
       "bytes": 290,
-      "sha256": "fd07c51017b978ab437908fbee8471a09295e2ded4fa8b4ecc3f508323948c80"
+      "sha256": "7112953177eb719c007450f6b42fba87aa892cc5a0d77640073fac4498056ae3"
     },
     {
       "path": "serve.mjs",
@@ -510,8 +510,8 @@
     },
     {
       "path": "site/app.js",
-      "bytes": 4207,
-      "sha256": "6861304684ccd095179a169d110be0289e5d0565a918d3beaa5d152765772b69"
+      "bytes": 4518,
+      "sha256": "256ab055a0f05276ce555a46363bb0489bdee29f6aef6970bc4ae00cb671fdfd"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -566,12 +566,12 @@
     {
       "path": "site/index.html",
       "bytes": 3866,
-      "sha256": "0bea2b6cdf82b62b370435a39bef50ec1e0d70460d7db38a9d49b39997c0ce0f"
+      "sha256": "d2ab9333ed1585786be62b84fa7128bfa467d5d82464d1d1216da4cfb4ab0f77"
     },
     {
       "path": "site/layout.css",
-      "bytes": 9846,
-      "sha256": "d8469d9ee97b96e8a7f2e2255b4b73e68958e0fdf975f87e9c58f2e46bf580d2"
+      "bytes": 10954,
+      "sha256": "1e495da46b25a411231f919631b614599023a8f3eae28a7fc4d6be28c3977a65"
     },
     {
       "path": "site/mark.svg",

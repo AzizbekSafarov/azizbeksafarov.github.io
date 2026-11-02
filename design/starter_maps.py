@@ -22,7 +22,25 @@ Fayllar: `site/{markup}`, `site/{logic}`; mavjud kirish funksiyasi: `{symbol}`.
 HTML starterlarda haqiqiy alohida URL talab qilinsa yangi HTML fayl yarat, umumiy shrift/CSS resurslarini nisbiy yo‘l bilan ula va barcha menyularga havola qo‘sh. app.js ni ko‘r-ko‘rona yangi sahifaga ulamang: u mavjud DOM IDlarini kutadi; shu sahifaga tegishli kodni ajrating. Bo‘lim, dialog yoki filtrning o‘zi avtomatik ravishda biletdagi “sahifa” talabini bajarmaydi — talab etilgan hajm va mustaqil vazifani tekshiring.
 
 Qabul sinovi: menyudan kirish, to‘g‘ridan-to‘g‘ri URL (agar mavjud), orqaga qaytish, klaviatura/fokus, 390/768/1366 px va eski asosiy oqim. Bu qo‘shish yo‘riqnomasi, yangi sahifa allaqachon qurilgan degani emas.
+
+## O‘qilish va harakat xarakteri
+
+{MOTION[slug]}
+
+Yangi matnni sig‘dirish uchun xizmat yozuvlarini mayda qilib yubormang: uzun o‘zbekcha matn, 320/390 px va katta zoom bilan tekshiring. Harakat holat o‘zgarishini tushuntirsin, amalni kutishga majburlamasin. prefers-reduced-motion, dialogdan fokus qaytishi va ko‘rinadigan natija saqlansin. Nusxadagi HTML starterlarda CSS site/layout.css, Bloom’da site/src/style.css; SI’da site/style.css va site/motion.js. Har starterga o‘zida mavjud faylni qo‘llang.
 '''
+
+MOTION = {
+ 'forma':'Mahsulot katalogi: og‘ir Manrope, aniq narx va savdo tugmasi. Savatga qo‘shishda qisqa tasdiq harakati, savat yon tomondan ochiladi; .just-added va .cart-drawer holatlarini saqla.',
+ 'samar':'Sayohat atlasi: Lora sarlavha, Source Sans 3 boshqaruv va o‘qiladigan xarita yozuvi. Tanlangan pin joyiga tushadi; yo‘nalish tartibi o‘zgarsa app.js render haqiqiy oldingi/yangi koordinatalar bilan siljitadi.',
+ 'ziyo':'Dars daftari: Bree Serif sarlavha, Nunito Sans o‘qish, monospace faqat kod. Mobil dars menyusi ketma-ket qatorlar. identity.js ko‘rgazmali misolni almashtiradi; javob izohi qisqa yon siljish bilan ajraladi, progress ma’lumotdan olinadi.',
+ 'meros':'Ko‘rgazma plakati: Alfa Slab One sarlavha va indeks raqami, Archivo navigatsiya, Literata izoh. Indeks ochiq tipografik satrlar; asar dialogidagi surat markazdan ochiladi. Butun sahifani bir xil kartochkaga aylantirma.',
+ 'nashr':'Gazeta: Newsreader katta sarlavha, PT Serif keng o‘qish, Archivo xizmat yozuvi. O‘qish dialogi sokin opacity bilan ochiladi; sakrash yoki kartani ko‘tarish yo‘q. Animatsiya o‘qishdan diqqatni tortmasin.',
+ 'hisob':'Ma’lumotlar ish stoli: Public Sans boshqaruv, Plex raqamlar. Yangilangan jadval qatorlari qisqa opacity bilan ko‘rinadi, ustunlar joyi sakramaydi. Sonlarni o‘ylab topilgan count-up bilan almashtirma.',
+ 'orbita':'Observatoriya: Chakra Petch sarlavha va izoh, Plex Mono o‘lchov/boshqaruv. ISS orbital harakati pause/visibility holatiga bo‘ysunadi; boshqa missiyalar statik xaritaga ega. Faol asbob tanlovi chiziq va fon bilan ajraladi.',
+ 'si':'Kinematik SI portali: Instrument Serif/Sans, uzluksiz zarracha identifikatori, pointer/click fizikasi va scroll shakl almashishi. MOTION.md va motion.js asosiy manba; reduced-motion hamda pause saqlansin.',
+ 'bloom':'Material ish maydoni: Google Sans/Roboto va rasmiy Material komponentlarining ripple, dialog, tanlash holatlari. src/main.jsx dagi Motion layout va reduced-motion yo‘lini saqla; boshqa starter animatsiyasini ustiga qo‘shma.',
+}
 
 def verify_pages(slug, files, brief):
     import re

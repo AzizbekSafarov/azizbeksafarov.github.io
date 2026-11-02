@@ -4,7 +4,7 @@ import {initiatives,parsePlan,togglePlan,planText} from './model.js?v=2';
 const $=selector=>document.querySelector(selector);
 const key='ustoz.yuksal.plan.v1';
 let plan=[];let currentId=null;let opener=null;let toastTimer;let storageUsable=true;
-function readCurrentPlan(){if(!storageUsable)return;try{plan=parsePlan(localStorage.getItem(key));}catch{storageUsable=false;$('#storage-warning').hidden=false;}}
+function readCurrentPlan(){if(!storageUsable)return;try{const raw=localStorage.getItem(key);if(raw!==null&&!Array.isArray(JSON.parse(raw)))throw Error('Invalid stored plan');plan=parsePlan(raw);}catch{storageUsable=false;$('#storage-warning').hidden=false;$('#storage-warning').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi reja faqat shu tabda. Rejani faylga yuklab oling.';}}
 readCurrentPlan();
 function notify(message){clearTimeout(toastTimer);$('#feedback').textContent=message;$('#feedback').hidden=false;toastTimer=setTimeout(()=>{$('#feedback').hidden=true;},3200);}
 function persist(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(plan));$('#storage-warning').hidden=true;}catch{storageUsable=false;$('#storage-warning').hidden=false;}}

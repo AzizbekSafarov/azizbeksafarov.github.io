@@ -6,6 +6,15 @@ import {matching,readLibraryState,writeLibraryState} from './library-model.mjs';
 // Test against the actual generated catalog payload, not a substitute fixture.
 const html=readFileSync(new URL('../../index.html',import.meta.url),'utf8');
 const items=JSON.parse(html.match(/<script[^>]*id="library-data"[^>]*>([\s\S]*?)<\/script>/)[1]);
+// Explicit outcomes complement the round-trip tests below: the expected answer
+// must not come from the same matching function used by readLibraryState.
+for(const [query,group,expected] of [
+ ['ziyo','all',['ziyo']], ['Material','app',['bloom']],
+ ['Material','shop',[]], ['no-result','all',[]],
+ ['', 'shop', ['forma']]
+])test('actual catalog search outcome '+query+'/'+group,()=>{
+ assert.deepEqual(readLibraryState(items,'?'+new URLSearchParams({q:query,type:group})).found.map(x=>x.slug),expected);
+});
 for(const group of ['all','app','story','shop'])for(const query of ['', 'ziyo', 'Material', "ta'lim", 'no-result'])for(const view of ['list','detail']) {
   test('HQ state round trip '+JSON.stringify({group,query,view}),()=>{
     const params=new URLSearchParams({type:group,q:query,view,design:'ziyo'});

@@ -148,12 +148,12 @@ Ochiq parol yoki kalit qolmaganini tekshir.
 
 ## 5. Himoyada AI haqida to‘g‘ri gapirish
 
-Baholashda AI ishlatishning o‘zi minus emas, lekin **siz nimani boshqarganingiz** so‘raladi (5.2 va 4.2 ko‘rsatkichlari):
+Mezonlar loyihasining 22-bandida AI ishlatishning o‘zi kamaytirish asosi emasligi yozilgan; bu loyiha maqomidagi qoida. Himoyada **siz nimani boshqarganingiz** so‘raladi (5.2 va 4.2 ko‘rsatkichlari):
 
 - “Kodni Codex yozdi. Men biletni talablar jadvaliga aylantirdim, dizaynni tanladim, har talabni o‘zim sinadim, [xato]ni topib tuzattirdim, [matn/rang/detal]ni o‘zim o‘zgartirdim.”
 - Cheklovni haqiqiy holatga mos ayting. Faqat lokal loyiha bo‘lsa: “Ma’lumot shu brauzerda saqlanadi”. Server ishlasa uning tekshirilgan holatini ayting.
 - Ishlamaydigan narsani “ishlaydi” demang.
 
-## 6. Oldindan mashq qilish shart
+## 6. Oldingi tajribadan foydalanish
 
-Tanlovdan oldin shu qo‘llanma bo‘yicha kamida **2 marta to‘liq** (120 daqiqa, taymer bilan) soxta bilet bilan ishlang. Har safar: qaysi so‘rov yaxshi ishladi, qayerda vaqt yo‘qoldi — yozib boring. Tanlov kuni yangi narsa sinamang.
+Oldin to‘liq sinov qilgan bo‘lsangiz, uning natijasidan foydalaning: qayerda vaqt yo‘qolgan, qaysi amal tekshirilmagan va qaysi xato qaytalangan. Faqat ochiq qolgan xavf uchun qisqa maqsadli mashq yetishi mumkin. Yangi muhitda paketni ochish, asosiy amal va himoyada tushuntirishni tekshiring. Mashq davomiyligi tavsiya; rasmiy ish vaqtini tashkilotchi belgilaydi. Shaxsiy mashq bileti va javobi ochiq tayyorgarlik paketiga joylanmaydi.

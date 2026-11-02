@@ -2,8 +2,8 @@ import {data,normalize} from './model.js?v=e2364eb354';
 const SLUG='orbita';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const storageKey=SLUG+'-state-v1';let memory=[],persistent=true;
-function read(){if(!persistent)return memory;try{return normalize(JSON.parse(localStorage.getItem(storageKey)));}catch{return [];}}
-function commit(ids){memory=normalize(ids);try{localStorage.setItem(storageKey,JSON.stringify(memory));}catch{persistent=false;$('#status').textContent='Saqlash cheklangan. Hozirgi tabdagi tanlov saqlanadi; kerak bo‘lsa faylga oling.';}return memory;}
+function read(){if(!persistent)return memory;try{const raw=localStorage.getItem(storageKey),parsed=raw===null?[]:JSON.parse(raw);if(!Array.isArray(parsed))throw Error('Invalid stored list');memory=normalize(parsed);return memory;}catch{persistent=false;$('#status').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi tanlov faqat shu tabda qoladi.';return memory;}}
+function commit(ids){memory=normalize(ids);if(!persistent)return memory;try{localStorage.setItem(storageKey,JSON.stringify(memory));}catch{persistent=false;$('#status').textContent='Saqlash cheklangan. Tanlov faqat shu ochiq tabda qoladi; sahifani yangilashda yo‘qolishi mumkin.';}return memory;}
 function toggle(id){const ids=read();return commit(ids.includes(id)?ids.filter(x=>x!==id):[...ids,id]);}
 function download(name,text,type='text/plain;charset=utf-8'){const url=URL.createObjectURL(new Blob(['\ufeff'+text],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
 let opener,openedId;function openDialog(button){opener=button;openedId=button.dataset.read;$('#reader').showModal();}$$('[data-close]').forEach(b=>b.addEventListener('click',()=>$('#reader').close()));$('#reader')?.addEventListener('close',()=>{const target=opener?.isConnected?opener:document.querySelector('[data-read="'+openedId+'"]')||$('#saved-toggle');target?.focus();});

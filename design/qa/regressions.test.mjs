@@ -8,6 +8,16 @@ import * as nashr from '../nashr-site/model.js';
 import * as yuksal from '../si-site/model.js';
 import {report} from '../hisob-site/model.js';
 
+for(const storage of [{readThrows:true,values:{'ziyo-state-v1':'["style"]'}},{values:{'ziyo-state-v1':'{unreadable original'}}]) {
+  test('Ziyo unreadable storage remains untouched while session progress works '+JSON.stringify(storage),async()=>{
+    const app=await application(new URL('../ziyo-site/app.js',import.meta.url),ziyo,storage);
+    app.choose('1');app.submit();
+    assert.equal(app.values.get('ziyo-state-v1'),storage.values['ziyo-state-v1']);
+    assert.match(app.element('#progress-label').textContent,/1 \/ 3/);
+    assert.match(app.element('#status').textContent,/Asl nusxa/);
+  });
+}
+
 test('Ziyo correct → wrong answer removes stale next-step permission',async()=>{
   const app=await application(new URL('../ziyo-site/app.js',import.meta.url),ziyo);
   app.choose('1');app.submit();assert.equal(app.element('#next').hidden,false);

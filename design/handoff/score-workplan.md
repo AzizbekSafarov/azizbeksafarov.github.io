@@ -30,7 +30,27 @@ Asosiy 6 mezon mahalliy qarordan. Quyidagi 21 kichik ko‘rsatkich tasdiqqa taqd
 | 6.2 | Foydali ijodiy yechim | 3 | Vazifani yengillashtiradigan bitta ishlaydigan qo‘shimcha yoki ma’lumot taqdimoti. |
 | 6.3 | Mazmun va uslub uyg‘unligi | 3 | Nom, matn, ko‘rinish va amallar bitta maqsadga xizmat qiladi. |
 
-Jami: **100 ball**. Funksiya 30 + mazmun 20 + texnologiya 20 = **70 ball**; ish avval shu dalillarni mustahkamlaydi.
+Jami: **100 ball**. Vaznlar rasmiy baholash xaritasi; ular vaqtni foizlarda bo‘lish yoki kichik vaznli mezonni e’tiborsiz qoldirish buyrug‘i emas. Dizayn, mazmun, ishlash va himoya bitta mahsulotni ifodalaydi. Texnologiya soni yoki murakkabligi o‘z-o‘zicha sifat bermaydi.
+
+## Natijani halol o‘lchash
+
+Maqsad — foydalanuvchining biletdagi ishini to‘g‘ri, tushunarli va vazifaga mos xavfsizlik bilan bajarish. Avval bilet talablari va asosiy foydalanish oqimini aniqlang, keyin mezonlar orqali tushib qolgan jihatlarni qidiring. Zarur sifatni jadvalda alohida balli yo‘q deb tashlamang; yangi imkoniyatni esa aniq foyda va vaqt bilan asoslang.
+
+Kutilgan natija talabdan olinadi. Tekshirilayotgan funksiyaning o‘zidan kutilgan javobni hisoblab, o‘ziga solishtirish mustaqil to‘g‘rilik dalili emas. UI’dagi “Saqlandi” xabari bilan cheklanmang: qayta ochish va talabdagi saqlash joyidan o‘qishni tekshiring. Tashqi servis mock’i bilan haqiqiy integratsiya natijasini ajrating.
+
+| Dalil | Qayd |
+|---|---|
+| Nima tekshiriladi? | Bilet talabi yoki mahsulotga zarur sifat va sababi |
+| Sharoit | Source versiyasi, muhit, foydalanuvchi roli, boshlang‘ich holat |
+| Amal va kutilma | Foydalanuvchi nima qiladi, qanday natija bo‘lishi kerak |
+| Kuzatilgan natija | Haqiqiy natija, xato va dalil manzili; secret/shaxsiy ma’lumotsiz |
+| Holat | O‘tdi / xato / tekshirilmadi / tekshirishga to‘siq / tatbiq etilmaydi + sabab |
+
+Testlar soni, coverage yoki screenshotlar soni mahsulot bahosi emas. Fayl hashi to‘g‘ri bo‘lishi funksiyaning ishlashini isbotlamaydi; konsol xatosi yo‘qligi biznes mantiqini tekshirmaydi. Asosiy amal bajarilmasligi, ma’lumot yo‘qotish yoki begona yozuvga kirish mayda muvaffaqiyatlar bilan o‘rtachalanmaydi. Tekshirilmagan band PASS hisoblanmaydi. Xatoni yashirish, majburiy funksiyani olib tashlash, faqat tanish testga mos maxsus kod yozish yoki test kutilmasini dalilsiz yumshatish mumkin emas.
+
+Tuzatishdan keyin ta’sirlangan oqim va bog‘liq qismlarni qayta tekshiring. Yangi o‘zgarish yoki ochiq xavf bo‘lmasa, son uchun takroriy sinov o‘tkazmang. O‘zingiz yozgan kodning taxminlarini boshqa kirish qiymati va teskari/xato yo‘li bilan tekshiring. Qulaylik va tushunarlilikni haqiqiy brauzerda baholang; avtomatik test bu fikrni to‘liq almashtirmaydi.
+
+Bu tayyorgarlik yo‘riqnomasi; yakuniy ballni ekspert beradi. Usul tahriri: 2026-11-02; asl nizom matni va tashqi qoidalar tekshiruv sanasi o‘zgartirilmagan.
 
 ## Biletni amalga aylantirish
 

@@ -4,22 +4,22 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-31",
-  "source_fingerprint": "236e17bab5847f6f48eeaf110a433a8dbf618933b56a9e27bade1c18a3c9fea6",
+  "snapshot_date": "2026-11-02",
+  "source_fingerprint": "d8693195efef5ce52d1e1a137e5af6cd0cfbbd5ed43e34ea9842defe91478a5d",
   "name": "Orbita",
   "slug": "orbita",
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "e8657a6ade2f85cef88bd7f00bc504ce36a4a4093110aa7277a709739f71c036",
-  "archive_bytes": 823099,
+  "archive_sha256": "0d681cd207d2fe5fedb3d125c4d9deddbb6c78cc614e417a29bd24e35337cf88",
+  "archive_bytes": 826355,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/index.html.txt",
-      "sha256": "4c609885f9d271c04070963d2cd368fd585c6f807a141d8aee87c5c265b06fbd",
+      "sha256": "c561c57f52a119e430a35febaf109c3c8c50951ba1e096869be4fb2203b51404",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/index.html.txt"
     },
     {
@@ -31,13 +31,13 @@
     {
       "path": "layout.css",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/layout.css.txt",
-      "sha256": "96302888c4316502c8d677cc7aa681af5f6cf5a2c2d1b6196475770f0c1a75b3",
+      "sha256": "b3ad689ec17be50e783fe831d80d9274803b70b0cbfcee777aad12f19037fc21",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/layout.css.txt"
     },
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/app.js.txt",
-      "sha256": "2f88f3b956960445d9711961e1713c0f6a97f6e381e4730463936226d9b700c4",
+      "sha256": "acff3e873992e540d5e9d6cecb8bf220e5ddb7f321a0a8dd62da714af9384b1a",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/app.js.txt"
     },
     {
@@ -67,7 +67,7 @@
     {
       "path": "CREDITS.md",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/CREDITS.md.txt",
-      "sha256": "9594fe1001cecf663d13de51d3b6e1266316e0f29e95947eb14da70a422f14b8",
+      "sha256": "d0cb47c50407c0029d5640cb16f71e11ce6ef6edfe5181970a0a663e990770ad",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/CREDITS.md.txt"
     },
     {
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 4963,
-      "sha256": "e6c85f027d233fce24a9bd250e058a1ad02bbac481217c3d64db4def4d4629df"
+      "bytes": 5233,
+      "sha256": "1bdb18a9a7cff51fc21cb7ecd5c005706b774cf0f5b463b3635beeaf05f6946c"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 10743,
-      "sha256": "1cc4e8da0c20e14a42e25e51cb7a4f17555321fd3df840c7007ba67d8614e660"
+      "bytes": 11521,
+      "sha256": "a2b8c1b78fd2280af6abff63460237145e0c82cbdb516efb33c12d6955996391"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -100,8 +100,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28676,
-      "sha256": "63a39a0d504e940d71e65586bad1c8d5d3c000a3b87bab69a6677a80916fc87f"
+      "bytes": 28730,
+      "sha256": "cdfd8d1efd5b7e3c3871a86f0ae0a78a2c0f9d90b2de2b6a84063d4a2f8840b2"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -150,8 +150,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 202754,
-      "sha256": "a13d10dfd017b0b6ed4def5a9fd29ec96c6abc2ef4d6bcda5e16fb1f60766eeb"
+      "bytes": 205148,
+      "sha256": "f5b324117cc73c03dd605ae26ce5848fed651af47fdf582f549ee18e45ea5b7b"
     },
     {
       "path": "GEMINI.md",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1221,
-      "sha256": "574f2dc8409cc57a2c26fad6a646c18c59c01721b5e1fb3fdc233f9dc3335231"
+      "sha256": "da779bb448a11a910070eaaf573abc0a28a0252f65a4b3df07b56b17576aaf90"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16287,
-      "sha256": "69db785d6ee8af752f4364de1c18a7e5978978b9b1da880274469d26e4e7196a"
+      "sha256": "2ce68771b59402326f2064b18d070fc8b0910ee52a4ca7e76d40e22d0e74cd19"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "3aaf7c5d7d34a6a67bad8e670625e22a4455058693976afd698eadc3a43733f5"
+      "sha256": "3068184520d9ea37a07a6b86b3a73c99c31c35a65123b96e6f754772d6870a9a"
     },
     {
       "path": "README.md",
@@ -225,8 +225,8 @@
     },
     {
       "path": "SCORING-WORKPLAN.md",
-      "bytes": 5979,
-      "sha256": "ab33ffc47492a1f72c9b3bf710cee2ef52522a71e9b7a3b90a72ad78a73cda8b"
+      "bytes": 8373,
+      "sha256": "7567762cac1498dc7309e864f91376f17bb925a6dcdb44e5941d0a1989591834"
     },
     {
       "path": "START-HERE.md",
@@ -245,8 +245,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11246,
-      "sha256": "2af784dc76d3ef5083551de88e0a698712ef71eb5c44ff97301d7b3db75aead7"
+      "bytes": 11527,
+      "sha256": "c3b2da189feadfec340da76b029d503f8f53a23c501f5184066acf7504680d98"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -256,7 +256,7 @@
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
       "bytes": 5831,
-      "sha256": "fce635cad5c9b1609f1afa8f33258cd6a494cebc5b10d60d0f5c7815c98118a0"
+      "sha256": "09e0060f62e6113624280a46c45832b112d565fd5fda658d72219a36f540d6fa"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -265,8 +265,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13199,
-      "sha256": "a97f03179991e222b88840a5b21ac1d488dbc23328d80864fea87cf77f6522d2"
+      "bytes": 13213,
+      "sha256": "d295d1749de7af3d839191cf9caf3af0cb25a8ffc770ada7ea1397f431e32ee0"
     },
     {
       "path": "ZAXIRA/skelet/README.md",
@@ -470,13 +470,13 @@
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",
-      "bytes": 10532,
-      "sha256": "dca690f1c370bcf7deda0ab20f230d7681e2ffbc5ebb8738728efe9cc6883e8f"
+      "bytes": 11389,
+      "sha256": "a4d2f7770f74f120e126e87e04106cd2e715c47868fb555b3d0c0e241d8e2cd0"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.test.mjs",
-      "bytes": 2785,
-      "sha256": "0e79370a934e3a22d4bb57170eab05d3884edf2d7fb40ec2ff0ca9b9387f22b3"
+      "bytes": 3572,
+      "sha256": "3394078434dd3422ecbc96ed9a2eda48408665ee15a0f36831112dbfb3aafc67"
     },
     {
       "path": "ZAXIRA/skelet/uslub.css",
@@ -486,7 +486,7 @@
     {
       "path": "kit.json",
       "bytes": 292,
-      "sha256": "90d54a1b069c647cc2747e1d5614d293f075c9984cd5d8335b83e2d54a8e77a8"
+      "sha256": "75ad66255e9a7cdf75bc66a222401b4cb7ddfc1c3b928ede623405c0cfee041d"
     },
     {
       "path": "serve.mjs",
@@ -495,8 +495,8 @@
     },
     {
       "path": "site/CREDITS.md",
-      "bytes": 1105,
-      "sha256": "9594fe1001cecf663d13de51d3b6e1266316e0f29e95947eb14da70a422f14b8"
+      "bytes": 1135,
+      "sha256": "d0cb47c50407c0029d5640cb16f71e11ce6ef6edfe5181970a0a663e990770ad"
     },
     {
       "path": "site/QA-REPORT.md",
@@ -505,13 +505,13 @@
     },
     {
       "path": "site/README.md",
-      "bytes": 1034,
-      "sha256": "f276cc475bbcf9fead749b4bfc3f9bcecc2375a359e214515956a68eb6fb72a9"
+      "bytes": 1064,
+      "sha256": "58ab94c16316a7145ddbde59f450ba050a2c4d3a9de327341518a77e62b706f3"
     },
     {
       "path": "site/app.js",
-      "bytes": 4019,
-      "sha256": "2f88f3b956960445d9711961e1713c0f6a97f6e381e4730463936226d9b700c4"
+      "bytes": 4330,
+      "sha256": "acff3e873992e540d5e9d6cecb8bf220e5ddb7f321a0a8dd62da714af9384b1a"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -541,12 +541,12 @@
     {
       "path": "site/index.html",
       "bytes": 4686,
-      "sha256": "4c609885f9d271c04070963d2cd368fd585c6f807a141d8aee87c5c265b06fbd"
+      "sha256": "c561c57f52a119e430a35febaf109c3c8c50951ba1e096869be4fb2203b51404"
     },
     {
       "path": "site/layout.css",
-      "bytes": 6559,
-      "sha256": "96302888c4316502c8d677cc7aa681af5f6cf5a2c2d1b6196475770f0c1a75b3"
+      "bytes": 7494,
+      "sha256": "b3ad689ec17be50e783fe831d80d9274803b70b0cbfcee777aad12f19037fc21"
     },
     {
       "path": "site/mark.svg",

@@ -1,8 +1,8 @@
 import {places,normalize,schedule,clock,exportPlan} from './model.js?v=bcb8054ec2';
 const key='samar-plan-v2';const $=s=>document.querySelector(s);let state=normalize(null),opener;
 let storageUsable=true;
-function read(){if(!storageUsable)return normalize(state);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{return normalize(null);}}
-function save(){try{localStorage.setItem(key,JSON.stringify(state));}catch{storageUsable=false;$('#storage-note').textContent='Brauzer saqlashga ruxsat bermadi. Rejangizni matn qilib yuklab oling.';}}
+function read(){if(!storageUsable)return normalize(state);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(state);}}
+function save(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(state));}catch{storageUsable=false;$('#storage-note').textContent='Brauzer saqlashga ruxsat bermadi. Rejangizni matn qilib yuklab oling.';}}
 function update(fn){state=fn(read());save();render();}
 function render(){
  const oldPositions=new Map([...document.querySelectorAll('[data-plan-id]')].map(e=>[e.dataset.planId,e.getBoundingClientRect().top]));

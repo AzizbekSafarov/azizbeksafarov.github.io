@@ -1,8 +1,8 @@
 import {products,normalize,change,total,money,exportCart} from './model.js?v=878bdb00f7';
 const $=s=>document.querySelector(s),key='forma-cart-v2';let cart=normalize(null),category='all',opener,selected;
 let storageUsable=true;
-function read(){if(!storageUsable)return normalize(cart);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{return normalize(null);}}
-function write(){try{localStorage.setItem(key,JSON.stringify(cart));}catch{storageUsable=false;$('#storage-note').textContent='Saqlash cheklangan. Tanlovingizni fayl qilib yuklab oling.';}}
+function read(){if(!storageUsable)return normalize(cart);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(cart);}}
+function write(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(cart));}catch{storageUsable=false;$('#storage-note').textContent='Saqlash cheklangan. Tanlovingizni fayl qilib yuklab oling.';}}
 function mutate(id,delta){const before=read();cart=change(before,id,delta);write();renderCart();return (before[id]||0)!==(cart[id]||0);}
 function renderCart(){
  document.querySelectorAll('[data-add]').forEach(b=>{const full=(cart[b.dataset.add]||0)>=20;b.disabled=full;b.textContent=full?'Limit: 20':'Savatga +';});

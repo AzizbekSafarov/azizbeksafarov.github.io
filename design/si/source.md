@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `880ef21375711d2912f541236fa88e7df64c8a1c26faf4e2f32af6c0355f3a1b`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `29a5e9a557012c82d166aa341579f8daa83ea10ba1c38972b9260c29e7dcd636`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -18,7 +18,7 @@ Source fingerprint: `880ef21375711d2912f541236fa88e7df64c8a1c26faf4e2f32af6c0355
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1" sizes="180x180">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css?v=6">
-  <script type="module" src="app.js?v=6"></script>
+  <script type="module" src="app.js?v=4087188690"></script>
 </head>
 <body>
 <a class="skip" href="#main">Asosiy mazmunga o‘tish</a>
@@ -230,7 +230,7 @@ import {initiatives,parsePlan,togglePlan,planText} from './model.js?v=2';
 const $=selector=>document.querySelector(selector);
 const key='ustoz.yuksal.plan.v1';
 let plan=[];let currentId=null;let opener=null;let toastTimer;let storageUsable=true;
-function readCurrentPlan(){if(!storageUsable)return;try{plan=parsePlan(localStorage.getItem(key));}catch{storageUsable=false;$('#storage-warning').hidden=false;}}
+function readCurrentPlan(){if(!storageUsable)return;try{const raw=localStorage.getItem(key);if(raw!==null&&!Array.isArray(JSON.parse(raw)))throw Error('Invalid stored plan');plan=parsePlan(raw);}catch{storageUsable=false;$('#storage-warning').hidden=false;$('#storage-warning').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi reja faqat shu tabda. Rejani faylga yuklab oling.';}}
 readCurrentPlan();
 function notify(message){clearTimeout(toastTimer);$('#feedback').textContent=message;$('#feedback').hidden=false;toastTimer=setTimeout(()=>{$('#feedback').hidden=true;},3200);}
 function persist(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(plan));$('#storage-warning').hidden=true;}catch{storageUsable=false;$('#storage-warning').hidden=false;}}

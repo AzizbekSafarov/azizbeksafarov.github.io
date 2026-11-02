@@ -12,16 +12,16 @@ function parseProjects(raw) {
 export function loadProjectState(getStorage) {
   try {
     const raw = getStorage().getItem(PROJECTS_KEY);
-    if (raw === null) return {projects: structuredClone(initialProjects), status: 'new'};
+    if (raw === null) return {projects: structuredClone(initialProjects), status: 'new', raw};
     const projects = parseProjects(raw);
-    if (projects) return {projects, status: 'ready'};
-    return {projects: structuredClone(initialProjects), status: 'invalid'};
+    if (projects) return {projects, status: 'ready', raw};
+    return {projects: structuredClone(initialProjects), status: 'invalid', raw};
   } catch {
     return {projects: structuredClone(initialProjects), status: 'unavailable'};
   }
 }
 
-export function persistProjectState(getStorage, projects, {startupStatus} = {}) {
+export function persistProjectState(getStorage, projects, {startupStatus, expectedRaw} = {}) {
   if (!validateProjects(projects)) return {status: 'invalid-current'};
   // A failed initial read means the displayed samples may not be the user's
   // actual workspace. Keep this session in memory even if access later returns.
@@ -29,12 +29,19 @@ export function persistProjectState(getStorage, projects, {startupStatus} = {}) 
   try {
     const storage = getStorage();
     const raw = storage.getItem(PROJECTS_KEY);
+    if (expectedRaw !== undefined && raw !== expectedRaw) return {status: 'conflict'};
     const needsRecovery = raw !== null && !parseProjects(raw);
     // Preserve the exact original before replacement. If this backup fails,
     // the original key stays untouched and the caller keeps an in-memory copy.
-    if (needsRecovery) storage.setItem(RECOVERY_KEY, raw);
-    storage.setItem(PROJECTS_KEY, JSON.stringify(projects));
-    return {status: needsRecovery ? 'recovered' : 'saved'};
+    if (needsRecovery) {
+      let backupKey = RECOVERY_KEY, suffix = 0;
+      while (storage.getItem(backupKey) !== null && storage.getItem(backupKey) !== raw) backupKey = RECOVERY_KEY + '.' + (++suffix);
+      storage.setItem(backupKey, raw);
+      if (storage.getItem(backupKey) !== raw) return {status: 'unavailable'};
+    }
+    const written = JSON.stringify(projects);
+    storage.setItem(PROJECTS_KEY, written);
+    return {status: needsRecovery ? 'recovered' : 'saved', raw: written};
   } catch {
     return {status: 'unavailable'};
   }

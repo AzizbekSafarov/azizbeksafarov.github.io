@@ -20,7 +20,13 @@
 
   function korinadi(e) { return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length); }
   function nomi(e) {
-    return (e.getAttribute('aria-label') || e.textContent || e.getAttribute('title') || (e.querySelector('img[alt]') || {}).alt || '').trim();
+    var doc = e.ownerDocument || document;
+    var refs = (e.getAttribute('aria-labelledby') || '').trim().split(/\s+/).filter(Boolean);
+    var named = refs.map(function (id) { var label = doc.getElementById(id); return label ? label.textContent : ''; }).join(' ').trim();
+    return (named || (e.getAttribute('aria-label') || '').trim() ||
+      Array.from(e.labels || []).map(function (label) { return label.textContent; }).join(' ').trim() ||
+      (/^(BUTTON|A)$/.test(e.tagName) ? e.textContent : '') || e.getAttribute('title') ||
+      (e.querySelector('img[alt]') || {}).alt || '').trim();
   }
 
   function sahifaniTekshir(doc, win) {
@@ -43,12 +49,13 @@
     n.push(rasmlar.length ? ['xato', 'Yuklanmagan rasm: ' + rasmlar.map(function (i) { return i.getAttribute('src'); }).join(', ')] : kutilmoqda.length ? ['ogoh', kutilmoqda.length + ' ta rasm hali yuklanmoqda; qayta tekshiring'] : ['ok', 'Rasmlar yuklangan']);
     var altsiz = Array.prototype.filter.call(doc.images, function (i) { return !i.hasAttribute('alt'); });
     if (altsiz.length) n.push(['ogoh', altsiz.length + ' ta rasmda alt yo‘q']);
-    var nomsizMaydon = Array.prototype.filter.call(doc.querySelectorAll('input:not([type=hidden]),select,textarea'), function (e) {
-      return korinadi(e) && !(e.labels && e.labels.length) && !e.getAttribute('aria-label') && !e.getAttribute('aria-labelledby');
-    });
-    n.push(nomsizMaydon.length ? ['xato', nomsizMaydon.length + ' ta maydonning nomi (label) yo‘q'] : ['ok', 'Barcha ko‘rinadigan maydonlar nomlangan']);
-    var nomsizTugma = Array.prototype.filter.call(doc.querySelectorAll('button,a[href]'), function (e) { return korinadi(e) && !nomi(e); });
-    n.push(nomsizTugma.length ? ['xato', nomsizTugma.length + ' ta tugma/havolada matn yo‘q'] : ['ok', 'Tugma va havolalar nomlangan']);
+    var maydonlar = Array.prototype.filter.call(doc.querySelectorAll('input:not([type=hidden]),select,textarea'), korinadi);
+    var nomsizMaydon = maydonlar.filter(function (e) { return !nomi(e); });
+    n.push(nomsizMaydon.length ? ['ogoh', nomsizMaydon.length + ' ta maydon uchun oddiy nom topilmadi; accessibility tree’da tekshiring'] : maydonlar.length ? ['ok', maydonlar.length + ' ta oddiy maydonda nom topildi; mazmunini qo‘lda tekshiring'] : ['ogoh', 'Tekshiriladigan oddiy forma maydoni topilmadi']);
+    var tugmalar = Array.prototype.filter.call(doc.querySelectorAll('button,a[href]'), korinadi);
+    var nomsizTugma = tugmalar.filter(function (e) { return !nomi(e); });
+    n.push(nomsizTugma.length ? ['ogoh', nomsizTugma.length + ' ta tugma/havolada oddiy nom topilmadi; accessibility tree’da tekshiring'] : tugmalar.length ? ['ok', tugmalar.length + ' ta oddiy tugma/havolada nom topildi'] : ['ogoh', 'Tekshiriladigan oddiy tugma/havola topilmadi']);
+    n.push(['ogoh', 'Bu nom tekshiruvi to‘liq accessibility auditi emas; shadow DOM va murakkab ARIA nomlari qo‘lda tekshiriladi.']);
     var boshHavola = Array.prototype.filter.call(doc.querySelectorAll('a'), function (a) { var h = a.getAttribute('href'); return korinadi(a) && (h === null || h === '' || h === '#'); });
     if (boshHavola.length) n.push(['ogoh', boshHavola.length + ' ta havola hech qayerga olib bormaydi (href="#")']);
     var kichik = Array.prototype.filter.call(doc.querySelectorAll('button,a.tugma,input,select'), function (e) {

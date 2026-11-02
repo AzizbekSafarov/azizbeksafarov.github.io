@@ -1,11 +1,11 @@
 # Forma — editable source snapshot
 
-Source fingerprint: `ad4bccfcf7c87ad2bc887aa871b1ede0ee3313292eed11437c6ce4ef81e310e7`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `3d4ec8502b709fc3413cc46a2a8bedb7c79a3efcece8a126f8788c7501f10d0c`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
 ```html
-<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><meta name="description" content="Zamonaviy obyekt studiyasi: kuchli Manrope, qora savdo tugmalari, yirik narxlar va balandligi turlicha fotografik shelf."><title>Forma — sokin shakl, iliq hayot</title><link rel="icon" href="mark.svg?v=e068eedfcc" type="image/svg+xml"><script type="module" src="app.js?v=65d9d83c6d"></script><meta name="composition" content="task-specific-v3"><link rel="preload" href="fonts/manrope.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=99ea84b76b"><link rel="stylesheet" href="layout.css?v=f44b2b90ec"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><p class="concept-note">KONSEPT KATALOG · NARX VA XUSUSIYATLAR NAMUNAVIY</p><header class="header wrap"><a class="wordmark" href="#main" aria-label="forma bosh sahifasi">forma<span>.</span></a><nav class="nav" aria-label="Asosiy navigatsiya"><a href="#kolleksiya">Kolleksiya</a><a href="#yondashuv">Yondashuv</a></nav><details class="mobile-nav"><summary>Menyu <span aria-hidden="true">+</span></summary><nav aria-label="Mobil navigatsiya"><a href="#kolleksiya">Kolleksiya</a><a href="#yondashuv">Yondashuv</a></nav></details><button class="cart-open" id="cart-open" aria-haspopup="dialog">Savat <span id="cart-count">0</span> ↗</button></header><main id="main"><div class="inventory-intro wrap"><p class="eyebrow">FORMA / OBYEKTLAR KUTUBXONASI</p><h1>Tanlangan<br>buyumlar.<span>01—03 / OBYEKTLAR</span></h1><p>Uchta buyum. Material, o‘lcham va parvarish tafsilotlari bilan. O‘zingizga mosini yaqindan ko‘ring.</p></div><section class="section wrap" id="kolleksiya"><h2 class="sr-only">Kolleksiyadagi buyumlar</h2><div class="shop-tools"><div class="filters" role="group" aria-label="Buyum kategoriyasi"><button data-filter="all" aria-pressed="true">Barchasi</button><button data-filter="mebel" aria-pressed="false">Mebel</button><button data-filter="yoruglik" aria-pressed="false">Yorug‘lik</button><button data-filter="dekor" aria-pressed="false">Dekor</button></div><span class="small" id="product-count" role="status">3 ta buyum</span></div><div class="products"><article class="product" data-product="rattan" data-category="mebel"><button class="product-photo" data-detail="rattan" aria-label="To‘qima stul haqida batafsil"><img src="images/chair.jpg" width="1067" height="1600" loading="lazy" alt="To‘qima stul interyer surati"></button><div class="product-top"><h3>To‘qima stul</h3><span class="eyebrow">MEBEL</span></div><p>Yog‘och / to‘qima · namunaviy tavsif</p><div class="product-bottom"><span class="price">1 290 000 so‘m<small>Namuna narxi</small></span><button class="button secondary" data-add="rattan" aria-label="To‘qima stul: savatga qo‘shish">Savatga <span aria-hidden="true">+</span></button></div></article><article class="product" data-product="luma" data-category="yoruglik"><button class="product-photo" data-detail="luma" aria-label="Luma stol chirog‘i haqida batafsil"><img src="images/lamp.jpg" width="1067" height="1600" loading="lazy" alt="Luma stol chirog‘i interyer surati"></button><div class="product-top"><h3>Luma stol chirog‘i</h3><span class="eyebrow">YORUG‘LIK</span></div><p>Metall / mato · namunaviy tavsif</p><div class="product-bottom"><span class="price">420 000 so‘m<small>Namuna narxi</small></span><button class="button secondary" data-add="luma" aria-label="Luma stol chirog‘i: savatga qo‘shish">Savatga <span aria-hidden="true">+</span></button></div></article><article class="product" data-product="terra" data-category="dekor"><button class="product-photo" data-detail="terra" aria-label="Terra vaza haqida batafsil"><img src="images/vase.jpg" width="1067" height="1600" loading="lazy" alt="Terra vaza interyer surati"></button><div class="product-top"><h3>Terra vaza</h3><span class="eyebrow">DEKOR</span></div><p>Keramika · namunaviy tavsif</p><div class="product-bottom"><span class="price">180 000 so‘m<small>Namuna narxi</small></span><button class="button secondary" data-add="terra" aria-label="Terra vaza: savatga qo‘shish">Savatga <span aria-hidden="true">+</span></button></div></article></div><p class="cart-status" id="live-status" role="status" aria-live="polite"></p></section><section class="care-band" id="yondashuv"><div class="guide wrap"><div><p class="eyebrow">O‘YLANGAN TANLOV</p><h2>Avval makon.<br>Keyin buyum.</h2><p>Uydagi yorug‘lik, o‘lcham va kundalik odatlaringizdan boshlang. Uchta kichik savol tanlovni osonlashtiradi.</p></div><div><details><summary>Buyum makonga sig‘adimi?</summary><p>Joyning eni, bo‘yi va balandligini o‘lchang. Eshik ochilishi, yo‘lak va o‘tirish uchun yetarli masofa qoldiring. Bu katalogdagi o‘lchamlar demo sifatida berilgan.</p></details><details><summary>Material kundalik hayotga mosmi?</summary><p>Parvarish, namlik, quyosh va foydalanish tezligini hisobga oling. Haqiqiy mahsulotda material hamda kafolatni sotuvchidan tekshiring.</p></details><details><summary>Bu yerda buyurtma bersam bo‘ladimi?</summary><p>Bu mustaqil katalog namunasi. Savat faqat shu brauzerda saqlanadi. Buyurtma, to‘lov yoki yetkazish amalga oshirilmaydi; tanlov matn fayli sifatida olinadi.</p></details></div></div></section></main><footer class="footer wrap"><div><a class="wordmark" href="#main">forma<span>.</span></a><p>Mustaqil konsept katalog. Suratlar ilhom uchun; nom, narx, material va o‘lchamlar namunaviy. Mavjud mahsulot taklifi emas.</p></div><nav aria-label="Qo‘shimcha havolalar"><a href="https://azizbeksafarov.github.io/design/">Dizaynlar</a><a href="https://azizbeksafarov.github.io/design/forma/">AI konteksti</a><a href="CREDITS.md">Surat mualliflari</a></nav></footer><dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title">Buyum haqida</h2><button class="close" data-close="detail" aria-label="Tafsilotni yopish">×</button></div><div class="dialog-content detail-grid"><img id="detail-image" class="detail-image" alt=""><div><p class="eyebrow">NAMUNAVIY XUSUSIYATLAR</p><p id="detail-text"></p><dl class="facts"><div class="fact"><dt>MATERIAL</dt><dd id="detail-material"></dd></div><div class="fact"><dt>O‘LCHAM</dt><dd id="detail-size"></dd></div></dl><h3 id="detail-price"></h3><button class="button" id="detail-add">Savatga qo‘shish <span aria-hidden="true">+</span></button><p class="small" id="detail-care"></p></div></div></dialog><dialog class="cart-drawer" id="cart" aria-labelledby="cart-heading"><div class="dialog-head"><h2 id="cart-heading" tabindex="-1">Sizning tanlovingiz</h2><button class="close" data-close="cart" aria-label="Savatni yopish">×</button></div><div class="dialog-content"><p class="cart-empty" id="cart-empty">Hozircha savat bo‘sh. Kolleksiyadan buyum tanlang.</p><ul class="cart-items" id="cart-items"></ul><div class="cart-total"><span>Jami</span><span id="cart-total">0 so‘m</span></div><button class="button" id="export-cart" disabled>Tanlovni yuklab olish <span aria-hidden="true">↓</span></button><p class="small">Namuna narxlari bo‘yicha hisob. To‘lov yoki buyurtma yuborilmaydi.</p><p class="small" id="storage-note">Tanlov shu brauzerda saqlanadi.</p></div></dialog></body></html>
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#faf9f5"><meta name="description" content="Zamonaviy obyekt studiyasi: kuchli Manrope, qora savdo tugmalari, yirik narxlar va balandligi turlicha fotografik shelf."><title>Forma — sokin shakl, iliq hayot</title><link rel="icon" href="mark.svg?v=e068eedfcc" type="image/svg+xml"><script type="module" src="app.js?v=66eb0d4560"></script><meta name="composition" content="task-specific-v3"><link rel="preload" href="fonts/manrope.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=99ea84b76b"><link rel="stylesheet" href="layout.css?v=ae5b383732"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><p class="concept-note">KONSEPT KATALOG · NARX VA XUSUSIYATLAR NAMUNAVIY</p><header class="header wrap"><a class="wordmark" href="#main" aria-label="forma bosh sahifasi">forma<span>.</span></a><nav class="nav" aria-label="Asosiy navigatsiya"><a href="#kolleksiya">Kolleksiya</a><a href="#yondashuv">Yondashuv</a></nav><details class="mobile-nav"><summary>Menyu <span aria-hidden="true">+</span></summary><nav aria-label="Mobil navigatsiya"><a href="#kolleksiya">Kolleksiya</a><a href="#yondashuv">Yondashuv</a></nav></details><button class="cart-open" id="cart-open" aria-haspopup="dialog">Savat <span id="cart-count">0</span> ↗</button></header><main id="main"><div class="inventory-intro wrap"><p class="eyebrow">FORMA / OBYEKTLAR KUTUBXONASI</p><h1>Tanlangan<br>buyumlar.<span>01—03 / OBYEKTLAR</span></h1><p>Uchta buyum. Material, o‘lcham va parvarish tafsilotlari bilan. O‘zingizga mosini yaqindan ko‘ring.</p></div><section class="section wrap" id="kolleksiya"><h2 class="sr-only">Kolleksiyadagi buyumlar</h2><div class="shop-tools"><div class="filters" role="group" aria-label="Buyum kategoriyasi"><button data-filter="all" aria-pressed="true">Barchasi</button><button data-filter="mebel" aria-pressed="false">Mebel</button><button data-filter="yoruglik" aria-pressed="false">Yorug‘lik</button><button data-filter="dekor" aria-pressed="false">Dekor</button></div><span class="small" id="product-count" role="status">3 ta buyum</span></div><div class="products"><article class="product" data-product="rattan" data-category="mebel"><button class="product-photo" data-detail="rattan" aria-label="To‘qima stul haqida batafsil"><img src="images/chair.jpg" width="1067" height="1600" loading="lazy" alt="To‘qima stul interyer surati"></button><div class="product-top"><h3>To‘qima stul</h3><span class="eyebrow">MEBEL</span></div><p>Yog‘och / to‘qima · namunaviy tavsif</p><div class="product-bottom"><span class="price">1 290 000 so‘m<small>Namuna narxi</small></span><button class="button secondary" data-add="rattan" aria-label="To‘qima stul: savatga qo‘shish">Savatga <span aria-hidden="true">+</span></button></div></article><article class="product" data-product="luma" data-category="yoruglik"><button class="product-photo" data-detail="luma" aria-label="Luma stol chirog‘i haqida batafsil"><img src="images/lamp.jpg" width="1067" height="1600" loading="lazy" alt="Luma stol chirog‘i interyer surati"></button><div class="product-top"><h3>Luma stol chirog‘i</h3><span class="eyebrow">YORUG‘LIK</span></div><p>Metall / mato · namunaviy tavsif</p><div class="product-bottom"><span class="price">420 000 so‘m<small>Namuna narxi</small></span><button class="button secondary" data-add="luma" aria-label="Luma stol chirog‘i: savatga qo‘shish">Savatga <span aria-hidden="true">+</span></button></div></article><article class="product" data-product="terra" data-category="dekor"><button class="product-photo" data-detail="terra" aria-label="Terra vaza haqida batafsil"><img src="images/vase.jpg" width="1067" height="1600" loading="lazy" alt="Terra vaza interyer surati"></button><div class="product-top"><h3>Terra vaza</h3><span class="eyebrow">DEKOR</span></div><p>Keramika · namunaviy tavsif</p><div class="product-bottom"><span class="price">180 000 so‘m<small>Namuna narxi</small></span><button class="button secondary" data-add="terra" aria-label="Terra vaza: savatga qo‘shish">Savatga <span aria-hidden="true">+</span></button></div></article></div><p class="cart-status" id="live-status" role="status" aria-live="polite"></p></section><section class="care-band" id="yondashuv"><div class="guide wrap"><div><p class="eyebrow">O‘YLANGAN TANLOV</p><h2>Avval makon.<br>Keyin buyum.</h2><p>Uydagi yorug‘lik, o‘lcham va kundalik odatlaringizdan boshlang. Uchta kichik savol tanlovni osonlashtiradi.</p></div><div><details><summary>Buyum makonga sig‘adimi?</summary><p>Joyning eni, bo‘yi va balandligini o‘lchang. Eshik ochilishi, yo‘lak va o‘tirish uchun yetarli masofa qoldiring. Bu katalogdagi o‘lchamlar demo sifatida berilgan.</p></details><details><summary>Material kundalik hayotga mosmi?</summary><p>Parvarish, namlik, quyosh va foydalanish tezligini hisobga oling. Haqiqiy mahsulotda material hamda kafolatni sotuvchidan tekshiring.</p></details><details><summary>Bu yerda buyurtma bersam bo‘ladimi?</summary><p>Bu mustaqil katalog namunasi. Savat faqat shu brauzerda saqlanadi. Buyurtma, to‘lov yoki yetkazish amalga oshirilmaydi; tanlov matn fayli sifatida olinadi.</p></details></div></div></section></main><footer class="footer wrap"><div><a class="wordmark" href="#main">forma<span>.</span></a><p>Mustaqil konsept katalog. Suratlar ilhom uchun; nom, narx, material va o‘lchamlar namunaviy. Mavjud mahsulot taklifi emas.</p></div><nav aria-label="Qo‘shimcha havolalar"><a href="https://azizbeksafarov.github.io/design/">Dizaynlar</a><a href="https://azizbeksafarov.github.io/design/forma/">AI konteksti</a><a href="CREDITS.md">Surat mualliflari</a></nav></footer><dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title">Buyum haqida</h2><button class="close" data-close="detail" aria-label="Tafsilotni yopish">×</button></div><div class="dialog-content detail-grid"><img id="detail-image" class="detail-image" alt=""><div><p class="eyebrow">NAMUNAVIY XUSUSIYATLAR</p><p id="detail-text"></p><dl class="facts"><div class="fact"><dt>MATERIAL</dt><dd id="detail-material"></dd></div><div class="fact"><dt>O‘LCHAM</dt><dd id="detail-size"></dd></div></dl><h3 id="detail-price"></h3><button class="button" id="detail-add">Savatga qo‘shish <span aria-hidden="true">+</span></button><p class="small" id="detail-care"></p></div></div></dialog><dialog class="cart-drawer" id="cart" aria-labelledby="cart-heading"><div class="dialog-head"><h2 id="cart-heading" tabindex="-1">Sizning tanlovingiz</h2><button class="close" data-close="cart" aria-label="Savatni yopish">×</button></div><div class="dialog-content"><p class="cart-empty" id="cart-empty">Hozircha savat bo‘sh. Kolleksiyadan buyum tanlang.</p><ul class="cart-items" id="cart-items"></ul><div class="cart-total"><span>Jami</span><span id="cart-total">0 so‘m</span></div><button class="button" id="export-cart" disabled>Tanlovni yuklab olish <span aria-hidden="true">↓</span></button><p class="small">Namuna narxlari bo‘yicha hisob. To‘lov yoki buyurtma yuborilmaydi.</p><p class="small" id="storage-note">Tanlov shu brauzerda saqlanadi.</p></div></dialog></body></html>
 ```
 
 ## site/style.css
@@ -23,7 +23,7 @@ Source fingerprint: `ad4bccfcf7c87ad2bc887aa871b1ede0ee3313292eed11437c6ce4ef81e
 ```css
 :root{--ink:#25251f;--line:#c3c2b8;--muted:#55564e;--focus:#a34722;--modal:#fffefb;--sans:'Object Text',sans-serif;--serif:'Object Text',sans-serif;color-scheme:light}
 body{background:#faf9f5;color:var(--ink);font:500 16px/1.6 var(--sans)}
-.concept-note{text-align:center;background:var(--ink);color:#fff;font-size:12px;font-weight:650;letter-spacing:.02em;padding:10px 20px}
+.concept-note{text-align:center;background:var(--ink);color:#fff;font-size:14px;font-weight:650;letter-spacing:.02em;padding:10px 20px}
 .header{display:flex;flex-wrap:wrap;align-items:center;gap:36px;padding-block:24px;border-bottom:1px solid var(--line);min-height:95px}
 .wordmark{font:800 48px/.95 var(--sans);letter-spacing:-3px}
 .wordmark span{color:#a2633c}
@@ -34,16 +34,16 @@ body{background:#faf9f5;color:var(--ink);font:500 16px/1.6 var(--sans)}
 .cart-open{background:var(--ink);color:#fff;border:0;padding:10px 16px;min-height:46px;font-size:14px;font-weight:750;min-width:110px;text-align:center}
 .cart-open span{display:inline-grid;place-items:center;border:0;background:#fff;color:var(--ink);border-radius:0;width:24px;height:24px;margin-inline:6px;font-weight:800}
 .inventory-intro{display:grid;grid-template-columns:1.8fr 1fr;align-items:end;gap:16px 70px;padding:30px 0 25px}
-.inventory-intro>.eyebrow{grid-column:1/-1;font-size:12px;font-weight:750;color:var(--muted);letter-spacing:.04em}
+.inventory-intro>.eyebrow{grid-column:1/-1;font-size:14px;font-weight:750;color:var(--muted);letter-spacing:.04em}
 .inventory-intro h1{font:800 clamp(42px,5vw,76px)/1.04 var(--sans);letter-spacing:-.065em;max-width:800px}
-.inventory-intro h1 span{display:block;font:700 12px/1.5 var(--sans);letter-spacing:.04em;margin-top:20px;color:var(--muted)}
+.inventory-intro h1 span{display:block;font:700 14px/1.5 var(--sans);letter-spacing:.04em;margin-top:20px;color:var(--muted)}
 .inventory-intro>p:last-child{font-size:16px;line-height:1.6;color:var(--muted);max-width:360px;padding-bottom:3px}
 .section{padding-bottom:65px}
 .shop-tools{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);padding:15px 0 25px}
 .filters{display:flex;gap:10px;flex-wrap:wrap}
 .filters button{background:transparent;border:2px solid transparent;min-height:44px;padding:8px 14px;font-size:14px;font-weight:750;color:var(--muted)}
 .filters button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
-.shop-tools>.small{font-size:12px;color:#756d61}
+.shop-tools>.small{font-size:14px;color:#756d61}
 .products{display:grid;grid-template-columns:1.3fr 1fr .9fr;gap:30px;align-items:end}
 .product{min-width:0;padding-bottom:10px}
 .product-photo{width:100%;height:300px;border:0;padding:0;background:#eeece6;overflow:hidden;display:block}
@@ -57,11 +57,11 @@ body{background:#faf9f5;color:var(--ink);font:500 16px/1.6 var(--sans)}
 [data-product=terra] .product-photo{height:200px}
 .product-top{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:baseline;margin-top:20px}
 .product-top h3{font:750 clamp(21px,2vw,29px)/1.15 var(--sans);letter-spacing:-.04em}
-.product-top .eyebrow{font-size:12px;color:var(--muted);letter-spacing:.02em;font-weight:750}
+.product-top .eyebrow{font-size:14px;color:var(--muted);letter-spacing:.02em;font-weight:750}
 .product>p{font-size:14px;font-weight:500;color:var(--muted);margin-top:10px;line-height:1.6}
 .product-bottom{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:15px;margin-top:20px}
 .price{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.04em;line-height:1.3}
-.price small{display:block;font-size:12px;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:6px}
+.price small{display:block;font-size:14px;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:6px}
 .button{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;border:2px solid var(--ink);background:var(--ink);color:#fff;padding:12px 18px;min-height:48px;font-size:14px;font-weight:750;transition:background .18s,box-shadow .18s}
 .button:hover{background:#5c4d3a}
 .button.secondary{color:#fff;background:var(--ink);border-color:var(--ink)}
@@ -71,7 +71,7 @@ body{background:#faf9f5;color:var(--ink);font:500 16px/1.6 var(--sans)}
 .cart-status{margin-top:20px;min-height:30px;font-size:15px;font-weight:700;color:#255a3c;line-height:1.6}
 .care-band{border-top:1px solid var(--line);padding-block:50px;background:#eee9df}
 .guide{display:grid;grid-template-columns:1fr 1.2fr;gap:100px}
-.guide .eyebrow{color:#736858;font-size:12px}
+.guide .eyebrow{color:#736858;font-size:14px}
 .guide h2{font:800 clamp(34px,4vw,52px)/1.08 var(--sans);letter-spacing:-.055em;margin-top:20px}
 .guide p{font-size:16px;color:var(--muted);line-height:1.7;margin-top:20px;max-width:480px}
 .guide details{border-bottom:1px solid #cfc5b4;padding-block:13px}
@@ -80,20 +80,20 @@ body{background:#faf9f5;color:var(--ink);font:500 16px/1.6 var(--sans)}
 .guide details[open] summary::after{content:'−'}
 .guide details p{max-width:600px;margin:10px 0}
 .footer .wordmark{font:800 40px/1 var(--sans);letter-spacing:-3px}
-.footer p{color:#736858;font-size:12px;margin-top:20px}
-.footer nav{font-size:12px}
+.footer p{color:#736858;font-size:14px;margin-top:20px}
+.footer nav{font-size:14px}
 .dialog-head h2{font:800 clamp(26px,3vw,37px)/1.12 var(--sans);letter-spacing:-.05em}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .detail-grid .detail-image{height:440px;object-position:bottom}
 #detail-image[src*=lamp]{object-position:top}
 .detail-grid>div>p{font-size:16px;color:var(--muted);margin-block:16px;line-height:1.65}
-.detail-grid .eyebrow{font-size:12px}
+.detail-grid .eyebrow{font-size:14px}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:25px 0}
 .fact{border-top:1px solid var(--line);padding-top:12px}
-.fact dt{font-size:12px;color:var(--muted);margin-bottom:7px;font-weight:650}
+.fact dt{font-size:14px;color:var(--muted);margin-bottom:7px;font-weight:650}
 .fact dd{font-size:15px;font-weight:700;margin:0}
 #detail-price{font:800 30px/1.3 var(--sans);letter-spacing:-.04em;margin-bottom:18px}
-.small{font-size:13px;line-height:1.7;color:var(--muted)}
+.small{font-size:14px;line-height:1.7;color:var(--muted)}
 .cart-drawer{height:100dvh;max-height:100dvh;width:min(500px,100%);margin:0 0 0 auto;border:0}
 .cart-drawer[open]{animation:slide-in .3s ease-out}
 .cart-items{padding:0;list-style:none;margin:0}
@@ -104,7 +104,7 @@ body{background:#faf9f5;color:var(--ink);font:500 16px/1.6 var(--sans)}
 .cart-item p{font-size:14px;margin-top:10px;color:var(--muted)}
 .quantity{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px}
 .quantity button{min-width:44px;min-height:44px;background:#eee;border:0;padding:8px;font-size:17px;font-weight:750}
-.quantity span{min-width:24px;text-align:center;font-size:13px}
+.quantity span{min-width:24px;text-align:center;font-size:14px}
 .quantity .remove{font-size:14px;border:0;background:transparent;text-decoration:underline}
 .cart-total{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding:25px 0;font-size:23px;font-weight:800}
 #export-cart{width:100%}
@@ -121,7 +121,7 @@ to{transform:none}
 .product-top h3{font:750 clamp(21px,2vw,29px)/1.15 var(--sans);letter-spacing:-.04em}
 .inventory-intro{gap:20px 40px}
 .guide{gap:60px}
-.product-top .eyebrow{font-size:12px;color:var(--muted);letter-spacing:.02em;font-weight:750}
+.product-top .eyebrow{font-size:14px;color:var(--muted);letter-spacing:.02em;font-weight:750}
 }
 
 @media(max-width:700px){.header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;padding-block:18px;min-height:0}.header .wordmark{grid-column:1;grid-row:1}.header .cart-open{grid-column:2;grid-row:1}.header .nav{grid-column:1/-1;grid-row:2;margin:0;justify-content:flex-start;gap:24px}
@@ -130,13 +130,13 @@ to{transform:none}
 .cart-open{background:var(--ink);color:#fff;border:0;padding:10px 16px;min-height:46px;font-size:14px;font-weight:750;min-width:110px;text-align:center}
 .cart-open span{display:inline-grid;place-items:center;border:0;background:#fff;color:var(--ink);border-radius:0;width:24px;height:24px;margin-inline:6px;font-weight:800}
 .inventory-intro{display:block;padding:30px 0 26px}
-.inventory-intro>.eyebrow{grid-column:1/-1;font-size:12px;font-weight:750;color:var(--muted);letter-spacing:.04em}
+.inventory-intro>.eyebrow{grid-column:1/-1;font-size:14px;font-weight:750;color:var(--muted);letter-spacing:.04em}
 .inventory-intro h1{font:800 clamp(42px,5vw,76px)/1.04 var(--sans);letter-spacing:-.065em;max-width:800px}
-.inventory-intro h1 span{display:block;font:700 12px/1.5 var(--sans);letter-spacing:.04em;margin-top:20px;color:var(--muted)}
+.inventory-intro h1 span{display:block;font:700 14px/1.5 var(--sans);letter-spacing:.04em;margin-top:20px;color:var(--muted)}
 .inventory-intro>p:last-child{font-size:16px;line-height:1.6;color:var(--muted);max-width:360px;padding-bottom:3px}
 .shop-tools{gap:10px;padding-bottom:20px}
 .filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;width:100%}
-.filters button{background:transparent;border:2px solid transparent;min-height:44px;padding:8px 4px;font-size:13px;font-weight:750;color:var(--muted)}
+.filters button{background:transparent;border:2px solid transparent;min-height:44px;padding:8px 4px;font-size:14px;font-weight:750;color:var(--muted)}
 .products{display:grid;grid-template-columns:1fr;gap:36px;align-items:start}
 .product:first-child{grid-column:1/-1}
 .product:first-child .product-photo{height:290px}
@@ -144,14 +144,14 @@ to{transform:none}
 .product-top h3{font:750 clamp(21px,2vw,29px)/1.15 var(--sans);letter-spacing:-.04em}
 .product:first-child .product-top h3{font-size:clamp(26px,3vw,34px)}
 .product-top{gap:7px;margin-top:15px}
-.product-top .eyebrow{font-size:12px;color:var(--muted);letter-spacing:.02em;font-weight:750}
+.product-top .eyebrow{font-size:14px;color:var(--muted);letter-spacing:.02em;font-weight:750}
 .product>p{font-size:14px;font-weight:500;color:var(--muted);margin-top:10px;line-height:1.6}
 .product-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:18px}
 .product-bottom .button{min-height:48px;padding:12px 16px;font-size:14px;font-weight:750}
 .product:first-child .product-bottom{display:flex;align-items:center;justify-content:space-between}
 .product:first-child .product-bottom .button{margin:0}
 .price{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.04em;line-height:1.3}
-.price small{display:block;font-size:12px;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:6px}
+.price small{display:block;font-size:14px;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:6px}
 .guide{grid-template-columns:1fr;gap:30px}
 .guide h2{font:800 clamp(34px,4vw,52px)/1.08 var(--sans);letter-spacing:-.055em;margin-top:20px}
 .guide p{font-size:16px;color:var(--muted);line-height:1.7;margin-top:20px;max-width:480px}
@@ -174,6 +174,16 @@ to{transform:none}
 
 [data-product=terra] .product-photo img,#detail-image[src*=vase],.cart-item>img[src*=vase]{object-position:center 25%}
 
+/* Product catalogue: weight and clear prices, without shrinking service copy. */
+.inventory-intro>p:last-child,.product>p,.guide p{font-size:18px;line-height:1.7}
+.product-top h3{font-size:29px}.product-bottom .button{font-size:16px}.price{font-size:26px}.price small{font-size:14px}
+.filters button{font-size:15px}.fact dd{font-size:17px}.cart-item p{font-size:16px}.small{font-size:15px}
+@media(max-width:700px){.filters{display:flex;flex-wrap:wrap;gap:6px}.filters button{padding:10px 14px;flex:1 1 auto}.inventory-intro h1{letter-spacing:-.04em}.product-top h3{font-size:28px}}
+
+/* Motion: a quick quantity acknowledgement, followed by the existing side drawer. */
+@keyframes forma-added{0%{transform:scale(1)}45%{transform:scale(.94)}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:no-preference){.button.just-added{animation:forma-added 280ms cubic-bezier(.2,.8,.2,1)}}
+
 ```
 
 ## site/app.js
@@ -182,8 +192,8 @@ to{transform:none}
 import {products,normalize,change,total,money,exportCart} from './model.js?v=878bdb00f7';
 const $=s=>document.querySelector(s),key='forma-cart-v2';let cart=normalize(null),category='all',opener,selected;
 let storageUsable=true;
-function read(){if(!storageUsable)return normalize(cart);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{return normalize(null);}}
-function write(){try{localStorage.setItem(key,JSON.stringify(cart));}catch{storageUsable=false;$('#storage-note').textContent='Saqlash cheklangan. Tanlovingizni fayl qilib yuklab oling.';}}
+function read(){if(!storageUsable)return normalize(cart);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(cart);}}
+function write(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(cart));}catch{storageUsable=false;$('#storage-note').textContent='Saqlash cheklangan. Tanlovingizni fayl qilib yuklab oling.';}}
 function mutate(id,delta){const before=read();cart=change(before,id,delta);write();renderCart();return (before[id]||0)!==(cart[id]||0);}
 function renderCart(){
  document.querySelectorAll('[data-add]').forEach(b=>{const full=(cart[b.dataset.add]||0)>=20;b.disabled=full;b.textContent=full?'Limit: 20':'Savatga +';});

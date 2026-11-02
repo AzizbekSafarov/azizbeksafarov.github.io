@@ -1,11 +1,11 @@
 # Samar — editable source snapshot
 
-Source fingerprint: `5aab28e6d8e1db89de5e1705d238178f5aa2ef8daca525f6c5ee8e1c112f7da4`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `601229aab195e4a8cd17b22dfae3f1fb1cdadc67c294560064fb7408dce45f94`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
 ```html
-<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f1f4f3"><meta name="description" content="Sayohat atlasi: dadil Lora sarlavhasi, yumaloq manzil kartalari, to‘liq rangli reja tugmalari va buklama xarita."><title>Samar — Samarqand o‘z ritmingizda</title><link rel="icon" href="mark.svg?v=7840cff495" type="image/svg+xml"><script type="module" src="app.js?v=804ad584fa"></script><meta name="composition" content="task-specific-v3"><link rel="preload" href="fonts/lora.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/sourcesans3.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=835f1c97d9"><link rel="stylesheet" href="layout.css?v=18f473d93f"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="header wrap"><a class="wordmark" href="#main" aria-label="samar bosh sahifasi">samar<span>.</span></a><nav class="nav" aria-label="Asosiy navigatsiya"><a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a><a href="#tayyorgarlik">Tayyorgarlik</a></nav><details class="mobile-nav"><summary>Menyu <span aria-hidden="true">+</span></summary><nav aria-label="Mobil navigatsiya"><a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a><a href="#tayyorgarlik">Tayyorgarlik</a></nav></details></header><main id="main"><div class="atlas-intro wrap"><div><p class="eyebrow">O‘ZBEKISTON / SHAHAR QO‘LLANMASI 01</p><h1>Samarqand, o‘z ritmingizda.</h1></div><p>Manzillarni tanlang. Kuningizni tuzing. Yo‘lga o‘zingizga mos reja bilan chiqing.</p></div><div class="atlas-shell wrap"><section class="atlas-map" aria-labelledby="map-heading"><div class="atlas-map-title"><span>SHAHAR ATLASI</span><h2 id="map-heading">Uch bekat.<br> Bitta kun.</h2><p>Xaritadagi manzilni ochib, hikoyasini o‘qing.</p></div><div class="map-canvas"><svg viewBox="0 0 600 550" aria-hidden="true"><defs><pattern id="blocks" width="64" height="56" patternTransform="rotate(-22)" patternUnits="userSpaceOnUse"><rect x="5" y="5" width="49" height="40" rx="4" fill="#dfe2d3"/></pattern></defs><path fill="url(#blocks)" d="M0 0H600V550H0Z"/><path d="M-60 370Q160 240 245 330T650 130" stroke="#fbfaf2" stroke-width="38" fill="none"/><path d="M80-40L425 600M-30 130L630 455" stroke="#fbfaf2" stroke-width="19"/><path d="M150 410Q220 250 310 285T440 130" stroke="#bc714a" stroke-width="3" stroke-dasharray="5 7" fill="none"/><circle cx="150" cy="410" r="7" fill="#bc714a"/><circle cx="310" cy="285" r="7" fill="#bc714a"/><circle cx="440" cy="130" r="7" fill="#bc714a"/></svg><button class="map-pin pin-one" data-detail="registan"><span>01</span><strong>Registon</strong><small>Maydon va madrasalar ↗</small></button><button class="map-pin pin-two" data-detail="shohi-zinda"><span>02</span><strong>Shohi Zinda</strong><small>Naqsh va xotira ↗</small></button><button class="map-pin pin-three" data-detail="guri-amir"><span>03</span><strong>Go‘ri Amir</strong><small>Temuriylar merosi ↗</small></button><span class="map-north" aria-label="Shimol yo‘nalishi shartli">N ↑</span></div><p class="map-disclaimer">SHARTLI CHIZMA · MASOFA VA JOYLASHUV MASSHTABGA MOS EMAS</p><figure class="atlas-photo"><img src="images/registan.jpg" width="1600" height="1200" alt="Registon maydonining panoramasi" fetchpriority="high"><figcaption>Registon · Euyasik / CC BY-SA 3.0 <a href="CREDITS.md">Manba ↗</a></figcaption></figure></section><section id="manzillar" class="section atlas-directory"><div class="section-head"><div><p class="eyebrow">TANLANGAN MANZILLAR</p><h2>Manzil tanlang</h2></div><p>Hikoyasini o‘qing. Rejangizga qo‘shing. Har bir bekatga o‘z vaqtingizni ajrating.</p></div><div class="destinations"><article class="destination"><button class="place-photo" data-detail="registan" aria-label="Registon maydoni haqida batafsil"><img src="images/registan.jpg" width="800" height="640" loading="lazy" alt="Registon maydoni me’moriy ko‘rinishi"></button><div class="place-meta"><span>ME’MORCHILIK</span><span>~ 75 DAQIQA</span></div><h3>Registon maydoni</h3><p>Uch madrasa. Bitta ulkan taassurot.</p><div class="place-actions"><button class="button secondary" data-toggle="registan" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="registan" aria-label="Registon maydoni: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article><article class="destination"><button class="place-photo" data-detail="shohi-zinda" aria-label="Shohi Zinda haqida batafsil"><img src="images/shohi-zinda.jpg" width="800" height="640" loading="lazy" alt="Shohi Zinda me’moriy ko‘rinishi"></button><div class="place-meta"><span>NAQSH VA XOTIRA</span><span>~ 60 DAQIQA</span></div><h3>Shohi Zinda</h3><p>Moviy rangning ming xil ohangi.</p><div class="place-actions"><button class="button secondary" data-toggle="shohi-zinda" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="shohi-zinda" aria-label="Shohi Zinda: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article><article class="destination"><button class="place-photo" data-detail="guri-amir" aria-label="Go‘ri Amir haqida batafsil"><img src="images/guri-amir.jpg" width="800" height="640" loading="lazy" alt="Go‘ri Amir me’moriy ko‘rinishi"></button><div class="place-meta"><span>TEMURIYLAR MEROSI</span><span>~ 60 DAQIQA</span></div><h3>Go‘ri Amir</h3><p>Samarqand osmonidagi moviy gumbaz.</p><div class="place-actions"><button class="button secondary" data-toggle="guri-amir" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="guri-amir" aria-label="Go‘ri Amir: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article></div><p id="live-status" class="live" role="status" aria-live="polite"></p></section><section class="planner-band" id="reja"><div class="wrap planner"><div class="planner-intro"><p class="eyebrow">SIZNING KUNINGIZ</p><h2>Yo‘nalish tayyor.<br>Endi <em>siz tanlang.</em></h2><p>Manzillarni qo‘shing, tartibini o‘zgartiring va rejangizni matn fayli qilib oling. Shaxsiy ma’lumot yoki ro‘yxatdan o‘tish kerak emas.</p><div class="notice">Vaqtlar — tashrif uchun taklif. Manzillar orasiga shartli 20 daqiqa qo‘shiladi. Haqiqiy yo‘l va tashrif vaqtini joyida tekshiring.</div></div><div class="planner-box"><div class="planner-toolbar"><div><h3 id="plan-heading" tabindex="-1">Kun rejangiz</h3><label for="start-time">Boshlanish vaqti<input id="start-time" type="time" value="09:00" required></label></div><span class="count" id="plan-count" aria-label="Tanlangan manzillar soni">0</span></div><div id="plan-empty"><strong>Qaysi manzildan boshlaymiz?</strong><p>Yuqoridagi manzillardan kamida bittasini qo‘shing.</p></div><ol id="plan-list"></ol><div class="planner-bottom"><p class="small" id="plan-duration">Manzillarni tanlang</p><button id="download" class="button" disabled>Rejani yuklab olish <span aria-hidden="true">↓</span></button><p class="small" id="storage-note">Reja shu brauzerda saqlanadi. Bu chipta yoki bron emas.</p></div></div></div></section></div><section id="tayyorgarlik" class="section atlas-guide wrap"><div class="guide"><div><p class="eyebrow">YO‘LGA CHIQISHDAN OLDIN</p><h2>Kichik tayyorgarlik.<br>Yaxshiroq sayr.</h2><p>Manzillar haqida rasmiy ma’lumotlar Uzbekistan Travel’dan tekshirildi. Joriy narx va ochilish vaqti bu yerda taxmin qilinmaydi.</p><a class="text-link" href="https://uzbekistan.travel/en/i/samarkand/">Rasmiy shahar qo‘llanmasi ↗</a></div><div><details><summary>Chipta va ochilish vaqti</summary><p>Tashrif kuni rasmiy sahifa yoki manzil kassasidan tekshiring. Bu saytdagi reja kirish huquqini bermaydi.</p></details><details><summary>Kiyim va ziyorat odobi</summary><p>Diniy maskanlarda hurmatli kiyim va sokinlik muhim. Joydagi suratga olish va kirish ko‘rsatmalariga rioya qiling.</p></details><details><summary>Sayrni o‘zingizga moslang</summary><p>Qulay oyoq kiyim, suv va ob-havoga mos kiyim oling. Rejadagi vaqtlar taxminiy: dam olish uchun qo‘shimcha vaqt ajrating.</p></details></div></div></section></main><footer class="footer wrap"><div><a class="wordmark" href="#main">samar<span>.</span></a><p>Mustaqil sayohat rejalashtirish namunasi. Turagentlik, rasmiy portal yoki bron xizmati emas.</p></div><nav aria-label="Qo‘shimcha havolalar"><a href="https://azizbeksafarov.github.io/design/">Dizaynlar</a><a href="https://azizbeksafarov.github.io/design/samar/">AI konteksti</a><a href="CREDITS.md">Suratlar va manbalar</a></nav></footer><dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title">Manzil haqida</h2><button class="close" data-close aria-label="Yopish">×</button></div><div class="dialog-content"><img id="detail-image" class="detail-image" alt=""><p id="detail-text"></p><p class="notice" id="detail-note"></p><div class="dialog-links"><a id="detail-source" class="text-link" href="https://uzbekistan.travel/">Rasmiy manba ↗</a><a id="detail-map" class="text-link" href="https://maps.google.com/">Xaritada ko‘rish ↗</a></div></div></dialog></body></html>
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f1f4f3"><meta name="description" content="Sayohat atlasi: dadil Lora sarlavhasi, yumaloq manzil kartalari, to‘liq rangli reja tugmalari va buklama xarita."><title>Samar — Samarqand o‘z ritmingizda</title><link rel="icon" href="mark.svg?v=7840cff495" type="image/svg+xml"><script type="module" src="app.js?v=baec107051"></script><meta name="composition" content="task-specific-v3"><link rel="preload" href="fonts/lora.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/sourcesans3.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=835f1c97d9"><link rel="stylesheet" href="layout.css?v=43bd916786"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="header wrap"><a class="wordmark" href="#main" aria-label="samar bosh sahifasi">samar<span>.</span></a><nav class="nav" aria-label="Asosiy navigatsiya"><a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a><a href="#tayyorgarlik">Tayyorgarlik</a></nav><details class="mobile-nav"><summary>Menyu <span aria-hidden="true">+</span></summary><nav aria-label="Mobil navigatsiya"><a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a><a href="#tayyorgarlik">Tayyorgarlik</a></nav></details></header><main id="main"><div class="atlas-intro wrap"><div><p class="eyebrow">O‘ZBEKISTON / SHAHAR QO‘LLANMASI 01</p><h1>Samarqand, o‘z ritmingizda.</h1></div><p>Manzillarni tanlang. Kuningizni tuzing. Yo‘lga o‘zingizga mos reja bilan chiqing.</p></div><div class="atlas-shell wrap"><section class="atlas-map" aria-labelledby="map-heading"><div class="atlas-map-title"><span>SHAHAR ATLASI</span><h2 id="map-heading">Uch bekat.<br> Bitta kun.</h2><p>Xaritadagi manzilni ochib, hikoyasini o‘qing.</p></div><div class="map-canvas"><svg viewBox="0 0 600 550" aria-hidden="true"><defs><pattern id="blocks" width="64" height="56" patternTransform="rotate(-22)" patternUnits="userSpaceOnUse"><rect x="5" y="5" width="49" height="40" rx="4" fill="#dfe2d3"/></pattern></defs><path fill="url(#blocks)" d="M0 0H600V550H0Z"/><path d="M-60 370Q160 240 245 330T650 130" stroke="#fbfaf2" stroke-width="38" fill="none"/><path d="M80-40L425 600M-30 130L630 455" stroke="#fbfaf2" stroke-width="19"/><path d="M150 410Q220 250 310 285T440 130" stroke="#bc714a" stroke-width="3" stroke-dasharray="5 7" fill="none"/><circle cx="150" cy="410" r="7" fill="#bc714a"/><circle cx="310" cy="285" r="7" fill="#bc714a"/><circle cx="440" cy="130" r="7" fill="#bc714a"/></svg><button class="map-pin pin-one" data-detail="registan"><span>01</span><strong>Registon</strong><small>Maydon va madrasalar ↗</small></button><button class="map-pin pin-two" data-detail="shohi-zinda"><span>02</span><strong>Shohi Zinda</strong><small>Naqsh va xotira ↗</small></button><button class="map-pin pin-three" data-detail="guri-amir"><span>03</span><strong>Go‘ri Amir</strong><small>Temuriylar merosi ↗</small></button><span class="map-north" aria-label="Shimol yo‘nalishi shartli">N ↑</span></div><p class="map-disclaimer">SHARTLI CHIZMA · MASOFA VA JOYLASHUV MASSHTABGA MOS EMAS</p><figure class="atlas-photo"><img src="images/registan.jpg" width="1600" height="1200" alt="Registon maydonining panoramasi" fetchpriority="high"><figcaption>Registon · Euyasik / CC BY-SA 3.0 <a href="CREDITS.md">Manba ↗</a></figcaption></figure></section><section id="manzillar" class="section atlas-directory"><div class="section-head"><div><p class="eyebrow">TANLANGAN MANZILLAR</p><h2>Manzil tanlang</h2></div><p>Hikoyasini o‘qing. Rejangizga qo‘shing. Har bir bekatga o‘z vaqtingizni ajrating.</p></div><div class="destinations"><article class="destination"><button class="place-photo" data-detail="registan" aria-label="Registon maydoni haqida batafsil"><img src="images/registan.jpg" width="800" height="640" loading="lazy" alt="Registon maydoni me’moriy ko‘rinishi"></button><div class="place-meta"><span>ME’MORCHILIK</span><span>~ 75 DAQIQA</span></div><h3>Registon maydoni</h3><p>Uch madrasa. Bitta ulkan taassurot.</p><div class="place-actions"><button class="button secondary" data-toggle="registan" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="registan" aria-label="Registon maydoni: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article><article class="destination"><button class="place-photo" data-detail="shohi-zinda" aria-label="Shohi Zinda haqida batafsil"><img src="images/shohi-zinda.jpg" width="800" height="640" loading="lazy" alt="Shohi Zinda me’moriy ko‘rinishi"></button><div class="place-meta"><span>NAQSH VA XOTIRA</span><span>~ 60 DAQIQA</span></div><h3>Shohi Zinda</h3><p>Moviy rangning ming xil ohangi.</p><div class="place-actions"><button class="button secondary" data-toggle="shohi-zinda" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="shohi-zinda" aria-label="Shohi Zinda: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article><article class="destination"><button class="place-photo" data-detail="guri-amir" aria-label="Go‘ri Amir haqida batafsil"><img src="images/guri-amir.jpg" width="800" height="640" loading="lazy" alt="Go‘ri Amir me’moriy ko‘rinishi"></button><div class="place-meta"><span>TEMURIYLAR MEROSI</span><span>~ 60 DAQIQA</span></div><h3>Go‘ri Amir</h3><p>Samarqand osmonidagi moviy gumbaz.</p><div class="place-actions"><button class="button secondary" data-toggle="guri-amir" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="guri-amir" aria-label="Go‘ri Amir: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article></div><p id="live-status" class="live" role="status" aria-live="polite"></p></section><section class="planner-band" id="reja"><div class="wrap planner"><div class="planner-intro"><p class="eyebrow">SIZNING KUNINGIZ</p><h2>Yo‘nalish tayyor.<br>Endi <em>siz tanlang.</em></h2><p>Manzillarni qo‘shing, tartibini o‘zgartiring va rejangizni matn fayli qilib oling. Shaxsiy ma’lumot yoki ro‘yxatdan o‘tish kerak emas.</p><div class="notice">Vaqtlar — tashrif uchun taklif. Manzillar orasiga shartli 20 daqiqa qo‘shiladi. Haqiqiy yo‘l va tashrif vaqtini joyida tekshiring.</div></div><div class="planner-box"><div class="planner-toolbar"><div><h3 id="plan-heading" tabindex="-1">Kun rejangiz</h3><label for="start-time">Boshlanish vaqti<input id="start-time" type="time" value="09:00" required></label></div><span class="count" id="plan-count" aria-label="Tanlangan manzillar soni">0</span></div><div id="plan-empty"><strong>Qaysi manzildan boshlaymiz?</strong><p>Yuqoridagi manzillardan kamida bittasini qo‘shing.</p></div><ol id="plan-list"></ol><div class="planner-bottom"><p class="small" id="plan-duration">Manzillarni tanlang</p><button id="download" class="button" disabled>Rejani yuklab olish <span aria-hidden="true">↓</span></button><p class="small" id="storage-note">Reja shu brauzerda saqlanadi. Bu chipta yoki bron emas.</p></div></div></div></section></div><section id="tayyorgarlik" class="section atlas-guide wrap"><div class="guide"><div><p class="eyebrow">YO‘LGA CHIQISHDAN OLDIN</p><h2>Kichik tayyorgarlik.<br>Yaxshiroq sayr.</h2><p>Manzillar haqida rasmiy ma’lumotlar Uzbekistan Travel’dan tekshirildi. Joriy narx va ochilish vaqti bu yerda taxmin qilinmaydi.</p><a class="text-link" href="https://uzbekistan.travel/en/i/samarkand/">Rasmiy shahar qo‘llanmasi ↗</a></div><div><details><summary>Chipta va ochilish vaqti</summary><p>Tashrif kuni rasmiy sahifa yoki manzil kassasidan tekshiring. Bu saytdagi reja kirish huquqini bermaydi.</p></details><details><summary>Kiyim va ziyorat odobi</summary><p>Diniy maskanlarda hurmatli kiyim va sokinlik muhim. Joydagi suratga olish va kirish ko‘rsatmalariga rioya qiling.</p></details><details><summary>Sayrni o‘zingizga moslang</summary><p>Qulay oyoq kiyim, suv va ob-havoga mos kiyim oling. Rejadagi vaqtlar taxminiy: dam olish uchun qo‘shimcha vaqt ajrating.</p></details></div></div></section></main><footer class="footer wrap"><div><a class="wordmark" href="#main">samar<span>.</span></a><p>Mustaqil sayohat rejalashtirish namunasi. Turagentlik, rasmiy portal yoki bron xizmati emas.</p></div><nav aria-label="Qo‘shimcha havolalar"><a href="https://azizbeksafarov.github.io/design/">Dizaynlar</a><a href="https://azizbeksafarov.github.io/design/samar/">AI konteksti</a><a href="CREDITS.md">Suratlar va manbalar</a></nav></footer><dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title">Manzil haqida</h2><button class="close" data-close aria-label="Yopish">×</button></div><div class="dialog-content"><img id="detail-image" class="detail-image" alt=""><p id="detail-text"></p><p class="notice" id="detail-note"></p><div class="dialog-links"><a id="detail-source" class="text-link" href="https://uzbekistan.travel/">Rasmiy manba ↗</a><a id="detail-map" class="text-link" href="https://maps.google.com/">Xaritada ko‘rish ↗</a></div></div></dialog></body></html>
 ```
 
 ## site/style.css
@@ -33,7 +33,7 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .nav a:hover{text-decoration:underline;text-underline-offset:5px}
 .mobile-nav{display:none}
 .atlas-intro{display:flex;justify-content:space-between;align-items:end;gap:45px;padding:35px 0 28px}
-.atlas-intro .eyebrow{font-size:11px;color:#586f7d;letter-spacing:.1em}
+.atlas-intro .eyebrow{font-size:13px;color:#586f7d;letter-spacing:.1em}
 .atlas-intro h1{font:700 clamp(34px,3.8vw,52px)/1.15 var(--serif);letter-spacing:-1.3px;max-width:710px;margin-top:15px}
 .atlas-intro>p{font-size:16px;color:#49616f;max-width:330px;line-height:1.6}
 .atlas-shell{display:grid;grid-template-columns:290px minmax(0,1fr) 310px;border-block:1px solid #c3d1d8;align-items:start}
@@ -59,7 +59,7 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .place-actions .text-link{font-size:14px;min-height:44px;font-weight:700}
 .atlas-map{grid-column:2;grid-row:1;background:#e9e3d0;border-inline:1px solid #c3d1d8;padding:25px;position:relative;isolation:isolate}
 .atlas-map::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,#8a856122 50%,transparent 50.4%);pointer-events:none;z-index:-1}
-.atlas-map-title>span{font-size:11px;letter-spacing:.15em;color:#8d7858}
+.atlas-map-title>span{font-size:13px;letter-spacing:.15em;color:#695b40}
 .atlas-map-title h2{font:700 clamp(30px,3vw,39px)/1.18 var(--serif);letter-spacing:-1px;margin:17px 0;color:#294b59}
 .atlas-map-title p{font-size:15px;color:#5f624e;max-width:350px}
 .map-canvas{height:345px;position:relative;margin-top:25px;background:#e1e1cc;overflow:hidden;border:1px solid #c9c6ab}
@@ -68,9 +68,9 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .map-canvas svg>path:nth-of-type(1),.map-canvas svg>path:nth-of-type(2){stroke:#fbf8e9}
 .map-canvas svg>path:last-of-type{stroke:#4088a4;stroke-width:4}
 .map-pin{position:absolute;border:1px solid #d5cbb2;background:#fffdf5;box-shadow:0 3px 0 #8e89631a;border-radius:4px;padding:12px 13px 12px 43px;text-align:left;min-height:59px;max-width:90%;transition:transform .2s,background .2s}
-.map-pin>span{position:absolute;left:10px;top:13px;background:#173952;color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:11px}
+.map-pin>span{position:absolute;left:10px;top:13px;background:#173952;color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:13px}
 .map-pin strong{display:block;font:500 14px var(--serif)}
-.map-pin small{display:block;font-size:11px;color:#728384;margin-top:4px}
+.map-pin small{display:block;font-size:13px;color:#506468;margin-top:4px}
 .map-pin:hover{transform:translateY(-3px);background:#fff}
 .map-pin.is-planned{background:#dcecf0;border-color:#2e6c85}
 .map-pin.is-planned strong::after{content:' ✓';color:#286648}
@@ -78,14 +78,14 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .pin-two{right:5%;top:10%}
 .pin-three{left:6%;bottom:9%}
 .map-north{position:absolute;top:12px;left:12px;font:500 16px var(--serif);color:#43687b}
-.map-disclaimer{font-size:11px;letter-spacing:.02em;color:#80765f;margin-top:12px;line-height:1.7}
+.map-disclaimer{font-size:13px;letter-spacing:.02em;color:#695b40;margin-top:12px;line-height:1.7}
 .atlas-photo{margin-top:25px}
 .atlas-photo img{width:100%;height:170px;object-fit:cover}
-.atlas-photo figcaption{font-size:11px;color:#7e775e;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:9px}
+.atlas-photo figcaption{font-size:13px;color:#695b40;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:9px}
 .atlas-photo figcaption a{text-decoration:underline}
 .planner-band{grid-column:3;grid-row:1;background:#fffdf7;padding:25px 21px;position:sticky;top:0}
 .planner.wrap{width:100%;display:block}
-.planner-intro>.eyebrow{font-size:11px;color:#586f7d;letter-spacing:.1em}
+.planner-intro>.eyebrow{font-size:13px;color:#586f7d;letter-spacing:.1em}
 .planner-intro h2{font:500 30px/1.2 var(--serif);letter-spacing:-1px;margin:16px 0}
 .planner-intro h2 em{color:#9c6c35;font-weight:400}
 .planner-intro>p{font-size:16px;color:#49616f}
@@ -105,7 +105,7 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 #plan-list{list-style:none;padding:0;margin:20px 0 0}
 .plan-item{display:grid;grid-template-columns:49px minmax(0,1fr);gap:13px;padding:20px 0;border-top:1px solid #d8e0e3}
 .time{font-size:14px;font-weight:600;color:#a56e2f;font-variant-numeric:tabular-nums}
-.time small{display:block;font-size:11px;color:#617684;font-weight:400;margin-top:6px}
+.time small{display:block;font-size:13px;color:#617684;font-weight:400;margin-top:6px}
 .plan-item h3{font:750 19px/1.3 var(--sans)}
 .plan-item p{font-size:14px;color:#49616f;margin-top:9px}
 .plan-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
@@ -114,7 +114,7 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .live{font-size:15px;font-weight:650;margin-top:15px}
 .atlas-guide{padding-block:45px}
 .guide{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.guide .eyebrow{font-size:11px;color:#586f7d}
+.guide .eyebrow{font-size:13px;color:#586f7d}
 .guide h2{font:500 36px/1.2 var(--serif);letter-spacing:-1px;margin-top:20px}
 .guide p{font-size:16px;color:#49616f;max-width:480px;margin-top:20px}
 .guide .text-link{margin-top:22px}
@@ -124,8 +124,8 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .guide details[open] summary::after{content:'−'}
 .guide details p{margin:10px 0;max-width:600px}
 .footer .wordmark{font-size:34px}
-.footer p{color:#586f7d;margin-top:20px;font-size:11px}
-.footer nav{font-size:11px}
+.footer p{color:#586f7d;margin-top:20px;font-size:13px}
+.footer nav{font-size:13px}
 .dialog-head h2{font:750 29px/1.2 var(--sans)}
 .dialog-links{display:flex;flex-wrap:wrap;gap:25px;margin-top:20px}
 .detail-image{height:300px}
@@ -135,8 +135,8 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .planner-band{padding:22px 18px}
 .atlas-directory{padding-right:18px}
 .map-pin{padding-left:40px;padding-right:10px}
-.map-pin strong{font-size:12px}
-.map-pin small{font-size:11px}
+.map-pin strong{font-size:13px}
+.map-pin small{font-size:13px}
 .atlas-intro h1{font:700 clamp(34px,3.8vw,52px)/1.15 var(--serif);letter-spacing:-1.3px;max-width:710px;margin-top:15px}
 .place-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;justify-content:start;margin-top:7px}
 .place-actions .text-link{font-size:14px;min-height:44px;font-weight:700}
@@ -150,33 +150,33 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 .atlas-intro{gap:30px}
 .atlas-intro>p{font-size:16px;color:#49616f;max-width:330px;line-height:1.6}
 .map-pin strong{font-size:14px}
-.map-pin small{font-size:11px}
+.map-pin small{font-size:13px}
 }
 
 @media(max-width:650px){.header{padding-block:18px;gap:16px}
 .wordmark{font-size:32px}
 .nav{display:none}
 .mobile-nav{display:block;position:relative}
-.mobile-nav summary{padding:8px 12px;border:1px solid #b0c4cc;font-size:12px;min-height:40px;cursor:pointer;list-style:none}
+.mobile-nav summary{padding:8px 12px;border:1px solid #b0c4cc;font-size:13px;min-height:40px;cursor:pointer;list-style:none}
 .mobile-nav nav{position:absolute;z-index:10;right:0;width:220px;max-width:calc(100vw - 40px);background:#fffdf7;padding:10px 18px;border:1px solid #c3d1d8;margin-top:8px}
 .mobile-nav nav a{display:flex;align-items:center;min-height:46px;font-size:13px}
 .atlas-intro{display:block;padding-block:27px}
 .atlas-intro h1{font:700 clamp(34px,3.8vw,52px)/1.15 var(--serif);letter-spacing:-1.3px;max-width:710px;margin-top:15px}
 .atlas-intro>p{font-size:16px;color:#49616f;max-width:330px;line-height:1.6}
-.atlas-intro .eyebrow{font-size:11px}
+.atlas-intro .eyebrow{font-size:13px}
 .atlas-shell{display:flex;flex-direction:column}
 .atlas-map{order:0;width:100%;padding:24px 15px;border:0;border-bottom:1px solid #c3d1d8}
 .atlas-map-title h2{font:700 clamp(30px,3vw,39px)/1.18 var(--serif);letter-spacing:-1px;margin:17px 0;color:#294b59}
 .atlas-map-title h2 br{display:none}
 .atlas-map-title p{font-size:15px;color:#5f624e;max-width:350px}
 .map-canvas{height:300px}
-.map-pin strong{font-size:12px}
-.map-pin small{font-size:11px}
+.map-pin strong{font-size:13px}
+.map-pin small{font-size:13px}
 .map-pin{padding:11px 10px 11px 39px}
 .pin-one{left:22%}
 .pin-two{right:4%}
 .pin-three{left:4%}
-.map-disclaimer{font-size:11px}
+.map-disclaimer{font-size:13px}
 .atlas-photo{display:none}
 .atlas-directory{order:1;width:100%;padding:27px 0 10px}
 .section-head h2{font:750 24px/1.2 var(--sans);letter-spacing:-.03em}
@@ -208,10 +208,20 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 }
 
 @media(max-width:360px){.place-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;justify-content:start;margin-top:7px}
-.map-pin strong{font-size:11px}
-.map-pin small{font-size:11px}
+.map-pin strong{font-size:13px}
+.map-pin small{font-size:13px}
 .atlas-map-title h2{font:700 clamp(30px,3vw,39px)/1.18 var(--serif);letter-spacing:-1px;margin:17px 0;color:#294b59}
 }
+
+/* Travel guide: readable map annotations and narrative descriptions. */
+body{font-size:19px}.atlas-intro>p,.destination>p,.guide p{font-size:19px;line-height:1.75}
+.map-pin{min-height:64px}.map-pin small{font-size:13px;line-height:1.4}.map-pin strong{font-size:17px}
+.place-actions .button,.place-actions .text-link{font-size:16px;min-height:46px}.plan-item h3{font-size:26px}.plan-item p{font-size:16px}.plan-actions button{font-size:15px;min-height:44px}
+.map-disclaimer,.atlas-photo figcaption{font-size:13px;line-height:1.7}
+
+/* Motion: the selected map pin settles; route reordering uses the existing FLIP positions. */
+@keyframes samar-pin{from{transform:translateY(-7px)}65%{transform:translateY(2px)}to{transform:translateY(0)}}
+@media(prefers-reduced-motion:no-preference){.map-pin.is-planned{animation:samar-pin 360ms cubic-bezier(.2,.8,.2,1)}}
 
 ```
 
@@ -221,8 +231,8 @@ body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
 import {places,normalize,schedule,clock,exportPlan} from './model.js?v=bcb8054ec2';
 const key='samar-plan-v2';const $=s=>document.querySelector(s);let state=normalize(null),opener;
 let storageUsable=true;
-function read(){if(!storageUsable)return normalize(state);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{return normalize(null);}}
-function save(){try{localStorage.setItem(key,JSON.stringify(state));}catch{storageUsable=false;$('#storage-note').textContent='Brauzer saqlashga ruxsat bermadi. Rejangizni matn qilib yuklab oling.';}}
+function read(){if(!storageUsable)return normalize(state);try{return normalize(JSON.parse(localStorage.getItem(key)));}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(state);}}
+function save(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(state));}catch{storageUsable=false;$('#storage-note').textContent='Brauzer saqlashga ruxsat bermadi. Rejangizni matn qilib yuklab oling.';}}
 function update(fn){state=fn(read());save();render();}
 function render(){
  const oldPositions=new Map([...document.querySelectorAll('[data-plan-id]')].map(e=>[e.dataset.planId,e.getBoundingClientRect().top]));

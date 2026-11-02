@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-10-31",
-  "source_fingerprint": "511ef2ca7be8b4080293d50a6c2c98d3ffa662e9763edebdae1989eadb50533e",
+  "snapshot_date": "2026-11-02",
+  "source_fingerprint": "a7fc344648402b5c2e7fa5e97d56402d6bb211c834715a35a44b2dfbdf1cdc8d",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "07d51e8f746b60275005e56be2f92902627507b4c97a8f6dfaa60375a36fa9a8",
-  "archive_bytes": 1561273,
+  "archive_sha256": "42f477086891a98c7bdfb795da6510d130a7e8b00e6af63be8593d19bea66f76",
+  "archive_bytes": 1564783,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -25,7 +25,7 @@
     {
       "path": "src/main.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
-      "sha256": "7286cc92d52ac1fe98cae45fd0df1f23dc22d69dba55a6614b543584972ef4fd",
+      "sha256": "c4d2e5a1d370480f6d2314342d8554b423cf009bd42791c20dd594a6e598479f",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt"
     },
     {
@@ -55,13 +55,13 @@
     {
       "path": "src/persistence.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/persistence.js.txt",
-      "sha256": "be39cdf4b45c6be116dbf0b96e96b10276ed789481ea1ca815322dd271c0cad6",
+      "sha256": "b6a54e0a59e34bad6e01b7be3873356f68171c5befac6f2e4409afdc70c1d790",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/persistence.js.txt"
     },
     {
       "path": "src/persistence.test.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/persistence.test.js.txt",
-      "sha256": "294df27651374dd19da9568d24ae75d6f27af287dfdfe8a0bd009ada7395e1fa",
+      "sha256": "c922037eb9657cdc758d739b328ee1c2c11d7e04b76c542422a848afe1592252",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/persistence.test.js.txt"
     },
     {
@@ -110,13 +110,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 5097,
-      "sha256": "b8432ea79742a1b9e7f4a3e65b529b4d49dcfaf27d7c24e2bfc0f9ec21de3eef"
+      "bytes": 5367,
+      "sha256": "d8f3a9f0e865b9fa7d09d3b257902521991342eca6705a7e18a28019fc76aba3"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 17924,
-      "sha256": "df636e1e00098dffe71dc826a146a8e3398d0fb517292004ddc6531e803d8730"
+      "bytes": 18674,
+      "sha256": "bc552b980d70644f9c7a0b1c5c58ffed764aa3d81eb7990156f4f2318941c5ec"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -130,8 +130,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 28676,
-      "sha256": "63a39a0d504e940d71e65586bad1c8d5d3c000a3b87bab69a6677a80916fc87f"
+      "bytes": 28730,
+      "sha256": "cdfd8d1efd5b7e3c3871a86f0ae0a78a2c0f9d90b2de2b6a84063d4a2f8840b2"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -180,8 +180,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 202754,
-      "sha256": "a13d10dfd017b0b6ed4def5a9fd29ec96c6abc2ef4d6bcda5e16fb1f60766eeb"
+      "bytes": 205148,
+      "sha256": "f5b324117cc73c03dd605ae26ce5848fed651af47fdf582f549ee18e45ea5b7b"
     },
     {
       "path": "GEMINI.md",
@@ -196,7 +196,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1240,
-      "sha256": "8aa6b95908d86e764139494e9e0b74f99f5202087396ab074e800b87a821d3c2"
+      "sha256": "b0a9a2305bfdaca117b05005989f067e36d57bf31e0a650a03810dc3cfbe8906"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -216,7 +216,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 21643,
-      "sha256": "76ec03a145bfc1b7786fd0a8955c37295dd1da593c263402f5641c391c670408"
+      "sha256": "bec51a9af1df860a8efb21054ed90480aa752aec6d3d4b7b34c055d5b1405621"
     },
     {
       "path": "PREPARATION.md",
@@ -241,7 +241,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "b72f13e8fde045ca44d0766005edfd51a464b36520909f521744eb627e81272a"
+      "sha256": "26dc7f29a1498bedc369a9443dc54b5d3d6b94762d2d2681bc336f8430ff309a"
     },
     {
       "path": "README.md",
@@ -255,8 +255,8 @@
     },
     {
       "path": "SCORING-WORKPLAN.md",
-      "bytes": 5979,
-      "sha256": "ab33ffc47492a1f72c9b3bf710cee2ef52522a71e9b7a3b90a72ad78a73cda8b"
+      "bytes": 8373,
+      "sha256": "7567762cac1498dc7309e864f91376f17bb925a6dcdb44e5941d0a1989591834"
     },
     {
       "path": "START-HERE.md",
@@ -275,8 +275,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11246,
-      "sha256": "2af784dc76d3ef5083551de88e0a698712ef71eb5c44ff97301d7b3db75aead7"
+      "bytes": 11527,
+      "sha256": "c3b2da189feadfec340da76b029d503f8f53a23c501f5184066acf7504680d98"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -286,7 +286,7 @@
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
       "bytes": 5831,
-      "sha256": "fce635cad5c9b1609f1afa8f33258cd6a494cebc5b10d60d0f5c7815c98118a0"
+      "sha256": "09e0060f62e6113624280a46c45832b112d565fd5fda658d72219a36f540d6fa"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -295,8 +295,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13199,
-      "sha256": "a97f03179991e222b88840a5b21ac1d488dbc23328d80864fea87cf77f6522d2"
+      "bytes": 13213,
+      "sha256": "d295d1749de7af3d839191cf9caf3af0cb25a8ffc770ada7ea1397f431e32ee0"
     },
     {
       "path": "ZAXIRA/skelet/README.md",
@@ -500,13 +500,13 @@
     },
     {
       "path": "ZAXIRA/skelet/tekshir.js",
-      "bytes": 10532,
-      "sha256": "dca690f1c370bcf7deda0ab20f230d7681e2ffbc5ebb8738728efe9cc6883e8f"
+      "bytes": 11389,
+      "sha256": "a4d2f7770f74f120e126e87e04106cd2e715c47868fb555b3d0c0e241d8e2cd0"
     },
     {
       "path": "ZAXIRA/skelet/tekshir.test.mjs",
-      "bytes": 2785,
-      "sha256": "0e79370a934e3a22d4bb57170eab05d3884edf2d7fb40ec2ff0ca9b9387f22b3"
+      "bytes": 3572,
+      "sha256": "3394078434dd3422ecbc96ed9a2eda48408665ee15a0f36831112dbfb3aafc67"
     },
     {
       "path": "ZAXIRA/skelet/uslub.css",
@@ -516,7 +516,7 @@
     {
       "path": "kit.json",
       "bytes": 316,
-      "sha256": "dec15b6c77e9a11ea48ab63e45f3dadc0a1eddb9e51e38163a7b5e32e1a6a1a8"
+      "sha256": "1791c84e9dd8e6fd2831a46587e2c6a691fd6d6c81fa9affac5d00f3de05be25"
     },
     {
       "path": "serve.mjs",
@@ -564,14 +564,14 @@
       "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
     },
     {
+      "path": "site/dist/assets/index-BCSWKaNe.js",
+      "bytes": 741706,
+      "sha256": "28dd2b495df4ec3cc500b8066301526f154430e6710bba5868db5926abc926f4"
+    },
+    {
       "path": "site/dist/assets/index-D1Rt40jH.css",
       "bytes": 34454,
       "sha256": "ef817f5c4c7660fe4ccc1d139244e21ffa78b2ebdf369c7e8e92dc9c77f8b2c1"
-    },
-    {
-      "path": "site/dist/assets/index-L9N_9iA_.js",
-      "bytes": 741096,
-      "sha256": "bea0b1995c8b6fe7dd891b204c8f51ffdd8f17485de2a50b0e56ce39a37a24e9"
     },
     {
       "path": "site/dist/assets/material-symbols-CopIADRp.woff2",
@@ -616,7 +616,7 @@
     {
       "path": "site/dist/index.html",
       "bytes": 469,
-      "sha256": "7f846c2ec6dda7b9f81fa3770a54608f0457d63bcd33b88f1a2477773024dd51"
+      "sha256": "fb282b205f64ed2564af1338b83ee85f9b2fb3acb5634cbcfe5851bd84eb7fc4"
     },
     {
       "path": "site/download_symbols.py",
@@ -725,8 +725,8 @@
     },
     {
       "path": "site/src/main.jsx",
-      "bytes": 26252,
-      "sha256": "7286cc92d52ac1fe98cae45fd0df1f23dc22d69dba55a6614b543584972ef4fd"
+      "bytes": 26712,
+      "sha256": "c4d2e5a1d370480f6d2314342d8554b423cf009bd42791c20dd594a6e598479f"
     },
     {
       "path": "site/src/model.js",
@@ -740,13 +740,13 @@
     },
     {
       "path": "site/src/persistence.js",
-      "bytes": 2013,
-      "sha256": "be39cdf4b45c6be116dbf0b96e96b10276ed789481ea1ca815322dd271c0cad6"
+      "bytes": 2441,
+      "sha256": "b6a54e0a59e34bad6e01b7be3873356f68171c5befac6f2e4409afdc70c1d790"
     },
     {
       "path": "site/src/persistence.test.js",
-      "bytes": 6593,
-      "sha256": "294df27651374dd19da9568d24ae75d6f27af287dfdfe8a0bd009ada7395e1fa"
+      "bytes": 7605,
+      "sha256": "c922037eb9657cdc758d739b328ee1c2c11d7e04b76c542422a848afe1592252"
     },
     {
       "path": "site/src/style.css",

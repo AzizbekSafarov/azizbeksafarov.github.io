@@ -1,11 +1,11 @@
 # Meros — editable source snapshot
 
-Source fingerprint: `acf972dcb0eff92570708ca03545607980992a61d99501672f71c80125ac6119`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `20cb4923196e0b1dac34c44db2fde75db93f3b26af97388d052a52c3e5c160e5`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
 ```html
-<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ko‘rgazma plakati: og‘ir Alfa Slab One, dadil Archivo navigatsiyasi, yirik raqamli indeks va ultramarin/limon bloklari."><meta name="theme-color" content="#1d2ed8"><title>Meros — Madaniyat / raqamli muzey</title><link rel="icon" href="mark.svg?v=c11c9da4cb"><script type="module" src="app.js?v=6861304684"></script><link rel="preload" href="fonts/alfaslabone.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/archivo.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=8e43838ad4"><link rel="stylesheet" href="layout.css?v=d8469d9ee9"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="museum-nav wrap"><a href="#main">MEROS / RAQAMLI EKSPOZITSIYA</a><nav aria-label="Asosiy navigatsiya"><a href="#exhibits">Ko‘rgazma ↓</a><button id="saved-toggle" aria-pressed="false">Kolleksiyam (<span id="saved-count">0</span>)</button></nav></header><main id="main"><section class="museum-poster wrap"><div class="museum-kicker"><span>FOTOGRAFIK KUZATUVLAR</span><span>SAMARQAND / 01—03</span></div><h1>Shahar<br><span>xotirasi</span></h1><aside class="poster-index" aria-label="Ko‘rgazma indeksi"><p>KO‘RGAZMA INDEKSI</p><a href="#work-registan"><span class="index-number">01</span><span class="index-title">Maydon va mutanosiblik</span><span class="index-arrow" aria-hidden="true">↙</span></a><a href="#work-shohi"><span class="index-number">02</span><span class="index-title">Rangning xotirasi</span><span class="index-arrow" aria-hidden="true">↙</span></a><a href="#work-amir"><span class="index-number">03</span><span class="index-title">Gumbaz ostidagi hikoya</span><span class="index-arrow" aria-hidden="true">↙</span></a></aside><div class="poster-bottom"><p>Me’morchilikni ko‘rishning<br>boshqa bir usuli.</p><a class="btn" href="#exhibits">Ekspozitsiyaga kirish ↙</a><span class="poster-seal" aria-hidden="true">M<br>↘</span></div></section><section class="museum-feature"><figure><img src="images/shohi-zinda.jpg" width="1600" height="1029" alt="Shohi Zinda koshinkorligi, me’moriy hovli" fetchpriority="high"><figcaption><span>02 / SHOHI ZINDA</span><span>Bgag · CC0 / Foto ekspozitsiya</span></figcaption></figure></section><section class="exhibitions wrap" id="exhibits"><div class="exhibit-heading"><h2>Uch qarash.<br>Bitta shahar.</h2><div><div class="filter-bar" role="group" aria-label="Bo‘lim tanlash"><button data-filter="all" aria-pressed="true">Barchasi</button><button data-filter="architecture" aria-pressed="false">Me’morchilik</button><button data-filter="detail" aria-pressed="false">Detal</button></div><p id="exhibit-count"></p></div></div><div id="exhibit-list"></div><p class="empty" id="empty" hidden>Bu bo‘limda kolleksiyangizga asar qo‘shilmagan.</p><div class="museum-export"><p>O‘zingizning ko‘rgazmangizni tuzing.<br>Tanlangan lavhalar va manbalarni fayl qilib oling.</p><button class="btn" id="export" disabled>Kolleksiyani yuklash ↓</button></div><p id="status" class="live" role="status"></p></section></main><dialog id="reader" aria-labelledby="reader-title"><div class="dialog-top"><h2 id="reader-title"></h2><button class="close" data-close aria-label="Yopish">×</button></div><div class="reader" id="reader-body"></div><button class="btn" id="reader-save" aria-pressed="false">Saqlash</button></dialog><footer class="demo-footer wrap"><p>Mustaqil fotografik ekspozitsiya. Rasmiy muzey yoki chipta xizmati emas.</p><nav aria-label="Qo‘shimcha havolalar"><a href="../">Dizaynlar ↗</a><a href="../meros/">AI konteksti ↗</a><a href="CREDITS.md">Manbalar ↗</a></nav></footer></body></html>
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ko‘rgazma plakati: og‘ir Alfa Slab One, dadil Archivo navigatsiyasi, yirik raqamli indeks va ultramarin/limon bloklari."><meta name="theme-color" content="#1d2ed8"><title>Meros — Madaniyat / raqamli muzey</title><link rel="icon" href="mark.svg?v=c11c9da4cb"><script type="module" src="app.js?v=256ab055a0"></script><link rel="preload" href="fonts/alfaslabone.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/archivo.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=8e43838ad4"><link rel="stylesheet" href="layout.css?v=1e495da46b"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="museum-nav wrap"><a href="#main">MEROS / RAQAMLI EKSPOZITSIYA</a><nav aria-label="Asosiy navigatsiya"><a href="#exhibits">Ko‘rgazma ↓</a><button id="saved-toggle" aria-pressed="false">Kolleksiyam (<span id="saved-count">0</span>)</button></nav></header><main id="main"><section class="museum-poster wrap"><div class="museum-kicker"><span>FOTOGRAFIK KUZATUVLAR</span><span>SAMARQAND / 01—03</span></div><h1>Shahar<br><span>xotirasi</span></h1><aside class="poster-index" aria-label="Ko‘rgazma indeksi"><p>KO‘RGAZMA INDEKSI</p><a href="#work-registan"><span class="index-number">01</span><span class="index-title">Maydon va mutanosiblik</span><span class="index-arrow" aria-hidden="true">↙</span></a><a href="#work-shohi"><span class="index-number">02</span><span class="index-title">Rangning xotirasi</span><span class="index-arrow" aria-hidden="true">↙</span></a><a href="#work-amir"><span class="index-number">03</span><span class="index-title">Gumbaz ostidagi hikoya</span><span class="index-arrow" aria-hidden="true">↙</span></a></aside><div class="poster-bottom"><p>Me’morchilikni ko‘rishning<br>boshqa bir usuli.</p><a class="btn" href="#exhibits">Ekspozitsiyaga kirish ↙</a><span class="poster-seal" aria-hidden="true">M<br>↘</span></div></section><section class="museum-feature"><figure><img src="images/shohi-zinda.jpg" width="1600" height="1029" alt="Shohi Zinda koshinkorligi, me’moriy hovli" fetchpriority="high"><figcaption><span>02 / SHOHI ZINDA</span><span>Bgag · CC0 / Foto ekspozitsiya</span></figcaption></figure></section><section class="exhibitions wrap" id="exhibits"><div class="exhibit-heading"><h2>Uch qarash.<br>Bitta shahar.</h2><div><div class="filter-bar" role="group" aria-label="Bo‘lim tanlash"><button data-filter="all" aria-pressed="true">Barchasi</button><button data-filter="architecture" aria-pressed="false">Me’morchilik</button><button data-filter="detail" aria-pressed="false">Detal</button></div><p id="exhibit-count"></p></div></div><div id="exhibit-list"></div><p class="empty" id="empty" hidden>Bu bo‘limda kolleksiyangizga asar qo‘shilmagan.</p><div class="museum-export"><p>O‘zingizning ko‘rgazmangizni tuzing.<br>Tanlangan lavhalar va manbalarni fayl qilib oling.</p><button class="btn" id="export" disabled>Kolleksiyani yuklash ↓</button></div><p id="status" class="live" role="status"></p></section></main><dialog id="reader" aria-labelledby="reader-title"><div class="dialog-top"><h2 id="reader-title"></h2><button class="close" data-close aria-label="Yopish">×</button></div><div class="reader" id="reader-body"></div><button class="btn" id="reader-save" aria-pressed="false">Saqlash</button></dialog><footer class="demo-footer wrap"><p>Mustaqil fotografik ekspozitsiya. Rasmiy muzey yoki chipta xizmati emas.</p><nav aria-label="Qo‘shimcha havolalar"><a href="../">Dizaynlar ↗</a><a href="../meros/">AI konteksti ↗</a><a href="CREDITS.md">Manbalar ↗</a></nav></footer></body></html>
 ```
 
 ## site/style.css
@@ -32,11 +32,11 @@ body{background:#1d2ed8;color:#e5f344;font:500 18px/1.65 'Gallery UI',sans-serif
 .museum-nav button{border:2px solid #e5f344;background:#e5f344;color:#1d2ed8;padding:12px 16px;min-height:48px;font:750 14px/1.4 'Gallery UI',sans-serif}
 .museum-nav button[aria-pressed=true]{background:#e5f344;color:#1d2ed8;border-color:#e5f344}
 .museum-poster{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(230px,.65fr);gap:30px 65px;padding-block:25px 35px}
-.museum-kicker{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;grid-column:1/-1;font:650 12px/1.5 'Gallery UI',sans-serif;letter-spacing:.04em;color:#c5ceff}
+.museum-kicker{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;grid-column:1/-1;font:650 14px/1.5 'Gallery UI',sans-serif;letter-spacing:.04em;color:#c5ceff}
 .museum-poster h1{font:400 clamp(55px,6.7vw,102px)/1.08 'Gallery Display',serif;letter-spacing:-.035em;text-transform:none;margin:16px 0 0}
 .museum-poster h1 span{color:#e5f344;-webkit-text-stroke:0}
 .poster-index{align-self:end;font:750 17px/1.25 'Gallery UI',sans-serif;padding:0;display:grid;gap:10px}
-.poster-index>p{font:750 12px/1.5 'Gallery UI',sans-serif;letter-spacing:.08em;margin:0 0 8px;color:#fff}
+.poster-index>p{font:750 14px/1.5 'Gallery UI',sans-serif;letter-spacing:.08em;margin:0 0 8px;color:#fff}
 .poster-index a{display:grid;grid-template-columns:44px minmax(0,1fr) 28px;align-items:center;gap:12px;min-height:88px;padding:14px;background:#1524b3;border:0;box-shadow:inset 4px 0 #e5f344;color:#fff;transition:background .18s,translate .18s}
 .poster-index a:hover{background:#e5f344;color:#1d2ed8;translate:4px 0}
 .poster-bottom{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:5px}
@@ -48,7 +48,7 @@ body{background:#1d2ed8;color:#e5f344;font:500 18px/1.65 'Gallery UI',sans-serif
 .museum-feature{padding:0 0 25px}
 .museum-feature figure{display:grid;grid-template-columns:1fr 2fr;max-width:1500px;width:calc(100% - 80px);margin:auto;gap:25px}
 .museum-feature img{grid-column:2;width:100%;height:370px;object-fit:cover;object-position:center 65%;filter:saturate(.95)}
-.museum-feature figcaption{grid-column:1;grid-row:1;align-self:end;display:flex;flex-direction:column;gap:15px;font:650 13px/1.5 'Gallery UI',sans-serif;letter-spacing:.02em;color:#c5ceff;padding-bottom:8px;max-width:210px}
+.museum-feature figcaption{grid-column:1;grid-row:1;align-self:end;display:flex;flex-direction:column;gap:15px;font:650 14px/1.5 'Gallery UI',sans-serif;letter-spacing:.02em;color:#c5ceff;padding-bottom:8px;max-width:210px}
 .museum-feature figcaption::before{content:'02';font:400 135px/.9 'Gallery Display',serif;color:#e5f344;margin-bottom:25px;letter-spacing:-.07em}
 .exhibitions{padding-block:35px 70px}
 .exhibit-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:35px;border-top:1px solid #6a78ea;padding:28px 0 35px}
@@ -62,7 +62,7 @@ body{background:#1d2ed8;color:#e5f344;font:500 18px/1.65 'Gallery UI',sans-serif
 .exhibit-image{padding:0;border:0;overflow:hidden;width:100%;background:transparent}
 .exhibit-image img{width:100%;height:380px;object-fit:cover;transition:transform .6s,filter .6s;filter:saturate(.85)}
 .exhibit-image:hover img{transform:scale(1.025);filter:saturate(1)}
-.exhibit-copy>.eyebrow{font:750 13px/1.5 'Gallery UI',sans-serif;color:#c5ceff;letter-spacing:.04em}
+.exhibit-copy>.eyebrow{font:750 14px/1.5 'Gallery UI',sans-serif;color:#c5ceff;letter-spacing:.04em}
 .exhibit-copy h3{font:400 34px/1.18 'Gallery Display',serif;letter-spacing:-.035em;margin:20px 0}
 .exhibit-copy>p{font:500 18px/1.7 'Gallery Text',serif;color:#dce1ff;max-width:500px}
 .exhibit-copy>.btn{font-size:16px;margin-top:25px}
@@ -74,12 +74,12 @@ body{background:#1d2ed8;color:#e5f344;font:500 18px/1.65 'Gallery UI',sans-serif
 .museum-export>p{font:750 21px/1.5 'Gallery UI',sans-serif;max-width:650px}
 .museum-export>.btn{background:#1d2ed8;color:#e5f344;border-color:#1d2ed8}
 .live{color:#dce1ff;font-size:16px;font-weight:650;margin-top:20px}
-.demo-footer{border-color:#6a78ea;color:#aab7fc}
-.demo-footer p,.demo-footer nav{font-size:13px;font-weight:550}
+.demo-footer{border-color:#6a78ea;color:#bfcbff}
+.demo-footer p,.demo-footer nav{font-size:14px;font-weight:550}
 dialog{color:#1d2ed8;--ink:#1d2ed8;--line:#b6b7d0;--focus:#1d2ed8;color-scheme:light}
 .dialog-top h2{font:400 32px/1.2 'Gallery Display',serif;letter-spacing:-.035em}
 .reader{font:18px/1.8 'Gallery Text',serif}
-.reader a{font-size:13px}
+.reader a{font-size:14px}
 .close{background:#e5f344;color:#1d2ed8}
 .reader~.btn{background:#1d2ed8;color:#e5f344;border-color:#1d2ed8}
 
@@ -99,17 +99,17 @@ dialog{color:#1d2ed8;--ink:#1d2ed8;--line:#b6b7d0;--focus:#1d2ed8;color-scheme:l
 .museum-nav button{border:2px solid #e5f344;background:#e5f344;color:#1d2ed8;padding:12px 16px;min-height:48px;font:750 14px/1.4 'Gallery UI',sans-serif}
 .museum-nav nav>a{min-height:30px}
 .museum-poster{display:block;padding-block:24px 30px}
-.museum-kicker{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;grid-column:1/-1;font:650 12px/1.5 'Gallery UI',sans-serif;letter-spacing:.04em;color:#c5ceff}
+.museum-kicker{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;grid-column:1/-1;font:650 14px/1.5 'Gallery UI',sans-serif;letter-spacing:.04em;color:#c5ceff}
 .museum-poster h1{font-size:clamp(48px,12.5vw,82px);line-height:1.12;margin:27px 0}
 .poster-index{align-self:end;font:750 17px/1.25 'Gallery UI',sans-serif;padding:0;display:grid;gap:10px}
-.poster-index>p{font:750 12px/1.5 'Gallery UI',sans-serif;letter-spacing:.08em;margin:0 0 8px;color:#fff}
+.poster-index>p{font:750 14px/1.5 'Gallery UI',sans-serif;letter-spacing:.08em;margin:0 0 8px;color:#fff}
 .poster-index a{display:grid;grid-template-columns:44px minmax(0,1fr) 28px;align-items:center;gap:12px;min-height:88px;padding:14px;background:#1524b3;border:0;box-shadow:inset 4px 0 #e5f344;color:#fff;transition:background .18s,translate .18s}
 .poster-bottom{flex-direction:column;align-items:start;gap:25px;margin-top:25px}
 .poster-bottom>p{font-size:20px}
 .poster-bottom .btn{width:100%}
 .museum-feature figure{width:calc(100% - 32px);display:block}
 .museum-feature img{height:300px}
-.museum-feature figcaption{grid-column:1;grid-row:1;align-self:end;display:flex;flex-direction:column;gap:15px;font:650 13px/1.5 'Gallery UI',sans-serif;letter-spacing:.02em;color:#c5ceff;padding-bottom:8px;max-width:210px}
+.museum-feature figcaption{grid-column:1;grid-row:1;align-self:end;display:flex;flex-direction:column;gap:15px;font:650 14px/1.5 'Gallery UI',sans-serif;letter-spacing:.02em;color:#c5ceff;padding-bottom:8px;max-width:210px}
 .museum-feature figcaption::before{display:none}
 .exhibit-heading{gap:25px;padding-top:25px}
 .exhibit-heading h2{font-size:40px}
@@ -141,8 +141,18 @@ dialog{color:#1d2ed8;--ink:#1d2ed8;--line:#b6b7d0;--focus:#1d2ed8;color-scheme:l
 .museum-nav nav{gap:8px;align-items:end}
 .museum-nav nav>a{font-size:14px}
 .museum-nav>a{max-width:180px}
-.museum-nav button{font-size:13px}
+.museum-nav button{font-size:14px}
 }
+
+/* Exhibition index: open typographic poster, distinct from product cards. */
+.poster-index{gap:0}.poster-index a{background:transparent;box-shadow:none;border-top:2px solid #8996ff;padding:18px 0;grid-template-columns:58px minmax(0,1fr) 28px;min-height:96px;font-size:21px;line-height:1.25}
+.poster-index .index-number{font:400 42px/1 'Gallery Display',serif;color:#e5f344}.poster-index a:hover .index-number{color:#1d2ed8}.poster-index a:hover{padding-inline:12px;translate:0}
+.exhibit-copy>p{font:400 19px/1.75 'Gallery Text',serif}.museum-kicker,.museum-feature figcaption{font-size:14px}
+@media(max-width:600px){.poster-index a{font-size:20px;grid-template-columns:50px minmax(0,1fr) 28px}.poster-index .index-number{font-size:36px}}
+
+/* Motion: an exhibit opens as a photographic reveal, with a quiet surrounding frame. */
+@keyframes meros-aperture{from{clip-path:inset(0 48%);transform:scale(1.035)}to{clip-path:inset(0);transform:scale(1)}}
+@media(prefers-reduced-motion:no-preference){#reader[open]{animation:none}#reader[open] .reader>img{animation:meros-aperture 450ms cubic-bezier(.16,1,.3,1)}}
 
 ```
 
@@ -153,8 +163,8 @@ import {data,normalize} from './model.js?v=5ef9ac47c9';
 const SLUG='meros';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const storageKey=SLUG+'-state-v1';let memory=[],persistent=true;
-function read(){if(!persistent)return memory;try{return normalize(JSON.parse(localStorage.getItem(storageKey)));}catch{return [];}}
-function commit(ids){memory=normalize(ids);try{localStorage.setItem(storageKey,JSON.stringify(memory));}catch{persistent=false;$('#status').textContent='Saqlash cheklangan. Hozirgi tabdagi tanlov saqlanadi; kerak bo‘lsa faylga oling.';}return memory;}
+function read(){if(!persistent)return memory;try{const raw=localStorage.getItem(storageKey),parsed=raw===null?[]:JSON.parse(raw);if(!Array.isArray(parsed))throw Error('Invalid stored list');memory=normalize(parsed);return memory;}catch{persistent=false;$('#status').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi tanlov faqat shu tabda qoladi.';return memory;}}
+function commit(ids){memory=normalize(ids);if(!persistent)return memory;try{localStorage.setItem(storageKey,JSON.stringify(memory));}catch{persistent=false;$('#status').textContent='Saqlash cheklangan. Tanlov faqat shu ochiq tabda qoladi; sahifani yangilashda yo‘qolishi mumkin.';}return memory;}
 function toggle(id){const ids=read();return commit(ids.includes(id)?ids.filter(x=>x!==id):[...ids,id]);}
 function download(name,text,type='text/plain;charset=utf-8'){const url=URL.createObjectURL(new Blob(['\ufeff'+text],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
 let opener,openedId;function openDialog(button){opener=button;openedId=button.dataset.read;$('#reader').showModal();}$$('[data-close]').forEach(b=>b.addEventListener('click',()=>$('#reader').close()));$('#reader')?.addEventListener('close',()=>{const target=opener?.isConnected?opener:document.querySelector('[data-read="'+openedId+'"]')||$('#saved-toggle');target?.focus();});

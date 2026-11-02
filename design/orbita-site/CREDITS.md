@@ -2,7 +2,7 @@
 
 Original implementation and sample copy created for this library. Not affiliated with reference organizations.
 
-Visual contract: Kosmik observatoriya: Chakra Petch texnik display, IBM Plex Mono barcha xizmat/o‘qish matni. Siyoh-qora teal, fosfor-yashil signal, asbob oynasi burchaklari, katta orbital SVG va vertikal missiya registri. Chizma shartli, jonli telemetriya emas. Bezaksiz texnik ovoz; oq marketing hero yoki kartali dashboardga aylantirma.
+Visual contract: Kosmik observatoriya: Chakra Petch sarlavha va o‘qiladigan izohlar, IBM Plex Mono texnik o‘lchov va boshqaruv yozuvlari. Siyoh-qora teal, fosfor-yashil signal, asbob oynasi burchaklari, katta orbital SVG va vertikal missiya registri. Chizma shartli, jonli telemetriya emas. Bezaksiz texnik ovoz; oq marketing hero yoki kartali dashboardga aylantirma.
 
 Fonts from https://github.com/google/fonts under bundled SIL OFL licenses. No remote runtime assets.
 

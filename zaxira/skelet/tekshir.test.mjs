@@ -37,6 +37,17 @@ test('pending images do not receive a false loaded verdict',()=>{
   assert.ok(rows.some(r=>r[0]==='ogoh'&&r[1].includes('yuklanmoqda')));
   assert.ok(!rows.some(r=>r[1]==='Rasmlar yuklangan'));
 });
+
+test('missing referenced labels are flagged; valid external button labels are resolved',()=>{
+  const e=environment('?tekshir');
+  const item={tagName:'INPUT',ownerDocument:e.doc,offsetWidth:100,offsetHeight:40,labels:[],textContent:'',getAttribute:n=>n==='aria-labelledby'?'label-id':null,querySelector:()=>null};
+  e.doc.getElementById=()=>null;
+  e.doc.querySelectorAll=s=>s.startsWith('input:not')?[item]:[];
+  assert.ok(e.context.TEKSHIR.sahifa().some(r=>r[0]==='ogoh'&&r[1].includes('maydon uchun oddiy nom topilmadi')));
+  item.tagName='BUTTON';e.doc.getElementById=()=>({textContent:'Saqlash'});
+  e.doc.querySelectorAll=s=>s==='button,a[href]'?[item]:[];
+  assert.ok(e.context.TEKSHIR.sahifa().some(r=>r[0]==='ok'&&r[1].includes('1 ta oddiy tugma/havolada nom topildi')));
+});
 test('ordinary check opens no frames; explicit width check times out and unlocks',()=>{
   const e=environment('?tekshir');
   e.hooks.find(h=>h[0]==='DOMContentLoaded')[1]();

@@ -70,7 +70,7 @@ Quyidagi auth/RLS/Supabase bandlari serverli variant uchun. Faqat frontend bilet
 
 Bu kelajakdagi mahsulotga qo‘yilgan amaliy talablar. Microsoft arxitektura ustunlari, IBM Carbon navigatsiya qoidalari, W3C accessibility, Google Web Vitals va OWASP tekshiruv yo‘nalishlari tayanch sifatida ko‘rildi; quyidagi qo‘llash tartibi bizning loyiha uchun tavsiya. Ushbu korporatsiyalar bizning saytni yaratgan/tasdiqlagan degan da’vo yo‘q. Bu hujjatning mavjudligi mahsulot ushbu nazoratlarni bajarib bo‘lganini bildirmaydi.
 
-Korporativ sifatga intilish — vazifaga mos ishonchlilik, izchil tajriba va dalilli tekshiruv. Har loyiha uchun microservice, Kubernetes, alohida serverlar, katta grafiklar yoki barcha admin sahifalarini majburan qo‘shish kerak emas. Hozirgi Render + Supabase stack saqlanadi; o‘zgartirish faqat aniqlangan ehtiyoj va foydalanuvchi qarori bilan.
+Korporativ sifatga intilish — vazifaga mos ishonchlilik, izchil tajriba va dalilli tekshiruv. Har loyiha uchun microservice, Kubernetes, alohida serverlar, katta grafiklar yoki barcha admin sahifalarini majburan qo‘shish kerak emas. Render + Supabase — server talab qilinadigan bilet uchun shartli reja; frontend vazifaga majburan ulanmaydi. Kerakli bandlarni bilet va haqiqiy xavfga qarab tanlang.
 
 ### Vazifa va mahsulot yaxlitligi
 
