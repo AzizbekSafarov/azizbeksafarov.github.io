@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "b48ab90287dca2f279015956674e8c6c200920b7b3a162b66e021139079acd93",
-  "archive_bytes": 2812309,
+  "archive_sha256": "aa2db948d48c90130052aa8bed2348aae03c477f975065743112c6c2bcaa5145",
+  "archive_bytes": 2813346,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -185,8 +185,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16783,
-      "sha256": "435e17c008a6faccb33475a1f8302f4c7552f66f09b2ef44b8f7d3dd687532b1"
+      "bytes": 16934,
+      "sha256": "78df4e5713c0dda9b2ac3e0cc14e55075fd2f2e4d030a6d133f5455a4ede81c6"
     },
     {
       "path": "PREPARATION.md",
@@ -245,8 +245,13 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10770,
-      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
+      "bytes": 10874,
+      "sha256": "02c1b2e1f4897e66931328449b63572763a5f6ac314ee5236a0699617fa54fd5"
+    },
+    {
+      "path": "ZAXIRA/HIMOYA.md",
+      "bytes": 2645,
+      "sha256": "2675ff533b4a421f480d51562c7b26a3366124d9eb685ce034f763551801ff0c"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -260,8 +265,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13742,
-      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
+      "bytes": 12378,
+      "sha256": "0c30288c64550aaf795692d142205f1db9a432d12c9d93bf5052c3753007fdc2"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

@@ -122,7 +122,7 @@ def prepare():
     write_if_changed(KIT/'skelet/serve.mjs',(ROOT/'handoff/serve.mjs').read_bytes())
     write_if_changed(KIT/'skelet/kit.json',json.dumps({'schema_version':1,'name':'Zaxira skelet','serve_root':'.','entry':'index.html'},ensure_ascii=False,indent=2)+'\n')
     files={}
-    for name in ('ZAXIRA.md','CODEX.md','PROMPTLAR.md','JONLI-OZGARISH.md'):
+    for name in ('ZAXIRA.md','CODEX.md','PROMPTLAR.md','JONLI-OZGARISH.md','HIMOYA.md'):
         files[name]=portable(KIT/name)
     for path in sorted((KIT/'skelet').rglob('*')):
         if path.is_file() and path.name not in SKIP:

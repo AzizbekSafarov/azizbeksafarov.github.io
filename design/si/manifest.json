@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "161425d9394a3b789d4557add2b7678d98ec6b1efb014389c9b82814f8be1e7c",
-  "archive_bytes": 872834,
+  "archive_sha256": "dae30fcc00d33b5562c45135039e53e32ccba7e6401420136a87b5785c5eb35d",
+  "archive_bytes": 873868,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -197,8 +197,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 17899,
-      "sha256": "289c6d75c4ca58ec9ed2465c8fcae739dc1ac32e4eafafcafc3dc9ca265c3c14"
+      "bytes": 18050,
+      "sha256": "7e9ffd5b2cc28d5b0f5435b8341741984c233a727652a234aa5655fec25e1630"
     },
     {
       "path": "PREPARATION.md",
@@ -257,8 +257,13 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 10770,
-      "sha256": "35ed03f8a070669580935052aec3374a19df31e04ff38b54b9414c103a2bbe84"
+      "bytes": 10874,
+      "sha256": "02c1b2e1f4897e66931328449b63572763a5f6ac314ee5236a0699617fa54fd5"
+    },
+    {
+      "path": "ZAXIRA/HIMOYA.md",
+      "bytes": 2645,
+      "sha256": "2675ff533b4a421f480d51562c7b26a3366124d9eb685ce034f763551801ff0c"
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
@@ -272,8 +277,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 13742,
-      "sha256": "a37a2db6d80055bf61a4920d91ad2c47b3c9a72d116d7921a7c5bc004d5121bd"
+      "bytes": 12378,
+      "sha256": "0c30288c64550aaf795692d142205f1db9a432d12c9d93bf5052c3753007fdc2"
     },
     {
       "path": "ZAXIRA/skelet/README.md",

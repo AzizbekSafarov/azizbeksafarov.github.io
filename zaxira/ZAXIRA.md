@@ -91,25 +91,7 @@ Klaviatura sinovi: sichqonchasiz Tab, Shift+Tab, Enter, Esc bilan butun oqimni o
 
 ## 6. Himoya ssenariysi (5 + 5 + 5)
 
-**Taqdimot, 5 daqiqa:**
-1. “Bu sayt [kim] uchun. Muammo: [nima]. Yechim: [asosiy amal].” (30 soniya)
-2. Sahifalar xaritasi: Bosh → Ro‘yxat → Ariza → Arizalarim. (1 daqiqa)
-3. Vosita: “[AI/skelet/qo‘lda] tanladim, chunki [sabab]. AI natijasida men [o‘zgartirgan narsalar].” (1 daqiqa)
-4. Sinov: “Bo‘sh forma, noto‘g‘ri telefon, uch xil ekran kengligini tekshirdim; [topilgan xato]ni tuzatdim.” (1 daqiqa)
-
-**Namoyish, 5 daqiqa:** bitta muvaffaqiyatli yo‘l (tanlash → ariza → tasdiq → Arizalarim), bitta noto‘g‘ri kiritish (bo‘sh forma), telefonda ko‘rinish (F12 → Ctrl+Shift+M).
-
-**Savollar, 5 daqiqa** — loyiha hujjatidagi standart savollar [Loyiha 34-band]:
-
-| Savol | Javob shabloni |
-|---|---|
-| Foydalanuvchi qaysi ishni bajaradi? | “[foydalanuvchi] [amal] qiladi va [natija] oladi.” |
-| Nega shu vosita? | “Vaqt va bilet talabiga eng sodda mos: build kerak emas, istalgan brauzerda ochiladi. Mazmunni kodsiz panel (kichik CMS) orqali boshqaraman — shuning uchun o‘zgartirish tez va xatosiz.” |
-| AI yoki tayyor natijada nima o‘zgartirildi? | “Mazmun, forma maydonlari, tekshiruv qoidalari, rang va [qo‘shimcha funksiya].” |
-| Qaysi xato qanday tekshirildi? | “Bo‘sh/noto‘g‘ri kiritish, takror ariza, 3 kenglik; [xato] topildi va tuzatildi.” |
-| Qanday cheklov bor? | “Ma’lumot faqat shu brauzerda saqlanadi; server yo‘q. Keyingi qadam: [server/bazaga ulash].” |
-
-Ishlamaydigan funksiyani “ishlaydi” demang [Loyiha 24-band]. Cheklovni ochiq aytish ball kamaytirmaydi.
+Yagona ssenariy: [HIMOYA.md](HIMOYA.md). Shu tartibda o‘z loyihangizni tayyorlang: 5 daqiqa taqdimot, 5 daqiqa namoyish, 5 daqiqa savol-javob. Faqat bajargan ish va haqiqiy sinov natijasini ayting.
 
 ## 7. Favqulodda holatlar
 

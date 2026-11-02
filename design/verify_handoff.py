@@ -89,7 +89,7 @@ def check_zaxira(z):
     # Every package must carry the current weak-AI kit unchanged, with its runtime resources.
     from build_zaxira import KIT, portable
     names=set(z.namelist())
-    expected={'ZAXIRA/'+n:portable(KIT/n) for n in ('ZAXIRA.md','CODEX.md','PROMPTLAR.md','JONLI-OZGARISH.md')}
+    expected={'ZAXIRA/'+n:portable(KIT/n) for n in ('ZAXIRA.md','CODEX.md','PROMPTLAR.md','JONLI-OZGARISH.md','HIMOYA.md')}
     expected.update({'ZAXIRA/skelet/'+p.relative_to(KIT/'skelet').as_posix():portable(p) for p in (KIT/'skelet').rglob('*') if p.is_file()})
     assert {n for n in names if n.startswith('ZAXIRA/')}==set(expected),'Stale or missing ZAXIRA files'
     for name,data in expected.items():assert z.read(name)==data,f'Stale {name}'

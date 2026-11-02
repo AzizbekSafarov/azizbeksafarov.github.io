@@ -114,7 +114,7 @@ Ildizda README.md yoz (o'zbekcha): sayt nimani hal qiladi, qanday ochiladi, fayl
 ishlatilgan vositalar (Codex, tanlangan starter manbasi), men nimani o'zgartirganim, cheklovlar.
 Yana JONLI-OZGARISH.md yoz: sarlavha, asosiy rang, yangi ro'yxat elementi va yangi blokni qaysi faylda,
 qaysi qatorda o'zgartirish kerak — kod bilmaydigan odam uchun qadamma-qadam.
-Yana HIMOYA.md: 5 daqiqalik taqdimot matni va 5 ta standart savolga qisqa javoblar. Faqat haqiqiy faktlar.
+ZAXIRA/HIMOYA.md dagi yagona ssenariy asosida ildizda loyiha uchun HIMOYA.md yoz: 5 daqiqa taqdimot + 5 daqiqa amaliy namoyish + 5 daqiqa savol-javob. Faqat qurilgan va tekshirilgan faktlar, haqiqiy cheklovlar.
 Ochiq parol yoki kalit qolmaganini tekshir.
 ```
 
