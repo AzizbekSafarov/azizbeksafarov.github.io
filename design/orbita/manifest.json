@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "b2dc5310e09fe603717ec81ae68de5db9310896c345f0d50af288c8249139d65",
-  "archive_bytes": 829062,
+  "archive_sha256": "29be8bc1bbdb35201d05a0d24f4cbf7a3aa8fc5ce41ebd17901727db7620ad4a",
+  "archive_bytes": 829333,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -186,12 +186,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16433,
-      "sha256": "7acdf2eb2114e9146e0fa2bbb0062493ae94203c920060a48f5ae4faac4aa0e9"
+      "sha256": "7e394c3cb7bf3de498f60ba2bfa1ff1b6bb8f780eccd71086a6bbc5955a1b497"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 17613,
-      "sha256": "2e45399011951ed16f1311ca85400652f94e2da9f3e63dd1910f65d4bcf0698d"
+      "bytes": 17721,
+      "sha256": "85fe46a150e3f1ec9b631c37f8d34efdbd815f2590ce3f705240c062f0dada26"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "00b5406f4ebd4c7de6d2357cf256f324946c004163225c72a6b6f22cd9771973"
+      "sha256": "e6e1f1bb676d81014a5c71b271080e60f32fd5cbce214a5d7ba7dbe975c61749"
     },
     {
       "path": "README.md",
@@ -250,8 +250,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11662,
-      "sha256": "4b8b43704ba771cd9d1c759ee29330a62fb4af63739114eb2245eec4c1b478a0"
+      "bytes": 12143,
+      "sha256": "25883ce01ac21d0036fbed3d19ee382ec0b9e4e37213b0dc911eb688521e0a42"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -280,8 +280,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 30705,
-      "sha256": "e73a92f5484c593a7b517f2b4284afa2a801d10a9a9cd7bb9f96bbda7bef255d"
+      "bytes": 30776,
+      "sha256": "7baed982dd4dc2361fb80eca98df9420f9ce487df5a268a5e49dbc7e5038f19a"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -295,8 +295,8 @@
     },
     {
       "path": "ZAXIRA/skelet/malumot.js",
-      "bytes": 6654,
-      "sha256": "b8026a412c3165a5807638d89134a2c258804738c2b96a7bce9c16ea10353f2e"
+      "bytes": 6748,
+      "sha256": "6a8015cca677d4c293fa7e97701056f6384241d9a71126ecb9ae43db49fc9c81"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",

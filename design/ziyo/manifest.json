@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "ce37b0d855428626b3576a4b9366ade77cc5f39a23c40a85735eebd8b3efe760",
-  "archive_bytes": 1080762,
+  "archive_sha256": "e36cc95938f756b4024be2e1587a6c2b0c7aad2929504f558d94e070fcb21142",
+  "archive_bytes": 1081033,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -192,12 +192,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16901,
-      "sha256": "b1b31cc058c9a4e271df4268e4c9324cc60da77cf7149809f1ecae2ea66de681"
+      "sha256": "128adae3470edcae01ef1cdbd91e0b4cb24bcf6d2e9701f19fe6d4417a5f47ba"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 17613,
-      "sha256": "2e45399011951ed16f1311ca85400652f94e2da9f3e63dd1910f65d4bcf0698d"
+      "bytes": 17721,
+      "sha256": "85fe46a150e3f1ec9b631c37f8d34efdbd815f2590ce3f705240c062f0dada26"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -217,7 +217,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "222c60e611f166e6fe1f73cd5068f44d19371b98b50c53c4eaca267830f29c07"
+      "sha256": "f1089b3d61fe1e613ca2168cc467cc35c206b32bc5d4d0789491d79a5e5d93fc"
     },
     {
       "path": "README.md",
@@ -256,8 +256,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11662,
-      "sha256": "4b8b43704ba771cd9d1c759ee29330a62fb4af63739114eb2245eec4c1b478a0"
+      "bytes": 12143,
+      "sha256": "25883ce01ac21d0036fbed3d19ee382ec0b9e4e37213b0dc911eb688521e0a42"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -286,8 +286,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 30705,
-      "sha256": "e73a92f5484c593a7b517f2b4284afa2a801d10a9a9cd7bb9f96bbda7bef255d"
+      "bytes": 30776,
+      "sha256": "7baed982dd4dc2361fb80eca98df9420f9ce487df5a268a5e49dbc7e5038f19a"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -301,8 +301,8 @@
     },
     {
       "path": "ZAXIRA/skelet/malumot.js",
-      "bytes": 6654,
-      "sha256": "b8026a412c3165a5807638d89134a2c258804738c2b96a7bce9c16ea10353f2e"
+      "bytes": 6748,
+      "sha256": "6a8015cca677d4c293fa7e97701056f6384241d9a71126ecb9ae43db49fc9c81"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",

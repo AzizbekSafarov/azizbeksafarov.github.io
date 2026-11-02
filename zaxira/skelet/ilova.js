@@ -280,7 +280,7 @@
       forma.appendChild(el('p', { class: 'jami', id: 'jami', 'aria-live': 'polite' }));
       forma.addEventListener('input', jamiYangila); forma.addEventListener('change', jamiYangila);
     }
-    forma.appendChild(el('div', { class: 'amallar' }, [el('button', { class: 'tugma', type: 'submit', matn: FORMA.tugma || 'Yuborish' })]));
+    forma.appendChild(el('div', { class: 'amallar' }, [el('button', { class: 'tugma', type: 'submit', matn: FORMA.tugma || 'Arizani yakunlash' })]));
     forma.addEventListener('submit', yuborish);
   }
 
@@ -365,15 +365,15 @@
       dl.appendChild(el('dd', { matn: m.nom === 'element' && tanlangan ? tanlangan.nom : m.tur === 'sana' ? M.sanaMatn(yozuv[m.nom]) : String(yozuv[m.nom]) }));
     });
     var panel = tozala($('#muvaffaqiyat'));
-    panel.appendChild(el('h2', { matn: FORMA.muvaffaqiyat || 'Qabul qilindi!' }));
+    panel.appendChild(el('h2', { matn: FORMA.muvaffaqiyat || 'Ariza ma’lumotlari tayyor' }));
     if (yozuv.jami != null) { dl.appendChild(el('dt', { matn: FORMA.jamiYorliq || 'Jami' })); dl.appendChild(el('dd', { matn: M.pul(yozuv.jami) })); }
     panel.appendChild(dl);
     panel.appendChild(el('p', { class: 'kichik', matn: SAYT.saqlash
-      ? (saqlandi.ok ? 'Shu brauzerda saqlandi.' : 'Faqat sahifa ochiq turganda saqlanadi — brauzer xotirasi yopiq.')
+      ? (saqlandi.ok ? 'Shu brauzerda saqlandi. Tashkilotchiga yuborilmadi.' : 'Doimiy saqlanmadi. Yozuv faqat shu ochiq tabda; tashkilotchiga yuborilmadi.')
       : 'Sinov rejimi: ma’lumot hech qayerga yuborilmadi.' }));
     panel.appendChild(el('div', { class: 'amallar' }, [
       'saqlangan' in SAYT.sahifalar && SAYT.saqlash ? el('a', { class: 'tugma', href: '#saqlangan', matn: SAYT.saqlangan.sarlavha + ' →' }) : null,
-      el('button', { class: 'tugma ikkinchi', type: 'button', matn: 'Yana yuborish', onclick: function () { arizaOch(null, true); $('#f-' + FORMA.maydonlar[0].nom).focus(); } })
+      el('button', { class: 'tugma ikkinchi', type: 'button', matn: 'Yangi ariza to‘ldirish', onclick: function () { arizaOch(null, true); $('#f-' + FORMA.maydonlar[0].nom).focus(); } })
     ]));
     $('#ariza-forma').hidden = true; panel.hidden = false; panel.focus();
   }

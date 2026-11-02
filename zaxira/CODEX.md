@@ -132,18 +132,20 @@ Ochiq parol yoki kalit qolmaganini tekshir.
 
 ## 4. Vaqt va limit nazorati
 
+Quyidagi jadval 120 daqiqalik mashq uchun mo‘ljal, rasmiy reglament yoki bajarilgan ish hisoboti emas. Holatni vaqtga qarab emas, haqiqiy natija bilan belgilang. O‘qilish, navigatsiya va majburiy UX qurish davomida bajariladi; C4 qolgan sayqal uchun.
+
 | Qolgan vaqt | Holat |
 |---|---|
 | 120 → 100 | C1 tugagan, reja tasdiqlangan |
 | 100 → 55 | C2: barcha majburiy talablar ishlaydi |
-| 55 → 35 | C3: sinov jadvali “o‘tdi” |
+| 55 → 35 | C3: tegishli sinovlar va xatolarni tuzatish; o‘tmagan band ochiq qayd etiladi |
 | 35 → 20 | C4 ko‘rinish, faqat vaqt bo‘lsa |
 | 20 → 10 | C5 hujjatlar, skrinshotlar |
 | 10 → 0 | Yangi o‘zgarish yo‘q. Papka nusxasi, topshirish |
 
-- 30 daqiqa qolganda yangi funksiya boshlanmaydi.
+- Tavsiya: 30 daqiqa qolganda yangi ixtiyoriy funksiya boshlamang. Yetishmayotgan majburiy amal bo‘lsa qolgan vaqtga mos eng kichik ishlaydigan yechimni tugating.
 - Hisobdagi Usage sahifasidan haqiqiy qolgan limit va reset vaqtini o‘qing. Saqlangan eski raqamga tayanmang. Reset taklifi bo‘lsa aynan shu hisobdagi shart va muddatni tekshiring; mavjudligi, chegarasi va avtomatik ishlashi oldindan kafolatlanmaydi. Buni sozlash bo‘yicha foydalanuvchi qarorini avtomatik qabul qilmang.
-- Bitta topshiriq — bitta akkaunt. Ikkinchi akkaunt faqat birinchisi umuman ishlamay qolsa; almashtirishdan oldin tashkilotchidan so‘rang.
+- Bitta loyiha tarixini izchil saqlang. Hisob va hisob almashtirishga joydagi ruxsat hamda xizmat qoidalari amal qiladi; ushbu qo‘llanma qo‘shimcha akkaunt yoki limitdan foydalanishga ruxsat bermaydi.
 - Limit tugasa: ishlaydigan holatni saqlang. Qolgan matn/rang ishlarini qo‘lda bajaring (`JONLI-OZGARISH.md`). Hali sayt bo‘lmasa — `ZAXIRA.md` dagi AI’siz yo‘l.
 
 ## 5. Himoyada AI haqida to‘g‘ri gapirish

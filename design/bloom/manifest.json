@@ -5,14 +5,14 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
-  "source_fingerprint": "f98668b42dd781fb5a9cc63e0a34c9a1c75f5847efe759cc8ac0676c5ed59520",
+  "source_fingerprint": "cf92e23e0ddc5358de839b3e2731c654ca4cf62d041c7d8f55457c3d50191acd",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "811bab2a812a25d0744f4758dccc682a2439991345cf0fb07993e68699ce3d33",
-  "archive_bytes": 1577169,
+  "archive_sha256": "e0a7d45d8828f4c346d479803adefcd7e1f628c60a4bdae406c5032aae524710",
+  "archive_bytes": 1577454,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -25,7 +25,7 @@
     {
       "path": "src/main.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
-      "sha256": "e94d1d3cbc92e3af98463a3a57be86de0e5d9b80477796a4bb7542dd77a2d764",
+      "sha256": "f94bac955ca97b482ce65f63ca6285f021160dae1d61fabae8e4ea79b7008972",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt"
     },
     {
@@ -140,7 +140,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 20479,
-      "sha256": "fd1674195175cf5beeee129c8cd121d33b8eb23b952b9de51bd703e94aa3090a"
+      "sha256": "b2d36c0be3f202e2b4a8243d21f97a93f7e56b74eda58d3b4367f5c5e09c09d3"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -220,7 +220,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1240,
-      "sha256": "740a7d54cb3cf9ccf43e357bf96da72eabb1f37dfb3e6c73c3196f70b890ade5"
+      "sha256": "cbca4695ff5598db079ada55c76960d3c2241f2daf1b723f5e6f0c4720274dbe"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -240,12 +240,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 22423,
-      "sha256": "7f5063d6a53bd328650fa0d6ac3ccc8a88627717e35bee986c37a98d5dbf05d7"
+      "sha256": "94f2a2dda7089ddd74590b4553e50d582f4dabe5ab7751de9e6d2b0f12c53d9e"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 17613,
-      "sha256": "2e45399011951ed16f1311ca85400652f94e2da9f3e63dd1910f65d4bcf0698d"
+      "bytes": 17721,
+      "sha256": "85fe46a150e3f1ec9b631c37f8d34efdbd815f2590ce3f705240c062f0dada26"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -265,7 +265,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "637444d80b27f0ea7fd14378c4adfceb9834466a80085235b1bc4232fdebbe37"
+      "sha256": "f94c252f251818df5bd9df2ea352c0ba28423253f483730e0cf377b96ec0c430"
     },
     {
       "path": "README.md",
@@ -304,8 +304,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11662,
-      "sha256": "4b8b43704ba771cd9d1c759ee29330a62fb4af63739114eb2245eec4c1b478a0"
+      "bytes": 12143,
+      "sha256": "25883ce01ac21d0036fbed3d19ee382ec0b9e4e37213b0dc911eb688521e0a42"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -334,8 +334,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 30705,
-      "sha256": "e73a92f5484c593a7b517f2b4284afa2a801d10a9a9cd7bb9f96bbda7bef255d"
+      "bytes": 30776,
+      "sha256": "7baed982dd4dc2361fb80eca98df9420f9ce487df5a268a5e49dbc7e5038f19a"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -349,8 +349,8 @@
     },
     {
       "path": "ZAXIRA/skelet/malumot.js",
-      "bytes": 6654,
-      "sha256": "b8026a412c3165a5807638d89134a2c258804738c2b96a7bce9c16ea10353f2e"
+      "bytes": 6748,
+      "sha256": "6a8015cca677d4c293fa7e97701056f6384241d9a71126ecb9ae43db49fc9c81"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
@@ -545,7 +545,7 @@
     {
       "path": "kit.json",
       "bytes": 316,
-      "sha256": "431bb5157d635594b33f141189ef84101e3fbc9000984c4ed98f3f12e40329ed"
+      "sha256": "91ba094454187108b17abacacdf4c764737157964bd6389196ba118ebf6d962d"
     },
     {
       "path": "serve.mjs",
@@ -593,14 +593,14 @@
       "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
     },
     {
-      "path": "site/dist/assets/index-CHg_d0QA.js",
-      "bytes": 748324,
-      "sha256": "0cd32e39494a72f47a3640667c02100cd855fb59de4cbbcb68967ef7e82dee5f"
-    },
-    {
       "path": "site/dist/assets/index-Dowag0IE.css",
       "bytes": 39517,
       "sha256": "e878acb33c3df4c00f7c9ce0f83419feb3dd3bfa873a7b02fdd8d7dc7d297d61"
+    },
+    {
+      "path": "site/dist/assets/index-w7wFou0C.js",
+      "bytes": 748333,
+      "sha256": "95bcda51ab58ffc8103d14f408e43af0b634bcb04f7b9b106a4d8a3962aa9cae"
     },
     {
       "path": "site/dist/assets/material-symbols-CopIADRp.woff2",
@@ -645,7 +645,7 @@
     {
       "path": "site/dist/index.html",
       "bytes": 469,
-      "sha256": "c89936529fe43cfd28f3ebd5c517743c86388f9f8246f7979cb89c4289138674"
+      "sha256": "6bc4309f183c2ce5742904199690ffa199d61500bd257d7df7e2bf8fdb573277"
     },
     {
       "path": "site/download_symbols.py",
@@ -759,8 +759,8 @@
     },
     {
       "path": "site/src/main.jsx",
-      "bytes": 28150,
-      "sha256": "e94d1d3cbc92e3af98463a3a57be86de0e5d9b80477796a4bb7542dd77a2d764"
+      "bytes": 28159,
+      "sha256": "f94bac955ca97b482ce65f63ca6285f021160dae1d61fabae8e4ea79b7008972"
     },
     {
       "path": "site/src/model.js",

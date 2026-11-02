@@ -2,8 +2,8 @@
   "schema_version": 1,
   "updated": "2026-11-02",
   "full_context_url": "https://azizbeksafarov.github.io/tayyorgarlik/full-context.md",
-  "full_context_sha256": "5c8c4cb1bbfb953025e32f7f100d901905deeaa61d6ce657265e3aead9ca6955",
-  "full_context_bytes": 440656,
+  "full_context_sha256": "036b24091d0bbd87cd85c1d6125d9b6ac7b114d9cd1dfc2baec27205559ed73d",
+  "full_context_bytes": 440764,
   "documents": [
     {
       "package_path": "TASK-BOUNDARY.json",
@@ -32,8 +32,8 @@
     {
       "package_path": "PREPARATION.md",
       "source_url": "https://azizbeksafarov.github.io/design/preparation-guide.md",
-      "bytes": 17613,
-      "sha256": "2e45399011951ed16f1311ca85400652f94e2da9f3e63dd1910f65d4bcf0698d",
+      "bytes": 17721,
+      "sha256": "85fe46a150e3f1ec9b631c37f8d34efdbd815f2590ce3f705240c062f0dada26",
       "start_line": 161,
       "end_line": 286
     },

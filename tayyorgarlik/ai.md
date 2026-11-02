@@ -36,7 +36,7 @@ Foydalanuvchi “.io ni to‘liq o‘qi” desa, quyidagi to‘liq rejim qo‘ll
 ## To‘liq o‘qish yo‘li
 
 1. Joriy topshiriq, bilet, qolgan vaqt va loyiha ichidagi CURRENT-TASK.md / HANDOFF.md. Ochiq saytdagi shu nomli fayllar to‘ldirilmagan shablon.
-2. CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json — yangi manba tekshiruvi; so‘ng PREPARATION.md — ushbu qo‘llanma; WORKFLOW.md va PROJECT-STATUS.json — ish tartibi, reja/haqiqiy holat va xavflar.
+2. CURRENT-COMPETITION.md / CURRENT-COMPETITION-FACTS.json — sanasi ko‘rsatilgan oxirgi manba qaydi; fayl nomidagi CURRENT bugun qayta tekshirildi degani emas; so‘ng PREPARATION.md — ushbu qo‘llanma; WORKFLOW.md va PROJECT-STATUS.json — ish tartibi, reja/haqiqiy holat va xavflar.
 3. ARCHITECTURE.md — landing, animatsiya, kabinet, workspace, data oqimi va sifat mezonlari. API-GUIDE.md va API-EVIDENCE.json — kalitsiz, sanali dalil va provayder chegaralari.
 4. CONTEXT-STATUS.md, SCORING-WORKPLAN.md, FULL-COMPETITION-CONTEXT.md va REGULATIONS.md — manba maqomi, baholash, to‘liq tadqiqot va qisqartirilmagan nizom. Imzoli qaror, sayt tahriri va mezonlar loyihasini bitta yangi rasmiy reglamentga birlashtirmang. Ziddiyat bo‘lsa tegishli manbalarni ko‘rsatib, aynan joriy bosqich talabi aniqlanmaguncha taxminni fakt qilmang.
 5. Tanlangan dizaynning AI-BRIEF.md, AGENTS.md, README.md, DESIGN-STANDARD.md, CHECKLIST.md va haqiqiy site/ kodi. Header/footer, font, ikonka, rasm, mobile navigation va motion ham dizaynning qismi.
@@ -107,7 +107,7 @@ Haqiqiy biletdan oldin o‘ylab topilmaydiganlar: yakuniy domen/nom, ma’lumot 
 
 ## Bilet kelgandagi ish tartibi
 
-1. Talab → foydalanuvchi amali → ekran/data → qabul dalili jadvali. Majburiy oqim bilan bezakni ustuvorlikka ajrating.
+1. Talab → foydalanuvchi amali → ekran/data → qabul dalili jadvali. Majburiy oqim, o‘qilish va qulaylikni birga qurib, ixtiyoriy bezakdan ajrating.
 2. Ishga tushadigan asl paketni saqlang, bitta ishlaydigan vertikal oqimni yarating. Baza/login kerak bo‘lsa uni dizaynning oxiriga qoldirmang.
 3. Tanlangan dizaynni yangi mazmun, sahifa rollari va zarur integratsiyalarga moslashtiring. Landing, kabinet va workspace uchun bir xil brend, vazifaga mos tuzilma.
 4. O‘zgarish va muhim xavfga mos tekshiruv: oddiy oqim; tegishli xato; boshqa user/ruxsat; reload; telefon/klaviatura; toza run. Bir xil testni son uchun qayta bajarmang.

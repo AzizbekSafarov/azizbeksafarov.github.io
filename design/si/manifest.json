@@ -5,21 +5,21 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-02",
-  "source_fingerprint": "21f0c8f0859b7243a405ad6e243501e2f3a2096fa57df05708310e51eeeedd17",
+  "source_fingerprint": "5eac91ce7d7cac1c34884e394dd78c766674ee1afcc4a9df7d0f4d6810b6b73c",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "a92026ab4311fb87564d89971b973bfca3d5ed9333ea2bb3e4bc4442b3821acd",
-  "archive_bytes": 883425,
+  "archive_sha256": "0325d8ea61bdd3506d0f15bf65201af90784ff949a3100ea5998915c4d39c24f",
+  "archive_bytes": 883700,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "be40740b3bfbc9af72ab109ff91b052fc1a36c214fef734de527c525d716e940",
+      "sha256": "edf70ac046031f1a43cb7d2a4b83a82162d4eaf4954605ea36f0c8d8a72b07fe",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
@@ -98,7 +98,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 18554,
-      "sha256": "12be4dc3ed26c669134d3c78270cb583adf92f67eafc8cd70d00a6db93fa0960"
+      "sha256": "777e8a142dfc6e8ceaead925f64637ed365bd1741dc11a6ba466bf24c2eaaccc"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -178,7 +178,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1223,
-      "sha256": "d764ed3ac5f41e213198eac1d24e1a7008c64c264186ce8ef2424edb774eabb3"
+      "sha256": "d0551e138b278b39d2bbb894c9957a8306aef34e5537312e49c06c80089879bf"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -198,12 +198,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 18362,
-      "sha256": "fa946dd7a556216c8cffc04a852a8a9336b8cd30b585844be70574c39a117707"
+      "sha256": "e7f5f325695ede8b73e526ae497935e7005eeecc9712db9d65faa66c1d3ed348"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 17613,
-      "sha256": "2e45399011951ed16f1311ca85400652f94e2da9f3e63dd1910f65d4bcf0698d"
+      "bytes": 17721,
+      "sha256": "85fe46a150e3f1ec9b631c37f8d34efdbd815f2590ce3f705240c062f0dada26"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -223,7 +223,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "ed0972deece02ab536b7839311f9ad3158456597263766ddab131c7a6f202cd4"
+      "sha256": "b66168bf3a607368870756ebc9f696c3e06165750cf812eee9fbe1872eb7b611"
     },
     {
       "path": "README.md",
@@ -262,8 +262,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 11662,
-      "sha256": "4b8b43704ba771cd9d1c759ee29330a62fb4af63739114eb2245eec4c1b478a0"
+      "bytes": 12143,
+      "sha256": "25883ce01ac21d0036fbed3d19ee382ec0b9e4e37213b0dc911eb688521e0a42"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -292,8 +292,8 @@
     },
     {
       "path": "ZAXIRA/skelet/ilova.js",
-      "bytes": 30705,
-      "sha256": "e73a92f5484c593a7b517f2b4284afa2a801d10a9a9cd7bb9f96bbda7bef255d"
+      "bytes": 30776,
+      "sha256": "7baed982dd4dc2361fb80eca98df9420f9ce487df5a268a5e49dbc7e5038f19a"
     },
     {
       "path": "ZAXIRA/skelet/index.html",
@@ -307,8 +307,8 @@
     },
     {
       "path": "ZAXIRA/skelet/malumot.js",
-      "bytes": 6654,
-      "sha256": "b8026a412c3165a5807638d89134a2c258804738c2b96a7bce9c16ea10353f2e"
+      "bytes": 6748,
+      "sha256": "6a8015cca677d4c293fa7e97701056f6384241d9a71126ecb9ae43db49fc9c81"
     },
     {
       "path": "ZAXIRA/skelet/mantiq.js",
@@ -503,7 +503,7 @@
     {
       "path": "kit.json",
       "bytes": 294,
-      "sha256": "1656e7a410785e365e66669d05a9e2720f9ec385adb04878a0d478aa3729f110"
+      "sha256": "4f45c03e093892b2c563734a180599d22f9ee07b95ffe3cbf76c2cd991ea698e"
     },
     {
       "path": "serve.mjs",
@@ -602,8 +602,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 13986,
-      "sha256": "be40740b3bfbc9af72ab109ff91b052fc1a36c214fef734de527c525d716e940"
+      "bytes": 13988,
+      "sha256": "edf70ac046031f1a43cb7d2a4b83a82162d4eaf4954605ea36f0c8d8a72b07fe"
     },
     {
       "path": "site/mark.svg",

@@ -43,7 +43,7 @@ window.SAYT = {
     afzalliklar: [
       { sarlavha: "Tanlang", matn: "Ro‘yxatdan mos variantni toping: qidiruv va filtr bor." },
       { sarlavha: "Ariza bering", matn: "Qisqa formani to‘ldiring. Xato bo‘lsa sayt aniq aytadi." },
-      { sarlavha: "Kuzating", matn: "Yuborilgan arizalar shu brauzerda saqlanadi." }
+      { sarlavha: "Kuzating", matn: "Ariza yozuvlari shu brauzerda saqlanadi; tashkilotchiga yuborilmaydi." }
     ]
   },
 
@@ -101,9 +101,9 @@ window.ELEMENTLAR = [
    "element" nomli tanlash maydoni ro'yxatdagi elementlar bilan avtomatik to'ldiriladi. */
 window.FORMA = {
   sarlavha: "Ariza qoldirish",
-  matn: "Majburiy maydonlar * bilan belgilangan.",
-  tugma: "Yuborish",
-  muvaffaqiyat: "Arizangiz qabul qilindi!",
+  matn: "Majburiy maydonlar * bilan belgilangan. Bu lokal namuna: ma’lumot tashkilotchiga yuborilmaydi.",
+  tugma: "Arizani yakunlash",
+  muvaffaqiyat: "Ariza ma’lumotlari tayyor",
   takrorXato: "Bu telefon raqami bilan shu tanlovga ariza allaqachon bor.",
   toldiXato: "Bu tanlovda joy qolmagan. Boshqasini tanlang.",
   jamiKorsat: false,                         // true: "Jami: narx × soni" formada va arizada
