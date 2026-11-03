@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "d2cee1904f3b2095c05dbf72a06a6c144d49577b27da5483246378e452649c81",
-  "archive_bytes": 2831549,
+  "archive_sha256": "a0e7b370f11e008f300ce2c06e7b8a8f077e3b20e9056b7681d63ecae67bf081",
+  "archive_bytes": 2832264,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,8 +80,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7035,
-      "sha256": "76f6acb34ab98741cac7443350f243b60620ff71427ea162369b2cc6870d7829"
+      "bytes": 7459,
+      "sha256": "a2739369ab91bcd7a1ed240607f7ae3f65dd79c88db119c22bf08c0c26d8358e"
     },
     {
       "path": "AI-BRIEF.md",
@@ -100,8 +100,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 29138,
-      "sha256": "b2f16ffa707c507b23303edb831fae03404838e3ffea84eab2b9da220282ca32"
+      "bytes": 30175,
+      "sha256": "a9955dfe82668b8c28c0ac5970dc258f30a1664e2434fc1af3e5d9999ed5a231"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -186,12 +186,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17248,
-      "sha256": "515299c14b05183b710e0445119083e1faafd303e186ca3583a7f054a1bcff23"
+      "sha256": "6f4ed47521f4a7fc0a5a0230e3abb4b541f2608339c245c69277faeaa147882b"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 21008,
-      "sha256": "31ccbdf2869749a3a95bf9d21b5fd8b2d6b743e2f40f55d3022a4b94a0df8b96"
+      "bytes": 21630,
+      "sha256": "eb39a0210337a0d4e3441b2a5a57f32aaab85b24363d0150a10510301ecf597f"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "57601a53df0dcf2395d04f93b4a885481d8b62d96c291e83b40164d847bcdd4f"
+      "sha256": "028122f15331235627176293ed1492670a1cbc895c54e8511d0efa912d88f8d7"
     },
     {
       "path": "README.md",

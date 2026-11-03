@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "347e1f6b2ed6fad1d61e612df8875a26b9728ccdf2b63f1a52511c4928949083",
-  "archive_bytes": 2315501,
+  "archive_sha256": "f82f23b10e493bcb8891a269fe86a81d4187edeefd45f1b4b82373d143234e01",
+  "archive_bytes": 2316210,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,8 +80,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7035,
-      "sha256": "0c08a686a71c78eb5251059e2547cc35d07e91d2ee6f6e6b4974d2ecf56cbe55"
+      "bytes": 7459,
+      "sha256": "088f73e3c84b5fb33b11c16dd42722f29f97d3c900edfa1588730b1a3fd2c1d5"
     },
     {
       "path": "AI-BRIEF.md",
@@ -100,8 +100,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 29138,
-      "sha256": "b2f16ffa707c507b23303edb831fae03404838e3ffea84eab2b9da220282ca32"
+      "bytes": 30175,
+      "sha256": "a9955dfe82668b8c28c0ac5970dc258f30a1664e2434fc1af3e5d9999ed5a231"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -186,12 +186,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17063,
-      "sha256": "eec17639f488580e55f01e74c826466ab5e4c6ec91932d9c51c6f03c8a1f527a"
+      "sha256": "04b32ece4923f3e10f5603d4e2a5f1c2d3914664a7764d3ee8c8f283a1f81372"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 21008,
-      "sha256": "31ccbdf2869749a3a95bf9d21b5fd8b2d6b743e2f40f55d3022a4b94a0df8b96"
+      "bytes": 21630,
+      "sha256": "eb39a0210337a0d4e3441b2a5a57f32aaab85b24363d0150a10510301ecf597f"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "45390ddb58dc79d9668751476fc9f5dc49a9fccfa2be826ecd4bb5111b0e619e"
+      "sha256": "3c0493e9b6b9623452dd691bb95aeb03c99196f7d4efedd56996be502dd7896c"
     },
     {
       "path": "README.md",

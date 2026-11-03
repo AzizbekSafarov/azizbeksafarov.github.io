@@ -41,6 +41,10 @@ Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu sa
 
 Yangi amaliy ish davomiyligi, akkaunt/tarif, himoyada tahrir va oldindan tayyor backend ruxsati tasdiqlanmadi. 120 daqiqa eski loyiha/mashq; 13-oktabr eski ishtirokchi xabari. Bilet, haqiqiy qolgan vaqt va joydagi qoidalar bilan ishlaymiz.
 
+## Sayt shajarasi erkin moslashtiriladi
+
+Landing → katalog → Google login → kabinet → workspace kabi shajara bitta mumkin bo‘lgan yechim. Bu barcha bo‘limni qurish buyrug‘i yoki shu ro‘yxatdan tashqariga chiqish taqiqi emas. AI foydalanuvchi oqimiga mos sahifalar, rollar va navigatsiyani asoslab tanlaydi; kerakli bo‘limlarni qo‘shadi, birlashtiradi yoki namunadan chiqaradi. Aniq bilet talabi yoki foydalanuvchi tanlovi esa yashirin tashlab ketilmaydi. Render + Supabase texnik tanlovi saytning axborot tuzilishini cheklamaydi. To‘liq va sifatli mahsulot eng ko‘p sahifali mahsulot degani emas.
+
 ## Asosiy va zaxira yo‘l
 
 AI tanlangan starterdagi site/ kodidan quradi. AI’siz skelet va tahrir.html foydalanuvchi uchun zaxira, avtomatik almashtirish yo‘li emas. Backend faqat bilet server, umumiy saqlash, login yoki maxfiy API integratsiyasini talab qilsa va tashqi xizmatlarga ruxsat bo‘lsa quriladi. Batafsil qaror va texnik oqim ARCHITECTURE.md da; kerak bo‘lmagan backend bandlari tatbiq etilmaydi.

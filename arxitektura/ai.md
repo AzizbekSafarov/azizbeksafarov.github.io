@@ -16,7 +16,11 @@ Ochiq .io — dizaynlar, tanlov konteksti va ushbu qo‘llanma uchun. Tanlov say
 
 ## Mahsulot tuzilishi: landing → kabinet → ish maydoni
 
-Bu kelajakdagi tanlov mahsuloti uchun yo‘riqnoma; .io bosh qarorgohini dashboard ilovasiga aylantirish topshirig‘i emas. Quyidagi route nomlari namunaviy: biletga mos nomlanadi, mavjud mahsulot route’lari deb taxmin qilinmaydi. Hamma qatlam har bilet uchun majburiy emas. Axborot sayti bitta sahifada yetarli bo‘lishi mumkin; qayta kirib shaxsiy ishni davom ettirish kerak bo‘lsa dashboard/workspace zarur bo‘ladi.
+Bu kelajakdagi tanlov mahsuloti uchun yo‘riqnoma; .io bosh qarorgohini dashboard ilovasiga aylantirish topshirig‘i emas. Quyidagi route nomlari namunaviy: biletga mos nomlanadi, mavjud mahsulot route’lari deb taxmin qilinmaydi. Hamma qatlam har bilet uchun majburiy emas. Axborot sayti bitta sahifada yetarli bo‘lishi mumkin; qayta kirib shaxsiy ishni davom ettirish talab qilinsa bunga mos interfeys kerak, lekin uni alohida dashboard va workspace sahifalariga ajratish shart emas.
+
+Shajara — ochiq loyiha qarori: quyidagi jadval imkoniyatlar namunasi, majburiy sahifalar ro‘yxati yoki yuqori chegara emas. AI bilet, foydalanuvchi maqsadi va tanlangan dizaynga qarab sahifalarni qo‘shishi, birlashtirishi, olib tashlashi yoki boshqa navigatsiya tanlashi mumkin. AI yordamchi va Telegram alohida sahifa bo‘lishi shart emas; Google Auth ham mustaqil mahsulot funksiyasi yoki har amal oldidagi to‘siq qilib qo‘yilmaydi. Mehmon, kirgan foydalanuvchi va administrator yo‘llari haqiqiy ruxsatlarga qarab belgilanadi.
+
+Render + Supabase foydalanuvchi tanlagan asosiy texnik reja; bu tanlov sahifalar soni, nomi yoki iyerarxiyasini qotirmaydi. Oddiy tuzilish qarorlarini mustaqil asoslab bajaring; aniq talabni tashlab ketish yoki kelishilgan stackni almashtirishni yashirin qarorga aylantirmang. Murakkabroq mahsulot ham mumkin: har bo‘limning foydasi va boshqa qismlar bilan ishlashi aniq bo‘lsin.
 
 | Qatlam | Namuna route | Kirish | Asosiy vazifa |
 | --- | --- | --- | --- |
@@ -28,7 +32,7 @@ Bu kelajakdagi tanlov mahsuloti uchun yo‘riqnoma; .io bosh qarorgohini dashboa
 
 ### Animatsiyali sahifa va landing
 
-Asosiy oqim: mehmon → foydani tushunish → mazmun/demo → boshlash/kirish → dashboard → workspace → saqlangan natija → keyin davom ettirish.
+Mumkin bo‘lgan oqim misoli, majburiy ketma-ketlik emas: mehmon → foydani tushunish → mazmun/demo → boshlash/kirish → dashboard → workspace → saqlangan natija → keyin davom ettirish.
 
 Animatsiya landing ichidagi hero, tushuntiruvchi bo‘lim yoki mahsulotning foydali interaksiyasi bo‘lishi mumkin. Alohida /experience sahifasi faqat mustaqil hikoya/tajriba vazifasi bo‘lsa qo‘shiladi. Animatsiya tugashini kutish, majburiy intro/preloader yoki scroll hijack mahsulotga kirish sharti qilinmaydi; “o‘tkazib yuborish” yoki to‘g‘ri ishga kirish yo‘li mavjud bo‘lsin. Matn va CTA JavaScript/canvas animatsiyasiga bog‘lanmasin.
 

@@ -79,6 +79,7 @@ Deliver the strongest coherent product feasible within the actual time, tools an
 
 ## How to work
 
+- Architecture trees and route tables are examples, not a mandatory sitemap or a maximum scope. Derive screens and navigation from the actual user journey; combine, add or omit example screens as justified. Render + Supabase is the selected technical plan, not a fixed page hierarchy. AI and Telegram can be contextual capabilities rather than separate pages. Preserve explicit requirements and explain material departures.
 - Keep the selected visual identity (fonts, colour roles, layout, interaction style). Replace sample content, navigation and features with the ticket's. Do not swap the design or framework to fix a local bug.
 - Distinguish explicit ticket requirements, current user choices, necessary implementation decisions and optional recommendations. A ticket may imply shared storage without naming a backend; explain that inference instead of calling it an explicit rule. Public planned/unknown status never overrides current project evidence. Quality labels and passing tests are not certification.
 - Match the scope of the current request: a bug fix is not a full audit, a guide is not implemented infrastructure, and preserving visual identity does not mean preserving defects. Report any requested work still missing. See PREPARATION.md for interpretation boundaries.

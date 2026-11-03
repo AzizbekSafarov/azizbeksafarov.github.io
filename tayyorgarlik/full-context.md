@@ -202,6 +202,10 @@ Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu sa
 
 Yangi amaliy ish davomiyligi, akkaunt/tarif, himoyada tahrir va oldindan tayyor backend ruxsati tasdiqlanmadi. 120 daqiqa eski loyiha/mashq; 13-oktabr eski ishtirokchi xabari. Bilet, haqiqiy qolgan vaqt va joydagi qoidalar bilan ishlaymiz.
 
+## Sayt shajarasi erkin moslashtiriladi
+
+Landing → katalog → Google login → kabinet → workspace kabi shajara bitta mumkin bo‘lgan yechim. Bu barcha bo‘limni qurish buyrug‘i yoki shu ro‘yxatdan tashqariga chiqish taqiqi emas. AI foydalanuvchi oqimiga mos sahifalar, rollar va navigatsiyani asoslab tanlaydi; kerakli bo‘limlarni qo‘shadi, birlashtiradi yoki namunadan chiqaradi. Aniq bilet talabi yoki foydalanuvchi tanlovi esa yashirin tashlab ketilmaydi. Render + Supabase texnik tanlovi saytning axborot tuzilishini cheklamaydi. To‘liq va sifatli mahsulot eng ko‘p sahifali mahsulot degani emas.
+
 ## Asosiy va zaxira yo‘l
 
 AI tanlangan starterdagi site/ kodidan quradi. AI’siz skelet va tahrir.html foydalanuvchi uchun zaxira, avtomatik almashtirish yo‘li emas. Backend faqat bilet server, umumiy saqlash, login yoki maxfiy API integratsiyasini talab qilsa va tashqi xizmatlarga ruxsat bo‘lsa quriladi. Batafsil qaror va texnik oqim ARCHITECTURE.md da; kerak bo‘lmagan backend bandlari tatbiq etilmaydi.
@@ -737,7 +741,11 @@ Ochiq .io — dizaynlar, tanlov konteksti va ushbu qo‘llanma uchun. Tanlov say
 
 ## Mahsulot tuzilishi: landing → kabinet → ish maydoni
 
-Bu kelajakdagi tanlov mahsuloti uchun yo‘riqnoma; .io bosh qarorgohini dashboard ilovasiga aylantirish topshirig‘i emas. Quyidagi route nomlari namunaviy: biletga mos nomlanadi, mavjud mahsulot route’lari deb taxmin qilinmaydi. Hamma qatlam har bilet uchun majburiy emas. Axborot sayti bitta sahifada yetarli bo‘lishi mumkin; qayta kirib shaxsiy ishni davom ettirish kerak bo‘lsa dashboard/workspace zarur bo‘ladi.
+Bu kelajakdagi tanlov mahsuloti uchun yo‘riqnoma; .io bosh qarorgohini dashboard ilovasiga aylantirish topshirig‘i emas. Quyidagi route nomlari namunaviy: biletga mos nomlanadi, mavjud mahsulot route’lari deb taxmin qilinmaydi. Hamma qatlam har bilet uchun majburiy emas. Axborot sayti bitta sahifada yetarli bo‘lishi mumkin; qayta kirib shaxsiy ishni davom ettirish talab qilinsa bunga mos interfeys kerak, lekin uni alohida dashboard va workspace sahifalariga ajratish shart emas.
+
+Shajara — ochiq loyiha qarori: quyidagi jadval imkoniyatlar namunasi, majburiy sahifalar ro‘yxati yoki yuqori chegara emas. AI bilet, foydalanuvchi maqsadi va tanlangan dizaynga qarab sahifalarni qo‘shishi, birlashtirishi, olib tashlashi yoki boshqa navigatsiya tanlashi mumkin. AI yordamchi va Telegram alohida sahifa bo‘lishi shart emas; Google Auth ham mustaqil mahsulot funksiyasi yoki har amal oldidagi to‘siq qilib qo‘yilmaydi. Mehmon, kirgan foydalanuvchi va administrator yo‘llari haqiqiy ruxsatlarga qarab belgilanadi.
+
+Render + Supabase foydalanuvchi tanlagan asosiy texnik reja; bu tanlov sahifalar soni, nomi yoki iyerarxiyasini qotirmaydi. Oddiy tuzilish qarorlarini mustaqil asoslab bajaring; aniq talabni tashlab ketish yoki kelishilgan stackni almashtirishni yashirin qarorga aylantirmang. Murakkabroq mahsulot ham mumkin: har bo‘limning foydasi va boshqa qismlar bilan ishlashi aniq bo‘lsin.
 
 | Qatlam | Namuna route | Kirish | Asosiy vazifa |
 | --- | --- | --- | --- |
@@ -749,7 +757,7 @@ Bu kelajakdagi tanlov mahsuloti uchun yo‘riqnoma; .io bosh qarorgohini dashboa
 
 ### Animatsiyali sahifa va landing
 
-Asosiy oqim: mehmon → foydani tushunish → mazmun/demo → boshlash/kirish → dashboard → workspace → saqlangan natija → keyin davom ettirish.
+Mumkin bo‘lgan oqim misoli, majburiy ketma-ketlik emas: mehmon → foydani tushunish → mazmun/demo → boshlash/kirish → dashboard → workspace → saqlangan natija → keyin davom ettirish.
 
 Animatsiya landing ichidagi hero, tushuntiruvchi bo‘lim yoki mahsulotning foydali interaksiyasi bo‘lishi mumkin. Alohida /experience sahifasi faqat mustaqil hikoya/tajriba vazifasi bo‘lsa qo‘shiladi. Animatsiya tugashini kutish, majburiy intro/preloader yoki scroll hijack mahsulotga kirish sharti qilinmaydi; “o‘tkazib yuborish” yoki to‘g‘ri ishga kirish yo‘li mavjud bo‘lsin. Matn va CTA JavaScript/canvas animatsiyasiga bog‘lanmasin.
 

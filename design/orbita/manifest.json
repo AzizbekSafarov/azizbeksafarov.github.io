@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "704dd21ffe2465d86b6e11a66e2c1605041e1364cc2d6d3084bedda13ea4df61",
-  "archive_bytes": 836136,
+  "archive_sha256": "3e29ffedbff0e8afd1e482b52060b005764256686b3ac774fc1da01b9ba51695",
+  "archive_bytes": 836845,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,8 +80,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7036,
-      "sha256": "ee4756a3c92d1f1a070d285105fe871c5a6227571944eb267da34ba91b829d17"
+      "bytes": 7460,
+      "sha256": "bd655df7c61a966a5f95b1dba642cfef2074661b3e2a06f8c2acbc9d4ad77dfc"
     },
     {
       "path": "AI-BRIEF.md",
@@ -100,8 +100,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 29138,
-      "sha256": "b2f16ffa707c507b23303edb831fae03404838e3ffea84eab2b9da220282ca32"
+      "bytes": 30175,
+      "sha256": "a9955dfe82668b8c28c0ac5970dc258f30a1664e2434fc1af3e5d9999ed5a231"
     },
     {
       "path": "BRAND-ASSETS.json",
@@ -186,12 +186,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16434,
-      "sha256": "a5282f13911090b4e1a71f4d5340891249250465c05884cac1604e30654b5ca4"
+      "sha256": "9ceff353b9f164dfb1c8c4cf6732914f004980c76a7d3af59ec4e78f874604b5"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 21008,
-      "sha256": "31ccbdf2869749a3a95bf9d21b5fd8b2d6b743e2f40f55d3022a4b94a0df8b96"
+      "bytes": 21630,
+      "sha256": "eb39a0210337a0d4e3441b2a5a57f32aaab85b24363d0150a10510301ecf597f"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "77cb23c1187d5d73232a0d5f3a5559e5966f45f5b04b60f62886163e5258dd55"
+      "sha256": "4dfb1f71b621707966f8dc0adbe2216c751582f529526769e9cf247ede08b62a"
     },
     {
       "path": "README.md",
