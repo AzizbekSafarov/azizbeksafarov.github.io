@@ -14,7 +14,7 @@ Havolani ochganing avtomatik doimiy xotira, akkauntga kirish yoki fayl tahrirlas
 2. [Tanlov qoidalari va baholash](https://azizbeksafarov.github.io/design/handoff/competition.md) — Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.
 3. [Tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.
 4. [Ish usuli](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).
-5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas.
+5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas. Zarur texnik yechimni bilet maqsadidan asoslash va joriy foydalanuvchi so‘rovini bajarish mumkin.
 6. [To‘liq manbalar](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — Nizomlarning to‘liq matni /ustoz/nizom.md, barcha tadqiqot /ustoz/ai.md, yig‘ma /tayyorgarlik/full-context.md. Qoida savoli tug‘ilsa tegishli bo‘limni to‘liq o‘qi; foydalanuvchi so‘rasa reading-plan.json bo‘yicha hammasini.
 
 Tanlov loyihasini boshlashda qisqa tanlov konteksti va /design/handoff/score-workplan.md’ni ham o‘qi. ZIP ichida SCORING-WORKPLAN.md va FULL-COMPETITION-CONTEXT.md mavjud. Mezonlar, himoya va topshirish dalillari faqat dizayn kodi o‘qilgani bilan qamrab olinmaydi. To‘liq manba so‘ralganda qisqa boshlash matni bilan almashtirma; uzun manbani bo‘limlar bo‘yicha to‘liq o‘qi va o‘qilmagan qismini ochiq ayt.
@@ -62,6 +62,16 @@ Hozir bu uch qatlamli tanlov mahsuloti sinovi hali to‘liq bajarilmagan. Olding
 Kuzatilgan belgi → takrorlash qadami → taxmin → tekshiruv → dalil → eng kichik tuzatish → regressiya sinovi. HTTP 200’ni hamma narsa ishladi deb qabul qilma. UptimeRobot process’ni ko‘rishi mumkin; login, database va AI alohida tekshiriladi. So‘rovni takrorlash ma’lumotni ikki marta yozishi mumkinligini hisobga ol.
 
 Quyidagi katalog ehtimoliy muammolarni ko‘rsatadi. Biror bandning mavjudligi aynan shu nosozlik joriy saytda borligini bildirmaydi.
+
+## Sifat maqsadi: talablarni bajarish bilan cheklanmaslik
+
+Maqsad — haqiqiy vaqt, vosita va amaldagi qoidalar doirasida foydalanuvchiga eng puxta natijani berish. Nizomdagi majburiy bandlar va bilet talablari bajarilishi zarur, lekin shu bilan sifat ishi tugamaydi. Nizomdagi taqiq, vaqt va topshirish chegaralari esa qat’iy: yuqori sifat istagi ularni buzishga ruxsat emas.
+
+Bilet foydalanuvchi muammosi va natijani, nizom baholash va cheklovlarni, foydalanuvchining joriy talabi dizayn hamda kutilgan sifatni belgilaydi. Ularni birga hisobga oling. “Dizayn 10 ball” yoki “jadvalda yo‘q” deb o‘qilish, qulaylik, izchil matn, kirish imkoniyati, tezlik va zarur xavfsizlikni e’tiborsiz qoldirmang. Bular asosiy oqimning sifatiga ham ta’sir qiladi.
+
+Majburiy oqimni qurish davomida sifatni ham ta’minlang. Keyin haqiqiy kamchiliklarni foydalanuvchiga ta’siri bo‘yicha tuzating: tushunarsiz matn, yetishmagan holat, noqulay mobil amal, sust javob, buziladigan saqlash, izchil bo‘lmagan brend va o‘rinsiz motion. “Maksimal” ko‘p funksiya, ko‘p animatsiya, ko‘p test yoki katta arxitektura degani emas. Ixtiyoriy imkoniyat faqat vazifaga foyda bersa, qoidalarga mos bo‘lsa va tekshirish/topshirish vaqtini yeb qo‘ymasa qo‘shiladi.
+
+Yakuniy qaror: talab bajarildimi, foydalanuvchi natijaga tushunarli yetadimi, tanlangan dizayn puxta moslashtirildimi, matn/data rost va izchilmi, tegishli xato holatlari ko‘rildimi, qolgan kamchilik ochiq aytildimi? Dalil bo‘lmasa “maksimal”, “mukammal” yoki “enterprise-ready” deb baholamang. Cheksiz audit sikli ham maqsad emas: muhim ochiq kamchilik, vaqt va topshirish holatiga qarab ishni yakunlang.
 
 ## Halol ish va halol hisobot
 

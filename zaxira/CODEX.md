@@ -1,6 +1,6 @@
 # CODEX — tanlov kuni kuchli AI bilan ishlash (kod yozmaydiganlar uchun)
 
-Bu qo‘llanma Codex (ChatGPT desktop ilovasi ichida) bilan professional sayt yasash uchun. Siz kod yozmaysiz: siz **talab qo‘yasiz, natijani tekshirasiz va qaror qilasiz**, Codex esa kod yozadi. Haqiqiy bilet, vaqt va joydagi qoida ustuvor. Bu fayl bilet bermaydi.
+Bu qo‘llanma Codex ilovasi yoki fayllar bilan ishlay oladigan Codex muhiti bilan professional sayt yasash uchun. Siz kod yozmaysiz: siz **talab qo‘yasiz, natijani tekshirasiz va qaror qilasiz**, Codex esa kod yozadi. Haqiqiy bilet, vaqt va joydagi qoida ustuvor. Bu fayl bilet bermaydi.
 
 Codex ishlamasa yoki limit tugasa, boshlangan ishni saqlang va JONLI-OZGARISH.md orqali kerakli qo‘lda tahrirni bajaring. Loyiha hali yo‘q yoki mavjudini tugatish imkonsiz bo‘lsa, biletga mos AI’siz yo‘l ZAXIRA.md da.
 
@@ -13,6 +13,16 @@ Video ulanish uchun 15 daqiqa deydi; amaliy vaqtga kirmasligi mezonlar loyihasid
 3. Tanlangan dizaynning **source.zip** faylini yangi bo‘sh papkaga oching. **kit.zip** yuklangan bo‘lsa avval uning ichidagi tanlangan dizayn/source.zip ni ham oching. Ish ildizida site/, START-HERE.md va kit.json turishi kerak.
 4. Shu ildiz papkani Codex loyihasi sifatida oching. README.md dagi buyruqlarni aynan ko‘rsatilgan papkadan bajartiring. Tahrirdan oldin node verify-package.mjs; keyin node serve.mjs.
 5. Asl preview ochilganini ko‘ring. Bloom’da tahrirdan keyin source build kerak; HTML starterlarda npm yo‘q. Ruxsatlar kerakli loyiha va vositalarga mos bo‘lsin; noma’lum amalni o‘qimasdan tasdiqlamang.
+
+## Sifat maqsadi: talablarni bajarish bilan cheklanmaslik
+
+Maqsad — haqiqiy vaqt, vosita va amaldagi qoidalar doirasida foydalanuvchiga eng puxta natijani berish. Nizomdagi majburiy bandlar va bilet talablari bajarilishi zarur, lekin shu bilan sifat ishi tugamaydi. Nizomdagi taqiq, vaqt va topshirish chegaralari esa qat’iy: yuqori sifat istagi ularni buzishga ruxsat emas.
+
+Bilet foydalanuvchi muammosi va natijani, nizom baholash va cheklovlarni, foydalanuvchining joriy talabi dizayn hamda kutilgan sifatni belgilaydi. Ularni birga hisobga oling. “Dizayn 10 ball” yoki “jadvalda yo‘q” deb o‘qilish, qulaylik, izchil matn, kirish imkoniyati, tezlik va zarur xavfsizlikni e’tiborsiz qoldirmang. Bular asosiy oqimning sifatiga ham ta’sir qiladi.
+
+Majburiy oqimni qurish davomida sifatni ham ta’minlang. Keyin haqiqiy kamchiliklarni foydalanuvchiga ta’siri bo‘yicha tuzating: tushunarsiz matn, yetishmagan holat, noqulay mobil amal, sust javob, buziladigan saqlash, izchil bo‘lmagan brend va o‘rinsiz motion. “Maksimal” ko‘p funksiya, ko‘p animatsiya, ko‘p test yoki katta arxitektura degani emas. Ixtiyoriy imkoniyat faqat vazifaga foyda bersa, qoidalarga mos bo‘lsa va tekshirish/topshirish vaqtini yeb qo‘ymasa qo‘shiladi.
+
+Yakuniy qaror: talab bajarildimi, foydalanuvchi natijaga tushunarli yetadimi, tanlangan dizayn puxta moslashtirildimi, matn/data rost va izchilmi, tegishli xato holatlari ko‘rildimi, qolgan kamchilik ochiq aytildimi? Dalil bo‘lmasa “maksimal”, “mukammal” yoki “enterprise-ready” deb baholamang. Cheksiz audit sikli ham maqsad emas: muhim ochiq kamchilik, vaqt va topshirish holatiga qarab ishni yakunlang.
 
 ## 1. Asosni tanlash
 
@@ -34,13 +44,13 @@ Starterni bir daqiqada tanlang va keyin almashtirmang: vaqt ishlaydigan oqimga k
 
 Modelni mavjud imkoniyat va haqiqiy sinovga qarab tanlang. Qiyin reja/xatoda chuqurroq fikrlash, oddiy tahrirda qisqaroq ish yetadi; model nomidan sifat yoki sarf kafolati chiqarmang.
 
-`ZAXIRA/skelet/` va `tahrir.html` — siz uchun, AI’siz zaxira: Codex ishlamay qolsa yoki limit tugasa, saytni o‘zingiz panelda yig‘asiz (`ZAXIRA.md`). Codex’ga skeletdan qurishni buyurmang.
+`ZAXIRA/skelet/` va `tahrir.html` — siz uchun, AI’siz zaxira: Codex ishlamay qolsa yoki limit tugasa, saytni o‘zingiz panelda yig‘asiz (`ZAXIRA.md`). Tanlangan starter asosiy yo‘l. Skeletga faqat foydalanuvchi shu yo‘lni tanlasa yoki mavjud ishni saqlab, almashtirishga kelishilsa o‘ting.
 
 ## 2. So‘rovlar ketma-ketligi (120 daqiqa — faqat rejalash misoli)
 
 120 daqiqa tasdiqlangan umumiy limit emas. C1–C6 vaqtlarini haqiqiy qolgan vaqtga moslang; majburiy oqim va tekshiruv ustuvor.
 
-Har birini **alohida xabar** qilib yuboring. Kvadrat qavslarni to‘ldiring. Har javobdan keyin natijani **o‘zingiz brauzerda ko‘ring** — Codex “tayyor” desa ham.
+Bu so‘rovlar foydalanuvchi uchun ixtiyoriy bosqichlar. AI allaqachon ishni oxirigacha bajarishga vakolat olgan bo‘lsa, har bosqichda qayta tasdiq kutmasin. Qo‘lda boshqarishni tanlasangiz, har birini alohida xabar qilib yuboring. Kvadrat qavslarni to‘ldiring. Har javobdan keyin natijani **o‘zingiz brauzerda ko‘ring** — Codex “tayyor” desa ham.
 
 ### C1 — Tushunish va reja (5–10 daqiqa)
 
@@ -69,15 +79,14 @@ Rejani o‘qing. Biletdagi biror talab tushib qolgan bo‘lsa, ayting: `Biletdag
 Rejani tasdiqlayman. Endi qur. Qoidalar:
 - Tanlangan dizaynning uslubini (shrift, kompozitsiya, rang tili) saqla, mazmun va funksiyalarni biletga moslashtir.
 - Starterning texnologiyasida qol (HTML starterlarda oddiy HTML/CSS/JS, Bloom'da mavjud React loyihasi). Frameworkni zaruratsiz almashtirma. Bilet integratsiyasi uchun zarur SDK bo'lsa sababini yoz va mos dependency/lockfile ishlat. Lokal resurslar internet uzilganda ochilsin; haqiqiy server/API amali esa internet talab qilishini yashirma.
-- Barcha ko'rinadigan matnlar, ro'yxat ma'lumotlari va asosiy rang oson topilsin:
-  ma'lumot bitta faylda (mavjud model.js yoki yangi content.js), asosiy rang CSS o'zgaruvchisida.
+- Matn, ma'lumot va rangning haqiqiy manbasi oson topilsin; mavjud model/component/theming tuzilmasini saqla va xaritasini yoz. Barcha matnni majburan bitta faylga ko'chirma. Bloom'da dinamik rang generatori va semantik rang rollari birga ishlaydi; bitta CSS rangiga almashtirma.
 - Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Biletda lokal saqlash yetarli bo'lsa localStorage; server/login/umumiy baza yoki maxfiy API talab qilinsa va ruxsat bo'lsa ARCHITECTURE.md bo'yicha backend qur. Lokal natijani serverga yuborildi dema.
 - Bo'sh holat, xato holati, mobil menyu, klaviatura va ko'rinadigan fokus.
 - Demo ma'lumot haqiqiy deb ko'rsatilmasin.
 Tugagach: qaysi fayllar o'zgardi va qanday ochiladi — 5 qatorda.
 ```
 
-Keyin ZIP ildizida `node serve.mjs` bilan oching (Bloom source tahriridan keyin avval build). HTML starterlarning ES modullari file:// orqali ishlamasligi mumkin; yoki Codex’dan so‘rang: `Saytni brauzerda och va asosiy sahifani ko'rsat.` (Codex ichidagi brauzer bor.)
+Keyin ZIP ildizida `node serve.mjs` bilan oching (Bloom source tahriridan keyin avval build). HTML starterlarning ES modullari file:// orqali ishlamasligi mumkin; yoki Codex’dan so‘rang: `Saytni brauzerda och va asosiy sahifani ko'rsat.` (Brauzer vositasi ushbu muhitda mavjud va yoqilgan bo‘lsa.)
 
 ### C3 — Sinov va tuzatish (15–20 daqiqa)
 
@@ -92,7 +101,7 @@ Topilgan har xatoni tuzat va qayta sina. Oxirida jadval: talab → sinov → nat
 
 Jadvaldagi har “o‘tdi”ni **o‘zingiz** bir marta bosib ko‘ring. Ko‘rmagan narsangizni himoyada “ishlaydi” demang.
 
-### C4 — Professional ko‘rinish (10–15 daqiqa, majburiy talablar ishlagandan keyin)
+### C4 — Yakuniy vizual sayqal (10–15 daqiqa, majburiy talablar ishlagandan keyin)
 
 ```text
 Tanlangan starter uslubini saqla. Funksiyalarni va kompozitsiyani qayta qurma; faqat aniqlangan ko'rinish kamchiliklarini tuzat:
@@ -117,18 +126,18 @@ Ochiq parol yoki kalit qolmaganini tekshir.
 
 ### C6 — Jonli o‘zgarish mashqi (5 daqiqa, AI’siz)
 
-`JONLI-OZGARISH.md` ga qarab **o‘zingiz** bitta matn va asosiy rangni o‘zgartiring → Ctrl+S → brauzerda Ctrl+Shift+R. Ishlamasa, Codex’dan: `JONLI-OZGARISH.md ni men tushunadigan qilib soddalashtir; men X ni o'zgartirmoqchi edim, mana bu bo'ldi: Y.`
+`JONLI-OZGARISH.md` ga qarab **o‘zingiz** bitta matn va asosiy rangni o‘zgartiring → Ctrl+S → Bloom production preview bo‘lsa qayta build → brauzerda Ctrl+Shift+R. Ishlamasa, Codex’dan: `JONLI-OZGARISH.md ni men tushunadigan qilib soddalashtir; men X ni o'zgartirmoqchi edim, mana bu bo'ldi: Y.`
 
 ## 3. Xato bo‘lganda — tayyor iboralar
 
 | Holat | Codex’ga yozing |
 |---|---|
 | Nimadir buzildi | `Oxirgi o'zgarishdan keyin [nima] ishlamay qoldi. Sababini top, tuzat, qayta sina. Boshqa narsaga tegma.` |
-| Juda ko‘p o‘zgartirdi | Javob ostidagi **Undo** tugmasi, yoki: `Oxirgi o'zgarishlarni bekor qil.` |
+| Juda ko‘p o‘zgartirdi | Muhitda mavjud bo‘lsa tegishli o‘zgarishni Undo qiling; boshqa ishni ham qaytarmasligini tekshiring. Yoki: `Oxirgi o'zgarishlarni bekor qil.` |
 | Tushunarsiz javob | `Kod bilmayman. Nima qilganingni 3 ta oddiy gapda ayt va men nimani tekshirishim kerak.` |
 | Bir joyda aylanib qoldi (2 urinishdan keyin) | `To'xta. Muammoni boshqa yo'l bilan, eng sodda usulda hal qil.` Yoki o‘sha funksiyani soddalashtiring. |
 | Ko‘rinish yoqmadi | `[sahifa] da [element] [muammo]. Faqat shu joyni tuzat.` Aniq joy va aniq muammo. |
-| Codex ruxsat so‘radi | O‘qing: faqat loyiha papkasidagi fayl/buyruq bo‘lsa ruxsat bering. Tizim sozlamasi, boshqa papka, o‘chirish — rad eting. |
+| Codex ruxsat so‘radi | Amal nimani o‘zgartirishi va nima uchun kerakligini o‘qing. Papka ichida ekanining o‘zi xavfsizlik dalili emas; zarur tashqi xizmat yoki bog‘liqlik ham asosli bo‘lishi mumkin. Tushunarsiz yoki ish doirasidan tashqari amalni aniqlashtiring. |
 
 ## 4. Vaqt va limit nazorati
 
@@ -152,7 +161,7 @@ Quyidagi jadval 120 daqiqalik mashq uchun mo‘ljal, rasmiy reglament yoki bajar
 
 Mezonlar loyihasining 22-bandida AI ishlatishning o‘zi kamaytirish asosi emasligi yozilgan; bu loyiha maqomidagi qoida. Himoyada **siz nimani boshqarganingiz** so‘raladi (5.2 va 4.2 ko‘rsatkichlari):
 
-- “Kodni Codex yozdi. Men biletni talablar jadvaliga aylantirdim, dizaynni tanladim, har talabni o‘zim sinadim, [xato]ni topib tuzattirdim, [matn/rang/detal]ni o‘zim o‘zgartirdim.”
+- “AI [haqiqatan bajargan ish]ni bajardi. Men [haqiqiy qaror va amallarim]ni bajardim. [Aniq oqim]ni [kim, qanday muhitda] tekshirdi; natija [haqiqiy natija].” Qavslarni faqat dalilli ish bilan to‘ldiring. AI sinagan ishni “o‘zim sinadim” deb aytmang.
 - Cheklovni haqiqiy holatga mos ayting. Faqat lokal loyiha bo‘lsa: “Ma’lumot shu brauzerda saqlanadi”. Server ishlasa uning tekshirilgan holatini ayting.
 - Ishlamaydigan narsani “ishlaydi” demang.
 

@@ -2,6 +2,7 @@
   "schema_version": 1,
   "snapshot_date": "2026-10-28",
   "scope": "Public preparation snapshot, not live infrastructure status",
+  "status_interpretation": "approved means user-selected preparation plan, not organizer approval. planned/unknown describe this public snapshot only; current user evidence and project HANDOFF supersede them. verified refers only to the stated evidence and date, not whole-product certification.",
   "approved_stack": {
     "hosting": "Render Web Service: frontend + Node.js API",
     "monitoring": "UptimeRobot GET /health every 5 minutes",

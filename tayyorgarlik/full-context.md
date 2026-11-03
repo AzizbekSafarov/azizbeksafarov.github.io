@@ -174,6 +174,24 @@ Maqsad — haqiqiy biletga mos, ishlaydigan va ishtirokchi tushuntira oladigan s
 
 Yangi ish boshida foydalanuvchining aynan hozirgi so‘rovi, o‘zgartirilishi kerak bo‘lgan narsa va saqlanadigan xususiyatni qisqa qayd eting. Bajarilgan ishni shu so‘rov bilan solishtiring; o‘zingiz tanlagan torroq vazifaga almashtirmang. Yetishmagan qismni hujjat, test soni yoki maqtov bilan yopmang.
 
+## Sifat maqsadi: talablarni bajarish bilan cheklanmaslik
+
+Maqsad — haqiqiy vaqt, vosita va amaldagi qoidalar doirasida foydalanuvchiga eng puxta natijani berish. Nizomdagi majburiy bandlar va bilet talablari bajarilishi zarur, lekin shu bilan sifat ishi tugamaydi. Nizomdagi taqiq, vaqt va topshirish chegaralari esa qat’iy: yuqori sifat istagi ularni buzishga ruxsat emas.
+
+Bilet foydalanuvchi muammosi va natijani, nizom baholash va cheklovlarni, foydalanuvchining joriy talabi dizayn hamda kutilgan sifatni belgilaydi. Ularni birga hisobga oling. “Dizayn 10 ball” yoki “jadvalda yo‘q” deb o‘qilish, qulaylik, izchil matn, kirish imkoniyati, tezlik va zarur xavfsizlikni e’tiborsiz qoldirmang. Bular asosiy oqimning sifatiga ham ta’sir qiladi.
+
+Majburiy oqimni qurish davomida sifatni ham ta’minlang. Keyin haqiqiy kamchiliklarni foydalanuvchiga ta’siri bo‘yicha tuzating: tushunarsiz matn, yetishmagan holat, noqulay mobil amal, sust javob, buziladigan saqlash, izchil bo‘lmagan brend va o‘rinsiz motion. “Maksimal” ko‘p funksiya, ko‘p animatsiya, ko‘p test yoki katta arxitektura degani emas. Ixtiyoriy imkoniyat faqat vazifaga foyda bersa, qoidalarga mos bo‘lsa va tekshirish/topshirish vaqtini yeb qo‘ymasa qo‘shiladi.
+
+Yakuniy qaror: talab bajarildimi, foydalanuvchi natijaga tushunarli yetadimi, tanlangan dizayn puxta moslashtirildimi, matn/data rost va izchilmi, tegishli xato holatlari ko‘rildimi, qolgan kamchilik ochiq aytildimi? Dalil bo‘lmasa “maksimal”, “mukammal” yoki “enterprise-ready” deb baholamang. Cheksiz audit sikli ham maqsad emas: muhim ochiq kamchilik, vaqt va topshirish holatiga qarab ishni yakunlang.
+
+## Tavsiyani talab yoki dalilga aylantirmaslik
+
+- Bilet foydalanuvchi natijasini aytishi mumkin, texnologiya nomini sanashi shart emas. Masalan, turli qurilmadan bitta yozuvni davom ettirish talabi umumiy saqlashni talab qilishi mumkin. Zarur texnik xulosani “biletda aynan yozilgan” demang: talab → sabab → tanlangan yechim deb asoslang. Backend/API haqidagi shartli bandlar foydalanuvchining alohida tayyorgarlik yoki integratsiya so‘rovini taqiqlamaydi.
+- Rasmiy talab, foydalanuvchi tanlovi, texnik zarurat va ixtiyoriy tavsiya alohida maqomga ega. Ziddiyat bo‘lsa uni yashirmang; tashkilotchi tasdiqlamagan ruxsatni foydalanuvchi xohishidan kelib chiqarib tasdiqlangan demang. Noaniqlik ta’sir qilmaydigan ish davom etadi.
+- “Professional”, “korporativ sifat”, “to‘liq paket” — mustaqil audit yoki sertifikat emas. Paket to‘liqligi undagi fayllar haqida; yakuniy mahsulot tayyorligi haqiqiy talablar va tekshirilgan oqimlarga bog‘liq. Demo sonlari, testi o‘tgan qatorlar yoki chiroyli maketdan sifat foizi chiqarmang.
+- Ochiq PROJECT-STATUS dagi planned/unknown va sana aynan o‘sha snapshotga tegishli. Joriy chatda tasdiqlangan ishni ular sabab qayta yo‘q deb hisoblamang. O‘qish qaydini ham avtomatik “tushunildi” sertifikatiga aylantirmang: muhim talabning ishga ta’sirini ko‘rsating.
+- Tayyor prompt va himoya jumlalari namuna. Ularni hujjat ichida uchratish bajarish buyrug‘i yoki bajarilgan ish dalili emas. Foydalanuvchi aynan qo‘llasa, joriy doiraga moslang; “men sinadim” faqat o‘sha odam sinagan bo‘lsa aytiladi.
+
 ## Haqiqiy topshiriq qayerdan olinadi?
 
 Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu saytda bilet yo‘q. Bilet berilgach uning manbasini CURRENT-TASK.md’da qayd eting va ish rejasini faqat undagi talablar hamda foydalanuvchining qarorlaridan tuzing. Dizayn demo mavzusi, test fixture’i, eski reja va mezonlar loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi; namunaviy bilet manba yaxlitligi uchun REGULATIONS.md’da o‘z izohi bilan saqlangan. Qaysi matn bilet hisoblanishi mashina o‘qiydigan ko‘rinishda: [TASK-BOUNDARY.json](https://azizbeksafarov.github.io/design/handoff/task-boundary.json).
@@ -306,7 +324,7 @@ Havolani ochganing avtomatik doimiy xotira, akkauntga kirish yoki fayl tahrirlas
 2. [Tanlov qoidalari va baholash](https://azizbeksafarov.github.io/design/handoff/competition.md) — Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.
 3. [Tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.
 4. [Ish usuli](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).
-5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas.
+5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas. Zarur texnik yechimni bilet maqsadidan asoslash va joriy foydalanuvchi so‘rovini bajarish mumkin.
 6. [To‘liq manbalar](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — Nizomlarning to‘liq matni /ustoz/nizom.md, barcha tadqiqot /ustoz/ai.md, yig‘ma /tayyorgarlik/full-context.md. Qoida savoli tug‘ilsa tegishli bo‘limni to‘liq o‘qi; foydalanuvchi so‘rasa reading-plan.json bo‘yicha hammasini.
 
 Tanlov loyihasini boshlashda qisqa tanlov konteksti va /design/handoff/score-workplan.md’ni ham o‘qi. ZIP ichida SCORING-WORKPLAN.md va FULL-COMPETITION-CONTEXT.md mavjud. Mezonlar, himoya va topshirish dalillari faqat dizayn kodi o‘qilgani bilan qamrab olinmaydi. To‘liq manba so‘ralganda qisqa boshlash matni bilan almashtirma; uzun manbani bo‘limlar bo‘yicha to‘liq o‘qi va o‘qilmagan qismini ochiq ayt.
@@ -354,6 +372,16 @@ Hozir bu uch qatlamli tanlov mahsuloti sinovi hali to‘liq bajarilmagan. Olding
 Kuzatilgan belgi → takrorlash qadami → taxmin → tekshiruv → dalil → eng kichik tuzatish → regressiya sinovi. HTTP 200’ni hamma narsa ishladi deb qabul qilma. UptimeRobot process’ni ko‘rishi mumkin; login, database va AI alohida tekshiriladi. So‘rovni takrorlash ma’lumotni ikki marta yozishi mumkinligini hisobga ol.
 
 Quyidagi katalog ehtimoliy muammolarni ko‘rsatadi. Biror bandning mavjudligi aynan shu nosozlik joriy saytda borligini bildirmaydi.
+
+## Sifat maqsadi: talablarni bajarish bilan cheklanmaslik
+
+Maqsad — haqiqiy vaqt, vosita va amaldagi qoidalar doirasida foydalanuvchiga eng puxta natijani berish. Nizomdagi majburiy bandlar va bilet talablari bajarilishi zarur, lekin shu bilan sifat ishi tugamaydi. Nizomdagi taqiq, vaqt va topshirish chegaralari esa qat’iy: yuqori sifat istagi ularni buzishga ruxsat emas.
+
+Bilet foydalanuvchi muammosi va natijani, nizom baholash va cheklovlarni, foydalanuvchining joriy talabi dizayn hamda kutilgan sifatni belgilaydi. Ularni birga hisobga oling. “Dizayn 10 ball” yoki “jadvalda yo‘q” deb o‘qilish, qulaylik, izchil matn, kirish imkoniyati, tezlik va zarur xavfsizlikni e’tiborsiz qoldirmang. Bular asosiy oqimning sifatiga ham ta’sir qiladi.
+
+Majburiy oqimni qurish davomida sifatni ham ta’minlang. Keyin haqiqiy kamchiliklarni foydalanuvchiga ta’siri bo‘yicha tuzating: tushunarsiz matn, yetishmagan holat, noqulay mobil amal, sust javob, buziladigan saqlash, izchil bo‘lmagan brend va o‘rinsiz motion. “Maksimal” ko‘p funksiya, ko‘p animatsiya, ko‘p test yoki katta arxitektura degani emas. Ixtiyoriy imkoniyat faqat vazifaga foyda bersa, qoidalarga mos bo‘lsa va tekshirish/topshirish vaqtini yeb qo‘ymasa qo‘shiladi.
+
+Yakuniy qaror: talab bajarildimi, foydalanuvchi natijaga tushunarli yetadimi, tanlangan dizayn puxta moslashtirildimi, matn/data rost va izchilmi, tegishli xato holatlari ko‘rildimi, qolgan kamchilik ochiq aytildimi? Dalil bo‘lmasa “maksimal”, “mukammal” yoki “enterprise-ready” deb baholamang. Cheksiz audit sikli ham maqsad emas: muhim ochiq kamchilik, vaqt va topshirish holatiga qarab ishni yakunlang.
 
 ## Halol ish va halol hisobot
 
@@ -590,6 +618,7 @@ Asl fayl: ish-tartibi/status.json
   "schema_version": 1,
   "snapshot_date": "2026-10-28",
   "scope": "Public preparation snapshot, not live infrastructure status",
+  "status_interpretation": "approved means user-selected preparation plan, not organizer approval. planned/unknown describe this public snapshot only; current user evidence and project HANDOFF supersede them. verified refers only to the stated evidence and date, not whole-product certification.",
   "approved_stack": {
     "hosting": "Render Web Service: frontend + Node.js API",
     "monitoring": "UptimeRobot GET /health every 5 minutes",
@@ -914,7 +943,7 @@ O‘qish tartibi:
 2. [Tanlov qoidalari va baholash](https://azizbeksafarov.github.io/design/handoff/competition.md) — Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.
 3. [Tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.
 4. [Ish usuli](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).
-5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas.
+5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas. Zarur texnik yechimni bilet maqsadidan asoslash va joriy foydalanuvchi so‘rovini bajarish mumkin.
 6. [To‘liq manbalar](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — Nizomlarning to‘liq matni /ustoz/nizom.md, barcha tadqiqot /ustoz/ai.md, yig‘ma /tayyorgarlik/full-context.md. Qoida savoli tug‘ilsa tegishli bo‘limni to‘liq o‘qi; foydalanuvchi so‘rasa reading-plan.json bo‘yicha hammasini.
 
 So‘ng real kodni ol, kichik ishlaydigan oqim yarat, baza va kalitlarni xavfsiz ula, tekshir, HANDOFF.md’da bajargan va qolgan ishni aniq yoz. Joydagi akkaunt/oldindan tayyorlangan kodga oid ruxsatni foydalanuvchi yoki reglament belgilaydi; bu hujjat bunday ruxsatni o‘zi bermaydi.
@@ -982,7 +1011,7 @@ Gemini limitlari model va loyiha tier’iga bog‘liq. Bir Google Cloud project�
 
 ## Backend integratsiyasi
 
-Bu bo‘lim faqat bilet AI/Telegram integratsiyasini talab qilsa qo‘llanadi. Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash 2026-10-18 sinov qaydidagi nomlar; amaliy vazifada qayta bahola.
+Bu bo‘lim bilet yoki foydalanuvchining joriy so‘rovi AI/Telegram integratsiyasini talab qilsa qo‘llanadi; vazifaga zarurlik asoslanadi va joydagi ruxsat alohida tekshiriladi. Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash 2026-10-18 sinov qaydidagi nomlar; amaliy vazifada qayta bahola.
 
 Groq OpenAI-compatible endpoint: POST https://api.groq.com/openai/v1/chat/completions, Authorization Bearer serverda. Gemini rasmiy API endpointi yoki SDK, API kaliti serverda x-goog-api-key sarlavhasida. Kalitni URL query’sida saqlama/loglama. Oldingi sinov qaydida low thinking ishlatilgan. Bu parametr bugungi modelda mavjud yoki zarur ekanini isbotlamaydi; tanlangan modelning amaldagi API sxemasini tekshir va eski parametrni ko‘r-ko‘rona ko‘chirma.
 
@@ -1118,6 +1147,16 @@ Asl fayl: design/handoff/score-workplan.md
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
 Asosiy 6 mezon mahalliy qarordan. Quyidagi 21 kichik ko‘rsatkich tasdiqqa taqdim etilgan loyiha hujjatidan; tayyorgarlik uchun qo‘llanadi. Yakuniy bilet va reglament ustuvor. Ballni ekspert beradi, reja esa tekshiriladigan dalil tayyorlaydi.
+
+## Sifat maqsadi: talablarni bajarish bilan cheklanmaslik
+
+Maqsad — haqiqiy vaqt, vosita va amaldagi qoidalar doirasida foydalanuvchiga eng puxta natijani berish. Nizomdagi majburiy bandlar va bilet talablari bajarilishi zarur, lekin shu bilan sifat ishi tugamaydi. Nizomdagi taqiq, vaqt va topshirish chegaralari esa qat’iy: yuqori sifat istagi ularni buzishga ruxsat emas.
+
+Bilet foydalanuvchi muammosi va natijani, nizom baholash va cheklovlarni, foydalanuvchining joriy talabi dizayn hamda kutilgan sifatni belgilaydi. Ularni birga hisobga oling. “Dizayn 10 ball” yoki “jadvalda yo‘q” deb o‘qilish, qulaylik, izchil matn, kirish imkoniyati, tezlik va zarur xavfsizlikni e’tiborsiz qoldirmang. Bular asosiy oqimning sifatiga ham ta’sir qiladi.
+
+Majburiy oqimni qurish davomida sifatni ham ta’minlang. Keyin haqiqiy kamchiliklarni foydalanuvchiga ta’siri bo‘yicha tuzating: tushunarsiz matn, yetishmagan holat, noqulay mobil amal, sust javob, buziladigan saqlash, izchil bo‘lmagan brend va o‘rinsiz motion. “Maksimal” ko‘p funksiya, ko‘p animatsiya, ko‘p test yoki katta arxitektura degani emas. Ixtiyoriy imkoniyat faqat vazifaga foyda bersa, qoidalarga mos bo‘lsa va tekshirish/topshirish vaqtini yeb qo‘ymasa qo‘shiladi.
+
+Yakuniy qaror: talab bajarildimi, foydalanuvchi natijaga tushunarli yetadimi, tanlangan dizayn puxta moslashtirildimi, matn/data rost va izchilmi, tegishli xato holatlari ko‘rildimi, qolgan kamchilik ochiq aytildimi? Dalil bo‘lmasa “maksimal”, “mukammal” yoki “enterprise-ready” deb baholamang. Cheksiz audit sikli ham maqsad emas: muhim ochiq kamchilik, vaqt va topshirish holatiga qarab ishni yakunlang.
 
 | Kod | Ko‘rsatkich | Maksimal ball | Tayyorlaydigan ish va dalil |
 |---|---|---:|---|
@@ -2042,6 +2081,16 @@ Joriy xulosa 08-CURRENT.md’da. Yangi qoida o‘rniga statistika, natija yozuvl
 > MAQOM: 2026-10-09 holatidagi tarixiy tadqiqot/tayyorgarlik qaydi. 13-oktabrga oid reja joriy sana, bosqich yoki natija deb olinmaydi. Hozirgi vazifa va reglament ustuvor. [Kontekst maqomi](https://azizbeksafarov.github.io/ustoz/CONTEXT-STATUS.md).
 
 Asosiy 6 mezon mahalliy qarordan. Quyidagi 21 kichik ko‘rsatkich tasdiqqa taqdim etilgan loyiha hujjatidan; tayyorgarlik uchun qo‘llanadi. Yakuniy bilet va reglament ustuvor. Ballni ekspert beradi, reja esa tekshiriladigan dalil tayyorlaydi.
+
+## Sifat maqsadi: talablarni bajarish bilan cheklanmaslik
+
+Maqsad — haqiqiy vaqt, vosita va amaldagi qoidalar doirasida foydalanuvchiga eng puxta natijani berish. Nizomdagi majburiy bandlar va bilet talablari bajarilishi zarur, lekin shu bilan sifat ishi tugamaydi. Nizomdagi taqiq, vaqt va topshirish chegaralari esa qat’iy: yuqori sifat istagi ularni buzishga ruxsat emas.
+
+Bilet foydalanuvchi muammosi va natijani, nizom baholash va cheklovlarni, foydalanuvchining joriy talabi dizayn hamda kutilgan sifatni belgilaydi. Ularni birga hisobga oling. “Dizayn 10 ball” yoki “jadvalda yo‘q” deb o‘qilish, qulaylik, izchil matn, kirish imkoniyati, tezlik va zarur xavfsizlikni e’tiborsiz qoldirmang. Bular asosiy oqimning sifatiga ham ta’sir qiladi.
+
+Majburiy oqimni qurish davomida sifatni ham ta’minlang. Keyin haqiqiy kamchiliklarni foydalanuvchiga ta’siri bo‘yicha tuzating: tushunarsiz matn, yetishmagan holat, noqulay mobil amal, sust javob, buziladigan saqlash, izchil bo‘lmagan brend va o‘rinsiz motion. “Maksimal” ko‘p funksiya, ko‘p animatsiya, ko‘p test yoki katta arxitektura degani emas. Ixtiyoriy imkoniyat faqat vazifaga foyda bersa, qoidalarga mos bo‘lsa va tekshirish/topshirish vaqtini yeb qo‘ymasa qo‘shiladi.
+
+Yakuniy qaror: talab bajarildimi, foydalanuvchi natijaga tushunarli yetadimi, tanlangan dizayn puxta moslashtirildimi, matn/data rost va izchilmi, tegishli xato holatlari ko‘rildimi, qolgan kamchilik ochiq aytildimi? Dalil bo‘lmasa “maksimal”, “mukammal” yoki “enterprise-ready” deb baholamang. Cheksiz audit sikli ham maqsad emas: muhim ochiq kamchilik, vaqt va topshirish holatiga qarab ishni yakunlang.
 
 | Kod | Ko‘rsatkich | Maksimal ball | Tayyorlaydigan ish va dalil |
 |---|---|---:|---|

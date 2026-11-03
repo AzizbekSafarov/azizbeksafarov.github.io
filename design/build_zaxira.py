@@ -153,7 +153,7 @@ def page():
 <p>Imzolangan nizomga ko‘ra ekspert himoyada <strong>matn, rang, element yoki kontentni</strong> jonli o‘zgartirishni so‘rashi mumkin; bajarilmasa ish baholanmaydi (saytdagi nizom nusxasida bu band yo‘q — joydagi ko‘rsatma hal qiladi, lekin eng qattiq holatga tayyorlangan ma’qul). Teng ballda avval sifat va funksionallik hal qiladi; ikkinchi mezon imzolangan qarorda zamonaviy texnologiyalar, sayt nusxasida kreativlik. Shuning uchun ishlaydigan oddiy sayt va uni qo‘lda boshqara olish chiroyli, lekin tugallanmagan saytdan qimmatroq.</p>
 <h2>Paket ichida</h2>
 <ul>
-<li><a href="/zaxira/CODEX.md">CODEX.md</a> — <strong>kuchli AI bo‘lsa, asosiy yo‘l</strong>: Codex (ChatGPT desktop ilovasi) bilan kod yozmasdan professional sayt yasash. Sozlash, asos tanlash, 6 ta tayyor so‘rov (reja → qurish → sinov → ko‘rinish → hujjatlar → jonli o‘zgarish), xatoda nima deyish, vaqt va limit nazorati.</li>
+<li><a href="/zaxira/CODEX.md">CODEX.md</a> — <strong>kuchli AI bo‘lsa, asosiy yo‘l</strong>: Codex muhiti bilan kod yozmasdan professional sayt yasash. Sozlash, asos tanlash, 6 ta tayyor so‘rov (reja → qurish → sinov → ko‘rinish → hujjatlar → jonli o‘zgarish), xatoda nima deyish, vaqt va limit nazorati.</li>
 <li><a href="/zaxira/ZAXIRA.md">ZAXIRA.md</a> — qoidalardan 8 ta asosiy fakt, qaysi yo‘lni tanlash, vaqt rejasi, qadamma-qadam ish, 21 ko‘rsatkich bo‘yicha sinov ro‘yxati, himoya ssenariysi va favqulodda holatlar.</li>
 <li><a href="/zaxira/PROMPTLAR.md">PROMPTLAR.md</a> — kichik AI uchun bitta faylga mo‘ljallangan tayyor so‘rovlar: biletdan ma’lumot, forma, matn, rang, xato, qo‘shimcha funksiya, README va himoya matni.</li>
 <li><a href="/zaxira/HIMOYA.md">HIMOYA.md</a> — 5 daqiqa taqdimot, 5 namoyish va 5 savol-javob uchun yagona ssenariy.</li>

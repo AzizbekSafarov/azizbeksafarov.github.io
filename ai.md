@@ -8,14 +8,14 @@
 2. [Tanlov qoidalari va baholash](https://azizbeksafarov.github.io/design/handoff/competition.md) — Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.
 3. [Tanlangan dizayn va kod](https://azizbeksafarov.github.io/design/) — Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.
 4. [Ish usuli](https://azizbeksafarov.github.io/ish-tartibi/ai.md) — Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).
-5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas.
+5. [Mahsulot tuzilishi va server rejasi](https://azizbeksafarov.github.io/arxitektura/ai.md) — Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas. Zarur texnik yechimni bilet maqsadidan asoslash va joriy foydalanuvchi so‘rovini bajarish mumkin.
 6. [To‘liq manbalar](https://azizbeksafarov.github.io/tayyorgarlik/ai.md) — Nizomlarning to‘liq matni /ustoz/nizom.md, barcha tadqiqot /ustoz/ai.md, yig‘ma /tayyorgarlik/full-context.md. Qoida savoli tug‘ilsa tegishli bo‘limni to‘liq o‘qi; foydalanuvchi so‘rasa reading-plan.json bo‘yicha hammasini.
 
 ## Tanlov
 
 Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Manba maqomlari: **[Imzoli qaror]** — qo‘shma qaror; **[Sayt]** — Ustoz AI saytidagi farqli PDF tahriri; **[Loyiha]** — tasdiqqa taqdim etilgan 11 sahifalik mezonlar; **[Video]** — tashkilotchining tarixiy yo‘riqnomasi. Ularni bitta yangi nizom deb birlashtirmang.
 
-1. **Baholash:** funksionallik 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10 — jami 100. [Imzoli qaror, 19-band; Sayt: tartibi farqli, vaznlari mos]. Avval biletdagi majburiy funksiyalar va mazmun.
+1. **Baholash:** funksionallik 30, mazmun 20, dizayn/UX 10, taqdimot 10, texnologiya 20, kreativlik 10 — jami 100. [Imzoli qaror, 19-band; Sayt: tartibi farqli, vaznlari mos]. Majburiy funksiyalar va mazmun to‘liq bajariladi; ularning bajarilishi sifatning yakuniy chegarasi emas. Past ball ulushi dizayn/UX, kreativlik yoki taqdimotni e’tiborsiz qoldirishga sabab bo‘lmaydi.
 2. **Teng ball:** avval sifat va funksionallik. Keyingi ustunlik [Imzoli qaror, 20¹-band] bo‘yicha zamonaviy texnologiyalar; [Sayt, 20¹-band] bo‘yicha kreativlik va originallik. Aynan joydagi qo‘llanadigan tahrir aniqlanadi.
 3. **Himoya:** 15 daqiqa — 5 taqdimot + 5 namoyish + 5 savol-javob; qo‘shimcha vaqt berilmaydi. [Imzoli qaror, 7–9-bandlar; Sayt]. Ssenariy: `ZAXIRA/HIMOYA.md`.
 4. **Hududiy ko‘lam:** kamida 3 sahifa yoki teng hajmli ekran, noto‘g‘ri kiritishni tekshiradigan 2 ta bog‘liq amal va natija, taxminan 2 soat — tavsiya. [Loyiha, 12–13-bandlar]. Bu tasdiqlangan universal vaqt emas. Saqlash usuli brauzer/server ekanini bilet belgilaydi; faqat biletdagi majburiy imkoniyatlar talab qilinadi [Loyiha, 23-band].
@@ -45,7 +45,7 @@ Bittasini tanlang; har birining ai.md faylida vizual kontrakt, fayl xaritasi, is
 - Tanlangan dizaynning uslubini (shriftlar, rang rollari, kompozitsiya, amal tili) saqla; mazmun, navigatsiya va funksiyalarni biletga moslashtir.
 - Talab → foydalanuvchi amali → kod joyi → qabul sinovi jadvali bilan ishla. Asosiy oqimni oxirigacha, noto‘g‘ri kiritishni, 390/768/1366 px kengliklarni, klaviaturani va reloaddan keyingi saqlashni tekshir. Xatoni takrorla, sababini tuzat, qayta sina.
 - Natija, o‘zgargan fayllar va ochiq muammolarni loyihadagi HANDOFF.md ga yoz; tekshirilgan va tekshirilmaganni ajratib ayt.
-- Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.
+- Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, Talab texnologiya nomini sanamasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya/tayyorgarlik so‘rovi ham joriy ish doirasidir. `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.
 - Maxfiy kalitlar bu ochiq hujjatlarda yo‘q va kodga yozilmaydi.
 
 ## Boshqa manbalar

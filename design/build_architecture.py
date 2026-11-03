@@ -209,7 +209,7 @@ Gemini limitlari model va loyiha tier’iga bog‘liq. Bir Google Cloud project�
 
 ## Backend integratsiyasi
 
-Bu bo‘lim faqat bilet AI/Telegram integratsiyasini talab qilsa qo‘llanadi. Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash 2026-10-18 sinov qaydidagi nomlar; amaliy vazifada qayta bahola.
+Bu bo‘lim bilet yoki foydalanuvchining joriy so‘rovi AI/Telegram integratsiyasini talab qilsa qo‘llanadi; vazifaga zarurlik asoslanadi va joydagi ruxsat alohida tekshiriladi. Asosiy arxitektura /arxitektura/ai.md’da. Render Node API’da server secrets’dan kalit o‘qi; frontendga yuborma. GROQ_API_KEY / GROQ_API_KEY_BACKUP va GEMINI_API_KEY / GEMINI_API_KEY_BACKUP nomlari backend uchun kelishilgan konvensiya, SDK zaxira kalitni o‘zi avtomatik almashtiradi degani emas. Model nomi alohida konfiguratsiya bo‘lsin: GROQ_MODEL=openai/gpt-oss-120b va GEMINI_MODEL=gemini-3.8-flash 2026-10-18 sinov qaydidagi nomlar; amaliy vazifada qayta bahola.
 
 Groq OpenAI-compatible endpoint: POST https://api.groq.com/openai/v1/chat/completions, Authorization Bearer serverda. Gemini rasmiy API endpointi yoki SDK, API kaliti serverda x-goog-api-key sarlavhasida. Kalitni URL query’sida saqlama/loglama. Oldingi sinov qaydida low thinking ishlatilgan. Bu parametr bugungi modelda mavjud yoki zarur ekanini isbotlamaydi; tanlangan modelning amaldagi API sxemasini tekshir va eski parametrni ko‘r-ko‘rona ko‘chirma.
 

@@ -6,7 +6,7 @@ STEPS = [
  ('Tanlov qoidalari va baholash', '/design/handoff/competition.md', 'Qoidalar holati /design/handoff/current-competition.md va mezon → ish → dalil rejasi /design/handoff/score-workplan.md bilan: biletni qabul sinovlari va himoya dalillariga aylantirish uchun.'),
  ('Tanlangan dizayn va kod', '/design/', 'Faqat tanlangan /design/SLUG/ai.md va uning source ZIPi. ZIP ichida AGENTS.md ish qoidalari va o‘qish tartibini beradi. Boshqa dizaynlar kodini o‘qish shart emas.'),
  ('Ish usuli', '/ish-tartibi/ai.md', 'Diagnostika, uch sinov qatlami, topshirish va ehtimoliy muammolar katalogi (ssenariylar, aniqlangan xato emas).'),
- ('Mahsulot tuzilishi va server rejasi', '/arxitektura/ai.md', 'Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas.'),
+ ('Mahsulot tuzilishi va server rejasi', '/arxitektura/ai.md', 'Sahifa tuzilishi va professional sifat mezonlari. Render + Supabase qismi va /api/ai.md faqat bilet server, login yoki baza talab qilsa kerak; bu reja, yaratilgan xizmat emas. Zarur texnik yechimni bilet maqsadidan asoslash va joriy foydalanuvchi so‘rovini bajarish mumkin.'),
  ('To‘liq manbalar', '/tayyorgarlik/ai.md', 'Nizomlarning to‘liq matni /ustoz/nizom.md, barcha tadqiqot /ustoz/ai.md, yig‘ma /tayyorgarlik/full-context.md. Qoida savoli tug‘ilsa tegishli bo‘limni to‘liq o‘qi; foydalanuvchi so‘rasa reading-plan.json bo‘yicha hammasini.'),
 ]
 MACHINE_ORDER = [
