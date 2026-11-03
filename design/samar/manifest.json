@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "4dff93bcfab234d9e073b9371498627f76a630532fc100f40b07c7b953f7dbe8",
-  "archive_bytes": 2356813,
+  "archive_sha256": "87112e3e85204920b664b98428e95cf440e3715cd9cf4eec31c4ea18f0c92c47",
+  "archive_bytes": 2357187,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16921,
-      "sha256": "0602a44b324e02a8f9675ad60419659df1d7a383a3d5dd0f1bcb4fe8402d5612"
+      "sha256": "708cfe22b83c6341afef962734196457f1292d22eee24cc5fe9b8ad1998abb30"
     },
     {
       "path": "PREPARATION.md",
@@ -260,8 +260,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 6818,
-      "sha256": "dc71b80dda0d9b3cb95ab3192d8b25a100124360497a448d2876b1ab92bb3415"
+      "bytes": 7747,
+      "sha256": "2e750d75594411a2402da5340c1cd7c7c72c6a1332387088d93e70780ab0340a"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",

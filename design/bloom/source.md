@@ -1,6 +1,6 @@
 # Bloom · Material Design 3 — editable source snapshot
 
-Source fingerprint: `cf92e23e0ddc5358de839b3e2731c654ca4cf62d041c7d8f55457c3d50191acd`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `85cd5c9ba25d8ac24c4a68407be9921b373c3077adc6ab87a3f49fe75c67fb91`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -536,7 +536,7 @@ function memoryStorage(entries = [], {readBlocked = false, failKey = ''} = {}) {
   }};
 }
 
-for (const raw of ['{broken user work', 'null', '{}', '[{"title":"My draft"}]']) {
+for (const raw of ['{broken user work', 'null', '{}', '[{"title":"My draft"}]', JSON.stringify([{...initialProjects[0], id:''}]), JSON.stringify([{...initialProjects[0], id:'   '}])]) {
   test('opening a corrupt workspace preserves its original bytes: ' + raw, () => {
     const storage = memoryStorage([[PROJECTS_KEY, raw]]);
     const state = loadProjectState(() => storage);
@@ -684,7 +684,7 @@ export const initialProjects=[
 {id:'portfolio',title:'Ishlaringiz so‘zlasin',description:'Eng yaxshi loyihalaringiz uchun tiniq va tartibli portfolio.',category:'Dizayn',tone:'lavender',art:'stack',saved:false,tasks:[{text:'Loyihalarni saralash',done:true},{text:'Sahifalarni yig‘ish',done:true},{text:'Taqdimotni tekshirish',done:true}]}
 ];
 export function progress(project){return project.tasks.filter(task=>task.done).length/project.tasks.length}
-export function validateProjects(value){if(!Array.isArray(value)||value.length>200)return null;const ids=new Set();for(const p of value){if(!p||typeof p.id!=='string'||ids.has(p.id)||typeof p.title!=='string'||!p.title.trim()||p.title.length>80||typeof p.description!=='string'||p.description.length>200||!categories.slice(1).includes(p.category)||!['blue','peach','green','lavender'].includes(p.tone)||!['orbit','flower','spark','stack'].includes(p.art)||typeof p.saved!=='boolean'||!Array.isArray(p.tasks)||p.tasks.length!==3||p.tasks.some(t=>!t||typeof t.text!=='string'||!t.text.trim()||t.text.length>200||typeof t.done!=='boolean'))return null;ids.add(p.id)}return value}
+export function validateProjects(value){if(!Array.isArray(value)||value.length>200)return null;const ids=new Set();for(const p of value){if(!p||typeof p.id!=='string'||!p.id.trim()||ids.has(p.id)||typeof p.title!=='string'||!p.title.trim()||p.title.length>80||typeof p.description!=='string'||p.description.length>200||!categories.slice(1).includes(p.category)||!['blue','peach','green','lavender'].includes(p.tone)||!['orbit','flower','spark','stack'].includes(p.art)||typeof p.saved!=='boolean'||!Array.isArray(p.tasks)||p.tasks.length!==3||p.tasks.some(t=>!t||typeof t.text!=='string'||!t.text.trim()||t.text.length>200||typeof t.done!=='boolean'))return null;ids.add(p.id)}return value}
 export function normalizeSearch(text){return text.toLocaleLowerCase('uz').normalize('NFKC').replace(/[‘’ʻʼ`´]/g,"'").trim()}
 export function visibleProjects(projects,{view='all',category='Hammasi',query='',sort='recent'}={}){const normalized=normalizeSearch(query);const filtered=projects.filter(p=>(view!=='saved'||p.saved)&&(view!=='done'||progress(p)===1)&&(category==='Hammasi'||p.category===category)&&normalizeSearch(`${p.title} ${p.description} ${p.category}`).includes(normalized));return sort==='name'?[...filtered].sort((a,b)=>a.title.localeCompare(b.title,'uz')):filtered}
 export function createProject({title,description,category},id){const cleanTitle=title.trim(),cleanDescription=description.trim();if(!cleanTitle||cleanTitle.length>80||cleanDescription.length>200||!categories.slice(1).includes(category))throw new Error('Invalid project');const visual={'Ta’lim':['blue','orbit'],'Dizayn':['peach','flower'],'Texnologiya':['green','spark']}[category];return{id,title:cleanTitle,description:cleanDescription||'Yangi g‘oyani ishlaydigan loyihaga aylantiring.',category,tone:visual[0],art:visual[1],saved:false,tasks:[{text:'G‘oyani aniq yozish',done:false},{text:'Birinchi variantni yaratish',done:false},{text:'Natijani tekshirish',done:false}]}}

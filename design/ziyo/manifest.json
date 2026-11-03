@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "53180899591aa0a5459bbae9976f542cd4758e6121253333b8012818a1cec672",
-  "archive_bytes": 1082663,
+  "archive_sha256": "c951e7cf7a913cac4750eff29f012df04ebf1232bec137f903124b0527d27960",
+  "archive_bytes": 1083037,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -192,7 +192,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16901,
-      "sha256": "9d6bf18afd4f9d8535096e4e87a054b31a239075eb41bd4c56e3c802783a5375"
+      "sha256": "f838cc1b077cabf15166a933215351dc868e785aec350468017acaf2ca2c05e7"
     },
     {
       "path": "PREPARATION.md",
@@ -266,8 +266,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 6818,
-      "sha256": "dc71b80dda0d9b3cb95ab3192d8b25a100124360497a448d2876b1ab92bb3415"
+      "bytes": 7747,
+      "sha256": "2e750d75594411a2402da5340c1cd7c7c72c6a1332387088d93e70780ab0340a"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",

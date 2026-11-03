@@ -8,11 +8,15 @@ Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni r
 2. **Ekranda ko‘ringan matnni** tahrirlanadigan source ichidan qidiring: HTML starterda site/, Bloom’da site/src/. Ctrl+Shift+F → matnning bir qismini yozing. Hujjat, backup yoki minified dist nusxasini tasodifan tahrirlamang.
 3. O‘zgartiring → **Ctrl+S**.
 4. HTML starterda lokal HTTP preview’ni yangilang. Bloom’da source tahriri uchun dev server yoki qayta build kerak: ZIP ildizidan `npm --prefix site run build`, so‘ng `node serve.mjs` oynasini yangilang. Ctrl+Shift+R eski keshni chetlab o‘tadi; source build o‘rnini bosmaydi.
-5. Ishlamasa **Ctrl+Z** → Ctrl+S → yana yangilang.
+5. Bekor qilish kerak bo‘lsa **Ctrl+Z** → Ctrl+S. HTML starterda previewni yangilang; Bloom production preview uchun yana `npm --prefix site run build` bajaring, keyin yangilang. Build xato bilan tugasa eski dist ko‘rinishi mumkin — uni qaytarilgan yoki yangi source natijasi deb qabul qilmang.
 
 Rang: avval o‘sha elementning CSS qoidasi yoki rang tokenini toping. Bitta hex kodini butun loyihada Ctrl+H bilan ommaviy almashtirmang: matn, fon va fokus bir xil koddan foydalangan bo‘lishi mumkin. Fon bilan ustidagi matn kontrastini birga tekshiring. Bloom palitrasi JavaScript orqali Material rang rollarini hosil qiladi; faqat CSS tokenini o‘zgartirish keyingi renderda bekor bo‘lishi mumkin.
 
 Element: shu starter uchun AI-BRIEF.md dagi yangi sahifa/ekran va amal xaritasidan foydalaning. Nusxalangan blokda id, label-for, aria-labelledby va handler bog‘lanishlarini yangilang. Faqat ko‘rinadigan kartani nusxalash data va hisobga avtomatik qo‘shmaydi.
+
+### Source o‘zgardi, lekin eski matn ko‘rinyaptimi?
+
+Bloom’da `src/model.js` dagi initialProjects boshlang‘ich namunadir. Brauzerda yaroqli saqlangan loyiha bo‘lsa, nom, izoh va qadamlar o‘sha yozuvdan olinadi; source namunani o‘zgartirish uni almashtirmaydi. Mavjud loyihani ichki **Tahrirlash** formasidan yangilang. Yangi default mazmunni tekshirish uchun alohida toza brauzer profili/kontekstidan foydalaning. Avvalgi ishni o‘chirib sinovni o‘tkazmang: kerak bo‘lsa oldin JSON nusxasini eksport qiling; sxema o‘zgarsa migratsiyani alohida loyihalang. Dev server va preview boshqa portda bo‘lsa, ularning localStorage ma’lumoti ham alohida bo‘ladi.
 
 ## Zaxira skeletda — kodsiz, `tahrir.html` paneli bilan
 

@@ -15,7 +15,7 @@ function memoryStorage(entries = [], {readBlocked = false, failKey = ''} = {}) {
   }};
 }
 
-for (const raw of ['{broken user work', 'null', '{}', '[{"title":"My draft"}]']) {
+for (const raw of ['{broken user work', 'null', '{}', '[{"title":"My draft"}]', JSON.stringify([{...initialProjects[0], id:''}]), JSON.stringify([{...initialProjects[0], id:'   '}])]) {
   test('opening a corrupt workspace preserves its original bytes: ' + raw, () => {
     const storage = memoryStorage([[PROJECTS_KEY, raw]]);
     const state = loadProjectState(() => storage);

@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "4e1928d5deed7725ed55c796cb2a396a3d8e7faf68b1d34c38fab298a5d74fa6",
-  "archive_bytes": 830932,
+  "archive_sha256": "e3dbac02c5b5020ffaeb7edf2593a6e31eb4f46e6585c2bf849c37ed88152066",
+  "archive_bytes": 831306,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16433,
-      "sha256": "a377ea4d0a1e2c85e9ac757587b83c0deb294b16977f54234b2520f9c7ee136a"
+      "sha256": "95e482fa1d1b73bd5c57122b3f7ca5725925db0775a4b34b7c54c0c87a8206ba"
     },
     {
       "path": "PREPARATION.md",
@@ -260,8 +260,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 6818,
-      "sha256": "dc71b80dda0d9b3cb95ab3192d8b25a100124360497a448d2876b1ab92bb3415"
+      "bytes": 7747,
+      "sha256": "2e750d75594411a2402da5340c1cd7c7c72c6a1332387088d93e70780ab0340a"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
