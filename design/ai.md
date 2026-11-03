@@ -1,6 +1,6 @@
 # Azizbek — tanlov dizaynlari
 
-2026-11-02. Faol dizaynlar: 9. Ustoz AI “Eng yaxshi veb-sayt” tanlovida foydalanuvchi bitta dizaynni tanlaydi, AI uni ekspert biletidagi mahsulotga aylantiradi. Tanlangan dizaynning ai.md fayli va source ZIPi yetarli boshlash nuqtasi: ularda vizual kontrakt, fayl xaritasi, ishga tushirish, saqlanadigan oqimlar va tekshiruv tartibi bor. ZIP ichida ish qoidalari `AGENTS.md` da.
+2026-11-03. Faol dizaynlar: 9. Ustoz AI “Eng yaxshi veb-sayt” tanlovida foydalanuvchi bitta dizaynni tanlaydi, AI uni ekspert biletidagi mahsulotga aylantiradi. Tanlangan dizaynning ai.md fayli va source ZIPi yetarli boshlash nuqtasi: ularda vizual kontrakt, fayl xaritasi, ishga tushirish, saqlanadigan oqimlar va tekshiruv tartibi bor. ZIP ichida ish qoidalari `AGENTS.md` da.
 
 Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu ochiq paketda bilet yo‘q. Tanlov mahsulotini qurish so‘ralib, ikkala joyda ham bilet bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Tayyorgarlik, audit yoki kutubxonani saqlash so‘rovida biletni to‘siq qilma; foydalanuvchining aniq ish doirasini bajar. Dizayn namunasi, test ma’lumoti va nizomdagi namunaviy bilet vazifa hisoblanmaydi.
 

@@ -6,7 +6,7 @@ Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu o
 
 ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.
 
-Snapshot 2026-11-02; fingerprint 52ae70a3286f624c.
+Snapshot 2026-11-03; fingerprint 52ae70a3286f624c.
 
 ## Tanlov
 

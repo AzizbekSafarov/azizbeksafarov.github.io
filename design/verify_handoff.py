@@ -82,6 +82,10 @@ def check_text_rebuild(z,folder,slug):
     for rel,url in re.findall(r'^\| `([^`]+)` \| [^|]+ \| \[yuklash\]\((https://azizbeksafarov\.github\.io/[^)]+)\) \|',md,re.M):
         files[rel]=(SITE_ROOT/url.split('.io/',1)[1]).read_bytes()
     assert files,f'{slug}: source.md has no files'
+    # Compare the expected editable runtime/build set, not only files the export chose to list.
+    required={n[5:] for n in z.namelist() if n.startswith('site/') and not n.startswith('site/dist/') and Path(n).suffix in {'.html','.css','.js','.mjs','.jsx','.json'}}
+    missing=required-set(files)
+    assert not missing,f'{slug}: text rebuild omits runtime/build files: {sorted(missing)}'
     for rel,data in files.items():
         assert data.replace(b'\r\n',b'\n').rstrip()==z.read('site/'+rel).replace(b'\r\n',b'\n').rstrip(),f'{slug}: text rebuild differs for {rel}'
 

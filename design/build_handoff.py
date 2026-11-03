@@ -16,7 +16,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://azizbeksafarov.github.io'
 RAW = 'https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main'
-DATE = '2026-11-02'
+DATE = '2026-11-03'
 CONTEXT_FILES = {
     'TASK-BOUNDARY.json': 'design/handoff/task-boundary.json',
     'CURRENT-COMPETITION.md': 'design/handoff/current-competition.md',
@@ -139,13 +139,13 @@ def ai_brief(t):
     demo_state='Loyiha progressi, saqlangan belgilar va tema shu brauzerda saqlanadi.' if bloom else 'Tanlangan tashabbuslar rejasi shu brauzerda saqlanadi.'
     folder='design/material-expressive' if bloom else 'design/si-site' if t['id']=='11' else 'design'
     source_map=(
-      '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/persistence.js`: non-destructive startup reads, recovery backups and JSON export; `src/persistence.test.js`: failure regressions.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: baseline model tests; `src/combinations.test.js`: combined filters, task masks and storage boundaries.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
+      '- `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.\n- `src/routes.js`, `src/ProjectWorkspace.jsx`, `src/workspace.css`: hash navigation, full project screen/editor and its layout; `src/workspace.test.js`: route/edit regressions.\n- `src/style.css`: shared M3 tokens, typography, responsive layout and control states.\n- `src/persistence.js`: non-destructive startup reads, recovery backups and JSON export; `src/persistence.test.js`: failure regressions.\n- `src/model.js`: sample data, categories, validation, search and progress.\n- `src/model.test.js`: baseline model tests; `src/combinations.test.js`: combined filters, task masks and storage boundaries.\n- `package.json` + `package-lock.json`: actual dependencies; `vite.config.js`: relative build base.\n- `src/fonts/`, `public/`: local fonts and licenses; `dist/`: built static site.'
       if bloom else ''
     )
     if t['id']=='11':source_map='- `index.html`: bo‘lim, kartalar, o‘zbekcha matn va dialoglar.\n- `style.css`: O‘zbekiston moviy/oq/yashil palitrasi, oq asosiy fon, to‘q teal matn va responsive holatlar.\n- `app.js`: menyu, filtr, reja, yuklash va harakat sozlamalari.\n- `motion.js`: yagona persistent spring particle field; hover/tap morph, kursor, click to‘lqini va scroll shakllari.\n- `motion.test.mjs`: fizik barqarorlik, kursor, to‘lqin va harakatlanuvchi shakllar.\n- `MOTION.md`: originaldan tekshirilgan animatsiya kontrakti.\n- `model.js`: ID, mazmun, uch qadam va reja validatsiyasi.\n- `model.test.mjs`: saqlanish, toggle va eksport testlari.\n- `fonts/`: mahalliy Instrument shriftlar va OFL.\n- `QA-REPORT.md`: haqiqiy tekshiruv.'
     source_map += '\n\nFaqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):\n'+'\n'.join(f'- [{name}]({RAW}/design/{t["slug"]}/files/{name}.txt)' for name in code_names(t,{}))
     technical=(
-      "React 19 + Vite 7 + Motion + `@material/web` 2.5 + Material Color Utilities. Use the lockfile (`npm ci`). Keep official Material buttons, chip-set/filter chips, outlined fields/selects, radios, checkboxes, dialogs and ripples. React custom-element change events currently use lowercase `onchange`; verify the installed control API rather than substituting native events by guesswork. Tokens come from SchemeTonalSpot with matched on-color roles. The three-step model and its category validation must change together when the ticket needs a different structure. Icons use a local subset: adding a new symbol requires updating `download_symbols.py` and rebuilding the font when network is available; otherwise use an existing supported icon. Unsupported icon names can render as text."
+      "React 19 + Vite 7 + Motion + `@material/web` 2.5 + Material Color Utilities. Use the lockfile (`npm ci`). The locked Vite requires Node ^20.19.0 or >=22.12.0; check `node --version` before installing (Node 22.12+ is suitable). Keep official Material buttons, chip-set/filter chips, outlined fields/selects, radios, checkboxes, dialogs and ripples. React custom-element change events currently use lowercase `onchange`; verify the installed control API rather than substituting native events by guesswork. Tokens come from SchemeTonalSpot with matched on-color roles. The three-step model and its category validation must change together when the ticket needs a different structure. Icons use a local subset: adding a new symbol requires updating `download_symbols.py` and rebuilding the font when network is available; otherwise use an existing supported icon. Unsupported icon names can render as text."
       if bloom else "Plain HTML/CSS/JavaScript; npm installation is not needed. Preserve the files referenced by the selected HTML, including fonts and model scripts. For the timed competition, edit the isolated HTML/runtime files directly. To maintain the original gallery instead, change generator/source files and regenerate deliberately, then run `python design/build_handoff.py` in the publishing repository."
     )
     commands=(
@@ -208,7 +208,7 @@ Oldindan yig‘ilgan nusxa uchun npm yoki internet shart emas: ZIP ildizida `nod
 - Haqiqiy source fayllarini o‘qi; mavjud ishga tushirishni tekshir. Kichik xato uchun butun saytni boshqa framework/dizaynga qayta qurma. Oddiy tanlov va qaytariladigan tuzatishlarni mustaqil bajar.
 - Dizayn rang/shrift/masofa iyerarxiyasini saqla. Bo‘limlarni va modelni vazifaga moslashtir. {entry_text.BACKEND_UZ} Ma’lumot modeli o‘zgarsa storage keyni versiyala/migratsiya qil; boshqa brauzer ma’lumotini tozalama.
 - Xatoda: aniq holatni takrorla → konsol/resurs va tegishli kodni tekshir → sababni tuzat → shu oqimni qayta sina. Xatoni yashirish yoki tugmani olib tashlash yechim emas.
-- Bitta asosiy yozuvchi ishlasin. Limitni asra: avval shu qisqa kontekst va tegishli fayllar, katta minified vendor JS yoki barcha tarixni birga yuklama.
+- Bitta asosiy yozuvchi ishlasin. Limitni asra: AGENTS.md dagi o‘qish tartibiga amal qil va tegishli source fayllarni to‘liq o‘qi. Qisqa brief to‘liq o‘qish so‘rovini bekor qilmaydi; bunday so‘rovda READING-PLAN.json bo‘yicha manbalarni o‘qi. Minified vendor JSni faqat unga tegishli muammo bo‘lsa och.
 
 ## 7. Saqlanishi kerak bo‘lgan tuzatishlar
 
@@ -316,8 +316,8 @@ def source_files(t,templates):
 
 def code_names(t,files):
     # Every text file that shapes the rendered design is readable here; binaries are listed by assets().
-    if t['id']=='10':return ['index.html','src/main.jsx','src/ProjectWorkspace.jsx','src/routes.js','src/workspace.css','src/workspace.test.js','src/style.css','src/fonts/google-sans-flex.css','src/fonts/roboto.css','src/fonts/material-symbols.css','src/persistence.js','src/persistence.test.js','src/model.js','src/model.test.js','src/combinations.test.js','public/bloom.svg','package.json','vite.config.js','download_symbols.py']
-    if t['id']=='11':return ['index.html','style.css','fonts/fonts.css','app.js','motion.js','MOTION.md','motion.test.mjs','model.js','model.test.mjs','combinations.test.mjs','uzbekistan.svg','brand-icon.svg']
+    if t['id']=='10':return ['index.html','src/main.jsx','src/ProjectWorkspace.jsx','src/routes.js','src/workspace.css','src/workspace.test.js','src/style.css','src/fonts/google-sans-flex.css','src/fonts/roboto.css','src/fonts/material-symbols.css','src/persistence.js','src/persistence.test.js','src/model.js','src/model.test.js','src/combinations.test.js','public/bloom.svg','package.json','package-lock.json','vite.config.js','download_symbols.py']
+    if t['id']=='11':return ['index.html','style.css','fonts/fonts.css','app.js','motion.js','MOTION.md','motion.test.mjs','model.js','model.test.mjs','combinations.test.mjs','uzbekistan.svg','brand-icon.svg','package.json','template.json']
     return ['index.html','style.css','layout.css','app.js']+(['identity.js'] if t['slug']=='ziyo' else [])+['model.js','model.test.mjs','combinations.test.mjs','mark.svg','CREDITS.md','package.json']
 
 TEXT_SUFFIXES={'.html','.css','.js','.mjs','.jsx','.json','.md','.svg','.txt','.py'}

@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-11-02",
+  "snapshot_date": "2026-11-03",
   "source_fingerprint": "60660630dcdbe49071b0c2701a38d62670fb35b1272caf72725274d49a0c1645",
   "name": "Forma",
   "slug": "forma",
   "context_url": "https://azizbeksafarov.github.io/design/forma/",
   "ai_url": "https://azizbeksafarov.github.io/design/forma/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/forma/source.zip",
-  "archive_sha256": "78d03afa6e59207adac12c48348eb4f4019918974d4c05d1b6993c409ba496f5",
-  "archive_bytes": 1182133,
+  "archive_sha256": "9b981d24204bce8c65764284668007c1221091258d18e20720b6c247d8807b14",
+  "archive_bytes": 1182136,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -86,7 +86,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 13407,
-      "sha256": "5e376008c6631678525e5f987df583f19b3956e812096564c88ee215436c7ee2"
+      "sha256": "dc2f3bfb9f430f4eef1eb3dcb317d7aa652346e889a4a0dc2a9b7e955996b387"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1219,
-      "sha256": "c94fdc37ec6661f83d3dd452bd76f0ddcde5e4702f62def8ee8a90f91aa3e4d4"
+      "sha256": "21f4bb01e729a95b31c55235209e64b118c8f37f358dc7ba5f17e01969b55a5b"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16582,
-      "sha256": "b19d938723f807b0dfa355ad3cec5582d8ae03cb7a885ae54412d0860de72b0e"
+      "sha256": "4cd8aeee20fc7285d47a6bd183ae1a8174b7877136ab46038d36d9676ccb7aa2"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "ca8bc8a08b5953f71641b93b466a67414e258ab7f9ea033896cf3f79d249dee6"
+      "sha256": "162d75e53ec9f62503102205edcb7105471f17fa573c38f97de0f60e3079d031"
     },
     {
       "path": "README.md",

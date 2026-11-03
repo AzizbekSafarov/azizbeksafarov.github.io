@@ -6,7 +6,7 @@ Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu o
 
 ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.
 
-Snapshot: 2026-11-02; source fingerprint: `cf92e23e0ddc5358`. Readable page: https://azizbeksafarov.github.io/design/bloom/
+Snapshot: 2026-11-03; source fingerprint: `cf92e23e0ddc5358`. Readable page: https://azizbeksafarov.github.io/design/bloom/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -47,6 +47,7 @@ Source archive va matn bir snapshotdan yaratilgan. Ish papkasi `site/`. Internet
 ## 5. Fayl xaritasi va ishga tushirish
 
 - `src/main.jsx`: UI, dialogs, Material Web bindings, theme and persisted state.
+- `src/routes.js`, `src/ProjectWorkspace.jsx`, `src/workspace.css`: hash navigation, full project screen/editor and its layout; `src/workspace.test.js`: route/edit regressions.
 - `src/style.css`: shared M3 tokens, typography, responsive layout and control states.
 - `src/persistence.js`: non-destructive startup reads, recovery backups and JSON export; `src/persistence.test.js`: failure regressions.
 - `src/model.js`: sample data, categories, validation, search and progress.
@@ -72,10 +73,11 @@ Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [src/combinations.test.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/combinations.test.js.txt)
 - [public/bloom.svg](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/public/bloom.svg.txt)
 - [package.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package.json.txt)
+- [package-lock.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package-lock.json.txt)
 - [vite.config.js](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/vite.config.js.txt)
 - [download_symbols.py](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/download_symbols.py.txt)
 
-React 19 + Vite 7 + Motion + `@material/web` 2.5 + Material Color Utilities. Use the lockfile (`npm ci`). Keep official Material buttons, chip-set/filter chips, outlined fields/selects, radios, checkboxes, dialogs and ripples. React custom-element change events currently use lowercase `onchange`; verify the installed control API rather than substituting native events by guesswork. Tokens come from SchemeTonalSpot with matched on-color roles. The three-step model and its category validation must change together when the ticket needs a different structure. Icons use a local subset: adding a new symbol requires updating `download_symbols.py` and rebuilding the font when network is available; otherwise use an existing supported icon. Unsupported icon names can render as text.
+React 19 + Vite 7 + Motion + `@material/web` 2.5 + Material Color Utilities. Use the lockfile (`npm ci`). The locked Vite requires Node ^20.19.0 or >=22.12.0; check `node --version` before installing (Node 22.12+ is suitable). Keep official Material buttons, chip-set/filter chips, outlined fields/selects, radios, checkboxes, dialogs and ripples. React custom-element change events currently use lowercase `onchange`; verify the installed control API rather than substituting native events by guesswork. Tokens come from SchemeTonalSpot with matched on-color roles. The three-step model and its category validation must change together when the ticket needs a different structure. Icons use a local subset: adding a new symbol requires updating `download_symbols.py` and rebuilding the font when network is available; otherwise use an existing supported icon. Unsupported icon names can render as text.
 
 Oldindan yig‘ilgan nusxa uchun npm yoki internet shart emas: ZIP ildizida `node serve.mjs`, so‘ng http://127.0.0.1:8080/ . Node bo‘lmasa README’dagi Python usulini ishlat. Bloom source tahriri uchun npm paketlari o‘rnatilgan/cache’da bo‘lishi yoki internet kerak.
 
@@ -93,7 +95,7 @@ npm run dev
 - Haqiqiy source fayllarini o‘qi; mavjud ishga tushirishni tekshir. Kichik xato uchun butun saytni boshqa framework/dizaynga qayta qurma. Oddiy tanlov va qaytariladigan tuzatishlarni mustaqil bajar.
 - Dizayn rang/shrift/masofa iyerarxiyasini saqla. Bo‘limlarni va modelni vazifaga moslashtir. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Ma’lumot modeli o‘zgarsa storage keyni versiyala/migratsiya qil; boshqa brauzer ma’lumotini tozalama.
 - Xatoda: aniq holatni takrorla → konsol/resurs va tegishli kodni tekshir → sababni tuzat → shu oqimni qayta sina. Xatoni yashirish yoki tugmani olib tashlash yechim emas.
-- Bitta asosiy yozuvchi ishlasin. Limitni asra: avval shu qisqa kontekst va tegishli fayllar, katta minified vendor JS yoki barcha tarixni birga yuklama.
+- Bitta asosiy yozuvchi ishlasin. Limitni asra: AGENTS.md dagi o‘qish tartibiga amal qil va tegishli source fayllarni to‘liq o‘qi. Qisqa brief to‘liq o‘qish so‘rovini bekor qilmaydi; bunday so‘rovda READING-PLAN.json bo‘yicha manbalarni o‘qi. Minified vendor JSni faqat unga tegishli muammo bo‘lsa och.
 
 ## 7. Saqlanishi kerak bo‘lgan tuzatishlar
 

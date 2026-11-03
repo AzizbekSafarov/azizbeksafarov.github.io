@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-11-02",
+  "snapshot_date": "2026-11-03",
   "source_fingerprint": "cf92e23e0ddc5358de839b3e2731c654ca4cf62d041c7d8f55457c3d50191acd",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "74bbc61292669cf873995e9dc75ceff52f4c14acd45730c8307cfe62564e38f7",
-  "archive_bytes": 1579063,
+  "archive_sha256": "b43416c52017b5a24a3c8b6dbb3b2a8318b027de0500397bc6ef1f1fcc620b74",
+  "archive_bytes": 1579265,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -119,6 +119,12 @@
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package.json.txt"
     },
     {
+      "path": "package-lock.json",
+      "url": "https://azizbeksafarov.github.io/design/bloom/files/package-lock.json.txt",
+      "sha256": "c9946fb346bf51cebea0424fbeb8ea06411a75bc5c9cf163c22b535f63bdabda",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/package-lock.json.txt"
+    },
+    {
       "path": "vite.config.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/vite.config.js.txt",
       "sha256": "42590cd7082fd85e14624332a1d966eb8bcc65333b4efdf9bd46ade8a0f67968",
@@ -139,8 +145,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 20648,
-      "sha256": "4c47145a32779639e17b43ff768c395d1e56fa9f9514f92493bdb936ab59ae0a"
+      "bytes": 21258,
+      "sha256": "c27c522793354b5c6cc4c3ec4165f72ed6ff3bed2d2a40b9b3e574ed8b414d5e"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -220,7 +226,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1240,
-      "sha256": "cbca4695ff5598db079ada55c76960d3c2241f2daf1b723f5e6f0c4720274dbe"
+      "sha256": "a4855e3956e4c46f475dd49716c99b42f1aff47fe279a0df12a769dbdebfcdaf"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -240,7 +246,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 22423,
-      "sha256": "cdd05420c80bb56917381a2cfb0bdf019cda25f8aa02435eb97f4f82425d942c"
+      "sha256": "1148bd882b04957c5d34e4ad49c0dc70d0a30e62bc74c25cd462c737c5d10b2a"
     },
     {
       "path": "PREPARATION.md",
@@ -265,7 +271,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "6740a897b05ed020d54be2c015ce192e15559d21cbf7bea3b5bd1b4c654f14f1"
+      "sha256": "d559bf700d37fb273f1204b07e8054b4593a1de5aed129ca2bb62581d224727e"
     },
     {
       "path": "README.md",

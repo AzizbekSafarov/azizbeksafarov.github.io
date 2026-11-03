@@ -658,6 +658,35 @@ for(let mask=0;mask<16;mask++)test('Yuksal plan subset '+mask,()=>{
 
 ```
 
+## site/package.json
+
+```json
+{"name":"yuksal-si","private":true,"type":"module","scripts":{"test":"node --test *.test.mjs"}}
+
+```
+
+## site/template.json
+
+```json
+{
+  "id": "11",
+  "name": "Yuksal · SI",
+  "file": "si-site/index.html",
+  "category": "SI.gov / kinematik portal",
+  "color": "#0099b5",
+  "background": "#ffffff",
+  "summary": "Oq asosiy fon, O‘zbekistonning moviy va yashil aksentlari; yarim oy va 12 yulduzli zarrachali bayroq. SI.gov harakat mexanikasi, serif va jonli shakl almashishi.",
+  "features": "O‘zbekiston palitrasi · 12 yulduzli bayroq · SI ↔ Super Intelligence · kursor / click fizikasi · scroll morph · shaxsiy reja",
+  "use": "AI, ilm-fan, ta’lim, tashabbuslar, innovatsiya va taqdimot saytlari",
+  "fonts": [
+    "instrument-sans",
+    "instrument-serif"
+  ],
+  "preview": "previews/11.jpg"
+}
+
+```
+
 
 ## Shrift va rasmlar
 

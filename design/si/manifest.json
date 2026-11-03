@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-11-02",
+  "snapshot_date": "2026-11-03",
   "source_fingerprint": "5eac91ce7d7cac1c34884e394dd78c766674ee1afcc4a9df7d0f4d6810b6b73c",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "085689c99c460f943c7882ed348b6004116e427a70196158636e8bfe9f5cb70f",
-  "archive_bytes": 885312,
+  "archive_sha256": "4e57f68a48943b25bc3895474cb9577d174ceea4cacbb7ea87b21ae2ec021b9d",
+  "archive_bytes": 885401,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -87,6 +87,18 @@
       "url": "https://azizbeksafarov.github.io/design/si/files/brand-icon.svg.txt",
       "sha256": "4c59b0beca2e8c2fbf20a0d18d089ad6aea02febb5aaba2fe7852c3354af8425",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/brand-icon.svg.txt"
+    },
+    {
+      "path": "package.json",
+      "url": "https://azizbeksafarov.github.io/design/si/files/package.json.txt",
+      "sha256": "2934486c400c79d2766026eab48f0f57bf6d8ede05583deaf8a01e9f71ab967b",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/package.json.txt"
+    },
+    {
+      "path": "template.json",
+      "url": "https://azizbeksafarov.github.io/design/si/files/template.json.txt",
+      "sha256": "8df2c1e7b01280dcdc6d7ceeb32c250b3389a19279a2befcc07217eb4d6bc890",
+      "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/template.json.txt"
     }
   ],
   "files": [
@@ -97,8 +109,8 @@
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 18723,
-      "sha256": "b82153101287d982b12e1d481d2b290aa95ee732bde0068ad15508029ea99ed5"
+      "bytes": 19154,
+      "sha256": "91d1382d415b0d5a1ad6d8e4d3bafa3fad64992b33a7cd321e92b85c585972df"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -178,7 +190,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1223,
-      "sha256": "d0551e138b278b39d2bbb894c9957a8306aef34e5537312e49c06c80089879bf"
+      "sha256": "e930b07f6686610859908338a47a88cd698b8a582885213363de06d8c496050b"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -198,7 +210,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 18362,
-      "sha256": "fbad0d3963ecf54b30fcddb9c7a2b484ce23d0e31e0c91550bbf7f535db8de3e"
+      "sha256": "32a9f549cb08cc7803845d7faaedb4eb1acded590b9be6032447ebd321e08bf8"
     },
     {
       "path": "PREPARATION.md",
@@ -223,7 +235,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "98bb83434de108622085198457b6bd69a3c3966d2a609dccb39cca2ee83f00fe"
+      "sha256": "359ed556da4e00e3262a7a334c3c3639b6a8549a275ea1dd3355dcfc40c1676d"
     },
     {
       "path": "README.md",

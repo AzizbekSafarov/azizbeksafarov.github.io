@@ -6,7 +6,7 @@ Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu o
 
 ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.
 
-Snapshot: 2026-11-02; source fingerprint: `5eac91ce7d7cac1c`. Readable page: https://azizbeksafarov.github.io/design/si/
+Snapshot: 2026-11-03; source fingerprint: `5eac91ce7d7cac1c`. Readable page: https://azizbeksafarov.github.io/design/si/
 
 ## O‘qish vositasi uchun zaxira
 
@@ -70,6 +70,8 @@ Faqat kerakli faylni o‘qish uchun (to‘g‘ridan-to‘g‘ri GitHub matni):
 - [combinations.test.mjs](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/combinations.test.mjs.txt)
 - [uzbekistan.svg](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/uzbekistan.svg.txt)
 - [brand-icon.svg](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/brand-icon.svg.txt)
+- [package.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/package.json.txt)
+- [template.json](https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/template.json.txt)
 
 Plain HTML/CSS/JavaScript ES modules, canvas va native dialog. Npm kerak emas; HTTP serverda ishlaydi. HTML karta IDlari model.js bilan mos qolsin. Canvas butun sahifaga fixed; 1800 desktop / 1500 mobile nuqta, DPR 2, requestAnimationFrame va delta-time spring. SI → Super Intelligence: desktop serpentine text, mobile rotating lettering circle. Pointer repulsion radius 120 px; click expanding wave; spring .045 va damping .84. Scroll shakllarni almashtiradi, zarracha identity/velocity saqlanadi. Hidden tab/pause’da to‘xtaydi; faqat hero offscreen bo‘lgani uchun to‘xtatma. `MOTION.md` ni o‘qi. OS reduced-motion va statik SI fallback saqlansin.
 
@@ -88,7 +90,7 @@ node --test *.test.mjs
 - Haqiqiy source fayllarini o‘qi; mavjud ishga tushirishni tekshir. Kichik xato uchun butun saytni boshqa framework/dizaynga qayta qurma. Oddiy tanlov va qaytariladigan tuzatishlarni mustaqil bajar.
 - Dizayn rang/shrift/masofa iyerarxiyasini saqla. Bo‘limlarni va modelni vazifaga moslashtir. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Ma’lumot modeli o‘zgarsa storage keyni versiyala/migratsiya qil; boshqa brauzer ma’lumotini tozalama.
 - Xatoda: aniq holatni takrorla → konsol/resurs va tegishli kodni tekshir → sababni tuzat → shu oqimni qayta sina. Xatoni yashirish yoki tugmani olib tashlash yechim emas.
-- Bitta asosiy yozuvchi ishlasin. Limitni asra: avval shu qisqa kontekst va tegishli fayllar, katta minified vendor JS yoki barcha tarixni birga yuklama.
+- Bitta asosiy yozuvchi ishlasin. Limitni asra: AGENTS.md dagi o‘qish tartibiga amal qil va tegishli source fayllarni to‘liq o‘qi. Qisqa brief to‘liq o‘qish so‘rovini bekor qilmaydi; bunday so‘rovda READING-PLAN.json bo‘yicha manbalarni o‘qi. Minified vendor JSni faqat unga tegishli muammo bo‘lsa och.
 
 ## 7. Saqlanishi kerak bo‘lgan tuzatishlar
 

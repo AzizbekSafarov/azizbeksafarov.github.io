@@ -4,15 +4,15 @@
   "audit_qa_url": "https://azizbeksafarov.github.io/design/AUDIT-20261018.md",
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
-  "snapshot_date": "2026-11-02",
+  "snapshot_date": "2026-11-03",
   "source_fingerprint": "52ae70a3286f624c688bca55302969ca0c4efee29bdd8e0bb08d7591e507d270",
   "name": "Nashr",
   "slug": "nashr",
   "context_url": "https://azizbeksafarov.github.io/design/nashr/",
   "ai_url": "https://azizbeksafarov.github.io/design/nashr/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/nashr/source.zip",
-  "archive_sha256": "82a93e05f5a236db9a0b22f28d3ad3d80ff351e294aa1bdd5d3186fb5d00ebad",
-  "archive_bytes": 2310299,
+  "archive_sha256": "c16c09aa4aae7957b6494eb4dd10aa65b7af4022f5eb14d7962038abcacb3003",
+  "archive_bytes": 2310300,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -86,7 +86,7 @@
     {
       "path": "AI-BRIEF.md",
       "bytes": 12644,
-      "sha256": "cbc7e41952b16351b685bf69b335f0f1146e6ef767f30e1460a00357f8cee440"
+      "sha256": "80a8651d9bf20ed72755065daf10b688d7bc91ebf7164cb147a27472ec55e4bb"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -166,7 +166,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1219,
-      "sha256": "d40f7ec43c94f98ca1d933d00eeaba1cb60106dde7aa8728903fb52f48bb5366"
+      "sha256": "e312d71064bc1dea497bffc6468fc3f663830074b29fb80c550fdb49d862c650"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17062,
-      "sha256": "5ae09671499284cb579013d21443ab709963c7ce24381c3329e7d7710d1df22d"
+      "sha256": "c5e76e0da596b0f8f1416aa3d3986137c677c8d3ba353ba468b1edf3cc80af2b"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3443,
-      "sha256": "9c20a55efd8381819942ea5f611ecfa2d0844734d3a2cecd1bb4f9cbec792af1"
+      "sha256": "ed3f985c9c4da3ecccdb93f0dc3e0d4ed994826e89ff987d0d4346f162939556"
     },
     {
       "path": "README.md",
