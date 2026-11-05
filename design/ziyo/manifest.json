@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "d5282bfae7aedbe67fd083553fcbd3cab05f6be69132d044a84d2702ab677254",
-  "archive_bytes": 1088567,
+  "archive_sha256": "f1e453b72adb9357d89bb4c687a45587f26d23bdeff85f40226d764800529be7",
+  "archive_bytes": 1088264,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -86,8 +86,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7458,
-      "sha256": "67428ce985d9310cc891fb4a2508f38081035849faf43b679a098230e0a84b9d"
+      "bytes": 6645,
+      "sha256": "ec7b363211b58506525d26ccd83954cd56a3222419be9f7767b58ca1881ce071"
     },
     {
       "path": "AI-BRIEF.md",
@@ -192,7 +192,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16902,
-      "sha256": "18d40ac8e7da98daf51211982924d83f8cdbe26f273b4ff2d2e87a8a14576f6f"
+      "sha256": "99e4ff123f42fb0f1bf87a86fa525dd1d0542ccb77b9055d6f03fd1e27d0764e"
     },
     {
       "path": "PREPARATION.md",
@@ -217,7 +217,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "748e3c9c19435c4a3760f91234dc3a78326e25cbf2e6f46de0c8de29487501d8"
+      "sha256": "d144ef2c4b1fd646c66c1a9f40ac143ea52709b45e4916c9d370ab081eefd8d6"
     },
     {
       "path": "README.md",
@@ -256,8 +256,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 14602,
-      "sha256": "4cef07338850d2e0ade187fa99c633547f4877e8242795c45a80093f8495bd72"
+      "bytes": 14615,
+      "sha256": "e1f4cc9ab67f1d1e349ed3a7dc8d31c55da18ad7274dee0ed6ce6b070d68155e"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",

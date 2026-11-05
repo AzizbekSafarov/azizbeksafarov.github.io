@@ -154,7 +154,7 @@ Quyidagi jadval 120 daqiqalik mashq uchun mo‘ljal, rasmiy reglament yoki bajar
 
 - Tavsiya: 30 daqiqa qolganda yangi ixtiyoriy funksiya boshlamang. Yetishmayotgan majburiy amal bo‘lsa qolgan vaqtga mos eng kichik ishlaydigan yechimni tugating.
 - Hisobdagi Usage sahifasidan haqiqiy qolgan limit va reset vaqtini o‘qing. Saqlangan eski raqamga tayanmang. Reset taklifi bo‘lsa aynan shu hisobdagi shart va muddatni tekshiring; mavjudligi, chegarasi va avtomatik ishlashi oldindan kafolatlanmaydi. Buni sozlash bo‘yicha foydalanuvchi qarorini avtomatik qabul qilmang.
-- Bitta loyiha tarixini izchil saqlang. Hisob va hisob almashtirishga joydagi ruxsat hamda xizmat qoidalari amal qiladi; ushbu qo‘llanma qo‘shimcha akkaunt yoki limitdan foydalanishga ruxsat bermaydi.
+- Bitta loyiha tarixini izchil saqlang. Hisobdan foydalanish va uni almashtirishda joydagi ruxsat hamda xizmat qoidalari amal qiladi; ushbu qo‘llanma qo‘shimcha akkaunt yoki limitdan foydalanishga ruxsat bermaydi.
 - Limit tugasa: ishlaydigan holatni saqlang. Qolgan matn/rang ishlarini qo‘lda bajaring (`JONLI-OZGARISH.md`). Hali sayt bo‘lmasa — `ZAXIRA.md` dagi AI’siz yo‘l.
 
 ## 5. Himoyada AI haqida to‘g‘ri gapirish

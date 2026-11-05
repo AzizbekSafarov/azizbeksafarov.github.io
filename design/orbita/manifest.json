@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "3e29ffedbff0e8afd1e482b52060b005764256686b3ac774fc1da01b9ba51695",
-  "archive_bytes": 836845,
+  "archive_sha256": "088126ca56fab4ff21098eff3441104ddbf2ce2a62f5dcd9f7507a99884b3313",
+  "archive_bytes": 836538,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,8 +80,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7460,
-      "sha256": "bd655df7c61a966a5f95b1dba642cfef2074661b3e2a06f8c2acbc9d4ad77dfc"
+      "bytes": 6647,
+      "sha256": "c3ec8de069c5e23e553b063b4d7be5d806101129f0e044cefda5e82d43686d77"
     },
     {
       "path": "AI-BRIEF.md",
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16434,
-      "sha256": "9ceff353b9f164dfb1c8c4cf6732914f004980c76a7d3af59ec4e78f874604b5"
+      "sha256": "2c76cea2dd8059c452dbe89df8f72423ee2b49e4ee84307a36e3e5db38594114"
     },
     {
       "path": "PREPARATION.md",
@@ -211,7 +211,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "4dfb1f71b621707966f8dc0adbe2216c751582f529526769e9cf247ede08b62a"
+      "sha256": "a79be5ce78289f0e5ca4542ed559c76f108318710b33d59a0e7f389b12558573"
     },
     {
       "path": "README.md",
@@ -250,8 +250,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 14602,
-      "sha256": "4cef07338850d2e0ade187fa99c633547f4877e8242795c45a80093f8495bd72"
+      "bytes": 14615,
+      "sha256": "e1f4cc9ab67f1d1e349ed3a7dc8d31c55da18ad7274dee0ed6ce6b070d68155e"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
