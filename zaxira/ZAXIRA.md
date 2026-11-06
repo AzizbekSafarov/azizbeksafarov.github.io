@@ -23,7 +23,7 @@ Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi. Manba maqomlar
 5. **Sozlash:** kompyuter tashkilotchidan, Antigravity/Codex va akkaunt ulash uchun 15 daqiqa [Video]. Bu vaqt amaliy ishga kirmasligi va sinov loyihasi tanlov ishida ishlatilmasligi [Loyiha, 12-band] da yozilgan; videoga tegishli bo‘lmagan tafsilotni unga yuklamang.
 6. **AI va shablon:** g‘oya/shablon olish [Video], AI/no-code/ochiq materiallar va manbani ko‘rsatish [Loyiha]. Oldindan tayyorlangan to‘liq loyihani topshirish taqiqi [Loyiha, 2-bob, 2-sahifa: “Taqiqlanadi”]. Starter biletga haqiqatan moslashtiriladi; ruxsat etilgan tayyor kod chegarasi joyda aniqlanadi.
 7. **Jonli tahrir ziddiyati:** ekspert real vaqtda o‘zgartirishni so‘rashi mumkin, bajara olmagan ishtirokchining ishi baholanmaydi [Imzoli qaror, 7–9-bandlar]. [Sayt] nusxasida bu band yo‘q. [Loyiha, 17-band] topshirilgan loyihani himoyada o‘zgartirishga yo‘l qo‘ymaydi. Joydagi ko‘rsatmani aniqlang; mashq xaritasi `ZAXIRA/JONLI-OZGARISH.md` da.
-8. **Topshirish va tekshiruv:** 390/768/1366 px, source va ishga tushirish yo‘riqnomasi, qisqa tavsif/manbalar, 3–5 ekran tasviri va 1–2 daqiqalik video [Loyiha, 12–15-bandlar va baholash jadvali]. 21 batafsil ko‘rsatkich tasdiqlanmagan loyiha; tayyorgarlik vositasi, yangi rasmiy bilet emas.
+8. **Topshirish va tekshiruv:** 390/768/1366 px; ishlaydigan sayt (tekshiriladigan havola yoki kelishilgan mahalliy ishga tushirish), kod va ishga tushirish yo‘riqnomasi; ishtirokchi kodi, bilet, funksiyalar, testlar, cheklovlar, vositalar, asosiy so‘rovlar va tashqi manbalar yozilgan qisqa tavsif; 3–5 ekran tasviri va asosiy amalning 1–2 daqiqalik yozuvi. Papka nomi `bosqich_ishtirokchi-kodi_bilet-raqami`, masalan `hududiy_017_003` [Loyiha, 12–15-bandlar va baholash jadvali]. 21 batafsil ko‘rsatkich tasdiqlanmagan loyiha; tayyorgarlik vositasi, yangi rasmiy bilet emas.
 
 Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar oxirgi tekshirilgan sana: 2026-10-28; bugun yangi hujjat yuklangani anglatilmaydi. Haqiqiy bilet, amaldagi reglament va joydagi ko‘rsatma ustuvor. Manbalar: [qisqa kontekst](https://azizbeksafarov.github.io/design/handoff/competition.md), [qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md), [mezon → ish → dalil](https://azizbeksafarov.github.io/design/handoff/score-workplan.md), [to‘liq nizomlar, 39 sahifa](https://azizbeksafarov.github.io/ustoz/nizom.md).
 
@@ -36,7 +36,7 @@ Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar o
 | AI umuman yo‘q va loyiha hali boshlanmagan | Biletga mos kelsa **skelet** + `tahrir.html`. Boshlangan loyiha bo‘lsa quyidagi qatorga qarang. |
 | Starter boshlangan, lekin AI to‘xtadi | Ishlaydigan nusxani saqlang va qolgan matn/rang ishlarini qo‘lda bajaring. Faqat mavjud ishni tugatish imkonsiz bo‘lsa va biletni skeletda bajarishga vaqt yetsa, ongli ravishda o‘ting. |
 
-Bloom tayyor dist preview uchun npm talab qilmaydi; source tahririni build qilish uchun npm va dependency kerak. HTML starterlar build’siz ishlaydi, lekin ES modullar uchun lokal server bilan ochiladi. Skelet alohida, file:// bilan ham ochiladigan zaxira.
+Bloom tayyor dist preview uchun npm talab qilmaydi; source tahririni build qilish uchun npm va dependency kerak. HTML starterlar build’siz ishlaydi, lekin `ochish.cmd` yoki lokal server bilan ochiladi: `index.html` ikki marta bosilsa skript va shriftlar bloklanadi. Skelet alohida, file:// bilan ham ochiladigan zaxira.
 
 ## 3. Vaqt rejasi [Loyiha 14-band tavsiyasi]
 

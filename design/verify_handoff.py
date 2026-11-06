@@ -172,6 +172,10 @@ def verify():
             check_runtime(z,kit['serve_root'])
             check_zaxira(z)
             check_design_complete(z,manifest,brief,template['slug'])
+            # Double-clicking index.html blocks module scripts and fonts, so every package opens through the launcher.
+            launcher=z.read('ochish.cmd');assert launcher.count(b'\n')==launcher.count(b'\r\n') and launcher.isascii(),'ochish.cmd must be ASCII CRLF'
+            assert z.read('ochish.ps1').isascii(),'ochish.ps1 must stay ASCII for Windows PowerShell 5.1'
+            for doc in ('README.md','START-HERE.md','AGENTS.md','AI-BRIEF.md'):assert 'ochish.cmd' in z.read(doc).decode('utf-8'),f"{template['slug']}!{doc}: launcher not mentioned"
             check_text_rebuild(z,folder,template['slug'])
             # Guidance a new AI reads first must not send it to library generators that a competition copy lacks.
             for doc in ('AGENTS.md','AI-BRIEF.md','START-HERE.md','README.md','site/README.md','site/AGENTS.md'):

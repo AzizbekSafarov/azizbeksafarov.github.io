@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/samar/",
   "ai_url": "https://azizbeksafarov.github.io/design/samar/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/samar/source.zip",
-  "archive_sha256": "622d07b325c3dd1e53c2c62ab91f4b5fe11f0eaf078c44d32bd9be5d0e0215a5",
-  "archive_bytes": 2362419,
+  "archive_sha256": "0e55e7fe1b7104ea5097fe4028b9e9e8322a046313bdcc1e8711d47bb1e3f2c9",
+  "archive_bytes": 2365444,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 6646,
-      "sha256": "7282da26c858eed7c41b90c12729a90df4e882516e9d550082762daf7e24fe7d"
+      "bytes": 6791,
+      "sha256": "84fb6dad5e8c0df2ce16d5f17556950d9e1ef6ea265309646839035b0b66318a"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 13924,
-      "sha256": "c7e8c348f951bab086795d4c803611ce0138b0df6eb2f1f9d37f2be4ea1b1654"
+      "bytes": 14339,
+      "sha256": "313fae1a05bf492674e5267f163bbf74146d79bf569f694e3d3dcb5dfd506bd7"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -185,8 +185,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 16922,
-      "sha256": "b6c4dcfc1028145cb9b72a9017185774f092d9c6ee6dfc1412baa2f2644a7b29"
+      "bytes": 17211,
+      "sha256": "aab10121cbc2c55b238efb0b32727a21da0579200c536a7d4c80c03ad0a0f620"
     },
     {
       "path": "PREPARATION.md",
@@ -211,12 +211,12 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "e18053951020e7ed9240674b25ff67529d1f74d11216b35f38160f96d0b3888a"
+      "sha256": "ee6c80796bba746d5b7bfae0bc4862d4399601597ba8325f7a63d6d8ae8a62a4"
     },
     {
       "path": "README.md",
-      "bytes": 1898,
-      "sha256": "d0230dcb4d6ddd06d572e38bab1371fe0aecca1c8f3189e3c322bd8b1d863050"
+      "bytes": 2089,
+      "sha256": "889c7bd210764b294ea395ae6631b00dbbcaa6bb48a6e3fb9652232f5f5d649a"
     },
     {
       "path": "REGULATIONS.md",
@@ -235,8 +235,8 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 1980,
-      "sha256": "793ccda3680fd66d61b7252628e31b150776742835406ba529c2572dd239ad41"
+      "bytes": 2235,
+      "sha256": "8038731110dd937e96400ce651489b0e6398414ed48e47c73d83efead0357d85"
     },
     {
       "path": "TASK-BOUNDARY.json",
@@ -250,8 +250,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 14615,
-      "sha256": "e1f4cc9ab67f1d1e349ed3a7dc8d31c55da18ad7274dee0ed6ce6b070d68155e"
+      "bytes": 16219,
+      "sha256": "7b3f679e2147ba58754f7a525a6b0d0338cd93a3216ad75661bddf87aaa401a7"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -270,8 +270,8 @@
     },
     {
       "path": "ZAXIRA/ZAXIRA.md",
-      "bytes": 14356,
-      "sha256": "8a9b3d383f1031d3d5d9c6aa47079447d856e02033505764eda8486550b4e196"
+      "bytes": 14706,
+      "sha256": "5aa0d2f4b2ce2ab2f809cc82c49f3730b9752445e6e142c718076f989e3e723c"
     },
     {
       "path": "ZAXIRA/skelet/README.md",
@@ -492,6 +492,16 @@
       "path": "kit.json",
       "bytes": 290,
       "sha256": "04403237eefa563271fac2ee71dbba07d47ca632c211786daecd45c57599fe1a"
+    },
+    {
+      "path": "ochish.cmd",
+      "bytes": 418,
+      "sha256": "94337aeaf93fa75fdff70dd26624e2f248019319ef254b44fce15bffd7f90e96"
+    },
+    {
+      "path": "ochish.ps1",
+      "bytes": 2672,
+      "sha256": "6aaec4494438df4545edec72ec3e1c149e09877044eff07ae914492e4602db71"
     },
     {
       "path": "serve.mjs",

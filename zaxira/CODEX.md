@@ -11,7 +11,7 @@ Video ulanish uchun 15 daqiqa deydi; amaliy vaqtga kirmasligi mezonlar loyihasid
 1. Tashkilotchi bergan Codex ilovasini oching va ruxsat etilgan hisobga kiring. Ilova versiyasiga qarab tugma nomlari farq qilishi mumkin.
 2. Shu hisobda mavjud model, qolgan limit va fayl/brauzer vositalarini tekshiring. Sol/Astra/Luna nomlari yoki Plus imkoniyati boshqa hisobda mavjud bo‘lishi kafolatlanmaydi. Bir kichik faylni o‘qish va preview ochish bilan muhitni tekshiring; chat javobi kelishi barcha vosita ishlaganini bildirmaydi.
 3. Tanlangan dizaynning **source.zip** faylini yangi bo‘sh papkaga oching. **kit.zip** yuklangan bo‘lsa avval uning ichidagi tanlangan dizayn/source.zip ni ham oching. Ish ildizida site/, START-HERE.md va kit.json turishi kerak.
-4. Shu ildiz papkani Codex loyihasi sifatida oching. README.md dagi buyruqlarni aynan ko‘rsatilgan papkadan bajartiring. Tahrirdan oldin node verify-package.mjs; keyin node serve.mjs.
+4. Shu ildiz papkani Codex loyihasi sifatida oching. README.md dagi buyruqlarni aynan ko‘rsatilgan papkadan bajartiring. Tahrirdan oldin node verify-package.mjs; keyin saytni ochish.cmd (ikki marta bosish) yoki node serve.mjs bilan oching. index.html ni to‘g‘ridan-to‘g‘ri ochmang: brauzer skript va shriftlarni bloklaydi. Windows ochish.cmd ni ogohlantirsa, More info → Run anyway ni tanlang yoki Codex’dan `node serve.mjs` ni ishga tushirishni so‘rang.
 5. Asl preview ochilganini ko‘ring. Bloom’da tahrirdan keyin source build kerak; HTML starterlarda npm yo‘q. Ruxsatlar kerakli loyiha va vositalarga mos bo‘lsin; noma’lum amalni o‘qimasdan tasdiqlamang.
 
 ## Sifat maqsadi: talablarni bajarish bilan cheklanmaslik
@@ -38,6 +38,7 @@ Codex bilan ish **tanlangan professional starter** ustida boradi: ZIP’dagi `si
 | Do‘kon, savat, mahsulot | Forma |
 | Yangiliklar, maqolalar | Nashr |
 | Texnik, ilmiy, monitoring | Orbita |
+| Boshqa mavzu (sport, tibbiyot, ovqat, navbat, ariza) | Ro‘yxat, tanlash, bron → Samar yoki Forma; jadval va hisob-kitob → Hisob |
 | React kerak bo‘lsa (internet va npm ishlasa) | Bloom |
 
 Starterni bir daqiqada tanlang va keyin almashtirmang: vaqt ishlaydigan oqimga ketsin.
@@ -60,6 +61,7 @@ AGENTS.md dagi tartib bilan o'qi: AI-BRIEF.md, tanlov qoidalari (COMPETITION.md,
 REGULATIONS.md va FULL-COMPETITION-CONTEXT.md dan biletga tegishli savol tug'ilsa, o'sha bo'limni o'qi.
 
 Quyida tanlov bileti. Hali kod yozma. Faqat:
+0) biletning aynan matni, qolgan vaqt va joydagi qoidalarni CURRENT-TASK.md ga yoz;
 1) biletning har talabini jadval qil: talab → foydalanuvchi amali → qaysi sahifa/fayl → qanday sinaladi;
 2) sahifalar xaritasi (kamida biletda aytilgancha);
 3) qaysi starter qismlari qoladi, qaysilari almashadi;
@@ -83,10 +85,11 @@ Rejani tasdiqlayman. Endi qur. Qoidalar:
 - Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Biletda lokal saqlash yetarli bo'lsa localStorage; server/login/umumiy baza yoki maxfiy API talab qilinsa va ruxsat bo'lsa ARCHITECTURE.md bo'yicha backend qur. Lokal natijani serverga yuborildi dema.
 - Bo'sh holat, xato holati, mobil menyu, klaviatura va ko'rinadigan fokus.
 - Demo ma'lumot haqiqiy deb ko'rsatilmasin.
+- Har ishlaydigan bosqichdan keyin git commit qil (git bo'lmasa site/ ni sanali papkaga nusxala) va HANDOFF.md ni yangila: asosiy so'rovlarim va muhim tuzatishlar loyiha tarixida qolsin.
 Tugagach: qaysi fayllar o'zgardi va qanday ochiladi — 5 qatorda.
 ```
 
-Keyin ZIP ildizida `node serve.mjs` bilan oching (Bloom source tahriridan keyin avval build). HTML starterlarning ES modullari file:// orqali ishlamasligi mumkin; yoki Codex’dan so‘rang: `Saytni brauzerda och va asosiy sahifani ko'rsat.` (Brauzer vositasi ushbu muhitda mavjud va yoqilgan bo‘lsa.)
+Keyin `ochish.cmd` ni ikki marta bosing (Bloom source tahriridan keyin avval build); yoki Codex’dan so‘rang: `Saytni brauzerda och va asosiy sahifani ko'rsat.` (Brauzer vositasi ushbu muhitda mavjud va yoqilgan bo‘lsa.)
 
 ### C3 — Sinov va tuzatish (15–20 daqiqa)
 
@@ -113,16 +116,25 @@ Tanlangan starter uslubini saqla. Funksiyalarni va kompozitsiyani qayta qurma; f
 Keyin 390 va 1366 px da skrinshot olib, ko'rinishni o'zing baholab, bitta eng katta kamchilikni tuzat.
 ```
 
-### C5 — Topshirish hujjatlari (5–10 daqiqa)
+### C5 — Topshirish hujjatlari va papkasi (muddatdan kamida 10 daqiqa oldin tugasin)
 
 ```text
-Ildizda README.md yoz (o'zbekcha): sayt nimani hal qiladi, qanday ochiladi, fayllar, bilet talablari va sinov jadvali,
-ishlatilgan vositalar (Codex, tanlangan starter manbasi), men nimani o'zgartirganim, cheklovlar.
+Ildizda README.md yoz (o'zbekcha): ishtirokchi kodi [kod], bilet raqami [raqam], sayt nimani hal qiladi, qanday ochiladi (ochish.cmd),
+fayllar, bilet talablari va sinov jadvali, cheklovlar, ishlatilgan vositalar (Codex, tanlangan starter manbasi),
+asosiy so'rovlarim, men nimani o'zgartirganim, tashqi manbalar.
+dalillar/ papkasiga asosiy oqimning 3–5 ta ekran tasvirini sil (390 va 1366 px).
 Yana JONLI-OZGARISH.md yoz: sarlavha, asosiy rang, yangi ro'yxat elementi va yangi blokni qaysi faylda,
 qaysi qatorda o'zgartirish kerak — kod bilmaydigan odam uchun qadamma-qadam.
 ZAXIRA/HIMOYA.md dagi yagona ssenariy asosida ildizda loyiha uchun HIMOYA.md yoz: 5 daqiqa taqdimot + 5 daqiqa amaliy namoyish + 5 daqiqa savol-javob. Faqat qurilgan va tekshirilgan faktlar, haqiqiy cheklovlar.
 Ochiq parol yoki kalit qolmaganini tekshir.
+
+Keyin shu papka yonida [bosqich]_[ishtirokchi-kodi]_[bilet-raqami] papkasini yarat (masalan hududiy_017_003) va ichiga faqat
+site/, README.md, dalillar/, ochish.cmd, ochish.ps1, serve.mjs, kit.json ni nusxala. node_modules va tayyorgarlik hujjatlari
+(AGENTS.md, ZAXIRA/, REGULATIONS.md, LIBRARY-*, FULL-COMPETITION-CONTEXT.md va boshqalar) kirmasin. Bloom'da avval build qil.
+O'sha yangi papkadagi ochish.cmd bilan sayt ishlashini tekshir va natijani ayt.
 ```
+
+Asosiy amalning 1–2 daqiqalik videosini **o‘zingiz** yozing (Windows’da **Win+Alt+R** yoki joyda ruxsat etilgan usul) va `dalillar/` ga qo‘shing. Topshirish yo‘lini joyda aniqlang: tekshiriladigan havola yoki mahalliy ishga tushirish. Papka nomi va `README.md` dagi kodni o‘zingiz tekshiring.
 
 ### C6 — Jonli o‘zgarish mashqi (5 daqiqa, AI’siz)
 
@@ -149,8 +161,8 @@ Quyidagi jadval 120 daqiqalik mashq uchun mo‘ljal, rasmiy reglament yoki bajar
 | 100 → 55 | C2: barcha majburiy talablar ishlaydi |
 | 55 → 35 | C3: tegishli sinovlar va xatolarni tuzatish; o‘tmagan band ochiq qayd etiladi |
 | 35 → 20 | C4 ko‘rinish, faqat vaqt bo‘lsa |
-| 20 → 10 | C5 hujjatlar, skrinshotlar |
-| 10 → 0 | Yangi o‘zgarish yo‘q. Papka nusxasi, topshirish |
+| 20 → 10 | C5 hujjatlar, dalillar, topshirish papkasi |
+| 10 → 0 | Yangi o‘zgarish yo‘q. Video, topshirish |
 
 - Tavsiya: 30 daqiqa qolganda yangi ixtiyoriy funksiya boshlamang. Yetishmayotgan majburiy amal bo‘lsa qolgan vaqtga mos eng kichik ishlaydigan yechimni tugating.
 - Hisobdagi Usage sahifasidan haqiqiy qolgan limit va reset vaqtini o‘qing. Saqlangan eski raqamga tayanmang. Reset taklifi bo‘lsa aynan shu hisobdagi shart va muddatni tekshiring; mavjudligi, chegarasi va avtomatik ishlashi oldindan kafolatlanmaydi. Buni sozlash bo‘yicha foydalanuvchi qarorini avtomatik qabul qilmang.

@@ -429,6 +429,8 @@ AI uchun ish qoidalari va o‘qish tartibi: `AGENTS.md`. Bilet loyiha davomida `
 node serve.mjs
 ```
 
+Eng osoni: `ochish.cmd` ni ikki marta bosing. Node bo‘lmasa u Windows PowerShell bilan ochadi. `index.html` ni to‘g‘ridan-to‘g‘ri ochmang: brauzer skript va shriftlarni bloklaydi.
+
 Brauzer: http://127.0.0.1:8080/ . Server faqat 127.0.0.1’da ishlaydi. Port band bo‘lsa PowerShell’da `$env:PORT=8081; node serve.mjs`. Ctrl+C bilan to‘xtatiladi.
 
 Node bo‘lmasa Python:
@@ -458,6 +460,9 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         extras['SCREENS.json']=json.dumps(inventory(t['slug']),ensure_ascii=False,indent=2)+'\n'
         write(folder/'screens.json',extras['SCREENS.json'])
         extras['verify-package.mjs']=read(ROOT/'handoff/verify-package.mjs')
+        # cmd.exe needs CRLF to find its labels reliably.
+        extras['ochish.cmd']=read(ROOT/'handoff/ochish.cmd').replace('\r\n','\n').replace('\n','\r\n')
+        extras['ochish.ps1']=read(ROOT/'handoff/ochish.ps1').replace('\r\n','\n')
         extras['CURRENT-TASK.md']+='- Server, login yoki baza: biletda talab qilinsa yozing (reja: ARCHITECTURE.md); yaratilgan xizmat va URLlar shu yerga.\n\nKengroq shakl kerak bo‘lsa: PROJECT-TASK-TEMPLATE.md.\n'
         extras['READ-RECEIPT.md']=RECEIPT
         extras['README.md']+='\nPaket tarkibi: START-HERE.md. Codex bilan ishlash: ZAXIRA/CODEX.md. AI ishlamasa, AI’siz yo‘l: ZAXIRA/ZAXIRA.md.\n'

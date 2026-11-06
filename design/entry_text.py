@@ -18,7 +18,7 @@ FACTS_UZ = f'''Ustoz AI “Zamonaviy kasblar — Eng yaxshi veb-sayt” tanlovi.
 5. **Sozlash:** kompyuter tashkilotchidan, Antigravity/Codex va akkaunt ulash uchun 15 daqiqa [Video]. Bu vaqt amaliy ishga kirmasligi va sinov loyihasi tanlov ishida ishlatilmasligi [Loyiha, 12-band] da yozilgan; videoga tegishli bo‘lmagan tafsilotni unga yuklamang.
 6. **AI va shablon:** g‘oya/shablon olish [Video], AI/no-code/ochiq materiallar va manbani ko‘rsatish [Loyiha]. Oldindan tayyorlangan to‘liq loyihani topshirish taqiqi [Loyiha, 2-bob, 2-sahifa: “Taqiqlanadi”]. Starter biletga haqiqatan moslashtiriladi; ruxsat etilgan tayyor kod chegarasi joyda aniqlanadi.
 7. **Jonli tahrir ziddiyati:** ekspert real vaqtda o‘zgartirishni so‘rashi mumkin, bajara olmagan ishtirokchining ishi baholanmaydi [Imzoli qaror, 7–9-bandlar]. [Sayt] nusxasida bu band yo‘q. [Loyiha, 17-band] topshirilgan loyihani himoyada o‘zgartirishga yo‘l qo‘ymaydi. Joydagi ko‘rsatmani aniqlang; mashq xaritasi `ZAXIRA/JONLI-OZGARISH.md` da.
-8. **Topshirish va tekshiruv:** 390/768/1366 px, source va ishga tushirish yo‘riqnomasi, qisqa tavsif/manbalar, 3–5 ekran tasviri va 1–2 daqiqalik video [Loyiha, 12–15-bandlar va baholash jadvali]. 21 batafsil ko‘rsatkich tasdiqlanmagan loyiha; tayyorgarlik vositasi, yangi rasmiy bilet emas.
+8. **Topshirish va tekshiruv:** 390/768/1366 px; ishlaydigan sayt (tekshiriladigan havola yoki kelishilgan mahalliy ishga tushirish), kod va ishga tushirish yo‘riqnomasi; ishtirokchi kodi, bilet, funksiyalar, testlar, cheklovlar, vositalar, asosiy so‘rovlar va tashqi manbalar yozilgan qisqa tavsif; 3–5 ekran tasviri va asosiy amalning 1–2 daqiqalik yozuvi. Papka nomi `bosqich_ishtirokchi-kodi_bilet-raqami`, masalan `hududiy_017_003` [Loyiha, 12–15-bandlar va baholash jadvali]. 21 batafsil ko‘rsatkich tasdiqlanmagan loyiha; tayyorgarlik vositasi, yangi rasmiy bilet emas.
 
 Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar oxirgi tekshirilgan sana: {REVIEWED}; bugun yangi hujjat yuklangani anglatilmaydi. Haqiqiy bilet, amaldagi reglament va joydagi ko‘rsatma ustuvor. Manbalar: [qisqa kontekst]({SITE}/design/handoff/competition.md), [qoidalar holati]({SITE}/design/handoff/current-competition.md), [mezon → ish → dalil]({SITE}/design/handoff/score-workplan.md), [to‘liq nizomlar, 39 sahifa]({SITE}/ustoz/nizom.md).'''
 
@@ -28,7 +28,7 @@ TICKET_UZ = ('Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TAS
 BACKEND_UZ = ('Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, '
               'Talab texnologiya nomini sanamasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya/tayyorgarlik so‘rovi ham joriy ish doirasidir. `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.')
 
-ZIP_ENTRY_UZ = 'ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida.'
+ZIP_ENTRY_UZ = 'ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida. Saytni `ochish.cmd` yoki `node serve.mjs` bilan oching: `index.html` ikki marta bosilsa brauzer skript va shriftlarni bloklaydi.'
 
 
 def _bloom(t):
@@ -86,7 +86,7 @@ Deliver the strongest coherent product the real time, tools and venue rules allo
 - Match the scope of the current request, and report any requested work still missing.
 - Make ordinary implementation decisions yourself; ask only for missing facts about the task. One main editor at a time.
 - {edit}
-- Preview: `node serve.mjs` in this folder, then http://127.0.0.1:8080/ (Python fallback in `README.md`).{' It serves the built `site/dist/`, so run `npm run build` after source changes.' if _bloom(t) else ''}
+- Preview: double-click `ochish.cmd`, or run `node serve.mjs` and open http://127.0.0.1:8080/ . Opening `index.html` directly blocks its module scripts and fonts, so keep `ochish.cmd`, `ochish.ps1`, `serve.mjs` and `kit.json` in the submitted folder.{' It serves the built `site/dist/`, so run `npm run build` after source changes.' if _bloom(t) else ''}
 - Preserve visible labels, focus, keyboard use, button/panel distinction, empty/error/success states and reduced motion. Insert user text with `textContent`, not `innerHTML`. If the stored data model changes, version the storage key; never clear unrelated browser data.
 - Demo forms send nothing. Call an integration working only after it works.
 - Use `SCORING-WORKPLAN.md` to check completeness. Derive expected outcomes from the ticket, not from the function under test, and distinguish unit or mocked checks from observed browser or service behaviour.
@@ -111,7 +111,7 @@ Bu paketda tanlangan **{t['name']}** dizayni (`site/`), tanlov hujjatlari, Codex
 ## Uch qadam
 
 1. `node verify-package.mjs` — fayllar to‘liq va o‘zgarmaganini tekshiradi (asl holat uchun; tahrirdan keyin hash tabiiy ravishda o‘zgaradi).
-2. `node serve.mjs` — namunani http://127.0.0.1:8080/ da ochadi. {'Tayyor build uchun npm kerak emas; source’ni qayta yig‘ish uchun kerak.' if _bloom(t) else 'Npm kerak emas.'}
+2. `ochish.cmd` ni ikki marta bosing — sayt brauzerda ochiladi (Node bo‘lsa Node bilan, bo‘lmasa Windows PowerShell bilan). `index.html` ni to‘g‘ridan-to‘g‘ri ochmang: skript va shriftlar ishlamaydi. {'Tayyor build uchun npm kerak emas; source’ni qayta yig‘ish uchun kerak.' if _bloom(t) else 'Npm kerak emas.'}
 3. AI’ga biletni bering yoki `CURRENT-TASK.md` ga yozing.
 
 Kod yozmasdan Codex bilan shu starterda ishlash: `ZAXIRA/CODEX.md`. AI ishlamay qolsa yoki limit tugasa — AI’siz yo‘l: `ZAXIRA/ZAXIRA.md` (skelet va kodsiz panel). Himoyada matn, rang yoki elementni o‘zgartirish: `ZAXIRA/JONLI-OZGARISH.md`.
@@ -131,6 +131,7 @@ Kod yozmasdan Codex bilan shu starterda ishlash: `ZAXIRA/CODEX.md`. AI ishlamay 
 | `WORKFLOW.md`, `ARCHITECTURE.md`, `API-GUIDE.md` | Ish usuli, mahsulot tuzilishi va server rejasi (faqat bilet talab qilsa) |
 | `PREPARATION.md`, `READING-PLAN.json`, `READ-RECEIPT.md` | To‘liq o‘qish xaritasi va qaydi |
 | `TASK-BOUNDARY.json` | Qaysi matn bilet hisoblanadi, qaysi biri emas |
+| `ochish.cmd`, `ochish.ps1`, `serve.mjs` | Saytni to‘g‘ri ochish; topshiriladigan papkada ham qoladi |
 | `PACKAGE-MANIFEST.json`, `kit.json` | Fayl hashlari va preview sozlamasi |
 """
 
