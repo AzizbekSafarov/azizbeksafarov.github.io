@@ -10,6 +10,20 @@ $types = @{
   '.svg' = 'image/svg+xml'; '.png' = 'image/png'; '.jpg' = 'image/jpeg'; '.jpeg' = 'image/jpeg'; '.webp' = 'image/webp'
   '.woff2' = 'font/woff2'; '.woff' = 'font/woff'; '.ttf' = 'font/ttf'
 }
+# A junction or symlink could lead outside the project. Cloud placeholder files are
+# reparse points too, so the link type is checked rather than the attribute alone.
+function Test-Linked([string]$path, [string]$stop) {
+  $current = $path
+  while ($current -and $current.Length -ge $stop.Length) {
+    if ([IO.File]::Exists($current) -or [IO.Directory]::Exists($current)) {
+      if ([IO.File]::GetAttributes($current) -band [IO.FileAttributes]::ReparsePoint) {
+        if ((Get-Item -LiteralPath $current -Force).LinkType -in @('Junction', 'SymbolicLink')) { return $true }
+      }
+    }
+    $current = [IO.Path]::GetDirectoryName($current)
+  }
+  return $false
+}
 $listener = $null
 foreach ($candidate in 8080..8099) {
   $trial = New-Object Net.HttpListener
@@ -23,12 +37,18 @@ while ($listener.IsListening) {
   $context = $listener.GetContext()
   $response = $context.Response
   try {
+    if ($context.Request.HttpMethod -notin @('GET', 'HEAD')) {
+      $response.StatusCode = 405
+      $response.Headers['Allow'] = 'GET, HEAD'
+      continue
+    }
     $relative = [Uri]::UnescapeDataString($context.Request.Url.AbsolutePath).TrimStart('/')
     if ($relative -eq '') { $relative = $kit.entry }
     $hidden = @($relative -split '[\\/]' | Where-Object { $_.StartsWith('.') -or $_ -eq 'node_modules' }).Count -gt 0
     $target = [IO.Path]::GetFullPath([IO.Path]::Combine($root, $relative.Replace('/', '\')))
     if ([IO.Directory]::Exists($target)) { $target = [IO.Path]::Combine($target, 'index.html') }
-    if ($hidden -or $relative.Contains(':') -or -not $target.StartsWith($root, [StringComparison]::OrdinalIgnoreCase)) {
+    $inside = $target.StartsWith($root, [StringComparison]::OrdinalIgnoreCase)
+    if ($hidden -or $relative.Contains(':') -or -not $inside -or (Test-Linked $target $root)) {
       $response.StatusCode = 403
     } elseif (-not [IO.File]::Exists($target)) {
       $response.StatusCode = 404

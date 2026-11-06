@@ -85,7 +85,7 @@ Rejani tasdiqlayman. Endi qur. Qoidalar:
 - Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Biletda lokal saqlash yetarli bo'lsa localStorage; server/login/umumiy baza yoki maxfiy API talab qilinsa va ruxsat bo'lsa ARCHITECTURE.md bo'yicha backend qur. Lokal natijani serverga yuborildi dema.
 - Bo'sh holat, xato holati, mobil menyu, klaviatura va ko'rinadigan fokus.
 - Demo ma'lumot haqiqiy deb ko'rsatilmasin.
-- Har ishlaydigan bosqichdan keyin git commit qil (git bo'lmasa site/ ni sanali papkaga nusxala) va HANDOFF.md ni yangila: asosiy so'rovlarim va muhim tuzatishlar loyiha tarixida qolsin.
+- Har ishlaydigan bosqichdan keyin git commit qil (git bo'lmasa loyiha fayllarini sanali papkaga nusxala) va HANDOFF.md ni yangila: asosiy so'rovlarim va muhim tuzatishlar loyiha tarixida qolsin.
 Tugagach: qaysi fayllar o'zgardi va qanday ochiladi — 5 qatorda.
 ```
 
@@ -128,13 +128,14 @@ qaysi qatorda o'zgartirish kerak — kod bilmaydigan odam uchun qadamma-qadam.
 ZAXIRA/HIMOYA.md dagi yagona ssenariy asosida ildizda loyiha uchun HIMOYA.md yoz: 5 daqiqa taqdimot + 5 daqiqa amaliy namoyish + 5 daqiqa savol-javob. Faqat qurilgan va tekshirilgan faktlar, haqiqiy cheklovlar.
 Ochiq parol yoki kalit qolmaganini tekshir.
 
-Keyin shu papka yonida [bosqich]_[ishtirokchi-kodi]_[bilet-raqami] papkasini yarat (masalan hududiy_017_003) va ichiga faqat
-site/, README.md, dalillar/, ochish.cmd, ochish.ps1, serve.mjs, kit.json ni nusxala. node_modules va tayyorgarlik hujjatlari
-(AGENTS.md, ZAXIRA/, REGULATIONS.md, LIBRARY-*, FULL-COMPETITION-CONTEXT.md va boshqalar) kirmasin. Bloom'da avval build qil.
+Keyin shu papka yonida [bosqich]_[ishtirokchi-kodi]_[bilet-raqami] papkasini yarat (masalan hududiy_017_003) va ichiga mahsulotning hamma qismini nusxala:
+site/, biz qo'shgan server/, migratsiya, deploy sozlamalari, package.json va lockfile, .env.example (bo'lsa), README.md, dalillar/, ochish.cmd, ochish.ps1, serve.mjs, kit.json.
+Kirmasin: .env va maxfiy kalitlar, node_modules, tayyorgarlik hujjatlari (AGENTS.md, ZAXIRA/, REGULATIONS.md, LIBRARY-*, FULL-COMPETITION-CONTEXT.md va boshqalar). Bloom'da avval build qil.
+Backend bo'lsa README'da uni ishga tushirish va deploy yo'lini yoz, topshirish papkasidan ishga tushib, asosiy oqim oxirigacha ishlashini ham tekshir: ochish.cmd faqat frontendni ko'rsatadi.
 O'sha yangi papkadagi ochish.cmd bilan sayt ishlashini tekshir va natijani ayt.
 ```
 
-Asosiy amalning 1–2 daqiqalik videosini **o‘zingiz** yozing (Windows’da **Win+Alt+R** yoki joyda ruxsat etilgan usul) va `dalillar/` ga qo‘shing. Topshirish yo‘lini joyda aniqlang: tekshiriladigan havola yoki mahalliy ishga tushirish. Papka nomi va `README.md` dagi kodni o‘zingiz tekshiring.
+Asosiy amalning 1–2 daqiqalik videosini **o‘zingiz** yozing (Windows’da **Win+Alt+R** yoki joyda ruxsat etilgan usul) va `dalillar/` ga qo‘shing. Topshirish yo‘lini joyda aniqlang: tekshiriladigan havola yoki mahalliy ishga tushirish. Papka nomi va `README.md` dagi kodni o‘zingiz tekshiring. `HIMOYA.md` va `JONLI-OZGARISH.md` topshirilmaydi: ular himoya uchun o‘zingizda, ish papkasida qoladi.
 
 ### C6 — Jonli o‘zgarish mashqi (5 daqiqa, AI’siz)
 

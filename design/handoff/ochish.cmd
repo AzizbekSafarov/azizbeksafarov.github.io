@@ -3,7 +3,7 @@ rem Opens the site correctly: index.html cannot run its scripts and fonts when d
 cd /d "%~dp0"
 where node >nul 2>nul
 if errorlevel 1 goto powershell
-start "" /b cmd /c "ping -n 2 127.0.0.1 >nul & start "" http://127.0.0.1:8080/"
+set OCHISH_BROWSER=1
 node serve.mjs
 if not errorlevel 1 goto end
 :powershell

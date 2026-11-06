@@ -1,5 +1,6 @@
 // Dependency-free preview server. Bind only to this computer.
 import http from 'node:http';
+import {spawn} from 'node:child_process';
 import {readFile,stat,realpath} from 'node:fs/promises';
 import {resolve,relative,extname,sep,isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -26,4 +27,8 @@ const server = http.createServer(async(req,res)=>{
   }catch{res.writeHead(404,{'Content-Type':'text/plain; charset=utf-8'});res.end('Not found');}
 });
 server.on('error',error=>{console.error(error.code==='EADDRINUSE'?`Port ${port} band. Boshqa PORT qiymatini tanlang.`:error.message);process.exitCode=1;});
-server.listen(port,'127.0.0.1',()=>console.log(`${kit.name}: http://127.0.0.1:${port}/ — Ctrl+C to stop`));
+server.listen(port,'127.0.0.1',()=>{
+  console.log(`${kit.name}: http://127.0.0.1:${port}/ — Ctrl+C to stop`);
+  // ochish.cmd asks for this: the address is only known once the port is actually held.
+  if(process.env.OCHISH_BROWSER)spawn('cmd',['/c','start','',`http://127.0.0.1:${port}/`],{stdio:'ignore',detached:true,windowsHide:true}).unref();
+});

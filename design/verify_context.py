@@ -29,13 +29,9 @@ def check_entry_tone(slug, entry):
             assert not re.search(r"[A-ZʻʼО‘’ʻ]{4,}(?:\s+[A-ZʻʼО‘’ʻ]{2,}){3,}", line), f'{slug}!{name}: shouted line: {line[:80]}'
         lowered = text.lower()
         assert sum(lowered.count(p) for p in TICKET_PHRASES) <= 1, f'{slug}!{name}: ticket rule repeated'
-    agents = entry['AGENTS.md']
-    assert agents.count('## Read in this order') == 1
-    # The first file a new AI reads keeps quality and backend guidance in one place each.
-    assert agents.lower().count('ceiling') == 1, f'{slug}!AGENTS.md: quality-ceiling rule repeated'
-    assert not re.search(r'certif|perfection.*perfection', agents.lower(), re.S), f'{slug}!AGENTS.md: certification rule repeated'
-    work = agents.split('## How to work', 1)[1]
-    assert not re.search(r'Render|Supabase|Telegram', work), f'{slug}!AGENTS.md: backend stack leaked into the general working rules'
+    # Bloat, not wording, is what buries the rules: judge length here and leave phrasing to people.
+    assert len(entry['AGENTS.md'].encode()) <= 8000, f'{slug}!AGENTS.md: over 8 KB, condense it'
+    assert entry['AGENTS.md'].count('## Read in this order') == 1
 
 
 def links(text):

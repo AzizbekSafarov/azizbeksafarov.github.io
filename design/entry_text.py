@@ -58,7 +58,7 @@ Further sources, opened when the work needs them:
 
 - `REGULATIONS.md` — the three competition documents in full (39 pages) with their status; `FULL-COMPETITION-CONTEXT.md` — all collected research. Read the relevant section in full when a rule question comes up, and everything when the user asks for a full reading (`READING-PLAN.json`, record it in `READ-RECEIPT.md`).
 - `WORKFLOW.md` — diagnosis and test method, and a catalogue of possible failures (scenarios, not confirmed bugs).
-- `ARCHITECTURE.md`, `API-GUIDE.md`, `PROJECT-STATUS.json` — product quality criteria and example page structures. When the ticket needs a server, login or database and the venue allows external services, use their Render + Supabase plan; nothing there is deployed yet.
+- `ARCHITECTURE.md`, `API-GUIDE.md`, `PROJECT-STATUS.json` — product quality criteria and example page structures. When the ticket needs a server, login or database and the venue allows external services, use their Render + Supabase plan. It is a public plan: the project itself and `HANDOFF.md` show what is actually deployed.
 - `PREPARATION.md` — how the sources fit together and how to read requirements and scope.
 - `DESIGN-STANDARD.md` — the quality bar.
 - `ZAXIRA/CODEX.md` — the prompt sequence the user follows with Codex on this starter. The rest of `ZAXIRA/` (build-free skeleton, no-code editor, live-edit guide) is the user's own fallback for working without AI; build the project from this starter, not from the skeleton, unless the user asks.
@@ -86,7 +86,7 @@ Deliver the strongest coherent product the real time, tools and venue rules allo
 - Match the scope of the current request, and report any requested work still missing.
 - Make ordinary implementation decisions yourself; ask only for missing facts about the task. One main editor at a time.
 - {edit}
-- Preview: double-click `ochish.cmd`, or run `node serve.mjs` and open http://127.0.0.1:8080/ . Opening `index.html` directly blocks its module scripts and fonts, so keep `ochish.cmd`, `ochish.ps1`, `serve.mjs` and `kit.json` in the submitted folder.{' It serves the built `site/dist/`, so run `npm run build` after source changes.' if _bloom(t) else ''}
+- Preview: double-click `ochish.cmd`, or run `node serve.mjs` and open http://127.0.0.1:8080/ . Opening `index.html` directly blocks its module scripts and fonts, so keep `ochish.cmd`, `ochish.ps1`, `serve.mjs` and `kit.json` in the submitted folder. They preview the frontend only; a backend is run and checked separately.{' It serves the built `site/dist/`, so run `npm run build` after source changes.' if _bloom(t) else ''}
 - Preserve visible labels, focus, keyboard use, button/panel distinction, empty/error/success states and reduced motion. Insert user text with `textContent`, not `innerHTML`. If the stored data model changes, version the storage key; never clear unrelated browser data.
 - Demo forms send nothing. Call an integration working only after it works.
 - Use `SCORING-WORKPLAN.md` to check completeness. Derive expected outcomes from the ticket, not from the function under test, and distinguish unit or mocked checks from observed browser or service behaviour.

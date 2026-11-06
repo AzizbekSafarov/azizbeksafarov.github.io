@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "b012b9dd917fc62519546c03b23a5b2e1bf5b9680b33c464f7aaf89cadf73b07",
-  "archive_bytes": 1091295,
+  "archive_sha256": "e3bc2bee2d58cc545c5ad631a01a8c77142217e25b71e3e0522e8a3cb48b14fb",
+  "archive_bytes": 1092130,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -86,8 +86,8 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 6790,
-      "sha256": "0816f897bda32bd7738f43a7895f56ee5fd3cd716da1978eccefb312d02a0aa7"
+      "bytes": 6921,
+      "sha256": "1f674744effda00d0ad187ffc337fe53900ad63e7db38a46bf047a43dfc50ad5"
     },
     {
       "path": "AI-BRIEF.md",
@@ -192,7 +192,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17191,
-      "sha256": "3a1d0cf4add0701bef4eaec42464dcc0313768a49067f0aceea94d4cc688ea60"
+      "sha256": "3c189b4edf94f2c2b659e06e537c23b859be81ef64c6c0664c3b65cfcca7420d"
     },
     {
       "path": "PREPARATION.md",
@@ -217,7 +217,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "81d42a7253d4f4d563394c03716785337c2514d096e3770118c7ceace24c792b"
+      "sha256": "ca27c05682400c17b5a196ec0bbcaa9c6d028ca1f622022906d3a2a78df61c72"
     },
     {
       "path": "README.md",
@@ -256,8 +256,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 16219,
-      "sha256": "7b3f679e2147ba58754f7a525a6b0d0338cd93a3216ad75661bddf87aaa401a7"
+      "bytes": 16670,
+      "sha256": "6e15ba90bad78348dac62ab3d9de0fc7c1d3d9ce4ae677fd564a0874e5dbcc20"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -466,8 +466,8 @@
     },
     {
       "path": "ZAXIRA/skelet/serve.mjs",
-      "bytes": 2402,
-      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
+      "bytes": 2688,
+      "sha256": "13599958b22056a869e53d4fa839297b47bbd07481576a37db1cac8f0476be4c"
     },
     {
       "path": "ZAXIRA/skelet/tahrir.html",
@@ -501,18 +501,18 @@
     },
     {
       "path": "ochish.cmd",
-      "bytes": 418,
-      "sha256": "94337aeaf93fa75fdff70dd26624e2f248019319ef254b44fce15bffd7f90e96"
+      "bytes": 359,
+      "sha256": "e27047cbe20a24f75e9a1fc803edcd181ad725f6a260384792fcf0fb4842b803"
     },
     {
       "path": "ochish.ps1",
-      "bytes": 2672,
-      "sha256": "6aaec4494438df4545edec72ec3e1c149e09877044eff07ae914492e4602db71"
+      "bytes": 3554,
+      "sha256": "81dcba5e3f54e7a1db0daf662a991a270bf30aa05a2513a837f20543996c9b9f"
     },
     {
       "path": "serve.mjs",
-      "bytes": 2402,
-      "sha256": "5d7163196247687b7d06e8af2f52487b25349a560ab874966f4fba237e9fbf64"
+      "bytes": 2688,
+      "sha256": "13599958b22056a869e53d4fa839297b47bbd07481576a37db1cac8f0476be4c"
     },
     {
       "path": "site/CREDITS.md",
