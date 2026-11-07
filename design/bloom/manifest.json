@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "c991c94af05bdd8e8b6f0ca9e13a7dd2d50f78b992546979b7c819814d5872e6",
-  "archive_bytes": 1588754,
+  "archive_sha256": "05f1ddfac83eec3d6729627a34c8a3abf7d44fb3a21f514851eda5a39a5e8fff",
+  "archive_bytes": 1588834,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
@@ -246,7 +246,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 22713,
-      "sha256": "55ea346e016a16459752d55228308e5a12936ea0e778e19748c4f06eb7ae59f4"
+      "sha256": "e14fb941cfbb4e0e1f6c894978b2818c77e8f03a931548c0502a249e6957e0f9"
     },
     {
       "path": "PREPARATION.md",
@@ -520,8 +520,8 @@
     },
     {
       "path": "ZAXIRA/skelet/serve.mjs",
-      "bytes": 2688,
-      "sha256": "13599958b22056a869e53d4fa839297b47bbd07481576a37db1cac8f0476be4c"
+      "bytes": 2830,
+      "sha256": "fffe479eae50191cd0536203d32216bf998c1e56107ee7551b0b912f03461a22"
     },
     {
       "path": "ZAXIRA/skelet/tahrir.html",
@@ -565,8 +565,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2688,
-      "sha256": "13599958b22056a869e53d4fa839297b47bbd07481576a37db1cac8f0476be4c"
+      "bytes": 2830,
+      "sha256": "fffe479eae50191cd0536203d32216bf998c1e56107ee7551b0b912f03461a22"
     },
     {
       "path": "site/.gitignore",

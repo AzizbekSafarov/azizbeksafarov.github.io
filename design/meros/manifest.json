@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/meros/",
   "ai_url": "https://azizbeksafarov.github.io/design/meros/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/meros/source.zip",
-  "archive_sha256": "f656d754305b0b2b98fc516c1bf855a282a63c4669c43a2e82136af249a90b5f",
-  "archive_bytes": 2835807,
+  "archive_sha256": "9afdc4ace15dce0df01d60a41a7844e0a3d638a5623fc42c29e278b5a497c3c6",
+  "archive_bytes": 2835882,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -186,7 +186,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17537,
-      "sha256": "de554ea0664bbd71f13343f70714b664ab3f8f8b6eb2f417cba983321c801fbd"
+      "sha256": "5cf7646c7d66f09b6705af6b42831c625a692cabcb5b385032db769e5ca69b41"
     },
     {
       "path": "PREPARATION.md",
@@ -460,8 +460,8 @@
     },
     {
       "path": "ZAXIRA/skelet/serve.mjs",
-      "bytes": 2688,
-      "sha256": "13599958b22056a869e53d4fa839297b47bbd07481576a37db1cac8f0476be4c"
+      "bytes": 2830,
+      "sha256": "fffe479eae50191cd0536203d32216bf998c1e56107ee7551b0b912f03461a22"
     },
     {
       "path": "ZAXIRA/skelet/tahrir.html",
@@ -505,8 +505,8 @@
     },
     {
       "path": "serve.mjs",
-      "bytes": 2688,
-      "sha256": "13599958b22056a869e53d4fa839297b47bbd07481576a37db1cac8f0476be4c"
+      "bytes": 2830,
+      "sha256": "fffe479eae50191cd0536203d32216bf998c1e56107ee7551b0b912f03461a22"
     },
     {
       "path": "site/CREDITS.md",

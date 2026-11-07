@@ -8,7 +8,7 @@ const folder = fileURLToPath(new URL('.',import.meta.url));
 const kit = JSON.parse(await readFile(resolve(folder,'kit.json'),'utf8'));
 const root = await realpath(resolve(folder,kit.serve_root));
 const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.md':'text/plain; charset=utf-8'};
-const port = Number(process.env.PORT || 8080);
+let port = Number(process.env.PORT || 8080);
 const server = http.createServer(async(req,res)=>{
   try{
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'});res.end('Method not allowed');return;}
@@ -26,9 +26,14 @@ const server = http.createServer(async(req,res)=>{
     res.end(req.method==='HEAD'?undefined:bytes);
   }catch{res.writeHead(404,{'Content-Type':'text/plain; charset=utf-8'});res.end('Not found');}
 });
-server.on('error',error=>{console.error(error.code==='EADDRINUSE'?`Port ${port} band. Boshqa PORT qiymatini tanlang.`:error.message);process.exitCode=1;});
-server.listen(port,'127.0.0.1',()=>{
+server.on('error',error=>{
+  if(error.code==='EADDRINUSE'&&!process.env.PORT&&port<8099){port+=1;server.listen(port,'127.0.0.1');return;}
+  console.error(error.code==='EADDRINUSE'?`Port ${port} band. Boshqa PORT qiymatini tanlang.`:error.message);
+  process.exitCode=1;
+});
+server.once('listening',()=>{
   console.log(`${kit.name}: http://127.0.0.1:${port}/ — Ctrl+C to stop`);
   // ochish.cmd asks for this: the address is only known once the port is actually held.
   if(process.env.OCHISH_BROWSER)spawn('cmd',['/c','start','',`http://127.0.0.1:${port}/`],{stdio:'ignore',detached:true,windowsHide:true}).unref();
 });
+server.listen(port,'127.0.0.1');
