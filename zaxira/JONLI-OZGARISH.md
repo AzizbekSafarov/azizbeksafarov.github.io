@@ -42,14 +42,14 @@ Jadval amaldagi kod asosida avtomatik yaratilgan. Rang ustunida CSS fayllarda en
 
 | Dizayn | Asosiy sarlavha | `:root` rang o‘zgaruvchilari | Eng ko‘p rang kodlari (style.css + layout.css) |
 |---|---|---|---|
-| Forma | `site/index.html` → “Tanlangan buyumlar. 01—03 / OBYEKTLAR” | `--ink:#25251f`, `--line:#c3c2b8`, `--muted:#55564e` | `#255a3c` ×3, `#111111` ×2, `#4b4e40` ×2, `#736858` ×2 |
-| Samar | `site/index.html` → “Samarqand, o‘z ritmingizda.” | `--ink:#173952`, `--line:#c3d1d8`, `--modal:#fffdf7` | `#49616f` ×17, `#c3d1d8` ×11, `#173952` ×8, `#586f7d` ×4 |
-| Orbita | `site/index.html` → “ORBITAL ATLAS” | `--ink:#e6eef0`, `--line:#294046`, `--modal:#102024` | `#b1f56a` ×14, `#294046` ×10, `#6e969d` ×3, `#111111` ×2 |
-| Nashr | `site/index.html` → “Nashr” | `--ink:#20201c`, `--line:#a3a094`, `--modal:#f4f1e6` | `#a3271e` ×9, `#444438` ×5, `#aaa695` ×3, `#111111` ×2 |
-| Hisob | `site/index.html` → “Hududlar hisoboti” | `--ink:#26313a`, `--line:#d4d9de`, `--modal:#fff` | `#5c6972` ×8, `#c7d0d6` ×7, `#111111` ×2, `#26313a` ×2 |
-| Ziyo | JavaScript chizadi: `site/model.js` yoki `site/identity.js` dan matnni qidiring | `--ink:#402d26`, `--line:#d8c9bb`, `--focus:#2451ad` | `#402d26` ×4, `#bd4731` ×4, `#2451ad` ×3, `#111111` ×2 |
-| Meros | `site/index.html` → “Shahar xotirasi” | `--ink:#e5f344`, `--line:#6573e9`, `--modal:#f2f1df` | `#e5f344` ×26, `#1d2ed8` ×22, `#c5ceff` ×6, `#1524b3` ×4 |
-| Yuksal · SI | `site/index.html` → “Yangi davr. Yangi imkoniyat. Uni birga yaratamiz.” | `--navy:#062c35`, `--navy-deep:#041e26`, `--cream:#f8fcfb` | `#3f6269` ×6, `#168a43` ×4, `#062c35` ×2, `#f8fcfb` ×2 |
+| Forma | `site/index.html` → “Tanlangan buyumlar. 01—03 / OBYEKTLAR” | `--ink: #25251f`, `--line: #c3c2b8`, `--muted: #55564e` | `#255a3c` ×3, `#111111` ×2, `#4b4e40` ×2, `#736858` ×2 |
+| Samar | `site/index.html` → “Samarqand, o‘z ritmingizda.” | `--ink: #173952`, `--line: #c3d1d8`, `--modal: #fffdf7` | `#49616f` ×17, `#c3d1d8` ×11, `#173952` ×8, `#586f7d` ×4 |
+| Orbita | `site/index.html` → “ORBITAL ATLAS” | `--ink: #e6eef0`, `--line: #294046`, `--modal: #102024` | `#b1f56a` ×14, `#294046` ×10, `#6e969d` ×3, `#111111` ×2 |
+| Nashr | `site/index.html` → “Nashr” | `--ink: #20201c`, `--line: #a3a094`, `--modal: #f4f1e6` | `#a3271e` ×9, `#444438` ×5, `#aaa695` ×3, `#111111` ×2 |
+| Hisob | `site/index.html` → “Hududlar hisoboti” | `--ink: #26313a`, `--line: #d4d9de`, `--modal: #fff` | `#5c6972` ×8, `#c7d0d6` ×7, `#111111` ×2, `#26313a` ×2 |
+| Ziyo | JavaScript chizadi: `site/model.js` yoki `site/identity.js` dan matnni qidiring | `--ink: #402d26`, `--line: #d8c9bb`, `--focus: #2451ad` | `#402d26` ×4, `#bd4731` ×4, `#2451ad` ×3, `#111111` ×2 |
+| Meros | `site/index.html` → “Shahar xotirasi” | `--ink: #e5f344`, `--line: #6573e9`, `--modal: #f2f1df` | `#e5f344` ×26, `#1d2ed8` ×22, `#c5ceff` ×6, `#1524b3` ×4 |
+| Yuksal · SI | `site/index.html` → “Yangi davr. Yangi imkoniyat. Uni birga yaratamiz.” | `--navy: #062c35`, `--navy-deep: #041e26`, `--cream: #f8fcfb` | `#3f6269` ×6, `#168a43` ×4, `#062c35` ×2, `#f8fcfb` ×2 |
 | Bloom (React) | `site/src/main.jsx` → `<h1>` | UI: rang palitrasi; source: `SEEDS` / `applyMaterialTheme` (`src/main.jsx`) | ZIP ildizidan `npm --prefix site run dev` yoki `npm --prefix site run build` → `node serve.mjs` |
 
 Forma va Samar’da statik karta hamda model yozuvini bir xil ID bilan moslang; SI’da tashabbus tugmasi va model, Orbita’da model, missiya tugmasi va koordinatalar birga yangilanadi. Nashr/Meros/Ziyo mazmuni modeldan chiziladi; HTMLga ikkinchi nusxa qo‘shmang. Bloom’da src/model.js va src/main.jsx qo‘llanadi. Matn modeldan kelayotgan bo‘lsa aynan o‘sha manbani tahrirlang. Har starterning AI-BRIEF.md xaritasi ustuvor.

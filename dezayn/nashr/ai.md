@@ -6,7 +6,7 @@ Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu o
 
 ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida. Saytni `ochish.cmd` yoki `node serve.mjs` bilan oching: `index.html` ikki marta bosilsa brauzer skript va shriftlarni bloklaydi.
 
-Snapshot 2026-11-03; fingerprint 52ae70a3286f624c.
+Snapshot 2026-11-03; fingerprint bc90268fa9eb165e.
 
 ## Tanlov
 

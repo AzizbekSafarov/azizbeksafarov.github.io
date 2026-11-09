@@ -1,264 +1,1805 @@
 # Samar — editable source snapshot
 
-Source fingerprint: `ad1bfdee3b55f34ce00d117205ec68596b65357484e2ec544fbbc3473ed3825a`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `ffb86daaf0823759bdcf25f9195332d763e4c0779b6905edf840a58bb6788c90`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
 ```html
-<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f1f4f3"><meta name="description" content="Sayohat atlasi: dadil Lora sarlavhasi, yumaloq manzil kartalari, to‘liq rangli reja tugmalari va buklama xarita."><title>Samar — Samarqand o‘z ritmingizda</title><link rel="icon" href="mark.svg?v=7840cff495" type="image/svg+xml"><script type="module" src="app.js?v=ffb8dcca4c"></script><meta name="composition" content="task-specific-v3"><link rel="preload" href="fonts/lora.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="fonts/sourcesans3.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css?v=835f1c97d9"><link rel="stylesheet" href="layout.css?v=43bd916786"><meta name="identity" content="sector-v4"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header class="header wrap"><a class="wordmark" href="#main" aria-label="samar bosh sahifasi">samar<span>.</span></a><nav class="nav" aria-label="Asosiy navigatsiya"><a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a><a href="#tayyorgarlik">Tayyorgarlik</a></nav><details class="mobile-nav"><summary>Menyu <span aria-hidden="true">+</span></summary><nav aria-label="Mobil navigatsiya"><a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a><a href="#tayyorgarlik">Tayyorgarlik</a></nav></details></header><main id="main"><div class="atlas-intro wrap"><div><p class="eyebrow">O‘ZBEKISTON / SHAHAR QO‘LLANMASI 01</p><h1>Samarqand, o‘z ritmingizda.</h1></div><p>Manzillarni tanlang. Kuningizni tuzing. Yo‘lga o‘zingizga mos reja bilan chiqing.</p></div><div class="atlas-shell wrap"><section class="atlas-map" aria-labelledby="map-heading"><div class="atlas-map-title"><span>SHAHAR ATLASI</span><h2 id="map-heading">Uch bekat.<br> Bitta kun.</h2><p>Xaritadagi manzilni ochib, hikoyasini o‘qing.</p></div><div class="map-canvas"><svg viewBox="0 0 600 550" aria-hidden="true"><defs><pattern id="blocks" width="64" height="56" patternTransform="rotate(-22)" patternUnits="userSpaceOnUse"><rect x="5" y="5" width="49" height="40" rx="4" fill="#dfe2d3"/></pattern></defs><path fill="url(#blocks)" d="M0 0H600V550H0Z"/><path d="M-60 370Q160 240 245 330T650 130" stroke="#fbfaf2" stroke-width="38" fill="none"/><path d="M80-40L425 600M-30 130L630 455" stroke="#fbfaf2" stroke-width="19"/><path d="M150 410Q220 250 310 285T440 130" stroke="#bc714a" stroke-width="3" stroke-dasharray="5 7" fill="none"/><circle cx="150" cy="410" r="7" fill="#bc714a"/><circle cx="310" cy="285" r="7" fill="#bc714a"/><circle cx="440" cy="130" r="7" fill="#bc714a"/></svg><button class="map-pin pin-one" data-detail="registan"><span>01</span><strong>Registon</strong><small>Maydon va madrasalar ↗</small></button><button class="map-pin pin-two" data-detail="shohi-zinda"><span>02</span><strong>Shohi Zinda</strong><small>Naqsh va xotira ↗</small></button><button class="map-pin pin-three" data-detail="guri-amir"><span>03</span><strong>Go‘ri Amir</strong><small>Temuriylar merosi ↗</small></button><span class="map-north" aria-label="Shimol yo‘nalishi shartli">N ↑</span></div><p class="map-disclaimer">SHARTLI CHIZMA · MASOFA VA JOYLASHUV MASSHTABGA MOS EMAS</p><figure class="atlas-photo"><img src="images/registan.jpg" width="1600" height="1200" alt="Registon maydonining panoramasi" fetchpriority="high"><figcaption>Registon · Euyasik / CC BY-SA 3.0 <a href="CREDITS.md">Manba ↗</a></figcaption></figure></section><section id="manzillar" class="section atlas-directory"><div class="section-head"><div><p class="eyebrow">TANLANGAN MANZILLAR</p><h2>Manzil tanlang</h2></div><p>Hikoyasini o‘qing. Rejangizga qo‘shing. Har bir bekatga o‘z vaqtingizni ajrating.</p></div><div class="destinations"><article class="destination"><button class="place-photo" data-detail="registan" aria-label="Registon maydoni haqida batafsil"><img src="images/registan.jpg" width="800" height="640" loading="lazy" alt="Registon maydoni me’moriy ko‘rinishi"></button><div class="place-meta"><span>ME’MORCHILIK</span><span>~ 75 DAQIQA</span></div><h3>Registon maydoni</h3><p>Uch madrasa. Bitta ulkan taassurot.</p><div class="place-actions"><button class="button secondary" data-toggle="registan" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="registan" aria-label="Registon maydoni: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article><article class="destination"><button class="place-photo" data-detail="shohi-zinda" aria-label="Shohi Zinda haqida batafsil"><img src="images/shohi-zinda.jpg" width="800" height="640" loading="lazy" alt="Shohi Zinda me’moriy ko‘rinishi"></button><div class="place-meta"><span>NAQSH VA XOTIRA</span><span>~ 60 DAQIQA</span></div><h3>Shohi Zinda</h3><p>Moviy rangning ming xil ohangi.</p><div class="place-actions"><button class="button secondary" data-toggle="shohi-zinda" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="shohi-zinda" aria-label="Shohi Zinda: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article><article class="destination"><button class="place-photo" data-detail="guri-amir" aria-label="Go‘ri Amir haqida batafsil"><img src="images/guri-amir.jpg" width="800" height="640" loading="lazy" alt="Go‘ri Amir me’moriy ko‘rinishi"></button><div class="place-meta"><span>TEMURIYLAR MEROSI</span><span>~ 60 DAQIQA</span></div><h3>Go‘ri Amir</h3><p>Samarqand osmonidagi moviy gumbaz.</p><div class="place-actions"><button class="button secondary" data-toggle="guri-amir" aria-pressed="false">Rejaga qo‘shish +</button><button class="text-link" data-detail="guri-amir" aria-label="Go‘ri Amir: hikoyasini o‘qish">Hikoyasini o‘qish ↗</button></div></article></div><p id="live-status" class="live" role="status" aria-live="polite"></p></section><section class="planner-band" id="reja"><div class="wrap planner"><div class="planner-intro"><p class="eyebrow">SIZNING KUNINGIZ</p><h2>Yo‘nalish tayyor.<br>Endi <em>siz tanlang.</em></h2><p>Manzillarni qo‘shing, tartibini o‘zgartiring va rejangizni matn fayli qilib oling. Shaxsiy ma’lumot yoki ro‘yxatdan o‘tish kerak emas.</p><div class="notice">Vaqtlar — tashrif uchun taklif. Manzillar orasiga shartli 20 daqiqa qo‘shiladi. Haqiqiy yo‘l va tashrif vaqtini joyida tekshiring.</div></div><div class="planner-box"><div class="planner-toolbar"><div><h3 id="plan-heading" tabindex="-1">Kun rejangiz</h3><label for="start-time">Boshlanish vaqti<input id="start-time" type="time" value="09:00" required></label></div><span class="count" id="plan-count" aria-label="Tanlangan manzillar soni">0</span></div><div id="plan-empty"><strong>Qaysi manzildan boshlaymiz?</strong><p>Yuqoridagi manzillardan kamida bittasini qo‘shing.</p></div><ol id="plan-list"></ol><div class="planner-bottom"><p class="small" id="plan-duration">Manzillarni tanlang</p><button id="download" class="button" disabled>Rejani yuklab olish <span aria-hidden="true">↓</span></button><p class="small" id="storage-note">Reja shu brauzerda saqlanadi. Bu chipta yoki bron emas.</p></div></div></div></section></div><section id="tayyorgarlik" class="section atlas-guide wrap"><div class="guide"><div><p class="eyebrow">YO‘LGA CHIQISHDAN OLDIN</p><h2>Kichik tayyorgarlik.<br>Yaxshiroq sayr.</h2><p>Manzillar haqida rasmiy ma’lumotlar Uzbekistan Travel’dan tekshirildi. Joriy narx va ochilish vaqti bu yerda taxmin qilinmaydi.</p><a class="text-link" href="https://uzbekistan.travel/en/i/samarkand/">Rasmiy shahar qo‘llanmasi ↗</a></div><div><details><summary>Chipta va ochilish vaqti</summary><p>Tashrif kuni rasmiy sahifa yoki manzil kassasidan tekshiring. Bu saytdagi reja kirish huquqini bermaydi.</p></details><details><summary>Kiyim va ziyorat odobi</summary><p>Diniy maskanlarda hurmatli kiyim va sokinlik muhim. Joydagi suratga olish va kirish ko‘rsatmalariga rioya qiling.</p></details><details><summary>Sayrni o‘zingizga moslang</summary><p>Qulay oyoq kiyim, suv va ob-havoga mos kiyim oling. Rejadagi vaqtlar taxminiy: dam olish uchun qo‘shimcha vaqt ajrating.</p></details></div></div></section></main><footer class="footer wrap"><div><a class="wordmark" href="#main">samar<span>.</span></a><p>Mustaqil sayohat rejalashtirish namunasi. Turagentlik, rasmiy portal yoki bron xizmati emas.</p></div><nav aria-label="Qo‘shimcha havolalar"><a href="https://azizbeksafarov.github.io/design/">Dizaynlar</a><a href="https://azizbeksafarov.github.io/design/samar/">AI konteksti</a><a href="CREDITS.md">Suratlar va manbalar</a></nav></footer><dialog id="detail" aria-labelledby="detail-title"><div class="dialog-head"><h2 id="detail-title">Manzil haqida</h2><button class="close" data-close aria-label="Yopish">×</button></div><div class="dialog-content"><img id="detail-image" class="detail-image" alt=""><p id="detail-text"></p><p class="notice" id="detail-note"></p><div class="dialog-links"><a id="detail-source" class="text-link" href="https://uzbekistan.travel/">Rasmiy manba ↗</a><a id="detail-map" class="text-link" href="https://maps.google.com/">Xaritada ko‘rish ↗</a></div></div></dialog></body></html>
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f1f4f3" />
+    <meta
+      name="description"
+      content="Sayohat atlasi: dadil Lora sarlavhasi, yumaloq manzil kartalari, to‘liq rangli reja tugmalari va buklama xarita."
+    />
+    <title>Samar — Samarqand o‘z ritmingizda</title>
+    <link rel="icon" href="mark.svg?v=7840cff495" type="image/svg+xml" />
+    <script type="module" src="app.js?v=ffb8dcca4c"></script>
+    <meta name="composition" content="task-specific-v3" />
+    <link rel="preload" href="fonts/lora.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="fonts/sourcesans3.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="style.css?v=835f1c97d9" />
+    <link rel="stylesheet" href="layout.css?v=43bd916786" />
+    <meta name="identity" content="sector-v4" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Asosiy mazmunga o‘tish</a>
+    <header class="header wrap">
+      <a class="wordmark" href="#main" aria-label="samar bosh sahifasi">samar<span>.</span></a>
+      <nav class="nav" aria-label="Asosiy navigatsiya">
+        <a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a
+        ><a href="#tayyorgarlik">Tayyorgarlik</a>
+      </nav>
+      <details class="mobile-nav">
+        <summary>Menyu <span aria-hidden="true">+</span></summary>
+        <nav aria-label="Mobil navigatsiya">
+          <a href="#manzillar">Manzillar</a><a href="#reja">Kun rejasi (<span class="nav-count">0</span>)</a
+          ><a href="#tayyorgarlik">Tayyorgarlik</a>
+        </nav>
+      </details>
+    </header>
+    <main id="main">
+      <div class="atlas-intro wrap">
+        <div>
+          <p class="eyebrow">O‘ZBEKISTON / SHAHAR QO‘LLANMASI 01</p>
+          <h1>Samarqand, o‘z ritmingizda.</h1>
+        </div>
+        <p>Manzillarni tanlang. Kuningizni tuzing. Yo‘lga o‘zingizga mos reja bilan chiqing.</p>
+      </div>
+      <div class="atlas-shell wrap">
+        <section class="atlas-map" aria-labelledby="map-heading">
+          <div class="atlas-map-title">
+            <span>SHAHAR ATLASI</span>
+            <h2 id="map-heading">
+              Uch bekat.<br />
+              Bitta kun.
+            </h2>
+            <p>Xaritadagi manzilni ochib, hikoyasini o‘qing.</p>
+          </div>
+          <div class="map-canvas">
+            <svg viewBox="0 0 600 550" aria-hidden="true">
+              <defs>
+                <pattern
+                  id="blocks"
+                  width="64"
+                  height="56"
+                  patternTransform="rotate(-22)"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect x="5" y="5" width="49" height="40" rx="4" fill="#dfe2d3" />
+                </pattern>
+              </defs>
+              <path fill="url(#blocks)" d="M0 0H600V550H0Z" />
+              <path d="M-60 370Q160 240 245 330T650 130" stroke="#fbfaf2" stroke-width="38" fill="none" />
+              <path d="M80-40L425 600M-30 130L630 455" stroke="#fbfaf2" stroke-width="19" />
+              <path
+                d="M150 410Q220 250 310 285T440 130"
+                stroke="#bc714a"
+                stroke-width="3"
+                stroke-dasharray="5 7"
+                fill="none"
+              />
+              <circle cx="150" cy="410" r="7" fill="#bc714a" />
+              <circle cx="310" cy="285" r="7" fill="#bc714a" />
+              <circle cx="440" cy="130" r="7" fill="#bc714a" /></svg
+            ><button class="map-pin pin-one" data-detail="registan">
+              <span>01</span><strong>Registon</strong><small>Maydon va madrasalar ↗</small></button
+            ><button class="map-pin pin-two" data-detail="shohi-zinda">
+              <span>02</span><strong>Shohi Zinda</strong><small>Naqsh va xotira ↗</small></button
+            ><button class="map-pin pin-three" data-detail="guri-amir">
+              <span>03</span><strong>Go‘ri Amir</strong><small>Temuriylar merosi ↗</small></button
+            ><span class="map-north" aria-label="Shimol yo‘nalishi shartli">N ↑</span>
+          </div>
+          <p class="map-disclaimer">SHARTLI CHIZMA · MASOFA VA JOYLASHUV MASSHTABGA MOS EMAS</p>
+          <figure class="atlas-photo">
+            <img
+              src="images/registan.jpg"
+              width="1600"
+              height="1200"
+              alt="Registon maydonining panoramasi"
+              fetchpriority="high"
+            />
+            <figcaption>Registon · Euyasik / CC BY-SA 3.0 <a href="CREDITS.md">Manba ↗</a></figcaption>
+          </figure>
+        </section>
+        <section id="manzillar" class="section atlas-directory">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">TANLANGAN MANZILLAR</p>
+              <h2>Manzil tanlang</h2>
+            </div>
+            <p>Hikoyasini o‘qing. Rejangizga qo‘shing. Har bir bekatga o‘z vaqtingizni ajrating.</p>
+          </div>
+          <div class="destinations">
+            <article class="destination">
+              <button
+                class="place-photo"
+                data-detail="registan"
+                aria-label="Registon maydoni haqida batafsil"
+              >
+                <img
+                  src="images/registan.jpg"
+                  width="800"
+                  height="640"
+                  loading="lazy"
+                  alt="Registon maydoni me’moriy ko‘rinishi"
+                />
+              </button>
+              <div class="place-meta"><span>ME’MORCHILIK</span><span>~ 75 DAQIQA</span></div>
+              <h3>Registon maydoni</h3>
+              <p>Uch madrasa. Bitta ulkan taassurot.</p>
+              <div class="place-actions">
+                <button class="button secondary" data-toggle="registan" aria-pressed="false">
+                  Rejaga qo‘shish +</button
+                ><button
+                  class="text-link"
+                  data-detail="registan"
+                  aria-label="Registon maydoni: hikoyasini o‘qish"
+                >
+                  Hikoyasini o‘qish ↗
+                </button>
+              </div>
+            </article>
+            <article class="destination">
+              <button class="place-photo" data-detail="shohi-zinda" aria-label="Shohi Zinda haqida batafsil">
+                <img
+                  src="images/shohi-zinda.jpg"
+                  width="800"
+                  height="640"
+                  loading="lazy"
+                  alt="Shohi Zinda me’moriy ko‘rinishi"
+                />
+              </button>
+              <div class="place-meta"><span>NAQSH VA XOTIRA</span><span>~ 60 DAQIQA</span></div>
+              <h3>Shohi Zinda</h3>
+              <p>Moviy rangning ming xil ohangi.</p>
+              <div class="place-actions">
+                <button class="button secondary" data-toggle="shohi-zinda" aria-pressed="false">
+                  Rejaga qo‘shish +</button
+                ><button
+                  class="text-link"
+                  data-detail="shohi-zinda"
+                  aria-label="Shohi Zinda: hikoyasini o‘qish"
+                >
+                  Hikoyasini o‘qish ↗
+                </button>
+              </div>
+            </article>
+            <article class="destination">
+              <button class="place-photo" data-detail="guri-amir" aria-label="Go‘ri Amir haqida batafsil">
+                <img
+                  src="images/guri-amir.jpg"
+                  width="800"
+                  height="640"
+                  loading="lazy"
+                  alt="Go‘ri Amir me’moriy ko‘rinishi"
+                />
+              </button>
+              <div class="place-meta"><span>TEMURIYLAR MEROSI</span><span>~ 60 DAQIQA</span></div>
+              <h3>Go‘ri Amir</h3>
+              <p>Samarqand osmonidagi moviy gumbaz.</p>
+              <div class="place-actions">
+                <button class="button secondary" data-toggle="guri-amir" aria-pressed="false">
+                  Rejaga qo‘shish +</button
+                ><button class="text-link" data-detail="guri-amir" aria-label="Go‘ri Amir: hikoyasini o‘qish">
+                  Hikoyasini o‘qish ↗
+                </button>
+              </div>
+            </article>
+          </div>
+          <p id="live-status" class="live" role="status" aria-live="polite"></p>
+        </section>
+        <section class="planner-band" id="reja">
+          <div class="wrap planner">
+            <div class="planner-intro">
+              <p class="eyebrow">SIZNING KUNINGIZ</p>
+              <h2>Yo‘nalish tayyor.<br />Endi <em>siz tanlang.</em></h2>
+              <p>
+                Manzillarni qo‘shing, tartibini o‘zgartiring va rejangizni matn fayli qilib oling. Shaxsiy
+                ma’lumot yoki ro‘yxatdan o‘tish kerak emas.
+              </p>
+              <div class="notice">
+                Vaqtlar — tashrif uchun taklif. Manzillar orasiga shartli 20 daqiqa qo‘shiladi. Haqiqiy yo‘l
+                va tashrif vaqtini joyida tekshiring.
+              </div>
+            </div>
+            <div class="planner-box">
+              <div class="planner-toolbar">
+                <div>
+                  <h3 id="plan-heading" tabindex="-1">Kun rejangiz</h3>
+                  <label for="start-time"
+                    >Boshlanish vaqti<input id="start-time" type="time" value="09:00" required
+                  /></label>
+                </div>
+                <span class="count" id="plan-count" aria-label="Tanlangan manzillar soni">0</span>
+              </div>
+              <div id="plan-empty">
+                <strong>Qaysi manzildan boshlaymiz?</strong>
+                <p>Yuqoridagi manzillardan kamida bittasini qo‘shing.</p>
+              </div>
+              <ol id="plan-list"></ol>
+              <div class="planner-bottom">
+                <p class="small" id="plan-duration">Manzillarni tanlang</p>
+                <button id="download" class="button" disabled>
+                  Rejani yuklab olish <span aria-hidden="true">↓</span>
+                </button>
+                <p class="small" id="storage-note">Reja shu brauzerda saqlanadi. Bu chipta yoki bron emas.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section id="tayyorgarlik" class="section atlas-guide wrap">
+        <div class="guide">
+          <div>
+            <p class="eyebrow">YO‘LGA CHIQISHDAN OLDIN</p>
+            <h2>Kichik tayyorgarlik.<br />Yaxshiroq sayr.</h2>
+            <p>
+              Manzillar haqida rasmiy ma’lumotlar Uzbekistan Travel’dan tekshirildi. Joriy narx va ochilish
+              vaqti bu yerda taxmin qilinmaydi.
+            </p>
+            <a class="text-link" href="https://uzbekistan.travel/en/i/samarkand/"
+              >Rasmiy shahar qo‘llanmasi ↗</a
+            >
+          </div>
+          <div>
+            <details>
+              <summary>Chipta va ochilish vaqti</summary>
+              <p>
+                Tashrif kuni rasmiy sahifa yoki manzil kassasidan tekshiring. Bu saytdagi reja kirish huquqini
+                bermaydi.
+              </p>
+            </details>
+            <details>
+              <summary>Kiyim va ziyorat odobi</summary>
+              <p>
+                Diniy maskanlarda hurmatli kiyim va sokinlik muhim. Joydagi suratga olish va kirish
+                ko‘rsatmalariga rioya qiling.
+              </p>
+            </details>
+            <details>
+              <summary>Sayrni o‘zingizga moslang</summary>
+              <p>
+                Qulay oyoq kiyim, suv va ob-havoga mos kiyim oling. Rejadagi vaqtlar taxminiy: dam olish uchun
+                qo‘shimcha vaqt ajrating.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      <div>
+        <a class="wordmark" href="#main">samar<span>.</span></a>
+        <p>Mustaqil sayohat rejalashtirish namunasi. Turagentlik, rasmiy portal yoki bron xizmati emas.</p>
+      </div>
+      <nav aria-label="Qo‘shimcha havolalar"><a href="CREDITS.md">Suratlar va manbalar</a></nav>
+    </footer>
+    <dialog id="detail" aria-labelledby="detail-title">
+      <div class="dialog-head">
+        <h2 id="detail-title">Manzil haqida</h2>
+        <button class="close" data-close aria-label="Yopish">×</button>
+      </div>
+      <div class="dialog-content">
+        <img id="detail-image" class="detail-image" alt="" />
+        <p id="detail-text"></p>
+        <p class="notice" id="detail-note"></p>
+        <div class="dialog-links">
+          <a id="detail-source" class="text-link" href="https://uzbekistan.travel/">Rasmiy manba ↗</a
+          ><a id="detail-map" class="text-link" href="https://maps.google.com/">Xaritada ko‘rish ↗</a>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
+
 ```
 
 ## site/style.css
 
 ```css
-@font-face{font-family:'Atlas Display';src:url('fonts/lora.ttf') format('truetype');font-weight:400 700;font-display:swap}
-@font-face{font-family:'Atlas Text';src:url('fonts/sourcesans3.ttf') format('truetype');font-weight:200 900;font-display:swap}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;overflow-x:clip;-webkit-font-smoothing:antialiased}h1,h2,h3,p,figure{margin:0}a{color:inherit;text-decoration:none}button,input,select{font:inherit;color:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button:active:not(:disabled){translate:0 1px}button,a,input,summary{scroll-margin:24px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--focus,#f26536);outline-offset:4px}[hidden]{display:none!important}img,svg{display:block;max-width:100%}main,section,article,aside{min-width:0}.skip{position:fixed;left:16px;top:-100px;padding:12px 18px;background:#fff;color:#111;z-index:100}.skip:focus{top:12px}.wrap{width:min(1360px,calc(100% - 80px));margin-inline:auto}.live{min-height:24px;font-size:13px;line-height:1.6}.empty{padding:32px 0;font-size:18px}.eyebrow{font-size:11px;letter-spacing:.08em}.demo-footer,.footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-block:30px;border-top:1px solid var(--line)}.demo-footer p,.footer p{max-width:570px;font-size:12px;line-height:1.7}.demo-footer nav,.footer nav{display:flex;flex-wrap:wrap;gap:20px;font-size:12px}.demo-footer a,.footer nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}dialog{padding:0;width:min(820px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;overscroll-behavior:contain;background:var(--modal,#fff);color:var(--ink,#111);border:1px solid var(--line);box-shadow:0 20px 80px #0003}dialog::backdrop{background:#060a1588}dialog[open]{animation:reveal .2s ease-out}.dialog-top,.dialog-head{display:flex;justify-content:space-between;align-items:start;gap:20px;padding:24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--modal,#fff);z-index:2}.dialog-top h2,.dialog-head h2{font-size:32px;line-height:1.2}.close{width:44px;height:44px;flex:0 0 44px;font:26px/1 Arial;border:1px solid var(--line);background:transparent}.reader,.dialog-content{padding:24px}.reader p,.dialog-content>p{margin-block:16px;line-height:1.75}.reader img{width:100%;max-height:350px;object-fit:cover;margin-bottom:24px}.reader a{text-decoration:underline;text-underline-offset:4px}.reader~.btn{margin:0 24px 24px}.detail-image{width:100%;height:300px;object-fit:cover}body:has(dialog[open]){overflow:hidden}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}@keyframes reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@media(max-width:800px){.wrap{width:calc(100% - 40px)}}@media(max-width:440px){.wrap{width:calc(100% - 32px)}.dialog-top,.dialog-head,.reader,.dialog-content{padding:20px}.dialog-top h2,.dialog-head h2{font-size:28px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@font-face {
+  font-family: 'Atlas Display';
+  src: url('fonts/lora.ttf') format('truetype');
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atlas Text';
+  src: url('fonts/sourcesans3.ttf') format('truetype');
+  font-weight: 200 900;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+body {
+  margin: 0;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+button:active:not(:disabled) {
+  translate: 0 1px;
+}
+button,
+a,
+input,
+summary {
+  scroll-margin: 24px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--focus, #f26536);
+  outline-offset: 4px;
+}
+[hidden] {
+  display: none !important;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+main,
+section,
+article,
+aside {
+  min-width: 0;
+}
+.skip {
+  position: fixed;
+  left: 16px;
+  top: -100px;
+  padding: 12px 18px;
+  background: #fff;
+  color: #111;
+  z-index: 100;
+}
+.skip:focus {
+  top: 12px;
+}
+.wrap {
+  width: min(1360px, calc(100% - 80px));
+  margin-inline: auto;
+}
+.live {
+  min-height: 24px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.empty {
+  padding: 32px 0;
+  font-size: 18px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.demo-footer,
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 30px;
+  border-top: 1px solid var(--line);
+}
+.demo-footer p,
+.footer p {
+  max-width: 570px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.demo-footer nav,
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 12px;
+}
+.demo-footer a,
+.footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+dialog {
+  padding: 0;
+  width: min(820px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--modal, #fff);
+  color: var(--ink, #111);
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 80px #0003;
+}
+dialog::backdrop {
+  background: #060a1588;
+}
+dialog[open] {
+  animation: reveal 0.2s ease-out;
+}
+.dialog-top,
+.dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+  padding: 24px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--modal, #fff);
+  z-index: 2;
+}
+.dialog-top h2,
+.dialog-head h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+.close {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  font: 26px/1 Arial;
+  border: 1px solid var(--line);
+  background: transparent;
+}
+.reader,
+.dialog-content {
+  padding: 24px;
+}
+.reader p,
+.dialog-content > p {
+  margin-block: 16px;
+  line-height: 1.75;
+}
+.reader img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+.reader a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.reader ~ .btn {
+  margin: 0 24px 24px;
+}
+.detail-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 800px) {
+  .wrap {
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 440px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+  .dialog-top,
+  .dialog-head,
+  .reader,
+  .dialog-content {
+    padding: 20px;
+  }
+  .dialog-top h2,
+  .dialog-head h2 {
+    font-size: 28px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 
-.dialog-top h2,.dialog-head h2{min-width:0;overflow-wrap:anywhere}
+.dialog-top h2,
+.dialog-head h2 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 
 ```
 
 ## site/layout.css
 
 ```css
-:root{--ink:#173952;--line:#c3d1d8;--modal:#fffdf7;--focus:#a85925;--sans:'Atlas Text',sans-serif;--serif:'Atlas Display',serif;color-scheme:light}
-body{background:#f1f4f3;color:#173952;font:500 17px/1.65 var(--sans)}
-.wrap{max-width:1500px}
-.header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:25px;padding-block:23px;border-bottom:1px solid #c3d1d8}
-.wordmark{font:500 italic 35px/1 var(--serif);letter-spacing:-1.4px;text-transform:lowercase}
-.wordmark span{color:#b9814b}
-.nav{display:flex;flex-wrap:wrap;gap:30px;font-size:13px}
-.nav a{display:flex;align-items:center;gap:5px;min-height:40px}
-.nav a:hover{text-decoration:underline;text-underline-offset:5px}
-.mobile-nav{display:none}
-.atlas-intro{display:flex;justify-content:space-between;align-items:end;gap:45px;padding:35px 0 28px}
-.atlas-intro .eyebrow{font-size:13px;color:#586f7d;letter-spacing:.1em}
-.atlas-intro h1{font:700 clamp(34px,3.8vw,52px)/1.15 var(--serif);letter-spacing:-1.3px;max-width:710px;margin-top:15px}
-.atlas-intro>p{font-size:16px;color:#49616f;max-width:330px;line-height:1.6}
-.atlas-shell{display:grid;grid-template-columns:290px minmax(0,1fr) 310px;border-block:1px solid #c3d1d8;align-items:start}
-.atlas-directory{grid-column:1;grid-row:1;padding:25px 20px 20px 0}
-.section-head h2{font:750 24px/1.2 var(--sans);letter-spacing:-.03em}
-.section-head .eyebrow{display:none}
-.section-head>p{font-size:16px;color:#49616f;margin-top:12px;line-height:1.6}
-.destinations{margin-top:24px;display:grid;gap:18px}
-.destination{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px 14px;background:#fff;border:0;border-radius:20px;padding:16px;box-shadow:0 5px 18px #1739520b}
-.place-photo{grid-column:1;grid-row:1/3;width:100%;height:90px;border:0;border-radius:12px;padding:0;background:#dce4e5;overflow:hidden}
-.place-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.place-photo:hover img{transform:scale(1.06)}
-.place-meta{display:none}
-.destination h3{grid-column:2;font:750 21px/1.15 var(--sans);letter-spacing:-.025em}
-.destination>p{grid-column:2;font-size:15px;font-weight:500;color:#49616f;line-height:1.55}
-.place-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;justify-content:start;margin-top:7px}
-.button{display:inline-flex;justify-content:center;align-items:center;gap:12px;min-height:48px;padding:12px 18px;border:0;background:#173952;color:#fff;border-radius:999px;font-size:15px;font-weight:750;box-shadow:0 3px 0 #0c2633;transition:background .18s,box-shadow .18s}
-.button:hover{background:#315d78}
-.button.secondary{color:#fff;background:#24556b;border:0}
-.button[aria-pressed=true]{background:#d4e6dc;color:#173b2b;border:0;box-shadow:0 3px 0 #a4bfae}
-.place-actions .button{font-size:14px;padding:11px 15px;min-height:46px;font-weight:750}
-.text-link{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:9px 0;font-size:15px;font-weight:700;text-decoration:underline;text-underline-offset:5px;color:#173952;background:none;border:0}
-.place-actions .text-link{font-size:14px;min-height:44px;font-weight:700}
-.atlas-map{grid-column:2;grid-row:1;background:#e9e3d0;border-inline:1px solid #c3d1d8;padding:25px;position:relative;isolation:isolate}
-.atlas-map::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,#8a856122 50%,transparent 50.4%);pointer-events:none;z-index:-1}
-.atlas-map-title>span{font-size:13px;letter-spacing:.15em;color:#695b40}
-.atlas-map-title h2{font:700 clamp(30px,3vw,39px)/1.18 var(--serif);letter-spacing:-1px;margin:17px 0;color:#294b59}
-.atlas-map-title p{font-size:15px;color:#5f624e;max-width:350px}
-.map-canvas{height:345px;position:relative;margin-top:25px;background:#e1e1cc;overflow:hidden;border:1px solid #c9c6ab}
-.map-canvas>svg{width:100%;height:100%;position:absolute;inset:0}
-.map-canvas svg pattern rect{fill:#cfd7c6}
-.map-canvas svg>path:nth-of-type(1),.map-canvas svg>path:nth-of-type(2){stroke:#fbf8e9}
-.map-canvas svg>path:last-of-type{stroke:#4088a4;stroke-width:4}
-.map-pin{position:absolute;border:1px solid #d5cbb2;background:#fffdf5;box-shadow:0 3px 0 #8e89631a;border-radius:4px;padding:12px 13px 12px 43px;text-align:left;min-height:59px;max-width:90%;transition:transform .2s,background .2s}
-.map-pin>span{position:absolute;left:10px;top:13px;background:#173952;color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:13px}
-.map-pin strong{display:block;font:500 14px var(--serif)}
-.map-pin small{display:block;font-size:13px;color:#506468;margin-top:4px}
-.map-pin:hover{transform:translateY(-3px);background:#fff}
-.map-pin.is-planned{background:#dcecf0;border-color:#2e6c85}
-.map-pin.is-planned strong::after{content:' ✓';color:#286648}
-.pin-one{left:26%;top:43%}
-.pin-two{right:5%;top:10%}
-.pin-three{left:6%;bottom:9%}
-.map-north{position:absolute;top:12px;left:12px;font:500 16px var(--serif);color:#43687b}
-.map-disclaimer{font-size:13px;letter-spacing:.02em;color:#695b40;margin-top:12px;line-height:1.7}
-.atlas-photo{margin-top:25px}
-.atlas-photo img{width:100%;height:170px;object-fit:cover}
-.atlas-photo figcaption{font-size:13px;color:#695b40;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:9px}
-.atlas-photo figcaption a{text-decoration:underline}
-.planner-band{grid-column:3;grid-row:1;background:#fffdf7;padding:25px 21px;position:sticky;top:0}
-.planner.wrap{width:100%;display:block}
-.planner-intro>.eyebrow{font-size:13px;color:#586f7d;letter-spacing:.1em}
-.planner-intro h2{font:500 30px/1.2 var(--serif);letter-spacing:-1px;margin:16px 0}
-.planner-intro h2 em{color:#9c6c35;font-weight:400}
-.planner-intro>p{font-size:16px;color:#49616f}
-.notice{font-size:13px;background:#f1eee1;border-left:4px solid #b58c4f;color:#65583c;padding:14px 16px;line-height:1.7;margin-top:22px}
-.planner-box{margin-top:28px}
-.planner-toolbar{display:flex;align-items:start;justify-content:space-between;gap:15px;border-top:1px dashed #c3d1d8;padding-top:22px}
-.planner-toolbar h3{font:750 21px var(--sans)}
-.planner-toolbar label{display:block;font-size:14px;font-weight:650;color:#49616f;margin-top:20px}
-.planner-toolbar input{display:block;border:1px solid #b0c4cc;background:#fffef9;font-size:15px;padding:9px 12px;min-height:43px;margin-top:7px;max-width:100%;color:#173952}
-.count{width:34px;height:34px;border-radius:50%;background:#173952;color:#fff;display:grid;place-items:center;font-size:14px}
-.planner-bottom{border-top:1px dashed #c3d1d8;padding-top:20px;margin-top:22px}
-.small{font-size:14px;line-height:1.7;color:#49616f}
-.planner-bottom .button{width:100%;margin:15px 0;font-size:15px}
-#plan-empty{padding:25px 0;color:#49616f;font-size:15px}
-#plan-empty strong{display:block;font-weight:750;color:#173952;font-size:18px}
-#plan-empty p{margin-top:10px}
-#plan-list{list-style:none;padding:0;margin:20px 0 0}
-.plan-item{display:grid;grid-template-columns:49px minmax(0,1fr);gap:13px;padding:20px 0;border-top:1px solid #d8e0e3}
-.time{font-size:14px;font-weight:600;color:#a56e2f;font-variant-numeric:tabular-nums}
-.time small{display:block;font-size:13px;color:#617684;font-weight:400;margin-top:6px}
-.plan-item h3{font:750 19px/1.3 var(--sans)}
-.plan-item p{font-size:14px;color:#49616f;margin-top:9px}
-.plan-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.plan-actions button{min-width:44px;min-height:44px;border:0;border-radius:12px;background:#e4edf0;font-size:16px;font-weight:750;padding:8px}
-.plan-actions button:last-child{font-size:14px}
-.live{font-size:15px;font-weight:650;margin-top:15px}
-.atlas-guide{padding-block:45px}
-.guide{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.guide .eyebrow{font-size:13px;color:#586f7d}
-.guide h2{font:500 36px/1.2 var(--serif);letter-spacing:-1px;margin-top:20px}
-.guide p{font-size:16px;color:#49616f;max-width:480px;margin-top:20px}
-.guide .text-link{margin-top:22px}
-.guide details{padding-block:15px;border-bottom:1px solid #c3d1d8}
-.guide summary{list-style:none;min-height:48px;display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;font-size:17px;font-weight:700}
-.guide summary::after{content:'+';font-size:24px}
-.guide details[open] summary::after{content:'−'}
-.guide details p{margin:10px 0;max-width:600px}
-.footer .wordmark{font-size:34px}
-.footer p{color:#586f7d;margin-top:20px;font-size:13px}
-.footer nav{font-size:13px}
-.dialog-head h2{font:750 29px/1.2 var(--sans)}
-.dialog-links{display:flex;flex-wrap:wrap;gap:25px;margin-top:20px}
-.detail-image{height:300px}
-
-@media(max-width:1200px){.atlas-shell{display:grid;grid-template-columns:290px minmax(0,1fr) 310px;border-block:1px solid #c3d1d8;align-items:start}
-.atlas-map{padding:22px 18px}
-.planner-band{padding:22px 18px}
-.atlas-directory{padding-right:18px}
-.map-pin{padding-left:40px;padding-right:10px}
-.map-pin strong{font-size:13px}
-.map-pin small{font-size:13px}
-.atlas-intro h1{font:700 clamp(34px,3.8vw,52px)/1.15 var(--serif);letter-spacing:-1.3px;max-width:710px;margin-top:15px}
-.place-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;justify-content:start;margin-top:7px}
-.place-actions .text-link{font-size:14px;min-height:44px;font-weight:700}
+:root {
+  --ink: #173952;
+  --line: #c3d1d8;
+  --modal: #fffdf7;
+  --focus: #a85925;
+  --sans: 'Atlas Text', sans-serif;
+  --serif: 'Atlas Display', serif;
+  color-scheme: light;
+}
+body {
+  background: #f1f4f3;
+  color: #173952;
+  font: 500 17px/1.65 var(--sans);
+}
+.wrap {
+  max-width: 1500px;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding-block: 23px;
+  border-bottom: 1px solid #c3d1d8;
+}
+.wordmark {
+  font: 500 italic 35px/1 var(--serif);
+  letter-spacing: -1.4px;
+  text-transform: lowercase;
+}
+.wordmark span {
+  color: #b9814b;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 13px;
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 40px;
+}
+.nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.mobile-nav {
+  display: none;
+}
+.atlas-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 45px;
+  padding: 35px 0 28px;
+}
+.atlas-intro .eyebrow {
+  font-size: 13px;
+  color: #586f7d;
+  letter-spacing: 0.1em;
+}
+.atlas-intro h1 {
+  font: 700 clamp(34px, 3.8vw, 52px)/1.15 var(--serif);
+  letter-spacing: -1.3px;
+  max-width: 710px;
+  margin-top: 15px;
+}
+.atlas-intro > p {
+  font-size: 16px;
+  color: #49616f;
+  max-width: 330px;
+  line-height: 1.6;
+}
+.atlas-shell {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr) 310px;
+  border-block: 1px solid #c3d1d8;
+  align-items: start;
+}
+.atlas-directory {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 25px 20px 20px 0;
+}
+.section-head h2 {
+  font: 750 24px/1.2 var(--sans);
+  letter-spacing: -0.03em;
+}
+.section-head .eyebrow {
+  display: none;
+}
+.section-head > p {
+  font-size: 16px;
+  color: #49616f;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+.destinations {
+  margin-top: 24px;
+  display: grid;
+  gap: 18px;
+}
+.destination {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 10px 14px;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 5px 18px #1739520b;
+}
+.place-photo {
+  grid-column: 1;
+  grid-row: 1/3;
+  width: 100%;
+  height: 90px;
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+  background: #dce4e5;
+  overflow: hidden;
+}
+.place-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.place-photo:hover img {
+  transform: scale(1.06);
+}
+.place-meta {
+  display: none;
+}
+.destination h3 {
+  grid-column: 2;
+  font: 750 21px/1.15 var(--sans);
+  letter-spacing: -0.025em;
+}
+.destination > p {
+  grid-column: 2;
+  font-size: 15px;
+  font-weight: 500;
+  color: #49616f;
+  line-height: 1.55;
+}
+.place-actions {
+  grid-column: 1/-1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+  margin-top: 7px;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 0;
+  background: #173952;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 750;
+  box-shadow: 0 3px 0 #0c2633;
+  transition:
+    background 0.18s,
+    box-shadow 0.18s;
+}
+.button:hover {
+  background: #315d78;
+}
+.button.secondary {
+  color: #fff;
+  background: #24556b;
+  border: 0;
+}
+.button[aria-pressed='true'] {
+  background: #d4e6dc;
+  color: #173b2b;
+  border: 0;
+  box-shadow: 0 3px 0 #a4bfae;
+}
+.place-actions .button {
+  font-size: 14px;
+  padding: 11px 15px;
+  min-height: 46px;
+  font-weight: 750;
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 9px 0;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: #173952;
+  background: none;
+  border: 0;
+}
+.place-actions .text-link {
+  font-size: 14px;
+  min-height: 44px;
+  font-weight: 700;
+}
+.atlas-map {
+  grid-column: 2;
+  grid-row: 1;
+  background: #e9e3d0;
+  border-inline: 1px solid #c3d1d8;
+  padding: 25px;
+  position: relative;
+  isolation: isolate;
+}
+.atlas-map::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 49.8%, #8a856122 50%, transparent 50.4%);
+  pointer-events: none;
+  z-index: -1;
+}
+.atlas-map-title > span {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: #695b40;
+}
+.atlas-map-title h2 {
+  font: 700 clamp(30px, 3vw, 39px)/1.18 var(--serif);
+  letter-spacing: -1px;
+  margin: 17px 0;
+  color: #294b59;
+}
+.atlas-map-title p {
+  font-size: 15px;
+  color: #5f624e;
+  max-width: 350px;
+}
+.map-canvas {
+  height: 345px;
+  position: relative;
+  margin-top: 25px;
+  background: #e1e1cc;
+  overflow: hidden;
+  border: 1px solid #c9c6ab;
+}
+.map-canvas > svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.map-canvas svg pattern rect {
+  fill: #cfd7c6;
+}
+.map-canvas svg > path:nth-of-type(1),
+.map-canvas svg > path:nth-of-type(2) {
+  stroke: #fbf8e9;
+}
+.map-canvas svg > path:last-of-type {
+  stroke: #4088a4;
+  stroke-width: 4;
+}
+.map-pin {
+  position: absolute;
+  border: 1px solid #d5cbb2;
+  background: #fffdf5;
+  box-shadow: 0 3px 0 #8e89631a;
+  border-radius: 4px;
+  padding: 12px 13px 12px 43px;
+  text-align: left;
+  min-height: 59px;
+  max-width: 90%;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.map-pin > span {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  background: #173952;
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+}
+.map-pin strong {
+  display: block;
+  font: 500 14px var(--serif);
+}
+.map-pin small {
+  display: block;
+  font-size: 13px;
+  color: #506468;
+  margin-top: 4px;
+}
+.map-pin:hover {
+  transform: translateY(-3px);
+  background: #fff;
+}
+.map-pin.is-planned {
+  background: #dcecf0;
+  border-color: #2e6c85;
+}
+.map-pin.is-planned strong::after {
+  content: ' ✓';
+  color: #286648;
+}
+.pin-one {
+  left: 26%;
+  top: 43%;
+}
+.pin-two {
+  right: 5%;
+  top: 10%;
+}
+.pin-three {
+  left: 6%;
+  bottom: 9%;
+}
+.map-north {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font: 500 16px var(--serif);
+  color: #43687b;
+}
+.map-disclaimer {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #695b40;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+.atlas-photo {
+  margin-top: 25px;
+}
+.atlas-photo img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+.atlas-photo figcaption {
+  font-size: 13px;
+  color: #695b40;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 9px;
+}
+.atlas-photo figcaption a {
+  text-decoration: underline;
+}
+.planner-band {
+  grid-column: 3;
+  grid-row: 1;
+  background: #fffdf7;
+  padding: 25px 21px;
+  position: sticky;
+  top: 0;
+}
+.planner.wrap {
+  width: 100%;
+  display: block;
+}
+.planner-intro > .eyebrow {
+  font-size: 13px;
+  color: #586f7d;
+  letter-spacing: 0.1em;
+}
+.planner-intro h2 {
+  font: 500 30px/1.2 var(--serif);
+  letter-spacing: -1px;
+  margin: 16px 0;
+}
+.planner-intro h2 em {
+  color: #9c6c35;
+  font-weight: 400;
+}
+.planner-intro > p {
+  font-size: 16px;
+  color: #49616f;
+}
+.notice {
+  font-size: 13px;
+  background: #f1eee1;
+  border-left: 4px solid #b58c4f;
+  color: #65583c;
+  padding: 14px 16px;
+  line-height: 1.7;
+  margin-top: 22px;
+}
+.planner-box {
+  margin-top: 28px;
+}
+.planner-toolbar {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px dashed #c3d1d8;
+  padding-top: 22px;
+}
+.planner-toolbar h3 {
+  font: 750 21px var(--sans);
+}
+.planner-toolbar label {
+  display: block;
+  font-size: 14px;
+  font-weight: 650;
+  color: #49616f;
+  margin-top: 20px;
+}
+.planner-toolbar input {
+  display: block;
+  border: 1px solid #b0c4cc;
+  background: #fffef9;
+  font-size: 15px;
+  padding: 9px 12px;
+  min-height: 43px;
+  margin-top: 7px;
+  max-width: 100%;
+  color: #173952;
+}
+.count {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #173952;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+.planner-bottom {
+  border-top: 1px dashed #c3d1d8;
+  padding-top: 20px;
+  margin-top: 22px;
+}
+.small {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #49616f;
+}
+.planner-bottom .button {
+  width: 100%;
+  margin: 15px 0;
+  font-size: 15px;
+}
+#plan-empty {
+  padding: 25px 0;
+  color: #49616f;
+  font-size: 15px;
+}
+#plan-empty strong {
+  display: block;
+  font-weight: 750;
+  color: #173952;
+  font-size: 18px;
+}
+#plan-empty p {
+  margin-top: 10px;
+}
+#plan-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+.plan-item {
+  display: grid;
+  grid-template-columns: 49px minmax(0, 1fr);
+  gap: 13px;
+  padding: 20px 0;
+  border-top: 1px solid #d8e0e3;
+}
+.time {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a56e2f;
+  font-variant-numeric: tabular-nums;
+}
+.time small {
+  display: block;
+  font-size: 13px;
+  color: #617684;
+  font-weight: 400;
+  margin-top: 6px;
+}
+.plan-item h3 {
+  font: 750 19px/1.3 var(--sans);
+}
+.plan-item p {
+  font-size: 14px;
+  color: #49616f;
+  margin-top: 9px;
+}
+.plan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.plan-actions button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: #e4edf0;
+  font-size: 16px;
+  font-weight: 750;
+  padding: 8px;
+}
+.plan-actions button:last-child {
+  font-size: 14px;
+}
+.live {
+  font-size: 15px;
+  font-weight: 650;
+  margin-top: 15px;
+}
+.atlas-guide {
+  padding-block: 45px;
+}
+.guide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.guide .eyebrow {
+  font-size: 13px;
+  color: #586f7d;
+}
+.guide h2 {
+  font: 500 36px/1.2 var(--serif);
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+.guide p {
+  font-size: 16px;
+  color: #49616f;
+  max-width: 480px;
+  margin-top: 20px;
+}
+.guide .text-link {
+  margin-top: 22px;
+}
+.guide details {
+  padding-block: 15px;
+  border-bottom: 1px solid #c3d1d8;
+}
+.guide summary {
+  list-style: none;
+  min-height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+}
+.guide summary::after {
+  content: '+';
+  font-size: 24px;
+}
+.guide details[open] summary::after {
+  content: '−';
+}
+.guide details p {
+  margin: 10px 0;
+  max-width: 600px;
+}
+.footer .wordmark {
+  font-size: 34px;
+}
+.footer p {
+  color: #586f7d;
+  margin-top: 20px;
+  font-size: 13px;
+}
+.footer nav {
+  font-size: 13px;
+}
+.dialog-head h2 {
+  font: 750 29px/1.2 var(--sans);
+}
+.dialog-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+.detail-image {
+  height: 300px;
 }
 
-@media(max-width:1000px){.atlas-shell{grid-template-columns:260px minmax(0,1fr)}
-.planner-band{grid-column:1/-1;grid-row:2;border-top:1px solid #c3d1d8;position:static;padding:28px}
-.planner.wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:45px}
-.atlas-map{border-right:0}
-.planner-box{margin-top:0}
-.atlas-intro{gap:30px}
-.atlas-intro>p{font-size:16px;color:#49616f;max-width:330px;line-height:1.6}
-.map-pin strong{font-size:14px}
-.map-pin small{font-size:13px}
+@media (max-width: 1200px) {
+  .atlas-shell {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr) 310px;
+    border-block: 1px solid #c3d1d8;
+    align-items: start;
+  }
+  .atlas-map {
+    padding: 22px 18px;
+  }
+  .planner-band {
+    padding: 22px 18px;
+  }
+  .atlas-directory {
+    padding-right: 18px;
+  }
+  .map-pin {
+    padding-left: 40px;
+    padding-right: 10px;
+  }
+  .map-pin strong {
+    font-size: 13px;
+  }
+  .map-pin small {
+    font-size: 13px;
+  }
+  .atlas-intro h1 {
+    font: 700 clamp(34px, 3.8vw, 52px)/1.15 var(--serif);
+    letter-spacing: -1.3px;
+    max-width: 710px;
+    margin-top: 15px;
+  }
+  .place-actions {
+    grid-column: 1/-1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+    margin-top: 7px;
+  }
+  .place-actions .text-link {
+    font-size: 14px;
+    min-height: 44px;
+    font-weight: 700;
+  }
 }
 
-@media(max-width:650px){.header{padding-block:18px;gap:16px}
-.wordmark{font-size:32px}
-.nav{display:none}
-.mobile-nav{display:block;position:relative}
-.mobile-nav summary{padding:8px 12px;border:1px solid #b0c4cc;font-size:13px;min-height:40px;cursor:pointer;list-style:none}
-.mobile-nav nav{position:absolute;z-index:10;right:0;width:220px;max-width:calc(100vw - 40px);background:#fffdf7;padding:10px 18px;border:1px solid #c3d1d8;margin-top:8px}
-.mobile-nav nav a{display:flex;align-items:center;min-height:46px;font-size:13px}
-.atlas-intro{display:block;padding-block:27px}
-.atlas-intro h1{font:700 clamp(34px,3.8vw,52px)/1.15 var(--serif);letter-spacing:-1.3px;max-width:710px;margin-top:15px}
-.atlas-intro>p{font-size:16px;color:#49616f;max-width:330px;line-height:1.6}
-.atlas-intro .eyebrow{font-size:13px}
-.atlas-shell{display:flex;flex-direction:column}
-.atlas-map{order:0;width:100%;padding:24px 15px;border:0;border-bottom:1px solid #c3d1d8}
-.atlas-map-title h2{font:700 clamp(30px,3vw,39px)/1.18 var(--serif);letter-spacing:-1px;margin:17px 0;color:#294b59}
-.atlas-map-title h2 br{display:none}
-.atlas-map-title p{font-size:15px;color:#5f624e;max-width:350px}
-.map-canvas{height:300px}
-.map-pin strong{font-size:13px}
-.map-pin small{font-size:13px}
-.map-pin{padding:11px 10px 11px 39px}
-.pin-one{left:22%}
-.pin-two{right:4%}
-.pin-three{left:4%}
-.map-disclaimer{font-size:13px}
-.atlas-photo{display:none}
-.atlas-directory{order:1;width:100%;padding:27px 0 10px}
-.section-head h2{font:750 24px/1.2 var(--sans);letter-spacing:-.03em}
-.section-head>p{font-size:16px;color:#49616f;margin-top:12px;line-height:1.6}
-.destination{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px 14px;background:#fff;border:0;border-radius:20px;padding:16px;box-shadow:0 5px 18px #1739520b}
-.place-photo{grid-column:1;grid-row:1/3;width:100%;height:90px;border:0;border-radius:12px;padding:0;background:#dce4e5;overflow:hidden}
-.destination h3{grid-column:2;font:750 21px/1.15 var(--sans);letter-spacing:-.025em}
-.destination>p{grid-column:2;font-size:15px;font-weight:500;color:#49616f;line-height:1.55}
-.place-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;justify-content:start;margin-top:7px}
-.place-actions .button{font-size:14px;padding:11px 15px;min-height:46px;font-weight:750}
-.place-actions .text-link{font-size:14px;min-height:44px;font-weight:700}
-.planner-band{order:2;width:100%;padding:25px 20px}
-.planner.wrap{display:block}
-.planner-box{margin-top:25px}
-.planner-intro h2{font-size:32px}
-.planner-intro>p{font-size:16px;color:#49616f}
-.notice{font-size:13px;background:#f1eee1;border-left:4px solid #b58c4f;color:#65583c;padding:14px 16px;line-height:1.7;margin-top:22px}
-.plan-item{grid-template-columns:63px minmax(0,1fr)}
-.plan-item h3{font:750 19px/1.3 var(--sans)}
-.plan-item p{font-size:14px;color:#49616f;margin-top:9px}
-.plan-actions button{min-width:44px;min-height:44px;border:0;border-radius:12px;background:#e4edf0;font-size:16px;font-weight:750;padding:8px}
-.plan-actions button:last-child{font-size:14px}
-.small{font-size:14px;line-height:1.7;color:#49616f}
-.guide{grid-template-columns:1fr;gap:25px}
-.guide h2{font-size:31px}
-.guide p{font-size:16px;color:#49616f;max-width:480px;margin-top:20px}
-.footer{gap:25px}
-.dialog-head h2{font:750 29px/1.2 var(--sans)}
+@media (max-width: 1000px) {
+  .atlas-shell {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+  .planner-band {
+    grid-column: 1/-1;
+    grid-row: 2;
+    border-top: 1px solid #c3d1d8;
+    position: static;
+    padding: 28px;
+  }
+  .planner.wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 45px;
+  }
+  .atlas-map {
+    border-right: 0;
+  }
+  .planner-box {
+    margin-top: 0;
+  }
+  .atlas-intro {
+    gap: 30px;
+  }
+  .atlas-intro > p {
+    font-size: 16px;
+    color: #49616f;
+    max-width: 330px;
+    line-height: 1.6;
+  }
+  .map-pin strong {
+    font-size: 14px;
+  }
+  .map-pin small {
+    font-size: 13px;
+  }
 }
 
-@media(max-width:360px){.place-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;justify-content:start;margin-top:7px}
-.map-pin strong{font-size:13px}
-.map-pin small{font-size:13px}
-.atlas-map-title h2{font:700 clamp(30px,3vw,39px)/1.18 var(--serif);letter-spacing:-1px;margin:17px 0;color:#294b59}
+@media (max-width: 650px) {
+  .header {
+    padding-block: 18px;
+    gap: 16px;
+  }
+  .wordmark {
+    font-size: 32px;
+  }
+  .nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    position: relative;
+  }
+  .mobile-nav summary {
+    padding: 8px 12px;
+    border: 1px solid #b0c4cc;
+    font-size: 13px;
+    min-height: 40px;
+    cursor: pointer;
+    list-style: none;
+  }
+  .mobile-nav nav {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    width: 220px;
+    max-width: calc(100vw - 40px);
+    background: #fffdf7;
+    padding: 10px 18px;
+    border: 1px solid #c3d1d8;
+    margin-top: 8px;
+  }
+  .mobile-nav nav a {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    font-size: 13px;
+  }
+  .atlas-intro {
+    display: block;
+    padding-block: 27px;
+  }
+  .atlas-intro h1 {
+    font: 700 clamp(34px, 3.8vw, 52px)/1.15 var(--serif);
+    letter-spacing: -1.3px;
+    max-width: 710px;
+    margin-top: 15px;
+  }
+  .atlas-intro > p {
+    font-size: 16px;
+    color: #49616f;
+    max-width: 330px;
+    line-height: 1.6;
+  }
+  .atlas-intro .eyebrow {
+    font-size: 13px;
+  }
+  .atlas-shell {
+    display: flex;
+    flex-direction: column;
+  }
+  .atlas-map {
+    order: 0;
+    width: 100%;
+    padding: 24px 15px;
+    border: 0;
+    border-bottom: 1px solid #c3d1d8;
+  }
+  .atlas-map-title h2 {
+    font: 700 clamp(30px, 3vw, 39px)/1.18 var(--serif);
+    letter-spacing: -1px;
+    margin: 17px 0;
+    color: #294b59;
+  }
+  .atlas-map-title h2 br {
+    display: none;
+  }
+  .atlas-map-title p {
+    font-size: 15px;
+    color: #5f624e;
+    max-width: 350px;
+  }
+  .map-canvas {
+    height: 300px;
+  }
+  .map-pin strong {
+    font-size: 13px;
+  }
+  .map-pin small {
+    font-size: 13px;
+  }
+  .map-pin {
+    padding: 11px 10px 11px 39px;
+  }
+  .pin-one {
+    left: 22%;
+  }
+  .pin-two {
+    right: 4%;
+  }
+  .pin-three {
+    left: 4%;
+  }
+  .map-disclaimer {
+    font-size: 13px;
+  }
+  .atlas-photo {
+    display: none;
+  }
+  .atlas-directory {
+    order: 1;
+    width: 100%;
+    padding: 27px 0 10px;
+  }
+  .section-head h2 {
+    font: 750 24px/1.2 var(--sans);
+    letter-spacing: -0.03em;
+  }
+  .section-head > p {
+    font-size: 16px;
+    color: #49616f;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+  .destination {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 10px 14px;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 5px 18px #1739520b;
+  }
+  .place-photo {
+    grid-column: 1;
+    grid-row: 1/3;
+    width: 100%;
+    height: 90px;
+    border: 0;
+    border-radius: 12px;
+    padding: 0;
+    background: #dce4e5;
+    overflow: hidden;
+  }
+  .destination h3 {
+    grid-column: 2;
+    font: 750 21px/1.15 var(--sans);
+    letter-spacing: -0.025em;
+  }
+  .destination > p {
+    grid-column: 2;
+    font-size: 15px;
+    font-weight: 500;
+    color: #49616f;
+    line-height: 1.55;
+  }
+  .place-actions {
+    grid-column: 1/-1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+    margin-top: 7px;
+  }
+  .place-actions .button {
+    font-size: 14px;
+    padding: 11px 15px;
+    min-height: 46px;
+    font-weight: 750;
+  }
+  .place-actions .text-link {
+    font-size: 14px;
+    min-height: 44px;
+    font-weight: 700;
+  }
+  .planner-band {
+    order: 2;
+    width: 100%;
+    padding: 25px 20px;
+  }
+  .planner.wrap {
+    display: block;
+  }
+  .planner-box {
+    margin-top: 25px;
+  }
+  .planner-intro h2 {
+    font-size: 32px;
+  }
+  .planner-intro > p {
+    font-size: 16px;
+    color: #49616f;
+  }
+  .notice {
+    font-size: 13px;
+    background: #f1eee1;
+    border-left: 4px solid #b58c4f;
+    color: #65583c;
+    padding: 14px 16px;
+    line-height: 1.7;
+    margin-top: 22px;
+  }
+  .plan-item {
+    grid-template-columns: 63px minmax(0, 1fr);
+  }
+  .plan-item h3 {
+    font: 750 19px/1.3 var(--sans);
+  }
+  .plan-item p {
+    font-size: 14px;
+    color: #49616f;
+    margin-top: 9px;
+  }
+  .plan-actions button {
+    min-width: 44px;
+    min-height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: #e4edf0;
+    font-size: 16px;
+    font-weight: 750;
+    padding: 8px;
+  }
+  .plan-actions button:last-child {
+    font-size: 14px;
+  }
+  .small {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #49616f;
+  }
+  .guide {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .guide h2 {
+    font-size: 31px;
+  }
+  .guide p {
+    font-size: 16px;
+    color: #49616f;
+    max-width: 480px;
+    margin-top: 20px;
+  }
+  .footer {
+    gap: 25px;
+  }
+  .dialog-head h2 {
+    font: 750 29px/1.2 var(--sans);
+  }
+}
+
+@media (max-width: 360px) {
+  .place-actions {
+    grid-column: 1/-1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+    margin-top: 7px;
+  }
+  .map-pin strong {
+    font-size: 13px;
+  }
+  .map-pin small {
+    font-size: 13px;
+  }
+  .atlas-map-title h2 {
+    font: 700 clamp(30px, 3vw, 39px)/1.18 var(--serif);
+    letter-spacing: -1px;
+    margin: 17px 0;
+    color: #294b59;
+  }
 }
 
 /* Travel guide: readable map annotations and narrative descriptions. */
-body{font-size:19px}.atlas-intro>p,.destination>p,.guide p{font-size:19px;line-height:1.75}
-.map-pin{min-height:64px}.map-pin small{font-size:13px;line-height:1.4}.map-pin strong{font-size:17px}
-.place-actions .button,.place-actions .text-link{font-size:16px;min-height:46px}.plan-item h3{font-size:26px}.plan-item p{font-size:16px}.plan-actions button{font-size:15px;min-height:44px}
-.map-disclaimer,.atlas-photo figcaption{font-size:13px;line-height:1.7}
+body {
+  font-size: 19px;
+}
+.atlas-intro > p,
+.destination > p,
+.guide p {
+  font-size: 19px;
+  line-height: 1.75;
+}
+.map-pin {
+  min-height: 64px;
+}
+.map-pin small {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.map-pin strong {
+  font-size: 17px;
+}
+.place-actions .button,
+.place-actions .text-link {
+  font-size: 16px;
+  min-height: 46px;
+}
+.plan-item h3 {
+  font-size: 26px;
+}
+.plan-item p {
+  font-size: 16px;
+}
+.plan-actions button {
+  font-size: 15px;
+  min-height: 44px;
+}
+.map-disclaimer,
+.atlas-photo figcaption {
+  font-size: 13px;
+  line-height: 1.7;
+}
 
 /* Motion: the selected map pin settles; route reordering uses the existing FLIP positions. */
-@keyframes samar-pin{from{transform:translateY(-7px)}65%{transform:translateY(2px)}to{transform:translateY(0)}}
-@media(prefers-reduced-motion:no-preference){.map-pin.is-planned{animation:samar-pin 360ms cubic-bezier(.2,.8,.2,1)}}
+@keyframes samar-pin {
+  from {
+    transform: translateY(-7px);
+  }
+  65% {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .map-pin.is-planned {
+    animation: samar-pin 360ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}
 
 ```
 
 ## site/app.js
 
 ```javascript
-import {places,normalize,schedule,clock,exportPlan} from './model.js?v=bcb8054ec2';
-const key='samar-plan-v2';const $=s=>document.querySelector(s);let state=normalize(null),opener;
-let storageUsable=true;
-function read(){if(!storageUsable)return normalize(state);try{const raw=localStorage.getItem(key);if(raw===null)return normalize(null);const parsed=JSON.parse(raw);if(parsed===null||typeof parsed!=='object'||Array.isArray(parsed))throw Error('Invalid saved shape');if(!Array.isArray(parsed.ids)||typeof parsed.start!=='string')throw Error('Invalid saved plan');return normalize(parsed);}catch{storageUsable=false;$('#storage-note').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';return normalize(state);}}
-function save(){if(!storageUsable)return;try{localStorage.setItem(key,JSON.stringify(state));}catch{storageUsable=false;$('#storage-note').textContent='Brauzer saqlashga ruxsat bermadi. Rejangizni matn qilib yuklab oling.';}}
-function update(fn){state=fn(read());save();render();}
-function render(){
- const oldPositions=new Map([...document.querySelectorAll('[data-plan-id]')].map(e=>[e.dataset.planId,e.getBoundingClientRect().top]));
- $('#start-time').value=state.start;const rows=schedule(state);$('#plan-count').textContent=rows.length;document.querySelectorAll('.nav-count').forEach(n=>n.textContent=rows.length);
- document.querySelectorAll('[data-toggle]').forEach(b=>{const on=state.ids.includes(b.dataset.toggle);b.setAttribute('aria-pressed',String(on));b.setAttribute('aria-label',places.find(p=>p.id===b.dataset.toggle).name+(on?': rejadan olish':': rejaga qo‘shish'));b.textContent=on?'✓ Rejada':'Rejaga qo‘shish +';});
- document.querySelectorAll('.map-pin').forEach(b=>b.classList.toggle('is-planned',state.ids.includes(b.dataset.detail)));
- $('#download').disabled=!rows.length;$('#plan-empty').hidden=!!rows.length;
- $('#plan-list').innerHTML=rows.map((p,i)=>`<li class="plan-item" data-plan-id="${p.id}"><span class="time">${clock(p.start)}<small>${clock(p.end)}</small></span><div><h3>${p.name}</h3><p>${p.minutes} daqiqa · tavsiya</p><div class="plan-actions"><button type="button" data-move="${p.id}" data-direction="-1" ${i===0?'disabled':''} aria-label="${p.name}: yuqoriga">↑</button><button type="button" data-move="${p.id}" data-direction="1" ${i===rows.length-1?'disabled':''} aria-label="${p.name}: pastga">↓</button><button type="button" data-remove="${p.id}" aria-label="${p.name}: rejadan olish">Olib tashlash</button></div></div></li>`).join('');
- if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('[data-plan-id]').forEach(row=>{const old=oldPositions.get(row.dataset.planId),dy=old===undefined?10:old-row.getBoundingClientRect().top;if(old===undefined||Math.abs(dy)>1)row.animate([{transform:`translateY(${dy}px)`,opacity:old===undefined?0:1},{transform:'none',opacity:1}],{duration:220,easing:'cubic-bezier(.22,1,.36,1)'});});
- $('#plan-duration').textContent=rows.length?`${rows.reduce((n,p)=>n+p.minutes,0)+20*(rows.length-1)} daqiqa · yo‘l taxmini bilan`:'Manzillarni tanlang';
+import { places, normalize, schedule, clock, exportPlan } from './model.js?v=bcb8054ec2';
+const key = 'samar-plan-v2';
+const $ = s => document.querySelector(s);
+let state = normalize(null),
+  opener;
+let storageUsable = true;
+function read() {
+  if (!storageUsable) return normalize(state);
+  try {
+    const raw = localStorage.getItem(key);
+    if (raw === null) return normalize(null);
+    const parsed = JSON.parse(raw);
+    if (parsed === null || typeof parsed !== 'object' || Array.isArray(parsed))
+      throw Error('Invalid saved shape');
+    if (!Array.isArray(parsed.ids) || typeof parsed.start !== 'string') throw Error('Invalid saved plan');
+    return normalize(parsed);
+  } catch {
+    storageUsable = false;
+    $('#storage-note').textContent =
+      'Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi ish faqat shu tabda. Faylga yuklab oling.';
+    return normalize(state);
+  }
 }
-document.addEventListener('click',e=>{
- const b=e.target.closest('button');if(!b)return;
- if(b.dataset.toggle){const id=b.dataset.toggle;update(p=>({...p,ids:p.ids.includes(id)?p.ids.filter(x=>x!==id):[...p.ids,id]}));$('#live-status').textContent=state.ids.includes(id)?'Manzil rejaga qo‘shildi.':'Manzil rejadan olindi.';}
- if(b.dataset.remove){update(p=>({...p,ids:p.ids.filter(id=>id!==b.dataset.remove)}));$('#plan-heading').focus();}
- if(b.dataset.move){const id=b.dataset.move,d=Number(b.dataset.direction);update(p=>{const ids=[...p.ids],i=ids.indexOf(id);if(i>=0&&i+d>=0&&i+d<ids.length)[ids[i],ids[i+d]]=[ids[i+d],ids[i]];return {...p,ids};});const next=document.querySelector(`[data-move="${id}"][data-direction="${d}"]:not(:disabled)`);(next||$('#plan-heading')).focus();}
- if(b.dataset.detail){const p=places.find(p=>p.id===b.dataset.detail);opener=b;$('#detail-title').textContent=p.name;$('#detail-image').src='images/'+p.image;$('#detail-image').alt=p.alt;$('#detail-text').textContent=p.text;$('#detail-note').textContent=p.note;$('#detail-source').href=p.source;$('#detail-map').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.map);$('#detail').showModal();}
- if(b.hasAttribute('data-close'))$('#detail').close();
+function save() {
+  if (!storageUsable) return;
+  try {
+    localStorage.setItem(key, JSON.stringify(state));
+  } catch {
+    storageUsable = false;
+    $('#storage-note').textContent = 'Brauzer saqlashga ruxsat bermadi. Rejangizni matn qilib yuklab oling.';
+  }
+}
+function update(fn) {
+  state = fn(read());
+  save();
+  render();
+}
+function render() {
+  const oldPositions = new Map(
+    [...document.querySelectorAll('[data-plan-id]')].map(e => [
+      e.dataset.planId,
+      e.getBoundingClientRect().top
+    ])
+  );
+  $('#start-time').value = state.start;
+  const rows = schedule(state);
+  $('#plan-count').textContent = rows.length;
+  document.querySelectorAll('.nav-count').forEach(n => (n.textContent = rows.length));
+  document.querySelectorAll('[data-toggle]').forEach(b => {
+    const on = state.ids.includes(b.dataset.toggle);
+    b.setAttribute('aria-pressed', String(on));
+    b.setAttribute(
+      'aria-label',
+      places.find(p => p.id === b.dataset.toggle).name + (on ? ': rejadan olish' : ': rejaga qo‘shish')
+    );
+    b.textContent = on ? '✓ Rejada' : 'Rejaga qo‘shish +';
+  });
+  document
+    .querySelectorAll('.map-pin')
+    .forEach(b => b.classList.toggle('is-planned', state.ids.includes(b.dataset.detail)));
+  $('#download').disabled = !rows.length;
+  $('#plan-empty').hidden = !!rows.length;
+  $('#plan-list').innerHTML = rows
+    .map(
+      (p, i) =>
+        `<li class="plan-item" data-plan-id="${p.id}"><span class="time">${clock(p.start)}<small>${clock(p.end)}</small></span><div><h3>${p.name}</h3><p>${p.minutes} daqiqa · tavsiya</p><div class="plan-actions"><button type="button" data-move="${p.id}" data-direction="-1" ${i === 0 ? 'disabled' : ''} aria-label="${p.name}: yuqoriga">↑</button><button type="button" data-move="${p.id}" data-direction="1" ${i === rows.length - 1 ? 'disabled' : ''} aria-label="${p.name}: pastga">↓</button><button type="button" data-remove="${p.id}" aria-label="${p.name}: rejadan olish">Olib tashlash</button></div></div></li>`
+    )
+    .join('');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches)
+    document.querySelectorAll('[data-plan-id]').forEach(row => {
+      const old = oldPositions.get(row.dataset.planId),
+        dy = old === undefined ? 10 : old - row.getBoundingClientRect().top;
+      if (old === undefined || Math.abs(dy) > 1)
+        row.animate(
+          [
+            { transform: `translateY(${dy}px)`, opacity: old === undefined ? 0 : 1 },
+            { transform: 'none', opacity: 1 }
+          ],
+          { duration: 220, easing: 'cubic-bezier(.22,1,.36,1)' }
+        );
+    });
+  $('#plan-duration').textContent = rows.length
+    ? `${rows.reduce((n, p) => n + p.minutes, 0) + 20 * (rows.length - 1)} daqiqa · yo‘l taxmini bilan`
+    : 'Manzillarni tanlang';
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  if (b.dataset.toggle) {
+    const id = b.dataset.toggle;
+    update(p => ({ ...p, ids: p.ids.includes(id) ? p.ids.filter(x => x !== id) : [...p.ids, id] }));
+    $('#live-status').textContent = state.ids.includes(id)
+      ? 'Manzil rejaga qo‘shildi.'
+      : 'Manzil rejadan olindi.';
+  }
+  if (b.dataset.remove) {
+    update(p => ({ ...p, ids: p.ids.filter(id => id !== b.dataset.remove) }));
+    $('#plan-heading').focus();
+  }
+  if (b.dataset.move) {
+    const id = b.dataset.move,
+      d = Number(b.dataset.direction);
+    update(p => {
+      const ids = [...p.ids],
+        i = ids.indexOf(id);
+      if (i >= 0 && i + d >= 0 && i + d < ids.length) [ids[i], ids[i + d]] = [ids[i + d], ids[i]];
+      return { ...p, ids };
+    });
+    const next = document.querySelector(`[data-move="${id}"][data-direction="${d}"]:not(:disabled)`);
+    (next || $('#plan-heading')).focus();
+  }
+  if (b.dataset.detail) {
+    const p = places.find(p => p.id === b.dataset.detail);
+    opener = b;
+    $('#detail-title').textContent = p.name;
+    $('#detail-image').src = 'images/' + p.image;
+    $('#detail-image').alt = p.alt;
+    $('#detail-text').textContent = p.text;
+    $('#detail-note').textContent = p.note;
+    $('#detail-source').href = p.source;
+    $('#detail-map').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.map);
+    $('#detail').showModal();
+  }
+  if (b.hasAttribute('data-close')) $('#detail').close();
 });
-$('#detail').addEventListener('close',()=>opener?.isConnected&&opener.focus());
-$('#start-time').addEventListener('change',e=>{const start=e.target.value;update(p=>normalize({...p,start}));});
-$('#download').addEventListener('click',()=>{state=read();render();if(!state.ids.length)return;const blob=new Blob(['\ufeff'+exportPlan(state)],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='samar-kun-rejasi.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);});
-window.addEventListener('storage',e=>{if(e.key===key||e.key===null){const active=document.activeElement;const focused=active?.closest('#plan-list button');const control=focused?{move:active.dataset.move,direction:active.dataset.direction,remove:active.dataset.remove}:null;state=read();render();if(control&&!active.isConnected){const next=[...document.querySelectorAll('#plan-list button')].find(b=>!b.disabled&&(control.move?b.dataset.move===control.move&&b.dataset.direction===control.direction:b.dataset.remove===control.remove));(next||$('#plan-heading')).focus({preventScroll:true});}}});state=read();render();
+$('#detail').addEventListener('close', () => opener?.isConnected && opener.focus());
+$('#start-time').addEventListener('change', e => {
+  const start = e.target.value;
+  update(p => normalize({ ...p, start }));
+});
+$('#download').addEventListener('click', () => {
+  state = read();
+  render();
+  if (!state.ids.length) return;
+  const blob = new Blob(['\ufeff' + exportPlan(state)], { type: 'text/plain;charset=utf-8' }),
+    url = URL.createObjectURL(blob),
+    a = document.createElement('a');
+  a.href = url;
+  a.download = 'samar-kun-rejasi.txt';
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+});
+window.addEventListener('storage', e => {
+  if (e.key === key || e.key === null) {
+    const active = document.activeElement;
+    const focused = active?.closest('#plan-list button');
+    const control = focused
+      ? { move: active.dataset.move, direction: active.dataset.direction, remove: active.dataset.remove }
+      : null;
+    state = read();
+    render();
+    if (control && !active.isConnected) {
+      const next = [...document.querySelectorAll('#plan-list button')].find(
+        b =>
+          !b.disabled &&
+          (control.move
+            ? b.dataset.move === control.move && b.dataset.direction === control.direction
+            : b.dataset.remove === control.remove)
+      );
+      (next || $('#plan-heading')).focus({ preventScroll: true });
+    }
+  }
+});
+state = read();
+render();
 
-document.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>{a.closest('details').open=false;}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){const menu=document.querySelector('.mobile-nav[open]');if(menu){menu.open=false;menu.querySelector('summary').focus();}}});
+document.querySelectorAll('.mobile-nav a').forEach(a =>
+  a.addEventListener('click', () => {
+    a.closest('details').open = false;
+  })
+);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const menu = document.querySelector('.mobile-nav[open]');
+    if (menu) {
+      menu.open = false;
+      menu.querySelector('summary').focus();
+    }
+  }
+});
 
 ```
 
@@ -266,17 +1807,79 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){const menu=document
 
 ```javascript
 export const places = [
- {id:'registan',name:'Registon maydoni',tag:'Me’morchilik',minutes:75,image:'registan.jpg',alt:'Registon maydonidagi uch madrasa va keng hovli',intro:'Uch madrasa. Bitta ulkan taassurot.',text:'Ulug‘bek, Sherdor va Tillakori madrasalari maydon atrofida joylashgan. Naqshlar, peshtoqlar va hovli kompozitsiyasini shoshmasdan kuzatish uchun vaqt ajrating.',note:'Avval umumiy ko‘rinishni tomosha qiling, keyin me’moriy detallarga yaqinlashing.',source:'https://uzbekistan.travel/en/o/registan/',map:'Registan Samarkand'},
- {id:'shohi-zinda',name:'Shohi Zinda',tag:'Naqsh va xotira',minutes:60,image:'shohi-zinda.jpg',alt:'Shohi Zinda majmuasining koshinkor peshtoqlari',intro:'Moviy rangning ming xil ohangi.',text:'Maqbaralar ansambli Samarqandning muhim tarixiy maskanlaridan biri. Tor yo‘lak, koshin va yozuvlar majmuaga o‘ziga xos xarakter beradi.',note:'Bu ziyorat maskani. Sokinlikni saqlang, tashrif odobi va joydagi ko‘rsatmalarga rioya qiling.',source:'https://uzbekistan.travel/ru/o/memorialnyj-ansambl-shahi-zinda/',map:'Shah i Zinda Samarkand'},
- {id:'guri-amir',name:'Go‘ri Amir',tag:'Temuriylar merosi',minutes:60,image:'guri-amir.jpg',alt:'Go‘ri Amir maqbarasining moviy gumbazi va peshtoqi',intro:'Samarqand osmonidagi moviy gumbaz.',text:'Amir Temur va Temuriylar oilasi a’zolari dafn etilgan maqbara. Gumbaz, tashqi bezak va ichki makon tafsilotlari alohida e’tiborga loyiq.',note:'Tashrifdan oldin ochilish va chipta ma’lumotini rasmiy manba yoki kassadan tekshiring.',source:'https://uzbekistan.travel/en/o/gur-emir/',map:'Gur e Amir Samarkand'}
+  {
+    id: 'registan',
+    name: 'Registon maydoni',
+    tag: 'Me’morchilik',
+    minutes: 75,
+    image: 'registan.jpg',
+    alt: 'Registon maydonidagi uch madrasa va keng hovli',
+    intro: 'Uch madrasa. Bitta ulkan taassurot.',
+    text: 'Ulug‘bek, Sherdor va Tillakori madrasalari maydon atrofida joylashgan. Naqshlar, peshtoqlar va hovli kompozitsiyasini shoshmasdan kuzatish uchun vaqt ajrating.',
+    note: 'Avval umumiy ko‘rinishni tomosha qiling, keyin me’moriy detallarga yaqinlashing.',
+    source: 'https://uzbekistan.travel/en/o/registan/',
+    map: 'Registan Samarkand'
+  },
+  {
+    id: 'shohi-zinda',
+    name: 'Shohi Zinda',
+    tag: 'Naqsh va xotira',
+    minutes: 60,
+    image: 'shohi-zinda.jpg',
+    alt: 'Shohi Zinda majmuasining koshinkor peshtoqlari',
+    intro: 'Moviy rangning ming xil ohangi.',
+    text: 'Maqbaralar ansambli Samarqandning muhim tarixiy maskanlaridan biri. Tor yo‘lak, koshin va yozuvlar majmuaga o‘ziga xos xarakter beradi.',
+    note: 'Bu ziyorat maskani. Sokinlikni saqlang, tashrif odobi va joydagi ko‘rsatmalarga rioya qiling.',
+    source: 'https://uzbekistan.travel/ru/o/memorialnyj-ansambl-shahi-zinda/',
+    map: 'Shah i Zinda Samarkand'
+  },
+  {
+    id: 'guri-amir',
+    name: 'Go‘ri Amir',
+    tag: 'Temuriylar merosi',
+    minutes: 60,
+    image: 'guri-amir.jpg',
+    alt: 'Go‘ri Amir maqbarasining moviy gumbazi va peshtoqi',
+    intro: 'Samarqand osmonidagi moviy gumbaz.',
+    text: 'Amir Temur va Temuriylar oilasi a’zolari dafn etilgan maqbara. Gumbaz, tashqi bezak va ichki makon tafsilotlari alohida e’tiborga loyiq.',
+    note: 'Tashrifdan oldin ochilish va chipta ma’lumotini rasmiy manba yoki kassadan tekshiring.',
+    source: 'https://uzbekistan.travel/en/o/gur-emir/',
+    map: 'Gur e Amir Samarkand'
+  }
 ];
-export function normalize(value){
- const raw=value&&typeof value==='object'?value:{};
- return {start:typeof raw.start==='string'&&/^([01]\d|2[0-3]):[0-5]\d$/.test(raw.start)?raw.start:'09:00',ids:[...new Set(Array.isArray(raw.ids)?raw.ids:[])].filter(id=>places.some(p=>p.id===id))};
+export function normalize(value) {
+  const raw = value && typeof value === 'object' ? value : {};
+  return {
+    start: typeof raw.start === 'string' && /^([01]\d|2[0-3]):[0-5]\d$/.test(raw.start) ? raw.start : '09:00',
+    ids: [...new Set(Array.isArray(raw.ids) ? raw.ids : [])].filter(id => places.some(p => p.id === id))
+  };
 }
-export function schedule(value){const plan=normalize(value);let cursor=Number(plan.start.slice(0,2))*60+Number(plan.start.slice(3));return plan.ids.map((id,index)=>{const place=places.find(p=>p.id===id);if(index)cursor+=20;const start=cursor;cursor+=place.minutes;return {...place,start,end:cursor};});}
-export function clock(minutes){return `${String(Math.floor(minutes/60)%24).padStart(2,'0')}:${String(minutes%60).padStart(2,'0')}${minutes>=1440?' (+1 kun)':''}`;}
-export function exportPlan(value){const rows=schedule(value);return 'SAMAR — SHAXSIY KUN REJASI\n\n'+(rows.length?rows.map((p,i)=>`${i+1}. ${clock(p.start)}–${clock(p.end)} — ${p.name}\n${p.source}`).join('\n\n'):'Manzil tanlanmagan.')+'\n\nVaqtlar rejalashtirish uchun taklif. Manzillar orasiga shartli 20 daqiqa qo‘shilgan; haqiqiy yo‘l, tirbandlik va tashrif vaqtini joyida tekshiring. Chipta yoki bron emas.\n';}
+export function schedule(value) {
+  const plan = normalize(value);
+  let cursor = Number(plan.start.slice(0, 2)) * 60 + Number(plan.start.slice(3));
+  return plan.ids.map((id, index) => {
+    const place = places.find(p => p.id === id);
+    if (index) cursor += 20;
+    const start = cursor;
+    cursor += place.minutes;
+    return { ...place, start, end: cursor };
+  });
+}
+export function clock(minutes) {
+  return `${String(Math.floor(minutes / 60) % 24).padStart(2, '0')}:${String(minutes % 60).padStart(2, '0')}${minutes >= 1440 ? ' (+1 kun)' : ''}`;
+}
+export function exportPlan(value) {
+  const rows = schedule(value);
+  return (
+    'SAMAR — SHAXSIY KUN REJASI\n\n' +
+    (rows.length
+      ? rows
+          .map((p, i) => `${i + 1}. ${clock(p.start)}–${clock(p.end)} — ${p.name}\n${p.source}`)
+          .join('\n\n')
+      : 'Manzil tanlanmagan.') +
+    '\n\nVaqtlar rejalashtirish uchun taklif. Manzillar orasiga shartli 20 daqiqa qo‘shilgan; haqiqiy yo‘l, tirbandlik va tashrif vaqtini joyida tekshiring. Chipta yoki bron emas.\n'
+  );
+}
 
 ```
 

@@ -5,51 +5,51 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-03",
-  "source_fingerprint": "f268b54628dce206e013971e99f63e11a27fef73f2f65bb1779c6c1995905726",
+  "source_fingerprint": "a7eb09cff84132f8df64699d0d1f4a2b5fc38bc750ce211c78cff6ad14fd6d95",
   "name": "Ziyo",
   "slug": "ziyo",
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "b526c56943253af42852e797dbfd9f9b5abd4eb3672429aa439549b1ddc7560a",
-  "archive_bytes": 1092208,
+  "archive_sha256": "3ae3f5687afa1e4478d2d23dc3e4182a5b9cae799608972a71ca1bef8df92abd",
+  "archive_bytes": 1095166,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/index.html.txt",
-      "sha256": "4f92597f4e004a1763fb6102c680256799dde8ae51d5894ca5285bc61f997f83",
+      "sha256": "f9ca9ba1661b5f42d255f68d3aea62af74d093a60308c7b964980dd865662e88",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/style.css.txt",
-      "sha256": "12f3014ab320f44e4d61497f4fb60124d1e9eb2c9b8ac2e59b871cc57e216593",
+      "sha256": "8a55da648c8de78743b28a4955beafde7ae36f3de63bb01e8acc31c2002ba793",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/style.css.txt"
     },
     {
       "path": "layout.css",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/layout.css.txt",
-      "sha256": "052fd06160eb95c9f981e6e1c778c6f58c0b03ea501053853f8ba1446bca703b",
+      "sha256": "bdff9962e5d2999a9e2d8c805977f97260981cf1cda6238e90ca8b4e90c24431",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/layout.css.txt"
     },
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/app.js.txt",
-      "sha256": "3ccf7e52a4b2dc901f86f6cf8e5fd27b5f0b727c36b2be6c529b6ccd560f84a1",
+      "sha256": "1062a62d3b85d4175bd464178baea78f39409df6c46fb1d7dd845e4ba6095e44",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/app.js.txt"
     },
     {
       "path": "identity.js",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/identity.js.txt",
-      "sha256": "a0ccb35df473dc02cf71f90d1119a7e933a49db475f5be428965eece0a3d1745",
+      "sha256": "0f200d48abc0ecdd3ad67136c39378539ad207ed85577b5aa1c0ef87e9551faa",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/identity.js.txt"
     },
     {
       "path": "model.js",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/model.js.txt",
-      "sha256": "3419133037bdafbc2e30aba60bbc6124016546c1a7b011a41fefcddb06f94a9d",
+      "sha256": "e82989d08dde33b330e160dfb2e39ddbce7568162398d16982a720a861017e39",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/model.js.txt"
     },
     {
@@ -86,13 +86,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 6921,
-      "sha256": "1f674744effda00d0ad187ffc337fe53900ad63e7db38a46bf047a43dfc50ad5"
+      "bytes": 7537,
+      "sha256": "cfcf735f51be90fd7fff1538052bb90d67f9e288102ecec1dcbea8fc4d9a4175"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 13490,
-      "sha256": "9d3dc2bd9d6f2a8e955b3c4a8c098062b2fc519c6bc428f4908b924e91e25d50"
+      "sha256": "0ce0ab1902d5d34e5a98ac5c96e701a415eba1191c18b661514c314b01021324"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -150,6 +150,11 @@
       "sha256": "28368a5b013ce6367c675e4569633e3e99cd99c6042f5673546ca57facffbf8a"
     },
     {
+      "path": "DESIGN-MAP.md",
+      "bytes": 4460,
+      "sha256": "f281d59d393fd64f94f23c0b1d1c0501c2da7af66ed1edd57e0eb780879fac38"
+    },
+    {
       "path": "DESIGN-STANDARD.md",
       "bytes": 8817,
       "sha256": "31596636ac22a9696171fae5c9624299557ae7ed9f119b1040d20d546d2981e5"
@@ -172,7 +177,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1217,
-      "sha256": "06ba1f1d51ddff7872f7bf933aeb44f73ee918b9e0acb51a2c286395fe2d89f4"
+      "sha256": "e05cce3b5644563d1f4e492e18b750d87ad15c3a2f3cc93636a616cad0b0c8ff"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -191,8 +196,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 17191,
-      "sha256": "2b3decef90e1082628fc7e27a0201a2d860ce31f243a13b5949bdcc7ad80ba10"
+      "bytes": 17340,
+      "sha256": "62d54408ac3fcfc1650ecba71f22222eae37a0d7ad2b250df617e059c9ff1c22"
     },
     {
       "path": "PREPARATION.md",
@@ -217,7 +222,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "ca27c05682400c17b5a196ec0bbcaa9c6d028ca1f622022906d3a2a78df61c72"
+      "sha256": "c6e859a52ad1d8b8f39d68c9d830b3b5f48ffdd16f1ec2886cd595d76778a412"
     },
     {
       "path": "README.md",
@@ -241,8 +246,8 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 2233,
-      "sha256": "a98210f5f0342088ed00f3eac283e4d70cc83de3a3a0fa43b804fc92c36e0946"
+      "bytes": 2400,
+      "sha256": "fb77465e5846fe294f2080ad72dc766d103933e65c46a00af4d7b29e56d1a075"
     },
     {
       "path": "TASK-BOUNDARY.json",
@@ -266,8 +271,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 7747,
-      "sha256": "2e750d75594411a2402da5340c1cd7c7c72c6a1332387088d93e70780ab0340a"
+      "bytes": 7771,
+      "sha256": "16eec72eda7ff7a93ec616b5cca91644ee78be519c109d36c05c7c8a92b5c82c"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -497,7 +502,7 @@
     {
       "path": "kit.json",
       "bytes": 288,
-      "sha256": "26b0351fd06c032bb3bcf642cd6317733f42ed938bc246db135e53ab4fb05516"
+      "sha256": "ca93130e183eeed183b964835eef9aed8c8178900ec2141d30fd7ce85b4f39f8"
     },
     {
       "path": "ochish.cmd",
@@ -531,8 +536,8 @@
     },
     {
       "path": "site/app.js",
-      "bytes": 4288,
-      "sha256": "3ccf7e52a4b2dc901f86f6cf8e5fd27b5f0b727c36b2be6c529b6ccd560f84a1"
+      "bytes": 5066,
+      "sha256": "1062a62d3b85d4175bd464178baea78f39409df6c46fb1d7dd845e4ba6095e44"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -571,18 +576,18 @@
     },
     {
       "path": "site/identity.js",
-      "bytes": 1409,
-      "sha256": "a0ccb35df473dc02cf71f90d1119a7e933a49db475f5be428965eece0a3d1745"
+      "bytes": 1711,
+      "sha256": "0f200d48abc0ecdd3ad67136c39378539ad207ed85577b5aa1c0ef87e9551faa"
     },
     {
       "path": "site/index.html",
-      "bytes": 3641,
-      "sha256": "4f92597f4e004a1763fb6102c680256799dde8ae51d5894ca5285bc61f997f83"
+      "bytes": 4216,
+      "sha256": "f9ca9ba1661b5f42d255f68d3aea62af74d093a60308c7b964980dd865662e88"
     },
     {
       "path": "site/layout.css",
-      "bytes": 8836,
-      "sha256": "052fd06160eb95c9f981e6e1c778c6f58c0b03ea501053853f8ba1446bca703b"
+      "bytes": 11248,
+      "sha256": "bdff9962e5d2999a9e2d8c805977f97260981cf1cda6238e90ca8b4e90c24431"
     },
     {
       "path": "site/mark.svg",
@@ -591,8 +596,8 @@
     },
     {
       "path": "site/model.js",
-      "bytes": 2548,
-      "sha256": "3419133037bdafbc2e30aba60bbc6124016546c1a7b011a41fefcddb06f94a9d"
+      "bytes": 2480,
+      "sha256": "e82989d08dde33b330e160dfb2e39ddbce7568162398d16982a720a861017e39"
     },
     {
       "path": "site/model.test.mjs",
@@ -606,8 +611,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 3518,
-      "sha256": "12f3014ab320f44e4d61497f4fb60124d1e9eb2c9b8ac2e59b871cc57e216593"
+      "bytes": 4388,
+      "sha256": "8a55da648c8de78743b28a4955beafde7ae36f3de63bb01e8acc31c2002ba793"
     },
     {
       "path": "verify-package.mjs",

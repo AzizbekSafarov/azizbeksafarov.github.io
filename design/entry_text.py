@@ -51,6 +51,7 @@ You are helping Azizbek Safarov in the Ustoz AI "Eng yaxshi veb-sayt" (best webs
 1. **The ticket** — in the chat or in `CURRENT-TASK.md`. This public package contains no ticket. When asked to build the competition product and neither place has a ticket, ask once for its text and the remaining time. Preparation, audits and library maintenance use the current user request; do not block those tasks on a missing ticket. Design samples, test fixtures and the example ticket quoted in the regulations are not the task.
 2. `HANDOFF.md` — work already done in this project.
 3. `AI-BRIEF.md` — this design: visual contract, file map, run and test commands, flows to keep working.
+   `DESIGN-MAP.md` — what to edit when the user says, in plain words, “change the colour”, “add a section” and so on: real tokens, fonts, files and sections of this design.
 4. `COMPETITION.md`, `CURRENT-COMPETITION.md`, `SCORING-WORKPLAN.md` — rules and scoring. Use them to turn the ticket into acceptance checks and defence evidence.
 5. The `site/` files you will change, read in full before editing.
 
@@ -80,7 +81,8 @@ Deliver the strongest coherent product the real time, tools and venue rules allo
 
 ## How to work
 
-- Keep the selected visual identity (fonts, colour roles, layout, interaction style). Replace sample content, navigation and features with the ticket's, and fix any defect you find in them. Do not swap the design or framework to fix a local bug.
+- **The user's explicit word on design wins.** When the user asks to change a colour, font, layout, section or wording, do it directly, using `DESIGN-MAP.md` to find the place, and carry it through consistently. Never refuse by citing the visual contract: it guards against accidental drift, not against the user. If a request conflicts with the ticket or venue rules, say so in one sentence and ask.
+- Unless the user asks otherwise, keep the selected visual identity (fonts, colour roles, layout, interaction style). Replace sample content, navigation and features with the ticket's, and fix any defect you find in them. Do not swap the design or framework to fix a local bug.
 - Derive screens and navigation from the ticket's user journey; keep its explicit requirements and explain any material departure.
 - Separate explicit ticket requirements, the user's choices, necessary implementation decisions and optional ideas. If a ticket implies shared storage without naming a backend, explain that inference. Current project evidence outranks the public planned or unknown status.
 - Match the scope of the current request, and report any requested work still missing.
@@ -123,6 +125,7 @@ Kod yozmasdan Codex bilan shu starterda ishlash: `ZAXIRA/CODEX.md`. AI ishlamay 
 | `AGENTS.md` | AI uchun ish qoidalari va o‘qish tartibi (`CLAUDE.md`, `GEMINI.md` shunga yo‘naltiradi) |
 | `CURRENT-TASK.md`, `HANDOFF.md` | Bilet va bajarilgan ish — loyiha davomida to‘ldiriladi |
 | `AI-BRIEF.md` | Shu dizayn: vizual kontrakt, fayl xaritasi, ishga tushirish, saqlanadigan oqimlar |
+| `DESIGN-MAP.md` | Oddiy so‘zdagi buyruq (“rangni o‘zgartir”, “bo‘lim qo‘sh”) → aniq fayl va amal; haqiqiy rang tokenlari, shriftlar, bo‘limlar |
 | `SCREENS.json` | Tayyor ekranlar, holatlar va hali qurilmagan qismlar; source to‘liqligi bilan mahsulot to‘liqligini ajratadi |
 | `CHECKLIST.md` | Qabul tekshiruvi |
 | `COMPETITION.md`, `CURRENT-COMPETITION.md`, `SCORING-WORKPLAN.md` | Tanlov qoidalari, oxirgi tekshiruv, mezon → ish → dalil |
@@ -142,3 +145,26 @@ def handoff_next():
 
 def brief_intro(name):
     return f'Bu — {name} dizaynini tanlov biletiga moslashtiradigan AI uchun qo‘llanma. Foydalanuvchi bilan o‘zbekcha, sodda tilda gaplash: u kod yozmaydi.\n\n{TICKET_UZ}\n\n{ZIP_ENTRY_UZ}\n'
+
+
+DESIGN_ROUTING_UZ = """
+## Foydalanuvchi dizaynni aytsa
+
+Nom aytilsa, shu paketni oling va boshqasini taklif qilmang: Bloom → `bloom`, Yuksal yoki SI → `si`, Samar → `samar`, Forma → `forma`, Orbita → `orbita`, Nashr → `nashr`, Hisob → `hisob`, Ziyo → `ziyo`, Meros → `meros`. Paket: `/design/<nom>/source.zip` (kit ichida `<nom>/`). Ochgach `AGENTS.md`, keyin o‘zgartirish so‘ralganda `DESIGN-MAP.md`.
+
+Nom aytilmasa, biletga eng mosini bitta jumlada taklif qiling va davom eting:
+
+| Bilet mavzusi | Dizayn |
+|---|---|
+| Statistika, hisobot, jadval, boshqaruv paneli | Hisob |
+| Ta’lim, kurs, test, dars | Ziyo |
+| Turizm, shahar, marshrut, bron, reja | Samar |
+| Do‘kon, katalog, savat, mahsulot | Forma |
+| Yangilik, blog, maqola, jurnal | Nashr |
+| Muzey, madaniyat, tarix, ko‘rgazma | Meros |
+| Ilm-fan, texnika, kosmos, ma’lumot atlasi | Orbita |
+| Vazifa, loyiha, shaxsiy ilova | Bloom |
+| Tashkilot, tashabbus, davlat, tanishtiruv sayti | Yuksal |
+
+Bu tavsiya, qoida emas: foydalanuvchining tanlovi ustun.
+"""

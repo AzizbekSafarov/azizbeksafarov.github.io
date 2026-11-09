@@ -28,6 +28,14 @@ def check_links(path):
         if target.is_dir():target=target/'index.html'
         assert target.is_file(),f'{path.relative_to(SITE_ROOT)}: broken {value}'
 
+def check_portable_links(z,root):
+    # A submitted starter runs alone, so a link back to this library would be dead or off-topic in front of the jury.
+    for name in z.namelist():
+        if name.startswith(root+'/') and name.endswith('.html'):
+            parser=References();parser.feed(z.read(name).decode('utf-8-sig'))
+            for tag,key,value in parser.refs:
+                assert not (tag=='a' and (value.startswith('../') or 'azizbeksafarov.github.io' in value)),f'{name}: library link {value}'
+
 def check_runtime(z,root):
     names=set(z.namelist())
     for name in names:
@@ -170,6 +178,7 @@ def verify():
                 assert actual==z.read('site/'+entry['path']) and sha256(actual).hexdigest()==entry['sha256']
             kit=json.loads(z.read('kit.json'));assert kit['serve_root']+'/'+kit['entry'] in z.namelist()
             check_runtime(z,kit['serve_root'])
+            check_portable_links(z,kit['serve_root'])
             check_zaxira(z)
             check_design_complete(z,manifest,brief,template['slug'])
             # Double-clicking index.html blocks module scripts and fonts, so every package opens through the launcher.

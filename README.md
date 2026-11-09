@@ -50,6 +50,7 @@ python -m http.server 8770 --bind 127.0.0.1
 | Ish tartibi, arxitektura, API | `design/build_workflow.py`, `design/build_architecture.py`, `design/product_quality.py` |
 | Tayyorgarlik | `design/preparation-guide.md`, `design/build_preparation.py` |
 | Tanlov konteksti | `../internet-kontekst` (canonical), `design/sync_context.py` |
+| Har ZIP’dagi `DESIGN-MAP.md` | `design/design_map.py` (starter fayllaridan avtomatik) |
 
 Bloom: `design/material-expressive/src/` ni tahrirlang, minified `dist`ni emas; o‘z `AGENTS.md` qoidalariga amal qiling. Yuksalning oq foni va brend faviconi saqlanadi. Mahalliy tarqatish nusxasi kerak bo‘lsa design/kit.zip dan yangi bo‘sh joyga ko‘chiring. sync_local.ps1 eski mahalliy oynalarni qayta yaratishi mumkin; uni zaruratsiz ishlatmang.
 

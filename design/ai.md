@@ -38,3 +38,23 @@ Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar o
 - [Sifat standarti](https://azizbeksafarov.github.io/design/DESIGN-STANDARD.md)
 - [Kengaytirilgan testlar](https://azizbeksafarov.github.io/design/QA-EXPANDED.md)
 - [Codex bilan ishlash tartibi](https://azizbeksafarov.github.io/zaxira/CODEX.md); AI ishlamasa, foydalanuvchining AI’siz yo‘li: [ZAXIRA.md](https://azizbeksafarov.github.io/zaxira/ZAXIRA.md)
+
+## Foydalanuvchi dizaynni aytsa
+
+Nom aytilsa, shu paketni oling va boshqasini taklif qilmang: Bloom → `bloom`, Yuksal yoki SI → `si`, Samar → `samar`, Forma → `forma`, Orbita → `orbita`, Nashr → `nashr`, Hisob → `hisob`, Ziyo → `ziyo`, Meros → `meros`. Paket: `/design/<nom>/source.zip` (kit ichida `<nom>/`). Ochgach `AGENTS.md`, keyin o‘zgartirish so‘ralganda `DESIGN-MAP.md`.
+
+Nom aytilmasa, biletga eng mosini bitta jumlada taklif qiling va davom eting:
+
+| Bilet mavzusi | Dizayn |
+|---|---|
+| Statistika, hisobot, jadval, boshqaruv paneli | Hisob |
+| Ta’lim, kurs, test, dars | Ziyo |
+| Turizm, shahar, marshrut, bron, reja | Samar |
+| Do‘kon, katalog, savat, mahsulot | Forma |
+| Yangilik, blog, maqola, jurnal | Nashr |
+| Muzey, madaniyat, tarix, ko‘rgazma | Meros |
+| Ilm-fan, texnika, kosmos, ma’lumot atlasi | Orbita |
+| Vazifa, loyiha, shaxsiy ilova | Bloom |
+| Tashkilot, tashabbus, davlat, tanishtiruv sayti | Yuksal |
+
+Bu tavsiya, qoida emas: foydalanuvchining tanlovi ustun.

@@ -5,27 +5,27 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-03",
-  "source_fingerprint": "5eac91ce7d7cac1c34884e394dd78c766674ee1afcc4a9df7d0f4d6810b6b73c",
+  "source_fingerprint": "0b536113156ff80d5d84496f54ce5388d80e59dbf52d268cc33b09c3eb3fda9d",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "4aba88bb3eefe2c74d550e58a91903fb65401c1144baf1b316220c01986fba5a",
-  "archive_bytes": 894946,
+  "archive_sha256": "0e8cda33910b4f8ece313d9dfb7f0279cb7af7fa465a3b0fdb46c5108908a3f4",
+  "archive_bytes": 899426,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "edf70ac046031f1a43cb7d2a4b83a82162d4eaf4954605ea36f0c8d8a72b07fe",
+      "sha256": "57289666a39aa5d4f32b7f524ce77d4cb2aaa8a4f08a1185787f3f6eda451260",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
       "path": "style.css",
       "url": "https://azizbeksafarov.github.io/design/si/files/style.css.txt",
-      "sha256": "7297c9d6be161f9d1492eca2ac9df4f8a0adbb9ffd647a1704ee35c8d680c1f0",
+      "sha256": "4dbecaa46747a6d28e4ab3fb43d2e38dd55b46909c7e78c3bb9c9b00cb5f9909",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/style.css.txt"
     },
     {
@@ -37,13 +37,13 @@
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/app.js.txt",
-      "sha256": "a382ef9eb64ac3deebcbd17335394d604f437f06bdfef270f345bee121a1d72b",
+      "sha256": "8f0701a836a5d78b4086291f24be27bda5afeaac9d26f6176a70319a5e14ba0e",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/app.js.txt"
     },
     {
       "path": "motion.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/motion.js.txt",
-      "sha256": "95243ed0a663d97795b1c6f5c8fc7715a5527eec61f8da35516d15373776ddd3",
+      "sha256": "bdd4c2f2535340c65eaa62ef41b5c16ddd56e8e9735b2526f5dd30a778ad09b2",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/motion.js.txt"
     },
     {
@@ -61,7 +61,7 @@
     {
       "path": "model.js",
       "url": "https://azizbeksafarov.github.io/design/si/files/model.js.txt",
-      "sha256": "fb1043ff34db59b015f2c09c8e23e4e3192755001d911b875069d6eff8e6ed1b",
+      "sha256": "f48f50057ff4e6de60e41446dbf0d8cf24700dfde24a8ec8e649fa3ac663e264",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/model.js.txt"
     },
     {
@@ -104,13 +104,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 6929,
-      "sha256": "03bcae60d9b23435510c377aae4a358a4baf39b3096d23986870f5eba77b0559"
+      "bytes": 7545,
+      "sha256": "3fbf246b3499e83e0ec1731b96fc016ed412e6a728e2b95983ec9a61209bbdc3"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 19876,
-      "sha256": "8c680ef9df7898ab2b0f12bc9985ee0d73e4cf6f94095361fa71044b4c3ff28c"
+      "sha256": "1c54192b4b09639564127c11e20accaeaef0116536b75f6dd03208703e54b46c"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -168,6 +168,11 @@
       "sha256": "da6a3086d095f5c2793b96d99e37750ba8fb59100a46230436ccd110dd3df52e"
     },
     {
+      "path": "DESIGN-MAP.md",
+      "bytes": 5013,
+      "sha256": "6cd3c673d617bd52726ffcc84c9f99a6ac6bca1e6892279fd434ef99f6c06c85"
+    },
+    {
       "path": "DESIGN-STANDARD.md",
       "bytes": 8817,
       "sha256": "31596636ac22a9696171fae5c9624299557ae7ed9f119b1040d20d546d2981e5"
@@ -190,7 +195,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1223,
-      "sha256": "e930b07f6686610859908338a47a88cd698b8a582885213363de06d8c496050b"
+      "sha256": "acdb624b248f423bde12d9542a5696dbbb7ba19fce34c8a7bfde5c7b5cca8316"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -209,8 +214,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 18652,
-      "sha256": "5e81cd6d00d418b8d64445ce13ed8a3f6f12cf509de6a1b651ba4f803f175651"
+      "bytes": 18800,
+      "sha256": "c42c040cb77c233af305f31f1610e56e369d600295d58726a9bd777a276dbf90"
     },
     {
       "path": "PREPARATION.md",
@@ -235,7 +240,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "5a1a6723c9626ff2983e4262959a05aa5ce128aa833a9f4b7cfa4bc3e9033abd"
+      "sha256": "3791af60571d2f0b371ac7e79c0a8d854c2135445b652731d412425910993714"
     },
     {
       "path": "README.md",
@@ -259,8 +264,8 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 2249,
-      "sha256": "496cbfb8327a59a40aa9c615417583d10a95ec5851740d6e28dd711ec023b805"
+      "bytes": 2416,
+      "sha256": "d1a3c13e49dd11c6f15ca10b0ad36ae4f3eb2d587e2eff87daefc6d349db02bc"
     },
     {
       "path": "TASK-BOUNDARY.json",
@@ -284,8 +289,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 7747,
-      "sha256": "2e750d75594411a2402da5340c1cd7c7c72c6a1332387088d93e70780ab0340a"
+      "bytes": 7771,
+      "sha256": "16eec72eda7ff7a93ec616b5cca91644ee78be519c109d36c05c7c8a92b5c82c"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -515,7 +520,7 @@
     {
       "path": "kit.json",
       "bytes": 294,
-      "sha256": "4f45c03e093892b2c563734a180599d22f9ee07b95ffe3cbf76c2cd991ea698e"
+      "sha256": "14f05655d64b4c8a33a4a03e05f743745082fd9790365b0ff07b4aa2244e4104"
     },
     {
       "path": "ochish.cmd",
@@ -549,8 +554,8 @@
     },
     {
       "path": "site/app.js",
-      "bytes": 7668,
-      "sha256": "a382ef9eb64ac3deebcbd17335394d604f437f06bdfef270f345bee121a1d72b"
+      "bytes": 8993,
+      "sha256": "8f0701a836a5d78b4086291f24be27bda5afeaac9d26f6176a70319a5e14ba0e"
     },
     {
       "path": "site/apple-touch-icon.png",
@@ -624,8 +629,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 13988,
-      "sha256": "edf70ac046031f1a43cb7d2a4b83a82162d4eaf4954605ea36f0c8d8a72b07fe"
+      "bytes": 18242,
+      "sha256": "57289666a39aa5d4f32b7f524ce77d4cb2aaa8a4f08a1185787f3f6eda451260"
     },
     {
       "path": "site/mark.svg",
@@ -634,8 +639,8 @@
     },
     {
       "path": "site/model.js",
-      "bytes": 2387,
-      "sha256": "fb1043ff34db59b015f2c09c8e23e4e3192755001d911b875069d6eff8e6ed1b"
+      "bytes": 2811,
+      "sha256": "f48f50057ff4e6de60e41446dbf0d8cf24700dfde24a8ec8e649fa3ac663e264"
     },
     {
       "path": "site/model.test.mjs",
@@ -644,8 +649,8 @@
     },
     {
       "path": "site/motion.js",
-      "bytes": 16114,
-      "sha256": "95243ed0a663d97795b1c6f5c8fc7715a5527eec61f8da35516d15373776ddd3"
+      "bytes": 22123,
+      "sha256": "bdd4c2f2535340c65eaa62ef41b5c16ddd56e8e9735b2526f5dd30a778ad09b2"
     },
     {
       "path": "site/motion.test.mjs",
@@ -659,8 +664,8 @@
     },
     {
       "path": "site/style.css",
-      "bytes": 27771,
-      "sha256": "7297c9d6be161f9d1492eca2ac9df4f8a0adbb9ffd647a1704ee35c8d680c1f0"
+      "bytes": 35310,
+      "sha256": "4dbecaa46747a6d28e4ab3fb43d2e38dd55b46909c7e78c3bb9c9b00cb5f9909"
     },
     {
       "path": "site/template.json",

@@ -9,6 +9,7 @@ from html.parser import HTMLParser
 from hashlib import sha256
 import json
 import entry_text
+import design_map
 from workspace_hq import text_digest
 import re
 import zipfile
@@ -457,6 +458,7 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         extras['GEMINI.md']=extras['CLAUDE.md']
         extras.update({name: data.decode('utf-8') for name, data in context_files.items()})
         extras['START-HERE.md']=entry_text.start_here(t)
+        extras['DESIGN-MAP.md']=design_map.render(t)
         extras['SCREENS.json']=json.dumps(inventory(t['slug']),ensure_ascii=False,indent=2)+'\n'
         write(folder/'screens.json',extras['SCREENS.json'])
         extras['verify-package.mjs']=read(ROOT/'handoff/verify-package.mjs')
@@ -497,6 +499,7 @@ CHECKLIST.md bilan sinang. HANDOFF.md ga haqiqiy natijalarni yozing. Namuna stat
         f"{entry_text.TICKET_UZ}\n\n{links}\n\n## Tanlov\n\n{entry_text.FACTS_UZ}\n\n## Manbalar\n\n"
         f"- [Markaziy kontekst]({SITE}/ai.md)\n- [Barcha yig‘ilgan tanlov ma’lumoti]({SITE}/ustoz/ai.md)\n- [Tanlangan {len(catalog)} source ZIP va tanlov matnlari]({SITE}/design/kit.zip)\n- [Machine-readable faol katalog]({SITE}/design/catalog.json)\n- [Sifat standarti]({SITE}/design/DESIGN-STANDARD.md)\n- [Kengaytirilgan testlar]({SITE}/design/QA-EXPANDED.md)\n"
         f"- [Codex bilan ishlash tartibi]({SITE}/zaxira/CODEX.md); AI ishlamasa, foydalanuvchining AI’siz yo‘li: [ZAXIRA.md]({SITE}/zaxira/ZAXIRA.md)\n")
+    root_brief+=entry_text.DESIGN_ROUTING_UZ
     write(ROOT/'ai.md',root_brief)
     root_brief+=('\n## Bu umumiy paket\n\nHar dizayn `SLUG/source.zip` ichida. Tanlanganini alohida papkaga oching va o‘sha papkadagi `AGENTS.md` dan boshlang. '
         'Shu ildizdagi `node verify-package.mjs` umumiy paketni tekshiradi. Nizomlar: `competition/REGULATIONS.md`; barcha tadqiqot: `competition/FULL-CONTEXT.md`; to‘liq o‘qish xaritasi: `READING-PLAN.json`. '

@@ -1,13 +1,140 @@
-import {data,normalize} from './model.js?v=3d46a94337';
-const SLUG='nashr';
-const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const storageKey=SLUG+'-state-v1';let memory=[],persistent=true;
-function read(){if(!persistent)return memory;try{const raw=localStorage.getItem(storageKey),parsed=raw===null?[]:JSON.parse(raw);if(!Array.isArray(parsed))throw Error('Invalid stored list');memory=normalize(parsed);return memory;}catch{persistent=false;$('#status').textContent='Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi tanlov faqat shu tabda qoladi.';return memory;}}
-function commit(ids){memory=normalize(ids);if(!persistent)return memory;try{localStorage.setItem(storageKey,JSON.stringify(memory));}catch{persistent=false;$('#status').textContent='Saqlash cheklangan. Tanlov faqat shu ochiq tabda qoladi; sahifani yangilashda yo‘qolishi mumkin.';}return memory;}
-function toggle(id){const ids=read();return commit(ids.includes(id)?ids.filter(x=>x!==id):[...ids,id]);}
-function download(name,text,type='text/plain;charset=utf-8'){const url=URL.createObjectURL(new Blob(['\ufeff'+text],{type})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
-let opener,openedId;function openDialog(button){opener=button;openedId=button.dataset.read;$('#reader').showModal();}$$('[data-close]').forEach(b=>b.addEventListener('click',()=>$('#reader').close()));$('#reader')?.addEventListener('close',()=>{const target=opener?.isConnected?opener:document.querySelector('[data-read="'+openedId+'"]')||$('#saved-toggle');target?.focus();});
-window.addEventListener('storage',e=>{if(e.key===storageKey||e.key===null){const active=document.activeElement;const attribute=['data-save','data-read','data-lesson'].find(a=>active?.hasAttribute(a));const value=attribute?active.getAttribute(attribute):null;render();if($('#reader')?.open&&typeof syncSave==='function')syncSave();if(attribute&&!active.isConnected){const next=$$('['+attribute+']').find(b=>b.getAttribute(attribute)===value&&!b.disabled);const target=next||$('#saved-toggle')||$('#lesson-title');if(target){if(!next&&target.id==='lesson-title')target.setAttribute('tabindex','-1');target.focus({preventScroll:true});}}}});
-let category='all',savedOnly=false,selected;
-function render(){const ids=read(),items=data.filter(p=>(category==='all'||category===p.category)&&(!savedOnly||ids.includes(p.id)));$('#saved-count').textContent=ids.length;$('#saved-toggle').setAttribute('aria-pressed',savedOnly);$('#empty').hidden=!!items.length;$('#articles').innerHTML=items.map((p,i)=>`<article class="story">${p.image?`<img class="story-image" src="images/${p.image}" width="800" height="600" alt="${p.alt}">`:''}<span class="eyebrow">${p.tag}</span><h2><button class="story-read" data-read="${p.id}">${p.name}</button></h2><p>${p.intro}</p><div class="story-actions"><span>TAHRIRIY MASHQ / ${i+1}</span><button data-save="${p.id}" aria-label="${p.name}: ${ids.includes(p.id)?'saqlangandan olish':'saqlash'}" aria-pressed="${ids.includes(p.id)}">${ids.includes(p.id)?'✓ Saqlangan':'Saqlash +'}</button></div></article>`).join('');}
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.filter){category=b.dataset.filter;$$('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}if(b.dataset.save){const id=b.dataset.save;toggle(id);render();(document.querySelector('[data-save="'+id+'"]')||$('#saved-toggle')).focus();if(persistent)$('#status').textContent='Saqlangan maqolalar yangilandi.';}if(b.dataset.read){selected=b.dataset.read;const p=data.find(p=>p.id===selected);$('#reader-title').textContent=p.name;$('#reader-body').innerHTML=(p.image?`<img src="images/${p.image}" alt="${p.alt}">`:'')+'<p>'+p.intro+'</p>'+p.text.map(t=>'<p>'+t+'</p>').join('');syncSave();openDialog(b);}});function syncSave(){const on=read().includes(selected);$('#reader-save').setAttribute('aria-pressed',on);$('#reader-save').textContent=on?'✓ Saqlangan':'Maqolani saqlash +';}$('#reader-save').addEventListener('click',()=>{toggle(selected);syncSave();render();});$('#saved-toggle').addEventListener('click',()=>{savedOnly=!savedOnly;render();});render();
+import { data, normalize } from './model.js?v=3d46a94337';
+const SLUG = 'nashr';
+const $ = s => document.querySelector(s),
+  $$ = s => [...document.querySelectorAll(s)];
+const storageKey = SLUG + '-state-v1';
+let memory = [],
+  persistent = true;
+function read() {
+  if (!persistent) return memory;
+  try {
+    const raw = localStorage.getItem(storageKey),
+      parsed = raw === null ? [] : JSON.parse(raw);
+    if (!Array.isArray(parsed)) throw Error('Invalid stored list');
+    memory = normalize(parsed);
+    return memory;
+  } catch {
+    persistent = false;
+    $('#status').textContent =
+      'Saqlangan ma’lumot o‘qilmadi. Asl nusxa o‘zgartirilmaydi; yangi tanlov faqat shu tabda qoladi.';
+    return memory;
+  }
+}
+function commit(ids) {
+  memory = normalize(ids);
+  if (!persistent) return memory;
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(memory));
+  } catch {
+    persistent = false;
+    $('#status').textContent =
+      'Saqlash cheklangan. Tanlov faqat shu ochiq tabda qoladi; sahifani yangilashda yo‘qolishi mumkin.';
+  }
+  return memory;
+}
+function toggle(id) {
+  const ids = read();
+  return commit(ids.includes(id) ? ids.filter(x => x !== id) : [...ids, id]);
+}
+function download(name, text, type = 'text/plain;charset=utf-8') {
+  const url = URL.createObjectURL(new Blob(['\ufeff' + text], { type })),
+    a = document.createElement('a');
+  a.href = url;
+  a.download = name;
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+let opener, openedId;
+function openDialog(button) {
+  opener = button;
+  openedId = button.dataset.read;
+  $('#reader').showModal();
+}
+$$('[data-close]').forEach(b => b.addEventListener('click', () => $('#reader').close()));
+$('#reader')?.addEventListener('close', () => {
+  const target = opener?.isConnected
+    ? opener
+    : document.querySelector('[data-read="' + openedId + '"]') || $('#saved-toggle');
+  target?.focus();
+});
+window.addEventListener('storage', e => {
+  if (e.key === storageKey || e.key === null) {
+    const active = document.activeElement;
+    const attribute = ['data-save', 'data-read', 'data-lesson'].find(a => active?.hasAttribute(a));
+    const value = attribute ? active.getAttribute(attribute) : null;
+    render();
+    if ($('#reader')?.open && typeof syncSave === 'function') syncSave();
+    if (attribute && !active.isConnected) {
+      const next = $$('[' + attribute + ']').find(b => b.getAttribute(attribute) === value && !b.disabled);
+      const target = next || $('#saved-toggle') || $('#lesson-title');
+      if (target) {
+        if (!next && target.id === 'lesson-title') target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+      }
+    }
+  }
+});
+let category = 'all',
+  savedOnly = false,
+  selected;
+function render() {
+  const ids = read(),
+    items = data.filter(
+      p => (category === 'all' || category === p.category) && (!savedOnly || ids.includes(p.id))
+    );
+  $('#saved-count').textContent = ids.length;
+  $('#saved-toggle').setAttribute('aria-pressed', savedOnly);
+  $('#empty').hidden = !!items.length;
+  $('#articles').innerHTML = items
+    .map(
+      (p, i) =>
+        `<article class="story">${p.image ? `<img class="story-image" src="images/${p.image}" width="800" height="600" alt="${p.alt}">` : ''}<span class="eyebrow">${p.tag}</span><h2><button class="story-read" data-read="${p.id}">${p.name}</button></h2><p>${p.intro}</p><div class="story-actions"><span>TAHRIRIY MASHQ / ${i + 1}</span><button data-save="${p.id}" aria-label="${p.name}: ${ids.includes(p.id) ? 'saqlangandan olish' : 'saqlash'}" aria-pressed="${ids.includes(p.id)}">${ids.includes(p.id) ? '✓ Saqlangan' : 'Saqlash +'}</button></div></article>`
+    )
+    .join('');
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  if (b.dataset.filter) {
+    category = b.dataset.filter;
+    $$('[data-filter]').forEach(x => x.setAttribute('aria-pressed', x === b));
+    render();
+  }
+  if (b.dataset.save) {
+    const id = b.dataset.save;
+    toggle(id);
+    render();
+    (document.querySelector('[data-save="' + id + '"]') || $('#saved-toggle')).focus();
+    if (persistent) $('#status').textContent = 'Saqlangan maqolalar yangilandi.';
+  }
+  if (b.dataset.read) {
+    selected = b.dataset.read;
+    const p = data.find(p => p.id === selected);
+    $('#reader-title').textContent = p.name;
+    $('#reader-body').innerHTML =
+      (p.image ? `<img src="images/${p.image}" alt="${p.alt}">` : '') +
+      '<p>' +
+      p.intro +
+      '</p>' +
+      p.text.map(t => '<p>' + t + '</p>').join('');
+    syncSave();
+    openDialog(b);
+  }
+});
+function syncSave() {
+  const on = read().includes(selected);
+  $('#reader-save').setAttribute('aria-pressed', on);
+  $('#reader-save').textContent = on ? '✓ Saqlangan' : 'Maqolani saqlash +';
+}
+$('#reader-save').addEventListener('click', () => {
+  toggle(selected);
+  syncSave();
+  render();
+});
+$('#saved-toggle').addEventListener('click', () => {
+  savedOnly = !savedOnly;
+  render();
+});
+render();

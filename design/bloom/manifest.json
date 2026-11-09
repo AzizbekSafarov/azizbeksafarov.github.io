@@ -5,33 +5,33 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-03",
-  "source_fingerprint": "85cd5c9ba25d8ac24c4a68407be9921b373c3077adc6ab87a3f49fe75c67fb91",
+  "source_fingerprint": "dcd7f30bd9b155d28d56b342fde0dacc65e16cb26ac2213f9188605be822c5c0",
   "name": "Bloom · Material Design 3",
   "slug": "bloom",
   "context_url": "https://azizbeksafarov.github.io/design/bloom/",
   "ai_url": "https://azizbeksafarov.github.io/design/bloom/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/bloom/source.zip",
-  "archive_sha256": "05f1ddfac83eec3d6729627a34c8a3abf7d44fb3a21f514851eda5a39a5e8fff",
-  "archive_bytes": 1588834,
+  "archive_sha256": "19fcb8450a07acded9eed89b474041efb7b3b4966bf31e9dd6f1d8576d923c67",
+  "archive_bytes": 1594100,
   "entry": "index.html",
   "serve_root": "site/dist",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/index.html.txt",
-      "sha256": "79abd14e43911916acb48432e7d215db93ede2b74f56927cad5b181f45daaeb8",
+      "sha256": "935e19abe34f354f51e7174bf7c6527c8869b221d21264c04a06b1241a1bd6cd",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/index.html.txt"
     },
     {
       "path": "src/main.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/main.jsx.txt",
-      "sha256": "f94bac955ca97b482ce65f63ca6285f021160dae1d61fabae8e4ea79b7008972",
+      "sha256": "f326a093553604f852561b05ee443356c77adc6cf448741d682072458a0096b6",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/main.jsx.txt"
     },
     {
       "path": "src/ProjectWorkspace.jsx",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/ProjectWorkspace.jsx.txt",
-      "sha256": "4349e1e60e1483e5d0d33c456500add1a24522db8bd37af6b542f367cc82c8b0",
+      "sha256": "853d93cefe9d9a72a4fe40ae050756527a185e67c0c0b14bd7c39286d4836279",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/ProjectWorkspace.jsx.txt"
     },
     {
@@ -43,7 +43,7 @@
     {
       "path": "src/workspace.css",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/workspace.css.txt",
-      "sha256": "ef4cfcc1b7887b21bb119656f07f1e9b81322a7edbe266dc23fd6a79288e70c5",
+      "sha256": "76a366c0e4c3172b1e8156afa6cd6f577f58567623d2cafad571f0981c4cfbc5",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/workspace.css.txt"
     },
     {
@@ -55,7 +55,7 @@
     {
       "path": "src/style.css",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/style.css.txt",
-      "sha256": "10df8944a8c55ea9c2db30d4e7d2ed2b7b8bcc9373ddf434d94fd0bf3ccd69ad",
+      "sha256": "585c0043e25b8a385c87169b722fa0a22ef91119021e517592c5624cb7d0d014",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/style.css.txt"
     },
     {
@@ -91,7 +91,7 @@
     {
       "path": "src/model.js",
       "url": "https://azizbeksafarov.github.io/design/bloom/files/src/model.js.txt",
-      "sha256": "db0e48006d5c0cb74f25da615add1978c67c649846c4274084ae6f69b3712249",
+      "sha256": "5d244a09cd811f6fcfd8dfdbc9d631f9641bfa1c77113f2740e79de5d0d9362a",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/bloom/files/src/model.js.txt"
     },
     {
@@ -140,13 +140,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7057,
-      "sha256": "8eb5409598854f8d262d497337b6e93dcedab95161dd1c9ecdf3f19ea0e3be70"
+      "bytes": 7673,
+      "sha256": "fecc634b475c85ac42f8e75f0658746cac0c126ed1aaa5b52fcaa478e99d9fe5"
     },
     {
       "path": "AI-BRIEF.md",
       "bytes": 21980,
-      "sha256": "c8d6979765ffa043785e88782d8c1b1fb10d2307a8cac2120f4080ef66f97711"
+      "sha256": "057ae817c5ff3135733f6da7e85cfe2232c3e05460654903bdca72672766c77b"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -204,6 +204,11 @@
       "sha256": "11720996aa06f7971dea35cfa748c22c8ccc0a1efd2db5facbe4b990de8970ed"
     },
     {
+      "path": "DESIGN-MAP.md",
+      "bytes": 5758,
+      "sha256": "2689be103e0c304de3054e471aff026e1708bffd0bcbb2013d56da4d6e0fd94f"
+    },
+    {
       "path": "DESIGN-STANDARD.md",
       "bytes": 8817,
       "sha256": "31596636ac22a9696171fae5c9624299557ae7ed9f119b1040d20d546d2981e5"
@@ -226,7 +231,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1240,
-      "sha256": "ec7c80055f0668a90c410322bf3d12781b2ee9782f70b61a7cc6cdff6a099510"
+      "sha256": "ff5c94132da790b6d8193eecdea2153312f3be0e1b549bd5b16a1ad7219470b1"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -245,8 +250,8 @@
     },
     {
       "path": "PACKAGE-MANIFEST.json",
-      "bytes": 22713,
-      "sha256": "e14fb941cfbb4e0e1f6c894978b2818c77e8f03a931548c0502a249e6957e0f9"
+      "bytes": 22861,
+      "sha256": "deeaaafdce4af5f91b5b98268912f03d228d2ff6f95c38adade443dc23786e0c"
     },
     {
       "path": "PREPARATION.md",
@@ -271,7 +276,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "a14730a5766eeee7b9acf89d2937c59a1195416de612eb7611a98afc0ac66610"
+      "sha256": "df0b54badfab8f3203ad5f9ab7ea14377955a96d111e1e1d42526490683823f0"
     },
     {
       "path": "README.md",
@@ -295,8 +300,8 @@
     },
     {
       "path": "START-HERE.md",
-      "bytes": 2337,
-      "sha256": "a1e6cd159687c294118a7b65d3b3deab10962dd203c24702dbb3178a808cf322"
+      "bytes": 2504,
+      "sha256": "d81b7650a64ce1069d6d474297a91f770a9452409affc1b4bed8d57e5df59c1f"
     },
     {
       "path": "TASK-BOUNDARY.json",
@@ -320,8 +325,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 7747,
-      "sha256": "2e750d75594411a2402da5340c1cd7c7c72c6a1332387088d93e70780ab0340a"
+      "bytes": 7771,
+      "sha256": "16eec72eda7ff7a93ec616b5cca91644ee78be519c109d36c05c7c8a92b5c82c"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -551,7 +556,7 @@
     {
       "path": "kit.json",
       "bytes": 316,
-      "sha256": "be5203bfae23658ab2f728fb8ad958673cafa54da1c4e62b006b949b73bfad93"
+      "sha256": "8d0e85caaa7bda87e592520afa4132790bfa7c0a2825e7ba0d3c2f8dbd37c2bc"
     },
     {
       "path": "ochish.cmd",
@@ -609,14 +614,14 @@
       "sha256": "65c6582a0a7d7470e0cea53acd809c66925412b426472cc34b30b32d44671d18"
     },
     {
-      "path": "site/dist/assets/index-D1PPfBhD.js",
-      "bytes": 748347,
-      "sha256": "c2158f9daed367062aa45426617ff5438d14030d36d05cd4d8ec1af924905b50"
+      "path": "site/dist/assets/index-5ZY4UVeS.css",
+      "bytes": 39586,
+      "sha256": "72b2de09b103a047b5a7a966e92af619c2f72e264f438dfea83cc60486ea2b77"
     },
     {
-      "path": "site/dist/assets/index-Dowag0IE.css",
-      "bytes": 39517,
-      "sha256": "e878acb33c3df4c00f7c9ce0f83419feb3dd3bfa873a7b02fdd8d7dc7d297d61"
+      "path": "site/dist/assets/index-DLSe6G-S.js",
+      "bytes": 748347,
+      "sha256": "c2158f9daed367062aa45426617ff5438d14030d36d05cd4d8ec1af924905b50"
     },
     {
       "path": "site/dist/assets/material-symbols-CopIADRp.woff2",
@@ -660,8 +665,8 @@
     },
     {
       "path": "site/dist/index.html",
-      "bytes": 469,
-      "sha256": "0dc55c0ddf7fec5056c357778e458cecbc23b6b3e04dbc0ac53a5dcc3a900973"
+      "bytes": 578,
+      "sha256": "4370474d77e9439f7116f322458960fd3ad61c717bb536ddbb5a3a150f1b27ff"
     },
     {
       "path": "site/download_symbols.py",
@@ -670,8 +675,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 368,
-      "sha256": "79abd14e43911916acb48432e7d215db93ede2b74f56927cad5b181f45daaeb8"
+      "bytes": 477,
+      "sha256": "935e19abe34f354f51e7174bf7c6527c8869b221d21264c04a06b1241a1bd6cd"
     },
     {
       "path": "site/package-lock.json",
@@ -715,8 +720,8 @@
     },
     {
       "path": "site/src/ProjectWorkspace.jsx",
-      "bytes": 5469,
-      "sha256": "4349e1e60e1483e5d0d33c456500add1a24522db8bd37af6b542f367cc82c8b0"
+      "bytes": 7829,
+      "sha256": "853d93cefe9d9a72a4fe40ae050756527a185e67c0c0b14bd7c39286d4836279"
     },
     {
       "path": "site/src/combinations.test.js",
@@ -775,13 +780,13 @@
     },
     {
       "path": "site/src/main.jsx",
-      "bytes": 28159,
-      "sha256": "f94bac955ca97b482ce65f63ca6285f021160dae1d61fabae8e4ea79b7008972"
+      "bytes": 42235,
+      "sha256": "f326a093553604f852561b05ee443356c77adc6cf448741d682072458a0096b6"
     },
     {
       "path": "site/src/model.js",
-      "bytes": 4024,
-      "sha256": "db0e48006d5c0cb74f25da615add1978c67c649846c4274084ae6f69b3712249"
+      "bytes": 5104,
+      "sha256": "5d244a09cd811f6fcfd8dfdbc9d631f9641bfa1c77113f2740e79de5d0d9362a"
     },
     {
       "path": "site/src/model.test.js",
@@ -805,13 +810,13 @@
     },
     {
       "path": "site/src/style.css",
-      "bytes": 33458,
-      "sha256": "10df8944a8c55ea9c2db30d4e7d2ed2b7b8bcc9373ddf434d94fd0bf3ccd69ad"
+      "bytes": 41198,
+      "sha256": "585c0043e25b8a385c87169b722fa0a22ef91119021e517592c5624cb7d0d014"
     },
     {
       "path": "site/src/workspace.css",
-      "bytes": 5186,
-      "sha256": "ef4cfcc1b7887b21bb119656f07f1e9b81322a7edbe266dc23fd6a79288e70c5"
+      "bytes": 6131,
+      "sha256": "76a366c0e4c3172b1e8156afa6cd6f577f58567623d2cafad571f0981c4cfbc5"
     },
     {
       "path": "site/src/workspace.test.js",
