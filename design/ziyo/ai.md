@@ -4,9 +4,9 @@ Bu — Ziyo dizaynini tanlov biletiga moslashtiradigan AI uchun qo‘llanma. Foy
 
 Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TASK.md` da. Bu ochiq paketda bilet yo‘q. Tanlov mahsulotini qurish so‘ralib, ikkala joyda ham bilet bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Tayyorgarlik, audit yoki kutubxonani saqlash so‘rovida biletni to‘siq qilma; foydalanuvchining aniq ish doirasini bajar. Dizayn namunasi, test ma’lumoti va nizomdagi namunaviy bilet vazifa hisoblanmaydi.
 
-ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida. Saytni `ochish.cmd` yoki `node serve.mjs` bilan oching: `index.html` ikki marta bosilsa brauzer skript va shriftlarni bloklaydi.
+ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida. Saytni `ochish.cmd` yoki `node serve.mjs` bilan oching: `index.html` ikki marta bosilsa brauzer skript va shriftlarni bloklaydi. Foydalanuvchi rang, shrift, joylashuv, bo‘lim yoki matnni o‘zgartirishni aytsa, uning so‘zi vizual kontraktdan ustun; qayerni tahrirlashni `DESIGN-MAP.md` ko‘rsatadi.
 
-Snapshot 2026-11-03; fingerprint a7eb09cff84132f8.
+Snapshot 2026-11-03; fingerprint ecfa6a7066b06265.
 
 ## Tanlov
 
@@ -58,7 +58,7 @@ Manba IDlari markup/modelda mos qolsin. Foydalanuvchi matnini innerHTMLga qo‘s
 
 Talab → amal → kod → qabul tekshiruvi. Asosiy oqim, bo‘sh/xato/natija, reload, 390, 768 va 1366 px (mezonlardagi kengliklar), qo‘shimcha 320 va 1440 px, fokus, Escape, shrift/rasm, console va overflow. Animatsiya kontekstni tushuntirsin, foydalanuvchi amalini yashirmasin; reduced-motion saqlansin.
 
-HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, Talab texnologiya nomini sanamasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya/tayyorgarlik so‘rovi ham joriy ish doirasidir. `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.
+HANDOFF.md ga bilet, o‘zgargan fayl, haqiqiy test natijasi, ochiq muammo va keyingi amalni yoz. Oldingi QA bugungi tahrirga kafolat emas. Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Bilet texnologiya nomini aytmasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya yoki tayyorgarlik so‘rovi ham joriy ish doirasiga kiradi. Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma. Link avtomatik xotira yoki vosita bermaydi; AI o‘qiy olmasa ZIP/matnni chatga bering.
 
 ## Paketdagi ekranlar va chegaralar
 

@@ -51,6 +51,7 @@ python -m http.server 8770 --bind 127.0.0.1
 | Tayyorgarlik | `design/preparation-guide.md`, `design/build_preparation.py` |
 | Tanlov konteksti | `../internet-kontekst` (canonical), `design/sync_context.py` |
 | Har ZIP’dagi `DESIGN-MAP.md` | `design/design_map.py` (starter fayllaridan avtomatik) |
+| Starterlardagi `?v=` kesh kalitlari | `design/asset_versions.py` (build yangilaydi, `verify_handoff.py` eskirganini rad etadi) |
 
 Bloom: `design/material-expressive/src/` ni tahrirlang, minified `dist`ni emas; o‘z `AGENTS.md` qoidalariga amal qiling. Yuksalning oq foni va brend faviconi saqlanadi. Mahalliy tarqatish nusxasi kerak bo‘lsa design/kit.zip dan yangi bo‘sh joyga ko‘chiring. sync_local.ps1 eski mahalliy oynalarni qayta yaratishi mumkin; uni zaruratsiz ishlatmang.
 

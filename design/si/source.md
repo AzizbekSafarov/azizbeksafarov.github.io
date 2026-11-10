@@ -1,6 +1,6 @@
 # Yuksal · SI — editable source snapshot
 
-Source fingerprint: `0b536113156ff80d5d84496f54ce5388d80e59dbf52d268cc33b09c3eb3fda9d`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `265e9eb5a7615f78e7eb75212356d5e596a72bd809b1089a165b25a13274c7c4`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -21,7 +21,7 @@ Source fingerprint: `0b536113156ff80d5d84496f54ce5388d80e59dbf52d268cc33b09c3eb3
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1" sizes="180x180" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="style.css?v=6" />
-    <script type="module" src="app.js?v=a382ef9eb6"></script>
+    <script type="module" src="app.js?v=8f0701a836"></script>
   </head>
   <body>
     <a class="skip" href="#main">Asosiy mazmunga o‘tish</a>

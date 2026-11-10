@@ -1,4 +1,4 @@
-import { data, normalize } from './model.js?v=e2364eb354';
+import { data, normalize } from './model.js?v=b317a166d7';
 const SLUG = 'orbita';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];

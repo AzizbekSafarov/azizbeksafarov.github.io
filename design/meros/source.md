@@ -1,6 +1,6 @@
 # Meros — editable source snapshot
 
-Source fingerprint: `dd2911dfaabbacb93fa049853abe03bc5f3276b1e7aacc6e72b01d15e1228992`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `c9a70476e40ba0b9f38131c691074df2774c0363a9ee09974e83e8957faa561e`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -17,11 +17,11 @@ Source fingerprint: `dd2911dfaabbacb93fa049853abe03bc5f3276b1e7aacc6e72b01d15e12
     <meta name="theme-color" content="#1d2ed8" />
     <title>Meros — Madaniyat / raqamli muzey</title>
     <link rel="icon" href="mark.svg?v=c11c9da4cb" />
-    <script type="module" src="app.js?v=d34f44c6b8"></script>
+    <script type="module" src="app.js?v=b533d0a7d6"></script>
     <link rel="preload" href="fonts/alfaslabone.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/archivo.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=8e43838ad4" />
-    <link rel="stylesheet" href="layout.css?v=1e495da46b" />
+    <link rel="stylesheet" href="style.css?v=c07bc438a3" />
+    <link rel="stylesheet" href="layout.css?v=8ef55366cf" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>
@@ -1161,7 +1161,7 @@ dialog {
 ## site/app.js
 
 ```javascript
-import { data, normalize } from './model.js?v=5ef9ac47c9';
+import { data, normalize } from './model.js?v=928c5f0e19';
 const SLUG = 'meros';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];

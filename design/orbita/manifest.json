@@ -5,21 +5,21 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-03",
-  "source_fingerprint": "7cb555556102d076ecd81dfeb26c97e387b8083f96f602d5917e11ec44672621",
+  "source_fingerprint": "7175c0b856de4f073c51e85e1f365baab749b2d416b12e45e31226c90b33860b",
   "name": "Orbita",
   "slug": "orbita",
   "context_url": "https://azizbeksafarov.github.io/design/orbita/",
   "ai_url": "https://azizbeksafarov.github.io/design/orbita/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/orbita/source.zip",
-  "archive_sha256": "96cfe02d76303956ffd936e361a5870b527c0c58f8880c97cbe8eb1bc0756b36",
-  "archive_bytes": 843450,
+  "archive_sha256": "ee5838211ee964d6c52a4dd727bab03b3fb71acef761240f66bc9567c785eb2d",
+  "archive_bytes": 843760,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/index.html.txt",
-      "sha256": "a85be2ea69dd910253a9f45d58e5a59fc11cd71ee0f7070f8fd63dae998ea478",
+      "sha256": "9041cbd9aedfba64a965a555aa84467cc2f58d53183811bcb0186bed992a85c9",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/index.html.txt"
     },
     {
@@ -37,7 +37,7 @@
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/orbita/files/app.js.txt",
-      "sha256": "1c27cba7cec1082eace178c3721b677937fc21fcdba488a1371c9e433e7a3f8f",
+      "sha256": "a86d81ebcf69db9c4178a5d07fe4d0d3653d1935158d09aa530a4225c1c23945",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/orbita/files/app.js.txt"
     },
     {
@@ -80,13 +80,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7539,
-      "sha256": "657c62f151af9928fbdf9ca2c9e253ce9089f2d2bbcda1f3c15ae7f7071dbbe4"
+      "bytes": 7494,
+      "sha256": "e3adf040764cae1eeffac9827e28fbdf00c151a99faff3e3efbf4798b932933c"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 13146,
-      "sha256": "5a25b76f7280ff01c079105973c4e13af3d8a142f6813b5dd3f6a6134f7a6341"
+      "bytes": 13331,
+      "sha256": "f82d0207bc83fdb19be46603b5009ecc7a2065997f09b2986d5b64ed4b8993e0"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -171,7 +171,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1221,
-      "sha256": "51b0ff34974a34092ee9a020caa982ba31b75900fe29cb4885650cb75bf3138a"
+      "sha256": "b87ee570f81b8e79824a2c3cac1ca2133a2c2249e3f03cc187c469ade016b263"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -191,7 +191,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 16871,
-      "sha256": "7d2f59cc245d41bce4efd046b30d3e156a46ca128acc9982bfce1fd99462f263"
+      "sha256": "9df8fe790edef5dd083b848c6da5eb9f27852b1b50278bd433c9fc28cba7dfed"
     },
     {
       "path": "PREPARATION.md",
@@ -216,7 +216,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "71c01bd432f76cfbff875f7ba8de1fd904e2b759ecb0c0089557a5aa843db073"
+      "sha256": "e7eee82e739a9a9b67cc9470970a49190ae3591915369afb5d00ab043d6f8b33"
     },
     {
       "path": "README.md",
@@ -255,8 +255,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 16670,
-      "sha256": "6e15ba90bad78348dac62ab3d9de0fc7c1d3d9ce4ae677fd564a0874e5dbcc20"
+      "bytes": 17152,
+      "sha256": "304ec5d22044bd5da9fa5a70e7eaa44e4f9af02e6cd249b58937a696ee841932"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -265,8 +265,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 7771,
-      "sha256": "16eec72eda7ff7a93ec616b5cca91644ee78be519c109d36c05c7c8a92b5c82c"
+      "bytes": 7853,
+      "sha256": "20ec960ba553d7c399bde6319b717edbf89cd88c090d49c897e285d2b8ca8637"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -496,7 +496,7 @@
     {
       "path": "kit.json",
       "bytes": 292,
-      "sha256": "6e28dd7e8594748f94b775751787ea219877baf3c90bbfb65bd93cbcaea9e348"
+      "sha256": "96808be730a8e0b2cf2de1af169c3625be4540f87d419be154e15f74dee156df"
     },
     {
       "path": "ochish.cmd",
@@ -531,7 +531,7 @@
     {
       "path": "site/app.js",
       "bytes": 5692,
-      "sha256": "1c27cba7cec1082eace178c3721b677937fc21fcdba488a1371c9e433e7a3f8f"
+      "sha256": "a86d81ebcf69db9c4178a5d07fe4d0d3653d1935158d09aa530a4225c1c23945"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -561,7 +561,7 @@
     {
       "path": "site/index.html",
       "bytes": 5828,
-      "sha256": "a85be2ea69dd910253a9f45d58e5a59fc11cd71ee0f7070f8fd63dae998ea478"
+      "sha256": "9041cbd9aedfba64a965a555aa84467cc2f58d53183811bcb0186bed992a85c9"
     },
     {
       "path": "site/layout.css",

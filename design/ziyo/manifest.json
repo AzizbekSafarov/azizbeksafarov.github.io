@@ -5,21 +5,21 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-03",
-  "source_fingerprint": "a7eb09cff84132f8df64699d0d1f4a2b5fc38bc750ce211c78cff6ad14fd6d95",
+  "source_fingerprint": "ecfa6a7066b06265707a4f5ca0d131268ea02e2ba86e77742b29ddfee4d75325",
   "name": "Ziyo",
   "slug": "ziyo",
   "context_url": "https://azizbeksafarov.github.io/design/ziyo/",
   "ai_url": "https://azizbeksafarov.github.io/design/ziyo/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/ziyo/source.zip",
-  "archive_sha256": "3ae3f5687afa1e4478d2d23dc3e4182a5b9cae799608972a71ca1bef8df92abd",
-  "archive_bytes": 1095166,
+  "archive_sha256": "3221ad3f40974dd7fcad0b05b307fd8ed690385cc37b0b4ed0cb05a46b46f39b",
+  "archive_bytes": 1095476,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/index.html.txt",
-      "sha256": "f9ca9ba1661b5f42d255f68d3aea62af74d093a60308c7b964980dd865662e88",
+      "sha256": "c129a186d77059623ba5dcc112ad7d9f8581531b61c874d3f099106a3258e509",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/index.html.txt"
     },
     {
@@ -37,7 +37,7 @@
     {
       "path": "app.js",
       "url": "https://azizbeksafarov.github.io/design/ziyo/files/app.js.txt",
-      "sha256": "1062a62d3b85d4175bd464178baea78f39409df6c46fb1d7dd845e4ba6095e44",
+      "sha256": "b3ed5a307f9c6b16125979757744b7f528999b4c12986e1f119a6a601fdecdc7",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/ziyo/files/app.js.txt"
     },
     {
@@ -86,13 +86,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7537,
-      "sha256": "cfcf735f51be90fd7fff1538052bb90d67f9e288102ecec1dcbea8fc4d9a4175"
+      "bytes": 7492,
+      "sha256": "61609b061c2feb2aeb2827baeb19d05de75f4ff546ecb09077a34bfbd87946d8"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 13490,
-      "sha256": "0ce0ab1902d5d34e5a98ac5c96e701a415eba1191c18b661514c314b01021324"
+      "bytes": 13675,
+      "sha256": "6d24e5f3ea1c3eb85f195dca6d8c97f3f49462684bf693d65628551c1147fef2"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -177,7 +177,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1217,
-      "sha256": "e05cce3b5644563d1f4e492e18b750d87ad15c3a2f3cc93636a616cad0b0c8ff"
+      "sha256": "affcc3b1e0ed0a9a774354cf94a1417c153464f0f82996eba3d41bb9c24eb4b0"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -197,7 +197,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 17340,
-      "sha256": "62d54408ac3fcfc1650ecba71f22222eae37a0d7ad2b250df617e059c9ff1c22"
+      "sha256": "507e4c2b30373275f92deaeb4dbac4f3e144479654fb08c8375539841ef0ba7c"
     },
     {
       "path": "PREPARATION.md",
@@ -222,7 +222,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "c6e859a52ad1d8b8f39d68c9d830b3b5f48ffdd16f1ec2886cd595d76778a412"
+      "sha256": "b47516cf7b36d407a9ccf07c2e09ab1198c8e15ff2cd14796b2d50716f53af7a"
     },
     {
       "path": "README.md",
@@ -261,8 +261,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 16670,
-      "sha256": "6e15ba90bad78348dac62ab3d9de0fc7c1d3d9ce4ae677fd564a0874e5dbcc20"
+      "bytes": 17152,
+      "sha256": "304ec5d22044bd5da9fa5a70e7eaa44e4f9af02e6cd249b58937a696ee841932"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -271,8 +271,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 7771,
-      "sha256": "16eec72eda7ff7a93ec616b5cca91644ee78be519c109d36c05c7c8a92b5c82c"
+      "bytes": 7853,
+      "sha256": "20ec960ba553d7c399bde6319b717edbf89cd88c090d49c897e285d2b8ca8637"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -502,7 +502,7 @@
     {
       "path": "kit.json",
       "bytes": 288,
-      "sha256": "ca93130e183eeed183b964835eef9aed8c8178900ec2141d30fd7ce85b4f39f8"
+      "sha256": "b83d4ffe5b2f7c6de210a1fa5724affeef9306536abc5bc4ebce1f2d2a6403e7"
     },
     {
       "path": "ochish.cmd",
@@ -537,7 +537,7 @@
     {
       "path": "site/app.js",
       "bytes": 5066,
-      "sha256": "1062a62d3b85d4175bd464178baea78f39409df6c46fb1d7dd845e4ba6095e44"
+      "sha256": "b3ed5a307f9c6b16125979757744b7f528999b4c12986e1f119a6a601fdecdc7"
     },
     {
       "path": "site/combinations.test.mjs",
@@ -582,7 +582,7 @@
     {
       "path": "site/index.html",
       "bytes": 4216,
-      "sha256": "f9ca9ba1661b5f42d255f68d3aea62af74d093a60308c7b964980dd865662e88"
+      "sha256": "c129a186d77059623ba5dcc112ad7d9f8581531b61c874d3f099106a3258e509"
     },
     {
       "path": "site/layout.css",

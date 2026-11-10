@@ -1,4 +1,4 @@
-import { places, normalize, schedule, clock, exportPlan } from './model.js?v=bcb8054ec2';
+import { places, normalize, schedule, clock, exportPlan } from './model.js?v=1604fda621';
 const key = 'samar-plan-v2';
 const $ = s => document.querySelector(s);
 let state = normalize(null),

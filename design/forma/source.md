@@ -1,6 +1,6 @@
 # Forma — editable source snapshot
 
-Source fingerprint: `36066a6ecae20e62ccf535c16def88d282bb11f1c829739791d05e30d6722a9e`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `3f42b5648bdb81dd8e7bb775a810e5ab33f08da9e733f39ce7b5b7b4a5f32913`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -17,11 +17,11 @@ Source fingerprint: `36066a6ecae20e62ccf535c16def88d282bb11f1c829739791d05e30d67
     />
     <title>Forma — sokin shakl, iliq hayot</title>
     <link rel="icon" href="mark.svg?v=e068eedfcc" type="image/svg+xml" />
-    <script type="module" src="app.js?v=193b9dd0ed"></script>
+    <script type="module" src="app.js?v=f5a1b80b03"></script>
     <meta name="composition" content="task-specific-v3" />
     <link rel="preload" href="fonts/manrope.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=99ea84b76b" />
-    <link rel="stylesheet" href="layout.css?v=ae5b383732" />
+    <link rel="stylesheet" href="style.css?v=0747f944a5" />
+    <link rel="stylesheet" href="layout.css?v=3c19696e99" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>
@@ -1398,7 +1398,7 @@ body {
 ## site/app.js
 
 ```javascript
-import { products, normalize, change, total, money, exportCart } from './model.js?v=878bdb00f7';
+import { products, normalize, change, total, money, exportCart } from './model.js?v=2fe39a6169';
 const $ = s => document.querySelector(s),
   key = 'forma-cart-v2';
 let cart = normalize(null),
@@ -1650,7 +1650,8 @@ export function total(value) {
   const cart = normalize(value);
   return products.reduce((sum, p) => sum + (cart[p.id] || 0) * p.price, 0);
 }
-export const money = n => new Intl.NumberFormat('uz-UZ').format(n) + ' so‘m';
+// Chrome has no Uzbek locale data, so the thousands are grouped here rather than by Intl.
+export const money = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0') + ' so‘m';
 export function exportCart(value) {
   const cart = normalize(value);
   return (

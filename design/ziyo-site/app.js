@@ -1,5 +1,5 @@
-import { showLesson } from './identity.js?v=a0ccb35df4';
-import { data, normalize, grade } from './model.js?v=3419133037';
+import { showLesson } from './identity.js?v=0f200d48ab';
+import { data, normalize, grade } from './model.js?v=e82989d08d';
 const SLUG = 'ziyo';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];

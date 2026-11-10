@@ -1,5 +1,5 @@
 <!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi"><title>Ziyo — source</title><link rel="icon" href="/assets/hq/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../handoff/styles.css?v=560965086502"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="/">← Bosh qarorgoh</a><a href="/design/start/">AI bilan boshlash</a><a href="/design/">Tanlangan dizaynlar</a></nav></header><main id="main" class="wrap"><h1>Ziyo — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content"><h2>Ziyo — editable source snapshot</h2>
-<p>Source fingerprint: <code>a7eb09cff84132f8df64699d0d1f4a2b5fc38bc750ce211c78cff6ad14fd6d95</code>. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under <code>site/</code> and listed with download links at the end of this file. Work from source.zip when you can.</p>
+<p>Source fingerprint: <code>ecfa6a7066b06265707a4f5ca0d131268ea02e2ba86e77742b29ddfee4d75325</code>. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under <code>site/</code> and listed with download links at the end of this file. Work from source.zip when you can.</p>
 <h3>site/index.html</h3>
 <pre><code>&lt;!doctype html&gt;
 &lt;html lang=&quot;uz&quot;&gt;
@@ -13,12 +13,12 @@
     &lt;meta name=&quot;theme-color&quot; content=&quot;#ffedd6&quot; /&gt;
     &lt;title&gt;Ziyo — Ta’lim / interaktiv dars&lt;/title&gt;
     &lt;link rel=&quot;icon&quot; href=&quot;mark.svg?v=4dfc3aa135&quot; /&gt;
-    &lt;script type=&quot;module&quot; src=&quot;app.js?v=3ccf7e52a4&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;app.js?v=b3ed5a307f&quot;&gt;&lt;/script&gt;
     &lt;meta name=&quot;composition&quot; content=&quot;task-specific-v3&quot; /&gt;
     &lt;link rel=&quot;preload&quot; href=&quot;fonts/breeserif.ttf&quot; as=&quot;font&quot; type=&quot;font/ttf&quot; crossorigin /&gt;
     &lt;link rel=&quot;preload&quot; href=&quot;fonts/nunitosans.ttf&quot; as=&quot;font&quot; type=&quot;font/ttf&quot; crossorigin /&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css?v=12f3014ab3&quot; /&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;layout.css?v=052fd06160&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css?v=8a55da648c&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;layout.css?v=bdff9962e5&quot; /&gt;
     &lt;meta name=&quot;identity&quot; content=&quot;sector-v4&quot; /&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -1000,8 +1000,8 @@ body {
 }
 </code></pre>
 <h3>site/app.js</h3>
-<pre><code>import { showLesson } from &#x27;./identity.js?v=a0ccb35df4&#x27;;
-import { data, normalize, grade } from &#x27;./model.js?v=3419133037&#x27;;
+<pre><code>import { showLesson } from &#x27;./identity.js?v=0f200d48ab&#x27;;
+import { data, normalize, grade } from &#x27;./model.js?v=e82989d08d&#x27;;
 const SLUG = &#x27;ziyo&#x27;;
 const $ = s =&gt; document.querySelector(s),
   $$ = s =&gt; [...document.querySelectorAll(s)];

@@ -10,11 +10,11 @@
     <meta name="theme-color" content="#1d2ed8" />
     <title>Meros — Madaniyat / raqamli muzey</title>
     <link rel="icon" href="mark.svg?v=c11c9da4cb" />
-    <script type="module" src="app.js?v=d34f44c6b8"></script>
+    <script type="module" src="app.js?v=b533d0a7d6"></script>
     <link rel="preload" href="fonts/alfaslabone.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/archivo.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=8e43838ad4" />
-    <link rel="stylesheet" href="layout.css?v=1e495da46b" />
+    <link rel="stylesheet" href="style.css?v=c07bc438a3" />
+    <link rel="stylesheet" href="layout.css?v=8ef55366cf" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>

@@ -45,7 +45,7 @@ Bittasini tanlang; har birining ai.md faylida vizual kontrakt, fayl xaritasi, is
 - Tanlangan dizaynning uslubini (shriftlar, rang rollari, kompozitsiya, amal tili) saqla; mazmun, navigatsiya va funksiyalarni biletga moslashtir.
 - Talab → foydalanuvchi amali → kod joyi → qabul sinovi jadvali bilan ishla. Asosiy oqimni oxirigacha, noto‘g‘ri kiritishni, 390/768/1366 px kengliklarni, klaviaturani va reloaddan keyingi saqlashni tekshir. Xatoni takrorla, sababini tuzat, qayta sina.
 - Natija, o‘zgargan fayllar va ochiq muammolarni loyihadagi HANDOFF.md ga yoz; tekshirilgan va tekshirilmaganni ajratib ayt.
-- Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, Talab texnologiya nomini sanamasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya/tayyorgarlik so‘rovi ham joriy ish doirasidir. `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.
+- Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Bilet texnologiya nomini aytmasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya yoki tayyorgarlik so‘rovi ham joriy ish doirasiga kiradi. Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.
 - Maxfiy kalitlar bu ochiq hujjatlarda yo‘q va kodga yozilmaydi.
 
 ## Boshqa manbalar

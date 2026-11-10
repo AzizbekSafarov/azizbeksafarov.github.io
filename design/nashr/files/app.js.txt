@@ -1,4 +1,4 @@
-import { data, normalize } from './model.js?v=3d46a94337';
+import { data, normalize } from './model.js?v=a2780ecc47';
 const SLUG = 'nashr';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];

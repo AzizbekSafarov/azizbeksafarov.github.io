@@ -1,4 +1,4 @@
-import { data, normalize, report, csv } from './model.js?v=d5b2701a45';
+import { data, normalize, report, csv } from './model.js?v=ecf9fff173';
 const SLUG = 'hisob';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];
@@ -83,7 +83,7 @@ let period = 7,
 function render() {
   const r = report(period, query, sort, direction),
     maximum = Math.ceil(Math.max(...r.series) / 30) * 30;
-  $('#metric-total').textContent = String(r.total).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  $('#metric-total').textContent = String(r.total).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
   $('#metric-change').textContent =
     (((r.total - r.previous) / r.previous) * 100).toFixed(1).replace('.', ',') + '%';
   $('#period-label').textContent = period + ' kun · namunaviy davr';

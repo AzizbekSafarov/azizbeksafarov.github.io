@@ -1,6 +1,6 @@
 # Orbita — editable source snapshot
 
-Source fingerprint: `7cb555556102d076ecd81dfeb26c97e387b8083f96f602d5917e11ec44672621`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `7175c0b856de4f073c51e85e1f365baab749b2d416b12e45e31226c90b33860b`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -17,11 +17,11 @@ Source fingerprint: `7cb555556102d076ecd81dfeb26c97e387b8083f96f602d5917e11ec446
     <meta name="theme-color" content="#071215" />
     <title>Orbita — Ilm-fan / kosmik atlas</title>
     <link rel="icon" href="mark.svg?v=3986cb32f9" />
-    <script type="module" src="app.js?v=10e89cee81"></script>
+    <script type="module" src="app.js?v=a86d81ebcf"></script>
     <link rel="preload" href="fonts/chakrapetch.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/mono.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=8398ba75d3" />
-    <link rel="stylesheet" href="layout.css?v=b3ad689ec1" />
+    <link rel="stylesheet" href="style.css?v=b58430f75d" />
+    <link rel="stylesheet" href="layout.css?v=38bfaf3aea" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>
@@ -940,7 +940,7 @@ body {
 ## site/app.js
 
 ```javascript
-import { data, normalize } from './model.js?v=e2364eb354';
+import { data, normalize } from './model.js?v=b317a166d7';
 const SLUG = 'orbita';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];

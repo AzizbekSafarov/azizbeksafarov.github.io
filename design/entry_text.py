@@ -26,9 +26,9 @@ TICKET_UZ = ('Bilet foydalanuvchidan keladi: chatda yoki loyihadagi `CURRENT-TAS
              'Tanlov mahsulotini qurish so‘ralib, ikkala joyda ham bilet bo‘lmasa, bilet matni va qolgan vaqtni bir marta so‘ra. Tayyorgarlik, audit yoki kutubxonani saqlash so‘rovida biletni to‘siq qilma; foydalanuvchining aniq ish doirasini bajar. Dizayn namunasi, test ma’lumoti va nizomdagi namunaviy bilet vazifa hisoblanmaydi.')
 
 BACKEND_UZ = ('Starter brauzerda ishlaydi va server talab qilmaydi. Bilet server, login yoki baza talab qilsa va joyda tashqi xizmatlarga ruxsat bo‘lsa, '
-              'Talab texnologiya nomini sanamasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya/tayyorgarlik so‘rovi ham joriy ish doirasidir. `ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.')
+              '`ARCHITECTURE.md` dagi Render + Supabase rejasidan foydalan (bu reja, hali yaratilgan xizmat emas). Bilet texnologiya nomini aytmasa ham zarur yechimni asosla; foydalanuvchining alohida integratsiya yoki tayyorgarlik so‘rovi ham joriy ish doirasiga kiradi. Demo natijani haqiqiy yuborish yoki to‘lov deb ko‘rsatma.')
 
-ZIP_ENTRY_UZ = 'ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida. Saytni `ochish.cmd` yoki `node serve.mjs` bilan oching: `index.html` ikki marta bosilsa brauzer skript va shriftlarni bloklaydi.'
+ZIP_ENTRY_UZ = 'ZIP ichida ish qoidalari va o‘qish tartibi `AGENTS.md` da. Kod `site/` papkasida. Saytni `ochish.cmd` yoki `node serve.mjs` bilan oching: `index.html` ikki marta bosilsa brauzer skript va shriftlarni bloklaydi. Foydalanuvchi rang, shrift, joylashuv, bo‘lim yoki matnni o‘zgartirishni aytsa, uning so‘zi vizual kontraktdan ustun; qayerni tahrirlashni `DESIGN-MAP.md` ko‘rsatadi.'
 
 
 def _bloom(t):
@@ -51,7 +51,7 @@ You are helping Azizbek Safarov in the Ustoz AI "Eng yaxshi veb-sayt" (best webs
 1. **The ticket** — in the chat or in `CURRENT-TASK.md`. This public package contains no ticket. When asked to build the competition product and neither place has a ticket, ask once for its text and the remaining time. Preparation, audits and library maintenance use the current user request; do not block those tasks on a missing ticket. Design samples, test fixtures and the example ticket quoted in the regulations are not the task.
 2. `HANDOFF.md` — work already done in this project.
 3. `AI-BRIEF.md` — this design: visual contract, file map, run and test commands, flows to keep working.
-   `DESIGN-MAP.md` — what to edit when the user says, in plain words, “change the colour”, “add a section” and so on: real tokens, fonts, files and sections of this design.
+   `DESIGN-MAP.md` — a plain request (“change the colour”, “add a section”) mapped to this design's real colours, fonts, files and sections.
 4. `COMPETITION.md`, `CURRENT-COMPETITION.md`, `SCORING-WORKPLAN.md` — rules and scoring. Use them to turn the ticket into acceptance checks and defence evidence.
 5. The `site/` files you will change, read in full before editing.
 
@@ -81,7 +81,7 @@ Deliver the strongest coherent product the real time, tools and venue rules allo
 
 ## How to work
 
-- **The user's explicit word on design wins.** When the user asks to change a colour, font, layout, section or wording, do it directly, using `DESIGN-MAP.md` to find the place, and carry it through consistently. Never refuse by citing the visual contract: it guards against accidental drift, not against the user. If a request conflicts with the ticket or venue rules, say so in one sentence and ask.
+- **The user's explicit design request wins** over the visual contract: make the change, find the place in `DESIGN-MAP.md`, apply it consistently. Only a conflict with the ticket or venue rules needs a one-sentence question.
 - Unless the user asks otherwise, keep the selected visual identity (fonts, colour roles, layout, interaction style). Replace sample content, navigation and features with the ticket's, and fix any defect you find in them. Do not swap the design or framework to fix a local bug.
 - Derive screens and navigation from the ticket's user journey; keep its explicit requirements and explain any material departure.
 - Separate explicit ticket requirements, the user's choices, necessary implementation decisions and optional ideas. If a ticket implies shared storage without naming a backend, explain that inference. Current project evidence outranks the public planned or unknown status.
@@ -90,6 +90,7 @@ Deliver the strongest coherent product the real time, tools and venue rules allo
 - {edit}
 - Preview: double-click `ochish.cmd`, or run `node serve.mjs` and open http://127.0.0.1:8080/ . Opening `index.html` directly blocks its module scripts and fonts, so keep `ochish.cmd`, `ochish.ps1`, `serve.mjs` and `kit.json` in the submitted folder. They preview the frontend only; a backend is run and checked separately.{' It serves the built `site/dist/`, so run `npm run build` after source changes.' if _bloom(t) else ''}
 - Preserve visible labels, focus, keyboard use, button/panel distinction, empty/error/success states and reduced motion. Insert user text with `textContent`, not `innerHTML`. If the stored data model changes, version the storage key; never clear unrelated browser data.
+- Chrome lacks Uzbek locale data (`toLocaleString('uz-UZ')` prints `1,290,000`, `M11 13`): format numbers, money and dates in code. Node tests will not show this.
 - Demo forms send nothing. Call an integration working only after it works.
 - Use `SCORING-WORKPLAN.md` to check completeness. Derive expected outcomes from the ticket, not from the function under test, and distinguish unit or mocked checks from observed browser or service behaviour.
 - Check the main flow end to end, invalid input, the 390/768/1366 px widths used in the criteria (plus 320 and 1440), persistence after reload and the console. Reproduce a bug, fix its cause, retest that path. An old QA report is a baseline, not proof for today's changes.
@@ -152,19 +153,20 @@ DESIGN_ROUTING_UZ = """
 
 Nom aytilsa, shu paketni oling va boshqasini taklif qilmang: Bloom → `bloom`, Yuksal yoki SI → `si`, Samar → `samar`, Forma → `forma`, Orbita → `orbita`, Nashr → `nashr`, Hisob → `hisob`, Ziyo → `ziyo`, Meros → `meros`. Paket: `/design/<nom>/source.zip` (kit ichida `<nom>/`). Ochgach `AGENTS.md`, keyin o‘zgartirish so‘ralganda `DESIGN-MAP.md`.
 
-Nom aytilmasa, biletga eng mosini bitta jumlada taklif qiling va davom eting:
+Nom aytilmasa, biletga eng mosini bitta jumlada taklif qiling va davom eting (jadval `ZAXIRA/CODEX.md` dagi bilan bir xil):
 
-| Bilet mavzusi | Dizayn |
+| Bilet turi | Dizayn |
 |---|---|
-| Statistika, hisobot, jadval, boshqaruv paneli | Hisob |
-| Ta’lim, kurs, test, dars | Ziyo |
-| Turizm, shahar, marshrut, bron, reja | Samar |
-| Do‘kon, katalog, savat, mahsulot | Forma |
-| Yangilik, blog, maqola, jurnal | Nashr |
-| Muzey, madaniyat, tarix, ko‘rgazma | Meros |
-| Ilm-fan, texnika, kosmos, ma’lumot atlasi | Orbita |
-| Vazifa, loyiha, shaxsiy ilova | Bloom |
-| Tashkilot, tashabbus, davlat, tanishtiruv sayti | Yuksal |
+| Kurs, dars, ta’lim | Ziyo |
+| Davlat yoki rasmiy xizmat | Yuksal |
+| Xizmat, hisobot, jadval, ma’lumotlar | Hisob |
+| Muzey, madaniyat, ko‘rgazma | Meros |
+| Sayohat, bron, joy | Samar |
+| Do‘kon, savat, mahsulot | Forma |
+| Yangiliklar, maqolalar | Nashr |
+| Texnik, ilmiy, monitoring | Orbita |
+| Boshqa mavzu (sport, tibbiyot, ovqat, navbat, ariza) | Ro‘yxat, tanlash, bron → Samar yoki Forma; jadval va hisob-kitob → Hisob |
+| React kerak bo‘lsa (internet va npm ishlasa) | Bloom |
 
-Bu tavsiya, qoida emas: foydalanuvchining tanlovi ustun.
+Bu tavsiya, qoida emas: foydalanuvchining tanlovi ustun. Starter tanlangach almashtirilmaydi.
 """

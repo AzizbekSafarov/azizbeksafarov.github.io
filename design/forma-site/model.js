@@ -63,7 +63,8 @@ export function total(value) {
   const cart = normalize(value);
   return products.reduce((sum, p) => sum + (cart[p.id] || 0) * p.price, 0);
 }
-export const money = n => new Intl.NumberFormat('uz-UZ').format(n) + ' so‘m';
+// Chrome has no Uzbek locale data, so the thousands are grouped here rather than by Intl.
+export const money = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0') + ' so‘m';
 export function exportCart(value) {
   const cart = normalize(value);
   return (

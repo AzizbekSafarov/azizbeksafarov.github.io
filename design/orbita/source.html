@@ -1,5 +1,5 @@
 <!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Tanlov uchun AI konteksti va tahrirlanadigan dizayn kodi"><title>Orbita — source</title><link rel="icon" href="/assets/hq/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../handoff/styles.css?v=560965086502"></head><body><a class="skip" href="#main">Asosiy mazmunga o‘tish</a><header><nav class="wrap"><a href="/">← Bosh qarorgoh</a><a href="/design/start/">AI bilan boshlash</a><a href="/design/">Tanlangan dizaynlar</a></nav></header><main id="main" class="wrap"><h1>Orbita — source</h1><p><a href="./">← Boshlash yo‘riqnomasi</a> · <a href="source.zip">To‘liq loyiha ZIP</a></p><article class="content"><h2>Orbita — editable source snapshot</h2>
-<p>Source fingerprint: <code>7cb555556102d076ecd81dfeb26c97e387b8083f96f602d5917e11ec44672621</code>. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under <code>site/</code> and listed with download links at the end of this file. Work from source.zip when you can.</p>
+<p>Source fingerprint: <code>7175c0b856de4f073c51e85e1f365baab749b2d416b12e45e31226c90b33860b</code>. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under <code>site/</code> and listed with download links at the end of this file. Work from source.zip when you can.</p>
 <h3>site/index.html</h3>
 <pre><code>&lt;!doctype html&gt;
 &lt;html lang=&quot;uz&quot;&gt;
@@ -13,11 +13,11 @@
     &lt;meta name=&quot;theme-color&quot; content=&quot;#071215&quot; /&gt;
     &lt;title&gt;Orbita — Ilm-fan / kosmik atlas&lt;/title&gt;
     &lt;link rel=&quot;icon&quot; href=&quot;mark.svg?v=3986cb32f9&quot; /&gt;
-    &lt;script type=&quot;module&quot; src=&quot;app.js?v=10e89cee81&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;app.js?v=a86d81ebcf&quot;&gt;&lt;/script&gt;
     &lt;link rel=&quot;preload&quot; href=&quot;fonts/chakrapetch.ttf&quot; as=&quot;font&quot; type=&quot;font/ttf&quot; crossorigin /&gt;
     &lt;link rel=&quot;preload&quot; href=&quot;fonts/mono.ttf&quot; as=&quot;font&quot; type=&quot;font/ttf&quot; crossorigin /&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css?v=8398ba75d3&quot; /&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;layout.css?v=b3ad689ec1&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css?v=b58430f75d&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;layout.css?v=38bfaf3aea&quot; /&gt;
     &lt;meta name=&quot;identity&quot; content=&quot;sector-v4&quot; /&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -924,7 +924,7 @@ body {
 }
 </code></pre>
 <h3>site/app.js</h3>
-<pre><code>import { data, normalize } from &#x27;./model.js?v=e2364eb354&#x27;;
+<pre><code>import { data, normalize } from &#x27;./model.js?v=b317a166d7&#x27;;
 const SLUG = &#x27;orbita&#x27;;
 const $ = s =&gt; document.querySelector(s),
   $$ = s =&gt; [...document.querySelectorAll(s)];

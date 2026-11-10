@@ -390,6 +390,9 @@ def build():
     build_workflow()
     from sync_context import sync
     sync()
+    # A changed runtime file must not stay behind an old cache key.
+    import asset_versions
+    asset_versions.refresh()
     from build_preparation import build as build_preparation, package_plan, RECEIPT
     build_preparation()
     from build_zaxira import prepare as prepare_zaxira

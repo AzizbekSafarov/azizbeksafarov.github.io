@@ -5,21 +5,21 @@
   "upgrade_qa_url": "https://azizbeksafarov.github.io/design/QA-UPGRADE.md",
   "schema_version": 1,
   "snapshot_date": "2026-11-03",
-  "source_fingerprint": "0b536113156ff80d5d84496f54ce5388d80e59dbf52d268cc33b09c3eb3fda9d",
+  "source_fingerprint": "265e9eb5a7615f78e7eb75212356d5e596a72bd809b1089a165b25a13274c7c4",
   "name": "Yuksal · SI",
   "slug": "si",
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "0e8cda33910b4f8ece313d9dfb7f0279cb7af7fa465a3b0fdb46c5108908a3f4",
-  "archive_bytes": 899426,
+  "archive_sha256": "7e56eed1da31284267c06b64e512a8fc0e4315507cf01dfce42c499faedda84a",
+  "archive_bytes": 899727,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
     {
       "path": "index.html",
       "url": "https://azizbeksafarov.github.io/design/si/files/index.html.txt",
-      "sha256": "57289666a39aa5d4f32b7f524ce77d4cb2aaa8a4f08a1185787f3f6eda451260",
+      "sha256": "ad695a479305c0f1d28b504e68fd01fb4cb006bc685ad9948c1744ed64ea50e9",
       "fallback_url": "https://raw.githubusercontent.com/AzizbekSafarov/azizbeksafarov.github.io/main/design/si/files/index.html.txt"
     },
     {
@@ -104,13 +104,13 @@
   "files": [
     {
       "path": "AGENTS.md",
-      "bytes": 7545,
-      "sha256": "3fbf246b3499e83e0ec1731b96fc016ed412e6a728e2b95983ec9a61209bbdc3"
+      "bytes": 7500,
+      "sha256": "bafccd7f2821cf734d55c649e326cd241c6644a5005882c80fd9ebe425c0b1cb"
     },
     {
       "path": "AI-BRIEF.md",
-      "bytes": 19876,
-      "sha256": "1c54192b4b09639564127c11e20accaeaef0116536b75f6dd03208703e54b46c"
+      "bytes": 20061,
+      "sha256": "0afc49e3a59f2faee2b705b7364c8dc08f9ba276215e55d1f42f3c468309d5b0"
     },
     {
       "path": "API-EVIDENCE.json",
@@ -195,7 +195,7 @@
     {
       "path": "HANDOFF.md",
       "bytes": 1223,
-      "sha256": "acdb624b248f423bde12d9542a5696dbbb7ba19fce34c8a7bfde5c7b5cca8316"
+      "sha256": "51a27a10a2e6819730e4a399136c6c745ef68ca748c6f14fca92fe6a3899509f"
     },
     {
       "path": "LIBRARY-AUDIT.md",
@@ -215,7 +215,7 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 18800,
-      "sha256": "c42c040cb77c233af305f31f1610e56e369d600295d58726a9bd777a276dbf90"
+      "sha256": "82713f562cce97eaeddcd5e8163b89223d5c6f8ab0ee23f404a2d672323691a4"
     },
     {
       "path": "PREPARATION.md",
@@ -240,7 +240,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "3791af60571d2f0b371ac7e79c0a8d854c2135445b652731d412425910993714"
+      "sha256": "6aadd4808a9d31ece9db150ce6ff56add1483c97f5bcaf0397c0399bdd4f7fa8"
     },
     {
       "path": "README.md",
@@ -279,8 +279,8 @@
     },
     {
       "path": "ZAXIRA/CODEX.md",
-      "bytes": 16670,
-      "sha256": "6e15ba90bad78348dac62ab3d9de0fc7c1d3d9ce4ae677fd564a0874e5dbcc20"
+      "bytes": 17152,
+      "sha256": "304ec5d22044bd5da9fa5a70e7eaa44e4f9af02e6cd249b58937a696ee841932"
     },
     {
       "path": "ZAXIRA/HIMOYA.md",
@@ -289,8 +289,8 @@
     },
     {
       "path": "ZAXIRA/JONLI-OZGARISH.md",
-      "bytes": 7771,
-      "sha256": "16eec72eda7ff7a93ec616b5cca91644ee78be519c109d36c05c7c8a92b5c82c"
+      "bytes": 7853,
+      "sha256": "20ec960ba553d7c399bde6319b717edbf89cd88c090d49c897e285d2b8ca8637"
     },
     {
       "path": "ZAXIRA/PROMPTLAR.md",
@@ -520,7 +520,7 @@
     {
       "path": "kit.json",
       "bytes": 294,
-      "sha256": "14f05655d64b4c8a33a4a03e05f743745082fd9790365b0ff07b4aa2244e4104"
+      "sha256": "fe72610366cf4b89c1c8c2e2d4e397c93f180f6dd02a30a9d6d0926e9a340ddc"
     },
     {
       "path": "ochish.cmd",
@@ -630,7 +630,7 @@
     {
       "path": "site/index.html",
       "bytes": 18242,
-      "sha256": "57289666a39aa5d4f32b7f524ce77d4cb2aaa8a4f08a1185787f3f6eda451260"
+      "sha256": "ad695a479305c0f1d28b504e68fd01fb4cb006bc685ad9948c1744ed64ea50e9"
     },
     {
       "path": "site/mark.svg",

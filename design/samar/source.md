@@ -1,6 +1,6 @@
 # Samar — editable source snapshot
 
-Source fingerprint: `ffb86daaf0823759bdcf25f9195332d763e4c0779b6905edf840a58bb6788c90`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `a4e5aeec952e7378946cf360d2e7f3969ee123c8eb00c6d5d3fa6a412a0b50a5`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -17,12 +17,12 @@ Source fingerprint: `ffb86daaf0823759bdcf25f9195332d763e4c0779b6905edf840a58bb67
     />
     <title>Samar — Samarqand o‘z ritmingizda</title>
     <link rel="icon" href="mark.svg?v=7840cff495" type="image/svg+xml" />
-    <script type="module" src="app.js?v=ffb8dcca4c"></script>
+    <script type="module" src="app.js?v=edd0418fad"></script>
     <meta name="composition" content="task-specific-v3" />
     <link rel="preload" href="fonts/lora.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/sourcesans3.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=835f1c97d9" />
-    <link rel="stylesheet" href="layout.css?v=43bd916786" />
+    <link rel="stylesheet" href="style.css?v=fd9f6f6846" />
+    <link rel="stylesheet" href="layout.css?v=26478c2b28" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>
@@ -1618,7 +1618,7 @@ body {
 ## site/app.js
 
 ```javascript
-import { places, normalize, schedule, clock, exportPlan } from './model.js?v=bcb8054ec2';
+import { places, normalize, schedule, clock, exportPlan } from './model.js?v=1604fda621';
 const key = 'samar-plan-v2';
 const $ = s => document.querySelector(s);
 let state = normalize(null),

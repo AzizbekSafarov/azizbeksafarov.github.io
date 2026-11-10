@@ -91,7 +91,7 @@ Panelsiz (faqat zarurat bo‘lsa): `malumot.js` ni Bloknot yoki VS Code’da och
 
 ## Dizayn starterlarida qayerni o‘zgartirish kerak
 
-Jadval amaldagi kod asosida avtomatik yaratilgan. Rang ustunida CSS fayllarda eng ko‘p uchragan rang kodlari va soni berilgan: bu sonlar rangning vazifasi yoki to‘g‘ri almashtirish ko‘rsatmasi emas. Tegishli selektor/tokenni tekshiring va faqat kerakli qoidadagi rangni o‘zgartiring. Asosiy matn fayllari ko‘pincha bir qatorga siqilgan — Ctrl+F bilan qidiring.
+Jadval amaldagi kod asosida avtomatik yaratilgan. Rang ustunida CSS fayllarda eng ko‘p uchragan rang kodlari va soni berilgan: bu sonlar rangning vazifasi yoki to‘g‘ri almashtirish ko‘rsatmasi emas. Tegishli selektor/tokenni tekshiring va faqat kerakli qoidadagi rangni o‘zgartiring. Har ZIP ildizidagi `DESIGN-MAP.md` shu dizaynning ranglari, shriftlari, fayllari va bo‘limlarini to‘liqroq ko‘rsatadi; kerakli matnni Ctrl+F bilan qidiring.
 
 | Dizayn | Asosiy sarlavha | `:root` rang o‘zgaruvchilari | Eng ko‘p rang kodlari (style.css + layout.css) |
 |---|---|---|---|

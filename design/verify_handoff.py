@@ -123,6 +123,8 @@ def verify():
     from build_handoff import CONTEXT_FILES, portable_bytes
     from verify_clean import verify as verify_current_only
     verify_current_only()
+    import asset_versions
+    assert not asset_versions.stale(),f'stale cache keys: {asset_versions.stale()}'
     catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))['templates']
     archived=[]
     policy=json.loads((ROOT/'curation.json').read_text(encoding='utf-8'))

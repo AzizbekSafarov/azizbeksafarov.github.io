@@ -1,4 +1,4 @@
-import { products, normalize, change, total, money, exportCart } from './model.js?v=878bdb00f7';
+import { products, normalize, change, total, money, exportCart } from './model.js?v=2fe39a6169';
 const $ = s => document.querySelector(s),
   key = 'forma-cart-v2';
 let cart = normalize(null),

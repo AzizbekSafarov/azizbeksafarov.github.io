@@ -1,6 +1,6 @@
 # Hisob — editable source snapshot
 
-Source fingerprint: `9ab09c23701bd2d814301d7b6cd8f2e5041a3db4d649f0495b9fdfb7e3d31d4d`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `ea72052a38b559e2357ea24e28b0527530bf1d667898b367c8e7a99477049fd5`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -17,11 +17,11 @@ Source fingerprint: `9ab09c23701bd2d814301d7b6cd8f2e5041a3db4d649f0495b9fdfb7e3d
     <meta name="theme-color" content="#edf0f2" />
     <title>Hisob — Ma’lumot / tahlil paneli</title>
     <link rel="icon" href="mark.svg?v=9320b39c9a" />
-    <script type="module" src="app.js?v=34253263bc"></script>
+    <script type="module" src="app.js?v=5ce58e8bda"></script>
     <link rel="preload" href="fonts/publicsans.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/ibmplexsanscondensed.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=4802109c8e" />
-    <link rel="stylesheet" href="layout.css?v=52cdb23238" />
+    <link rel="stylesheet" href="style.css?v=314481c9da" />
+    <link rel="stylesheet" href="layout.css?v=e93a8a4352" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>
@@ -994,7 +994,7 @@ tbody td {
 ## site/app.js
 
 ```javascript
-import { data, normalize, report, csv } from './model.js?v=d5b2701a45';
+import { data, normalize, report, csv } from './model.js?v=ecf9fff173';
 const SLUG = 'hisob';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];
@@ -1079,7 +1079,7 @@ let period = 7,
 function render() {
   const r = report(period, query, sort, direction),
     maximum = Math.ceil(Math.max(...r.series) / 30) * 30;
-  $('#metric-total').textContent = String(r.total).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  $('#metric-total').textContent = String(r.total).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00a0');
   $('#metric-change').textContent =
     (((r.total - r.previous) / r.previous) * 100).toFixed(1).replace('.', ',') + '%';
   $('#period-label').textContent = period + ' kun · namunaviy davr';

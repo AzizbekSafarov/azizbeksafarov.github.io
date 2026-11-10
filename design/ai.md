@@ -43,18 +43,19 @@ Saqlangan nizom matnlari bilan muvofiqlik tahriri: 2026-11-02. Tashqi qoidalar o
 
 Nom aytilsa, shu paketni oling va boshqasini taklif qilmang: Bloom → `bloom`, Yuksal yoki SI → `si`, Samar → `samar`, Forma → `forma`, Orbita → `orbita`, Nashr → `nashr`, Hisob → `hisob`, Ziyo → `ziyo`, Meros → `meros`. Paket: `/design/<nom>/source.zip` (kit ichida `<nom>/`). Ochgach `AGENTS.md`, keyin o‘zgartirish so‘ralganda `DESIGN-MAP.md`.
 
-Nom aytilmasa, biletga eng mosini bitta jumlada taklif qiling va davom eting:
+Nom aytilmasa, biletga eng mosini bitta jumlada taklif qiling va davom eting (jadval `ZAXIRA/CODEX.md` dagi bilan bir xil):
 
-| Bilet mavzusi | Dizayn |
+| Bilet turi | Dizayn |
 |---|---|
-| Statistika, hisobot, jadval, boshqaruv paneli | Hisob |
-| Ta’lim, kurs, test, dars | Ziyo |
-| Turizm, shahar, marshrut, bron, reja | Samar |
-| Do‘kon, katalog, savat, mahsulot | Forma |
-| Yangilik, blog, maqola, jurnal | Nashr |
-| Muzey, madaniyat, tarix, ko‘rgazma | Meros |
-| Ilm-fan, texnika, kosmos, ma’lumot atlasi | Orbita |
-| Vazifa, loyiha, shaxsiy ilova | Bloom |
-| Tashkilot, tashabbus, davlat, tanishtiruv sayti | Yuksal |
+| Kurs, dars, ta’lim | Ziyo |
+| Davlat yoki rasmiy xizmat | Yuksal |
+| Xizmat, hisobot, jadval, ma’lumotlar | Hisob |
+| Muzey, madaniyat, ko‘rgazma | Meros |
+| Sayohat, bron, joy | Samar |
+| Do‘kon, savat, mahsulot | Forma |
+| Yangiliklar, maqolalar | Nashr |
+| Texnik, ilmiy, monitoring | Orbita |
+| Boshqa mavzu (sport, tibbiyot, ovqat, navbat, ariza) | Ro‘yxat, tanlash, bron → Samar yoki Forma; jadval va hisob-kitob → Hisob |
+| React kerak bo‘lsa (internet va npm ishlasa) | Bloom |
 
-Bu tavsiya, qoida emas: foydalanuvchining tanlovi ustun.
+Bu tavsiya, qoida emas: foydalanuvchining tanlovi ustun. Starter tanlangach almashtirilmaydi.

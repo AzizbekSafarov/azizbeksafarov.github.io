@@ -1,6 +1,6 @@
 # Nashr — editable source snapshot
 
-Source fingerprint: `bc90268fa9eb165e86f31659137f1c5684cf2a48eef0dddff43dc7170517c679`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `b48e693ab0ecb0c2e93edbe0067938055bfb358bcbf2292d087bcee2e81b41ff`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -17,11 +17,11 @@ Source fingerprint: `bc90268fa9eb165e86f31659137f1c5684cf2a48eef0dddff43dc717051
     <meta name="theme-color" content="#eeebde" />
     <title>Nashr — Tahririyat / raqamli gazeta</title>
     <link rel="icon" href="mark.svg?v=41463dc5a6" />
-    <script type="module" src="app.js?v=c1692ce072"></script>
+    <script type="module" src="app.js?v=fbc1a4b33f"></script>
     <link rel="preload" href="fonts/news.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/ptserif.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=78cac5e1ed" />
-    <link rel="stylesheet" href="layout.css?v=2e8d5e931b" />
+    <link rel="stylesheet" href="style.css?v=c88a3779f6" />
+    <link rel="stylesheet" href="layout.css?v=4acaf3e3ca" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>
@@ -935,7 +935,7 @@ body {
 ## site/app.js
 
 ```javascript
-import { data, normalize } from './model.js?v=3d46a94337';
+import { data, normalize } from './model.js?v=a2780ecc47';
 const SLUG = 'nashr';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];

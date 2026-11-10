@@ -1,6 +1,6 @@
 # Ziyo — editable source snapshot
 
-Source fingerprint: `a7eb09cff84132f8df64699d0d1f4a2b5fc38bc750ce211c78cff6ad14fd6d95`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
+Source fingerprint: `ecfa6a7066b06265707a4f5ca0d131268ea02e2ba86e77742b29ddfee4d75325`. This export holds every text file that shapes the design. Fonts, photos and icons are binary: they are in source.zip under `site/` and listed with download links at the end of this file. Work from source.zip when you can.
 
 ## site/index.html
 
@@ -17,12 +17,12 @@ Source fingerprint: `a7eb09cff84132f8df64699d0d1f4a2b5fc38bc750ce211c78cff6ad14f
     <meta name="theme-color" content="#ffedd6" />
     <title>Ziyo — Ta’lim / interaktiv dars</title>
     <link rel="icon" href="mark.svg?v=4dfc3aa135" />
-    <script type="module" src="app.js?v=3ccf7e52a4"></script>
+    <script type="module" src="app.js?v=b3ed5a307f"></script>
     <meta name="composition" content="task-specific-v3" />
     <link rel="preload" href="fonts/breeserif.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="fonts/nunitosans.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="style.css?v=12f3014ab3" />
-    <link rel="stylesheet" href="layout.css?v=052fd06160" />
+    <link rel="stylesheet" href="style.css?v=8a55da648c" />
+    <link rel="stylesheet" href="layout.css?v=bdff9962e5" />
     <meta name="identity" content="sector-v4" />
   </head>
   <body>
@@ -1016,8 +1016,8 @@ body {
 ## site/app.js
 
 ```javascript
-import { showLesson } from './identity.js?v=a0ccb35df4';
-import { data, normalize, grade } from './model.js?v=3419133037';
+import { showLesson } from './identity.js?v=0f200d48ab';
+import { data, normalize, grade } from './model.js?v=e82989d08d';
 const SLUG = 'ziyo';
 const $ = s => document.querySelector(s),
   $$ = s => [...document.querySelectorAll(s)];

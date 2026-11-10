@@ -57,7 +57,7 @@ Bu so‘rovlar foydalanuvchi uchun ixtiyoriy bosqichlar. AI allaqachon ishni oxi
 
 ```text
 Men bilan o'zbekcha gaplash. Men kod yozmayman: sen kod yozasan, men talab qo'yaman va natijani tekshiraman.
-AGENTS.md dagi tartib bilan o'qi: AI-BRIEF.md, tanlov qoidalari (COMPETITION.md, CURRENT-COMPETITION.md, SCORING-WORKPLAN.md) va site/ ichidagi kod.
+AGENTS.md dagi tartib bilan o'qi: AI-BRIEF.md, DESIGN-MAP.md, tanlov qoidalari (COMPETITION.md, CURRENT-COMPETITION.md, SCORING-WORKPLAN.md) va site/ ichidagi kod.
 REGULATIONS.md va FULL-COMPETITION-CONTEXT.md dan biletga tegishli savol tug'ilsa, o'sha bo'limni o'qi.
 
 Quyida tanlov bileti. Hali kod yozma. Faqat:
@@ -79,7 +79,7 @@ Rejani o‘qing. Biletdagi biror talab tushib qolgan bo‘lsa, ayting: `Biletdag
 
 ```text
 Rejani tasdiqlayman. Endi qur. Qoidalar:
-- Tanlangan dizaynning uslubini (shrift, kompozitsiya, rang tili) saqla, mazmun va funksiyalarni biletga moslashtir.
+- Men boshqacha aytmagan joyda tanlangan dizaynning uslubini (shrift, kompozitsiya, rang tili) saqla, mazmun va funksiyalarni biletga moslashtir. Sana, narx va sonlarni o'zbekcha ko'rinishda o'zing formatla: brauzerda 'uz-UZ' formati ishlamaydi.
 - Starterning texnologiyasida qol (HTML starterlarda oddiy HTML/CSS/JS, Bloom'da mavjud React loyihasi). Frameworkni zaruratsiz almashtirma. Bilet integratsiyasi uchun zarur SDK bo'lsa sababini yoz va mos dependency/lockfile ishlat. Lokal resurslar internet uzilganda ochilsin; haqiqiy server/API amali esa internet talab qilishini yashirma.
 - Matn, ma'lumot va rangning haqiqiy manbasi oson topilsin; mavjud model/component/theming tuzilmasini saqla va xaritasini yoz. Barcha matnni majburan bitta faylga ko'chirma. Bloom'da dinamik rang generatori va semantik rang rollari birga ishlaydi; bitta CSS rangiga almashtirma.
 - Har forma: majburiy maydonlar, noto'g'ri qiymatda tushunarli xabar, muvaffaqiyatli natija. Biletda lokal saqlash yetarli bo'lsa localStorage; server/login/umumiy baza yoki maxfiy API talab qilinsa va ruxsat bo'lsa ARCHITECTURE.md bo'yicha backend qur. Lokal natijani serverga yuborildi dema.
@@ -132,7 +132,7 @@ Keyin shu papka yonida [bosqich]_[ishtirokchi-kodi]_[bilet-raqami] papkasini yar
 site/, biz qo'shgan server/, migratsiya, deploy sozlamalari, package.json va lockfile, .env.example (bo'lsa), README.md, dalillar/, ochish.cmd, ochish.ps1, serve.mjs, kit.json.
 Kirmasin: .env va maxfiy kalitlar, node_modules, tayyorgarlik hujjatlari (AGENTS.md, ZAXIRA/, REGULATIONS.md, LIBRARY-*, FULL-COMPETITION-CONTEXT.md va boshqalar). Bloom'da avval build qil.
 Backend bo'lsa README'da uni ishga tushirish va deploy yo'lini yoz, topshirish papkasidan ishga tushib, asosiy oqim oxirigacha ishlashini ham tekshir: ochish.cmd faqat frontendni ko'rsatadi.
-O'sha yangi papkadagi ochish.cmd bilan sayt ishlashini tekshir va natijani ayt.
+O'sha yangi papkada `node serve.mjs` ni ishga tushirib sayt ochilishini va asosiy oqimni tekshir, natijani ayt. ochish.cmd ni men o'zim ikki marta bosib ko'raman.
 ```
 
 Asosiy amalning 1–2 daqiqalik videosini **o‘zingiz** yozing (Windows’da **Win+Alt+R** yoki joyda ruxsat etilgan usul) va `dalillar/` ga qo‘shing. Topshirish yo‘lini joyda aniqlang: tekshiriladigan havola yoki mahalliy ishga tushirish. Papka nomi va `README.md` dagi kodni o‘zingiz tekshiring. `HIMOYA.md` va `JONLI-OZGARISH.md` topshirilmaydi: ular himoya uchun o‘zingizda, ish papkasida qoladi.
@@ -150,6 +150,7 @@ Asosiy amalning 1–2 daqiqalik videosini **o‘zingiz** yozing (Windows’da **
 | Tushunarsiz javob | `Kod bilmayman. Nima qilganingni 3 ta oddiy gapda ayt va men nimani tekshirishim kerak.` |
 | Bir joyda aylanib qoldi (2 urinishdan keyin) | `To'xta. Muammoni boshqa yo'l bilan, eng sodda usulda hal qil.` Yoki o‘sha funksiyani soddalashtiring. |
 | Ko‘rinish yoqmadi | `[sahifa] da [element] [muammo]. Faqat shu joyni tuzat.` Aniq joy va aniq muammo. |
+| Rang, shrift yoki joylashuvni o‘zgartirmoqchisiz | Oddiy so‘z bilan ayting: `Asosiy rangni to'q yashil qil, butun saytda izchil bo'lsin, kontrastni tekshir.` Sizning aniq so‘zingiz dizayn uslubidan ustun; Codex joyni `DESIGN-MAP.md` dan topadi. |
 | Codex ruxsat so‘radi | Amal nimani o‘zgartirishi va nima uchun kerakligini o‘qing. Papka ichida ekanining o‘zi xavfsizlik dalili emas; zarur tashqi xizmat yoki bog‘liqlik ham asosli bo‘lishi mumkin. Tushunarsiz yoki ish doirasidan tashqari amalni aniqlashtiring. |
 
 ## 4. Vaqt va limit nazorati
