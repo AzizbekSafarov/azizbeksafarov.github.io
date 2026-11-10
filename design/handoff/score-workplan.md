@@ -76,7 +76,7 @@ Amaliy vaqt joriy bilet yoki tashkilotchi ko‘rsatmasidan olinadi. Reja → ish
 
 ## Himoya va topshirish
 
-5 daqiqa muammo/yechim; 5 daqiqa to‘liq oqim, xato va mobil namoyish; 5 daqiqa savol-javob. Ishtirokchi AI hissasi, o‘z tahriri, saqlash va cheklovlarni tushuntiradi. Matn/rang/elementni qo‘lda o‘zgartirish mashqi ham o‘tiladi, chunki manbalarda himoyadagi tahrir talabi farq qiladi.
+5 daqiqa muammo/yechim; 5 daqiqa to‘liq oqim, xato va mobil namoyish; 5 daqiqa savol-javob. Ishtirokchi AI hissasi, o‘z tahriri, saqlash va cheklovlarni tushuntiradi. Matn/rang/elementni qo‘lda o‘zgartirish mashqi ham o‘tiladi: portal (2026-11-10) imzoli qarordagi bandni takrorlaydi — ekspert kichik jonli o‘zgartirish so‘rashi mumkin va uni bajara olmaslik ishni baholashdan chiqaradi.
 
 Topshirish yo‘riqnomasi bo‘yicha ishlaydigan link yoki lokal run, manba nusxasi, qisqa tavsif, real test qaydi va manbalar. 3–5 tasvir va 1–2 daqiqalik video loyiha hujjatidagi tavsiya, tasdiqlangan majburiy talab deb ko‘rsatilmaydi.
 

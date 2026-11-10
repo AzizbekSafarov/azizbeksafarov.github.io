@@ -200,7 +200,7 @@ Secret, session cookie, haqiqiy request body yoki shaxsiy ma’lumotni log/namun
 
 INTRO = '''# AI bilan ish tartibi va ehtimoliy muammolar
 
-Yo‘riqnoma tahriri: 2026-11-02; tashqi manbalar tekshiruvi: 2026-10-28. Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
+Yo‘riqnoma tahriri: 2026-11-02; tashqi manbalar tekshiruvi: 2026-11-10 (tanlov portali), 2026-10-28 (nizom va provayder hujjatlari). Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
 
 ## 1. Avval joriy vazifani bil
 
@@ -335,7 +335,7 @@ Asosiy foydalanuvchi oqimi haqiqiy muhitda ishlaydi; talab qilingan saqlash va m
       'status_interpretation': 'approved means user-selected preparation plan, not organizer approval. planned/unknown describe this public snapshot only; current user evidence and project HANDOFF supersede them. verified refers only to the stated evidence and date, not whole-product certification.',
       'approved_stack': {'hosting': 'Render Web Service: frontend + Node.js API', 'monitoring': 'UptimeRobot GET /health every 5 minutes', 'backend': 'Supabase PostgreSQL/Auth/RLS/Storage', 'login': 'Google OAuth through Supabase', 'ai': ['Groq', 'Gemini'], 'messaging': 'Telegram Bot API'},
       'verified': [{'item': 'Published design library', 'evidence': '/design/catalog.json'}, {'item': 'Historical provider connectivity probes (2026-10-18), not retested today', 'evidence': '/api/verification.json'}],
-      'competition_source_update': {'as_of':'2026-10-28','report':'/design/handoff/current-competition.md','facts':'/design/handoff/current-competition-facts.json','not_live':True,'provider_connectivity_evidence_date':'2026-10-18'},
+      'competition_source_update': {'as_of':'2026-11-10','report':'/design/handoff/current-competition.md','facts':'/design/handoff/current-competition-facts.json','not_live':True,'provider_connectivity_evidence_date':'2026-10-18'},
       'planned': ['competition Render service', 'UptimeRobot monitor', 'competition Supabase project', 'Google OAuth client/redirect setup', 'end-to-end app/AI/Telegram integration'],
       'unknown': ['current ticket', 'remaining competition time', 'on-site account/template permissions', 'final product domain', 'provider billing tiers', 'current credential validity and remaining quota', 'whether backup keys have independent quotas'],
       'historical_alternatives': ['Cloudflare frontend hosting', 'Vercel competition frontend hosting'],

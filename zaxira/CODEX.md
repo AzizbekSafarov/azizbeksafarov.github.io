@@ -139,6 +139,8 @@ Asosiy amalning 1–2 daqiqalik videosini **o‘zingiz** yozing (Windows’da **
 
 ### C6 — Jonli o‘zgarish mashqi (5 daqiqa, AI’siz)
 
+Tanlov portaliga ko‘ra ekspert himoyada kichik o‘zgartirish (matn, rang, element) so‘rashi mumkin; uni o‘z qurilmangizda bajara olmasangiz, ish baholashdan chiqariladi. Shu mashqni o‘tkazib yubormang.
+
 `JONLI-OZGARISH.md` ga qarab **o‘zingiz** bitta matn va asosiy rangni o‘zgartiring → Ctrl+S → Bloom production preview bo‘lsa qayta build → brauzerda Ctrl+Shift+R. Ishlamasa, Codex’dan: `JONLI-OZGARISH.md ni men tushunadigan qilib soddalashtir; men X ni o'zgartirmoqchi edim, mana bu bo'ldi: Y.`
 
 ## 3. Xato bo‘lganda — tayyor iboralar

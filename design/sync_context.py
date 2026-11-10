@@ -36,7 +36,7 @@ def sync():
         assert digest==published[source]['sha256'], 'Rebuild research context first: '+source
         (DEST/target).write_bytes(data)
         records.append({'source':source,'source_url':BASE+source,'target':target,'sha256':digest})
-    origin={'schema_version':1,'research_as_of':'2026-10-28','historical_research_as_of':'2026-10-09','package_edited_at':'2026-10-28',
+    origin={'schema_version':1,'research_as_of':'2026-11-10','historical_research_as_of':'2026-10-09','package_edited_at':'2026-10-28',
             'source_repository':'https://github.com/AzizbekSafarov/ustoz','files':records}
     (DEST/'context-origin.json').write_text(json.dumps(origin,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     verify()

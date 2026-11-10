@@ -1,6 +1,6 @@
 # Jonli o‘zgarish — AI’siz tahrir qo‘llanmasi
 
-Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Ishtirokchi buni o‘z qurilmasida bajara olmasa, ish baholanmaydi. Ustoz AI saytidagi nizom nusxasida bu band yo‘q, baholash loyihasi esa topshirilgan loyihani o‘zgartirmaslikni aytadi — joydagi ko‘rsatma hal qiladi. Eng qattiq holatga tayyor bo‘lish uchun quyidagilarni AI’siz bajarishni oldindan mashq qiling.
+Imzolangan nizomga ko‘ra ekspert himoyada matn, rang, element yoki kontentni real vaqtda o‘zgartirishni so‘rashi mumkin. Ishtirokchi buni o‘z qurilmasida bajara olmasa, ish baholanmaydi. Tanlov portali (2026-11-10) shu bandni takrorlaydi, shuning uchun buni haqiqiy talab deb qabul qiling. Ustoz AI saytidagi nizom nusxasida bu band yo‘q, baholash loyihasi esa topshirilgan loyihani o‘zgartirmaslikni aytadi — joydagi ko‘rsatma hal qiladi. Eng qattiq holatga tayyor bo‘lish uchun quyidagilarni AI’siz bajarishni oldindan mashq qiling.
 
 ## Dizayn starterida yoki boshqa loyihada — umumiy usul
 

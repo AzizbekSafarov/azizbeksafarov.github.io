@@ -2,13 +2,13 @@
 
 Bu ochiq to‘plamda joriy bilet yo‘q; uni foydalanuvchi beradi. Dizayn demosi, tarixiy reja, tekshiruv fixture’i va nizom loyihasining 11-sahifasidagi namunaviy bilet vazifa hisoblanmaydi ([10-TASK-BOUNDARY.json](https://azizbeksafarov.github.io/ustoz/10-TASK-BOUNDARY.json)).
 
-Qoidalar bo‘yicha joriy tekshiruv: **2026-10-28**. [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) va [09-CURRENT-FACTS.json](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
+Qoidalar bo‘yicha joriy tekshiruv: **2026-11-10** (portal) va **2026-10-28** (nizom, amaliy tartib). [08-CURRENT.md](https://azizbeksafarov.github.io/ustoz/08-CURRENT.md) va [09-CURRENT-FACTS.json](https://azizbeksafarov.github.io/ustoz/09-CURRENT-FACTS.json) faqat nizom, baholash, amaliy tartib va ruxsatlarni jamlaydi. Yangi tasdiqlangan nizom/texnik qoida topilmadi; sayt PDF’i o‘sha nusxa. Yangi portal 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi; yangi ish davomiyligi yoki akkaunt siyosati tasdiqlanmadi.
 
 01-RESEARCH.md, 03-STATISTICS.csv, 04-VIDEO-POSTER.md va 07-FACTS.json ichidagi 2026-10-09 qaydlari tarixiy. 02-WORKFLOW.md esa joriy qayta ishlatiladigan ish yo‘riqnomasi. Ularning statistika yoki sovrin tafsilotlari amaliy ishga yangi qoida emas. Joriy bilet va joydagi rasmiy ko‘rsatma ustuvor.
 
 ## Hozirgi ish va tarixiy xabarni ajratish
 
-Ishtirokchi 2026-10-09 kuni Urgutdan Samarqand viloyat bosqichiga yo‘llanma olganini va bosqich 2026-10-13 uchun rejalashtirilganini bildirgan. Bu tarixiy xabar. Paketda bosqich o‘tkazilgani, uning natijasi, yangi bosqich yoki yangi sana tasdiqlanmagan. 13-oktabrni kelajakdagi sana, joriy bosqich yoki bugungi topshiriq deb avtomatik qabul qilmang.
+Ishtirokchi 2026-10-09 kuni Urgutdan Samarqand viloyat bosqichiga yo‘llanma olganini va bosqich 2026-10-13 uchun rejalashtirilganini bildirgan. Bu tarixiy xabar. Paketda bosqich o‘tkazilgani, uning natijasi, yangi bosqich yoki yangi sana tasdiqlanmagan. 13-oktabrni kelajakdagi sana, joriy bosqich yoki bugungi topshiriq deb avtomatik qabul qilmang. 2026-11-10 holatida tanlov portali Samarqand viloyati hududiy bosqichini 2026-yil 13-noyabr deb e’lon qilgan; soat va manzil portalda hali yo‘q.
 
 Foydalanuvchining hozirgi topshirig‘i, haqiqiy bileti, amaldagi reglamenti va haqiqiy qolgan vaqt ishni belgilaydi. Tayyorgarlik fayllari rasmiy bilet o‘rnini bosmaydi. 120 daqiqa — eski mashq ssenariysi, tasdiqlangan umumiy limit emas. Akkaunt, tarif, model va foydalanish limitlari bo‘yicha 2026-10-09 qaydlari bugungi holatning kafolati emas.
 

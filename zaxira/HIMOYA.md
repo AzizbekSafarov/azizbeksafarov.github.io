@@ -6,7 +6,7 @@ Yagona qayta ishlatiladigan ssenariy. Manba: imzoli qarorning yo‘nalishlar bo�
 
 - 0:00–1:00: kim uchun, qaysi muammo, biletdagi asosiy natija.
 - 1:00–2:00: haqiqatan qurilgan sahifa/ekranlar va asosiy oqim.
-- 2:00–3:00: tanlangan vosita, starter manbasi, aynan nimalar moslashtirilgani. AI va shaxsiy hissani ajrating.
+- 2:00–3:00: tanlangan vosita, starter manbasi, aynan nimalar moslashtirilgani. AI va shaxsiy hissani ajrating. “Zamonaviy texnologiyalardan foydalanish” alohida mezon (20 ball): qaysi AI va veb-vositalar nima uchun ishlatilganini aniq ayting.
 - 3:00–4:00: bajarilgan sinov, topilgan xato va qayta sinov natijasi.
 - 4:00–5:00: real cheklovlar va biletdagi talablarning bajarilish holati.
 
@@ -35,4 +35,4 @@ Bular savol namunasi; ekspert aynan shularni so‘rashi kafolatlanmagan. Cheklov
 
 ## Loyiha uchun HIMOYA.md tayyorlash
 
-AI ushbu ssenariy asosida loyiha ildizida alohida HIMOYA.md yaratadi: haqiqiy sahifalar, amallar, tekshiruv dalillari va cheklovlar bilan to‘ldiradi. ZAXIRA/HIMOYA.md umumiy manba bo‘lib qoladi. Himoyada jonli tahrir talabi manbalarda ziddiyatli; joydagi ko‘rsatmani aniqlang va JONLI-OZGARISH.md bo‘yicha oldindan mashq qiling. Ruxsatsiz topshirilgan nusxani o‘zgartirmang.
+AI ushbu ssenariy asosida loyiha ildizida alohida HIMOYA.md yaratadi: haqiqiy sahifalar, amallar, tekshiruv dalillari va cheklovlar bilan to‘ldiradi. ZAXIRA/HIMOYA.md umumiy manba bo‘lib qoladi. Tanlov portali (2026-11-10) imzoli qaror bandini takrorlaydi: ekspert taqdimot vaqtida kichik jonli o‘zgartirish (matn, rang, element) so‘rashi mumkin, uni o‘z qurilmasida bajara olmaslik ishni baholashdan chiqaradi. JONLI-OZGARISH.md bo‘yicha oldindan mashq qiling va joydagi ko‘rsatmaga amal qiling. Ruxsatsiz topshirilgan nusxani o‘zgartirmang.

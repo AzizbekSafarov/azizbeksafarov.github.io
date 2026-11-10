@@ -1,6 +1,6 @@
 # AI bilan ish tartibi va ehtimoliy muammolar
 
-Yo‘riqnoma tahriri: 2026-11-02; tashqi manbalar tekshiruvi: 2026-10-28. Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
+Yo‘riqnoma tahriri: 2026-11-02; tashqi manbalar tekshiruvi: 2026-11-10 (tanlov portali), 2026-10-28 (nizom va provayder hujjatlari). Tanlov manbalari CURRENT-COMPETITION.md’da yangilangan; 18-oktabr API probeslari o‘z sanasida tarixiy qoladi. Ushbu sahifa boshqa AI’ga kontekstni tushunish va foydalanuvchiga tartibni saqlash uchun. Quyidagi xatolar ehtimoliy ssenariylar; hammasi bizda sodir bo‘lgan deb tushunilmasin. Bu ochiq qo‘llanma maxfiy ombor yoki avtomatik boshqaruv ruxsati emas.
 
 ## 1. Avval joriy vazifani bil
 

@@ -25,7 +25,7 @@
     }
   ],
   "competition_source_update": {
-    "as_of": "2026-10-28",
+    "as_of": "2026-11-10",
     "report": "/design/handoff/current-competition.md",
     "facts": "/design/handoff/current-competition-facts.json",
     "not_live": true,

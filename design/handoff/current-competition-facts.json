@@ -1,21 +1,59 @@
 {
   "schema_version": 1,
   "scope": "current_rules_review",
-  "as_of": "2026-10-28",
+  "as_of": "2026-11-10",
   "new_approved_rulebook_found": false,
   "regulations": {
     "current_site_pdf_same_as_saved": true,
     "site_pdf_url": "https://ustoz.ai/tanlov/nizom.pdf",
     "site_pdf_sha256": "b96018da0184cbabc5cd09a1864abcd895b68441a9f503b5bec6ff8ff71f378e",
-    "detailed_criteria_draft_approval_confirmed": false
+    "detailed_criteria_draft_approval_confirmed": false,
+    "site_pdf_rechecked_on": "2026-11-09"
   },
   "portal_explanatory_copy": {
     "url": "https://zamonaviykasblar2026.uz/",
-    "status": "public explanatory text; not a newly approved regulation",
+    "status": "organizers' public portal; cites the joint decision of 2026-07-13, annex 4, as the basis of its rules summary; not a newly approved regulation",
     "task_delivery": "expert task provided at the same time",
     "defence_minutes": 15,
     "criteria_count": 6,
-    "total_points": 100
+    "total_points": 100,
+    "reviewed_on": "2026-11-10",
+    "defence_presentation_minutes": 5,
+    "extra_defence_time": false,
+    "website_criteria_points": {
+      "quality_and_functionality": 30,
+      "relevance_and_content": 20,
+      "modern_technologies": 20,
+      "design_ux_ui": 10,
+      "presentation": 10,
+      "creativity_originality": 10
+    },
+    "tie_break_order": [
+      "criterion 1: quality and functionality",
+      "criterion 5: modern technologies",
+      "closed vote of the experts"
+    ],
+    "live_edit": "An expert may ask for a small real-time change (text, colour, element) during the presentation; a participant who cannot make it on their own device is removed from assessment.",
+    "appeal": "within 2 working days after results are announced, once per stage",
+    "regional_stage_dates": {
+      "2026-11-11": [
+        "Buxoro viloyati"
+      ],
+      "2026-11-12": [
+        "Jizzax viloyati"
+      ],
+      "2026-11-13": [
+        "Qoraqalpog‘iston Respublikasi",
+        "Samarqand viloyati",
+        "Surxondaryo viloyati",
+        "Sirdaryo viloyati",
+        "Toshkent shahri"
+      ],
+      "2026-11-14": [
+        "Andijon viloyati"
+      ]
+    },
+    "samarqand_website_district_winners_listed": 16
   },
   "historical_signed_weights": [
     30,
@@ -29,7 +67,14 @@
   "confirmed_new_account_policy": null,
   "confirmed_new_prebuilt_backend_policy": null,
   "confirmed_new_internet_template_restrictions": null,
-  "confirmed_new_live_edit_policy": null,
-  "confirmed_current_samarqand_schedule": null,
-  "practical_action": "Use the actual ticket, remaining time and on-site rules; do not promote historical drafts to new approved requirements."
+  "confirmed_new_live_edit_policy": "Portal restates the signed decision: live edit may be requested; failure removes the work from assessment. The unapproved draft clause 17 says otherwise and is not cited by the portal.",
+  "confirmed_current_samarqand_schedule": {
+    "date": "2026-11-13",
+    "time": null,
+    "venue": null,
+    "source": "https://zamonaviykasblar2026.uz/",
+    "note": "Region card on the portal still reads \"Hozircha e’lon qilinmagan\" for time and venue."
+  },
+  "practical_action": "Use the actual ticket, remaining time and on-site rules; do not promote historical drafts to new approved requirements. Be ready to make a small live change by hand during the defence.",
+  "previous_review": "2026-10-28"
 }
