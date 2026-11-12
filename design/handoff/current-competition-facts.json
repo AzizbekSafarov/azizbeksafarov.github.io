@@ -36,21 +36,8 @@
     "live_edit": "An expert may ask for a small real-time change (text, colour, element) during the presentation; a participant who cannot make it on their own device is removed from assessment.",
     "appeal": "within 2 working days after results are announced, once per stage",
     "regional_stage_dates": {
-      "2026-11-11": [
-        "Buxoro viloyati"
-      ],
-      "2026-11-12": [
-        "Jizzax viloyati"
-      ],
-      "2026-11-13": [
-        "Qoraqalpog‘iston Respublikasi",
-        "Samarqand viloyati",
-        "Surxondaryo viloyati",
-        "Sirdaryo viloyati",
-        "Toshkent shahri"
-      ],
-      "2026-11-14": [
-        "Andijon viloyati"
+      "2026-11-17": [
+        "Samarqand viloyati"
       ]
     },
     "samarqand_website_district_winners_listed": 16
@@ -69,11 +56,11 @@
   "confirmed_new_internet_template_restrictions": null,
   "confirmed_new_live_edit_policy": "Portal restates the signed decision: live edit may be requested; failure removes the work from assessment. The unapproved draft clause 17 says otherwise and is not cited by the portal.",
   "confirmed_current_samarqand_schedule": {
-    "date": "2026-11-13",
+    "date": "2026-11-17",
     "time": null,
     "venue": null,
-    "source": "https://zamonaviykasblar2026.uz/",
-    "note": "Region card on the portal still reads \"Hozircha e’lon qilinmagan\" for time and venue."
+    "source": null,
+    "note": "Time and venue not yet announced."
   },
   "practical_action": "Use the actual ticket, remaining time and on-site rules; do not promote historical drafts to new approved requirements. Be ready to make a small live change by hand during the defence.",
   "previous_review": "2026-10-28"

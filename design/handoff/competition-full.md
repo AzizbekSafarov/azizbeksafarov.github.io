@@ -15,7 +15,7 @@ Qoidalar bo‘yicha joriy tekshiruv: **2026-11-10** (portal) va **2026-10-28** (
 
 ## Hozirgi ish va tarixiy xabarni ajratish
 
-Ishtirokchi 2026-10-09 kuni Urgutdan Samarqand viloyat bosqichiga yo‘llanma olganini va bosqich 2026-10-13 uchun rejalashtirilganini bildirgan. Bu tarixiy xabar. Paketda bosqich o‘tkazilgani, uning natijasi, yangi bosqich yoki yangi sana tasdiqlanmagan. 13-oktabrni kelajakdagi sana, joriy bosqich yoki bugungi topshiriq deb avtomatik qabul qilmang. 2026-11-10 holatida tanlov portali Samarqand viloyati hududiy bosqichini 2026-yil 13-noyabr deb e’lon qilgan; soat va manzil portalda hali yo‘q.
+Ishtirokchi 2026-10-09 kuni Urgutdan Samarqand viloyat bosqichiga yo‘llanma olganini va bosqich 2026-10-13 uchun rejalashtirilganini bildirgan. Bu tarixiy xabar. Paketda bosqich o‘tkazilgani, uning natijasi, yangi bosqich yoki yangi sana tasdiqlanmagan. 13-oktabrni kelajakdagi sana, joriy bosqich yoki bugungi topshiriq deb avtomatik qabul qilmang. Samarqand viloyati hududiy bosqichi — 2026-yil 17-noyabr; soat va manzil hali e’lon qilinmagan.
 
 Foydalanuvchining hozirgi topshirig‘i, haqiqiy bileti, amaldagi reglamenti va haqiqiy qolgan vaqt ishni belgilaydi. Tayyorgarlik fayllari rasmiy bilet o‘rnini bosmaydi. 120 daqiqa — eski mashq ssenariysi, tasdiqlangan umumiy limit emas. Akkaunt, tarif, model va foydalanish limitlari bo‘yicha 2026-10-09 qaydlari bugungi holatning kafolati emas.
 
@@ -94,14 +94,9 @@ Maqsad: faqat ishtirokchining ishiga ta’sir qiladigan nizom, amaliy tartib, ba
 
 ## 2026-11-10 portal tekshiruvi
 
-[Tanlov portali](https://zamonaviykasblar2026.uz/) “Tanlov haqida” bo‘limida hududiy bosqich sanalari va yo‘nalishlar bo‘yicha tartib-qoidalarni e’lon qildi. Portal bu qoidalarga asos qilib 2026-yil 13-iyuldagi qo‘shma qarorning 4-ilovasini (Nizom) ko‘rsatadi, ya’ni imzoli qaror tahririni takrorlaydi. Bu yangi nizom emas, lekin tashkilotchi qaysi tahrirni qo‘llayotganini ko‘rsatadi.
+[Tanlov portali](https://zamonaviykasblar2026.uz/) “Tanlov haqida” bo‘limida yo‘nalishlar bo‘yicha tartib-qoidalarni e’lon qildi. Portal bu qoidalarga asos qilib 2026-yil 13-iyuldagi qo‘shma qarorning 4-ilovasini (Nizom) ko‘rsatadi, ya’ni imzoli qaror tahririni takrorlaydi. Bu yangi nizom emas, lekin tashkilotchi qaysi tahrirni qo‘llayotganini ko‘rsatadi.
 
-| Sana | Hududiy bosqich |
-| --- | --- |
-| 11-noyabr | Buxoro viloyati |
-| 12-noyabr | Jizzax viloyati |
-| **13-noyabr** | **Samarqand viloyati**, Qoraqalpog‘iston Respublikasi, Surxondaryo viloyati, Sirdaryo viloyati, Toshkent shahri |
-| 14-noyabr | Andijon viloyati |
+Samarqand viloyati hududiy bosqichi: **17-noyabr**.
 
 Portalda aytilgan, ishga ta’sir qiladigan bandlar:
 
@@ -147,7 +142,7 @@ Bularni o‘qish oldingi manbalardagi farqlar avtomatik bekor qilindi degani ema
 | Tayyor backend, tashqi hosting, API/Telegram | Aynan oldindan yozilgan backend yoki oldindan sozlangan xizmatga yangi rasmiy ruxsat/taqiq topilmadi. | Bilet va joydagi qoida asosida ishlatamiz. Tayyor frontendga ruxsatdan barcha tashqi xizmatga ruxsat degan xulosa chiqarmaymiz. |
 | Kompyuter va sozlanish vaqti | Eski video tashkilotchi kompyuteri, Antigravity/Codex va ulash uchun 15 daqiqani aytgan. Yangi alohida hujjat topilmadi. | Yangi PC uchun manba, kirish va run tartibi tayyor; akkauntni joyda ulash holati hisobga olinadi. |
 | Topshirish | Joriy bilet yoki yangi topshirish kanali ushbu tekshiruvda berilmagan. | Tahrirlanadigan source, ishga tushirish yo‘riqnomasi va ishlaydigan oqimni tayyorlaymiz; yakuniy formatni tashkilotchi belgilaydi. |
-| Samarqand sana/manzil/soat | 2026-11-10: portalda Samarqand viloyati hududiy bosqichi 13-noyabr deb e’lon qilingan; soat va manzil hali e’lon qilinmagan. 13-oktabr — oldingi, tarixiy xabar. | Sana portaldan; soat, manzil va kirish tartibi tashkilotchining joriy xabaridan olinadi. |
+| Samarqand sana/manzil/soat | Samarqand viloyati hududiy bosqichi 17-noyabr; soat va manzil hali e’lon qilinmagan. 13-oktabr — oldingi, tarixiy xabar. | Soat, manzil va kirish tartibi tashkilotchining joriy xabaridan olinadi. |
 
 ## Asl matndagi farqlar — 2026-11-02 muvofiqlik tahriri
 
@@ -219,21 +214,8 @@ Biletning aynan matni; tanlangan dizayn; haqiqiy qolgan vaqt; akkaunt/internet/t
     "live_edit": "An expert may ask for a small real-time change (text, colour, element) during the presentation; a participant who cannot make it on their own device is removed from assessment.",
     "appeal": "within 2 working days after results are announced, once per stage",
     "regional_stage_dates": {
-      "2026-11-11": [
-        "Buxoro viloyati"
-      ],
-      "2026-11-12": [
-        "Jizzax viloyati"
-      ],
-      "2026-11-13": [
-        "Qoraqalpog‘iston Respublikasi",
-        "Samarqand viloyati",
-        "Surxondaryo viloyati",
-        "Sirdaryo viloyati",
-        "Toshkent shahri"
-      ],
-      "2026-11-14": [
-        "Andijon viloyati"
+      "2026-11-17": [
+        "Samarqand viloyati"
       ]
     },
     "samarqand_website_district_winners_listed": 16
@@ -252,11 +234,11 @@ Biletning aynan matni; tanlangan dizayn; haqiqiy qolgan vaqt; akkaunt/internet/t
   "confirmed_new_internet_template_restrictions": null,
   "confirmed_new_live_edit_policy": "Portal restates the signed decision: live edit may be requested; failure removes the work from assessment. The unapproved draft clause 17 says otherwise and is not cited by the portal.",
   "confirmed_current_samarqand_schedule": {
-    "date": "2026-11-13",
+    "date": "2026-11-17",
     "time": null,
     "venue": null,
-    "source": "https://zamonaviykasblar2026.uz/",
-    "note": "Region card on the portal still reads \"Hozircha e’lon qilinmagan\" for time and venue."
+    "source": null,
+    "note": "Time and venue not yet announced."
   },
   "practical_action": "Use the actual ticket, remaining time and on-site rules; do not promote historical drafts to new approved requirements. Be ready to make a small live change by hand during the defence.",
   "previous_review": "2026-10-28"
@@ -287,7 +269,7 @@ Saqlangan asl matnlar bilan muvofiqlik tahriri: 2026-11-02; yuqoridagi 2026-10-2
 - **Shablon [video; loyiha]:** g‘oya va shablon mumkin. Oldindan tayyorlangan to‘liq loyiha taqiqi — loyiha 2-bobining 2-sahifasidagi “Taqiqlanadi” qismida; joydagi tayyor kod chegarasi aniqlanadi.
 - **Jonli tahrir:** imzoli qarorda so‘ralishi mumkin va bajara olmaslik chetlatishga olib keladi; sayt nusxasida band yo‘q; loyiha 17-bandida topshirilgan nusxani himoyada o‘zgartirish taqiqlangan. Portal (2026-11-10) imzoli qaror bandini takrorlaydi: ekspert kichik o‘zgartirish (matn, rang, element) so‘rashi mumkin, o‘z qurilmasida bajara olmagan ishtirokchining ishi baholashdan chiqariladi. Bunga tayyor turing.
 
-Haqiqiy bilet, qolgan vaqt va amaldagi reglament ustuvor. Himoyada tahrir, teng ball, akkaunt va tayyor backend masalasidagi manba farqlari yangi hujjatsiz yashirin birlashtirilmaydi. Samarqand viloyati hududiy bosqichi portalda 2026-yil 13-noyabr deb e’lon qilingan; soat va manzil hali e’lon qilinmagan. Eski 13-oktabr xabari tarixiy reja.
+Haqiqiy bilet, qolgan vaqt va amaldagi reglament ustuvor. Himoyada tahrir, teng ball, akkaunt va tayyor backend masalasidagi manba farqlari yangi hujjatsiz yashirin birlashtirilmaydi. Samarqand viloyati hududiy bosqichi — 2026-yil 17-noyabr; soat va manzil hali e’lon qilinmagan. Eski 13-oktabr xabari tarixiy reja.
 
 Ishtirokchi: biletning aynan matni, aniq dizayn, haqiqiy vaqt va joydagi ruxsatlar. AI: manbalarni o‘qish, to‘liq source olish, majburiy oqimni bajarish, mos tekshiruv va source/run/handoff topshirish.
 

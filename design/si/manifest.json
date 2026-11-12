@@ -11,8 +11,8 @@
   "context_url": "https://azizbeksafarov.github.io/design/si/",
   "ai_url": "https://azizbeksafarov.github.io/design/si/ai.md",
   "archive_url": "https://azizbeksafarov.github.io/design/si/source.zip",
-  "archive_sha256": "04d71d2105b41eca69fc5aec520a194953ab6251d38b20ccf0c865cd685d4f3b",
-  "archive_bytes": 904516,
+  "archive_sha256": "618be301c225025fbab2f199a9b6e4a2d44a1a27f21fbdddbb2744d5129acc8e",
+  "archive_bytes": 904031,
   "entry": "index.html",
   "serve_root": "site",
   "readable_source_files": [
@@ -144,23 +144,23 @@
     },
     {
       "path": "COMPETITION.md",
-      "bytes": 3796,
-      "sha256": "77145e6fea760abc73d5dfcb898657fa6e68ea34215185fc77b2ad06273e115f"
+      "bytes": 3770,
+      "sha256": "ef78b21df3826e8c58a581313000fdd5fffd1058216fccecf6fb477994b944b9"
     },
     {
       "path": "CONTEXT-STATUS.md",
-      "bytes": 3919,
-      "sha256": "34983f8343b1bb0399c61d453a282169d725aa08310556bcfe43bb5cef402c10"
+      "bytes": 3870,
+      "sha256": "0b6fc2bd65011be9f5e486ecaba2ddb5d0e69e65eaf5a439c2536907f4d1e0a1"
     },
     {
       "path": "CURRENT-COMPETITION-FACTS.json",
-      "bytes": 3063,
-      "sha256": "73f7b4f3bd6ea06ecd42c34309c2f1d1297dfe0c50d11aa16aa5444a40f916ae"
+      "bytes": 2674,
+      "sha256": "50e6f5bc2622ccfb8d5c6f736a43558f7afe81f0e018b09e9036af39a1c67cee"
     },
     {
       "path": "CURRENT-COMPETITION.md",
-      "bytes": 9446,
-      "sha256": "6741532e15dceff40f5a403d2802aedf435a648f50a927f58061accfd7dadcbe"
+      "bytes": 9140,
+      "sha256": "3059b94222569c33f8edaee70a777a605a1306ced5537c3dad9f61d0850a99be"
     },
     {
       "path": "CURRENT-TASK.md",
@@ -179,8 +179,8 @@
     },
     {
       "path": "FULL-COMPETITION-CONTEXT.md",
-      "bytes": 213229,
-      "sha256": "be3b8b5d3a1aab0ae9d29524d8486da6d59917f404aef3c70db2a6740d8f6fb0"
+      "bytes": 212459,
+      "sha256": "03682789024875576fcae522f409fdf570bd6d97596df3a9dd7b8887040e4e2d"
     },
     {
       "path": "GEMINI.md",
@@ -215,12 +215,12 @@
     {
       "path": "PACKAGE-MANIFEST.json",
       "bytes": 18800,
-      "sha256": "919b6c9511d3e082e0faf81f772c069de990e153f920d50b8a41ac640c42a8ab"
+      "sha256": "66922793d73307e0afbcdcfa99d6064d8a671535afd545e8c1a57f7f78448e30"
     },
     {
       "path": "PREPARATION.md",
-      "bytes": 21923,
-      "sha256": "6e7eb706d68705489b68d18174735ff9f6d3d18486ab5a4fffa20b7afb198fca"
+      "bytes": 21895,
+      "sha256": "c53c060685a442e7bf94993ddee223ab02dc325cdcba405b2a21e88863e43839"
     },
     {
       "path": "PROJECT-STATUS.json",
@@ -240,7 +240,7 @@
     {
       "path": "READING-PLAN.json",
       "bytes": 3444,
-      "sha256": "ed51af026cc632fc8259b0cc53f9bd541eeb6b3bff0b05dde69b5349a475db7c"
+      "sha256": "1548f6345ea36252e2fe5514a037b726a1c92128965110f8193d1b459e7d3df4"
     },
     {
       "path": "README.md",

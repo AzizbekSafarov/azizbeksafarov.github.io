@@ -4,14 +4,9 @@ Maqsad: faqat ishtirokchining ishiga ta’sir qiladigan nizom, amaliy tartib, ba
 
 ## 2026-11-10 portal tekshiruvi
 
-[Tanlov portali](https://zamonaviykasblar2026.uz/) “Tanlov haqida” bo‘limida hududiy bosqich sanalari va yo‘nalishlar bo‘yicha tartib-qoidalarni e’lon qildi. Portal bu qoidalarga asos qilib 2026-yil 13-iyuldagi qo‘shma qarorning 4-ilovasini (Nizom) ko‘rsatadi, ya’ni imzoli qaror tahririni takrorlaydi. Bu yangi nizom emas, lekin tashkilotchi qaysi tahrirni qo‘llayotganini ko‘rsatadi.
+[Tanlov portali](https://zamonaviykasblar2026.uz/) “Tanlov haqida” bo‘limida yo‘nalishlar bo‘yicha tartib-qoidalarni e’lon qildi. Portal bu qoidalarga asos qilib 2026-yil 13-iyuldagi qo‘shma qarorning 4-ilovasini (Nizom) ko‘rsatadi, ya’ni imzoli qaror tahririni takrorlaydi. Bu yangi nizom emas, lekin tashkilotchi qaysi tahrirni qo‘llayotganini ko‘rsatadi.
 
-| Sana | Hududiy bosqich |
-| --- | --- |
-| 11-noyabr | Buxoro viloyati |
-| 12-noyabr | Jizzax viloyati |
-| **13-noyabr** | **Samarqand viloyati**, Qoraqalpog‘iston Respublikasi, Surxondaryo viloyati, Sirdaryo viloyati, Toshkent shahri |
-| 14-noyabr | Andijon viloyati |
+Samarqand viloyati hududiy bosqichi: **17-noyabr**.
 
 Portalda aytilgan, ishga ta’sir qiladigan bandlar:
 
@@ -57,7 +52,7 @@ Bularni o‘qish oldingi manbalardagi farqlar avtomatik bekor qilindi degani ema
 | Tayyor backend, tashqi hosting, API/Telegram | Aynan oldindan yozilgan backend yoki oldindan sozlangan xizmatga yangi rasmiy ruxsat/taqiq topilmadi. | Bilet va joydagi qoida asosida ishlatamiz. Tayyor frontendga ruxsatdan barcha tashqi xizmatga ruxsat degan xulosa chiqarmaymiz. |
 | Kompyuter va sozlanish vaqti | Eski video tashkilotchi kompyuteri, Antigravity/Codex va ulash uchun 15 daqiqani aytgan. Yangi alohida hujjat topilmadi. | Yangi PC uchun manba, kirish va run tartibi tayyor; akkauntni joyda ulash holati hisobga olinadi. |
 | Topshirish | Joriy bilet yoki yangi topshirish kanali ushbu tekshiruvda berilmagan. | Tahrirlanadigan source, ishga tushirish yo‘riqnomasi va ishlaydigan oqimni tayyorlaymiz; yakuniy formatni tashkilotchi belgilaydi. |
-| Samarqand sana/manzil/soat | 2026-11-10: portalda Samarqand viloyati hududiy bosqichi 13-noyabr deb e’lon qilingan; soat va manzil hali e’lon qilinmagan. 13-oktabr — oldingi, tarixiy xabar. | Sana portaldan; soat, manzil va kirish tartibi tashkilotchining joriy xabaridan olinadi. |
+| Samarqand sana/manzil/soat | Samarqand viloyati hududiy bosqichi 17-noyabr; soat va manzil hali e’lon qilinmagan. 13-oktabr — oldingi, tarixiy xabar. | Soat, manzil va kirish tartibi tashkilotchining joriy xabaridan olinadi. |
 
 ## Asl matndagi farqlar — 2026-11-02 muvofiqlik tahriri
 

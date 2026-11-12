@@ -17,7 +17,7 @@ Saqlangan asl matnlar bilan muvofiqlik tahriri: 2026-11-02; yuqoridagi 2026-10-2
 - **Shablon [video; loyiha]:** g‘oya va shablon mumkin. Oldindan tayyorlangan to‘liq loyiha taqiqi — loyiha 2-bobining 2-sahifasidagi “Taqiqlanadi” qismida; joydagi tayyor kod chegarasi aniqlanadi.
 - **Jonli tahrir:** imzoli qarorda so‘ralishi mumkin va bajara olmaslik chetlatishga olib keladi; sayt nusxasida band yo‘q; loyiha 17-bandida topshirilgan nusxani himoyada o‘zgartirish taqiqlangan. Portal (2026-11-10) imzoli qaror bandini takrorlaydi: ekspert kichik o‘zgartirish (matn, rang, element) so‘rashi mumkin, o‘z qurilmasida bajara olmagan ishtirokchining ishi baholashdan chiqariladi. Bunga tayyor turing.
 
-Haqiqiy bilet, qolgan vaqt va amaldagi reglament ustuvor. Himoyada tahrir, teng ball, akkaunt va tayyor backend masalasidagi manba farqlari yangi hujjatsiz yashirin birlashtirilmaydi. Samarqand viloyati hududiy bosqichi portalda 2026-yil 13-noyabr deb e’lon qilingan; soat va manzil hali e’lon qilinmagan. Eski 13-oktabr xabari tarixiy reja.
+Haqiqiy bilet, qolgan vaqt va amaldagi reglament ustuvor. Himoyada tahrir, teng ball, akkaunt va tayyor backend masalasidagi manba farqlari yangi hujjatsiz yashirin birlashtirilmaydi. Samarqand viloyati hududiy bosqichi — 2026-yil 17-noyabr; soat va manzil hali e’lon qilinmagan. Eski 13-oktabr xabari tarixiy reja.
 
 Ishtirokchi: biletning aynan matni, aniq dizayn, haqiqiy vaqt va joydagi ruxsatlar. AI: manbalarni o‘qish, to‘liq source olish, majburiy oqimni bajarish, mos tekshiruv va source/run/handoff topshirish.
 

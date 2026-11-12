@@ -8,7 +8,7 @@ Qoidalar bo‘yicha joriy tekshiruv: **2026-11-10** (portal) va **2026-10-28** (
 
 ## Hozirgi ish va tarixiy xabarni ajratish
 
-Ishtirokchi 2026-10-09 kuni Urgutdan Samarqand viloyat bosqichiga yo‘llanma olganini va bosqich 2026-10-13 uchun rejalashtirilganini bildirgan. Bu tarixiy xabar. Paketda bosqich o‘tkazilgani, uning natijasi, yangi bosqich yoki yangi sana tasdiqlanmagan. 13-oktabrni kelajakdagi sana, joriy bosqich yoki bugungi topshiriq deb avtomatik qabul qilmang. 2026-11-10 holatida tanlov portali Samarqand viloyati hududiy bosqichini 2026-yil 13-noyabr deb e’lon qilgan; soat va manzil portalda hali yo‘q.
+Ishtirokchi 2026-10-09 kuni Urgutdan Samarqand viloyat bosqichiga yo‘llanma olganini va bosqich 2026-10-13 uchun rejalashtirilganini bildirgan. Bu tarixiy xabar. Paketda bosqich o‘tkazilgani, uning natijasi, yangi bosqich yoki yangi sana tasdiqlanmagan. 13-oktabrni kelajakdagi sana, joriy bosqich yoki bugungi topshiriq deb avtomatik qabul qilmang. Samarqand viloyati hududiy bosqichi — 2026-yil 17-noyabr; soat va manzil hali e’lon qilinmagan.
 
 Foydalanuvchining hozirgi topshirig‘i, haqiqiy bileti, amaldagi reglamenti va haqiqiy qolgan vaqt ishni belgilaydi. Tayyorgarlik fayllari rasmiy bilet o‘rnini bosmaydi. 120 daqiqa — eski mashq ssenariysi, tasdiqlangan umumiy limit emas. Akkaunt, tarif, model va foydalanish limitlari bo‘yicha 2026-10-09 qaydlari bugungi holatning kafolati emas.
 

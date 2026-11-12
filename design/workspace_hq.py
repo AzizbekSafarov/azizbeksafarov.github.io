@@ -44,7 +44,7 @@ def frame(title,content,active='library'):
 
 def build_library(catalog):
  content=library(catalog)
- content='<p class="context-explainer" style="margin:20px 28px;line-height:1.8"><strong>Hududiy bosqich: Samarqand viloyati · 13-noyabr.</strong> Sana <a href="https://zamonaviykasblar2026.uz/">tanlov portalida</a> e’lon qilingan (10-noyabr holati); soat va manzil hali yo‘q. Himoya 15 daqiqa; ekspert kichik jonli o‘zgartirish so‘rashi mumkin. <a href="/design/handoff/current-competition.md">Qoidalar holati →</a>. Amaliy ish vaqti va akkaunt qoidasini tashkilotchi aytadi. <a href="/zaxira/CODEX.md">Asosiy yo‘l: Codex + tanlangan starter →</a> · <a href="/zaxira/">AI ishlamasa: AI’siz zaxira va jonli o‘zgarish →</a></p>'+content
+ content='<p class="context-explainer" style="margin:20px 28px;line-height:1.8"><strong>Hududiy bosqich: Samarqand viloyati · 17-noyabr.</strong> Soat va manzil hali yo‘q. Himoya 15 daqiqa; ekspert kichik jonli o‘zgartirish so‘rashi mumkin. <a href="/design/handoff/current-competition.md">Qoidalar holati →</a>. Amaliy ish vaqti va akkaunt qoidasini tashkilotchi aytadi. <a href="/zaxira/CODEX.md">Asosiy yo‘l: Codex + tanlangan starter →</a> · <a href="/zaxira/">AI ishlamasa: AI’siz zaxira va jonli o‘zgarish →</a></p>'+content
  # Keep real navigation actions above the preview, visible before scrolling.
  summary=re.search(r'<p id="selected-summary">.*?</p>',content).group()
  content=content.replace(summary,'',1)

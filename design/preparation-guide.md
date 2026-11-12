@@ -37,7 +37,7 @@ Biletni foydalanuvchi ekspert bergan aynan matn yoki fayl sifatida beradi; bu sa
 
 ## Joriy tanlov manbasi avval o‘qiladi
 
-2026-10-28 qayta tekshiruv: [amaliy qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [qoida qaydi](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json). Nizom PDF’i o‘zgarmagan; yangi tasdiqlangan reglament yoki majburiy texnik qoida topilmadi. Tanlov portali bir vaqtda vazifa berilishi, 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi. 2026-11-10: portal hududiy bosqich sanalarini (Samarqand viloyati — 13-noyabr) e’lon qildi va imzoli qarordagi jonli o‘zgartirish hamda teng ball tartibini takrorladi.
+2026-10-28 qayta tekshiruv: [amaliy qoidalar holati](https://azizbeksafarov.github.io/design/handoff/current-competition.md) va [qoida qaydi](https://azizbeksafarov.github.io/design/handoff/current-competition-facts.json). Nizom PDF’i o‘zgarmagan; yangi tasdiqlangan reglament yoki majburiy texnik qoida topilmadi. Tanlov portali bir vaqtda vazifa berilishi, 15 daqiqalik himoya va 6 mezon/100 ballni takrorlaydi. Samarqand viloyati hududiy bosqichi — 17-noyabr. 2026-11-10: portal imzoli qarordagi jonli o‘zgartirish hamda teng ball tartibini takrorladi.
 
 Yangi amaliy ish davomiyligi, akkaunt/tarif, himoyada tahrir va oldindan tayyor backend ruxsati tasdiqlanmadi. 120 daqiqa eski loyiha/mashq; 13-oktabr eski ishtirokchi xabari. Bilet, haqiqiy qolgan vaqt va joydagi qoidalar bilan ishlaymiz.
 
